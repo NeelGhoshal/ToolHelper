@@ -80,6 +80,14 @@ These differ from README section 1.1 because of Windows. Use them in `configs/se
 - Shape types the README leaves implicit: `success_rate`, `mean_tokens`, `expand_rate`, `ttl_seconds` are numbers; Recipe and Decision `status` use ToolCard's `proposed|accepted` enum. `RunSummary` and `Experiment` have no fields yet.
 - `toolhelper publish --repo org/name` pushes only accepted, non-stale things with their evidence, targets first, remapping pins to remote version numbers. **Untested live: no `WH_TOKEN` yet**; tested against a second local store and a fake SDK repo. `warmhub.rules.shape_definition` (used to preflight shapes in a test) is not a root export of the SDK.
 
+### Agent loop and tracer (Phase 4, 2026-11-01)
+
+- `toolhelper run --llm <profile> --prompt ... [--mode replay|live|record]` runs one task and saves a trace to `data/traces/<run_id>.json` (gitignored); `toolhelper trace show <run_id>` prints it. Replay mode falls through to live on a miss and records into `data/replay/`.
+- **Strategies report changes with `self.run.transform(target, before=, after=, evidence=)`.** The loop diffs every hook's input and output; an unreported change is recorded with `reported=False` and no evidence, so provenance coverage drops below 1.0 and `Trace.problems()` names the hook. `before_call` decisions carry their own evidence.
+- Cached results go through `after_result` like fresh ones. Calls to tools that exist but weren't offered get `error_class="not_offered"`; the loop's own error texts (not offered, unknown tool, timeout) are not server responses.
+- Ollama and the scripted backend number tool calls per turn (`call_0`); the loop renames repeats to `t<turn>_call_<i>` so call ids are unique per run.
+- Each LLM call record keeps measured tokens next to an estimated per-component breakdown (cl100k_base) and the tool results present in that prompt (for carried tokens in Phase 5). First live run: qwen3 measured 2,791 prompt tokens where cl100k estimated ~3,724 (3,628 of it tool definitions), so the estimates need Phase 5's calibration before they're compared to measured counts.
+
 ## Progress
 
 | Phase | Topic | Status |
@@ -88,7 +96,7 @@ These differ from README section 1.1 because of Windows. Use them in `configs/se
 | 1 | LLM backends | done |
 | 2 | MCP hub and catalog | done |
 | 3 | Context store | done |
-| 4 | Agent loop and tracer | not started |
+| 4 | Agent loop and tracer | done |
 | 5 | Monitoring | not started |
 | 6 | Benchmark and record/replay | not started |
 | 7 | Datasets | not started |

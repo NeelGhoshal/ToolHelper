@@ -59,7 +59,7 @@ class ToolResult(BaseModel):
     structured: dict[str, Any] | None = None
     is_error: bool
     protocol_error: dict[str, Any] | None = None
-    source: Literal["live", "replay"]
+    source: Literal["live", "replay", "local"]  # local: a strategy-provided tool
     latency_ms: float
     recorded_at: str | None = None
     # CallToolResult in wire form, exactly as the server returned it (None on protocol error).

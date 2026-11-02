@@ -17,6 +17,7 @@ from toolhelper.config import (
     CONTEXT_DB,
     REPLAY_DIR,
     ROOT,
+    TRACES_DIR,
     load_llm_config,
     load_servers_config,
     make_backend,
@@ -42,6 +43,8 @@ llm_app = typer.Typer(no_args_is_help=True, help="LLM backends and profiles.")
 app.add_typer(llm_app, name="llm")
 context_app = typer.Typer(no_args_is_help=True, help="Versioned context store.")
 app.add_typer(context_app, name="context")
+trace_app = typer.Typer(no_args_is_help=True, help="Run traces.")
+app.add_typer(trace_app, name="trace")
 console = Console()
 
 LLMOption = Annotated[str | None, typer.Option("--llm", help="LLM profile from configs/llm.yaml.")]
@@ -304,3 +307,84 @@ def publish_cmd(repo: Annotated[str, typer.Option(help="WarmHub repository, org/
     for name, why in plan.skipped.items():
         console.print(f"[dim]skipped {name}: {why}[/]")
     console.print(f"{len(plan.written)} written, {len(plan.unchanged)} unchanged, {len(plan.skipped)} skipped")
+
+
+TracesOption = Annotated[Path, typer.Option("--traces", help="Trace directory.")]
+
+
+@app.command("run")
+def run_cmd(prompt: Annotated[str, typer.Option(help="The task prompt.")],
+            task_id: Annotated[str, typer.Option(help="Task id recorded in the trace.")] = "adhoc",
+            llm: LLMOption = None, mode: ModeOption = "replay", servers: ServersOption = None,
+            store: StoreOption = REPLAY_DIR, catalog_dir: CatalogDirOption = CATALOG_DIR,
+            max_turns: Annotated[int, typer.Option(help="Maximum LLM turns.")] = 8,
+            traces: TracesOption = TRACES_DIR) -> None:
+    """Run the agent on one task and save its trace. Replay mode records misses from the live servers."""
+    from toolhelper.agent.hooks import Task
+    from toolhelper.agent.loop import Agent, AgentConfig
+
+    _, profile = load_llm_config().get(llm)
+    task = Task(id=task_id, prompt=prompt, servers=servers.split(",") if servers else [])
+
+    async def go():
+        async with make_hub(mode, servers, store, catalog_dir) as hub:
+            return await Agent(make_backend(profile), hub, config=AgentConfig(max_turns=max_turns)).run(task)
+
+    trace = anyio.run(go)
+    path = trace.save(traces)
+    show_trace(trace)
+    console.print(f"saved {path}")
+
+
+@trace_app.command("show")
+def trace_show(run_id: Annotated[str, typer.Argument(help="Run id or trace file.")],
+               traces: TracesOption = TRACES_DIR) -> None:
+    """Print a run's timeline: LLM calls, tool calls, transformations and the answer."""
+    from toolhelper.monitoring.tracer import Trace
+
+    path = Path(run_id) if Path(run_id).exists() else traces / f"{run_id}.json"
+    show_trace(Trace.load(path))
+
+
+def show_trace(trace) -> None:
+    console.print(f"[bold]{trace.run_id}[/] task={trace.task_id} {trace.backend}:{trace.model} "
+                  f"hub={trace.hub_mode} catalog={trace.catalog_version[:12]} config={trace.config_hash[:12]}")
+    console.print(f"params={trace.params}  tools offered={len(trace.tools_offered)}")
+    for item in trace.context_items:
+        console.print(f"  context [{item.kind}] from {item.strategy}: {item.tokens} tokens (estimated)")
+    calls = {}
+    for t in trace.tool_calls:
+        calls.setdefault(t.turn, []).append(t)
+    transforms = {}
+    for t in trace.transformations:
+        transforms.setdefault(t.turn, []).append(t)
+    for t in transforms.get(0, []):
+        console.print(f"  [magenta]{t.strategy}.{t.hook}[/] {t.target}: {t.before_tokens} -> {t.after_tokens}"
+                      + ("" if t.evidence else " [red]no evidence[/]"))
+    for c in trace.llm_calls:
+        label = "measured" if c.measured else "estimated"
+        parts = " ".join(f"{k}={v}" for k, v in c.est_breakdown.items())
+        console.print(f"turn {c.turn}: prompt={c.prompt_tokens} completion={c.completion_tokens} ({label}), "
+                      f"{c.latency_ms:.0f} ms, done={c.done_reason}")
+        console.print(f"  estimated breakdown: {parts}", style="dim")
+        for t in calls.get(c.turn, []):
+            status = f"[red]{t.error_class}[/]" if t.is_error else "ok"
+            raw = "-" if t.raw_result_tokens is None else t.raw_result_tokens
+            console.print(f"  {t.call_id} {t.name} {canonical(t.final_arguments)} -> {status}, {t.decision}, "
+                          f"{t.source or '-'}, result tokens {raw} -> {t.shaped_result_tokens}", markup=True)
+        for t in transforms.get(c.turn, []):
+            console.print(f"  [magenta]{t.strategy}.{t.hook}[/] {t.target}: {t.before_tokens} -> "
+                          f"{t.after_tokens}" + ("" if t.evidence else " [red]no evidence[/]"))
+    console.print(f"stop={trace.stop_reason} provenance={trace.provenance_coverage:.2f}")
+    if trace.error:
+        console.print(f"[red]error[/] {trace.error}")
+    if trace.answer is not None:
+        console.print("answer:", style="bold")
+        console.print(trace.answer, markup=False)
+    problems = trace.problems()
+    console.print("[green]trace complete[/]" if not problems else f"[red]incomplete[/]: {problems}")
+
+
+def canonical(value) -> str:
+    text = json.dumps(value, ensure_ascii=False)
+    return text if len(text) <= 80 else text[:77] + "..."

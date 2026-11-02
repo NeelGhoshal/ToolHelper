@@ -20,6 +20,7 @@ SERVERS_CONFIG = CONFIG_DIR / "servers.yaml"
 CATALOG_DIR = ROOT / "data" / "catalog"
 REPLAY_DIR = ROOT / "data" / "replay"
 CONTEXT_DB = ROOT / "data" / "context.sqlite"
+TRACES_DIR = ROOT / "data" / "traces"
 
 
 class LLMProfile(BaseModel):

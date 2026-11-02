@@ -8,31 +8,25 @@ previous one; Phase 3 imports them into the context store as ToolSchema versions
 
 from __future__ import annotations
 
-from collections.abc import Callable
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
 from pydantic import BaseModel, Field
 
-from toolhelper.mcp.canonical import canonical_json, sha256_hex, tool_hash
+from toolhelper.mcp.canonical import sha256_hex, tool_hash
+from toolhelper.monitoring.tokens import DEFAULT_TOKENIZER, TokenCounter, llm_view, tiktoken_counter
 
-TokenCounter = Callable[[str], int]
-DEFAULT_TOKENIZER = "cl100k_base"
-
-
-def tiktoken_counter(encoding: str = DEFAULT_TOKENIZER) -> TokenCounter:
-    import tiktoken
-
-    enc = tiktoken.get_encoding(encoding)
-    return lambda text: len(enc.encode(text))
+__all__ = ["DEFAULT_TOKENIZER", "TokenCounter", "llm_view", "tiktoken_counter"]
 
 
-def llm_view(name: str, definition: dict[str, Any]) -> str:
-    """The tool as sent to an LLM: function format under its namespaced name."""
-    return canonical_json({"type": "function", "function": {
-        "name": name, "description": definition.get("description", ""),
-        "parameters": definition.get("inputSchema", {})}})
+def hub_catalog_hash(hub: Any) -> str:
+    """The catalog hash of a connected hub's tool list (same as a snapshot's)."""
+    servers = {}
+    for name in hub.servers:
+        hashes = sorted((t.tool.name, tool_hash(t.tool)) for t in hub.tools if t.server == name)
+        servers[name] = sha256_hex([h for _, h in hashes])
+    return sha256_hex(servers)
 
 
 class ToolSnapshot(BaseModel):
