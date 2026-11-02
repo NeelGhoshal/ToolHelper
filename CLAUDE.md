@@ -6,7 +6,7 @@ ToolHelper monitors and reduces the token cost of LLM tool calls against three b
 
 ## How we work
 
-- One phase per session, in order. Plan first, then write tests, then implement, then run `uv run pytest`, then commit.
+- One phase per session, in order. Plan first, then write tests, then implement, then run `uv run pytest`. Never run `git commit`; the user commits themselves.
 - Stop at each phase's **Done when** criterion and confirm it's met before moving on.
 - Update the progress table below at the end of each phase.
 - This repo root *is* the `toolhelper/` project from the README's repo layout. Run `uv init` here; don't create a nested `toolhelper/` folder.
