@@ -1,0 +1,105 @@
+{
+  "recorded_at": "2026-11-02T02:07:46.609668+00:00",
+  "ollama_version": "0.40.13",
+  "tool_spec": {
+    "name": "search-drugs",
+    "description": "Search for drug information using FDA database",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Drug name to search for (brand name or generic name)"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50,
+          "default": 10,
+          "description": "Number of results to return (max 50)"
+        }
+      },
+      "required": [
+        "query"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    }
+  },
+  "request": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find drugs matching 'ibuprofen'. Return at most 2 results."
+      }
+    ],
+    "tools": [
+      {
+        "type": "function",
+        "function": {
+          "name": "search-drugs",
+          "description": "Search for drug information using FDA database",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "query": {
+                "type": "string",
+                "description": "Drug name to search for (brand name or generic name)"
+              },
+              "limit": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 50,
+                "default": 10,
+                "description": "Number of results to return (max 50)"
+              }
+            },
+            "required": [
+              "query"
+            ],
+            "additionalProperties": false,
+            "$schema": "http://json-schema.org/draft-07/schema#"
+          }
+        }
+      }
+    ],
+    "think": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 7
+    }
+  },
+  "response": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-02T02:07:46.6070358Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 9126964200,
+    "load_duration": 8035814300,
+    "prompt_eval_count": 188,
+    "prompt_eval_duration": 392710000,
+    "eval_count": 29,
+    "eval_duration": 683132000,
+    "message": {
+      "role": "assistant",
+      "content": "",
+      "thinking": null,
+      "images": null,
+      "tool_name": null,
+      "tool_calls": [
+        {
+          "function": {
+            "name": "search-drugs",
+            "arguments": {
+              "query": "ibuprofen",
+              "limit": 2
+            }
+          }
+        }
+      ]
+    },
+    "logprobs": null
+  }
+}

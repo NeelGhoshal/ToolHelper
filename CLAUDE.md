@@ -54,12 +54,19 @@ These differ from README section 1.1 because of Windows. Use them in `configs/se
 - `OMOPHUB_API_KEY` is set as a Windows user environment variable (verified with a live `find_omop_concept` call). Shells started before it was set won't see it; read it with `[Environment]::GetEnvironmentVariable("OMOPHUB_API_KEY", "User")` if `$env:OMOPHUB_API_KEY` is empty.
 - **OMOPHub free tier: 3,000 calls/month, 2 requests/sec** (failed requests not counted). Each `find_omop_concept` is one OMOPHub call; `batch_map_concepts_from_csv` is one per CSV row, so keep benchmark CSVs small. The recorder must throttle OMOP calls; experiments should run in replay mode.
 
+### LLM backends (Phase 1, 2026-11-01)
+
+- Backends report options they can't honour in `ChatResult.ignored_options` instead of dropping them silently. Check it when comparing runs across backends.
+- **Ollama `/v1` ignores `think`**; qwen3 thinks by default there (186 vs 29 completion tokens). Send `reasoning_effort: none` via `options.extra` (the `ollama-qwen3-v1` profile does); verified to match native token counts.
+- **Current Claude models take no `temperature`/`seed`** (the installed SDK's `messages.create` has no such parameters), and thinking can't be disabled on `claude-opus-5-5`; use `effort`. Anthropic runs are therefore not seed-reproducible.
+- LLM test fixtures in `tests/fixtures/llm/` are real responses recorded by `scripts/record_llm_fixtures.py`. The Anthropic parsing test still uses a hand-built SDK object (no key yet); replace it with a recording when a key is available.
+
 ## Progress
 
 | Phase | Topic | Status |
 |---|---|---|
 | 0 | Environment | done |
-| 1 | LLM backends | not started |
+| 1 | LLM backends | done |
 | 2 | MCP hub and catalog | not started |
 | 3 | Context store | not started |
 | 4 | Agent loop and tracer | not started |

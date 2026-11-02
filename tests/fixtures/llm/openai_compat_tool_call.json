@@ -1,0 +1,121 @@
+{
+  "recorded_at": "2026-11-02T02:08:05.120996+00:00",
+  "ollama_version": "0.40.13",
+  "tool_spec": {
+    "name": "search-drugs",
+    "description": "Search for drug information using FDA database",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Drug name to search for (brand name or generic name)"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50,
+          "default": 10,
+          "description": "Number of results to return (max 50)"
+        }
+      },
+      "required": [
+        "query"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    }
+  },
+  "endpoint": "ollama /v1",
+  "request": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find drugs matching 'ibuprofen'. Return at most 2 results."
+      }
+    ],
+    "temperature": 0,
+    "seed": 7,
+    "tools": [
+      {
+        "type": "function",
+        "function": {
+          "name": "search-drugs",
+          "description": "Search for drug information using FDA database",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "query": {
+                "type": "string",
+                "description": "Drug name to search for (brand name or generic name)"
+              },
+              "limit": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 50,
+                "default": 10,
+                "description": "Number of results to return (max 50)"
+              }
+            },
+            "required": [
+              "query"
+            ],
+            "additionalProperties": false,
+            "$schema": "http://json-schema.org/draft-07/schema#"
+          }
+        }
+      }
+    ]
+  },
+  "response": {
+    "id": "chatcmpl-447",
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "",
+          "refusal": null,
+          "role": "assistant",
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "call_68omds0t",
+              "function": {
+                "arguments": "{\"query\":\"ibuprofen\",\"limit\":2}",
+                "name": "search-drugs"
+              },
+              "type": "function",
+              "index": 0
+            }
+          ],
+          "reasoning": "Okay, the user wants to find drugs matching 'ibuprofen' and return at most 2 results. Let me check the tools provided. There's a function called search-drugs that takes a query and a limit. The query parameter is for the drug name, which can be brand or generic. The limit is an integer, max 50. The user specified 'ibuprofen' as the drug name and wants at most 2 results. So I need to set the query to 'ibuprofen' and the limit to 2. Let me make sure the parameters are correctly formatted. The function arguments should be a JSON object with \"query\" and \"limit\". Yep, that's right. So the tool call will include those parameters.\n"
+        }
+      }
+    ],
+    "created": 1793585285,
+    "model": "qwen3:8b",
+    "object": "chat.completion",
+    "metadata": null,
+    "moderation": null,
+    "service_tier": null,
+    "system_fingerprint": "fp_ollama",
+    "usage": {
+      "completion_tokens": 186,
+      "prompt_tokens": 182,
+      "total_tokens": 368,
+      "completion_tokens_details": null,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cache_write_tokens": null,
+        "cached_tokens": 0,
+        "image_tokens": null,
+        "text_tokens": null
+      }
+    }
+  }
+}

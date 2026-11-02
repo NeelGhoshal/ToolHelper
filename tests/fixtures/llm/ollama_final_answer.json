@@ -1,0 +1,116 @@
+{
+  "recorded_at": "2026-11-02T02:07:52.379778+00:00",
+  "ollama_version": "0.40.13",
+  "tool_spec": {
+    "name": "search-drugs",
+    "description": "Search for drug information using FDA database",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Drug name to search for (brand name or generic name)"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50,
+          "default": 10,
+          "description": "Number of results to return (max 50)"
+        }
+      },
+      "required": [
+        "query"
+      ],
+      "additionalProperties": false,
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    }
+  },
+  "tool_result_source": "medical-mcp npm 1.0.8, live call",
+  "request": {
+    "model": "qwen3:8b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find drugs matching 'ibuprofen'. Return at most 2 results."
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "function": {
+              "name": "search-drugs",
+              "arguments": {
+                "query": "ibuprofen",
+                "limit": 2
+              }
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_name": "search-drugs",
+        "content": "**Drug Search Results for \"ibuprofen\"**\n\nFound 2 drug(s)\n\n1. **Ibuprofen Dye Free**\n   Generic Name: IBUPROFEN\n   Manufacturer: CVS Pharmacy\n   Route: ORAL\n   Dosage Form: Not specified\n   Purpose: Purpose Pain reliever/fever reducer\n   Last Updated: 20260429\n\n2. **care one ibuprofen**\n   Generic Name: IBUPROFEN\n   Manufacturer: American Sales Company\n   Route: ORAL\n   Dosage Form: Not specified\n   Purpose: Purposes Pain reliever/fever reducer\n   Last Updated: 20250603\n\n"
+      }
+    ],
+    "tools": [
+      {
+        "type": "function",
+        "function": {
+          "name": "search-drugs",
+          "description": "Search for drug information using FDA database",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "query": {
+                "type": "string",
+                "description": "Drug name to search for (brand name or generic name)"
+              },
+              "limit": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 50,
+                "default": 10,
+                "description": "Number of results to return (max 50)"
+              }
+            },
+            "required": [
+              "query"
+            ],
+            "additionalProperties": false,
+            "$schema": "http://json-schema.org/draft-07/schema#"
+          }
+        }
+      }
+    ],
+    "think": false,
+    "options": {
+      "num_ctx": 8192,
+      "temperature": 0,
+      "seed": 7
+    }
+  },
+  "response": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-02T02:07:52.3784215Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 3498484800,
+    "load_duration": 11941600,
+    "prompt_eval_count": 377,
+    "prompt_eval_duration": 133005000,
+    "eval_count": 145,
+    "eval_duration": 3345712000,
+    "message": {
+      "role": "assistant",
+      "content": "Here are the drugs matching \"ibuprofen\":\n\n1. **Ibuprofen Dye Free**\n   - **Generic Name:** IBUPROFEN\n   - **Manufacturer:** CVS Pharmacy\n   - **Route:** ORAL\n   - **Purpose:** Pain reliever/fever reducer\n   - **Last Updated:** 20260429\n\n2. **care one ibuprofen**\n   - **Generic Name:** IBUPROFEN\n   - **Manufacturer:** American Sales Company\n   - **Route:** ORAL\n   - **Purpose:** Pain reliever/fever reducer\n   - **Last Updated:** 20250603",
+      "thinking": null,
+      "images": null,
+      "tool_name": null,
+      "tool_calls": null
+    },
+    "logprobs": null
+  }
+}

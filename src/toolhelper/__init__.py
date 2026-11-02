@@ -1,2 +1,4 @@
 def main() -> None:
-    print("Hello from toolhelper!")
+    from toolhelper.cli import app
+
+    app()

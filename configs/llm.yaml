@@ -1,0 +1,30 @@
+# LLM profiles. Every command takes --llm <profile>; `default` is used otherwise.
+# API keys come from the environment variable named in api_key_env, never from this file.
+default: ollama-qwen3
+
+profiles:
+  ollama-qwen3:
+    backend: ollama
+    model: qwen3:8b
+    host: http://localhost:11434
+    options: {temperature: 0, seed: 7, num_ctx: 32768, think: false}
+
+  # Same model through Ollama's OpenAI-compatible endpoint. num_ctx and think cannot be
+  # set here; reasoning_effort "none" is Ollama's /v1 way to turn thinking off.
+  ollama-qwen3-v1:
+    backend: openai_compat
+    model: qwen3:8b
+    base_url: http://localhost:11434/v1
+    api_key_env: OLLAMA_API_KEY   # unused by local Ollama; falls back to a placeholder
+    options: {temperature: 0, seed: 7, extra: {reasoning_effort: none}}
+
+  claude-opus:
+    backend: anthropic
+    model: claude-opus-5-5
+    api_key_env: ANTHROPIC_API_KEY
+    # No temperature/seed on current Claude models; effort controls thinking depth.
+    options: {max_tokens: 16000, effort: medium}
+
+  scripted:
+    backend: scripted
+    model: scripted
