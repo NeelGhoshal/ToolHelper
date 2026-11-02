@@ -23,6 +23,7 @@ CONTEXT_DB = ROOT / "data" / "context.sqlite"
 TRACES_DIR = ROOT / "data" / "traces"
 MONITOR_DB = ROOT / "data" / "monitoring.sqlite"
 REPORTS_DIR = ROOT / "data" / "reports"
+TASKS_FILE = ROOT / "data" / "tasks" / "benchmark.jsonl"
 
 
 class LLMProfile(BaseModel):

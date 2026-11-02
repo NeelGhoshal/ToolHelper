@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS runs (
     stop_reason TEXT, error TEXT, hub_mode TEXT, tokenizer TEXT, started_at TEXT, turns INTEGER,
     n_tool_calls INTEGER, prompt_tokens INTEGER, completion_tokens INTEGER, measured INTEGER,
     tokens_by_component_json TEXT, provenance REAL, complete INTEGER, problems_json TEXT,
-    pathway_json TEXT, trace_path TEXT);
+    pathway_json TEXT, trace_path TEXT, score_json TEXT);
 CREATE TABLE IF NOT EXISTS llm_calls (
     run_id TEXT, turn INTEGER, prompt_tokens INTEGER, completion_tokens INTEGER, measured INTEGER,
     est_breakdown_json TEXT, calibrated_json TEXT, latency_ms REAL, done_reason TEXT,
@@ -79,6 +79,9 @@ class MonitorDB:
         self.db = sqlite3.connect(str(path))
         self.db.row_factory = sqlite3.Row
         self.db.executescript(SCHEMA)
+        columns = {r[1] for r in self.db.execute("PRAGMA table_info(runs)")}
+        if "score_json" not in columns:  # databases created before Phase 6
+            self.db.execute("ALTER TABLE runs ADD COLUMN score_json TEXT")
 
     def close(self) -> None:
         self.db.close()
@@ -107,7 +110,7 @@ class MonitorDB:
                 self.db.execute(f"DELETE FROM {table} WHERE run_id = ?", (trace.run_id,))
             self.db.execute(
                 "INSERT INTO runs VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, "
-                "?, ?)", (
+                "?, ?, ?)", (
                     trace.run_id, trace.group_id, trace.task_id, trace.backend, trace.model,
                     json.dumps(trace.params), trace.config_hash, trace.catalog_version, _bool(trace.success),
                     json.dumps(trace.trust) if trace.trust is not None else None, trace.answer,
@@ -116,7 +119,8 @@ class MonitorDB:
                     sum(c.prompt_tokens for c in trace.llm_calls), components["completion"], int(measured),
                     json.dumps({"basis": "measured" if measured else "estimated", "parts": components}),
                     trace.provenance_coverage, int(not problems), json.dumps(problems),
-                    json.dumps(run_pathway(trace)), str(trace_path) if trace_path else None))
+                    json.dumps(run_pathway(trace)), str(trace_path) if trace_path else None,
+                    json.dumps(trace.score) if trace.score is not None else None))
             for call, cal, warn in zip(trace.llm_calls, calibrated_rows, warnings):
                 self.db.execute("INSERT INTO llm_calls VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", (
                     trace.run_id, call.turn, call.prompt_tokens, call.completion_tokens, int(call.measured),

@@ -99,6 +99,7 @@ class Trace(BaseModel):
     error: str | None = None
     answer: str | None = None
     success: bool | None = None  # set by scoring (Phase 6)
+    score: dict[str, Any] | None = None  # experiments.scoring.Score
     trust: dict[str, Any] | None = None  # set by the trust layer (Phase 9)
     tools_offered: list[str] = Field(default_factory=list)
     llm_calls: list[LLMCallRecord] = Field(default_factory=list)

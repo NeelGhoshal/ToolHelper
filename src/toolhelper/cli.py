@@ -19,6 +19,7 @@ from toolhelper.config import (
     MONITOR_DB,
     REPORTS_DIR,
     ROOT,
+    TASKS_FILE,
     TRACES_DIR,
     load_llm_config,
     load_servers_config,
@@ -52,6 +53,8 @@ monitor_app = typer.Typer(no_args_is_help=True, help="Monitoring database.")
 app.add_typer(monitor_app, name="monitor")
 tokens_app = typer.Typer(no_args_is_help=True, help="Token measurements.")
 app.add_typer(tokens_app, name="tokens")
+bench_app = typer.Typer(no_args_is_help=True, help="Benchmark tasks.")
+app.add_typer(bench_app, name="bench")
 console = Console()
 
 LLMOption = Annotated[str | None, typer.Option("--llm", help="LLM profile from configs/llm.yaml.")]
@@ -101,7 +104,8 @@ CatalogDirOption = Annotated[Path, typer.Option("--catalog-dir", help="Catalog s
 ContextOption = Annotated[Path, typer.Option("--db", help="Local context store (SQLite).")]
 
 
-def make_hub(mode: str, servers: str | None, store: Path, catalog_dir: Path) -> Hub:
+def make_hub(mode: str, servers: str | None, store: Path, catalog_dir: Path, *,
+             live_fallback: bool = True) -> Hub:
     configs = load_servers_config()
     if servers:
         names = [s.strip() for s in servers.split(",")]
@@ -109,7 +113,7 @@ def make_hub(mode: str, servers: str | None, store: Path, catalog_dir: Path) -> 
     catalog = latest_snapshot(catalog_dir) if mode == "replay" else None
     if mode == "replay" and catalog is None:
         raise typer.BadParameter(f"no catalog snapshot in {catalog_dir}; run `toolhelper catalog` first")
-    return Hub(configs, mode=mode, store=RecordingStore(store), catalog=catalog)
+    return Hub(configs, mode=mode, store=RecordingStore(store), catalog=catalog, live_fallback=live_fallback)
 
 
 @app.command("catalog")
@@ -462,3 +466,91 @@ def tokens_tools(llm: LLMOption = None, servers: ServersOption = None, mode: Mod
     path = catalog_dir / f"tool-costs-{slug}-{datetime.now(UTC):%Y%m%dT%H%M%SZ}.json"
     path.write_text(json.dumps(costs, indent=2), encoding="utf-8")
     console.print(f"saved {path}")
+
+
+TasksOption = Annotated[Path, typer.Option("--tasks", help="Benchmark JSONL file.")]
+
+
+def _select(tasks, only: str | None, limit: int | None):
+    if only:
+        wanted = only.split(",")
+        tasks = [t for t in tasks if t.id in wanted or any(t.id.startswith(w.rstrip("*")) for w in wanted
+                                                           if w.endswith("*"))]
+    return tasks[:limit] if limit else tasks
+
+
+@bench_app.command("validate")
+def bench_validate(tasks: TasksOption = TASKS_FILE, catalog_dir: CatalogDirOption = CATALOG_DIR) -> None:
+    """Check task structure against the catalog: tool names, servers, counts and trap share."""
+    from toolhelper.experiments.runner import load_tasks, validate_tasks
+
+    snap = latest_snapshot(catalog_dir)
+    names = {t.namespaced for s in snap.servers.values() for t in s.tools}
+    result = validate_tasks(load_tasks(tasks), names)
+    console.print(f"{result['tasks']} tasks {result['by_server']}, traps {result['traps']} "
+                  f"({result['trap_share']:.0%}) {result['trap_kinds']}")
+    for problem in result["problems"]:
+        console.print(f"[red]{problem}[/]")
+    if result["problems"]:
+        raise typer.Exit(1)
+
+
+@bench_app.command("run")
+def bench_run(tasks: TasksOption = TASKS_FILE, llm: LLMOption = None, mode: ModeOption = "replay",
+              only: Annotated[str | None, typer.Option(help="Task ids, comma-separated; 'omop-*' prefixes.")] = None,
+              limit: Annotated[int | None, typer.Option(help="Run only the first N tasks.")] = None,
+              group: Annotated[str | None, typer.Option(help="Group id (default: bench-<time>-<mode>).")] = None,
+              strict_replay: Annotated[bool, typer.Option(help="Replay without live fallback.")] = False,
+              max_turns: Annotated[int, typer.Option(help="Maximum LLM turns.")] = 8,
+              store: StoreOption = REPLAY_DIR, catalog_dir: CatalogDirOption = CATALOG_DIR,
+              traces: TracesOption = TRACES_DIR, db: MonitorOption = MONITOR_DB) -> None:
+    """Run the agent over benchmark tasks; every trace is scored, saved and ingested under one group."""
+    from datetime import UTC, datetime
+
+    from toolhelper.agent.loop import Agent, AgentConfig
+    from toolhelper.experiments.runner import load_tasks, run_benchmark
+    from toolhelper.monitoring.db import MonitorDB
+    from toolhelper.monitoring.report import latest_tool_costs
+
+    selected = _select(load_tasks(tasks), only, limit)
+    _, profile = load_llm_config().get(llm)
+    group = group or f"bench-{datetime.now(UTC):%Y%m%dT%H%M%S}-{mode}"
+    monitor = MonitorDB(db, latest_tool_costs(catalog_dir))
+
+    def progress(trace, result) -> None:
+        live = sum(c.source == "live" for c in trace.tool_calls)
+        mark = "[green]pass[/]" if result.success else "[red]fail[/]"
+        failed = [k for k, v in result.checks.items() if not v]
+        console.print(f"{mark} {trace.task_id:9} turns={len(trace.llm_calls)} calls={len(trace.tool_calls)} "
+                      f"live={live} prompt={sum(c.prompt_tokens for c in trace.llm_calls)} "
+                      f"grounding={'-' if result.grounding is None else f'{result.grounding:.2f}'} "
+                      + (f"failed={failed}" if failed else "") + (f" [red]{trace.error}[/]" if trace.error else ""))
+
+    async def go():
+        async with make_hub(mode, None, store, catalog_dir, live_fallback=not strict_replay) as hub:
+            agent = Agent(make_backend(profile), hub, config=AgentConfig(max_turns=max_turns), group_id=group)
+            return await run_benchmark(selected, agent, traces_dir=traces, db=monitor, progress=progress)
+
+    results = anyio.run(go)
+    passed = sum(r.success for _, r in results)
+    live = sum(c.source == "live" for t, _ in results for c in t.tool_calls)
+    calls = sum(len(t.tool_calls) for t, _ in results)
+    prompt = sum(c.prompt_tokens for t, _ in results for c in t.llm_calls)
+    console.print(f"[bold]{group}[/]: {passed}/{len(results)} passed, {calls} tool calls ({live} live), "
+                  f"{prompt:,} prompt tokens")
+
+
+@bench_app.command("check")
+def bench_check(group: Annotated[str, typer.Option(help="Benchmark group to check.")],
+                tasks: TasksOption = TASKS_FILE, db: MonitorOption = MONITOR_DB) -> None:
+    """List expected answer strings that appear in none of a group's real tool outputs."""
+    from toolhelper.experiments.runner import check_expectations, load_tasks
+    from toolhelper.monitoring.db import MonitorDB
+    from toolhelper.monitoring.tracer import Trace
+
+    rows = MonitorDB(db).rows("SELECT trace_path FROM runs WHERE group_id = ?", (group,))
+    traces = [Trace.load(r["trace_path"]) for r in rows if r["trace_path"]]
+    issues = check_expectations(load_tasks(tasks), traces)
+    for issue in issues:
+        console.print(issue)
+    console.print(f"{len(issues)} unverified expectations across {len(traces)} runs")
