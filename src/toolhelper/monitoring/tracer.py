@@ -84,6 +84,7 @@ class Trace(BaseModel):
     group_id: str | None = None
     task_id: str
     prompt: str
+    task: dict[str, Any] = Field(default_factory=dict)  # full Task, incl. expected_paths
     backend: str
     model: str
     params: dict[str, Any]

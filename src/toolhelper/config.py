@@ -21,6 +21,8 @@ CATALOG_DIR = ROOT / "data" / "catalog"
 REPLAY_DIR = ROOT / "data" / "replay"
 CONTEXT_DB = ROOT / "data" / "context.sqlite"
 TRACES_DIR = ROOT / "data" / "traces"
+MONITOR_DB = ROOT / "data" / "monitoring.sqlite"
+REPORTS_DIR = ROOT / "data" / "reports"
 
 
 class LLMProfile(BaseModel):

@@ -88,6 +88,15 @@ These differ from README section 1.1 because of Windows. Use them in `configs/se
 - Ollama and the scripted backend number tool calls per turn (`call_0`); the loop renames repeats to `t<turn>_call_<i>` so call ids are unique per run.
 - Each LLM call record keeps measured tokens next to an estimated per-component breakdown (cl100k_base) and the tool results present in that prompt (for carried tokens in Phase 5). First live run: qwen3 measured 2,791 prompt tokens where cl100k estimated ~3,724 (3,628 of it tool definitions), so the estimates need Phase 5's calibration before they're compared to measured counts.
 
+### Monitoring (Phase 5, 2026-11-01)
+
+- `toolhelper run` ingests each trace into `data/monitoring.sqlite` (gitignored); `toolhelper monitor ingest` reloads `data/traces/`; `toolhelper report` writes `report.json` + `report.html` to `data/reports/<ts>/` (gitignored).
+- **`toolhelper tokens tools --llm <profile>`** measures the exact tool-definition cost (2 + 2×N calls, `max_tokens=1`, a 12-digit nonce per call; hex nonces tokenize to varying lengths and add noise). Saved to `data/catalog/tool-costs-<model>-<ts>.json`. qwen3:8b, 2026-11-01: all 19 tools = **2,674 prompt tokens** (cl100k estimated 3,628); fixed tools header 77; `biomcp__search` alone 696 marginal. Marginals + header summed exactly to the total, so caching didn't distort it.
+- Token splits per LLM call: estimated parts (cl100k) scaled to the measured total; when a tool-cost measurement matches the run's model and catalog version, `tool_defs` is anchored to the measured value and only the rest is scaled (basis `measured, tool_defs anchored`). Re-run `tokens tools` after any catalog change or model swap.
+- "Used" results and context items are a heuristic: identifiers (tokens containing a digit) introduced by a result that reappear in later arguments or the answer. Results with no new identifiers are `NULL`, not dead ends. Gene symbols without digits (BRAF) aren't tracked.
+- BioMCP suggestion-following compares the next call (typed calls mapped to their CLI command) with backticked commands in the previous BioMCP result, words up to the first flag.
+- The Streamlit dashboard (optional per README) is not built.
+
 ## Progress
 
 | Phase | Topic | Status |
@@ -97,7 +106,7 @@ These differ from README section 1.1 because of Windows. Use them in `configs/se
 | 2 | MCP hub and catalog | done |
 | 3 | Context store | done |
 | 4 | Agent loop and tracer | done |
-| 5 | Monitoring | not started |
+| 5 | Monitoring | done |
 | 6 | Benchmark and record/replay | not started |
 | 7 | Datasets | not started |
 | 8 | Efficiency strategies | not started |

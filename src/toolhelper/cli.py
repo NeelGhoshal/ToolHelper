@@ -16,6 +16,8 @@ from toolhelper.config import (
     CATALOG_DIR,
     CONTEXT_DB,
     REPLAY_DIR,
+    MONITOR_DB,
+    REPORTS_DIR,
     ROOT,
     TRACES_DIR,
     load_llm_config,
@@ -29,6 +31,7 @@ from toolhelper.llm.base import Message, ToolSpec
 from toolhelper.mcp.catalog import (
     CatalogSnapshot,
     build_snapshot,
+    hub_catalog_hash,
     diff_snapshots,
     latest_snapshot,
     load_snapshot,
@@ -45,6 +48,10 @@ context_app = typer.Typer(no_args_is_help=True, help="Versioned context store.")
 app.add_typer(context_app, name="context")
 trace_app = typer.Typer(no_args_is_help=True, help="Run traces.")
 app.add_typer(trace_app, name="trace")
+monitor_app = typer.Typer(no_args_is_help=True, help="Monitoring database.")
+app.add_typer(monitor_app, name="monitor")
+tokens_app = typer.Typer(no_args_is_help=True, help="Token measurements.")
+app.add_typer(tokens_app, name="tokens")
 console = Console()
 
 LLMOption = Annotated[str | None, typer.Option("--llm", help="LLM profile from configs/llm.yaml.")]
@@ -310,6 +317,7 @@ def publish_cmd(repo: Annotated[str, typer.Option(help="WarmHub repository, org/
 
 
 TracesOption = Annotated[Path, typer.Option("--traces", help="Trace directory.")]
+MonitorOption = Annotated[Path, typer.Option("--monitor-db", help="Monitoring database (SQLite).")]
 
 
 @app.command("run")
@@ -318,8 +326,9 @@ def run_cmd(prompt: Annotated[str, typer.Option(help="The task prompt.")],
             llm: LLMOption = None, mode: ModeOption = "replay", servers: ServersOption = None,
             store: StoreOption = REPLAY_DIR, catalog_dir: CatalogDirOption = CATALOG_DIR,
             max_turns: Annotated[int, typer.Option(help="Maximum LLM turns.")] = 8,
-            traces: TracesOption = TRACES_DIR) -> None:
-    """Run the agent on one task and save its trace. Replay mode records misses from the live servers."""
+            traces: TracesOption = TRACES_DIR, db: MonitorOption = MONITOR_DB) -> None:
+    """Run the agent on one task, save its trace and add it to the monitoring database.
+    Replay mode records misses from the live servers."""
     from toolhelper.agent.hooks import Task
     from toolhelper.agent.loop import Agent, AgentConfig
 
@@ -333,6 +342,11 @@ def run_cmd(prompt: Annotated[str, typer.Option(help="The task prompt.")],
     trace = anyio.run(go)
     path = trace.save(traces)
     show_trace(trace)
+    from toolhelper.monitoring.db import MonitorDB
+
+    from toolhelper.monitoring.report import latest_tool_costs
+
+    MonitorDB(db, latest_tool_costs(catalog_dir)).ingest(trace, path)
     console.print(f"saved {path}")
 
 
@@ -388,3 +402,63 @@ def show_trace(trace) -> None:
 def canonical(value) -> str:
     text = json.dumps(value, ensure_ascii=False)
     return text if len(text) <= 80 else text[:77] + "..."
+
+
+@monitor_app.command("ingest")
+def monitor_ingest(traces: TracesOption = TRACES_DIR, db: MonitorOption = MONITOR_DB,
+                   catalog_dir: CatalogDirOption = CATALOG_DIR) -> None:
+    """(Re)load every trace in a directory into the monitoring database."""
+    from toolhelper.monitoring.db import MonitorDB
+    from toolhelper.monitoring.report import latest_tool_costs
+
+    count = MonitorDB(db, latest_tool_costs(catalog_dir)).ingest_dir(traces)
+    console.print(f"ingested {count} traces into {db}")
+
+
+@app.command("report")
+def report_cmd(group: Annotated[str | None, typer.Option(help="Only runs in this group.")] = None,
+               out: Annotated[Path | None, typer.Option(help="Output directory.")] = None,
+               db: MonitorOption = MONITOR_DB, catalog_dir: CatalogDirOption = CATALOG_DIR) -> None:
+    """Write report.json and report.html: tools, runs, tokens by component, pathways, warnings."""
+    from datetime import UTC, datetime
+
+    from toolhelper.monitoring.db import MonitorDB
+    from toolhelper.monitoring.report import build_report, latest_tool_costs, write_report
+
+    report = build_report(MonitorDB(db), group=group, tool_costs=latest_tool_costs(catalog_dir))
+    out = out or REPORTS_DIR / f"{datetime.now(UTC):%Y%m%dT%H%M%SZ}"
+    json_path, html_path = write_report(report, out)
+    o = report["overview"]
+    console.print(f"{o['runs']} runs, {len(report['tools'])} tools, {len(report['warnings'])} warnings")
+    console.print(f"wrote {json_path}\nwrote {html_path}")
+
+
+@tokens_app.command("tools")
+def tokens_tools(llm: LLMOption = None, servers: ServersOption = None, mode: ModeOption = "replay",
+                 store: StoreOption = REPLAY_DIR, catalog_dir: CatalogDirOption = CATALOG_DIR) -> None:
+    """Measure what the tool definitions cost the model itself (with vs without tools, 1 output token).
+    Makes 2 + 2 x tools LLM calls; no tool is called."""
+    from datetime import UTC, datetime
+
+    from toolhelper.agent.loop import DEFAULT_SYSTEM_PROMPT
+    from toolhelper.monitoring.tokens import measure_tool_costs
+
+    name, profile = load_llm_config().get(llm)
+
+    async def specs():
+        async with make_hub(mode, servers, store, catalog_dir) as hub:
+            return hub.tool_specs(), hub_catalog_hash(hub)
+
+    tools, catalog_version = anyio.run(specs)
+    costs = measure_tool_costs(make_backend(profile), tools, DEFAULT_SYSTEM_PROMPT)
+    costs.update(profile=name, catalog_version=catalog_version, measured_at=datetime.now(UTC).isoformat())
+    table = Table("tool", "alone", "marginal")
+    for tool, c in sorted(costs["tools"].items(), key=lambda kv: -kv[1]["marginal"]):
+        table.add_row(tool, str(c["alone"]), str(c["marginal"]))
+    console.print(table)
+    console.print(f"all {len(tools)} tools: {costs['all_tools']} prompt tokens (measured, {costs['model']}); "
+                  f"base prompt {costs['base_prompt']}")
+    slug = costs["model"].replace(":", "-").replace("/", "-")
+    path = catalog_dir / f"tool-costs-{slug}-{datetime.now(UTC):%Y%m%dT%H%M%SZ}.json"
+    path.write_text(json.dumps(costs, indent=2), encoding="utf-8")
+    console.print(f"saved {path}")

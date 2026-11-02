@@ -112,7 +112,7 @@ class Agent:
         config = self._config()
         trace = Trace(
             run_id=f"{datetime.now(UTC):%Y%m%dT%H%M%S}-{uuid4().hex[:6]}", group_id=self.group_id,
-            task_id=task.id, prompt=task.prompt, backend=self.llm.kind, model=self.llm.model,
+            task_id=task.id, prompt=task.prompt, task=task.model_dump(), backend=self.llm.kind, model=self.llm.model,
             params=config["options"], config=config, config_hash=sha256_hex(config),
             catalog_version=hub_catalog_hash(self.hub), hub_mode=self.hub.mode, tokenizer=self.tokenizer,
             started_at=datetime.now(UTC).isoformat(),
