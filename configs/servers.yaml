@@ -1,0 +1,27 @@
+# MCP servers (verified launch commands, see CLAUDE.md). ${VAR} is expanded from the environment.
+# env_vars are read from the environment (Windows user environment as fallback) and passed
+# explicitly: stdio servers inherit only HOME, LOGNAME, PATH, SHELL, TERM, USER.
+servers:
+  medical:
+    package: npm medical-mcp
+    version: "1.0.8"           # server reports 1.0.0 in serverInfo
+    command: node
+    args: ['${USERPROFILE}\src\medical-mcp\node_modules\medical-mcp\build\index.js']
+    timeout_s: 90
+    min_interval_s: 0.34       # PubMed E-utilities: 3 requests/s without a key
+
+  biomcp:
+    package: biomcp-cli
+    version: "0.9.3"
+    command: '${USERPROFILE}\.local\bin\biomcp.exe'
+    args: [serve]
+    timeout_s: 120
+
+  omop:
+    package: OHNLP/omop_mcp
+    version: "7628155"         # git commit; server reports FastMCP's 1.7.1
+    command: '${APPDATA}\Python\Python313\Scripts\uv.exe'
+    args: [--directory, '${USERPROFILE}\src\omop_mcp', run, omop_mcp]
+    env_vars: [OMOPHUB_API_KEY]
+    timeout_s: 60
+    min_interval_s: 0.5        # OMOPHub free tier: 2 requests/s

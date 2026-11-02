@@ -1,17 +1,24 @@
-"""Config loading. LLM profiles live in `configs/llm.yaml`."""
+"""Config loading. LLM profiles live in `configs/llm.yaml`, MCP servers in `configs/servers.yaml`."""
 
 from __future__ import annotations
 
+import os
+import sys
 from pathlib import Path
 from typing import Any, Literal
 
 import yaml
+from mcp import StdioServerParameters
 from pydantic import BaseModel, Field
 
 from toolhelper.llm.base import ChatOptions, LLMBackend
 
-CONFIG_DIR = Path(__file__).resolve().parents[2] / "configs"
+ROOT = Path(__file__).resolve().parents[2]
+CONFIG_DIR = ROOT / "configs"
 LLM_CONFIG = CONFIG_DIR / "llm.yaml"
+SERVERS_CONFIG = CONFIG_DIR / "servers.yaml"
+CATALOG_DIR = ROOT / "data" / "catalog"
+REPLAY_DIR = ROOT / "data" / "replay"
 
 
 class LLMProfile(BaseModel):
@@ -66,3 +73,51 @@ def make_backend(profile: LLMProfile, *, client: Any = None) -> LLMBackend:
 def get_backend(name: str | None = None, path: Path | str = LLM_CONFIG) -> LLMBackend:
     _, profile = load_llm_config(path).get(name)
     return make_backend(profile)
+
+
+class MissingSecretError(RuntimeError):
+    pass
+
+
+def read_env(name: str) -> str | None:
+    """Reads an environment variable, falling back to the Windows user environment
+    (shells started before a variable was set don't see it)."""
+    value = os.environ.get(name)
+    if value or sys.platform != "win32":
+        return value
+    import winreg
+
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, "Environment") as key:
+            return winreg.QueryValueEx(key, name)[0] or None
+    except OSError:
+        return None
+
+
+class ServerConfig(BaseModel):
+    package: str
+    version: str
+    command: str
+    args: list[str] = Field(default_factory=list)
+    env_vars: list[str] = Field(default_factory=list)
+    timeout_s: float = 60
+    # Minimum seconds between live calls (upstream rate limits).
+    min_interval_s: float = 0
+
+    def stdio_params(self, name: str) -> StdioServerParameters:
+        env = {}
+        for var in self.env_vars:
+            value = read_env(var)
+            if not value:
+                raise MissingSecretError(f"server {name!r} needs environment variable {var}")
+            env[var] = value
+        return StdioServerParameters(
+            command=os.path.expandvars(self.command),
+            args=[os.path.expandvars(a) for a in self.args],
+            env=env or None,
+        )
+
+
+def load_servers_config(path: Path | str = SERVERS_CONFIG) -> dict[str, ServerConfig]:
+    data = yaml.safe_load(Path(path).read_text(encoding="utf-8"))
+    return {name: ServerConfig.model_validate(cfg) for name, cfg in data["servers"].items()}

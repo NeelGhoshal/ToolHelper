@@ -56,3 +56,31 @@ def drug_tool():
     from toolhelper.llm.base import ToolSpec
 
     return ToolSpec.model_validate(load_fixture("llm/ollama_tool_call.json")["tool_spec"])
+
+
+@pytest.fixture
+def anyio_backend():
+    return "asyncio"
+
+
+@pytest.fixture
+def catalog():
+    """Catalog snapshot captured from the live servers."""
+    from toolhelper.mcp.catalog import load_snapshot
+
+    return load_snapshot(FIXTURES / "catalog.json")
+
+
+@pytest.fixture
+def store():
+    """Real responses recorded from the live servers (see fixtures/replay_calls.yaml)."""
+    from toolhelper.mcp.recorder import RecordingStore
+
+    return RecordingStore(FIXTURES / "replay")
+
+
+@pytest.fixture
+def server_configs():
+    from toolhelper.config import load_servers_config
+
+    return load_servers_config()

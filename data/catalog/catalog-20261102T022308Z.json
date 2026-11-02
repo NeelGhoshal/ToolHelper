@@ -1,0 +1,1263 @@
+{
+  "captured_at": "2026-11-02T02:23:08.220930+00:00",
+  "source": "live",
+  "tokenizer": "cl100k_base",
+  "tokens_measured": false,
+  "servers": {
+    "medical": {
+      "name": "medical",
+      "package": "npm medical-mcp",
+      "version": "1.0.8",
+      "server_info": {
+        "name": "medical-mcp",
+        "version": "1.0.0"
+      },
+      "protocol_version": "2025-11-25",
+      "tools": [
+        {
+          "name": "get-article-details",
+          "namespaced": "medical__get-article-details",
+          "definition": {
+            "name": "get-article-details",
+            "description": "Get detailed information about a specific medical article by PMID",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "pmid": {
+                  "type": "string",
+                  "description": "PubMed ID (PMID) of the article"
+                }
+              },
+              "required": [
+                "pmid"
+              ],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            },
+            "execution": {
+              "taskSupport": "forbidden"
+            }
+          },
+          "schema_hash": "df8333b9c8d0d27e62f4e52648e7c023ac39ca144db09693530b0517ccd28a11",
+          "tokens": 82
+        },
+        {
+          "name": "get-drug-details",
+          "namespaced": "medical__get-drug-details",
+          "definition": {
+            "name": "get-drug-details",
+            "description": "Get detailed information about a specific drug by NDC (National Drug Code)",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "ndc": {
+                  "type": "string",
+                  "description": "National Drug Code (NDC) of the drug"
+                }
+              },
+              "required": [
+                "ndc"
+              ],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            },
+            "execution": {
+              "taskSupport": "forbidden"
+            }
+          },
+          "schema_hash": "6cd142a7a8c8bf0cd41867e676e0757149caa7b9a47f08742992220047a9de21",
+          "tokens": 88
+        },
+        {
+          "name": "get-health-statistics",
+          "namespaced": "medical__get-health-statistics",
+          "definition": {
+            "name": "get-health-statistics",
+            "description": "Get health statistics and indicators from WHO Global Health Observatory",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "indicator": {
+                  "type": "string",
+                  "description": "Health indicator to search for (e.g., 'Life expectancy', 'Mortality rate')"
+                },
+                "country": {
+                  "type": "string",
+                  "description": "Country code (e.g., 'USA', 'GBR') - optional"
+                },
+                "limit": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 20,
+                  "default": 10,
+                  "description": "Number of results to return (max 20)"
+                }
+              },
+              "required": [
+                "indicator"
+              ],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            },
+            "execution": {
+              "taskSupport": "forbidden"
+            }
+          },
+          "schema_hash": "473590ee531b439cdfb27c396e7fed732870af20e01be8d63fbf7d5fa9df6b4d",
+          "tokens": 144
+        },
+        {
+          "name": "search-clinical-guidelines",
+          "namespaced": "medical__search-clinical-guidelines",
+          "definition": {
+            "name": "search-clinical-guidelines",
+            "description": "Search for clinical guidelines and practice recommendations from medical organizations",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "query": {
+                  "type": "string",
+                  "description": "Medical condition or topic to search for guidelines"
+                },
+                "organization": {
+                  "type": "string",
+                  "description": "Specific medical organization to filter by (e.g., 'American Heart Association', 'WHO')"
+                }
+              },
+              "required": [
+                "query"
+              ],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            },
+            "execution": {
+              "taskSupport": "forbidden"
+            }
+          },
+          "schema_hash": "3fec3cd589e56542ecbba341a2f5fdce0f16a71afe7872e105b5b3964d14c1b5",
+          "tokens": 109
+        },
+        {
+          "name": "search-drug-nomenclature",
+          "namespaced": "medical__search-drug-nomenclature",
+          "definition": {
+            "name": "search-drug-nomenclature",
+            "description": "Search for drug information using RxNorm (standardized drug nomenclature)",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "query": {
+                  "type": "string",
+                  "description": "Drug name to search for in RxNorm database"
+                }
+              },
+              "required": [
+                "query"
+              ],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            },
+            "execution": {
+              "taskSupport": "forbidden"
+            }
+          },
+          "schema_hash": "4b46a63220a96c4031020e866aada371c13b5b6b99c63a2da0c7eda8823ac676",
+          "tokens": 87
+        },
+        {
+          "name": "search-drugs",
+          "namespaced": "medical__search-drugs",
+          "definition": {
+            "name": "search-drugs",
+            "description": "Search for drug information using FDA database",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "query": {
+                  "type": "string",
+                  "description": "Drug name to search for (brand name or generic name)"
+                },
+                "limit": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 50,
+                  "default": 10,
+                  "description": "Number of results to return (max 50)"
+                }
+              },
+              "required": [
+                "query"
+              ],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            },
+            "execution": {
+              "taskSupport": "forbidden"
+            }
+          },
+          "schema_hash": "e32c0a994467449d8497e568a07327799abae94cff919e82dbe108dccb59d191",
+          "tokens": 109
+        },
+        {
+          "name": "search-google-scholar",
+          "namespaced": "medical__search-google-scholar",
+          "definition": {
+            "name": "search-google-scholar",
+            "description": "Search for academic research articles using Google Scholar",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "query": {
+                  "type": "string",
+                  "description": "Academic topic or research query to search for"
+                }
+              },
+              "required": [
+                "query"
+              ],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            },
+            "execution": {
+              "taskSupport": "forbidden"
+            }
+          },
+          "schema_hash": "7263956b52e43fa9eaa781754aad248a7cee8e0395c9a6e9eac92bd682868683",
+          "tokens": 80
+        },
+        {
+          "name": "search-medical-databases",
+          "namespaced": "medical__search-medical-databases",
+          "definition": {
+            "name": "search-medical-databases",
+            "description": "Search across multiple medical databases (PubMed, Google Scholar, Cochrane, ClinicalTrials.gov) for comprehensive results",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "query": {
+                  "type": "string",
+                  "description": "Medical topic or condition to search for across multiple databases"
+                }
+              },
+              "required": [
+                "query"
+              ],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            },
+            "execution": {
+              "taskSupport": "forbidden"
+            }
+          },
+          "schema_hash": "bb44486248971404e7d8fdc1902067e2e99595c5a7696f4470bed464a594fce4",
+          "tokens": 96
+        },
+        {
+          "name": "search-medical-journals",
+          "namespaced": "medical__search-medical-journals",
+          "definition": {
+            "name": "search-medical-journals",
+            "description": "Search specific medical journals (NEJM, JAMA, Lancet, BMJ, Nature Medicine) for high-quality research",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "query": {
+                  "type": "string",
+                  "description": "Medical topic or condition to search for in top medical journals"
+                }
+              },
+              "required": [
+                "query"
+              ],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            },
+            "execution": {
+              "taskSupport": "forbidden"
+            }
+          },
+          "schema_hash": "15268e11da5b7b6dc8bc287222af57538935019400bc1a8e36316a1d27642ecb",
+          "tokens": 98
+        },
+        {
+          "name": "search-medical-literature",
+          "namespaced": "medical__search-medical-literature",
+          "definition": {
+            "name": "search-medical-literature",
+            "description": "Search for medical research articles in PubMed",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "query": {
+                  "type": "string",
+                  "description": "Medical topic or condition to search for"
+                },
+                "max_results": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 20,
+                  "default": 10,
+                  "description": "Maximum number of articles to return (max 20)"
+                }
+              },
+              "required": [
+                "query"
+              ],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            },
+            "execution": {
+              "taskSupport": "forbidden"
+            }
+          },
+          "schema_hash": "0a636e8c0611f9231f34ba993c945f8eb2812b1387060fb49900431cea15459f",
+          "tokens": 109
+        }
+      ],
+      "server_hash": "9f7c3cae963937f676ba8f4a5540be6781644a5c32866447a4464477def61d50",
+      "tokens": 1002
+    },
+    "biomcp": {
+      "name": "biomcp",
+      "package": "biomcp-cli",
+      "version": "0.9.3",
+      "server_info": {
+        "name": "biomcp",
+        "version": "0.9.3"
+      },
+      "protocol_version": "2025-11-25",
+      "tools": [
+        {
+          "name": "biomcp",
+          "namespaced": "biomcp__biomcp",
+          "definition": {
+            "name": "biomcp",
+            "title": "BioMCP command",
+            "description": "Run one read-only BioMCP command. Prefer typed tools. Use `biomcp list <entity>` for discovery or `biomcp skill list` for workflows. Set `json` for structured output. Binary downloads and mutations are rejected.",
+            "inputSchema": {
+              "$schema": "https://json-schema.org/draft/2020-12/schema",
+              "properties": {
+                "command": {
+                  "type": "string"
+                },
+                "json": {
+                  "default": false,
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "command"
+              ],
+              "title": "ShellCommand",
+              "type": "object"
+            },
+            "annotations": {
+              "title": "BioMCP command",
+              "readOnlyHint": true,
+              "destructiveHint": false,
+              "idempotentHint": true,
+              "openWorldHint": true
+            }
+          },
+          "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+          "tokens": 121
+        },
+        {
+          "name": "gene_cspec",
+          "namespaced": "biomcp__gene_cspec",
+          "definition": {
+            "name": "gene_cspec",
+            "title": "ClinGen CSpec",
+            "description": "Get ClinGen CSpec manifests, pages, or attachment metadata.",
+            "inputSchema": {
+              "$schema": "https://json-schema.org/draft/2020-12/schema",
+              "properties": {
+                "capture_id": {
+                  "default": null,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "files": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "gene": {
+                  "type": "string"
+                },
+                "limit": {
+                  "default": 25,
+                  "format": "uint",
+                  "maximum": 50,
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "offset": {
+                  "default": 0,
+                  "format": "uint",
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "version_iri": {
+                  "default": null,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "gene"
+              ],
+              "title": "TypedGeneCspec",
+              "type": "object"
+            },
+            "annotations": {
+              "title": "ClinGen CSpec",
+              "readOnlyHint": true,
+              "destructiveHint": false,
+              "idempotentHint": true,
+              "openWorldHint": true
+            }
+          },
+          "schema_hash": "99a9fa0f47d05c567ac9c285bba76dd59ae47a7188ee8182012380e32e28db76",
+          "tokens": 155
+        },
+        {
+          "name": "get",
+          "namespaced": "biomcp__get",
+          "definition": {
+            "name": "get",
+            "title": "BioMCP get",
+            "description": "Get one biomedical record with typed inputs. Binary assets are CLI-only.",
+            "inputSchema": {
+              "$schema": "https://json-schema.org/draft/2020-12/schema",
+              "additionalProperties": false,
+              "properties": {
+                "assembly": {
+                  "enum": [
+                    "grch37",
+                    "hg19",
+                    "grch38",
+                    "hg38"
+                  ]
+                },
+                "entity": {
+                  "enum": [
+                    "gene",
+                    "variant",
+                    "article",
+                    "author",
+                    "trial",
+                    "diagnostic",
+                    "drug",
+                    "disease",
+                    "pgx",
+                    "pathway",
+                    "cell-line",
+                    "protein",
+                    "adverse-event"
+                  ],
+                  "type": "string"
+                },
+                "id": {
+                  "maxLength": 512,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "json": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "pdf": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "sections": {
+                  "items": {
+                    "enum": [
+                      "pathways",
+                      "ontology",
+                      "diseases",
+                      "diagnostics",
+                      "protein",
+                      "go",
+                      "interactions",
+                      "civic",
+                      "expression",
+                      "hpa",
+                      "druggability",
+                      "clingen",
+                      "gencc",
+                      "constraint",
+                      "disgenet",
+                      "funding",
+                      "all",
+                      "predict",
+                      "predictions",
+                      "clinvar",
+                      "population",
+                      "population-details",
+                      "conservation",
+                      "cosmic",
+                      "cgi",
+                      "cbioportal",
+                      "gwas",
+                      "annotations",
+                      "fulltext",
+                      "tldr",
+                      "indexing",
+                      "assets",
+                      "eligibility",
+                      "contacts",
+                      "locations",
+                      "outcomes",
+                      "arms",
+                      "references",
+                      "genes",
+                      "conditions",
+                      "methods",
+                      "regulatory",
+                      "label",
+                      "safety",
+                      "shortage",
+                      "targets",
+                      "indications",
+                      "approvals",
+                      "cell_lines",
+                      "phenotypes",
+                      "variants",
+                      "models",
+                      "prevalence",
+                      "survival",
+                      "clinical_features",
+                      "recommendations",
+                      "frequencies",
+                      "guidelines",
+                      "events",
+                      "enrichment",
+                      "xrefs",
+                      "chembl",
+                      "drug_response",
+                      "domains",
+                      "complexes",
+                      "structures",
+                      "reactions",
+                      "concomitant",
+                      "guidance"
+                    ]
+                  },
+                  "maxItems": 16,
+                  "type": "array"
+                },
+                "source": {
+                  "default": "ctgov",
+                  "enum": [
+                    "ctgov",
+                    "nci"
+                  ]
+                }
+              },
+              "required": [
+                "entity",
+                "id"
+              ],
+              "title": "TypedGet",
+              "type": "object"
+            },
+            "annotations": {
+              "title": "BioMCP get",
+              "readOnlyHint": true,
+              "destructiveHint": false,
+              "idempotentHint": true,
+              "openWorldHint": true
+            }
+          },
+          "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+          "tokens": 390
+        },
+        {
+          "name": "search",
+          "namespaced": "biomcp__search",
+          "definition": {
+            "name": "search",
+            "title": "BioMCP search",
+            "description": "Search a biomedical entity with typed, bounded inputs.",
+            "inputSchema": {
+              "$schema": "https://json-schema.org/draft/2020-12/schema",
+              "additionalProperties": false,
+              "properties": {
+                "all_species": {
+                  "type": "boolean"
+                },
+                "article_type": {
+                  "enum": [
+                    "research-article",
+                    "review",
+                    "case-reports",
+                    "meta-analysis"
+                  ]
+                },
+                "author": {
+                  "items": {
+                    "maxLength": 256,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "maxItems": 3,
+                  "minItems": 1,
+                  "type": "array",
+                  "uniqueItems": true
+                },
+                "biomarker": {
+                  "items": {
+                    "maxLength": 256,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "maxItems": 3,
+                  "minItems": 1,
+                  "type": "array",
+                  "uniqueItems": true
+                },
+                "chromosome": {
+                  "maxLength": 256,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "condition": {
+                  "items": {
+                    "maxLength": 256,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "maxItems": 3,
+                  "minItems": 1,
+                  "type": "array",
+                  "uniqueItems": true
+                },
+                "consequence": {
+                  "maxLength": 256,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "cpic_level": {
+                  "enum": [
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                  ]
+                },
+                "criteria": {
+                  "items": {
+                    "maxLength": 256,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "maxItems": 3,
+                  "minItems": 1,
+                  "type": "array",
+                  "uniqueItems": true
+                },
+                "date_from": {
+                  "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$",
+                  "type": "string"
+                },
+                "date_to": {
+                  "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$",
+                  "type": "string"
+                },
+                "disease": {
+                  "items": {
+                    "maxLength": 256,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "maxItems": 3,
+                  "maxLength": 256,
+                  "minItems": 1,
+                  "minLength": 1,
+                  "type": [
+                    "string",
+                    "array"
+                  ],
+                  "uniqueItems": true
+                },
+                "drug": {
+                  "items": {
+                    "maxLength": 256,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "maxItems": 3,
+                  "maxLength": 256,
+                  "minItems": 1,
+                  "minLength": 1,
+                  "type": [
+                    "string",
+                    "array"
+                  ],
+                  "uniqueItems": true
+                },
+                "entity": {
+                  "enum": [
+                    "author",
+                    "gene",
+                    "pgx",
+                    "gwas",
+                    "article",
+                    "trial",
+                    "variant",
+                    "protein"
+                  ],
+                  "type": "string"
+                },
+                "existence": {
+                  "maximum": 5,
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "gene": {
+                  "maxLength": 256,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "gene_type": {
+                  "maxLength": 256,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "hgvsp": {
+                  "maxLength": 256,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "intervention": {
+                  "items": {
+                    "maxLength": 256,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "maxItems": 3,
+                  "minItems": 1,
+                  "type": "array",
+                  "uniqueItems": true
+                },
+                "journal": {
+                  "items": {
+                    "maxLength": 256,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "maxItems": 3,
+                  "minItems": 1,
+                  "type": "array",
+                  "uniqueItems": true
+                },
+                "json": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "keyword": {
+                  "items": {
+                    "maxLength": 256,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "maxItems": 3,
+                  "minItems": 1,
+                  "type": "array",
+                  "uniqueItems": true
+                },
+                "limit": {
+                  "default": 10,
+                  "maximum": 25,
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "max_frequency": {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                "mutation": {
+                  "items": {
+                    "maxLength": 256,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "maxItems": 3,
+                  "minItems": 1,
+                  "type": "array",
+                  "uniqueItems": true
+                },
+                "no_preprints": {
+                  "type": "boolean"
+                },
+                "offset": {
+                  "default": 0,
+                  "maximum": 1000,
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "open_access": {
+                  "type": "boolean"
+                },
+                "p_value": {
+                  "exclusiveMinimum": 0,
+                  "maximum": 1,
+                  "type": "number"
+                },
+                "phase": {
+                  "enum": [
+                    "NA",
+                    "N/A",
+                    "n/a",
+                    "EARLY_PHASE1",
+                    "early_phase1",
+                    "early1",
+                    "PHASE1",
+                    "1",
+                    "I",
+                    "PHASE2",
+                    "2",
+                    "II",
+                    "PHASE3",
+                    "3",
+                    "III",
+                    "PHASE4",
+                    "4",
+                    "IV",
+                    "PHASE1/PHASE2",
+                    "1/2",
+                    "I_II",
+                    "PHASE2/PHASE3",
+                    "2/3",
+                    "II_III"
+                  ]
+                },
+                "query": {
+                  "maxLength": 256,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "region": {
+                  "maxLength": 256,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "revel_min": {
+                  "maximum": 1,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                "review_status": {
+                  "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "none",
+                    "criteria_provided",
+                    "expert_panel"
+                  ]
+                },
+                "reviewed": {
+                  "type": "boolean"
+                },
+                "significance": {
+                  "maxLength": 256,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "sort": {
+                  "enum": [
+                    "date",
+                    "citations",
+                    "relevance"
+                  ]
+                },
+                "source": {
+                  "enum": [
+                    "semanticscholar",
+                    "all",
+                    "pubtator",
+                    "europepmc",
+                    "pubmed",
+                    "litsense2",
+                    "ctgov",
+                    "nci"
+                  ]
+                },
+                "status": {
+                  "enum": [
+                    "recruiting",
+                    "not_yet_recruiting",
+                    "enrolling_by_invitation",
+                    "active_not_recruiting",
+                    "completed",
+                    "suspended",
+                    "terminated",
+                    "withdrawn"
+                  ]
+                },
+                "trait": {
+                  "maxLength": 256,
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "entity"
+              ],
+              "title": "TypedSearch",
+              "type": "object"
+            },
+            "annotations": {
+              "title": "BioMCP search",
+              "readOnlyHint": true,
+              "destructiveHint": false,
+              "idempotentHint": true,
+              "openWorldHint": true
+            }
+          },
+          "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+          "tokens": 1061
+        },
+        {
+          "name": "variant_articles",
+          "namespaced": "biomcp__variant_articles",
+          "definition": {
+            "name": "variant_articles",
+            "title": "Variant literature batch",
+            "description": "Get compact literature shortlists for 1-10 variant identities.",
+            "inputSchema": {
+              "$defs": {
+                "VariantArticleRequest": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "accession": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "alt": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "build": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "coding": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "gene": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "genomic": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "position": {
+                      "format": "uint64",
+                      "minimum": 0,
+                      "type": [
+                        "integer",
+                        "null"
+                      ]
+                    },
+                    "protein": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "ref": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "request_id": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "rsid": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "transcript": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "$schema": "https://json-schema.org/draft/2020-12/schema",
+              "properties": {
+                "confirmed_only": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "debug_plan": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "items": {
+                  "items": {
+                    "$ref": "#/$defs/VariantArticleRequest"
+                  },
+                  "maxItems": 10,
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "limit": {
+                  "default": 10,
+                  "format": "uint",
+                  "maximum": 50,
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "offset": {
+                  "default": 0,
+                  "format": "uint",
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "strategy": {
+                  "default": "union",
+                  "enum": [
+                    "union",
+                    "annotation",
+                    "exact",
+                    "lexical"
+                  ],
+                  "type": "string"
+                },
+                "verify_identity": {
+                  "default": false,
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "items"
+              ],
+              "title": "TypedVariantArticles",
+              "type": "object"
+            },
+            "annotations": {
+              "title": "Variant literature batch",
+              "readOnlyHint": true,
+              "destructiveHint": false,
+              "idempotentHint": true,
+              "openWorldHint": true
+            }
+          },
+          "schema_hash": "70147d049a9e3bd31190ae3b87d93f1485386242eee6a9cc9a986c130f8b3d8f",
+          "tokens": 332
+        },
+        {
+          "name": "variant_erepo",
+          "namespaced": "biomcp__variant_erepo",
+          "definition": {
+            "name": "variant_erepo",
+            "title": "ClinGen ERepo assertions",
+            "description": "Get ClinGen ERepo expert assertions by CAid or gene.",
+            "inputSchema": {
+              "$schema": "https://json-schema.org/draft/2020-12/schema",
+              "additionalProperties": false,
+              "properties": {
+                "assertion_id": {
+                  "type": "string"
+                },
+                "caid": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "caids": {
+                  "items": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "maxItems": 50,
+                  "minItems": 1,
+                  "type": "array"
+                },
+                "detail": {
+                  "type": "boolean"
+                },
+                "gene": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "limit": {
+                  "default": 25,
+                  "maximum": 100,
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "offset": {
+                  "default": 0,
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "version": {
+                  "type": "string"
+                }
+              },
+              "title": "TypedVariantErepo",
+              "type": "object"
+            },
+            "annotations": {
+              "title": "ClinGen ERepo assertions",
+              "readOnlyHint": true,
+              "destructiveHint": false,
+              "idempotentHint": true,
+              "openWorldHint": true
+            }
+          },
+          "schema_hash": "1e8c9aa164876970594a15789c474024c0b2282fd6190471bef4af8af2cf556d",
+          "tokens": 175
+        },
+        {
+          "name": "variant_normalize_car",
+          "namespaced": "biomcp__variant_normalize_car",
+          "definition": {
+            "name": "variant_normalize_car",
+            "title": "ClinGen Allele Registry normalization",
+            "description": "Normalize 1-50 RefSeq HGVS values with ClinGen Allele Registry.",
+            "inputSchema": {
+              "$schema": "https://json-schema.org/draft/2020-12/schema",
+              "properties": {
+                "inputs": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "maxItems": 50,
+                  "minItems": 1,
+                  "type": "array"
+                }
+              },
+              "required": [
+                "inputs"
+              ],
+              "title": "TypedVariantCar",
+              "type": "object"
+            },
+            "annotations": {
+              "title": "ClinGen Allele Registry normalization",
+              "readOnlyHint": true,
+              "destructiveHint": false,
+              "idempotentHint": true,
+              "openWorldHint": true
+            }
+          },
+          "schema_hash": "1b49b0f8fdb7a784be91785cd3296145464a1e0e4050244929422c2a7086dc1c",
+          "tokens": 95
+        }
+      ],
+      "server_hash": "bdbe34378fd5f11c01af4dd49080064b7e61c164b0ccddf5face9956a8f896fc",
+      "tokens": 2329
+    },
+    "omop": {
+      "name": "omop",
+      "package": "OHNLP/omop_mcp",
+      "version": "7628155",
+      "server_info": {
+        "name": "omop_concept_mapper",
+        "version": "1.7.1"
+      },
+      "protocol_version": "2024-11-05",
+      "tools": [
+        {
+          "name": "batch_map_concepts_from_csv",
+          "namespaced": "omop__batch_map_concepts_from_csv",
+          "definition": {
+            "name": "batch_map_concepts_from_csv",
+            "description": "\n    Process a CSV file of keywords, mapping each row and returning a CSV with mapping results appended as new columns.\n    ",
+            "inputSchema": {
+              "properties": {
+                "csv_path": {
+                  "title": "Csv Path",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "csv_path"
+              ],
+              "title": "batch_map_concepts_from_csvArguments",
+              "type": "object"
+            }
+          },
+          "schema_hash": "6caed5d1f6843ca759c971b49074f196f1a73ceba46e9a065221d08adbb81313",
+          "tokens": 86
+        },
+        {
+          "name": "find_omop_concept",
+          "namespaced": "omop__find_omop_concept",
+          "definition": {
+            "name": "find_omop_concept",
+            "description": "\n    Find OMOP concepts for a given keyword, table, and field.\n    Returns multiple candidates for LLM to choose from based on context.\n\n    Args:\n        keyword: The clinical term to map\n        omop_table: The OMOP CDM table name\n        omop_field: The concept ID field name\n        max_results: Maximum number of candidate concepts to return\n\n    Returns:\n        Dict containing candidate concepts or error information if no results found.\n    ",
+            "inputSchema": {
+              "properties": {
+                "keyword": {
+                  "title": "Keyword",
+                  "type": "string"
+                },
+                "omop_table": {
+                  "title": "Omop Table",
+                  "type": "string"
+                },
+                "omop_field": {
+                  "title": "Omop Field",
+                  "type": "string"
+                },
+                "max_results": {
+                  "default": 20,
+                  "title": "Max Results",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "keyword",
+                "omop_table",
+                "omop_field"
+              ],
+              "title": "find_omop_conceptArguments",
+              "type": "object"
+            }
+          },
+          "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+          "tokens": 211
+        }
+      ],
+      "server_hash": "8fb4178088a618a6cdba941fb372252e2fcae2a365de2842ffabafe58e15baa7",
+      "tokens": 297
+    }
+  },
+  "catalog_hash": "3abb72a7e25f3523499db62c37a26d79d0bc64412f426bd11529adb6be02de50"
+}

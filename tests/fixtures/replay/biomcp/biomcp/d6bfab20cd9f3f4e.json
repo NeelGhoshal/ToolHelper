@@ -1,0 +1,28 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search drug imatinib"
+  },
+  "args_key": "d6bfab20cd9f3f4edaa7076f1951dabba95d746920dee6e8b4286063c131e3c6",
+  "recorded_at": "2026-11-02T02:25:22.412563+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 25381.52809999883,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Drugs: imatinib\n\n## US (MyChem.info / OpenFDA)\n\nFound 4 drugs\n\n|Name|Mechanism|Target|\n|---|---|---|\n|imatinib|Bcr-Abl Tyrosine Kinase Inhibitors|DDR1|\n|imatinib mesylate|Inhibitor of Tyrosine-protein kinase ABL1|Tyrosine-protein kinase ABL1|\n|imatinib oral|Bcr-Abl Tyrosine Kinase Inhibitors|-|\n|linkable imatinib analogue|-|-|\n\n## EU (EMA)\n\nFound 19 drugs\n\n|Name|Active Substance|EMA Number|Status|Match|\n|---|---|---|---|---|\n|Glivec|imatinib|EMEA/H/C/000406|Authorised|active_substance: imatinib (query)|\n|Imatinib Accord|imatinib|EMEA/H/C/002681|Authorised|active_substance: imatinib (query)|\n|Imatinib Teva|imatinib|EMEA/H/C/002585|Authorised|active_substance: imatinib (query)|\n|Imatinib Actavis|imatinib|EMEA/H/C/002594|Withdrawn|active_substance: imatinib (query)|\n|Imatinib medac|imatinib|EMEA/H/C/002692|Withdrawn|active_substance: imatinib (query)|\n|Ruvise|imatinib|EMEA/H/C/002551|Application withdrawn|active_substance: imatinib (query)|\n|Sunitinib Accord|sunitinib|EMEA/H/C/005419|Authorised|broad_text: imatinib (query)|\n|Sprycel|dasatinib|EMEA/H/C/000709|Authorised|broad_text: imatinib (query)|\n|Qinlock|ripretinib|EMEA/H/C/005614|Authorised|broad_text: imatinib (query)|\n|Iclusig|ponatinib|EMEA/H/C/002695|Authorised|broad_text: imatinib (query)|\n\nContinue this region with `biomcp search drug --query imatinib --region eu --limit 10 --offset 10`.\n\n## WHO (WHO Prequalification)\n\nNo WHO-prequalified drugs found\n\nUse `get drug <name>` for full details.\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

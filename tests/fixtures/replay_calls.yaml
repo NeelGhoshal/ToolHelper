@@ -1,0 +1,49 @@
+# Calls recorded into tests/fixtures/replay/ (live, by hand):
+#   uv run toolhelper record tests/fixtures/replay_calls.yaml --store tests/fixtures/replay --only-missing
+# A few real calls per tool, including real error responses (marked `error case`).
+# Args follow the live schemas in the catalog snapshot. Uses ~5 OMOPHub calls.
+calls:
+  # --- medical ---
+  - {server: medical, tool: search-drugs, args: {query: ibuprofen, limit: 2}}
+  - {server: medical, tool: search-drugs, args: {query: Zoloft, limit: 3}}
+  - {server: medical, tool: get-drug-details, args: {ndc: "47781-951"}}       # sertraline (openFDA)
+  - {server: medical, tool: get-drug-details, args: {ndc: "0000-0000"}}       # error case: unknown NDC
+  - {server: medical, tool: get-health-statistics, args: {indicator: Life expectancy at birth, country: JPN, limit: 3}}
+  - {server: medical, tool: get-health-statistics, args: {indicator: Life expectancy at birth, country: Japan, limit: 3}}  # error case: name, not ISO3
+  - {server: medical, tool: search-medical-literature, args: {query: metformin cardiovascular outcomes, max_results: 3}}
+  - {server: medical, tool: get-article-details, args: {pmid: "42957066"}}
+  - {server: medical, tool: get-article-details, args: {pmid: "not-a-pmid"}}  # error case
+  - {server: medical, tool: search-drugs, args: {limit: 3}}                  # error case: missing required arg
+  - {server: medical, tool: search-drug-nomenclature, args: {query: metformin}}
+  - {server: medical, tool: search-drug-nomenclature, args: {query: Tylenol}}
+  - {server: medical, tool: search-google-scholar, args: {query: BRAF V600E melanoma}}
+  - {server: medical, tool: search-clinical-guidelines, args: {query: hypertension}}
+  - {server: medical, tool: search-clinical-guidelines, args: {query: hypertension, organization: AHA}}
+  - {server: medical, tool: search-medical-databases, args: {query: type 2 diabetes}}
+  - {server: medical, tool: search-medical-journals, args: {query: CRISPR gene therapy}}
+
+  # --- biomcp ---
+  - {server: biomcp, tool: biomcp, args: {command: get gene BRAF}}
+  - {server: biomcp, tool: biomcp, args: {command: search drug imatinib}}
+  - {server: biomcp, tool: biomcp, args: {command: delete gene BRAF}}         # error case: not a read command
+  - {server: biomcp, tool: search, args: {entity: gene, query: ERBB2, limit: 3}}
+  - {server: biomcp, tool: search, args: {entity: variant, gene: BRAF, hgvsp: p.V600E, limit: 3}}
+  - {server: biomcp, tool: search, args: {entity: drug, query: imatinib}}     # error case: drug not in enum
+  - {server: biomcp, tool: search, args: {entity: gene, query: TP53, limit: 999}}  # error case: limit out of range
+  - {server: biomcp, tool: get, args: {entity: gene, id: BRAF}}
+  - {server: biomcp, tool: get, args: {entity: gene}}                         # error case: missing id
+  - {server: biomcp, tool: get, args: {entity: gene, id: ERBB2, sections: [pathways]}}
+  - {server: biomcp, tool: get, args: {entity: gene, id: NOTAGENE123}}         # error case
+  - {server: biomcp, tool: variant_normalize_car, args: {inputs: ["NM_004333.6:c.1799T>A"]}}
+  - {server: biomcp, tool: variant_normalize_car, args: {inputs: [not-hgvs]}} # error case
+  - {server: biomcp, tool: variant_erepo, args: {gene: BRAF, limit: 2}}
+  - {server: biomcp, tool: gene_cspec, args: {gene: MYH7, limit: 2}}
+  - {server: biomcp, tool: gene_cspec, args: {gene: BRAF, limit: 2}}
+  - {server: biomcp, tool: variant_articles, args: {items: [{gene: BRAF, protein: p.V600E}], limit: 3}}
+
+  # --- omop ---
+  - {server: omop, tool: find_omop_concept, args: {keyword: heart attack, omop_table: condition_occurrence, omop_field: condition_concept_id, max_results: 5}}
+  - {server: omop, tool: find_omop_concept, args: {keyword: HbA1c, omop_table: measurement, omop_field: measurement_concept_id, max_results: 5}}
+  - {server: omop, tool: find_omop_concept, args: {keyword: heart attack, omop_table: condition, omop_field: condition_concept_id, max_results: 5}}  # error case: wrong table
+  - {server: omop, tool: batch_map_concepts_from_csv, args: {csv_path: '{repo}\tests\fixtures\replay_inputs\omop_batch.csv'}}
+  - {server: omop, tool: batch_map_concepts_from_csv, args: {csv_path: '{repo}\tests\fixtures\replay_inputs\missing.csv'}}  # error case

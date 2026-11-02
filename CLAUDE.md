@@ -61,13 +61,23 @@ These differ from README section 1.1 because of Windows. Use them in `configs/se
 - **Current Claude models take no `temperature`/`seed`** (the installed SDK's `messages.create` has no such parameters), and thinking can't be disabled on `claude-opus-5-5`; use `effort`. Anthropic runs are therefore not seed-reproducible.
 - LLM test fixtures in `tests/fixtures/llm/` are real responses recorded by `scripts/record_llm_fixtures.py`. The Anthropic parsing test still uses a hand-built SDK object (no key yet); replace it with a recording when a key is available.
 
+### MCP hub and catalog (Phase 2, 2026-11-01)
+
+- **Connect every client with `mode="legacy"`, including in-process replay servers.** On the 2026-07-28 protocol the SDK drops Medical MCP's `execution` tool field (breaking hash identity) and stamps `_meta.io.modelcontextprotocol/serverInfo` into every result.
+- **Reported serverInfo is not the package version:** Medical MCP reports `1.0.0` (npm 1.0.8); OMOP reports `1.7.1` (FastMCP's default, i.e. the mcp SDK). Recordings and snapshots store both the configured version (`configs/servers.yaml`) and the reported serverInfo.
+- **No server returns JSON-RPC errors**, not even for schema violations; all errors are `is_error` results (Medical MCP: `MCP error -32602: Input validation error...`). Medical MCP also reports "not found" as normal text, never `is_error`.
+- **Silent wrong answers worth targeting later:** `get-drug-details` with `0000-0000` returns an unrelated sunscreen; `find_omop_concept` with `omop_table: condition` returns candidates instead of an error.
+- **WHO GHO API was down (HTTP 500) on 2026-11-01.** Medical MCP turns that into "No health indicators found", so both `get-health-statistics` fixtures are outage responses. Re-record them (`toolhelper record ... --only-missing` after deleting the two files) once `https://ghoapi.azureedge.net/api/Indicator` answers.
+- Catalog snapshots are versioned JSON in `data/catalog/` until Phase 3 can store them as ToolSchema versions. Tokens are counted on the LLM view (function format, namespaced name) with `cl100k_base`, labelled estimated. BioMCP's own `biomcp mcp tools` dump counts 2,545 vs our 2,329 (it includes titles/annotations).
+- Live schema drift from README §1.1: `gene_cspec` also takes `limit` and `offset`.
+
 ## Progress
 
 | Phase | Topic | Status |
 |---|---|---|
 | 0 | Environment | done |
 | 1 | LLM backends | done |
-| 2 | MCP hub and catalog | not started |
+| 2 | MCP hub and catalog | done |
 | 3 | Context store | not started |
 | 4 | Agent loop and tracer | not started |
 | 5 | Monitoring | not started |

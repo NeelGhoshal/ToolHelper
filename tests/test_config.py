@@ -37,3 +37,22 @@ def test_cli_lists_profiles():
     result = CliRunner().invoke(app, ["llm", "profiles"])
     assert result.exit_code == 0
     assert "ollama-qwen3" in result.output
+
+
+def test_servers_config_expands_paths_and_passes_keys(server_configs, monkeypatch):
+    import toolhelper.config as config
+
+    assert set(server_configs) == {"medical", "biomcp", "omop"}
+    monkeypatch.setattr(config, "read_env", lambda name: "test-key")
+    params = server_configs["omop"].stdio_params("omop")
+    assert "${" not in params.command and all("${" not in a for a in params.args)
+    assert params.env == {"OMOPHUB_API_KEY": "test-key"}
+    assert server_configs["medical"].stdio_params("medical").env is None
+
+
+def test_missing_secret_is_an_error(server_configs, monkeypatch):
+    import toolhelper.config as config
+
+    monkeypatch.setattr(config, "read_env", lambda name: None)
+    with pytest.raises(config.MissingSecretError):
+        server_configs["omop"].stdio_params("omop")

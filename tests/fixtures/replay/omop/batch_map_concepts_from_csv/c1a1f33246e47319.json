@@ -1,0 +1,28 @@
+{
+  "server": "omop",
+  "tool": "batch_map_concepts_from_csv",
+  "arguments": {
+    "csv_path": "C:\\Users\\neelg\\OneDrive\\Desktop\\ToolHelper\\tests\\fixtures\\replay_inputs\\omop_batch.csv"
+  },
+  "args_key": "c1a1f33246e473190f70a89b084ab10ceccb969ccd6444168c5550cf6a62d445",
+  "recorded_at": "2026-11-02T02:25:56.667940+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "6caed5d1f6843ca759c971b49074f196f1a73ceba46e9a065221d08adbb81313",
+  "latency_ms": 1310.2497999789193,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "keyword,omop_table,omop_field,concept_id,code,name,class,concept,validity,domain,vocab,url,reason\r\nheart attack,condition_occurrence,condition_concept_id,4329847,22298006,Myocardial infarction,Disorder,S,Valid,Condition,SNOMED,https://omophub.com/concepts/4329847,\r\nmetformin,drug_exposure,drug_concept_id,1503297,6809,metformin,Ingredient,S,Valid,Drug,RxNorm,https://omophub.com/concepts/1503297,\r\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

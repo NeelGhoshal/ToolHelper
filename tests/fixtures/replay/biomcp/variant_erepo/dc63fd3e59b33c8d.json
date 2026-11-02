@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "variant_erepo",
+  "arguments": {
+    "gene": "BRAF",
+    "limit": 2
+  },
+  "args_key": "dc63fd3e59b33c8d2bbf05f9f7616b37ffabaaa7accbb4e4f06f636c843f92a1",
+  "recorded_at": "2026-11-02T02:25:28.119360+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "1e8c9aa164876970594a15789c474024c0b2282fd6190471bef4af8af2cf556d",
+  "latency_ms": 1541.7830999940634,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"results\": [\n    {\n      \"caid\": \"CA135028\",\n      \"gene\": \"BRAF\",\n      \"condition\": \"RASopathy\",\n      \"classification\": \"Benign\",\n      \"guideline_label\": \"ACMG variant classification (RASopathy)\",\n      \"expert_panel\": \"RASopathy VCEP\",\n      \"published_date\": \"2018-12-10\",\n      \"hgvs\": [\n        \"NM_004333.4:c.1068A>G\",\n        \"NC_000007.14:g.140794380T>C\",\n        \"CM000669.2:g.140794380T>C\"\n      ],\n      \"hgvs_count\": 28,\n      \"met_evidence_codes\": [\n        \"BA1\"\n      ],\n      \"truncated_fields\": []\n    },\n    {\n      \"caid\": \"CA135067\",\n      \"gene\": \"BRAF\",\n      \"condition\": \"RASopathy\",\n      \"classification\": \"Benign\",\n      \"guideline_label\": \"ACMG variant classification (RASopathy)\",\n      \"expert_panel\": \"RASopathy VCEP\",\n      \"published_date\": \"2018-12-10\",\n      \"hgvs\": [\n        \"NM_004333.4:c.1332G>A\",\n        \"LRG_299t1:c.1332G>A\",\n        \"XM_005250045.1:c.1332G>A\"\n      ],\n      \"hgvs_count\": 29,\n      \"met_evidence_codes\": [\n        \"BA1\"\n      ],\n      \"truncated_fields\": []\n    }\n  ],\n  \"returned\": 2,\n  \"offset\": 0,\n  \"limit\": 2,\n  \"has_more\": true,\n  \"total\": null,\n  \"source_status\": [\n    {\n      \"source\": \"clingen_erepo\",\n      \"status\": \"available\"\n    }\n  ],\n  \"provider\": \"ClinGen ERepo\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}
