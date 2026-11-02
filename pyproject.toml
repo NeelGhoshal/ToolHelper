@@ -1,0 +1,45 @@
+[project]
+name = "toolhelper"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "NeelGhoshal", email = "neelghoshal02@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "anyio>=4.16.0",
+    "jsonschema>=4.26.0",
+    "mcp>=2.3,<3",
+    "ollama>=0.6.3",
+    "pydantic>=2.14.2",
+    "pyyaml>=6.0.3",
+    "rapidfuzz>=3.14.6",
+    "rich>=15.0.0",
+    "tiktoken>=0.14.0",
+    "typer>=0.27.3",
+    "warmhub>=0.29",
+]
+
+[project.scripts]
+toolhelper = "toolhelper:main"
+
+[project.optional-dependencies]
+llm = [
+    "anthropic>=2.3.0",
+    "openai>=3.42.1",
+]
+dashboard = [
+    "streamlit>=1.66.1",
+]
+hf = [
+    "transformers>=5.22.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
