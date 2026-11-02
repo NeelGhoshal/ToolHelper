@@ -19,6 +19,7 @@ LLM_CONFIG = CONFIG_DIR / "llm.yaml"
 SERVERS_CONFIG = CONFIG_DIR / "servers.yaml"
 CATALOG_DIR = ROOT / "data" / "catalog"
 REPLAY_DIR = ROOT / "data" / "replay"
+CONTEXT_DB = ROOT / "data" / "context.sqlite"
 
 
 class LLMProfile(BaseModel):

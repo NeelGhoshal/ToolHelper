@@ -71,6 +71,15 @@ These differ from README section 1.1 because of Windows. Use them in `configs/se
 - Catalog snapshots are versioned JSON in `data/catalog/` until Phase 3 can store them as ToolSchema versions. Tokens are counted on the LLM view (function format, namespaced name) with `cl100k_base`, labelled estimated. BioMCP's own `biomcp mcp tools` dump counts 2,545 vs our 2,329 (it includes titles/annotations).
 - Live schema drift from README §1.1: `gene_cspec` also takes `limit` and `offset`.
 
+### Context store (Phase 3, 2026-11-01)
+
+- Local store is `data/context.sqlite` (gitignored). `toolhelper catalog` now also writes McpServer (`servers/<server>`) and ToolSchema (`tools/<server>/<tool>`) versions; `toolhelper context head|show|history|stale|import-catalog` read it.
+- Writes follow WarmHub's documented rules: names unique among active things, retract releases the name, identical revise is a no-op, `expected_version` conflicts, data validated with the SDK's own `warmhub.rules.validate_against_shape` (undeclared fields are warnings, not errors).
+- **Bare wrefs in wref fields are pinned to `name@vN` at write time.** A link is stale when its target has a newer version or is retracted; `CommitResult.stale` lists dependents a commit just made stale. Staleness is derived, not written back into Recipe `status`.
+- **Evidence is stored as `Evidence` assertion things** (`evidence/<thing>/v<N>/<i>`, `about` + `affirmed_targets` pinned to the version it supports), not a separate table: WarmHub has no evidence relation and its docs say relationships belong in assertions. Evidence links never count as dependencies.
+- Shape types the README leaves implicit: `success_rate`, `mean_tokens`, `expand_rate`, `ttl_seconds` are numbers; Recipe and Decision `status` use ToolCard's `proposed|accepted` enum. `RunSummary` and `Experiment` have no fields yet.
+- `toolhelper publish --repo org/name` pushes only accepted, non-stale things with their evidence, targets first, remapping pins to remote version numbers. **Untested live: no `WH_TOKEN` yet**; tested against a second local store and a fake SDK repo. `warmhub.rules.shape_definition` (used to preflight shapes in a test) is not a root export of the SDK.
+
 ## Progress
 
 | Phase | Topic | Status |
@@ -78,7 +87,7 @@ These differ from README section 1.1 because of Windows. Use them in `configs/se
 | 0 | Environment | done |
 | 1 | LLM backends | done |
 | 2 | MCP hub and catalog | done |
-| 3 | Context store | not started |
+| 3 | Context store | done |
 | 4 | Agent loop and tracer | not started |
 | 5 | Monitoring | not started |
 | 6 | Benchmark and record/replay | not started |

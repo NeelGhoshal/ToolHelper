@@ -12,13 +12,25 @@ import yaml
 from rich.console import Console
 from rich.table import Table
 
-from toolhelper.config import CATALOG_DIR, REPLAY_DIR, ROOT, load_llm_config, load_servers_config, make_backend
+from toolhelper.config import (
+    CATALOG_DIR,
+    CONTEXT_DB,
+    REPLAY_DIR,
+    ROOT,
+    load_llm_config,
+    load_servers_config,
+    make_backend,
+)
+from toolhelper.context.ingest import import_catalog
+from toolhelper.context.local_store import LocalStore
+from toolhelper.context.model import NotFoundError
 from toolhelper.llm.base import Message, ToolSpec
 from toolhelper.mcp.catalog import (
     CatalogSnapshot,
     build_snapshot,
     diff_snapshots,
     latest_snapshot,
+    load_snapshot,
     save_snapshot,
     tiktoken_counter,
 )
@@ -28,6 +40,8 @@ from toolhelper.mcp.recorder import RecordingStore
 app = typer.Typer(no_args_is_help=True)
 llm_app = typer.Typer(no_args_is_help=True, help="LLM backends and profiles.")
 app.add_typer(llm_app, name="llm")
+context_app = typer.Typer(no_args_is_help=True, help="Versioned context store.")
+app.add_typer(context_app, name="context")
 console = Console()
 
 LLMOption = Annotated[str | None, typer.Option("--llm", help="LLM profile from configs/llm.yaml.")]
@@ -74,6 +88,7 @@ ModeOption = Annotated[str, typer.Option("--mode", help="live, record or replay.
 ServersOption = Annotated[str | None, typer.Option("--servers", help="Comma-separated subset of servers.")]
 StoreOption = Annotated[Path, typer.Option("--store", help="Recording store directory.")]
 CatalogDirOption = Annotated[Path, typer.Option("--catalog-dir", help="Catalog snapshot directory.")]
+ContextOption = Annotated[Path, typer.Option("--db", help="Local context store (SQLite).")]
 
 
 def make_hub(mode: str, servers: str | None, store: Path, catalog_dir: Path) -> Hub:
@@ -91,6 +106,9 @@ def make_hub(mode: str, servers: str | None, store: Path, catalog_dir: Path) -> 
 def catalog_cmd(mode: ModeOption = "live", servers: ServersOption = None,
                 store: StoreOption = REPLAY_DIR, catalog_dir: CatalogDirOption = CATALOG_DIR,
                 save: Annotated[bool, typer.Option(help="Save a new snapshot if the catalog changed.")] = True,
+                store_context: Annotated[bool, typer.Option(
+                    "--store-context/--no-store-context", help="Write ToolSchema versions.")] = True,
+                context_db: ContextOption = CONTEXT_DB,
                 ) -> None:
     """Snapshot every tool schema, hash it, count its tokens and diff against the last snapshot."""
     previous = latest_snapshot(catalog_dir)
@@ -131,6 +149,21 @@ def catalog_cmd(mode: ModeOption = "live", servers: ServersOption = None,
             console.print(f"  server {name}: {change['old']} -> {change['new']}")
     if save and mode != "replay" and not servers and (diff is None or not diff.empty):
         console.print(f"saved {save_snapshot(snap, catalog_dir)}")
+    if store_context and mode != "replay" and not servers:
+        store_snapshot(snap, context_db)
+
+
+def store_snapshot(snap: CatalogSnapshot, context_db: Path) -> None:
+    configs = load_servers_config()
+    launch = {n: " ".join([c.command, *c.args]) for n, c in configs.items()}
+    store = LocalStore(context_db)
+    result = import_catalog(store, snap, launch)
+    console.print(f"context store: {len(result.written)} versions written, "
+                  f"{len(result.unchanged)} unchanged")
+    for s in result.stale:
+        console.print(f"  [yellow]stale[/] {s.thing.wref}: "
+                      + ", ".join(f"{l.target}@v{l.target_version} (head v{l.target_head})" for l in s.links))
+    store.close()
 
 
 @app.command("call")
@@ -185,3 +218,89 @@ def record_cmd(calls: Annotated[Path, typer.Argument(help="YAML file with a `cal
                               f"{len(r.text)} chars, {r.latency_ms:.0f} ms")
 
     anyio.run(run)
+
+
+def _show(thing) -> None:
+    status = "" if thing.active else f" [red]retracted[/] ({thing.reason or 'no reason'})"
+    console.print(f"[bold]{thing.wref}[/] {','.join(thing.shapes)}{status}  {thing.committed_at or ''}"
+                  f"  {thing.message or ''}")
+
+
+@context_app.command("import-catalog")
+def context_import(snapshot: Annotated[Path | None, typer.Argument(help="Snapshot file (default: latest).")] = None,
+                   catalog_dir: CatalogDirOption = CATALOG_DIR, db: ContextOption = CONTEXT_DB) -> None:
+    """Store a catalog snapshot as McpServer and ToolSchema versions."""
+    snap = load_snapshot(snapshot) if snapshot else latest_snapshot(catalog_dir)
+    if snap is None:
+        raise typer.BadParameter(f"no catalog snapshot in {catalog_dir}")
+    store_snapshot(snap, db)
+
+
+@context_app.command("head")
+def context_head(shape: Annotated[str | None, typer.Option(help="Only this shape.")] = None,
+                 match: Annotated[str | None, typer.Option(help="Name glob, e.g. 'tools/omop/*'.")] = None,
+                 retracted: Annotated[bool, typer.Option(help="Include retracted things.")] = False,
+                 db: ContextOption = CONTEXT_DB) -> None:
+    """List current versions."""
+    for thing in LocalStore(db).head(shape=shape, match=match, include_retracted=retracted):
+        _show(thing)
+
+
+@context_app.command("show")
+def context_show(wref: str, db: ContextOption = CONTEXT_DB) -> None:
+    """Show one thing (name, name@HEAD or name@vN) with its data and links."""
+    store = LocalStore(db)
+    try:
+        thing = store.get(wref, include_retracted=True)
+    except NotFoundError as e:
+        raise typer.BadParameter(str(e)) from None
+    _show(thing)
+    console.print_json(json.dumps(thing.data))
+    for link in store.refs(thing.name, direction="outbound"):
+        console.print(f"  -> {link.field}: {link.target}@v{link.target_version}"
+                      + (" [yellow]stale[/]" if link.stale else ""))
+    for link in store.refs(thing.name):
+        console.print(f"  <- {link.source}@v{link.source_version} ({link.field})"
+                      + (" [yellow]stale[/]" if link.stale else ""))
+
+
+@context_app.command("history")
+def context_history(name: str, db: ContextOption = CONTEXT_DB) -> None:
+    """List every version of a thing."""
+    for thing in LocalStore(db).history(name):
+        _show(thing)
+
+
+@context_app.command("stale")
+def context_stale(shape: Annotated[str | None, typer.Option(help="Only this shape.")] = None,
+                  db: ContextOption = CONTEXT_DB) -> None:
+    """List things pinned to versions that have since been revised or retracted."""
+    stale = LocalStore(db).stale(shape=shape)
+    for s in stale:
+        console.print(f"[yellow]{s.thing.wref}[/] " + ", ".join(
+            f"{l.field} -> {l.target}@v{l.target_version} (head v{l.target_head}"
+            + ("" if l.target_active else ", retracted") + ")" for l in s.links))
+    if not stale:
+        console.print("nothing stale")
+
+
+@app.command("publish")
+def publish_cmd(repo: Annotated[str, typer.Option(help="WarmHub repository, org/name.")],
+                shapes: Annotated[str | None, typer.Option(help="Comma-separated shapes to publish.")] = None,
+                dry_run: Annotated[bool, typer.Option(help="Show the plan without writing.")] = False,
+                db: ContextOption = CONTEXT_DB) -> None:
+    """Push curated context (accepted, not stale, with evidence) to WarmHub. Needs WH_TOKEN."""
+    from toolhelper.context.shapes import SHAPES
+    from toolhelper.context.warmhub_store import WarmHubStore, publish
+
+    remote = WarmHubStore(repo)
+    if not dry_run:
+        created = remote.ensure_shapes(list(SHAPES))
+        if created:
+            console.print(f"created shapes: {', '.join(created)}")
+    plan = publish(LocalStore(db), remote, shapes=shapes.split(",") if shapes else None, dry_run=dry_run)
+    for wref in plan.written:
+        console.print(f"{'would write' if dry_run else 'wrote'} {wref}")
+    for name, why in plan.skipped.items():
+        console.print(f"[dim]skipped {name}: {why}[/]")
+    console.print(f"{len(plan.written)} written, {len(plan.unchanged)} unchanged, {len(plan.skipped)} skipped")
