@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "disease": [
+      "lung cancer",
+      "non-small cell lung carcinoma"
+    ],
+    "entity": "article",
+    "gene": "EGFR",
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "6332205fee81aba50e8f9329f08bac5782b8aee2150344f0035a93159e257730",
+  "recorded_at": "2026-11-02T23:15:39.930495+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5547.617800009903,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, disease=lung cancer non-small cell lung carcinoma, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene EGFR --disease \"lung cancer non-small cell lung carcinoma\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 18709663|Expression and mutational analysis of MET in human solid can…|Europe PMC|2008-12-01|-|241| \n|PMID 33870211|The Metabolic Landscape of RAS-Driven Cancers from biology t…|Europe PMC|2021-03-24|-|232| \n|PMID 24077454|CDKN2A/p16 inactivation mechanisms and their relationship to…|Europe PMC|2013-11-01|-|90| \n|PMID 24979348|BRAF mutations in patients with non-small cell lung cancer:…|Europe PMC|2014-06-30|-|83| \n|PMID 39334768|Oxidative Stress and Age-Related Tumors.|Europe PMC|2024-09-13|-|51| \n|PMID 28430611|Prognostic value of EGFR and KRAS in circulating tumor DNA i…|Europe PMC|2017-05-01|-|45| \n|PMID 42957218|Long-term Disease Control After Probable Endobronchial Small…|PubMed|2026-11-01|-|0| \n|PMID 42957912|Genomic landscape of EGFR-TKI resistance: from known mechani…|PubMed|2026-08-04|-|0| \n|PMID 42958137|Tertiary lymphoid structures in the tumor immune microenviro…|PubMed|2026-08-01|-|0| \n|PMID 42958117|Real-world treatment pattern and clinical outcomes in Chines…|PubMed|2026-07-30|-|0| \n|PMID 42963764|PD-L1 expression across molecular driver subsets in non-smal…|PubMed|2026-07-30|-|0| \n|PMID 42962202|Decoding Lung Cancer with Artificial Intelligence: A Path to…|PubMed|2026-01-01|-|0| \n|PMID 38163979|EGFR|PubTator3|2024-01-02|-|none| \n|PMID 36172732|EGFR|PubTator3|2022-09-20|-|none| \n|PMID 34739062|Association of Clinicopathologic and Molecular Tumor Feature…|PubTator3|2021-11-01|-|none| \n \n \n \nNewest indexed: 2026-10-31 (2 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 18709663\n  biomcp search article -g EGFR -d \"lung cancer non-small cell lung carcinoma\" --year-min 2008 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

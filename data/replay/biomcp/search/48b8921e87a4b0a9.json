@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "json": true,
+    "limit": 10,
+    "query": "rs113488022"
+  },
+  "args_key": "48b8921e87a4b0a981e94b254870f73bd35c5fd0b2db4117e73809bd9833fe29",
+  "recorded_at": "2026-11-02T20:50:41.982475+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 281.63290000520647,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get variant \\\"chr7:g.140453136A>T\\\"\",\n      \"biomcp list variant\"\n    ]\n  },\n  \"count\": 3,\n  \"diagnostics\": [],\n  \"filter_evaluation\": {\n    \"rsid\": \"evaluated\"\n  },\n  \"pagination\": {\n    \"has_more\": false,\n    \"limit\": 10,\n    \"next_page_token\": null,\n    \"offset\": 0,\n    \"returned\": 3,\n    \"total\": 3\n  },\n  \"requested_variant\": {\n    \"rsid\": \"rs113488022\"\n  },\n  \"resolution\": {\n    \"exhaustive\": true,\n    \"normalized_aliases\": {\n      \"coding_changes\": [],\n      \"genomic_ids\": [],\n      \"protein_changes\": [],\n      \"rsids\": [\n        \"rs113488022\"\n      ]\n    },\n    \"status\": \"ambiguous\"\n  },\n  \"results\": [\n    {\n      \"clinvar_stars\": 2,\n      \"gene\": \"BRAF\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.65,\n      \"gnomad_af\": 3.97994e-6,\n      \"hgvs_c\": \"c.1799T>A\",\n      \"hgvs_p\": \"p.Val600Glu\",\n      \"id\": \"chr7:g.140453136A>T\",\n      \"legacy_name\": \"BRAF V600E\",\n      \"matched_alias\": \"rs113488022\",\n      \"revel\": 0.931,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"source_identity\": {\n        \"coding_changes\": [\n          \"c.620T>A\",\n          \"c.1919T>A\",\n          \"c.1799T>A\"\n        ],\n        \"genes\": [\n          \"BRAF\",\n          \"BRAF\",\n          \"BRAF\",\n          \"BRAF\"\n        ],\n        \"genome_build\": \"GRCh37\",\n        \"genomic_id\": \"chr7:g.140453136A>T\",\n        \"protein_changes\": [\n          \"p.Val640Glu\",\n          \"p.Val600Glu\",\n          \"p.Val207Glu\",\n          \"p.V600E\"\n        ],\n        \"rsids\": [\n          \"rs113488022\"\n        ]\n      },\n      \"transcript\": \"NM_004333.6\",\n      \"transcript_annotations\": [\n        {\n          \"gene\": \"BRAF\",\n          \"hgvs_c\": \"c.1799T>A\",\n          \"hgvs_p\": \"p.Val600Glu\",\n          \"roles\": [\n            \"displayed\"\n          ],\n          \"source\": \"myvariant.info/snpeff.ann\",\n          \"transcript\": \"NM_004333.4\"\n        }\n      ],\n      \"transcript_annotations_complete\": true\n    },\n    {\n      \"clinvar_stars\": 3,\n      \"gene\": \"BRAF\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.65,\n      \"hgvs_c\": \"c.1799T>G\",\n      \"hgvs_p\": \"p.Val600Gly\",\n      \"id\": \"chr7:g.140453136A>C\",\n      \"legacy_name\": \"BRAF V600G\",\n      \"matched_alias\": \"rs113488022\",\n      \"revel\": 0.925,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"source_identity\": {\n        \"coding_changes\": [\n          \"c.620T>G\",\n          \"c.1799T>G\",\n          \"c.1919T>G\"\n        ],\n        \"genes\": [\n          \"BRAF\",\n          \"BRAF\",\n          \"BRAF\",\n          \"BRAF\"\n        ],\n        \"genome_build\": \"GRCh37\",\n        \"genomic_id\": \"chr7:g.140453136A>C\",\n        \"protein_changes\": [\n          \"p.V600G\",\n          \"p.Val207Gly\",\n          \"p.Val640Gly\",\n          \"p.Val600Gly\"\n        ],\n        \"rsids\": [\n          \"rs113488022\"\n        ]\n      },\n      \"transcript\": \"NM_004333.6\",\n      \"transcript_annotations\": [\n        {\n          \"gene\": \"BRAF\",\n          \"hgvs_c\": \"c.1799T>G\",\n          \"hgvs_p\": \"p.Val600Gly\",\n          \"roles\": [\n            \"displayed\"\n          ],\n          \"source\": \"myvariant.info/snpeff.ann\",\n          \"transcript\": \"NM_004333.4\"\n        }\n      ],\n      \"transcript_annotations_complete\": true\n    },\n    {\n      \"clinvar_stars\": null,\n      \"gene\": \"BRAF\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.65,\n      \"hgvs_c\": \"c.1799T>C\",\n      \"hgvs_p\": \"p.Val600Ala\",\n      \"id\": \"chr7:g.140453136A>G\",\n      \"legacy_name\": \"BRAF V600A\",\n      \"matched_alias\": \"rs113488022\",\n      \"revel\": 0.672,\n      \"source_identity\": {\n        \"coding_changes\": [\n          \"c.1919T>C\",\n          \"c.620T>C\",\n          \"c.1799T>C\"\n        ],\n        \"genes\": [\n          \"BRAF\",\n          \"BRAF\",\n          \"BRAF\",\n          \"BRAF\"\n        ],\n        \"genome_build\": \"GRCh37\",\n        \"genomic_id\": \"chr7:g.140453136A>G\",\n        \"protein_changes\": [\n          \"p.Val600Ala\",\n          \"p.Val640Ala\",\n          \"p.V600A\",\n          \"p.Val207Ala\"\n        ],\n        \"rsids\": [\n          \"rs113488022\"\n        ]\n      },\n      \"transcript\": \"NM_004333.4\",\n      \"transcript_annotations\": [\n        {\n          \"gene\": \"BRAF\",\n          \"hgvs_c\": \"c.1799T>C\",\n          \"hgvs_p\": \"p.Val600Ala\",\n          \"roles\": [\n            \"displayed\"\n          ],\n          \"source\": \"myvariant.info/snpeff.ann\",\n          \"transcript\": \"NM_004333.4\"\n        }\n      ],\n      \"transcript_annotations_complete\": true\n    }\n  ]\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

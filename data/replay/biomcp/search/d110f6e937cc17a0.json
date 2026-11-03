@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E colorectal cancer encorafenib cetuximab BEACON"
+    ],
+    "limit": 8,
+    "sort": "citations"
+  },
+  "args_key": "d110f6e937cc17a0db0f9f10aec14db71e923623b705ee3a71552c93da65f220",
+  "recorded_at": "2026-11-02T21:58:44.265855+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4021.009000018239,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E colorectal cancer encorafenib cetuximab BEACON, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E colorectal cancer encorafenib cetuximab BEACON\" --exclude-retracted --sort citations --source semanticscholar --limit 8 --offset 0` \n \n \nFound 8 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 32296018|Comprehensive review of targeted therapy for colorectal canc…|Europe PMC|2020-03-20|-|1248| \n|PMID 31566309|Encorafenib, Binimetinib, and Cetuximab in BRAF V600E-Mutate…|Europe PMC|2019-09-30|-|1162| \n|PMID 29632055|NCCN Guidelines Insights: Colon Cancer, Version 2.2018.|Europe PMC|2018-04-01|-|736| \n|PMID 42791169|Population-Based Multicenter Real-World Outcomes of Encorafe…|PubMed|2026-09-02|-|0| \n|PMID 42671662|BRAF V600E-Mutated Metastatic Colorectal Cancer: Practical M…|PubMed|2026-08-31|-|0| \n|PMID 41761577|Real-world outcomes of encorafenib, cetuximab ± binimetinib…|PubMed|2026-03-09|-|0| \n|PMID 35653981|Quality of life with encorafenib plus cetuximab with or with…|PubTator3|2022-06-01|-|none| \n|PMID 34896698|Management of adverse events from the treatment of encorafen…|PubTator3|2021-12-01|-|none| \n \n \n \nNewest indexed: 2026-09-25 (38 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 32296018\n  biomcp search article -k \"BRAF V600E colorectal cancer encorafenib cetuximab BEACON\" --year-min 2018 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 8 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

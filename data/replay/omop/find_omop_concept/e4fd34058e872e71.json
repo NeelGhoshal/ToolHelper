@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "aspirin 325 MG Oral Tablet",
+    "max_results": 10,
+    "omop_field": "drug_concept_id",
+    "omop_table": "drug_exposure"
+  },
+  "args_key": "e4fd34058e872e7147460d2b94bb14283079de1ddb8aea94644b6c47d8374b77",
+  "recorded_at": "2026-11-02T22:28:17.680963+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1083.0738000222482,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 19046742,\n      \"code\": \"212033\",\n      \"name\": \"aspirin 325 MG Oral Tablet\",\n      \"class\": \"Clinical Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19046742\"\n    },\n    {\n      \"concept_id\": 44090795,\n      \"code\": \"OMOP1085426\",\n      \"name\": \"Aspirin 325 MG Oral Tablet by Gfr\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/44090795\"\n    },\n    {\n      \"concept_id\": 35873429,\n      \"code\": \"OMOP5029563\",\n      \"name\": \"aspirin 325 MG Oral Tablet [Axile]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/35873429\"\n    },\n    {\n      \"concept_id\": 44065135,\n      \"code\": \"OMOP1059766\",\n      \"name\": \"Aspirin 325 MG Oral Tablet by D.C.\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/44065135\"\n    },\n    {\n      \"concept_id\": 44065134,\n      \"code\": \"OMOP1059765\",\n      \"name\": \"Aspirin 325 MG Oral Tablet by Drug\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/44065134\"\n    },\n    {\n      \"concept_id\": 44116629,\n      \"code\": \"OMOP1111260\",\n      \"name\": \"Aspirin 325 MG Oral Tablet by Jamp\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/44116629\"\n    },\n    {\n      \"concept_id\": 44077850,\n      \"code\": \"OMOP1072481\",\n      \"name\": \"Aspirin 325 MG Oral Tablet by Viva\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/44077850\"\n    },\n    {\n      \"concept_id\": 19068121,\n      \"code\": \"260848\",\n      \"name\": \"aspirin 325 MG Oral Tablet [Buffex]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19068121\"\n    },\n    {\n      \"concept_id\": 44129770,\n      \"code\": \"OMOP1124401\",\n      \"name\": \"Aspirin 325 MG Oral Tablet by Bayer\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/44129770\"\n    },\n    {\n      \"concept_id\": 1113017,\n      \"code\": \"211877\",\n      \"name\": \"aspirin 325 MG Oral Tablet [Empirin]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/1113017\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"aspirin 325 MG Oral Tablet\",\n    \"omop_table\": \"drug_exposure\",\n    \"omop_field\": \"drug_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

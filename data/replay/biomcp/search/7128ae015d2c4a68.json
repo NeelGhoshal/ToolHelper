@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "transthyretin amyloidosis",
+      "in vivo"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "7128ae015d2c4a686fc42e6da6b01d6342a0dfad90f52cfbe8ec208c65f0aa7d",
+  "recorded_at": "2026-11-02T20:02:44.201387+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3670.6344000413083,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR transthyretin amyloidosis in vivo, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CRISPR transthyretin amyloidosis in vivo\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41543272|Non-Viral CRISPR carriers: transient delivery with lasting e…|PubTator3, Europe PMC|2026-12-31|-|6| \n|PMID 42827100|Current translational perspectives for diagnosis and individ…|Europe PMC|2026-10-02|-|0| \n|PMID 42921289|Lipid Nanoparticles at the Crossroads of Chemistry and Medic…|Europe PMC|2026-09-28|-|0| \n|PMID 42782748|Beyond Precision: A Multidimensional Framework for Selecting…|PubTator3, PubMed|2026-09-11|-|0| \n|PMID 42787623|Clinical translation of CRISPR-Cas9 therapeutics in cancer a…|PubTator3, PubMed|2026-09-10|-|0| \n|PMID 42780917|Cas12a chRDNA-mediated in vivo genome editing for high speci…|PubTator3, Europe PMC, PubMed|2026-09-02|-|0| \n|PMID 42761173|Gene therapy for hereditary hematological disorders: From cl…|Europe PMC|2026-08-27|-|0| \n|PMID 42677161|Overcoming hepatic tropism: Precision engineering of lipid n…|Europe PMC|2026-08-18|-|0| \n|PMID 41491255|CRISPR-Cas3-based editing for targeted deletions in a mouse…|PubMed, Semantic Scholar|2026-01-05|-|5| \n|PMID 41030053|Transthyretin amyloid cardiomyopathy: from cause to novel tr…|PubMed|2026-01-05|-|33| \n \n \n \nNewest indexed: 2026-10-25 (8 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41543272\n  biomcp search article -k \"CRISPR transthyretin amyloidosis in vivo\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

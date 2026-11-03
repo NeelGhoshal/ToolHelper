@@ -1,8 +1,36 @@
 # LLM profiles. Every command takes --llm <profile>; `default` is used otherwise.
 # API keys come from the environment variable named in api_key_env, never from this file.
-default: ollama-qwen3
+default: nim-mistral
 
 profiles:
+  # Hosted open-weight models on NVIDIA's free API (build.nvidia.com), nothing runs locally.
+  # Free tier is ~40 requests/minute; the backend spaces requests and retries 429s. Replies take a
+  # median 25 s but up to 850 s, and a request can stall with no reply: timeout_s 300, 3 retries.
+  # Hosted providers may not honour seed, so runs are not guaranteed reproducible.
+  # Probed 2026-11-02 with this account: kimi-k2.6 and nemotron-3-super return 404; glm-5.3-flash,
+  # deepseek-v4.1-flash, gemma-4-31b and gpt-oss-20b timed out (90 s). Both models below always
+  # reason (reasoning_effort/enable_thinking are rejected or ignored); reasoning tokens are reported.
+  nim-mistral:
+    # Mistral Large 4 (1T total, 52B active), Mistral Ecosystem Open-Weight License (modified MIT).
+    backend: openai_compat
+    model: mistralai/mistral-large-4-1t-a52b
+    base_url: https://integrate.api.nvidia.com/v1
+    api_key_env: NVIDIA_API_KEY
+    requests_per_minute: 30
+    max_retries: 3
+    timeout_s: 300
+    options: {temperature: 0, seed: 7, max_tokens: 4096}
+
+  nim-minimax:
+    backend: openai_compat
+    model: minimaxai/minimax-m3.1-flash
+    base_url: https://integrate.api.nvidia.com/v1
+    api_key_env: NVIDIA_API_KEY
+    requests_per_minute: 30
+    max_retries: 3
+    timeout_s: 300
+    options: {temperature: 0, seed: 7, max_tokens: 4096}
+
   ollama-qwen3:
     backend: ollama
     model: qwen3:8b

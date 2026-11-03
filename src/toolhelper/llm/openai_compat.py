@@ -9,7 +9,10 @@ from __future__ import annotations
 
 import json
 import os
+import time
+from collections.abc import Callable
 from typing import Any
+from urllib.parse import urlparse
 
 from toolhelper.llm.base import (
     ChatOptions,
@@ -52,21 +55,43 @@ def parse_arguments(text: str | None) -> tuple[dict[str, Any], str | None]:
     return (value, None) if isinstance(value, dict) else ({}, text)
 
 
+def _is_local(base_url: str) -> bool:
+    return urlparse(base_url).hostname in ("localhost", "127.0.0.1", "::1")
+
+
 class OpenAICompatBackend(LLMBackend):
     kind = "openai_compat"
 
     def __init__(self, model: str, defaults: ChatOptions | None = None, *,
                  base_url: str | None = None, api_key: str | None = None,
-                 api_key_env: str | None = None, client: Any = None) -> None:
+                 api_key_env: str | None = None, client: Any = None,
+                 requests_per_minute: float | None = None, max_retries: int | None = None,
+                 timeout_s: float | None = None,
+                 clock: Callable[[], float] = time.monotonic, sleep: Callable[[float], None] = time.sleep) -> None:
         super().__init__(model, defaults)
         if client is None:
             import openai
 
             key = api_key or (os.environ.get(api_key_env) if api_key_env else None)
             if key is None and base_url and not os.environ.get("OPENAI_API_KEY"):
+                if not _is_local(base_url):
+                    raise ValueError(f"no API key for {base_url}: set {api_key_env or 'OPENAI_API_KEY'}")
                 key = "unused"  # local servers (Ollama, vLLM, LM Studio) accept any key
-            client = openai.OpenAI(base_url=base_url, api_key=key)
+            extra: dict[str, Any] = {} if max_retries is None else {"max_retries": max_retries}
+            if timeout_s is not None:
+                extra["timeout"] = timeout_s  # per request; the SDK default (600 s) lets a stalled queue hang a run
+            client = openai.OpenAI(base_url=base_url, api_key=key, **extra)
         self.client = client
+        # Hosted free tiers limit requests per minute; space request starts to stay under it.
+        self.min_interval = 60 / requests_per_minute if requests_per_minute else 0.0
+        self._clock, self._sleep, self._last_start = clock, sleep, None
+
+    def _throttle(self) -> None:
+        if self.min_interval and self._last_start is not None:
+            wait = self._last_start + self.min_interval - self._clock()
+            if wait > 0:
+                self._sleep(wait)
+        self._last_start = self._clock()
 
     def _chat(self, messages: list[Message], tools: list[ToolSpec], opts: ChatOptions) -> ChatResult:
         applied: dict[str, Any] = {}
@@ -85,6 +110,7 @@ class OpenAICompatBackend(LLMBackend):
         if tools:
             request["tools"] = [to_openai_tool(t) for t in tools]
 
+        self._throttle()
         resp = self.client.chat.completions.create(**request)
         choice = resp.choices[0]
         msg = choice.message

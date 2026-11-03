@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E mechanisms acquired resistance vemurafenib review Nazarian Paraiso"
+    ],
+    "limit": 6,
+    "sort": "citations"
+  },
+  "args_key": "ed383c5be6aefb4ed9a355729421dfbdaaeae97abe80c91a1c5fcf236ec03fbb",
+  "recorded_at": "2026-11-02T22:02:40.750549+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4020.0794999836944,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E mechanisms acquired resistance vemurafenib review Nazarian Paraiso, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E mechanisms acquired resistance vemurafenib review Nazarian Paraiso\" --exclude-retracted --sort citations --source semanticscholar --limit 6 --offset 0` \n \n \nFound 6 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 26359985|Non-genomic and Immune Evolution of Melanoma Acquiring MAPKi…|Europe PMC|2015-09-01|-|538| \n|PMID 30410366|Mechanisms of resistance to BRAF and MEK inhibitors and clin…|Europe PMC|2018-10-17|-|225| \n|PMID 26302068|BRAF Inhibition Generates a Host-Tumor Niche that Mediates T…|Europe PMC|2015-08-24|-|79| \n|PMID 27320919|BRAF(V600E) Kinase Domain Duplication Identified in Therapy-…|Europe PMC|2016-06-16|-|67| \n|PMID 24108405|Resistance to RAF inhibitors revisited.|Europe PMC|2013-10-10|-|67| \n|PMID 21593776|Mechanisms of resistance to RAF inhibitors in melanoma.|Europe PMC|2011-05-19|-|66| \n \n \n \nNewest indexed: 2018-11-10 (2914 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 26359985\n  biomcp search article -k \"BRAF V600E mechanisms acquired resistance vemurafenib review Nazarian Paraiso\" --year-min 2011 --year-max 2018 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 6 results (total unknown). Use --offset 6 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

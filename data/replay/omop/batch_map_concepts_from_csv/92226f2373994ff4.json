@@ -1,0 +1,28 @@
+{
+  "server": "omop",
+  "tool": "batch_map_concepts_from_csv",
+  "arguments": {
+    "csv_path": "C:\\Users\\neelg\\OneDrive\\Desktop\\ToolHelper\\data\\tasks\\inputs\\conditions.csv"
+  },
+  "args_key": "92226f2373994ff4da05195cf5c186dcedcbcf53c3867129373610a30085ffd4",
+  "recorded_at": "2026-11-02T22:29:44.827500+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "6caed5d1f6843ca759c971b49074f196f1a73ceba46e9a065221d08adbb81313",
+  "latency_ms": 862.5625999993645,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "keyword,omop_table,omop_field,concept_id,code,name,class,concept,validity,domain,vocab,url,reason\r\nheart attack,condition_occurrence,condition_concept_id,4329847,22298006,Myocardial infarction,Disorder,S,Valid,Condition,SNOMED,https://omophub.com/concepts/4329847,\r\nasthma,condition_occurrence,condition_concept_id,317009,195967001,Asthma,Disorder,S,Valid,Condition,SNOMED,https://omophub.com/concepts/317009,\r\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

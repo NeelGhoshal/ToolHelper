@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E vemurafenib BRIM-3 phase 3 melanoma"
+    ],
+    "limit": 8,
+    "sort": "citations"
+  },
+  "args_key": "41acd8020a7c921c3f161b7d48421e7cfb53458dcafdd926b1c0885d80114784",
+  "recorded_at": "2026-11-02T21:58:36.709333+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3756.18059997214,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E vemurafenib BRIM-3 phase 3 melanoma, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E vemurafenib BRIM-3 phase 3 melanoma\" --exclude-retracted --sort citations --source semanticscholar --limit 8 --offset 0` \n \n \nFound 8 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 21639808|Improved survival with vemurafenib in melanoma with BRAF V60…|Europe PMC, PubMed|2011-06-05|-|5808| \n|PMID 22356324|Survival in BRAF V600-mutant advanced melanoma treated with…|Europe PMC|2012-02-01|-|1658| \n|PMID 24508103|Safety and efficacy of vemurafenib in BRAF(V600E) and BRAF(V…|Europe PMC, PubMed|2014-02-07|-|748| \n|PMID 41807883|BRAF inhibitor resistance in melanoma: from resistance mecha…|PubTator3|2026-03-11|-|none| \n|PMID 36842301|Precision oncology for BRAF-mutant cancers with BRAF and MEK…|PubTator3|2023-04-01|-|none| \n|PMID 33801689|BRAF Gene and Melanoma: Back to the Future|PubTator3|2021-03-27|-|none| \n|PMID 22742884|Vemurafenib in patients with BRAF V600E mutation-positive ad…|PubMed|2012-07-01|-|66| \n|PMID 22646765|BRIM-1, -2 and -3 trials: improved survival with vemurafenib…|PubMed|2012-05-01|-|49| \n \n \n \nNewest indexed: 2014-02-11 (4647 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 21639808\n  biomcp search article -k \"BRAF V600E vemurafenib BRIM-3 phase 3 melanoma\" --year-min 2011 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 8 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

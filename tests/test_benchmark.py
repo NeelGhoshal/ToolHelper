@@ -113,3 +113,24 @@ def test_db_migrates_runs_without_score_column(tmp_path):
     con.close()
     db = MonitorDB(path)
     assert "score_json" in {r[1] for r in db.db.execute("PRAGMA table_info(runs)")}
+
+
+async def test_answer_grounded_check(hub, heart_attack):
+    task = Task(id="g", prompt="Map heart attack.", servers=["omop"],
+                checks={"must_call_any": ["omop__find_omop_concept"], "answer_grounded": True})
+    good = await run(hub, task, ("omop__find_omop_concept", heart_attack), "concept_id 4329847")
+    assert score(good, task).checks["answer_grounded"] is True
+    bad = await run(hub, task, ("omop__find_omop_concept", heart_attack), "concept_id 4329847 or 12345678")
+    assert score(bad, task).checks["answer_grounded"] is False
+
+
+async def test_rescore_uses_current_tasks_and_latest_run(hub, tasks, heart_attack):
+    from toolhelper.experiments.runner import latest_per_task, rescore
+
+    task = tasks["omop-001"]
+    first = await run(hub, task, ("omop__find_omop_concept", heart_attack), "no idea")
+    second = await run(hub, task, ("omop__find_omop_concept", heart_attack), "4329847")
+    assert latest_per_task([second, first]) == [second]
+    stricter = task.model_copy(update={"checks": {**task.checks, "answer_includes_all": ["SNOMED"]}})
+    [(trace, result)] = rescore([second], [stricter])
+    assert not result.success and trace.success is False and trace.score["checks"]["answer_includes_all"] is False

@@ -33,6 +33,11 @@ class LLMProfile(BaseModel):
     base_url: str | None = None
     # Name of the environment variable holding the API key; keys are never stored in config.
     api_key_env: str | None = None
+    # Hosted endpoints (openai_compat only): client-side request spacing, SDK retries on 429/5xx/timeouts,
+    # and a per-request timeout.
+    requests_per_minute: float | None = None
+    max_retries: int | None = None
+    timeout_s: float | None = None
     options: ChatOptions = Field(default_factory=ChatOptions)
 
 
@@ -64,7 +69,10 @@ def make_backend(profile: LLMProfile, *, client: Any = None) -> LLMBackend:
             from toolhelper.llm.openai_compat import OpenAICompatBackend
 
             return OpenAICompatBackend(profile.model, opts, base_url=profile.base_url,
-                                       api_key_env=profile.api_key_env, client=client)
+                                       api_key_env=profile.api_key_env, client=client,
+                                       requests_per_minute=profile.requests_per_minute,
+                                       max_retries=profile.max_retries,
+                                       timeout_s=profile.timeout_s)
         case "anthropic":
             from toolhelper.llm.anthropic import AnthropicBackend
 

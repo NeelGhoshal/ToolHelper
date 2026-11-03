@@ -6,6 +6,7 @@ check passes):
 - `called_with`: `[{"tool": name, "args": {...}}]`, a call whose arguments include these
   values (strings compared case-insensitively); used to test trap handling.
 - `answer_includes_any` / `answer_includes_all`: case-insensitive substrings of the answer.
+- `answer_grounded`: the answer states identifiers and every one appears in tool outputs.
 
 Grounding is the share of identifiers in the answer (tokens containing a digit, not
 already in the prompt) that appear in this run's tool outputs or evidenced context.
@@ -71,6 +72,8 @@ def score(trace: Trace, task: Task) -> Score:
         t.shaped_text for t in trace.tool_calls) + " " + " ".join(i.text for i in trace.context_items if i.evidence)
     known = identifiers(sources)
     grounded = [i for i in ids if i in known]
+    if c.get("answer_grounded"):
+        checks["answer_grounded"] = bool(ids) and len(grounded) == len(ids)
     path_match = None
     if task.expected_paths:
         sequence = [t.name for t in _ok_calls(trace)]

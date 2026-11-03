@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR mutation frequency prevalence adenocarcinoma Asia ethnicity gender smoking status"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "19cfc881f30f33d757afda45402879464d4559f6460ae748dc261ee0da8edd1a",
+  "recorded_at": "2026-11-02T21:10:04.348407+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2244.51729998691,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR mutation frequency prevalence adenocarcinoma Asia ethnicity gender smoking status, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR mutation frequency prevalence adenocarcinoma Asia ethnicity gender smoking status\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 28106826|Colorectal Carcinoma: A General Overview and Future Perspect…|Europe PMC|2017-01-19|-|1021| \n|PMID 22054876|Lung cancer: epidemiology, etiology, and prevention.|Europe PMC|2011-12-01|-|981| \n|PMID 28748917|Oesophageal cancer.|Europe PMC|2017-07-27|-|857| \n|PMID 31575553|Cancer Progress and Priorities: Lung Cancer.|Europe PMC|2019-10-01|-|791| \n|PMID 26609494|EGFR mutation incidence in non-small-cell lung cancer of ade…|Europe PMC|2015-08-15|-|770| \n|PMID 26297204|Lung cancer: Biology and treatment options.|Europe PMC|2015-08-19|-|699| \n|PMID 35406504|Colorectal Cancer: A Review of Carcinogenesis, Global Epidem…|Europe PMC|2022-03-29|-|645| \n|PMID 27364315|The International Epidemiology of Lung Cancer: Latest Trends…|Europe PMC|2016-06-27|-|452| \n|PMID 22761469|Prevalence, clinicopathologic associations, and molecular sp…|Europe PMC|2012-07-03|-|399| \n|PMID 38195910|Lung cancer in patients who have never smoked - an emerging…|Europe PMC|2024-01-09|-|275| \n \n \n \nNewest indexed: 2024-01-10 (1027 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 28106826\n  biomcp search article -k \"EGFR mutation frequency prevalence adenocarcinoma Asia ethnicity gender smoking status\" --year-min 2011 --year-max 2024 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

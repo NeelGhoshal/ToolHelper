@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "appendectomy",
+    "max_results": 20,
+    "omop_field": "procedure_concept_id",
+    "omop_table": "procedure_occurrence"
+  },
+  "args_key": "ec80c48ccba88f38c930b6249974d26c6a36e5b59ecbe97cf6f070cbdff138f9",
+  "recorded_at": "2026-11-02T22:25:08.327488+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 823.7810000427999,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 4198190,\n      \"code\": \"80146002\",\n      \"name\": \"Appendectomy\",\n      \"class\": \"Procedure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Procedure\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4198190\"\n    },\n    {\n      \"concept_id\": 2002909,\n      \"code\": \"47.09\",\n      \"name\": \"Other appendectomy\",\n      \"class\": \"4-dig billing code\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Procedure\",\n      \"vocab\": \"ICD9Proc\",\n      \"url\": \"https://omophub.com/concepts/2002909\"\n    },\n    {\n      \"concept_id\": 4017462,\n      \"code\": \"174045003\",\n      \"name\": \"Interval appendectomy\",\n      \"class\": \"Procedure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Procedure\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4017462\"\n    },\n    {\n      \"concept_id\": 4018012,\n      \"code\": \"174036004\",\n      \"name\": \"Emergency appendectomy\",\n      \"class\": \"Procedure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Procedure\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4018012\"\n    },\n    {\n      \"concept_id\": 4128727,\n      \"code\": \"235314005\",\n      \"name\": \"Inversion appendectomy\",\n      \"class\": \"Procedure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Procedure\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4128727\"\n    },\n    {\n      \"concept_id\": 4220986,\n      \"code\": \"82730006\",\n      \"name\": \"Incidental appendectomy\",\n      \"class\": \"Procedure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Procedure\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4220986\"\n    },\n    {\n      \"concept_id\": 4243973,\n      \"code\": \"6025007\",\n      \"name\": \"Laparoscopic appendectomy\",\n      \"class\": \"Procedure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Procedure\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4243973\"\n    },\n    {\n      \"concept_id\": 4174214,\n      \"code\": \"49438003\",\n      \"name\": \"Appendectomy with drainage\",\n      \"class\": \"Procedure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Procedure\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4174214\"\n    },\n    {\n      \"concept_id\": 4128726,\n      \"code\": \"235313004\",\n      \"name\": \"Non-emergency appendectomy\",\n      \"class\": \"Procedure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Procedure\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4128726\"\n    },\n    {\n      \"concept_id\": 2002922,\n      \"code\": \"47.19\",\n      \"name\": \"Other incidental appendectomy\",\n      \"class\": \"4-dig billing code\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Procedure\",\n      \"vocab\": \"ICD9Proc\",\n      \"url\": \"https://omophub.com/concepts/2002922\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"appendectomy\",\n    \"omop_table\": \"procedure_occurrence\",\n    \"omop_field\": \"procedure_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

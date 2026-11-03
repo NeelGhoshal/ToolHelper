@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "dabrafenib plus trametinib COMBI-v phase 3 BRAF V600E melanoma overall survival Robert"
+    ],
+    "limit": 6,
+    "sort": "citations"
+  },
+  "args_key": "0977bf358a9a72cc8d7b67248ff96f9fc1d80468168163dad3bc2a1ba23b5445",
+  "recorded_at": "2026-11-02T22:02:36.727294+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2243.2584000052884,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=dabrafenib plus trametinib COMBI-v phase 3 BRAF V600E melanoma overall survival Robert, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"dabrafenib plus trametinib COMBI-v phase 3 BRAF V600E melanoma overall survival Robert\" --exclude-retracted --sort citations --source semanticscholar --limit 6 --offset 0` \n \n \nFound 6 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 28891408|Adjuvant Dabrafenib plus Trametinib in Stage III BRAF-Mutate…|Europe PMC|2017-09-10|-|1101| \n|PMID 28592387|Dabrafenib plus trametinib in patients with BRAFV600-mutant…|Europe PMC|2017-06-04|-|579| \n|PMID 28475671|Dabrafenib plus trametinib versus dabrafenib monotherapy in…|Europe PMC|2017-07-01|-|480| \n|PMID 32877599|Five-Year Analysis of Adjuvant Dabrafenib plus Trametinib in…|Europe PMC|2020-09-02|-|298| \n|PMID 37059834|Dabrafenib plus trametinib in BRAFV600E-mutated rare cancers…|Europe PMC|2023-04-14|-|278| \n|PMID 32946353|Longer Follow-Up Confirms Recurrence-Free Survival Benefit o…|Europe PMC|2020-09-18|-|236| \n \n \n \nNewest indexed: 2023-04-16 (1296 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 28891408\n  biomcp search article -k \"dabrafenib plus trametinib COMBI-v phase 3 BRAF V600E melanoma overall survival Robert\" --year-min 2017 --year-max 2023 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 6 results (total unknown). Use --offset 6 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

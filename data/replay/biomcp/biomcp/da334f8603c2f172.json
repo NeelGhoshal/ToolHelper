@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "get article 42957066 annotations",
+    "json": true
+  },
+  "args_key": "da334f8603c2f172fa66b5201e2cae8daeba48894144c406ff20eea13977f329",
+  "recorded_at": "2026-11-02T19:08:58.299968+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 487.93790000490844,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42957066/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp article references 42957066 --limit 3\",\n      \"biomcp article citations 42957066 --limit 3\",\n      \"biomcp article recommendations 42957066 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"Europe PMC\"\n        ]\n      }\n    ]\n  },\n  \"author_completeness\": \"source_limited\",\n  \"author_count\": 5,\n  \"author_source\": \"europepmc\",\n  \"authors\": [\n    \"Go CC\",\n    \"Alcantara ACM\",\n    \"Annie F\",\n    \"Drabish K\",\n    \"Eslami MH.\"\n  ],\n  \"citation_count\": 0,\n  \"date\": \"2026-10-29\",\n  \"doi\": \"10.1016/j.jvs.2026.09.053\",\n  \"journal\": \"J Vasc Surg\",\n  \"open_access\": false,\n  \"pmid\": \"42957066\",\n  \"publication_type\": \"Research Article\",\n  \"pubtator_fallback\": true,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"GLP-1 Receptor Agonists Decrease the Rate of Rupture, Cardiac Events, and Death in Patients with Abdominal Aortic Aneurysms.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

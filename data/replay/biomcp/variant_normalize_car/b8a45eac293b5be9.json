@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "variant_normalize_car",
+  "arguments": {
+    "inputs": [
+      "NM_004333.6:c.1799T>A"
+    ]
+  },
+  "args_key": "b8a45eac293b5be93a0b5cbd901d59bd448c57c316ffca1efa4f61a11d7d0678",
+  "recorded_at": "2026-11-02T21:33:13.880513+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "1b49b0f8fdb7a784be91785cd3296145464a1e0e4050244929422c2a7086dc1c",
+  "latency_ms": 611.9894000003114,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"items\": [\n    {\n      \"input\": \"NM_004333.6:c.1799T>A\",\n      \"status\": \"resolved\",\n      \"exhaustive\": true,\n      \"caid\": \"CA123643\",\n      \"canonical_title\": \"NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)\",\n      \"genomic_aliases\": {\n        \"values\": [\n          \"CM000669.2:g.140753336A>T\",\n          \"NC_000007.14:g.140753336A>T\",\n          \"CM000669.1:g.140453136A>T\",\n          \"NC_000007.13:g.140453136A>T\",\n          \"NC_000007.12:g.140099605A>T\",\n          \"LRG_299:g.176429T>A\",\n          \"NG_007873.3:g.176429T>A\"\n        ],\n        \"source_count\": 7,\n        \"truncated\": false\n      },\n      \"transcript_aliases\": {\n        \"values\": [\n          \"NM_004333.6:c.1799T>A\",\n          \"NM_001374258.1:c.1919T>A\"\n        ],\n        \"source_count\": 2,\n        \"truncated\": false\n      },\n      \"protein_aliases\": {\n        \"values\": [\n          \"NP_001361187.1:p.Val640Glu\",\n          \"NP_004324.2:p.Val600Glu\"\n        ],\n        \"source_count\": 2,\n        \"truncated\": false\n      },\n      \"external_ids\": {\n        \"values\": [\n          \"rs113488022\",\n          \"ClinVar:13961\"\n        ],\n        \"source_count\": 2,\n        \"truncated\": false\n      },\n      \"source\": \"clingen_car\",\n      \"query\": \"NM_004333.6:c.1799T>A\",\n      \"warnings\": [],\n      \"error\": null,\n      \"provenance\": {\n        \"request_template_version\": \"1\",\n        \"car_version\": \"5.1.0\",\n        \"response_sha256\": \"726077f824327c59d75f5c04c7e6b21199f01d74df0fa5c2a34b9a3c25653684\"\n      }\n    }\n  ],\n  \"complete\": true,\n  \"provider\": \"ClinGen Allele Registry\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

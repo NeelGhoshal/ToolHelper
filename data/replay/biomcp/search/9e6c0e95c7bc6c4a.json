@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "intervention": [
+      "imatinib"
+    ],
+    "limit": 5
+  },
+  "args_key": "9e6c0e95c7bc6c4a71a708f10b373df2485efa43751c4e3c41627f8cf22a9d23",
+  "recorded_at": "2026-11-02T23:02:01.178078+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 413.73099997872487,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 5 trial(s) \n \nQuery: intervention=imatinib mesylate \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT00171912|Imatinib Mesylate in Pati…|COMPLETED|2|Hypereosinophilic Syndrome, Systemic Mastocyto… [abridged; 4 conditions total]|imatinib| \n|NCT00171977|Post-Marketing Clinical S…|COMPLETED|4|Gastrointestinal Stromal Tumors|imatinib| \n|NCT00538109|An Open-Label, Multicente…|COMPLETED|NA|Leukemia, Myeloid, Chronic|imatinib| \n|NCT01267695|Perioperative Imatinib Me…|COMPLETED|2|Gastrointestinal Stromal Tumor|imatinib| \n|NCT07188428|Treatment Patterns and Ou…|COMPLETED|-|Leukemia, Chronic Myeloid|imatinib| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

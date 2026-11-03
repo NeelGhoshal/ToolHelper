@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR mutation",
+      "never smokers",
+      "gefitinib sensitivity"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "1982244e382643185394958653d53428e888a8da472f0eba496ebf49ea410f44",
+  "recorded_at": "2026-11-02T21:07:43.579586+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4005.110700032674,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR mutation never smokers gefitinib sensitivity, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR mutation never smokers gefitinib sensitivity\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 21252716|International association for the study of lung cancer/ameri…|Europe PMC|2011-02-01|-|3664| \n|PMID 15329413|EGF receptor gene mutations are common in lung cancers from…|Europe PMC|2004-08-25|-|3292| \n|PMID 21430269|Genotypic and histological evolution of lung cancers acquiri…|Europe PMC|2011-03-01|-|2797| \n|PMID 23470965|Analysis of tumor specimens at the time of acquired resistan…|Europe PMC|2013-03-07|-|2071| \n|PMID 37577304|A prospective phase 2 study of expeditious EGFR genotyping a…|PubTator3|2023-07-31|-|none| \n|PMID 37614580|How to Treat EGFR-Mutated Non-Small Cell Lung Cancer|PubTator3|2023-06-27|-|none| \n|PMID 34116229|Gefitinib With Concurrent Thoracic Radiotherapy in Unresecta…|PubMed|2021-10-01|-|35| \n|PMID 34680416|Liquid Biopsy for EGFR Mutation Analysis in Advanced Non-Sma…|PubTator3|2021-09-23|-|none| \n|PMID 34584857|Interactions between epidermal growth factor receptor tyrosi…|PubTator3|2021-08-01|-|none| \n|PMID 33816221|Extensive-Stage Small Cell Carcinoma Transformation From EGF…|PubMed|2021-03-18|-|2| \n \n \n \nNewest indexed: 2021-06-11 (1970 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 21252716\n  biomcp search article -k \"EGFR mutation never smokers gefitinib sensitivity\" --year-min 2004 --year-max 2023 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

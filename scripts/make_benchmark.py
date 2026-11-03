@@ -1,8 +1,8 @@
 """Writes data/tasks/benchmark.jsonl (the Phase 6 benchmark) and its CSV input.
 
-Prompts and checks are task specifications, not response data. Expected answer strings
-are only facts confirmed by recorded real responses or well established; run
-`toolhelper bench check` after a record run to find expectations no tool output contains.
+Prompts and checks are task specifications, not response data. Every expected answer
+string was confirmed in a recorded real response (baseline run or a direct call along the
+task's expected path, 2026-11-01); `toolhelper bench check` flags any that no output contains.
 
     uv run python scripts/make_benchmark.py
 """
@@ -20,7 +20,7 @@ FIND, BATCH = O + "find_omop_concept", O + "batch_map_concepts_from_csv"
 
 
 def task(id, servers, category, prompt, paths, *, any=None, all=None, called_with=None, answer_any=None,
-         answer_all=None, traps=None):
+         answer_all=None, grounded=False, traps=None):
     checks = {}
     if any:
         checks["must_call_any"] = any
@@ -32,6 +32,8 @@ def task(id, servers, category, prompt, paths, *, any=None, all=None, called_wit
         checks["answer_includes_any"] = answer_any
     if answer_all:
         checks["answer_includes_all"] = answer_all
+    if grounded:
+        checks["answer_grounded"] = True
     return {"id": id, "servers": servers, "category": category, "prompt": prompt, "expected_paths": paths,
             "checks": checks, "traps": traps or []}
 
@@ -52,6 +54,8 @@ TASKS = [
          any=[M + "get-drug-details"], answer_any=["sertraline"], traps=["brand_name", "ndc_needed"]),
     task("med-003", ["medical"], "drug_search", "Find FDA drug products containing ibuprofen and name two manufacturers.",
          [[M + "search-drugs"]], any=[M + "search-drugs"], answer_any=["ibuprofen"]),
+    # 47781-951 is sertraline (Alvogen) in openFDA; Medical MCP's unquoted product_ndc query returns another
+    # Alvogen product (estradiol), so the baseline cannot pass this without grounding.
     task("med-004", ["medical"], "drug_label", "Get the FDA details for the drug product with NDC 47781-951.",
          [[M + "get-drug-details"]], any=[M + "get-drug-details"],
          called_with=[(M + "get-drug-details", {"ndc": "47781-951"})], answer_any=["sertraline"]),
@@ -68,7 +72,9 @@ TASKS = [
     task("med-008", ["medical"], "article", "Summarize PubMed article 42957066.",
          [[M + "get-article-details"]], any=[M + "get-article-details"], answer_any=["GLP-1", "aneurysm"]),
     task("med-009", ["medical"], "rxnorm", "What is the RxNorm RxCUI for metformin?",
-         [[M + "search-drug-nomenclature"]], any=[M + "search-drug-nomenclature"], answer_any=["6809"]),
+         # Medical MCP's RxNorm search lists products, never the ingredient RxCUI (6809), so the
+         # check is that the RxCUI given comes from the tool output.
+         [[M + "search-drug-nomenclature"]], any=[M + "search-drug-nomenclature"], grounded=True),
     task("med-010", ["medical"], "rxnorm", "Find the RxNorm concept for Tylenol and name its active ingredient.",
          [[M + "search-drug-nomenclature"]], any=[M + "search-drug-nomenclature", M + "search-drugs"],
          answer_any=["acetaminophen"], traps=["brand_name"]),
@@ -107,7 +113,9 @@ TASKS = [
          [[B + "biomcp"], [B + "get"]], any=[B + "biomcp", B + "get"], answer_any=["ABL1", "BCR-ABL", "KIT"],
          traps=["search_enum"]),
     task("bio-009", ["biomcp"], "gene_diseases", "Which diseases are associated with the TP53 gene?",
-         [[B + "get"]], any=[B + "get", B + "biomcp"], answer_any=["Li-Fraumeni"]),
+         # From BioMCP's TP53 disease section (Enrichr), recorded 2026-11-01.
+         [[B + "get"]], any=[B + "get", B + "biomcp"],
+         answer_any=["breast cancer", "colorectal cancer", "pancreatic cancer", "glioma"]),
     task("bio-010", ["biomcp"], "pgx", "What is the pharmacogenomic guidance for CYP2C19 and clopidogrel?",
          [[B + "search"]], any=[B + "search", B + "get", B + "biomcp"]),
     task("bio-011", ["biomcp"], "erepo", "List ClinGen expert curated assertions for BRAF variants.",

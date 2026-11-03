@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "AURA3 osimertinib T790M second-line NSCLC"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "94d60321c89bf14cdd7959ac5c59b39bce3d4a760c95d4f4bc7ffec62e0b753b",
+  "recorded_at": "2026-11-02T21:07:53.889784+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3924.740299989935,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=AURA3 osimertinib T790M second-line NSCLC, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"AURA3 osimertinib T790M second-line NSCLC\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 27959700|Osimertinib or Platinum-Pemetrexed in EGFR T790M-Positive Lu…|Europe PMC|2016-12-06|-|2833| \n|PMID 31564718|Resistance mechanisms to osimertinib in EGFR-mutated non-sma…|Europe PMC|2019-09-30|-|1196| \n|PMID 29455650|Management of acquired resistance to EGFR TKI-targeted thera…|Europe PMC|2018-02-19|-|635| \n|PMID 36075878|Non-small cell lung cancer in China.|Europe PMC|2022-09-08|-|588| \n|PMID 36849516|Analysis of acquired resistance mechanisms to osimertinib in…|PubTator3, PubMed|2023-02-27|-|169| \n|PMID 36324594|Osimertinib versus platinum-pemetrexed in patients with prev…|PubTator3, PubMed|2022-10-17|-|5| \n|PMID 35023208|Clinical outcomes and safety of osimertinib plus anlotinib f…|PubTator3, PubMed|2022-05-01|-|11| \n|PMID 34295669|Has programmed cell death ligand-1 MET an accomplice in non-…|PubTator3|2021-06-01|-|none| \n|PMID 32218657|Biopsy on progression in patients with EGFR mutation-positiv…|PubMed|2020-02-01|-|5| \n|PMID 29247383|Adjusted Indirect Comparison Using Propensity Score Matching…|PubMed|2018-04-01|-|17| \n \n \n \nNewest indexed: 2022-09-09 (1515 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 27959700\n  biomcp search article -k \"AURA3 osimertinib T790M second-line NSCLC\" --year-min 2016 --year-max 2023 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

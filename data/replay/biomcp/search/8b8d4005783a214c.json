@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "article_type": "review",
+    "keyword": [
+      "EGFR",
+      "lung adenocarcinoma",
+      "T790M"
+    ],
+    "limit": 10
+  },
+  "args_key": "8b8d4005783a214c2132dee1068dcdbaa2bfa45a9d0cfb29dbd028dcfedfdf54",
+  "recorded_at": "2026-11-02T23:15:07.407301+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4074.4711000006646,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR lung adenocarcinoma T790M, type=review, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42041733|Acquired Resistance to Afatinib Mediated by EGFR T790M in Lu…|Europe PMC, PubMed|2026-04-14|hybrid 0.355 + title 4/4|0| \n|PMID 36536456|Osimertinib showed efficacy on contralateral multiple ground…|PubMed|2022-12-19|hybrid 0.31 + title 4/4|2| \n|PMID 39960762|Transformation from acquired EGFR 19del/C797S to EGFR 19del/…|PubMed|2025-07-01|hybrid 0.295 + title 3/4|2| \n|PMID 39113087|Complete response in a lung adenocarcinoma with pleural meta…|PubMed|2024-08-08|hybrid 0.285 + title 3/4|0| \n|PMID 37653755|Efficacy of 3rd generation TKI in patients with EGFR mutatio…|PubMed|2023-08-25|hybrid 0.265 + title 3/4|2| \n|PMID 37641467|Efficacy of osimertinib for lung squamous cell carcinoma wit…|PubMed|2023-10-01|hybrid 0.255 + title 3/4|6| \n|PMID 42588636|Prevalence and Clinical Implications of Somatic and Germline…|Europe PMC, PubMed|2026-07-27|hybrid 0.24 + title 2/4|0| \n|PMID 36245822|Drug resistance mechanisms and progress in the treatment of…|PubMed|2022-09-26|hybrid 0.225 + title 3/4|55| \n|PMID 38062690|[Clinical analysis of lung adenocarcinoma with epidermal gro…|PubMed|2024-01-12|hybrid 0.2 + title 2/4|1| \n|PMID 42707604|Advances in understanding the mechanisms underlying acquired…|Europe PMC|2026-08-24|hybrid 0.155 + title 1/4|0| \n \n \n \nNewest indexed: 2026-09-09 (54 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42041733\n  biomcp search article -k \"EGFR lung adenocarcinoma T790M\" --type review --year-min 2022 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

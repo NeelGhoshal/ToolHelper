@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp get drug pembrolizumab regulatory --region us",
+    "json": true
+  },
+  "args_key": "68f4cbf3dd44c33d239591948e02fadc6a1434cf678524cc30256296bcdead25",
+  "recorded_at": "2026-11-02T22:11:16.600695+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 1587.357999989763,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"DrugBank\",\n        \"url\": \"https://go.drugbank.com/drugs/DB09037\"\n      },\n      {\n        \"label\": \"ChEMBL\",\n        \"url\": \"https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL3137343\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get drug pembrolizumab approvals\",\n      \"biomcp get drug pembrolizumab label\",\n      \"biomcp get drug pembrolizumab safety --region us\",\n      \"biomcp get drug pembrolizumab all --region us\",\n      \"biomcp search article --drug pembrolizumab --type review --limit 5\",\n      \"biomcp drug trials pembrolizumab\",\n      \"biomcp drug adverse-events pembrolizumab\",\n      \"biomcp search pgx -d pembrolizumab\",\n      \"biomcp get gene PDCD1\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"overview\",\n        \"label\": \"Overview\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"MyChem.info\"\n        ]\n      },\n      {\n        \"key\": \"fda_approved\",\n        \"label\": \"FDA Approved\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"DrugCentral\"\n        ]\n      },\n      {\n        \"key\": \"regulatory\",\n        \"label\": \"Regulatory\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"OpenFDA Drugs@FDA\"\n        ]\n      },\n      {\n        \"key\": \"mechanisms\",\n        \"label\": \"Mechanisms\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"MyChem.info\",\n          \"ChEMBL\"\n        ]\n      },\n      {\n        \"key\": \"approvals\",\n        \"label\": \"Drugs@FDA Approvals\",\n        \"outcome\": \"empty\",\n        \"sources\": [\n          \"OpenFDA Drugs@FDA\"\n        ]\n      }\n    ],\n    \"workflow\": \"pharmacogene-cumulative\",\n    \"workflow_playbook\": \"biomcp skill pharmacogene-cumulative\",\n    \"workflow_rationale\": \"Use the PGx search and detail surfaces before collecting literature for multi-gene drug-response evidence.\"\n  },\n  \"approval_date\": \"2014-09-04\",\n  \"approval_date_display\": \"September 4, 2014\",\n  \"approval_date_raw\": \"2014-09-04\",\n  \"approval_summary\": \"FDA approved on September 4, 2014\",\n  \"approvals\": [],\n  \"chembl_id\": \"CHEMBL3137343\",\n  \"drug_type\": \"biologic\",\n  \"drugbank_id\": \"DB09037\",\n  \"fda_orphan_designations\": {\n    \"message\": \"FDA orphan-designation data is temporarily unavailable.\",\n    \"outcome\": \"unavailable\",\n    \"records\": [],\n    \"sources\": [],\n    \"total_matching\": null,\n    \"truncated\": false\n  },\n  \"indications\": [\n    \"Advanced or recurrent cervical cancer\",\n    \"Classical Hodgkin lymphoma\",\n    \"Endometrial carcinoma progressing after chemotherapy\",\n    \"HER2-negative breast cancer\",\n    \"Malignant tumor of head and/or neck\",\n    \"Metastatic malignant melanoma\"\n  ],\n  \"mechanism\": \"Inhibitor of Programmed cell death protein 1\",\n  \"mechanisms\": [\n    \"Inhibitor of Programmed cell death protein 1\"\n  ],\n  \"name\": \"pembrolizumab\",\n  \"pharm_classes\": [\n    \"Programmed Death Receptor-1-directed Antibody Interactions\"\n  ],\n  \"section_outcomes\": {\n    \"approvals\": {\n      \"outcome\": \"empty\",\n      \"sources\": [\n        \"OpenFDA Drugs@FDA\"\n      ]\n    },\n    \"cell_lines\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"civic\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indications\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"interactions\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"label\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"safety\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"targets\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    }\n  },\n  \"targets\": [\n    \"PDCD1\"\n  ],\n  \"unii\": \"DPT0O3T46P\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

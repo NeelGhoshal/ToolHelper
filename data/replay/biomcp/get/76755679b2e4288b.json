@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "disease",
+    "id": "melanoma",
+    "json": true,
+    "sections": [
+      "genes",
+      "ontology",
+      "xrefs"
+    ]
+  },
+  "args_key": "76755679b2e4288b4440b3962e4e83f3a5d2c7938003ae1d4660772c6ddcb706",
+  "recorded_at": "2026-11-02T22:07:38.348222+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.4020000235177577,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid disease section: ontology"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -38,3 +38,37 @@ def test_invalid_arguments_are_kept_raw():
     assert parse_arguments('{"q": 1}') == ({"q": 1}, None)
     assert parse_arguments("{not json") == ({}, "{not json")
     assert parse_arguments("[1]") == ({}, "[1]")
+
+
+def test_requests_are_spaced_to_the_rate_limit(drug_tool):
+    client = FakeOpenAIClient(TOOL_CALL["response"], TOOL_CALL["response"])
+    now, sleeps = [100.0], []
+
+    def sleep(s):
+        sleeps.append(s)
+        now[0] += s
+
+    backend = OpenAICompatBackend("m", client=client, requests_per_minute=40, clock=lambda: now[0], sleep=sleep)
+    backend.chat([{"role": "user", "content": "a"}], [drug_tool])
+    now[0] += 0.5
+    backend.chat([{"role": "user", "content": "b"}], [drug_tool])
+    assert sleeps == [1.0]  # 60/40 = 1.5 s between request starts, 0.5 s already passed
+
+
+def test_hosted_endpoint_without_key_fails_clearly(monkeypatch):
+    import pytest
+
+    monkeypatch.delenv("TOOLHELPER_TEST_KEY", raising=False)
+    with pytest.raises(ValueError, match="TOOLHELPER_TEST_KEY"):
+        OpenAICompatBackend("m", base_url="https://integrate.api.nvidia.com/v1", api_key_env="TOOLHELPER_TEST_KEY")
+    # Local servers accept any key, so a missing one stays a placeholder.
+    OpenAICompatBackend("m", base_url="http://localhost:11434/v1", api_key_env="TOOLHELPER_TEST_KEY")
+
+
+def test_profile_timeout_reaches_the_sdk_client():
+    from toolhelper.config import LLMProfile, make_backend
+
+    profile = LLMProfile(backend="openai_compat", model="m", base_url="http://localhost:11434/v1",
+                         timeout_s=300, max_retries=3)
+    client = make_backend(profile).client
+    assert client.timeout == 300 and client.max_retries == 3

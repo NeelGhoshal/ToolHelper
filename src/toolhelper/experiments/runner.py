@@ -95,3 +95,23 @@ def check_expectations(tasks: list[Task], traces: list[Trace]) -> list[str]:
                 out.append(f"{task.id}: {key} {missing} not in any tool output"
                            + ("" if task.id in by_task else " (no runs)"))
     return out
+
+
+def latest_per_task(traces: list[Trace]) -> list[Trace]:
+    latest: dict[str, Trace] = {}
+    for t in sorted(traces, key=lambda t: t.started_at):
+        latest[t.task_id] = t
+    return list(latest.values())
+
+
+def rescore(traces: list[Trace], tasks: list[Task]) -> list[tuple[Trace, Score]]:
+    """Scores saved traces against the current task definitions (e.g. after fixing an expectation)."""
+    by_id = {t.id: t for t in tasks}
+    out = []
+    for trace in traces:
+        if trace.task_id not in by_id:
+            continue
+        result = score(trace, by_id[trace.task_id])
+        trace.success, trace.score = result.success, result.model_dump()
+        out.append((trace, result))
+    return out

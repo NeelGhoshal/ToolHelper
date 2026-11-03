@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "type 2 diabetes mellitus"
+    ],
+    "entity": "trial",
+    "limit": 10
+  },
+  "args_key": "903313a366e396f6487b5c7b739bcf247294801fec4a9f6efbe984f892d038fa",
+  "recorded_at": "2026-11-02T19:54:55.622129+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 469.0359000233002,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 12008 \n \nQuery: condition=type 2 diabetes mellitus \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT00986700|The Effect of Late Night…|COMPLETED|NA|Fasting Hyperglycemia| \n|NCT01342939|Pathophysiological Implic…|COMPLETED|-|Maturity-onset Diabetes of the Young| \n|NCT01409239|Effect of Glycemic Variab…|COMPLETED|4|Type 2 Diabetes, Inpatient| \n|NCT01477112|Low Dose β-carotene Supp…|COMPLETED|NA|Diabetes Mellitus, Oxidative Stress, Iron Metabolism Disorders| \n|NCT01594801|Testing the Effect of the…|COMPLETED|NA|Diabetics Mellitus Type 1, Diabetes Mellitus Type 2| \n|NCT01930136|Effects of Caloric Restri…|COMPLETED|NA|Type 2 Diabetes, Obesity| \n|NCT05496907|Psychosis and Type 2 Diab…|UNKNOWN|NA|Type 2 Diabetes, Severe Mental Disorder| \n|NCT06243172|Determining Circadian Met…|UNKNOWN|-|Type 2 Diabetes, Circadian Rhythm| \n|NCT02716519|Use of Santyl Within an A…|WITHDRAWN|4|Pressure Ulcer, Foot Ulcer, Diabetic| \n|NCT00925119|Examining Genetic Influen…|TERMINATED|4|Diabetes Mellitus, Type 2| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-10 of 12008 results. Use --offset 10 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

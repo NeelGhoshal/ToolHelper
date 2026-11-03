@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "json": true,
+    "limit": 5,
+    "query": "HER2 ERBB2"
+  },
+  "args_key": "6acf7ffb5b0861595560e9be7185600d6eae5aeabb1c3c764f33efe8b27e85d9",
+  "recorded_at": "2026-11-02T22:41:57.459733+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 824.3850000435486,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 3,\n    \"total\": 3,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 3,\n  \"results\": [\n    {\n      \"symbol\": \"ERBB2\",\n      \"name\": \"erb-b2 receptor tyrosine kinase 2\",\n      \"entrez_id\": \"2064\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"17:39687914-39730426\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"P04626\",\n      \"omim_id\": \"164870\"\n    },\n    {\n      \"symbol\": \"PTPN18\",\n      \"name\": \"protein tyrosine phosphatase non-receptor type 18\",\n      \"entrez_id\": \"26469\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"2:130356026-130375409\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"Q99952\",\n      \"omim_id\": \"606587\"\n    },\n    {\n      \"symbol\": \"ITGA6\",\n      \"name\": \"integrin subunit alpha 6\",\n      \"entrez_id\": \"3655\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"2:172234216-172506565\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"P23229\",\n      \"omim_id\": \"147556\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get gene ERBB2\",\n      \"biomcp list gene\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

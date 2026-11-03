@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "pgx",
+    "drug": [
+      "trastuzumab",
+      "trastuzumab deruxtecan"
+    ],
+    "gene": "ERBB2",
+    "json": true,
+    "limit": 10
+  },
+  "args_key": "f6c0005158e3e1dd963ce9587994654477ca6783786aee3d8edcaa189e406f3c",
+  "recorded_at": "2026-11-02T22:42:32.982151+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2.666099986527115,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: error: the argument '--drug <DRUG>' cannot be used multiple times\n\nUsage: biomcp search pgx [OPTIONS] [QUERY]\n\nFor more information, try '--help'.\n"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

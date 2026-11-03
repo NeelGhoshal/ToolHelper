@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "42901562",
+    "json": true
+  },
+  "args_key": "ee3175a122fc32b2cbcd525f6300396b8873db54c73da5021a06b391a03c085e",
+  "recorded_at": "2026-11-02T19:04:44.647118+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1996.460800000932,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42901562/\"\n      },\n      {\n        \"label\": \"PMC\",\n        \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC13684223/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42901562 tldr\",\n      \"biomcp article entities 42901562\",\n      \"biomcp search disease --query ACS\",\n      \"biomcp search disease --query diabetes\",\n      \"biomcp search drug -q MetCool\",\n      \"biomcp search drug -q metformin\",\n      \"biomcp article references 42901562 --limit 3\",\n      \"biomcp article citations 42901562 --limit 3\",\n      \"biomcp article recommendations 42901562 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"annotations\",\n        \"label\": \"PubTator Annotations\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ],\n    \"workflow\": \"article-follow-up\",\n    \"workflow_playbook\": \"biomcp skill article-follow-up\",\n    \"workflow_rationale\": \"Use article annotations first, then citation and recommendation graph pivots for efficient literature expansion.\"\n  },\n  \"annotations\": {\n    \"chemicals\": [\n      {\n        \"count\": 1,\n        \"text\": \"MetCool\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"MESH:D008687\",\n        \"namespace\": \"MESH\",\n        \"text\": \"metformin\"\n      }\n    ],\n    \"diseases\": [\n      {\n        \"count\": 1,\n        \"identifier\": \"MESH:D000168\",\n        \"name\": \"Acrocephalosyndactylia\",\n        \"namespace\": \"MESH\",\n        \"text\": \"ACS\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"MESH:D003920\",\n        \"name\": \"Diabetes Mellitus\",\n        \"namespace\": \"MESH\",\n        \"text\": \"diabetes\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"MESH:D054058\",\n        \"name\": \"Acute Coronary Syndrome\",\n        \"namespace\": \"MESH\",\n        \"text\": \"acute coronary syndrome\"\n      }\n    ]\n  },\n  \"author_completeness\": \"complete\",\n  \"author_count\": 4,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Sutkowska E\",\n    \"Kwiatkowski P\",\n    \"Mazur R\",\n    \"Gielerak G\"\n  ],\n  \"citation_count\": 0,\n  \"date\": \"2026-10-20\",\n  \"doi\": \"10.1136/bmjopen-2026-117039\",\n  \"journal\": \"BMJ Open\",\n  \"open_access\": true,\n  \"pmcid\": \"PMC13684223\",\n  \"pmid\": \"42901562\",\n  \"publication_type\": \"Research Article\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"MetCool ACS: study protocol for a multicentre quasi-randomised trial of metformin in patients without diabetes after acute coronary syndrome in Poland.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "uncommon EGFR mutations exon 20 insertion G719X S768I L861Q clinical outcomes TKI sensitivity"
+    ],
+    "limit": 10,
+    "sort": "relevance"
+  },
+  "args_key": "13b6b4d0d5a94e3b8d32d0c7a7e7d40698ac97dffc96c35a36d808a6ff26bb53",
+  "recorded_at": "2026-11-02T21:10:09.730838+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5379.149899992626,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=uncommon EGFR mutations exon 20 insertion G719X S768I L861Q clinical outcomes TKI sensitivity, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"uncommon EGFR mutations exon 20 insertion G719X S768I L861Q clinical outcomes TKI sensitivity\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 9 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41139406|Clinical Outcomes of Later-Generation EGFR-TKIs for Uncommon…|PubTator3, Europe PMC, PubMed|2025-10-01|hybrid 0.315 + title 5/13|1| \n|PMID 39958229|Clinical features and outcomes of unresectable locally advan…|PubTator3|2025-01-24|hybrid 0.14 + title 5/13|none| \n|PMID 42776017|FIN-EGFR: real-world treatment outcomes by EGFR mutational s…|Europe PMC|2026-09-23|hybrid 0.121 + title 2/13|0| \n|PMID 35263633|Treatment outcome of atypical EGFR mutations in the German N…|PubTator3, PubMed|2022-06-01|hybrid 0.109 + title 2/13|71| \n|PMID 31367543|Treatment of uncommon EGFR mutations in non-small cell lung…|PubTator3, PubMed|2019-06-01|hybrid 0.082 + title 3/13|124| \n|PMID 42710274|Osimertinib in advanced non-small cell lung cancer (NSCLC) h…|Europe PMC|2026-09-08|hybrid 0.071 + title 2/13|0| \n|PMID 42588636|Prevalence and Clinical Implications of Somatic and Germline…|Europe PMC|2026-07-27|hybrid 0.069 + title 3/13|0| \n|PMID 42291334|Targeting heterogeneity in atypical epidermal growth factor…|Europe PMC|2026-05-26|hybrid 0.05|0| \n|PMID 30774491|Outcome of uncommon EGFR mutation positive newly diagnosed a…|PubMed|2019-01-29|hybrid 0.046 + title 2/13|39| \n \n \n \nNewest indexed: 2026-09-24 (39 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41139406\n  biomcp search article -k \"uncommon EGFR mutations exon 20 insertion G719X S768I L861Q clinical outcomes TKI sensitivity\" --year-min 2019 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 9 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

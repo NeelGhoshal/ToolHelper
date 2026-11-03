@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "meta-analysis",
+    "entity": "article",
+    "keyword": [
+      "metformin",
+      "cardiovascular disease",
+      "mortality"
+    ],
+    "limit": 15,
+    "sort": "date"
+  },
+  "args_key": "78f02e9da7e7b5ca436e700903e9495d9126103e9182d5bceefa0e8352c09c36",
+  "recorded_at": "2026-11-02T19:06:16.219318+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4237.620299973059,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=metformin cardiovascular disease mortality, type=meta-analysis, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 15 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42827236|Comparative effectiveness of statins, metformin, and vitamin…|Europe PMC|2026-10-02|-|0| \n|PMID 42670242|Comparative Efficacy of Tirzepatide Versus Semaglutide for W…|Europe PMC|2026-10-01|-|0| \n|PMID 42750018|Efficacy and safety of orforglipron 12 mg versus orforglipr…|Europe PMC|2026-09-15|-|0| \n|PMID 42671083|Global Epidemiology of Diabetic Foot: A Systematic Review an…|Europe PMC|2026-09-01|-|0| \n|PMID 42706739|Efficacy and Safety of Tirzepatide Versus Dulaglutide in Typ…|Europe PMC|2026-09-01|-|0| \n|PMID 41967728|Associations of antidiabetic medications with abdominal aort…|PubMed|2026-09-01|-|1| \n|PMID 42626880|Comparative neuroprotective effects of antidiabetic medicati…|Europe PMC|2026-08-21|-|0| \n|PMID 42581008|Association Between Metformin Use and Risk of Lung Cancer in…|Europe PMC|2026-08-01|-|0| \n|PMID 42530338|Effect of Medications for Type 2 Diabetes on Cardiovascular…|Europe PMC, PubMed|2026-07-30|-|1| \n|PMID 42907738|Association between prediabetes and nephropathy: a comprehen…|Europe PMC|2026-07-25|-|0| \n|PMID 42410309|Cardiovascular Outcomes With Tirzepatide Versus GLP-1 Recept…|Europe PMC|2026-07-06|-|1| \n|PMID 42337824|Efficacy and Safety of GLP-1 Receptor Agonists on Combined C…|Europe PMC|2026-06-23|-|1| \n|PMID 42162578|The Effects of Combined Antihypertensive and Antidiabetic Th…|Europe PMC|2026-05-20|-|1| \n|PMID 42033283|Effect of GLP-1 Receptor Agonists on Post-Ablation Atrial Fi…|Europe PMC|2026-04-25|-|4| \n|PMID 42021276|Diabetes is associated with elevated mortality, stroke, and…|PubMed|2026-04-22|-|1| \n \n \n \nNewest indexed: 2026-10-23 (10 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42827236\n  biomcp search article -k \"metformin cardiovascular disease mortality\" --type meta-analysis --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR mutation",
+      "lung cancer",
+      "NSCLC"
+    ],
+    "limit": 15,
+    "sort": "relevance"
+  },
+  "args_key": "a86deb005ffb688bc1e9d07fb36500305aa3e4e0079d068912504d96f22fa7ef",
+  "recorded_at": "2026-11-02T23:15:03.328222+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3661.0539000248536,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR mutation lung cancer NSCLC, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR mutation lung cancer NSCLC\" --exclude-retracted --sort relevance --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 36556319|Efficacy and Failure Patterns of Early SBRT to the Primary T…|PubTator3|2022-11-22|hybrid 0.283 + title 4/5|none| \n|PMID 42930180|Triple Genetic Alterations (EGFR Mutation, ALK Fusion, and M…|Europe PMC|2026-10-12|hybrid 0.266 + title 3/5|0| \n|PMID 42958137|Tertiary lymphoid structures in the tumor immune microenviro…|PubMed|2026-08-01|hybrid 0.254 + title 4/5|0| \n|PMID 33961689|Population-based incidence rates and increased risk of EGFR…|PubTator3|2021-05-07|hybrid 0.251 + title 3/5|none| \n|PMID 36065226|Discovery of mobocertinib, a new irreversible tyrosine kinas…|PubTator3|2022-01-01|hybrid 0.209 + title 3/5|none| \n|PMID 42923081|Case Report: Coexpression of somatic EGFR, BRCA1, and BRCA2…|Europe PMC|2026-10-08|hybrid 0.209 + title 3/5|0| \n|PMID 37251503|NSCLC With Synchronous EGFR Mutations in Li Fraumeni Syndrom…|PubTator3|2023-04-30|hybrid 0.206 + title 2/5|none| \n|PMID 42965979|Transcription activator-like effector base editing delivered…|PubMed|2026-10-29|hybrid 0.206 + title 2/5|0| \n|PMID 34830377|Cell Behavior of Non-Small Cell Lung Cancer Is at EGFR and M…|PubTator3|2021-11-19|hybrid 0.194 + title 3/5|none| \n|PMID 42817873|Serial ctDNA Analysis for Monitoring Molecular Response and…|Europe PMC|2026-10-01|hybrid 0.191 + title 2/5|0| \n|PMID 42809935|Distinct genomic landscape of non-small cell lung cancer in…|Europe PMC|2026-09-29|hybrid 0.177 + title 2/5|0| \n|PMID 42964815|High PD-L1 Expression and Clinical Outcomes of First-Line Os…|PubMed|2026-07-24|hybrid 0.177 + title 2/5|0| \n|PMID 42910561|Driver Gene Mutations Reprogram Lipid Metabolism in Non-Smal…|Europe PMC|2026-10-01|hybrid 0.163 + title 2/5|0| \n|PMID 42935491|Chinese medicine combined with EGFR-TKIs in EGFR-mutated adv…|Europe PMC|2026-10-12|hybrid 0.134 + title 2/5|0| \n|PMID 42964983|Overcoming EGFR Resistance by Monovalent and Bident Inhibito…|PubMed|2026-09-29|hybrid 0.131 + title 1/5|0| \n \n \n \nNewest indexed: 2026-10-31 (2 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 36556319\n  biomcp search article -k \"EGFR mutation lung cancer NSCLC\" --year-min 2021 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "6809",
+    "json": true
+  },
+  "args_key": "2e13d1507166858df7da57b8d17891df823b4ca0ae7224f2c1ce5f6cb04f44ba",
+  "recorded_at": "2026-11-02T19:13:00.368625+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 2742.961700016167,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"error\": {\n    \"code\": \"not_found\",\n    \"message\": \"No exact drug match for '6809'.\"\n  },\n  \"_meta\": {\n    \"not_found\": true,\n    \"alias_resolution\": {\n      \"kind\": \"ambiguous\",\n      \"requested_entity\": \"drug\",\n      \"query\": \"6809\",\n      \"candidates\": [\n        {\n          \"label\": \"6809\",\n          \"primary_type\": \"gene\",\n          \"primary_id\": \"6809\",\n          \"confidence\": \"CanonicalId\",\n          \"match_tier\": \"Exact\"\n        },\n        {\n          \"label\": \"68094049458\",\n          \"primary_type\": \"drug\",\n          \"primary_id\": \"DRON:00134456\",\n          \"confidence\": \"CanonicalId\",\n          \"match_tier\": \"Prefix\"\n        },\n        {\n          \"label\": \"68094049461\",\n          \"primary_type\": \"drug\",\n          \"primary_id\": \"DRON:00134457\",\n          \"confidence\": \"CanonicalId\",\n          \"match_tier\": \"Prefix\"\n        }\n      ]\n    },\n    \"next_commands\": [\n      \"biomcp discover 6809\",\n      \"biomcp search drug -q 6809\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

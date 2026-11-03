@@ -1,0 +1,95 @@
+{
+  "backend": "openai_compat",
+  "model": "mistralai/mistral-large-4-1t-a52b",
+  "options": {
+    "temperature": 0.0,
+    "seed": 7,
+    "max_tokens": 1,
+    "extra": {}
+  },
+  "measured": true,
+  "base_prompt": 98,
+  "all_tools_prompt": 4902,
+  "all_tools": 4804,
+  "tools": {
+    "medical__search-drugs": {
+      "alone": 145,
+      "marginal": 142
+    },
+    "medical__get-drug-details": {
+      "alone": 110,
+      "marginal": 107
+    },
+    "medical__get-health-statistics": {
+      "alone": 186,
+      "marginal": 183
+    },
+    "medical__search-medical-literature": {
+      "alone": 145,
+      "marginal": 142
+    },
+    "medical__get-article-details": {
+      "alone": 107,
+      "marginal": 104
+    },
+    "medical__search-drug-nomenclature": {
+      "alone": 109,
+      "marginal": 106
+    },
+    "medical__search-google-scholar": {
+      "alone": 101,
+      "marginal": 98
+    },
+    "medical__search-clinical-guidelines": {
+      "alone": 137,
+      "marginal": 134
+    },
+    "medical__search-medical-databases": {
+      "alone": 118,
+      "marginal": 115
+    },
+    "medical__search-medical-journals": {
+      "alone": 121,
+      "marginal": 118
+    },
+    "biomcp__biomcp": {
+      "alone": 147,
+      "marginal": 144
+    },
+    "biomcp__search": {
+      "alone": 1492,
+      "marginal": 1489
+    },
+    "biomcp__get": {
+      "alone": 541,
+      "marginal": 538
+    },
+    "biomcp__variant_normalize_car": {
+      "alone": 126,
+      "marginal": 123
+    },
+    "biomcp__variant_erepo": {
+      "alone": 240,
+      "marginal": 237
+    },
+    "biomcp__gene_cspec": {
+      "alone": 211,
+      "marginal": 208
+    },
+    "biomcp__variant_articles": {
+      "alone": 463,
+      "marginal": 460
+    },
+    "omop__find_omop_concept": {
+      "alone": 250,
+      "marginal": 247
+    },
+    "omop__batch_map_concepts_from_csv": {
+      "alone": 109,
+      "marginal": 106
+    }
+  },
+  "profile": "nim-mistral",
+  "catalog_version": "3abb72a7e25f3523499db62c37a26d79d0bc64412f426bd11529adb6be02de50",
+  "measured_at": "2026-11-02T18:47:11.592977+00:00"
+}

@@ -1,0 +1,41 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "type 2 diabetes mellitus"
+    ],
+    "drug": [
+      "semaglutide",
+      "empagliflozin",
+      "tirzepatide"
+    ],
+    "entity": "trial",
+    "limit": 10,
+    "status": [
+      "recruiting",
+      "active_not_recruiting"
+    ]
+  },
+  "args_key": "dacd74e0cd625278ebc279e70e4009d2065b58c0d706551455afd9ca0ab0999d",
+  "recorded_at": "2026-11-02T19:57:49.446386+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1.7048000008799136,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "unknown trial search field: drug"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

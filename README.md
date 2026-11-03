@@ -422,6 +422,8 @@ The first benchmark run uses record mode, experiments use replay, and the final 
 - Grounding: IDs in the answer must appear in tool outputs.
 - Optional: an LLM judge using a different model.
 
+**Done when:** a record run produces the baseline, and a strict replay run (`--strict-replay`, no live fallback) serves every matching call from recordings with zero live calls. Hosted LLMs may not be reproducible, so the strict run's divergence rate (tasks ending in `ReplayMiss`) is measured and recorded rather than required to be zero; experiments then use replay with live fallback and repeat each configuration.
+
 ### Phase 7: Datasets
 
 1. **One loader per dataset.** Each emits `EntityRecord(surface, type, canonical, identifier, source, row_key)` and a versioned Dataset thing (URL, fetch date, sha256, row count, license note, TTL).
@@ -441,6 +443,7 @@ The first benchmark run uses record mode, experiments use replay, and the final 
 | E6 | Result shaping | keep fields traces show get used; park the rest behind `expand_result(handle)`; OMOP: Standard + Valid + preferred vocabulary, top 3–5; BioMCP: minimal `sections` | projection vs top-N vs summary | dropped fields and counts, expand rate |
 | E7 | Cache | reuse identical canonical calls within TTL | TTL per source | hit rate, age of served result |
 | E8 | History compaction | replace consumed results in later turns with a summary plus handle | after one turn vs after use is detected | carried tokens saved, re-expansions |
+| E9 | Final answer at turn limit | when `max_turns` is reached, make one last LLM call with no tools asking for an answer from what was gathered | on vs off; limit 6/8/12 | turns used, answers produced at the limit |
 
 ### Phase 9: Trust
 

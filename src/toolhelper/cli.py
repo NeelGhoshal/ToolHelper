@@ -554,3 +554,35 @@ def bench_check(group: Annotated[str, typer.Option(help="Benchmark group to chec
     for issue in issues:
         console.print(issue)
     console.print(f"{len(issues)} unverified expectations across {len(traces)} runs")
+
+
+@bench_app.command("rescore")
+def bench_rescore(group: Annotated[str, typer.Option(help="Benchmark group to rescore.")],
+                  tasks: TasksOption = TASKS_FILE, db: MonitorOption = MONITOR_DB,
+                  catalog_dir: CatalogDirOption = CATALOG_DIR) -> None:
+    """Rescore a group's saved traces against the current tasks; updates trace files and the database."""
+    from toolhelper.experiments.runner import latest_per_task, load_tasks, rescore
+    from toolhelper.monitoring.db import MonitorDB
+    from toolhelper.monitoring.report import latest_tool_costs
+    from toolhelper.monitoring.tracer import Trace
+
+    monitor = MonitorDB(db, latest_tool_costs(catalog_dir))
+    rows = monitor.rows("SELECT trace_path FROM runs WHERE group_id = ?", (group,))
+    results = rescore([Trace.load(r["trace_path"]) for r in rows if r["trace_path"]], load_tasks(tasks))
+    for trace, _ in results:
+        path = next(r["trace_path"] for r in rows if r["trace_path"].endswith(f"{trace.run_id}.json"))
+        trace.save(Path(path).parent)
+        monitor.ingest(trace, path)
+    latest = {t.run_id for t in latest_per_task([t for t, _ in results])}
+    final = [(t, r) for t, r in results if t.run_id in latest]
+    by_kind: dict[str, list[bool]] = {}
+    for trace, result in final:
+        kind = trace.task_id.split("-")[0]
+        by_kind.setdefault(kind, []).append(result.success)
+    passed = sum(r.success for _, r in final)
+    console.print(f"{group}: {passed}/{len(final)} passed (latest run per task) "
+                  + " ".join(f"{k}={sum(v)}/{len(v)}" for k, v in by_kind.items()))
+    for trace, result in sorted(final, key=lambda tr: tr[0].task_id):
+        if not result.success:
+            failed = [k for k, v in result.checks.items() if not v] or [trace.stop_reason or "?"]
+            console.print(f"  [red]fail[/] {trace.task_id:9} {failed}")

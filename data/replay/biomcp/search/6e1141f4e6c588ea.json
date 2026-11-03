@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "mutation": [
+      "BRAF V600E"
+    ]
+  },
+  "args_key": "6e1141f4e6c588eacd7dacdaf58a5a516fbc90f917f4d9e574f2b7bc5a0cedd4",
+  "recorded_at": "2026-11-02T20:57:23.456971+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6577.349299972411,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 25 trial(s) \n \nQuery: condition=melanoma, mutation=BRAF V600E \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT05076760|MEM-288 Oncolytic Virus A…|RECRUITING|1|Solid Tumor, Advanced Cancer, Metastatic Canc… [abridged; 10 conditions total]| \n|NCT02279004|A Prospective Study of Pl…|ACTIVE_NOT_RECRUITING|-|NSCLC, Melanoma| \n|NCT04657991|A Clinical Trial of Three…|ACTIVE_NOT_RECRUITING|3|Melanoma| \n|NCT05238883|A Study of HFB200301 as a…|ACTIVE_NOT_RECRUITING|1|Gastric Cancer, Renal Cell Carcinoma, Melanoma… [abridged; 9 conditions total]| \n|NCT05270044|Adjuvant Encorafenib and…|ACTIVE_NOT_RECRUITING|3|Melanoma| \n|NCT05309421|A Single Arm Trial Evalua…|ACTIVE_NOT_RECRUITING|2|Melanoma Stage IV, Unresectable Melanoma| \n|NCT01245062|GSK1120212 vs Chemotherap…|COMPLETED|3|Melanoma| \n|NCT01248936|A Study of RO5185426 in P…|COMPLETED|2|Malignant Melanoma| \n|NCT01264380|A Study of the Effect of…|COMPLETED|1|Malignant Melanoma| \n|NCT01266967|A Study of GSK2118436 in…|COMPLETED|2|Melanoma and Brain Metastases| \n|NCT01460134|A Study of CDX-1127 (Varl…|COMPLETED|1|CD27 Expressing B-cell Malignancies for Examp… [abridged; 10 conditions total]| \n|NCT01689519|A Study Comparing Vemuraf…|COMPLETED|3|Malignant Melanoma| \n|NCT01928940|Japan PhI/II of GSK211843…|COMPLETED|2|Solid Tumours| \n|NCT01943422|Safety and Efficacy Study…|COMPLETED|1|Melanoma| \n|NCT02027961|Phase 1 Safety and Tolera…|COMPLETED|1|Melanoma| \n|NCT02631447|Sequential Combo Immuno a…|COMPLETED|2|Metastatic Melanoma| \n|NCT02857270|A Study of LY3214996 Admi…|COMPLETED|1|Advanced Cancer, Metastatic Melanoma, Metastat… [abridged; 4 conditions total]| \n|NCT03101254|LY3022855 With BRAF/MEK I…|COMPLETED|1/2|Melanoma| \n|NCT03239145|Pembrolizumab (Anti-PD-1)…|COMPLETED|1|Advanced Solid Tumor| \n|NCT02460068|A Study of Fotemustine(FT…|UNKNOWN|3|Brain Metastases| \n|NCT02357732|Study of the Anti-PD-1 An…|WITHDRAWN|1|Metastatic Melanoma| \n|NCT01978236|Dabrafenib/Trametinib, BR…|TERMINATED|2|Melanoma and Brain Metastases| \n|NCT02052193|Evaluation of Photosensit…|TERMINATED|2|Metastatic Melanoma (Carrying BRAF V600 Mutation)| \n|NCT04190628|Safety and Tolerability o…|TERMINATED|1|Advanced Solid Tumor, BRAF V600 Mutation| \n|NCT05756556|T3011 in Combination With…|SUSPENDED|2|Melanoma, Malignant Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 25 results (total unknown). Use --offset 25 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

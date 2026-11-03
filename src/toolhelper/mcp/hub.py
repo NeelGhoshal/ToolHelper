@@ -108,6 +108,9 @@ class Hub:
         self._closing = anyio.Event()
 
     async def __aenter__(self) -> Hub:
+        # Fresh connection state, so a hub can be entered again after it was closed.
+        self._closing = anyio.Event()
+        self._registry, self._replay, self._live, self._live_info = {}, {}, {}, {}
         self._stack = AsyncExitStack()
         self._tg = await self._stack.enter_async_context(anyio.create_task_group())
         try:

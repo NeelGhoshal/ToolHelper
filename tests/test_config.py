@@ -21,11 +21,17 @@ def test_shipped_profiles_load_and_build():
         assert backend.model == profile.model
 
 
-def test_default_ollama_profile_follows_experiment_defaults():
-    _, p = load_llm_config().get(None)
+def test_ollama_profile_follows_experiment_defaults():
+    _, p = load_llm_config().get("ollama-qwen3")
     assert p.backend == "ollama"
     assert p.options.temperature == 0 and p.options.seed is not None
     assert p.options.num_ctx and p.options.think is False
+
+
+def test_default_profile_is_hosted_and_rate_limited():
+    _, p = load_llm_config().get(None)
+    assert p.backend == "openai_compat" and p.base_url.startswith("https://")
+    assert p.api_key_env and p.requests_per_minute and p.options.temperature == 0
 
 
 def test_unknown_profile():

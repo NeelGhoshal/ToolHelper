@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "improved survival with vemurafenib PLX4032 BRAF V600E phase 1 extension Chapman"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "034ca317ef020f2b7c7c40c5924a436537128cd6510d00f255dfb93082684c5e",
+  "recorded_at": "2026-11-02T22:03:57.277413+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3451.957599958405,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=improved survival with vemurafenib PLX4032 BRAF V600E phase 1 extension Chapman, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"improved survival with vemurafenib PLX4032 BRAF V600E phase 1 extension Chapman\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 21639808|Improved survival with vemurafenib in melanoma with BRAF V60…|Europe PMC|2011-06-05|-|5808| \n|PMID 20823850|Clinical efficacy of a RAF inhibitor needs broad target bloc…|Europe PMC|2010-09-01|-|1395| \n|PMID 29488071|BRAF and MEK Inhibitors: Use and Resistance in BRAF-Mutated…|Europe PMC|2018-04-01|-|114| \n|PMID 29880484|Loss of USP28-mediated BRAF degradation drives resistance to…|Europe PMC|2018-06-07|-|54| \n|PMID 25178978|No longer an untreatable disease: how targeted and immunothe…|Europe PMC|2014-08-15|-|37| \n \n \n \nNewest indexed: 2018-06-09 (3068 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 21639808\n  biomcp search article -k \"improved survival with vemurafenib PLX4032 BRAF V600E phase 1 extension Chapman\" --year-min 2010 --year-max 2018 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}
