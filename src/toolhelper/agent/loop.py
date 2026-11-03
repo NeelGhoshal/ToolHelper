@@ -81,11 +81,23 @@ class RunContext:
     def transform(self, target: str, *, before: Any, after: Any, evidence: list[EvidenceRef],
                   note: str = "", hook: str | None = None) -> None:
         """Records one change made by the current strategy. `before`/`after` are text,
-        token counts or JSON-able values."""
+        token counts or JSON-able values; text and values are kept as short previews."""
         self.trace.transformations.append(TransformationRecord(
             turn=self.turn, strategy=self.strategy, hook=hook or self.hook, target=target,
             before_tokens=self.tokens(before), after_tokens=self.tokens(after), evidence=evidence, note=note,
+            before_text=_preview(before), after_text=_preview(after),
         ))
+
+
+PREVIEW_CHARS = 1200
+
+
+def _preview(value: Any) -> str | None:
+    if isinstance(value, int) or value is None:
+        return None
+    text = value if isinstance(value, str) else canonical_json(
+        value.model_dump(mode="json") if isinstance(value, BaseModel) else value)
+    return text if len(text) <= PREVIEW_CHARS else text[:PREVIEW_CHARS] + f" ... [{len(text) - PREVIEW_CHARS} more chars]"
 
 
 def _dump(items: list[BaseModel]) -> list[dict[str, Any]]:

@@ -68,6 +68,9 @@ class TransformationRecord(BaseModel):
     evidence: list[EvidenceRef] = Field(default_factory=list)
     note: str = ""
     reported: bool = True  # False: detected by the loop, not reported by the strategy
+    # Short previews of what changed, for trace cards (Phase 9); None for counts.
+    before_text: str | None = None
+    after_text: str | None = None
 
 
 class ContextItemRecord(BaseModel):

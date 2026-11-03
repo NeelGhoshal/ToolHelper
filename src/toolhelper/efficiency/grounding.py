@@ -51,7 +51,7 @@ def _targets(entity_type: str):
 
 def _evidence(m: Match, surface: str) -> EvidenceRef:
     return EvidenceRef(kind="dataset_row", ref=f"{m.dataset}#{m.row_key}", detail={
-        "surface": surface, "type": m.type, "canonical": m.canonical, "identifier": m.identifier})
+        "surface": surface, "type": m.type, "canonical": m.canonical, "identifier": m.identifier, "method": m.method})
 
 
 def describe(m: Match) -> str:

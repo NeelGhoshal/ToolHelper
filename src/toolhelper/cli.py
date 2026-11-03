@@ -356,6 +356,32 @@ def run_cmd(prompt: Annotated[str, typer.Option(help="The task prompt.")],
     console.print(f"saved {path}")
 
 
+@trace_app.command("card")
+def trace_card(run_id: Annotated[str | None, typer.Argument(help="Run id or trace file.")] = None,
+               group: Annotated[str | None, typer.Option(help="Write cards for every run in this group.")] = None,
+               out: Annotated[Path | None, typer.Option(help="Output folder (default data/reports/cards).")] = None,
+               traces: TracesOption = TRACES_DIR, db: MonitorOption = MONITOR_DB,
+               store: StoreOption = REPLAY_DIR) -> None:
+    """Write HTML trace cards: timeline, tokens per step, transformations with evidence, trust."""
+    from toolhelper.monitoring.card import write_card
+    from toolhelper.monitoring.db import MonitorDB
+    from toolhelper.monitoring.tracer import Trace
+
+    if group:
+        rows = MonitorDB(db).rows("SELECT trace_path FROM runs WHERE group_id = ?", (group,))
+        paths = [Path(r["trace_path"]) for r in rows if r["trace_path"]]
+    elif run_id:
+        paths = [Path(run_id) if Path(run_id).exists() else traces / f"{run_id}.json"]
+    else:
+        raise typer.BadParameter("give a run id or --group")
+    trust_fn, out = _trust_fn(), out or REPORTS_DIR / "cards"
+    for path in paths:
+        trace = Trace.load(path)
+        if trace.trust is None:
+            trace.trust = trust_fn(trace)
+        console.print(f"wrote {write_card(trace, out, replay_dir=store)}")
+
+
 @trace_app.command("show")
 def trace_show(run_id: Annotated[str, typer.Argument(help="Run id or trace file.")],
                traces: TracesOption = TRACES_DIR) -> None:
@@ -530,7 +556,9 @@ def bench_run(tasks: TasksOption = TASKS_FILE, llm: LLMOption = None, mode: Mode
         mark = "[green]pass[/]" if result.success else "[red]fail[/]"
         failed = [k for k, v in result.checks.items() if not v]
         retry = f" (retry of {trace.retry_of})" if trace.retry_of else ""
+        trust_value = (trace.trust or {}).get("trust")
         console.print(f"{mark} {trace.task_id:9}{retry} turns={len(trace.llm_calls)} calls={len(trace.tool_calls)} "
+                      f"trust={'-' if trust_value is None else f'{trust_value:.2f}'} "
                       f"live={live} prompt={sum(c.prompt_tokens for c in trace.llm_calls)} "
                       f"grounding={'-' if result.grounding is None else f'{result.grounding:.2f}'} "
                       + (f"failed={failed}" if failed else "") + (f" [red]{trace.error}[/]" if trace.error else ""))
@@ -543,7 +571,7 @@ def bench_run(tasks: TasksOption = TASKS_FILE, llm: LLMOption = None, mode: Mode
             agent = Agent(make_backend(profile), hub, strategies, config=AgentConfig(max_turns=max_turns),
                           group_id=group)
             return await run_benchmark(selected, agent, traces_dir=traces, db=monitor, progress=progress,
-                                       retry_timeouts=retry_timeouts)
+                                       retry_timeouts=retry_timeouts, trust_fn=_trust_fn())
 
     results = anyio.run(go)
     passed = sum(r.success for _, r in results)
@@ -552,6 +580,14 @@ def bench_run(tasks: TasksOption = TASKS_FILE, llm: LLMOption = None, mode: Mode
     prompt = sum(c.prompt_tokens for t, _ in results for c in t.llm_calls)
     console.print(f"[bold]{group}[/]: {passed}/{len(results)} passed, {calls} tool calls ({live} live), "
                   f"{prompt:,} prompt tokens")
+
+
+def _trust_fn(context_db: Path = CONTEXT_DB):
+    """Trust with dataset ages from the context store (Phase 9)."""
+    from toolhelper.efficiency.trust import load_policy, store_lookup, trust
+
+    policy, lookup = load_policy(), store_lookup(LocalStore(context_db))
+    return lambda trace: trust(trace, policy, lookup)
 
 
 def _strategies(specs: list[str], hub: Hub, learn_from: str, monitor, store: Path) -> list:
@@ -607,7 +643,7 @@ def bench_rescore(group: Annotated[str, typer.Option(help="Benchmark group to re
 
     monitor = MonitorDB(db, latest_tool_costs(catalog_dir))
     rows = monitor.rows("SELECT trace_path FROM runs WHERE group_id = ?", (group,))
-    results = rescore([Trace.load(r["trace_path"]) for r in rows if r["trace_path"]], load_tasks(tasks))
+    results = rescore([Trace.load(r["trace_path"]) for r in rows if r["trace_path"]], load_tasks(tasks), _trust_fn())
     for trace, _ in results:
         path = next(r["trace_path"] for r in rows if r["trace_path"].endswith(f"{trace.run_id}.json"))
         trace.save(Path(path).parent)

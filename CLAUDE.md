@@ -137,6 +137,15 @@ These differ from README section 1.1 because of Windows. Use them in `configs/se
 - Found while smoke-testing: `Trace.stop_reason` lacked `final_at_limit` (traces saved but would not reload; fixed, round-trip tested). E3 resolves names, not codes: an identifier hint (`47781-951` = sertraline in the FDA directory) could catch Medical MCP's wrong-product answer for med-004.
 - Not done: E6's "minimal BioMCP `sections`" (an argument change, not shaping). E7's cache is in-memory per `bench run` unless `Inputs.cache_path` is set.
 
+### Trust (Phase 9, 2026-11-02)
+
+- **Done when (agreed; README has none):** every run gets the four components (0-1, with reasons) and the weighted trust score, stored in the trace (`trust`) and the monitoring DB, computed by `bench run` and `bench rescore`; `toolhelper trace card <run_id> | --group <g>` writes an HTML card (timeline, tokens per step, transformations with before/after previews and evidence links, trust with reasons) to `data/reports/cards/`. The report's run table shows trust.
+- `src/toolhelper/efficiency/trust.py`; weights and fidelity penalties in `configs/policy.yaml` (README defaults). A component that does not apply (no identifiers in the answer, nothing cached or looked up) is None and the weights are renormalized over the rest. Freshness reads dataset `fetched_at`/`ttl_days` from the context store and E7 hit ages.
+- Transformations now keep `before_text`/`after_text` previews (1,200 chars) for cards; E3 evidence records the match `method` (fidelity penalizes normalized-match rewrites and E4 renames learned from runs).
+- **Trust measures consistency with evidence, not correctness:** med-004 scores 1.0 because its wrong answer (estradiol) is exactly what Medical MCP returned. A dataset cross-check (FDA directory says 47781-951 is sertraline) would catch it; not built.
+- **The compressed-schema fidelity penalty is a possible cause, not proof:** it counts argument/validation errors (by error text; upstream failures like `capture_corrupt` and "not found" are excluded) on tools E2 compressed. The baseline makes some of the same errors with full schemas; Phase 10 compares error rates.
+- Applied to existing runs: baseline (55 runs) trust mean 0.97, min 0.79 (grounding mean 0.92 over 43 runs with identifiers); smoke (5 runs) mean 0.97, min 0.90 (bio-003 fidelity 0.6: four BioMCP argument errors on compressed schemas). WarmHub's Veritas docs (opinions, reputation) were not used.
+
 ## Progress
 
 | Phase | Topic | Status |
@@ -150,7 +159,7 @@ These differ from README section 1.1 because of Windows. Use them in `configs/se
 | 6 | Benchmark and record/replay | done |
 | 7 | Datasets | done (WHO indicators and full Athena vocabularies pending) |
 | 8 | Efficiency strategies | done |
-| 9 | Trust | not started |
+| 9 | Trust | done |
 | 10 | Experiments and optimum | not started |
 | 11 | Swap the LLM and rerun | not started |
 | 12 | Gateway (optional) | not started |

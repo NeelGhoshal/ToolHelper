@@ -47,7 +47,7 @@ def build_report(db: MonitorDB, *, group: str | None = None, tool_costs: dict[st
     }
 
 
-PERCENT = {"error_rate", "replayed_share", "used_rate", "token_share", "success_rate", "provenance",
+PERCENT = {"trust_score", "error_rate", "replayed_share", "used_rate", "token_share", "success_rate", "provenance",
            "first_tool_correct_rate"}
 
 
@@ -85,7 +85,7 @@ def render_html(report: dict[str, Any]) -> str:
                  ("replayed_share", "Replayed"), ("used_rate", "Used"), ("token_share", "Share")]
     run_cols = [("run_id", "Run"), ("task_id", "Task"), ("model", "Model"), ("turns", "Turns"),
                 ("tool_calls", "Calls"), ("prompt_tokens", "Prompt"), ("completion_tokens", "Completion"),
-                ("measured", "Measured"), ("success", "Success"), ("provenance", "Provenance"),
+                ("measured", "Measured"), ("success", "Success"), ("trust_score", "Trust"), ("provenance", "Provenance"),
                 ("complete", "Complete"), ("stop_reason", "Stop")]
     nodes = sorted({t["from"] for t in p["transitions"]} | {t["to"] for t in p["transitions"]},
                    key=lambda n: (n != "START", n == "END", n))

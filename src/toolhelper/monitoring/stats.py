@@ -65,6 +65,7 @@ def run_metrics(db: MonitorDB, group: str | None = None) -> list[dict[str, Any]]
             "tokens_by_component": json.loads(r["tokens_by_component_json"]),
             "success": None if r["success"] is None else bool(r["success"]),
             "trust": json.loads(r["trust_json"]) if r["trust_json"] else None,
+            "trust_score": (json.loads(r["trust_json"]) or {}).get("trust") if r["trust_json"] else None,
             "provenance": r["provenance"], "complete": bool(r["complete"]), "stop_reason": r["stop_reason"],
             "error": r["error"],
         })

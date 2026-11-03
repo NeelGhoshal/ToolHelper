@@ -74,7 +74,8 @@ def is_transient(trace: Trace) -> bool:
 
 async def run_benchmark(tasks: list[Task], agent: Agent, *, traces_dir: Path | str, db: MonitorDB,
                         progress: Callable[[Trace, Score], None] | None = None,
-                        retry_timeouts: int = 0) -> list[tuple[Trace, Score]]:
+                        retry_timeouts: int = 0,
+                        trust_fn: Callable[[Trace], dict] | None = None) -> list[tuple[Trace, Score]]:
     """Runs, scores, saves and ingests each task. Tasks that ended in a transient API failure
     are run again after the pass, up to `retry_timeouts` more times; every attempt is kept
     (the retry's `retry_of` names the run it repeats) and the last one is returned."""
@@ -84,6 +85,8 @@ async def run_benchmark(tasks: list[Task], agent: Agent, *, traces_dir: Path | s
         trace.retry_of = retry_of
         result = score(trace, task)
         trace.success, trace.score = result.success, result.model_dump()
+        if trust_fn:
+            trace.trust = trust_fn(trace)
         db.ingest(trace, trace.save(traces_dir))
         if progress:
             progress(trace, result)
@@ -123,8 +126,10 @@ def latest_per_task(traces: list[Trace]) -> list[Trace]:
     return list(latest.values())
 
 
-def rescore(traces: list[Trace], tasks: list[Task]) -> list[tuple[Trace, Score]]:
-    """Scores saved traces against the current task definitions (e.g. after fixing an expectation)."""
+def rescore(traces: list[Trace], tasks: list[Task],
+            trust_fn: Callable[[Trace], dict] | None = None) -> list[tuple[Trace, Score]]:
+    """Scores saved traces against the current task definitions (e.g. after fixing an expectation),
+    and recomputes trust when `trust_fn` is given."""
     by_id = {t.id: t for t in tasks}
     out = []
     for trace in traces:
@@ -132,5 +137,7 @@ def rescore(traces: list[Trace], tasks: list[Task]) -> list[tuple[Trace, Score]]
             continue
         result = score(trace, by_id[trace.task_id])
         trace.success, trace.score = result.success, result.model_dump()
+        if trust_fn:
+            trace.trust = trust_fn(trace)
         out.append((trace, result))
     return out

@@ -1,0 +1,10 @@
+# Trust (README Phase 9). Components are each 0-1 and always shown separately; the combined
+# score uses these weights, renormalized over the components that apply to a run (e.g.
+# grounding does not apply when the answer states no identifiers).
+trust:
+  weights: {grounding: 0.35, provenance: 0.25, fidelity: 0.25, freshness: 0.15}
+  # Subtracted from fidelity (which starts at 1.0) per occurrence, floored at 0.
+  fidelity_penalties:
+    expand: 0.10                       # expand_result / recall_result: shaping or compaction hid something needed
+    low_confidence_rewrite: 0.15       # E3 rewrite from a normalized (not exact) match; E4 rename learned from runs
+    compressed_schema_arg_error: 0.10  # failed or rejected call to a tool whose schema E2 compressed
