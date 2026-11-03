@@ -45,6 +45,7 @@ CREATE TABLE datasets (id INTEGER PRIMARY KEY, name TEXT UNIQUE, wref TEXT, sha2
 CREATE TABLE rows (id INTEGER PRIMARY KEY, dataset_id INTEGER, row_key TEXT, type TEXT, canonical TEXT,
                    identifier TEXT, data BLOB);
 CREATE INDEX rows_dataset ON rows (dataset_id);
+CREATE INDEX rows_identifier ON rows (identifier);
 CREATE TABLE names (id INTEGER PRIMARY KEY, row_id INTEGER, surface TEXT, norm TEXT, source TEXT);
 CREATE INDEX names_norm ON names (norm);
 CREATE INDEX names_row ON names (row_id);
@@ -87,6 +88,12 @@ class EntityIndex:
         if not self.db.execute("SELECT 1 FROM sqlite_master WHERE name = 'names'").fetchone():
             self.db.execute("PRAGMA journal_mode=WAL")
             self.db.executescript(SCHEMA)
+        elif not self.db.execute("SELECT 1 FROM sqlite_master WHERE name = 'rows_identifier'").fetchone():
+            try:  # added after the first real build; skipped if a build holds the writer
+                with self.db:
+                    self.db.execute("CREATE INDEX rows_identifier ON rows (identifier)")
+            except sqlite3.OperationalError:
+                pass
 
     def close(self) -> None:
         self.db.close()
@@ -192,6 +199,22 @@ class EntityIndex:
             if score >= FUZZY_MIN:
                 out.append((r, score * FUZZY_SCALE))
         return out
+
+    def by_identifier(self, identifier: str, *, dataset: str | None = None,
+                      type: str | None = None) -> list[Match]:
+        """Rows whose identifier is exactly `identifier` (an NDC, RxCUI, ISO3, concept_id ...)."""
+        sql = (f"SELECT {self.COLS} FROM rows r JOIN datasets d ON d.id = r.dataset_id "
+               "JOIN names n ON n.id = (SELECT MIN(id) FROM names WHERE row_id = r.id) WHERE r.identifier = ?")
+        args: list[Any] = [identifier]
+        if dataset:
+            sql += " AND d.name = ?"
+            args.append(dataset)
+        if type:
+            sql += " AND r.type = ?"
+            args.append(type)
+        return [Match(type=r[1], canonical=r[3], identifier=r[4], surface=r[2], source=r[5], row_key=r[6],
+                      dataset=r[7], row=json.loads(zlib.decompress(r[10])), rows=1, method="exact", score=100.0)
+                for r in self.db.execute(sql + " ORDER BY d.priority, r.id", args)]
 
     def resolve(self, surface: str, type: str | None = None) -> Resolution:
         query = surface.strip()

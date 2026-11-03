@@ -40,6 +40,14 @@ calls:
   - {server: biomcp, tool: gene_cspec, args: {gene: MYH7, limit: 2}}
   - {server: biomcp, tool: gene_cspec, args: {gene: BRAF, limit: 2}}
   - {server: biomcp, tool: variant_articles, args: {items: [{gene: BRAF, protein: p.V600E}], limit: 3}}
+  # Argument-guard (E4) cases, mirroring real baseline errors of 2026-11-02 and their fixes.
+  - {server: biomcp, tool: search, args: {entity: trial, condition: [melanoma], keyword: [BRAF V600E], limit: 3}}  # error case: field not valid for trial
+  - {server: biomcp, tool: search, args: {entity: trial, condition: [melanoma], limit: 3}}
+  - {server: biomcp, tool: search, args: {entity: article, query: GLP-1 receptor agonists abdominal aortic aneurysm, limit: 3}}  # error case: query not valid for article
+  - {server: biomcp, tool: search, args: {entity: article, keyword: [GLP-1 receptor agonists abdominal aortic aneurysm], limit: 3}}
+  - {server: biomcp, tool: get, args: {entity: variant, id: "chr7:g.140453136A>T", sections: [clinvar, annotations]}}  # error case: section not valid for variant
+  - {server: biomcp, tool: get, args: {entity: variant, id: "chr7:g.140453136A>T", sections: [clinvar]}}
+  - {server: biomcp, tool: biomcp, args: {command: "search drug imatinib | head -50"}}  # error case: shell pipe
 
   # --- omop ---
   - {server: omop, tool: find_omop_concept, args: {keyword: heart attack, omop_table: condition_occurrence, omop_field: condition_concept_id, max_results: 5}}

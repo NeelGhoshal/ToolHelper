@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp skill list",
+    "json": true
+  },
+  "args_key": "fcc6a4a79a2a71c82d621aaf00f5d1226c1af33476af2bc8c983f2bcc0351da2",
+  "recorded_at": "2026-11-03T02:21:55.636805+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 6.506400008220226,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"action\": \"list\",\n  \"content\": \"# BioMCP Worked Examples\\n\\nWorked examples are short, executable investigation patterns. Run `biomcp skill <name>` to open one.\\n\\n01 treatment-lookup - Pattern: Treatment / approved-drug lookup\\n  Use this when the question is \\\"what drugs treat X?\\\" and you need approved-drug signal before broader literature.\\n\\n02 symptom-phenotype - Pattern: Symptom / phenotype lookup\\n  Use this when the question is \\\"what symptoms or phenotypes are linked to X?\\\"\\n\\n03 gene-disease-orientation - Pattern: Gene-in-disease orientation\\n  Use this when the question names a gene and variant class, but the syndrome or disease caused by that gene is still unclear.\\n\\n04 article-follow-up - Pattern: Article follow-up via citations and recommendations\\n  Use this when one relevant article answers part of the question and you need to expand or verify the evidence chain.\\n\\n05 variant-pathogenicity - Pattern: Variant pathogenicity evidence\\n  Use this when the question asks whether a named variant is pathogenic, actionable, or clinically relevant in a disease context.\\n\\n06 drug-regulatory - Pattern: Drug regulatory and approval evidence\\n  Use this when the question asks for brand-to-generic mapping, approval status, or whether a drug belongs to a target-defined class.\\n\\n07 gene-function-localization - Pattern: Gene function and localization\\n  Use this when the question asks what a protein does, where it localizes, or which cellular compartment supports its role.\\n\\n08 mechanism-pathway - Pattern: Mechanism and pathway orientation\\n  Use this when the question asks how a drug, gene, or molecular alteration causes an effect through a pathway.\\n\\n09 trial-recruitment - Pattern: Trial recruitment check\\n  Use this when the question asks whether studies are recruiting for a disease or intervention area.\\n\\n10 pharmacogene-cumulative - Pattern: Pharmacogene cumulative evidence\\n  Use this when the question asks which genes collectively influence response, dosing, or toxicity for a drug.\\n\\n11 disease-locus-mapping - Pattern: Disease locus and chromosome mapping\\n  Use this when the question asks which chromosomes, loci, deletions, duplications, or trisomies are linked to a disease.\\n\\n12 cellular-process-regulation - Pattern: Cellular process regulation\\n  Use this when the question asks which cellular processes a gene regulates or participates in.\\n\\n13 mutation-catalog - Pattern: Mutation catalog for one gene and disease\\n  Use this when the question asks for mutations in one gene that are linked to a named disease or phenotype.\\n\\n14 syndrome-disambiguation - Pattern: Syndrome name disambiguation\\n  Use this when similar syndrome names may refer to different diseases, genes, phenotypes, or inheritance patterns.\\n\\n15 negative-evidence - Pattern: Negative evidence and no-association checks\\n  Use this when the question asks whether an association exists and repeated targeted searches may support a cautious no-evidence answer.\\n\\n16 normalize-to-codes - Pattern: Normalize a term to ontology codes\\n  Use this when a free-text clinical or guideline term needs source-labelled MONDO, HPO, ICD-10, SNOMED, or RxNorm-style codes before downstream structuring.\\n\\n17 exact-variant-literature - Pattern: Exact-variant literature retrieval\\n  Use this when you have a complete gene plus protein change and need a compact, evidence-first literature shortlist without making a clinical classification.\\n\\n\",\n  \"kind\": \"skill\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

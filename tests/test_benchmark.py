@@ -134,3 +134,52 @@ async def test_rescore_uses_current_tasks_and_latest_run(hub, tasks, heart_attac
     stricter = task.model_copy(update={"checks": {**task.checks, "answer_includes_all": ["SNOMED"]}})
     [(trace, result)] = rescore([second], [stricter])
     assert not result.success and trace.success is False and trace.score["checks"]["answer_includes_all"] is False
+
+
+class FlakyBackend(ScriptedBackend):
+    """Scripted, except that the first `fail` LLM calls raise the OpenAI SDK's real timeout error."""
+
+    def __init__(self, items, fail):
+        super().__init__(items, strict_tools=False)
+        self.fail = fail
+
+    def _chat(self, messages, tools, opts):
+        if self.fail:
+            import httpx
+            import openai
+
+            self.fail -= 1
+            raise openai.APITimeoutError(request=httpx.Request("POST", "https://integrate.api.nvidia.com/v1"))
+        return super()._chat(messages, tools, opts)
+
+
+@pytest.mark.parametrize("fail, retries, runs, passed", [(1, 1, 2, True), (2, 1, 2, False), (1, 0, 1, False)])
+async def test_timeouts_are_retried(hub, tasks, heart_attack, tmp_path, fail, retries, runs, passed):
+    from toolhelper.experiments.runner import is_transient
+
+    task = tasks["omop-001"]
+    llm = FlakyBackend(steps(("omop__find_omop_concept", heart_attack), "concept_id 4329847 (SNOMED)"), fail)
+    db = MonitorDB(tmp_path / "m.sqlite")
+    async with hub:
+        results = await run_benchmark([task], Agent(llm, hub, counter=estimate_tokens, group_id="g"),
+                                      traces_dir=tmp_path, db=db, retry_timeouts=retries)
+    [(trace, result)] = results  # one final result per task
+    assert result.success is passed
+    saved = db.rows("SELECT run_id FROM runs WHERE group_id = 'g'")
+    assert len(saved) == runs  # the timed-out run is kept, not overwritten
+    if runs == 2:
+        assert trace.retry_of and trace.retry_of != trace.run_id and trace.retry_of in {r["run_id"] for r in saved}
+    assert is_transient(trace) is (not passed)
+
+
+def test_only_api_failures_count_as_transient():
+    from toolhelper.experiments.runner import is_transient
+
+    class T:
+        def __init__(self, stop, error):
+            self.stop_reason, self.error = stop, error
+
+    assert is_transient(T("error", "APITimeoutError: Request timed out."))
+    assert is_transient(T("error", "APIConnectionError: Connection error."))
+    assert not is_transient(T("error", "ReplayMiss: no recording for ..."))
+    assert not is_transient(T("max_turns", None))

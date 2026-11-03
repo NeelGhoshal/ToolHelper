@@ -21,6 +21,7 @@ OUT = ROOT / "tests" / "fixtures" / "datasets"
 
 NDC_BRANDS = {"zoloft", "zepbound", "tylenol"}
 NDC_GENERICS = {"sertraline hydrochloride"}
+NDC_PRODUCTS = {"47781-951"}  # sertraline (Alvogen); Medical MCP returns another product for it
 HGNC_SYMBOLS = {"ERBB2", "BRAF", "TP53", "ABCA1", "HEATR6"}  # ABC1 is an alias of both ABCA1 and HEATR6
 COUNTRIES = {"JPN", "BRA", "IND", "WLD"}  # WLD (World) is an aggregate the loader must skip
 RXNORM = {"IN": {"metformin", "sertraline", "acetaminophen"}, "BN": {"Zoloft", "Tylenol"}}
@@ -39,6 +40,7 @@ def main() -> None:
     with zipfile.ZipFile(RAW / "ndc" / "ndctext.zip") as z:
         text = io.TextIOWrapper(z.open("product.txt"), encoding="latin-1", newline="")
         product = excerpt_tsv(iter(text), lambda r: r["PROPRIETARYNAME"].lower() in NDC_BRANDS
+                              or r["PRODUCTNDC"] in NDC_PRODUCTS
                               or (r["NONPROPRIETARYNAME"].lower() in NDC_GENERICS and r["PROPRIETARYNAME"].lower() == "sertraline"))
     (OUT / "ndc").mkdir(exist_ok=True)
     with zipfile.ZipFile(OUT / "ndc" / "ndctext.zip", "w", zipfile.ZIP_DEFLATED) as z:

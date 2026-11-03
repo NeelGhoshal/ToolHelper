@@ -63,18 +63,37 @@ def validate_tasks(tasks: list[Task], tool_names: set[str]) -> dict[str, Any]:
             "trap_kinds": dict(Counter(k for t in tasks for k in t.traps)), "problems": problems}
 
 
+# LLM API failures worth repeating: the request never got an answer (stalled free tier,
+# dropped connection). Model mistakes, tool errors and replay misses are not retried.
+TRANSIENT_ERRORS = ("APITimeoutError", "APIConnectionError")
+
+
+def is_transient(trace: Trace) -> bool:
+    return trace.stop_reason == "error" and (trace.error or "").startswith(TRANSIENT_ERRORS)
+
+
 async def run_benchmark(tasks: list[Task], agent: Agent, *, traces_dir: Path | str, db: MonitorDB,
-                        progress: Callable[[Trace, Score], None] | None = None) -> list[tuple[Trace, Score]]:
-    out = []
-    for task in tasks:
+                        progress: Callable[[Trace, Score], None] | None = None,
+                        retry_timeouts: int = 0) -> list[tuple[Trace, Score]]:
+    """Runs, scores, saves and ingests each task. Tasks that ended in a transient API failure
+    are run again after the pass, up to `retry_timeouts` more times; every attempt is kept
+    (the retry's `retry_of` names the run it repeats) and the last one is returned."""
+
+    async def attempt(task: Task, retry_of: str | None = None) -> tuple[Trace, Score]:
         trace = await agent.run(task)
+        trace.retry_of = retry_of
         result = score(trace, task)
         trace.success, trace.score = result.success, result.model_dump()
-        path = trace.save(traces_dir)
-        db.ingest(trace, path)
-        out.append((trace, result))
+        db.ingest(trace, trace.save(traces_dir))
         if progress:
             progress(trace, result)
+        return trace, result
+
+    out = [await attempt(task) for task in tasks]
+    for _ in range(retry_timeouts):
+        again = [i for i, (trace, _) in enumerate(out) if is_transient(trace)]
+        for i in again:
+            out[i] = await attempt(tasks[i], retry_of=out[i][0].run_id)
     return out
 
 

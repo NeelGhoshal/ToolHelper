@@ -92,6 +92,7 @@ class Strategy(Protocol):
     def after_result(self, call: PendingCall, result: ToolResult) -> ToolResult: ...
     def compact_history(self, messages: list[Message]) -> list[Message]: ...
     def extra_tools(self) -> list[ExtraTool]: ...
+    def at_turn_limit(self, task: Task, messages: list[Message]) -> Message | None: ...
 
 
 class BaseStrategy:
@@ -125,3 +126,8 @@ class BaseStrategy:
 
     def extra_tools(self) -> list[ExtraTool]:
         return []
+
+    def at_turn_limit(self, task: Task, messages: list[Message]) -> Message | None:
+        """Called once when `max_turns` runs out. A returned message is sent with no tools
+        offered, and the reply becomes the answer (stop reason `final_at_limit`)."""
+        return None

@@ -2,7 +2,8 @@
 
 prepare -> select_tools -> transform_schemas -> per turn: LLM -> for each tool call
 before_call -> hub (or a strategy's local tool) -> after_result -> compact_history,
-until a final answer or `max_turns`.
+until a final answer or `max_turns`. At the limit, `at_turn_limit` may add one last
+message; the LLM then answers with no tools offered (stop reason `final_at_limit`).
 """
 
 from __future__ import annotations
@@ -54,6 +55,15 @@ class RunContext:
         self.turn = 0
         self.strategy = "loop"
         self.hook = ""
+        self.offers: list[ToolDef] = []  # tools a strategy offers mid-run (E1 find_tools)
+
+    def offer(self, strategy: str, tools: list[ToolDef], *, evidence: list[EvidenceRef], note: str = "") -> None:
+        """Adds tools to those offered from the next LLM turn on; reported as a transformation
+        by `strategy` (called from a local tool handler, outside any hook)."""
+        self.offers.extend(tools)
+        self.strategy, self.hook = strategy, "offer"
+        self.transform("tools", before=0, after=sum(self.tokens(spec_view(t)) for t in tools), evidence=evidence,
+                       note=note or f"offered {[t.name for t in tools]}")
 
     @property
     def run_id(self) -> str:
@@ -190,12 +200,55 @@ class Agent:
             for c in calls:
                 pending = PendingCall(id=c.id, turn=turn, name=c.name, arguments=c.arguments)
                 messages.append(await self._tool_call(run, pending, offered, extra))
+            if run.offers:
+                for t in run.offers:
+                    if t.name not in offered:
+                        offered[t.name] = t
+                        specs.append(ToolSpec(name=t.name, description=t.description, input_schema=t.input_schema))
+                run.offers = []
+                trace.tools_offered = list(offered)
             for s in self.strategies:
                 messages = self._hook(run, s, "compact_history", "history", messages,
                                       lambda s=s, m=messages: s.compact_history(m))
         else:
             trace.stop_reason = "max_turns"
+            await self._at_turn_limit(run, task, messages)
         trace.messages = messages
+
+    async def _at_turn_limit(self, run: RunContext, task: Task, messages: list[Message]) -> None:
+        """One extra LLM call with no tools, if a strategy asks for it (E9)."""
+        run.turn = self.config.max_turns + 1
+        closing = None
+        for s in self.strategies:
+            run.strategy, run.hook = s.name, "at_turn_limit"
+            start = len(run.trace.transformations)
+            closing = s.at_turn_limit(task, messages)
+            if closing is not None:
+                if not any(t.strategy == s.name for t in run.trace.transformations[start:]):
+                    run.trace.transformations.append(TransformationRecord(
+                        turn=run.turn, strategy=s.name, hook="at_turn_limit", target="history", before_tokens=0,
+                        after_tokens=self.counter(closing.content), note="change not reported by the strategy",
+                        reported=False))
+                break
+        if closing is None:
+            return
+        messages.append(closing)
+        result = await anyio.to_thread.run_sync(self.llm.chat, messages, [], self.config.options)
+        # No tools were offered; any tool calls in the reply are dropped, not executed.
+        message = result.message.model_copy(update={"tool_calls": []})
+        run.trace.llm_calls.append(LLMCallRecord(
+            turn=run.turn, prompt_tokens=result.usage.prompt, completion_tokens=result.usage.completion,
+            measured=result.usage.measured, thinking_tokens=result.usage.thinking,
+            cached_prompt_tokens=result.usage.cached_prompt,
+            est_breakdown=breakdown(messages, [], self.counter, CONTEXT_MARKER),
+            latency_ms=result.latency_ms, done_reason=result.stop_reason, tools_offered=[],
+            messages_sent=len(messages),
+            tool_results_in_context={m.tool_call_id: self.counter(m.content) for m in messages
+                                     if m.role == "tool" and m.tool_call_id},
+            applied_options=result.applied_options, ignored_options=result.ignored_options, tool_calls=[],
+        ))
+        messages.append(message)
+        run.trace.stop_reason, run.trace.answer = "final_at_limit", message.content
 
     def _hook(self, run: RunContext, s: Strategy, hook: str, target: str, before: list, call) -> list:
         """Runs one hook; records an unreported change without evidence."""

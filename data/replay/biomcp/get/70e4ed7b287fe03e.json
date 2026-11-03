@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "HGNC:3430",
+    "sections": [
+      "pathways"
+    ],
+    "json": true
+  },
+  "args_key": "70e4ed7b287fe03e3c8816f6de51f2772ae3a4a3ced32a2efe7713a7afad901d",
+  "recorded_at": "2026-11-03T02:17:28.708412+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 5.463199981022626,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: Invalid argument: Gene symbol must contain only letters, numbers, '_' or '-'. Example: biomcp get gene BRAF"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

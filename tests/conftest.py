@@ -84,3 +84,44 @@ def server_configs():
     from toolhelper.config import load_servers_config
 
     return load_servers_config()
+
+
+@pytest.fixture
+def replay_hub(server_configs, catalog, store):
+    """Strict replay over the recorded real responses: a call that was never recorded fails."""
+    from toolhelper.mcp.hub import Hub
+
+    return Hub(server_configs, mode="replay", store=store, catalog=catalog, live_fallback=False)
+
+
+def tool_call(name: str, args: dict[str, Any]) -> dict[str, Any]:
+    """A scripted assistant turn calling one tool."""
+    return {"role": "assistant", "tool_calls": [{"name": name, "arguments": args}]}
+
+
+def final(text: str) -> dict[str, Any]:
+    """A scripted assistant turn that answers."""
+    return {"role": "assistant", "content": text}
+
+
+def recorded(store, tool: str, **match: Any) -> dict[str, Any]:
+    """Arguments of a recorded real call whose arguments include `match`."""
+    return next(r.arguments for r in store if r.tool == tool and all(r.arguments.get(k) == v for k, v in match.items()))
+
+
+@pytest.fixture(scope="session")
+def dataset_index(tmp_path_factory):
+    """Entity index built from the real dataset excerpts in fixtures/datasets/."""
+    import shutil
+
+    from toolhelper.context.local_store import LocalStore
+    from toolhelper.datasets.base import load_config
+    from toolhelper.datasets.build import build_dataset
+    from toolhelper.datasets.index import EntityIndex
+
+    tmp = tmp_path_factory.mktemp("dataset_index")
+    shutil.copytree(FIXTURES / "datasets", tmp / "raw")
+    index, store, cfg = EntityIndex(tmp / "index.sqlite"), LocalStore(), load_config()
+    for name in ("ndc", "rxnorm", "hgnc", "countries", "clinvar", "omop_eunomia"):
+        build_dataset(cfg[name], tmp / "raw" / name, index, store)
+    return index

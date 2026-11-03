@@ -1,7 +1,7 @@
 """Scoring a run against its task: hard checks, grounding and expected-path match.
 
-Checks (all optional; a run succeeds when it reached a final answer and every defined
-check passes):
+Checks (all optional; a run succeeds when it reached an answer, `final` or E9's
+`final_at_limit`, and every defined check passes):
 - `must_call_any` / `must_call_all`: tools called without an error result.
 - `called_with`: `[{"tool": name, "args": {...}}]`, a call whose arguments include these
   values (strings compared case-insensitively); used to test trap handling.
@@ -21,6 +21,9 @@ from pydantic import BaseModel, Field
 from toolhelper.agent.hooks import Task
 from toolhelper.monitoring.pathways import identifiers
 from toolhelper.monitoring.tracer import Trace
+
+# Stop reasons that end with an answer; `final_at_limit` is E9's answer after `max_turns`.
+ANSWERED = ("final", "final_at_limit")
 
 
 class Score(BaseModel):
@@ -80,7 +83,7 @@ def score(trace: Trace, task: Task) -> Score:
         path_match = any(_is_subsequence(p, sequence) for p in task.expected_paths)
     return Score(
         task_id=task.id, run_id=trace.run_id, checks=checks,
-        success=trace.stop_reason == "final" and all(checks.values()),
+        success=trace.stop_reason in ANSWERED and all(checks.values()),
         grounding=len(grounded) / len(ids) if ids else None, grounded=grounded,
         ungrounded=[i for i in ids if i not in known], path_match=path_match,
     )

@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp search trial \"BRAF V600E mutation positive melanoma immunotherapy\" --limit 50 --json",
+    "json": true
+  },
+  "args_key": "b1ecbac2231ce2aa5cfc3a756b8272f06c987dfc899e0a03389b7844495c362c",
+  "recorded_at": "2026-11-03T02:27:51.373455+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 147.0674999873154,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 50,\n    \"returned\": 1,\n    \"total\": 1,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 1,\n  \"results\": [\n    {\n      \"nct_id\": \"NCT04310397\",\n      \"title\": \"Dabrafenib, Trametinib, and Spartalizumab for the Treatment of BRAF V600E or V600K Mutation Positive Stage IIIB/C/D Melanoma\",\n      \"status\": \"TERMINATED\",\n      \"phase\": \"PHASE2\",\n      \"conditions\": [\n        \"Pathologic Stage IIIB Cutaneous Melanoma AJCC v8\",\n        \"Pathologic Stage IIIC Cutaneous Melanoma AJCC v8\",\n        \"Pathologic Stage IIID Cutaneous Melanoma AJCC v8\"\n      ],\n      \"sponsor\": \"M.D. Anderson Cancer Center\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get trial NCT04310397\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

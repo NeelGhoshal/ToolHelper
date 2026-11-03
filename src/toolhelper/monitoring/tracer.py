@@ -95,8 +95,9 @@ class Trace(BaseModel):
     tokenizer: str
     started_at: str
     finished_at: str | None = None
-    stop_reason: Literal["final", "max_turns", "error"] | None = None
+    stop_reason: Literal["final", "final_at_limit", "max_turns", "error"] | None = None
     error: str | None = None
+    retry_of: str | None = None  # run_id of the run this one repeats after a transient API failure
     answer: str | None = None
     success: bool | None = None  # set by scoring (Phase 6)
     score: dict[str, Any] | None = None  # experiments.scoring.Score
@@ -121,7 +122,7 @@ class Trace(BaseModel):
             out.append("run did not finish")
         if not self.llm_calls:
             out.append("no LLM calls")
-        if self.stop_reason == "final" and self.answer is None:
+        if self.stop_reason in ("final", "final_at_limit") and self.answer is None:
             out.append("final stop without an answer")
         issued = [c for call in self.llm_calls for c in call.tool_calls]
         recorded = [t.call_id for t in self.tool_calls]

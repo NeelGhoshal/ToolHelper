@@ -504,6 +504,12 @@ def bench_run(tasks: TasksOption = TASKS_FILE, llm: LLMOption = None, mode: Mode
               group: Annotated[str | None, typer.Option(help="Group id (default: bench-<time>-<mode>).")] = None,
               strict_replay: Annotated[bool, typer.Option(help="Replay without live fallback.")] = False,
               max_turns: Annotated[int, typer.Option(help="Maximum LLM turns.")] = 8,
+              strategy: Annotated[list[str] | None, typer.Option(
+                  "--strategy", help="Efficiency strategy spec, repeatable: E4:mode=repair, E1:top_k=8, E9.")] = None,
+              learn_from: Annotated[str, typer.Option(help="Group whose traces strategies learn from.")]
+              = "bench-baseline-record",
+              retry_timeouts: Annotated[int, typer.Option(
+                  help="Re-run tasks that ended in an LLM API timeout or connection error, up to N times.")] = 1,
               store: StoreOption = REPLAY_DIR, catalog_dir: CatalogDirOption = CATALOG_DIR,
               traces: TracesOption = TRACES_DIR, db: MonitorOption = MONITOR_DB) -> None:
     """Run the agent over benchmark tasks; every trace is scored, saved and ingested under one group."""
@@ -523,15 +529,21 @@ def bench_run(tasks: TasksOption = TASKS_FILE, llm: LLMOption = None, mode: Mode
         live = sum(c.source == "live" for c in trace.tool_calls)
         mark = "[green]pass[/]" if result.success else "[red]fail[/]"
         failed = [k for k, v in result.checks.items() if not v]
-        console.print(f"{mark} {trace.task_id:9} turns={len(trace.llm_calls)} calls={len(trace.tool_calls)} "
+        retry = f" (retry of {trace.retry_of})" if trace.retry_of else ""
+        console.print(f"{mark} {trace.task_id:9}{retry} turns={len(trace.llm_calls)} calls={len(trace.tool_calls)} "
                       f"live={live} prompt={sum(c.prompt_tokens for c in trace.llm_calls)} "
                       f"grounding={'-' if result.grounding is None else f'{result.grounding:.2f}'} "
                       + (f"failed={failed}" if failed else "") + (f" [red]{trace.error}[/]" if trace.error else ""))
 
     async def go():
         async with make_hub(mode, None, store, catalog_dir, live_fallback=not strict_replay) as hub:
-            agent = Agent(make_backend(profile), hub, config=AgentConfig(max_turns=max_turns), group_id=group)
-            return await run_benchmark(selected, agent, traces_dir=traces, db=monitor, progress=progress)
+            strategies = _strategies(strategy or [], hub, learn_from, monitor, store)
+            if strategies:
+                console.print("strategies: " + ", ".join(f"{s.name} {s.config()}" for s in strategies))
+            agent = Agent(make_backend(profile), hub, strategies, config=AgentConfig(max_turns=max_turns),
+                          group_id=group)
+            return await run_benchmark(selected, agent, traces_dir=traces, db=monitor, progress=progress,
+                                       retry_timeouts=retry_timeouts)
 
     results = anyio.run(go)
     passed = sum(r.success for _, r in results)
@@ -540,6 +552,31 @@ def bench_run(tasks: TasksOption = TASKS_FILE, llm: LLMOption = None, mode: Mode
     prompt = sum(c.prompt_tokens for t, _ in results for c in t.llm_calls)
     console.print(f"[bold]{group}[/]: {passed}/{len(results)} passed, {calls} tool calls ({live} live), "
                   f"{prompt:,} prompt tokens")
+
+
+def _strategies(specs: list[str], hub: Hub, learn_from: str, monitor, store: Path) -> list:
+    """Strategies with inputs learned from `learn_from`'s traces, the hub's tools, the recordings,
+    the dataset index and omop_mcp's CDM field map."""
+    if not specs:
+        return []
+    from toolhelper.agent.hooks import ToolDef
+    from toolhelper.datasets.base import INDEX_PATH
+    from toolhelper.datasets.index import EntityIndex
+    from toolhelper.efficiency.arg_guard import DEFAULT_CDM_FIELDS
+    from toolhelper.efficiency.registry import Inputs, build_strategies
+    from toolhelper.mcp.canonical import tool_hash
+    from toolhelper.monitoring.tracer import Trace
+
+    rows = monitor.rows("SELECT trace_path FROM runs WHERE group_id = ?", (learn_from,))
+    learned = [Trace.load(r["trace_path"]) for r in rows if r["trace_path"] and Path(r["trace_path"]).exists()]
+    if not learned:
+        raise typer.BadParameter(f"no traces in group {learn_from!r} to learn from")
+    tools = [ToolDef(name=t.name, description=t.tool.description or "", input_schema=t.tool.input_schema,
+                     server=t.server, tool=t.tool.name, schema_hash=tool_hash(t.tool)) for t in hub.tools]
+    inputs = Inputs(traces=learned, tools=tools, recordings=list(RecordingStore(store)),
+                    index=EntityIndex(INDEX_PATH) if INDEX_PATH.exists() else None, cdm_path=DEFAULT_CDM_FIELDS)
+    console.print(f"learning from {len(learned)} runs in {learn_from}")
+    return build_strategies(specs, inputs)
 
 
 @bench_app.command("check")
