@@ -22,7 +22,7 @@ ToolHelper monitors and reduces the token cost of LLM tool calls against three b
 - **Shaping must be reversible:** every dropped field is recorded and reachable via `expand_result(handle)`.
 - **Label tokens as measured or estimated**, always.
 - **Don't trust remembered column names or tool lists.** Print dataset headers on first load; snapshot live tool lists rather than relying on the tables in the README.
-- Datasets go in `data/datasets/` (gitignored). Secrets (`OMOPHUB_API_KEY`, `WH_TOKEN`) come from the environment, never from committed files.
+- Datasets go in `data/datasets/` (gitignored), or in `$TOOLHELPER_DATASETS_DIR` when set (on this machine `C:\Users\neelg\toolhelper-data\datasets`, outside OneDrive; the index is GBs). Secrets (`OMOPHUB_API_KEY`, `WH_TOKEN`) come from the environment, never from committed files.
 
 ## Conventions
 
@@ -112,6 +112,16 @@ These differ from README section 1.1 because of Windows. Use them in `configs/se
 - OMOPHub's top 5 for "HbA1c" or "serum creatinine" miss the standard LOINC concepts (3004410, 3016723); LOINC-style keywords find them. A grounding target.
 - **Memory:** qwen3:8b at `num_ctx` 32768 holds ~10.3 GB (6.3 GB VRAM) of 15.3 GB. A long run was killed for low memory, and Ollama once failed to load the model (out of memory at startup). Check free memory before long runs.
 
+### Datasets (Phase 7, 2026-11-02)
+
+- `toolhelper datasets fetch|build|list|resolve`; sources in `configs/datasets.yaml`. Fetch streams files to `<datasets dir>/raw/<name>/` with `_fetch.json` (URL, Last-Modified, sha256); build loads them into `<datasets dir>/index.sqlite` and writes `datasets/<name>` Dataset things (a new version only when the files' sha256 changes). Every match carries its dataset pinned (`datasets/hgnc@v1`) and the source row.
+- **`TOOLHELPER_DATASETS_DIR` is a Windows user env var** pointing outside OneDrive; shells started earlier must read it like the API keys. The index is 2.4 GB (ClinVar: 3.7M rows, ~10M surfaces). Evidence rows are zlib-compressed one at a time, which barely shrinks ~400-byte rows (a shared zlib dictionary would). A full ClinVar build takes ~11 min.
+- Matching: exact (case-insensitive) > normalized (`normalize`: case, accents, punctuation) > fuzzy (rapidfuzz `ratio` >= 85 over FTS5 trigram candidates; `WRatio` matched "heart attack" to "Heart (Bovine), Lung (Bovine)"). Grouped by (type, canonical); a near-tie within the best type is `ambiguous` and returns the top two. Types rank by match quality, then config order, so "Zoloft" gives NDC's sertraline before RxNorm's brand entry. ClinVar is exact/normalized only.
+- **Country -> ISO3 uses the World Bank list** (README says WHO GHO, down with HTTP 500 on 2026-11-01/02; same alpha-3 codes, aggregates skipped). The `who_gho` indicator loader is written against documented columns but **unverified**; build it when GHO answers.
+- **OMOP: `omop_eunomia` is a stand-in**, OHDSI's public Eunomia GiBleed sample CDM (Apache-2.0, GitHub): real vocabulary rows, but only 418 standard concepts from 2018 releases. It gives "heart attack" -> 4329847 (Done-when) but lacks e.g. HbA1c 3004410 and body weight 3025315, so grounding experiments need the full **`omop_vocab`, a manual Athena download** (account + licence acceptance by the user; SNOMED, LOINC, RxNorm: CONCEPT, CONCEPT_SYNONYM and VOCABULARY into `raw/omop_vocab/`). Same loader (`delimiter`, `archive`, case-insensitive headers); the Athena format itself is still unverified. 'Maps to' relationships are not loaded.
+- RxNorm comes from RxNav `allconcepts` (IN and BN only); brand -> ingredient is not mapped (NDC covers brand -> generic). NDC `product.txt` is Latin-1 and read unquoted (it has two stray quotes); HGNC quotes multi-value cells.
+- Test fixtures in `tests/fixtures/datasets/` are real excerpts cut by `scripts/make_dataset_fixtures.py`.
+
 ## Progress
 
 | Phase | Topic | Status |
@@ -123,7 +133,7 @@ These differ from README section 1.1 because of Windows. Use them in `configs/se
 | 4 | Agent loop and tracer | done |
 | 5 | Monitoring | done |
 | 6 | Benchmark and record/replay | done |
-| 7 | Datasets | in progress |
+| 7 | Datasets | done (WHO indicators and full Athena vocabularies pending) |
 | 8 | Efficiency strategies | not started |
 | 9 | Trust | not started |
 | 10 | Experiments and optimum | not started |

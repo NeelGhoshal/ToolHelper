@@ -1,0 +1,78 @@
+# Datasets for grounding (README 1.3). `toolhelper datasets fetch` downloads `files` into
+# <datasets dir>/raw/<name>/; `toolhelper datasets build` loads them into <datasets dir>/index.sqlite
+# and writes a versioned Dataset thing (datasets/<name>) to the context store.
+# Files with no URL are downloaded by hand (see `manual`). <datasets dir> is
+# $TOOLHELPER_DATASETS_DIR if set (outside OneDrive on this machine), else data/datasets/.
+
+datasets:
+  ndc:
+    loader: ndc
+    source_url: https://www.accessdata.fda.gov/cder/ndctext.zip
+    files: {ndctext.zip: https://www.accessdata.fda.gov/cder/ndctext.zip}
+    license_note: FDA NDC Directory, public domain (US government work)
+    ttl_days: 7
+
+  rxnorm:
+    loader: rxnorm
+    source_url: https://rxnav.nlm.nih.gov/REST/allconcepts.json
+    files:
+      allconcepts_IN.json: https://rxnav.nlm.nih.gov/REST/allconcepts.json?tty=IN
+      allconcepts_BN.json: https://rxnav.nlm.nih.gov/REST/allconcepts.json?tty=BN
+    license_note: RxNorm via RxNav REST API (NLM); free API, full files need a UMLS licence
+    ttl_days: 30
+
+  hgnc:
+    loader: hgnc
+    source_url: https://storage.googleapis.com/public-download-files/hgnc/tsv/tsv/hgnc_complete_set.txt
+    files: {hgnc_complete_set.txt: https://storage.googleapis.com/public-download-files/hgnc/tsv/tsv/hgnc_complete_set.txt}
+    license_note: HGNC complete set, CC0
+    ttl_days: 30
+
+  # Country -> ISO3. README names WHO GHO, but its API was down (HTTP 500) on 2026-11-02;
+  # the World Bank list uses the same ISO 3166 alpha-3 codes.
+  countries:
+    loader: countries
+    source_url: https://api.worldbank.org/v2/country
+    files: {worldbank_countries.json: "https://api.worldbank.org/v2/country?format=json&per_page=400"}
+    license_note: World Bank country metadata, CC BY 4.0
+    ttl_days: 90
+
+  who_gho:
+    loader: who_gho
+    source_url: https://ghoapi.azureedge.net/api/Indicator
+    files: {Indicator.json: https://ghoapi.azureedge.net/api/Indicator}
+    license_note: WHO GHO OData API, CC BY-NC-SA 3.0 IGO
+    ttl_days: 30
+
+  clinvar:
+    loader: clinvar
+    source_url: https://ftp.ncbi.nlm.nih.gov/pub/clinvar/tab_delimited/variant_summary.txt.gz
+    files: {variant_summary.txt.gz: https://ftp.ncbi.nlm.nih.gov/pub/clinvar/tab_delimited/variant_summary.txt.gz}
+    license_note: ClinVar, public domain (NCBI)
+    ttl_days: 30
+    fuzzy: false   # approximate variant matches are unsafe; exact and normalized only
+
+  # OHDSI's Eunomia GiBleed sample CDM: real OMOP vocabulary rows, but only 444 concepts from
+  # 2018 releases (SNOMED/LOINC/RxNorm). Covers "heart attack" -> 4329847; misses e.g. HbA1c
+  # 3004410 and body weight 3025315. A stand-in until omop_vocab (full Athena) is downloaded.
+  omop_eunomia:
+    loader: omop_vocab
+    source_url: https://github.com/OHDSI/EunomiaDatasets/tree/main/datasets/GiBleed
+    files: {GiBleed_5.3.zip: https://raw.githubusercontent.com/OHDSI/EunomiaDatasets/main/datasets/GiBleed/GiBleed_5.3.zip}
+    archive: GiBleed_5.3.zip
+    member_prefix: GiBleed_5.3/
+    delimiter: ","
+    license_note: OHDSI Eunomia (Apache-2.0); vocabulary content from OHDSI vocabularies (SNOMED CT etc. carry their own licences)
+    ttl_days: 365
+    vocabularies: [SNOMED, LOINC, RxNorm]
+
+  omop_vocab:
+    loader: omop_vocab
+    source_url: https://athena.ohdsi.org
+    files: {CONCEPT.csv: null, CONCEPT_SYNONYM.csv: null, VOCABULARY.csv: null}
+    manual: >-
+      Register at athena.ohdsi.org, download SNOMED, LOINC and RxNorm, unzip CONCEPT.csv,
+      CONCEPT_SYNONYM.csv and VOCABULARY.csv into <datasets dir>/raw/omop_vocab/.
+    license_note: OHDSI Athena vocabularies; SNOMED CT and others carry their own licences
+    ttl_days: 180
+    vocabularies: [SNOMED, LOINC, RxNorm]

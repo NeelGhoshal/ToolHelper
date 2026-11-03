@@ -55,6 +55,8 @@ tokens_app = typer.Typer(no_args_is_help=True, help="Token measurements.")
 app.add_typer(tokens_app, name="tokens")
 bench_app = typer.Typer(no_args_is_help=True, help="Benchmark tasks.")
 app.add_typer(bench_app, name="bench")
+datasets_app = typer.Typer(no_args_is_help=True, help="Grounding datasets and the entity index.")
+app.add_typer(datasets_app, name="datasets")
 console = Console()
 
 LLMOption = Annotated[str | None, typer.Option("--llm", help="LLM profile from configs/llm.yaml.")]
@@ -586,3 +588,104 @@ def bench_rescore(group: Annotated[str, typer.Option(help="Benchmark group to re
         if not result.success:
             failed = [k for k, v in result.checks.items() if not v] or [trace.stop_reason or "?"]
             console.print(f"  [red]fail[/] {trace.task_id:9} {failed}")
+
+
+DatasetsOnly = Annotated[str | None, typer.Option("--only", help="Dataset names, comma-separated.")]
+
+
+def _datasets(only: str | None):
+    from toolhelper.datasets.base import load_config
+
+    cfg = load_config()
+    if not only:
+        return list(cfg.values())
+    unknown = [n for n in only.split(",") if n not in cfg]
+    if unknown:
+        raise typer.BadParameter(f"unknown datasets {unknown}; known: {sorted(cfg)}")
+    return [cfg[n] for n in only.split(",")]
+
+
+@datasets_app.command("fetch")
+def datasets_fetch(only: DatasetsOnly = None) -> None:
+    """Download dataset files to <datasets dir>/raw/<name>/ with URL, date and sha256 (hand-downloaded
+    files are only checksummed). A failed source is reported and the others still run."""
+    from toolhelper.datasets.base import RAW_DIR
+    from toolhelper.datasets.build import fetch_dataset
+
+    failed = 0
+    for cfg in _datasets(only):
+        try:
+            meta = fetch_dataset(cfg, RAW_DIR / cfg.name)
+        except Exception as e:  # one source being down must not stop the rest
+            failed += 1
+            console.print(f"[red]{cfg.name}: {type(e).__name__}: {e}[/]")
+            continue
+        for file, m in meta["files"].items():
+            console.print(f"{cfg.name}: {file} {m['bytes']:,} bytes sha256 {m['sha256'][:12]} "
+                          f"last-modified {m['last_modified'] or '-'}")
+    if failed:
+        raise typer.Exit(1)
+
+
+@datasets_app.command("build")
+def datasets_build(only: DatasetsOnly = None, db: ContextOption = CONTEXT_DB) -> None:
+    """Load fetched files into <datasets dir>/index.sqlite and version them as datasets/<name>."""
+    from toolhelper.datasets.base import INDEX_PATH, RAW_DIR
+    from toolhelper.datasets.build import build_dataset
+    from toolhelper.datasets.index import EntityIndex
+
+    index, store, failed = EntityIndex(INDEX_PATH), LocalStore(db), 0
+    for cfg in _datasets(only):
+        try:
+            r = build_dataset(cfg, RAW_DIR / cfg.name, index, store)
+        except Exception as e:
+            failed += 1
+            console.print(f"[red]{cfg.name}: {type(e).__name__}: {e}[/]")
+            continue
+        console.print(f"{r.wref}: {r.rows:,} rows, sha256 {r.sha256[:12]}"
+                      + ("" if r.reindexed else " (unchanged)"))
+    if failed:
+        raise typer.Exit(1)
+
+
+@datasets_app.command("list")
+def datasets_list(db: ContextOption = CONTEXT_DB) -> None:
+    """Indexed datasets with their version, rows and age against the TTL."""
+    from datetime import UTC, datetime
+
+    from toolhelper.datasets.base import INDEX_PATH, load_config
+    from toolhelper.datasets.index import EntityIndex
+
+    cfg, store = load_config(), LocalStore(db)
+    indexed = {d["name"]: d for d in EntityIndex(INDEX_PATH).datasets()}
+    table = Table("dataset", "indexed", "source version", "rows", "fetched", "ttl")
+    for name, c in cfg.items():
+        d = indexed.get(name)
+        try:
+            thing = store.get(f"datasets/{name}").data
+        except NotFoundError:
+            thing = None
+        if not d or not thing:
+            table.add_row(name, "-", "-", "-", "-", f"{c.ttl_days:g}d")
+            continue
+        age = (datetime.now(UTC) - datetime.fromisoformat(thing["fetched_at"])).days
+        stale = " [red]stale[/]" if age > c.ttl_days else ""
+        table.add_row(name, d["wref"], thing["version"], f"{d['rows']:,}", f"{age}d ago{stale}",
+                      f"{c.ttl_days:g}d")
+    console.print(table)
+
+
+@datasets_app.command("resolve")
+def datasets_resolve(surface: str, type: Annotated[str | None, typer.Option(help="Entity type filter.")] = None,
+                     rows: Annotated[bool, typer.Option(help="Print each match's evidence row.")] = True) -> None:
+    """Resolve a surface form (e.g. HER2, Zoloft, Japan) to canonical IDs with dataset-row evidence."""
+    from toolhelper.datasets.base import INDEX_PATH
+    from toolhelper.datasets.index import EntityIndex
+
+    res = EntityIndex(INDEX_PATH).resolve(surface, type=type)
+    console.print(f"[bold]{res.query}[/]: {res.status}")
+    for m in res.matches:
+        console.print(f"  {m.type:16} {m.canonical} [{m.identifier}]  via {m.source} '{m.surface}' "
+                      f"({m.method}, {m.score:g}; {m.rows} row{'s' if m.rows != 1 else ''})  {m.dataset} row {m.row_key}")
+        if rows:
+            console.print(f"    {json.dumps(m.row, ensure_ascii=False)[:400]}")
