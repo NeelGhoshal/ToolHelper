@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF",
+      "RASopathy",
+      "Noonan syndrome"
+    ],
+    "limit": 8,
+    "sort": "citations"
+  },
+  "args_key": "ebd4a0b5b146a8a430972e45fe0dbbc08f7cc49f922509883997b4f29df6c353",
+  "recorded_at": "2026-11-05T04:38:09.641721+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 12223.9808000013,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF RASopathy Noonan syndrome, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed timed out after 12s) \nRetry: `biomcp search article --keyword \"BRAF RASopathy Noonan syndrome\" --exclude-retracted --sort citations --source pubmed --limit 8 --offset 0` \nEurope PMC source status: degraded (Europe PMC search unavailable) \nRetry: `biomcp search article --keyword \"BRAF RASopathy Noonan syndrome\" --exclude-retracted --sort citations --source europepmc --limit 8 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF RASopathy Noonan syndrome\" --exclude-retracted --sort citations --source semanticscholar --limit 8 --offset 0` \n \n \nFound 8 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42472986|Clinical and Molecular Characterization of a RASopathy Cohor…|PubTator3|2026-07-19|-|none| \n|PMID 42261585|Clinical and Molecular Portraits of Pediatric RASopathies: A…|PubTator3|2026-06-09|-|none| \n|PMID 41496802|Molecular and Clinical Profiles of Patients with RASopathies…|PubTator3|2025-11-17|-|none| \n|PMID 39964758|Aberrant ERK signaling in astrocytes impairs learning and me…|PubTator3|2025-02-18|-|none| \n|PMID 40007996|Integrating MAPK pathway inhibition into standard-of-care th…|PubTator3|2025-02-11|-|none| \n|PMID 39725732|Clinical features and molecular genetics of patients with RA…|PubTator3|2024-12-27|-|none| \n|PMID 36515923|Management of nutritional and gastrointestinal issues in RAS…|PubTator3|2022-12-01|-|none| \n|PMID 33040082|Clinical and molecular spectra of BRAF-associated RASopathy.|PubTator3|2021-04-01|-|none| \n \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42472986\n  biomcp search article -k \"BRAF RASopathy Noonan syndrome\" --year-min 2021 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 8 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

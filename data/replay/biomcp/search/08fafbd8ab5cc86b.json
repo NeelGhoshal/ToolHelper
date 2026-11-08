@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "08fafbd8ab5cc86b29707a3388aa0501dad76a44429ad3a4904069d52104544d",
+  "recorded_at": "2026-11-05T05:24:38.545521+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 12442.272299995238,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed timed out after 12s) \nRetry: `biomcp search article --keyword \"BRAF V600E\" --exclude-retracted --sort date --source pubmed --limit 10 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41560593|Killing cancer takes guts: lessons learned from the manipula…|PubTator3|2026-12-31|-|none| \n|PMID 42544547|Practical management of BRAF inhibitors in glioma: toxicity…|PubTator3, Europe PMC|2026-12-01|-|0| \n|PMID 41454575|Impact of stromal maturity and proportion on prognosis and i…|PubTator3|2026-12-01|-|none| \n|PMID 41534849|Mitogen-activated protein kinase kinase 4 (MKK4) as a promis…|PubTator3|2026-12-01|-|none| \n|PMID 41630477|A data-driven cartography of NSCLC vaccine research: Quantif…|PubTator3|2026-12-01|-|none| \n|PMID 41988746|Durable response of anaplastic thyroid cancer to pembrolizum…|PubTator3|2026-12-01|-|none| \n|PMID 42878812|[Melanocytomas : Intermediate melanocytic neoplasms with dis…|PubTator3|2026-11-01|-|none| \n|PMID 42932078|Sialadenopapillary Ductal Tumor: Case Series and Review of t…|PubTator3|2026-10-26|-|none| \n|PMID 42885245|[Patients with papillary craniopharyngioma successfully trea…|PubTator3|2026-10-16|-|none| \n|PMID 42879086|Nine Years of Vemurafenib Therapy in BRAF V600E-Positive Mul…|PubTator3|2026-10-15|-|none| \n \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41560593\n  biomcp variant articles \"BRAF V600E\"\n  biomcp search article -k \"BRAF V600E\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n\nCache note: Europe PMC data served from cache, 33 h old (older than the provider's freshness window).\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

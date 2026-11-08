@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "json": true,
+    "limit": 5,
+    "query": "BRAF V600E"
+  },
+  "args_key": "2745fadd0879e1581e410fc7b1fa12c8d1ae13200e4a1ff9beef193fe702400d",
+  "recorded_at": "2026-11-03T06:49:20.209183+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 623.613000032492,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 2,\n    \"total\": 2,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 2,\n  \"results\": [\n    {\n      \"symbol\": \"BRAF\",\n      \"name\": \"B-Raf proto-oncogene, serine/threonine kinase\",\n      \"entrez_id\": \"673\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"7:140719327-140925199\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"P15056\",\n      \"omim_id\": \"164757\"\n    },\n    {\n      \"symbol\": \"COMETT\",\n      \"name\": \"cytosolic oncogenic antisense to MET transcript\",\n      \"entrez_id\": \"100996266\",\n      \"genomic_coordinates\": null,\n      \"uniprot_id\": null,\n      \"omim_id\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get gene BRAF\",\n      \"biomcp list gene\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

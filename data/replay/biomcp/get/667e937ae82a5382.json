@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "imatinib",
+    "json": true,
+    "sections": [
+      "targets",
+      "indications",
+      "approvals",
+      "label",
+      "safety",
+      "xrefs"
+    ]
+  },
+  "args_key": "667e937ae82a538279f91a0db76b233ecf144be35fa164bea1b5661cf695ec32",
+  "recorded_at": "2026-11-03T09:45:51.740117+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.1553000076673925,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid drug section: xrefs"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

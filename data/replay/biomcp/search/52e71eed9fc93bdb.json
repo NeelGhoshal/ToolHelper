@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "gene": "BRAF",
+    "query": "V600E ClinVar clinical significance",
+    "json": true,
+    "limit": 10
+  },
+  "args_key": "52e71eed9fc93bdbe80116f6c42547e526178edf84eacf90eeca1d987dfbffe3",
+  "recorded_at": "2026-11-05T04:29:06.982657+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 889.4428000021435,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"count\": 0,\n  \"diagnostics\": [],\n  \"filter_evaluation\": {\n    \"condition\": \"evaluated\",\n    \"gene\": \"evaluated\"\n  },\n  \"pagination\": {\n    \"has_more\": false,\n    \"limit\": 10,\n    \"next_page_token\": null,\n    \"offset\": 0,\n    \"returned\": 0,\n    \"total\": 0\n  },\n  \"results\": []\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

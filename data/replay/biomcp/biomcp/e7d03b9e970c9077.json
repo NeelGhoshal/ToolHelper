@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp search pathway -q \"ErbB signaling\" --limit 15 --json",
+    "json": false
+  },
+  "args_key": "e7d03b9e970c907785360cfe0d5b8a35c70a79044667be87cb385ffe7201fe94",
+  "recorded_at": "2026-11-03T15:10:07.943878+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 368.8714999589138,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 15,\n    \"returned\": 2,\n    \"total\": 2,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 2,\n  \"results\": [\n    {\n      \"source\": \"WikiPathways\",\n      \"id\": \"WP673\",\n      \"name\": \"ErbB signaling\"\n    },\n    {\n      \"source\": \"KEGG\",\n      \"id\": \"hsa04012\",\n      \"name\": \"ErbB signaling pathway - Homo sapiens (human)\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get pathway WP673\",\n      \"biomcp list pathway\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

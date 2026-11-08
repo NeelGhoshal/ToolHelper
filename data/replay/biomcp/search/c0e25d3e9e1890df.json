@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "BRAF V600E",
+      "melanoma",
+      "vemurafenib"
+    ],
+    "limit": 8,
+    "sort": "citations"
+  },
+  "args_key": "c0e25d3e9e1890df0467226dad4b7da4cb8f44ba3673fa5259d25f18205528aa",
+  "recorded_at": "2026-11-03T23:22:16.463008+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3899.32989992667,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=BRAF V600E melanoma vemurafenib, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 8,\n    \"returned\": 8,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 8,\n  \"results\": [\n    {\n      \"pmid\": \"26462967\",\n      \"pmcid\": \"PMC4739132\",\n      \"doi\": \"10.1089/thy.2015.0020\",\n      \"title\": \"2015 American Thyroid Association Management Guidelines for Adult Patients with Thyroid Nodules and Differentiated Thyroid Cancer: The American Thyroid Association Guidelines Task Force on Thyroid Nodules and Differentiated Thyroid Cancer.\",\n      \"journal\": \"Thyroid\",\n      \"date\": \"2016-01-01\",\n      \"citation_count\": 10412,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"21639808\",\n      \"pmcid\": \"PMC3549296\",\n      \"doi\": \"10.1056/nejmoa1103782\",\n      \"title\": \"Improved survival with vemurafenib in melanoma with BRAF V600E mutation.\",\n      \"journal\": \"N Engl J Med\",\n      \"date\": \"2011-06-05\",\n      \"citation_count\": 5808,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"24336571\",\n      \"pmcid\": \"PMC4089965\",\n      \"doi\": \"10.1126/science.1247005\",\n      \"title\": \"Genome-scale CRISPR-Cas9 knockout screening in human cells.\",\n      \"journal\": \"Science\",\n      \"date\": \"2013-12-12\",\n      \"citation_count\": 4502,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42770269\",\n      \"title\": \"A context-dependent modulatory role for eIF6 in acquired resistance to vemurafenib in melanoma.\",\n      \"journal\": \"FEBS letters\",\n      \"date\": \"2026-09-22\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42727358\",\n      \"title\": \"Combined multi-parameter filtering and prioritization of a chemical library for cancer disease target.\",\n      \"journal\": \"Computational biology and chemistry\",\n      \"date\": \"2026-09-08\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42457681\",\n      \"title\": \"Oncogene inactivation-induced senescence facilitates tumor relapse.\",\n      \"journal\": \"Nature communications\",\n      \"date\": \"2026-07-15\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41807883\",\n      \"pmcid\": \"PMC12976322\",\n      \"title\": \"BRAF inhibitor resistance in melanoma: from resistance mechanisms to therapeutic innovations\",\n      \"journal\": \"Mol Biomed\",\n      \"date\": \"2026-03-11\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"37446932\",\n      \"pmcid\": \"PMC10343629\",\n      \"title\": \"In Silico Studies of Novel Vemurafenib Derivatives as BRAF Kinase Inhibitors\",\n      \"journal\": \"Molecules\",\n      \"date\": \"2023-07-07\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"BRAF V600E melanoma vemurafenib\\\" --exclude-retracted --sort citations --source semanticscholar --limit 8 --offset 0\",\n      \"biomcp get article 26462967\",\n      \"biomcp search article -k \\\"BRAF V600E melanoma vemurafenib\\\" --year-min 2011 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "Type 2 diabetes mellitus",
+    "max_results": 10,
+    "omop_field": "condition_concept_id",
+    "omop_table": "condition_occurrence"
+  },
+  "args_key": "33dd89316dc6afe1979b2ccf3b8ac1e12f469d7b253bb154080d9b496ba2bb99",
+  "recorded_at": "2026-11-03T06:48:54.728701+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 796.9834000105038,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 201826,\n      \"code\": \"44054006\",\n      \"name\": \"Type 2 diabetes mellitus\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/201826\"\n    },\n    {\n      \"concept_id\": 40483315,\n      \"code\": \"445353002\",\n      \"name\": \"Brittle type 2 diabetes mellitus\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/40483315\"\n    },\n    {\n      \"concept_id\": 4304377,\n      \"code\": \"81531005\",\n      \"name\": \"Type 2 diabetes mellitus in obese\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4304377\"\n    },\n    {\n      \"concept_id\": 4099651,\n      \"code\": \"190389009\",\n      \"name\": \"Type 2 diabetes mellitus with ulcer\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4099651\"\n    },\n    {\n      \"concept_id\": 4230254,\n      \"code\": \"359642000\",\n      \"name\": \"Type 2 diabetes mellitus in nonobese\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4230254\"\n    },\n    {\n      \"concept_id\": 4063043,\n      \"code\": \"199230006\",\n      \"name\": \"Pre-existing type 2 diabetes mellitus\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4063043\"\n    },\n    {\n      \"concept_id\": 45766052,\n      \"code\": \"703138006\",\n      \"name\": \"Type 2 diabetes mellitus in remission\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/45766052\"\n    },\n    {\n      \"concept_id\": 40482801,\n      \"code\": \"443694000\",\n      \"name\": \"Uncontrolled type 2 diabetes mellitus\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/40482801\"\n    },\n    {\n      \"concept_id\": 43531588,\n      \"code\": \"791000119109\",\n      \"name\": \"Angina due to type 2 diabetes mellitus\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/43531588\"\n    },\n    {\n      \"concept_id\": 4129519,\n      \"code\": \"237627000\",\n      \"name\": \"Pregnancy and type 2 diabetes mellitus\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4129519\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"Type 2 diabetes mellitus\",\n    \"omop_table\": \"condition_occurrence\",\n    \"omop_field\": \"condition_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "aspirin 81 MG Oral Tablet",
+    "max_results": 10,
+    "omop_field": "drug_concept_id",
+    "omop_table": "drug_exposure"
+  },
+  "args_key": "2d220cc5e6c106d8f7879f62eece254e22466b2f02caa41fa344286d6ee125ef",
+  "recorded_at": "2026-11-03T06:35:36.810847+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1161.7469000048004,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 19059056,\n      \"code\": \"243670\",\n      \"name\": \"aspirin 81 MG Oral Tablet\",\n      \"class\": \"Clinical Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19059056\"\n    },\n    {\n      \"concept_id\": 35873199,\n      \"code\": \"OMOP5029598\",\n      \"name\": \"aspirin 81 MG Oral Tablet [Annituo]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/35873199\"\n    },\n    {\n      \"concept_id\": 44100362,\n      \"code\": \"OMOP1094993\",\n      \"name\": \"Aspirin 81 MG Oral Tablet [Pms-Asa]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/44100362\"\n    },\n    {\n      \"concept_id\": 40178201,\n      \"code\": \"979118\",\n      \"name\": \"aspirin 81 MG Oral Tablet [Bufferin]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40178201\"\n    },\n    {\n      \"concept_id\": 19046611,\n      \"code\": \"211900\",\n      \"name\": \"aspirin 81 MG Oral Tablet [Minitabs]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19046611\"\n    },\n    {\n      \"concept_id\": 19101865,\n      \"code\": \"392409\",\n      \"name\": \"aspirin 81 MG Oral Tablet [Heartline]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19101865\"\n    },\n    {\n      \"concept_id\": 1113059,\n      \"code\": \"211893\",\n      \"name\": \"aspirin 81 MG Oral Tablet [Acuprin 81]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/1113059\"\n    },\n    {\n      \"concept_id\": 1113722,\n      \"code\": \"825181\",\n      \"name\": \"aspirin 81 MG Oral Tablet [Bayer Aspirin]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/1113722\"\n    },\n    {\n      \"concept_id\": 19126978,\n      \"code\": \"724444\",\n      \"name\": \"aspirin 81 MG Oral Tablet [Anacin Aspirin Regimen]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19126978\"\n    },\n    {\n      \"concept_id\": 44052171,\n      \"code\": \"OMOP1046802\",\n      \"name\": \"Aspirin 81 MG Oral Tablet [Pms-Asa] by Pharmascience\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/44052171\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"aspirin 81 MG Oral Tablet\",\n    \"omop_table\": \"drug_exposure\",\n    \"omop_field\": \"drug_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

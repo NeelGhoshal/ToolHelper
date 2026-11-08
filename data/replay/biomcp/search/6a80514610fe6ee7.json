@@ -1,0 +1,43 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "drug": [
+      "dabrafenib",
+      "vemurafenib",
+      "encorafenib",
+      "trametinib",
+      "binimetinib",
+      "cobimetinib"
+    ],
+    "limit": 25,
+    "status": [
+      "recruiting"
+    ]
+  },
+  "args_key": "6a80514610fe6ee790627b220905ea56018d3040c9d6f6873cbf89389af27020",
+  "recorded_at": "2026-11-05T04:18:25.437762+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 0.8663999979034998,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "unknown trial search field: drug"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

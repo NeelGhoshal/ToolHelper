@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp search trial --condition melanoma --intervention trametinib --status RECRUITING --limit 25 --json",
+    "json": true
+  },
+  "args_key": "7ceffed99b0bc8a63394a1f6473b1dbb026d33d067105a6d6d2a6ed2286ecb5c",
+  "recorded_at": "2026-11-03T23:40:43.745011+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 1265.6833999790251,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 25,\n    \"returned\": 5,\n    \"total\": 5,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 5,\n  \"results\": [\n    {\n      \"nct_id\": \"NCT07440290\",\n      \"title\": \"DETERMINE Trial Treatment Arm 07: Dabrafenib in Combination With Trametinib in Adult, Paediatric and Teenage/Young Adult Patients With BRAF V600 Mutation-Positive Cancers.\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE2/PHASE3\",\n      \"conditions\": [\n        \"Haematological Malignancy\",\n        \"Malignant Neoplasm\",\n        \"Lymphoproliferative Disorders\",\n        \"Neoplasms by Histologic Type\",\n        \"Neoplasms by Site\",\n        \"Gastrointestinal Cancer\",\n        \"Non-Melanoma Skin Cancer (NMSC)\",\n        \"Langerhans Cell Histiocytosis (LCH)\",\n        \"Cancer\",\n        \"Erdheim-Chester Disease\",\n        \"Thyroid Carcinoma, Papillary\",\n        \"Ovarian Neoplasms\",\n        \"Colorectal Neoplasms\",\n        \"Laryngeal Neoplasms\",\n        \"Carcinoma, Non-Small Cell-Lung\",\n        \"Glioma\",\n        \"Multiple Myeloma\",\n        \"Thyroid Carcinoma, Anaplastic\",\n        \"Solid Tumour\",\n        \"Pancreatic Diseases\"\n      ],\n      \"sponsor\": \"Cancer Research UK\",\n      \"matched_intervention_label\": \"trametinib\"\n    },\n    {\n      \"nct_id\": \"NCT03563729\",\n      \"title\": \"Melanoma Metastasized to the Brain and Steroids\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE2\",\n      \"conditions\": [\n        \"Malignant Melanoma\"\n      ],\n      \"sponsor\": \"Inge Marie Svane\",\n      \"matched_intervention_label\": \"trametinib\"\n    },\n    {\n      \"nct_id\": \"NCT03340506\",\n      \"title\": \"Dabrafenib and/or Trametinib Rollover Study\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE4\",\n      \"conditions\": [\n        \"Melanoma\",\n        \"Non Small Cell Lung Cancer\",\n        \"Solid Tumor\",\n        \"Rare Cancers\",\n        \"High Grade Glioma\"\n      ],\n      \"sponsor\": \"Novartis Pharmaceuticals\",\n      \"matched_intervention_label\": \"trametinib\"\n    },\n    {\n      \"nct_id\": \"NCT07092670\",\n      \"title\": \"MELAFERT: Impact of Adjuvant Therapy on FERTility in Patients With Resected MELAnoma at High Risk of Relapse.\",\n      \"status\": \"RECRUITING\",\n      \"conditions\": [\n        \"Melanoma\",\n        \"Fertility\"\n      ],\n      \"sponsor\": \"Intergruppo Melanoma Italiano\",\n      \"matched_intervention_label\": \"trametinib\"\n    },\n    {\n      \"nct_id\": \"NCT04903119\",\n      \"title\": \"Nilotinib Plus Dabrafenib/Trametinib or Encorafenib/Binimetinib in Metastatic Melanoma\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE1\",\n      \"conditions\": [\n        \"Metastatic Melanoma\",\n        \"BRAF Gene Mutation\"\n      ],\n      \"sponsor\": \"Rina Plattner\",\n      \"matched_intervention_label\": \"trametinib\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get trial NCT07440290\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "status": "recruiting",
+    "criteria": [
+      "BRAF mutation"
+    ]
+  },
+  "args_key": "419b2f63c56cf3c57ff89973dde97c0a7834f3e3e7b7a88fd55e778117e6f111",
+  "recorded_at": "2026-11-03T09:51:20.453651+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2403.273799980525,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 16 of 16 \n \nQuery: condition=melanoma, status=recruiting, criteria=BRAF mutation \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT07221734|Study to Compare Pharmaco…|RECRUITING|3|Advanced (Unresectable or Metastatic) Melanoma| \n|NCT03563729|Melanoma Metastasized to…|RECRUITING|2|Malignant Melanoma| \n|NCT06284590|Study of the Efficacy of…|RECRUITING|2|Melanoma Stage III, Melanoma Stage IV| \n|NCT07224425|A Study of BI 3810944 in…|RECRUITING|1|Solid Tumours, Melanoma| \n|NCT06743126|SUPRAME-ACTengine® IMA20…|RECRUITING|3|Melanoma, Cutaneous Malignant, Mucosal Melanoma| \n|NCT06889766|NY-ESO-1-redirected T Cel…|RECRUITING|1|Advanced Melanoma, Melanoma Metastatic, Sarcoma| \n|NCT05522660|Immunotherapy or Targeted…|RECRUITING|3|Non-Small Cell Lung Cancer, Melanoma| \n|NCT03340129|Anti-PD 1 Brain Collabora…|RECRUITING|2|Melanoma Stage Iv| \n|NCT05267626|Study of AU-007, A Monocl…|RECRUITING|1/2|Advanced Solid Tumor, Metastatic Cancer, Cutan… [abridged; 4 conditions total]| \n|NCT05909618|Crizanlizumab Alone or in…|RECRUITING|2|Advanced Glioblastoma, Metastatic Melanoma in… [abridged; 3 conditions total]| \n|NCT06961006|A Clinical Study of Intis…|RECRUITING|2|Malignant Melanoma| \n|NCT01898039|Modified Vaccine for High…|RECRUITING|1/2|Malignant Melanoma| \n|NCT07244835|A Study of DEG6498 in Par…|RECRUITING|1|Malignant Neoplasms| \n|NCT06398418|R-5780-01 In Combination…|RECRUITING|1|Solid Tumor, Adult, Solid Tumor, Melanoma, Bas… [abridged; 6 conditions total]| \n|NCT07870265|Detection of the BRAF V60…|RECRUITING|NA|Unresectable Metastatic Melanoma| \n|NCT06264180|VO and Nivolumab vs Physi…|RECRUITING|3|Advanced Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-16 of 16 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

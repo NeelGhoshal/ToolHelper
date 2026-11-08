@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "DDR2",
+    "json": true
+  },
+  "args_key": "183763bdea7ab5413f37bcf79f7d560bc778b631fce862181cd7548ce653b6b0",
+  "recorded_at": "2026-11-03T19:51:29.016414+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 609.3862999696285,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"NCBI Gene\",\n        \"url\": \"https://www.ncbi.nlm.nih.gov/gene/4921\"\n      },\n      {\n        \"label\": \"UniProt\",\n        \"url\": \"https://www.uniprot.org/uniprot/Q16832\"\n      },\n      {\n        \"label\": \"Ensembl\",\n        \"url\": \"https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000162733\"\n      },\n      {\n        \"label\": \"OMIM\",\n        \"url\": \"https://www.omim.org/entry/191311\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get gene DDR2 pathways\",\n      \"biomcp get gene DDR2 ontology\",\n      \"biomcp get gene DDR2 diseases\",\n      \"biomcp get gene DDR2 diagnostics\",\n      \"biomcp search diagnostic --gene DDR2\",\n      \"biomcp search pgx -g DDR2\",\n      \"biomcp search variant -g DDR2\",\n      \"biomcp search article -g DDR2\",\n      \"biomcp search drug --target DDR2\",\n      \"biomcp gene trials DDR2\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"identity\",\n        \"label\": \"Identity\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"NCBI Gene / MyGene.info\"\n        ]\n      },\n      {\n        \"key\": \"summary\",\n        \"label\": \"Summary\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"NCBI Gene\"\n        ]\n      },\n      {\n        \"key\": \"aliases\",\n        \"label\": \"Aliases\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"NCBI Gene / MyGene.info\"\n        ]\n      }\n    ],\n    \"suggestions\": [\n      \"biomcp search diagnostic --gene DDR2\",\n      \"biomcp search pgx -g DDR2\",\n      \"biomcp search variant -g DDR2\",\n      \"biomcp search article -g DDR2\",\n      \"biomcp search drug --target DDR2\",\n      \"biomcp gene trials DDR2\"\n    ],\n    \"workflow\": \"mechanism-pathway\",\n    \"workflow_playbook\": \"biomcp skill mechanism-pathway\",\n    \"workflow_rationale\": \"Orient from a mechanism-relevant drug to target and pathway context, then confirm the disease mechanism in review literature.\"\n  },\n  \"aliases\": [\n    \"DDR2-N\",\n    \"NTRKR3\",\n    \"TKT\",\n    \"TYRO10\",\n    \"WRCN\"\n  ],\n  \"clinical_diseases\": [\n    \"spondyloepimetaphyseal dysplasia-short limb-abnormal calcification syndrome\",\n    \"colorectal cancer\",\n    \"Warburg-Cinotti syndrome\",\n    \"hepatocellular carcinoma\",\n    \"Dupuytren Contracture\"\n  ],\n  \"clinical_drugs\": [\n    \"REGORAFENIB\"\n  ],\n  \"ensembl_id\": \"ENSG00000162733\",\n  \"entrez_id\": \"4921\",\n  \"gene_type\": \"protein-coding\",\n  \"genomic_coordinates\": {\n    \"coordinate\": \"1:162630857-162787405 (strand: 1)\",\n    \"genome_build\": \"GRCh38\",\n    \"provenance\": \"MyGene.info provider default\",\n    \"source\": \"MyGene.info\"\n  },\n  \"location\": \"1\",\n  \"name\": \"discoidin domain receptor tyrosine kinase 2\",\n  \"omim_id\": \"191311\",\n  \"section_outcomes\": {\n    \"civic\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"clingen\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"constraint\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"diagnostics\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"diseases\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"disgenet\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"druggability\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"expression\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"funding\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"gencc\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"go\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"hpa\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"interactions\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"ontology\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"pathways\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"protein\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    }\n  },\n  \"summary\": \"This gene encodes a member of the discoidin domain receptor subclass of the receptor tyrosine kinase (RTKs) protein family. RTKs play a key role in the communication of cells with their microenvironment.\",\n  \"symbol\": \"DDR2\",\n  \"uniprot_id\": \"Q16832\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

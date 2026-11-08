@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "BRAF V600E mutation melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "status": "recruiting"
+  },
+  "args_key": "f99d797bc9606c2e319a16c4344f0c3b27c7141b2bb2664cecc4ccb5c70cb2d1",
+  "recorded_at": "2026-11-03T13:45:27.111720+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 237.69660003017634,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 2 of 2 \n \nQuery: condition=BRAF V600E mutation melanoma, status=recruiting \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT06887088|Encorafenib and biNimetin…|RECRUITING|2|Melanoma BRAF V600E/K Mutated, Melanoma and Brain Metastases| \n|NCT07870265|Detection of the BRAF V60…|RECRUITING|NA|Unresectable Metastatic Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-2 of 2 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

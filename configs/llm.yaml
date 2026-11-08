@@ -4,8 +4,9 @@ default: nim-mistral
 
 profiles:
   # Hosted open-weight models on NVIDIA's free API (build.nvidia.com), nothing runs locally.
-  # Free tier is ~40 requests/minute; the backend spaces requests and retries 429s. Replies take a
-  # median 25 s but up to 850 s, and a request can stall with no reply: timeout_s 300, 3 retries.
+  # Free tier is ~40 requests/minute; the backend spaces requests. Replies take a median 25 s but
+  # up to 850 s, and a request can stall with no reply: each attempt times out after 300 s and the
+  # same request is retried (backoff 5..60 s) for up to 2 h, so a slow API delays a task, not skips it.
   # Hosted providers may not honour seed, so runs are not guaranteed reproducible.
   # Probed 2026-11-02 with this account: kimi-k2.6 and nemotron-3-super return 404; glm-5.3-flash,
   # deepseek-v4.1-flash, gemma-4-31b and gpt-oss-20b timed out (90 s). Both models below always
@@ -17,8 +18,9 @@ profiles:
     base_url: https://integrate.api.nvidia.com/v1
     api_key_env: NVIDIA_API_KEY
     requests_per_minute: 30
-    max_retries: 3
+    max_retries: 0      # the backend retries itself, within max_wait_s
     timeout_s: 300
+    max_wait_s: 7200    # wait up to 2 h for a stalled request before failing the task
     options: {temperature: 0, seed: 7, max_tokens: 4096}
 
   nim-minimax:
@@ -27,8 +29,9 @@ profiles:
     base_url: https://integrate.api.nvidia.com/v1
     api_key_env: NVIDIA_API_KEY
     requests_per_minute: 30
-    max_retries: 3
+    max_retries: 0      # the backend retries itself, within max_wait_s
     timeout_s: 300
+    max_wait_s: 7200    # wait up to 2 h for a stalled request before failing the task
     options: {temperature: 0, seed: 7, max_tokens: 4096}
 
   ollama-qwen3:

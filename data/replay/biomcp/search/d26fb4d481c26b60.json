@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "limit": 10,
+    "sort": "citations",
+    "keyword": [
+      "EGFR mutations predict sensitivity to gefitinib in non-small cell lung cancer discovery activating mutations kinase domain"
+    ]
+  },
+  "args_key": "d26fb4d481c26b607fde11f20202c10458b023c9e15dfdc65e3d040e96889791",
+  "recorded_at": "2026-11-04T20:38:52.297725+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2274.1132000001016,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR mutations predict sensitivity to gefitinib in non-small cell lung cancer discovery activating mutations kinase domain, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR mutations predict sensitivity to gefitinib in non-small cell lung cancer discovery activating mutations kinase domain\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 20602996|Cell signaling by receptor tyrosine kinases.|Europe PMC|2010-06-01|-|3744| \n|PMID 21252716|International association for the study of lung cancer/ameri…|Europe PMC|2011-02-01|-|3664| \n|PMID 15737014|Acquired resistance of lung adenocarcinomas to gefitinib or…|Europe PMC|2005-02-22|-|2640| \n|PMID 27184417|Triple-negative breast cancer: challenges and opportunities…|Europe PMC|2016-05-17|-|2393| \n|PMID 19644473|Targeting the phosphoinositide 3-kinase pathway in cancer.|Europe PMC|2009-08-01|-|2132| \n|PMID 32203277|Targeting apoptosis in cancer therapy.|Europe PMC|2020-03-23|-|2031| \n|PMID 25056707|Non-small-cell lung cancers: a heterogeneous set of diseases…|Europe PMC|2014-08-01|-|1593| \n|PMID 18794884|PI3K pathway alterations in cancer: variations on a theme.|Europe PMC|2008-09-01|-|1449| \n|PMID 24079833|MicroRNAs in cancer.|Europe PMC|2013-09-25|-|1377| \n|PMID 29131160|Human primary liver cancer-derived organoid cultures for dis…|Europe PMC|2017-11-13|-|1168| \n \n \n \nNewest indexed: 2020-03-25 (2415 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 20602996\n  biomcp search article -k \"EGFR mutations predict sensitivity to gefitinib in non-small cell lung cancer discovery activating mutations kinase domain\" --year-min 2005 --year-max 2020 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "creatinine",
+    "max_results": 20,
+    "omop_field": "measurement_concept_id",
+    "omop_table": "measurement"
+  },
+  "args_key": "de484eefb79853af3e9415ab3220fcb5d8a6f93c441fa94a28bc6a23cc052fe5",
+  "recorded_at": "2026-11-03T10:16:54.492786+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 877.8438000008464,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 19071968,\n      \"code\": \"2913\",\n      \"name\": \"creatinine\",\n      \"class\": \"Ingredient\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19071968\"\n    },\n    {\n      \"concept_id\": 36861099,\n      \"code\": \"OMOP5178716\",\n      \"name\": \"FOSFOCREATININE\",\n      \"class\": \"Ingredient\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/36861099\"\n    },\n    {\n      \"concept_id\": 19135654,\n      \"code\": \"849626\",\n      \"name\": \"creatinine 800 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19135654\"\n    },\n    {\n      \"concept_id\": 41108230,\n      \"code\": \"OMOP2306192\",\n      \"name\": \"Creatinine 0.57 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/41108230\"\n    },\n    {\n      \"concept_id\": 4112223,\n      \"code\": \"18207002\",\n      \"name\": \"BUN/Creatinine ratio\",\n      \"class\": \"Procedure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4112223\"\n    },\n    {\n      \"concept_id\": 4324383,\n      \"code\": \"70901006\",\n      \"name\": \"Creatinine measurement\",\n      \"class\": \"Procedure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4324383\"\n    },\n    {\n      \"concept_id\": 40160470,\n      \"code\": \"849627\",\n      \"name\": \"creatinine Oral Capsule\",\n      \"class\": \"Clinical Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40160470\"\n    },\n    {\n      \"concept_id\": 37393360,\n      \"code\": \"1015981000000103\",\n      \"name\": \"Creatinine clearance test\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/37393360\"\n    },\n    {\n      \"concept_id\": 4018193,\n      \"code\": \"104615008\",\n      \"name\": \"Creatinine challenge tests\",\n      \"class\": \"Procedure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4018193\"\n    },\n    {\n      \"concept_id\": 4275203,\n      \"code\": \"365756002\",\n      \"name\": \"Creatinine level - finding\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4275203\"\n    },\n    {\n      \"concept_id\": 4090317,\n      \"code\": \"251872006\",\n      \"name\": \"Creatinine reduction ratio\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4090317\"\n    },\n    {\n      \"concept_id\": 4010651,\n      \"code\": \"102811001\",\n      \"name\": \"Creatinine renal clearance\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4010651\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"creatinine\",\n    \"omop_table\": \"measurement\",\n    \"omop_field\": \"measurement_concept_id\",\n    \"total_found\": 12,\n    \"candidates_returned\": 12,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

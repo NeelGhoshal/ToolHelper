@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "meta-analysis",
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "dementia",
+      "Alzheimer"
+    ],
+    "limit": 10,
+    "sort": "citations",
+    "source": "pubmed"
+  },
+  "args_key": "ed463a331cd2a5901447c0e55c6503f38620e6189130d2e807c8cb8998b11408",
+  "recorded_at": "2026-11-03T07:36:58.592822+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 877.9796999879181,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin dementia Alzheimer, type=meta-analysis, exclude_retracted=true, sort=citations, source=pubmed \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 10 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41083880|The role of APOE ε4 in modulating the relationship between…|PubMed|2025-10-13|-|none| \n|PMID 39312316|Effect of long-term pharmacological treatments on Alzheimer…|PubMed|2024-09-20|-|none| \n|PMID 35851147|A large-scale genome-wide cross-trait analysis reveals share…|PubMed|2022-07-18|-|none| \n|PMID 34871380|Statin use and risk of dementia or Alzheimer's disease: a sy…|PubMed|2022-05-05|-|none| \n|PMID 35104501|The calcium-free form of atorvastatin inhibits amyloid-β(1-…|PubMed|2022-03-01|-|none| \n|PMID 32918868|Effect of statins on amyloidosis in the rodent models of Alz…|PubMed|2020-12-15|-|none| \n|PMID 31930449|The efficacy of statins in the treatment of Alzheimer's dise…|PubMed|2020-06-01|-|none| \n|PMID 32039479|Benefits and Harms of Statins in People with Dementia: A Sys…|PubMed|2020-03-01|-|none| \n|PMID 31574510|Association between Use of Statin and Risk of Dementia: A Me…|PubMed|2020-01-01|-|none| \n|PMID 31714636|Lipid lowering and Alzheimer disease risk: A mendelian rando…|PubMed|2020-01-01|-|none| \n \n \n \nNewest indexed: 2025-10-14 (385 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41083880\n  biomcp search article -k \"statin dementia Alzheimer\" --type meta-analysis --source pubmed --year-min 2020 --year-max 2025 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-10 of 29 results. Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,28 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp get drug metformin xrefs --json"
+  },
+  "args_key": "c43dfbd3eb1c674ee55dc337d13d61f1d1d9186d3f8472e8a7414fe0047e28a7",
+  "recorded_at": "2026-11-03T09:14:57.690748+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 3.321100026369095,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: Invalid argument: Unknown section \"xrefs\" for drug. Available: label, regulatory, safety, shortage, targets, indications, interactions, civic, approvals, cell_lines, all. If \"xrefs\" is part of a multi-word drug name, use `biomcp get drug --name \"metformin xrefs\"`."
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

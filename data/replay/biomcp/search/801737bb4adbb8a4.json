@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "author": [
+      "Frangoul"
+    ],
+    "entity": "article",
+    "keyword": [
+      "CRISPR Cas9 sickle cell beta thalassemia"
+    ],
+    "limit": 10
+  },
+  "args_key": "801737bb4adbb8a47bce162bd2d3230e8b1c94a3e7422919aa399e53b309c7d0",
+  "recorded_at": "2026-11-05T04:07:48.122282+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6123.322600000392,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: author=Frangoul, keyword=CRISPR Cas9 sickle cell beta thalassemia, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed search unavailable) \nRetry: `biomcp search article --author Frangoul --keyword \"CRISPR Cas9 sickle cell beta thalassemia\" --exclude-retracted --sort relevance --source pubmed --limit 10 --offset 0` \n \n \nFound 7 articles \n \n \nSemantic Scholar: disabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 33283989|CRISPR-Cas9 Gene Editing for Sickle Cell Disease and β-Thal…|Europe PMC|2020-12-05|hybrid 0.45 + title 5/6|1420| \n|PMID 34107197|CRISPR-Cas9 Gene Editing for Sickle Cell Disease and β-Thal…|Europe PMC|2021-06-01|hybrid 0.362 + title 5/6|34| \n|PMID 42274009|Exa-cel in Children with Transfusion-Dependent β-Thalassemi…|Europe PMC|2026-06-11|hybrid 0.266 + title 3/6|2| \n|PMID 37080708|Gene editing for sickle cell disease and transfusion depende…|Europe PMC|2022-12-31|hybrid 0.186 + title 2/6|7| \n|PMID 40862696|Improvements in health-related quality of life in patients w…|Europe PMC|2025-12-01|hybrid 0.151 + title 1/6|4| \n|PMID 42252696|Correction of Ineffective Erythropoiesis and Normalization o…|Europe PMC|2026-06-07|hybrid 0.141 + title 1/6|1| \n|PMID 38454604|Autologous gene therapy for hemoglobinopathies: From bench t…|Europe PMC|2024-03-07|hybrid 0.139|32| \n \n \n \nNewest indexed: 2026-06-12 (146 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 33283989\n  biomcp search article -a Frangoul -k \"CRISPR Cas9 sickle cell beta thalassemia\" --year-min 2020 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-7 of 7 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

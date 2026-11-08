@@ -1,0 +1,28 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "cspec --help 2>&1 | head -50; echo ---; biomcp list gene 2>&1 | head -30"
+  },
+  "args_key": "7e50526d3ac8cf50a27f6e66eb9de9fc0c20e5ad8d679e2f75304a9eb69c2632",
+  "recorded_at": "2026-11-03T10:03:48.874869+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 2.086399996187538,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: BioMCP allows read-only commands only. Allowed families are search/get/helpers/list/version/health/batch/enrich/discover/skill plus MCP-safe study commands (`study list`, `study download --list`, `study top-mutated`, `study query`, `study filter`, `study cohort`, `study survival`, `study compare`, `study co-occurrence`)."
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

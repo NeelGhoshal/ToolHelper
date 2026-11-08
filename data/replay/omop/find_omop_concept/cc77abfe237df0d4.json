@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "hypertension (disorder)",
+    "max_results": 10,
+    "omop_field": "condition_concept_id",
+    "omop_table": "condition_occurrence"
+  },
+  "args_key": "cc77abfe237df0d4cf348edec030c2ec4b1e5b2a741869eb98ac0e4d78bec7ba",
+  "recorded_at": "2026-11-03T06:12:27.319783+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 982.946100004483,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 316866,\n      \"code\": \"38341003\",\n      \"name\": \"Hypertensive disorder\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/316866\"\n    },\n    {\n      \"concept_id\": 1340364,\n      \"code\": \"OMOP5166019\",\n      \"name\": \"Exacerbation of hypertensive disorder\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"OMOP Extension\",\n      \"url\": \"https://omophub.com/concepts/1340364\"\n    },\n    {\n      \"concept_id\": 36684718,\n      \"code\": \"340441000119107\",\n      \"name\": \"Hypertension with disorder of left retina\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/36684718\"\n    },\n    {\n      \"concept_id\": 36684653,\n      \"code\": \"334831000119106\",\n      \"name\": \"Hypertension with disorder of right retina\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/36684653\"\n    },\n    {\n      \"concept_id\": 44783636,\n      \"code\": \"697920006\",\n      \"name\": \"Pulmonary hypertension in systemic disorder\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/44783636\"\n    },\n    {\n      \"concept_id\": 763042,\n      \"code\": \"435391000124108\",\n      \"name\": \"Hypertensive disorder diet management\",\n      \"class\": \"Procedure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Procedure\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/763042\"\n    },\n    {\n      \"concept_id\": 4110948,\n      \"code\": \"194788005\",\n      \"name\": \"Hypertension secondary to endocrine disorder\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4110948\"\n    },\n    {\n      \"concept_id\": 37168795,\n      \"code\": \"1285719009\",\n      \"name\": \"Ocular hypertension due to ocular vascular disorder\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/37168795\"\n    },\n    {\n      \"concept_id\": 36684780,\n      \"code\": \"345771000119101\",\n      \"name\": \"Bilateral hypertension with disorder of retinas\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/36684780\"\n    },\n    {\n      \"concept_id\": 604803,\n      \"code\": \"1003728008\",\n      \"name\": \"Fetal disorder due to maternal hypertension\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/604803\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"hypertension (disorder)\",\n    \"omop_table\": \"condition_occurrence\",\n    \"omop_field\": \"condition_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

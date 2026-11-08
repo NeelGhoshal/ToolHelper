@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "vemurafenib"
+    ],
+    "limit": 25,
+    "mutation": [
+      "BRAF V600E"
+    ],
+    "status": "recruiting"
+  },
+  "args_key": "bc3f219f8a739ed18fe9eec13b8816a3e4d76dc469419977a38a818c095cf3fc",
+  "recorded_at": "2026-11-03T13:47:43.748532+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 438.9978999970481,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 0 trial(s) \n \nQuery: condition=melanoma, intervention=vemurafenib, status=recruiting, mutation=BRAF V600E \n \n \nNo trials found matching the filters. \nTry broadening the filtered search: \n- loosen or drop `--mutation`; it is an exact free-text boolean search over title, summary, eligibility, and keywords, so specific protein changes can be brittle \n- add or widen `--distance` only after confirming geography is intended \n- relax `--status` to include non-recruiting or not-yet-recruiting trials \n- try `--biomarker <gene>` for a phrase search across keyword, intervention, and condition when `--mutation` is too specific \n\nShowing 0 of 0 results.\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

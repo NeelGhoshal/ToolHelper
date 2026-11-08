@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "BRAF V600E",
+      "BRAF V600E mutation",
+      "BRAF V600 mutated melanoma"
+    ],
+    "entity": "trial",
+    "json": true,
+    "limit": 25,
+    "status": "recruiting"
+  },
+  "args_key": "5762d21ccebc72406cfb50809a5322694fdf3c7df5b97f4c022bc06fde214870",
+  "recorded_at": "2026-11-03T23:16:17.712954+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 162.21280000172555,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 25,\n    \"returned\": 1,\n    \"total\": 1,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 1,\n  \"results\": [\n    {\n      \"nct_id\": \"NCT07870265\",\n      \"title\": \"Detection of the BRAF V600E Mutation in Liquid Biopsy Using the CRISPR/Cas12a System\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"NA\",\n      \"conditions\": [\n        \"Unresectable Metastatic Melanoma\"\n      ],\n      \"sponsor\": \"Masaryk Memorial Cancer Institute\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get trial NCT07870265\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 5,
+    "query": "BCR breakpoint cluster region"
+  },
+  "args_key": "5150bd7212bc7562abe0a48f6eb8a694f32314f44e8455a3eeff09625d008030",
+  "recorded_at": "2026-11-04T06:02:43.201848+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 191.4532999508083,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: BCR breakpoint cluster region \n \nFound 5 genes \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| BCR | BCR activator of RhoGEF and GTPase | 613 | 22:23179704-23318037 | GRCh38 | P11274 | 151410 | \n| LOC107963947 | BCR-ABL p200 breakpoint cluster region | 107963947 | - | - | none | none | \n| LOC107963948 | BCR-ABL micro-breakpoint cluster region | 107963948 | - | - | none | none | \n| LOC107963951 | BCR-ABL minor-breakpoint cluster region | 107963951 | - | - | none | none | \n| LOC107963955 | BCR-ABL major-breakpoint cluster region | 107963955 | - | - | none | none | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1-5 of 19 results. Use --offset 5 for more. \n \n\n\n## Next commands\n- `biomcp get gene BCR`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "biomarker": [
+      "BRAF V600E"
+    ],
+    "limit": 10
+  },
+  "args_key": "0af1c887202495c6c94a9d5f87012093ff76546c0768e9abe6249f37f4e670ab",
+  "recorded_at": "2026-11-03T12:09:54.014502+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 161.9768000091426,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 90 \n \nQuery: biomarker=BRAF V600E \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT06763029|Irinotecan Liposomes Comb…|RECRUITING|2|Colorectal Cancer Metastatic| \n|NCT06902376|XL092 and Cemiplimab in B…|RECRUITING|1|Anaplastic Thyroid Cancer, Thyroid Cancer, BRAF Mutation-Related Tumors| \n|NCT07506109|A Phase II Study of Sinti…|RECRUITING|2|BRAF V600E, Colorectal Cancer, Sintilimab, MSS… [abridged; 7 conditions total]| \n|NCT04657991|A Clinical Trial of Three…|ACTIVE_NOT_RECRUITING|3|Melanoma| \n|NCT07010393|Genotype-Driven Neoadjuva…|NOT_YET_RECRUITING|4|Thyroid Neoplasms| \n|NCT01336634|Study of Selective BRAF K…|COMPLETED|2|Cancer| \n|NCT05900219|Efficacy and Safety of HL…|UNKNOWN|2|Non-small-cell Lung Cancer| \n|NCT07092410|Surgical or Radiotherapeu…|WITHDRAWN|4|Melanoma BRAF V600E/K Mutated| \n|NCT01978236|Dabrafenib/Trametinib, BR…|TERMINATED|2|Melanoma and Brain Metastases| \n|NCT02097225|Onalespib, Dabrafenib, an…|TERMINATED|1|BRAF V600E Mutation Present, BRAF V600K Mutat… [abridged; 10 conditions total]| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-10 of 90 results. Use --offset 10 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

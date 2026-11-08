@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "23698643",
+    "json": true
+  },
+  "args_key": "07def9764d3eec63c96c130add901b258d7e4dabbf9c83e25823dffc0e44221a",
+  "recorded_at": "2026-11-04T00:03:19.282705+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1015.5376999173313,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/23698643/\"\n      },\n      {\n        \"label\": \"PMC\",\n        \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC3748366/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 23698643 tldr\",\n      \"biomcp article entities 23698643\",\n      \"biomcp search gene -q CYP2C19\",\n      \"biomcp search gene -q \\\"Cytochrome P450 (CYP)2C19\\\"\",\n      \"biomcp search disease --query \\\"acute coronary syndromes\\\"\",\n      \"biomcp search disease --query ACSs\",\n      \"biomcp search drug -q clopidogrel\",\n      \"biomcp article references 23698643 --limit 3\",\n      \"biomcp article citations 23698643 --limit 3\",\n      \"biomcp article recommendations 23698643 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"annotations\",\n        \"label\": \"PubTator Annotations\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ],\n    \"workflow\": \"article-follow-up\",\n    \"workflow_playbook\": \"biomcp skill article-follow-up\",\n    \"workflow_rationale\": \"Use article annotations first, then citation and recommendation graph pivots for efficient literature expansion.\"\n  },\n  \"abstract_text\": \"Cytochrome P450 (CYP)2C19 catalyzes the bioactivation of the antiplatelet prodrug clopidogrel, and CYP2C19 loss-of-function alleles impair formation of active metabolites, resulting in reduced platelet inhibition. In addition, CYP2C19 loss-of-function alleles confer increased risks for serious adverse cardiovascular (CV) events among clopidogrel-treated patients with acute coronary syndromes (ACSs) undergoing percutaneous coronary intervention (PCI). Guideline updates include emphasis on appropriate indication for CYP2C19 genotype-directed antiplatelet therapy, refined recommendations for specific CYP2C19 alleles, and additional evidence from an expanded literature review (updates at http://www.pharmgkb.org).\",\n  \"annotations\": {\n    \"chemicals\": [\n      {\n        \"count\": 3,\n        \"identifier\": \"MESH:D000077144\",\n        \"namespace\": \"MESH\",\n        \"text\": \"clopidogrel\"\n      }\n    ],\n    \"diseases\": [\n      {\n        \"count\": 1,\n        \"identifier\": \"MESH:D054058\",\n        \"name\": \"Acute Coronary Syndrome\",\n        \"namespace\": \"MESH\",\n        \"text\": \"acute coronary syndromes\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"MESH:D054058\",\n        \"name\": \"Acute Coronary Syndrome\",\n        \"namespace\": \"MESH\",\n        \"text\": \"ACSs\"\n      }\n    ],\n    \"genes\": [\n      {\n        \"count\": 5,\n        \"identifier\": \"1557\",\n        \"namespace\": \"NCBIGene\",\n        \"text\": \"CYP2C19\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"1557\",\n        \"namespace\": \"NCBIGene\",\n        \"text\": \"Cytochrome P450 (CYP)2C19\"\n      }\n    ]\n  },\n  \"author_completeness\": \"complete\",\n  \"author_count\": 11,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Scott SA\",\n    \"Sangkuhl K\",\n    \"Stein CM\",\n    \"Hulot JS\",\n    \"Mega JL\",\n    \"Roden DM\",\n    \"Klein TE\",\n    \"Sabatine MS\",\n    \"Johnson JA\",\n    \"Shuldiner AR\",\n    \"Clinical Pharmacogenetics Implementation Consortium\"\n  ],\n  \"citation_count\": 673,\n  \"date\": \"2013-09-01\",\n  \"doi\": \"10.1038/clpt.2013.105\",\n  \"journal\": \"Clin Pharmacol Ther\",\n  \"open_access\": false,\n  \"pmcid\": \"PMC3748366\",\n  \"pmid\": \"23698643\",\n  \"publication_type\": \"research support, non-u.s. gov't\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"Clinical Pharmacogenetics Implementation Consortium guidelines for CYP2C19 genotype and clopidogrel therapy: 2013 update.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

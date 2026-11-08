@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "Zoloft",
+    "max_results": 10,
+    "omop_field": "drug_concept_id",
+    "omop_table": "drug_exposure"
+  },
+  "args_key": "5febd308e9de511310bb911dc96ebb432c051cf110c3e0c6f2fed0b1ea072912",
+  "recorded_at": "2026-11-03T11:39:26.344441+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 770.0653999927454,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 19043843,\n      \"code\": \"572455\",\n      \"name\": \"sertraline 25 MG [Zoloft]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19043843\"\n    },\n    {\n      \"concept_id\": 19043842,\n      \"code\": \"568885\",\n      \"name\": \"sertraline 50 MG [Zoloft]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19043842\"\n    },\n    {\n      \"concept_id\": 36885519,\n      \"code\": \"OMOP987940\",\n      \"name\": \"Sertraline 56 MG [Zoloft]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/36885519\"\n    },\n    {\n      \"concept_id\": 19043841,\n      \"code\": \"568875\",\n      \"name\": \"sertraline 100 MG [Zoloft]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19043841\"\n    },\n    {\n      \"concept_id\": 36883584,\n      \"code\": \"OMOP992347\",\n      \"name\": \"Sertraline 112 MG [Zoloft]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/36883584\"\n    },\n    {\n      \"concept_id\": 35143881,\n      \"code\": \"OMOP4801147\",\n      \"name\": \"Sertraline 25 MG [Jzoloft]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/35143881\"\n    },\n    {\n      \"concept_id\": 35145302,\n      \"code\": \"OMOP4802392\",\n      \"name\": \"Sertraline 50 MG [Jzoloft]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/35145302\"\n    },\n    {\n      \"concept_id\": 35158478,\n      \"code\": \"OMOP4815473\",\n      \"name\": \"Sertraline 100 MG [Jzoloft]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/35158478\"\n    },\n    {\n      \"concept_id\": 40165284,\n      \"code\": \"861065\",\n      \"name\": \"sertraline 20 MG/ML [Zoloft]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40165284\"\n    },\n    {\n      \"concept_id\": 42723034,\n      \"code\": \"OMOP2737475\",\n      \"name\": \"Sertraline 22.3 MG/ML [Zoloft]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/42723034\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"Zoloft\",\n    \"omop_table\": \"drug_exposure\",\n    \"omop_field\": \"drug_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

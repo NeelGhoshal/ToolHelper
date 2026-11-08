@@ -1,0 +1,319 @@
+learning from 55 runs in bench-baseline-record
+strategies: E3_grounding {'modes': ['tool'], 'datasets': ['ndc'], 'versions': 
+['datasets/ndc@v1']}
+pass med-001   turns=2 calls=2 trust=1.00 live=0 prompt=10458 grounding=1.00 
+🚨 MEDICAL MCP SERVER - SAFETY NOTICE:
+This server provides medical information for educational purposes only.
+NEVER use this information as the sole basis for clinical decisions.
+Always consult qualified healthcare professionals for patient care.
+
+📊 DYNAMIC DATA SOURCE NOTICE:
+This system queries live medical databases (FDA, WHO, PubMed, RxNorm)
+NO hardcoded medical data is used - all information is retrieved dynamically
+Data freshness depends on source database updates and API availability
+Network connectivity required for all medical information retrieval
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='✅ Medical MCP Server running on stdio', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+fail med-002   turns=8 calls=20 trust=1.00 live=3 prompt=74651 grounding=- 
+failed=['answer_includes_any']
+pass med-003   turns=2 calls=1 trust=1.00 live=0 prompt=11384 grounding=- 
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...189, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...227, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+pass med-007   turns=6 calls=14 trust=0.95 live=9 prompt=72395 grounding=0.87 
+fail med-009   turns=8 calls=16 trust=1.00 live=2 prompt=188863 grounding=- 
+failed=['answer_grounded']
+pass med-010   turns=4 calls=5 trust=1.00 live=0 prompt=76437 grounding=1.00 
+fail med-016   turns=8 calls=15 trust=1.00 live=3 prompt=63763 grounding=- 
+failed=['answer_includes_any']
+pass bio-008   turns=3 calls=3 trust=1.00 live=0 prompt=20703 grounding=1.00 
+Error searching PubMed with query: (CYP2C19 genotype clopidogrel antiplatelet therapy CPIC guideline) AND (guideline[tiab] OR recommendation[tiab] OR consensus[tiab] OR position statement[tiab] OR standard of care[tiab]) Error: Too Many Requests
+    at Request.callback (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1079:17)
+    at C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:18
+    at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\parsers\json.js:26:7)
+    at Stream.emit (node:events:514:28)
+    at Unzip.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\unzip.js:62:12)
+    at Unzip.emit (node:events:514:28)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 429,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 429,
+      statusMessage: 'Too Many Requests',
+      client: [TLSSocket],
+      _consuming: true,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 4,
+      setEncoding: [Function (anonymous)],
+      on: [Function (anonymous)],
+      text: '{"error":"API rate limit exceeded","api-key":"71.69.167.46","count":"4","limit":"3"}\n',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 34,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null,
+      Symbol(kAbortSignalSocket): null,
+      Symbol(kAbortSignalListener): null,
+      Symbol(kAbortSignalDetached): true
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=28520346%2C35034351&retmode=xml',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'https:',
+      host: 'eutils.ncbi.nlm.nih.gov',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      _fullfilledPromise: [Promise],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'GET /entrez/eutils/efetch.fcgi?db=pubmed&id=28520346%2C35034351&retmode=xml HTTP/1.1\r\n' +
+        'User-Agent: medical-mcp/1.0\r\n' +
+        'Host: eutils.ncbi.nlm.nih.gov\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      httpValidation: undefined,
+      joinDuplicateHeaders: undefined,
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'eutils.ncbi.nlm.nih.gov',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kWritableFinished): true,
+      Symbol(kEndCallbacks): null,
+      Symbol(kFlushError): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kPath): '/entrez/eutils/efetch.fcgi?db=pubmed&id=28520346%2C35034351&retmode=xml',
+      Symbol(kProxyRewrittenToAbsolute): false,
+      Symbol(kAuthority): 'eutils.ncbi.nlm.nih.gov',
+      Symbol(kUniqueHeaders): null
+    },
+    text: '{"error":"API rate limit exceeded","api-key":"71.69.167.46","count":"4","limit":"3"}\n',
+    files: undefined,
+    buffered: true,
+    headers: {
+      date: 'Tue, 03 Nov 2026 22:04:26 GMT',
+      server: 'Finatra',
+      'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+      'content-security-policy': 'upgrade-insecure-requests',
+      'referrer-policy': 'origin-when-cross-origin',
+      'retry-after': '2',
+      'content-type': 'application/json',
+      'content-encoding': 'gzip',
+      'x-ratelimit-limit': '3',
+      'x-ratelimit-remaining': '0',
+      'access-control-expose-headers': 'X-RateLimit-Limit,X-RateLimit-Remaining,Retry-After',
+      'x-ua-compatible': 'IE=Edge',
+      'x-xss-protection': '1; mode=block',
+      via: '1.1 google',
+      'alt-svc': 'clear',
+      connection: 'close',
+      'transfer-encoding': 'chunked'
+    },
+    header: {
+      date: 'Tue, 03 Nov 2026 22:04:26 GMT',
+      server: 'Finatra',
+      'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+      'content-security-policy': 'upgrade-insecure-requests',
+      'referrer-policy': 'origin-when-cross-origin',
+      'retry-after': '2',
+      'content-type': 'application/json',
+      'content-encoding': 'gzip',
+      'x-ratelimit-limit': '3',
+      'x-ratelimit-remaining': '0',
+      'access-control-expose-headers': 'X-RateLimit-Limit,X-RateLimit-Remaining,Retry-After',
+      'x-ua-compatible': 'IE=Edge',
+      'x-xss-protection': '1; mode=block',
+      via: '1.1 google',
+      'alt-svc': 'clear',
+      connection: 'close',
+      'transfer-encoding': 'chunked'
+    },
+    statusCode: 429,
+    status: 429,
+    statusType: 4,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: true,
+    serverError: false,
+    error: Error: cannot GET /entrez/eutils/efetch.fcgi?db=pubmed&id=28520346%2C35034351&retmode=xml (429)
+        at Response.toError (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:116:17)
+        at ResponseBase._setStatusProperties (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\response-base.js:107:48)
+        at new Response (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:47:8)
+        at Request._emitResponse (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1125:20)
+        at C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:38
+        at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\parsers\json.js:26:7)
+        at Stream.emit (node:events:514:28)
+        at Unzip.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\unzip.js:62:12)
+        at Unzip.emit (node:events:514:28)
+        at endReadableNT (node:internal/streams/readable:1764:12) {
+      status: 429,
+      text: '{"error":"API rate limit exceeded","api-key":"71.69.167.46","count":"4","limit":"3"}\n',
+      method: 'GET',
+      path: '/entrez/eutils/efetch.fcgi?db=pubmed&id=28520346%2C35034351&retmode=xml'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: false,
+    unprocessableEntity: false,
+    type: 'application/json',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    _body: {
+      error: 'API rate limit exceeded',
+      'api-key': '71.69.167.46',
+      count: '4',
+      limit: '3'
+    },
+    pipe: [Function (anonymous)],
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+pass bio-010   turns=4 calls=10 trust=0.97 live=4 prompt=42316 grounding=0.93 
+2026-11-03T22:14:02.706386Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="article search" class="internal" internal failure
+2026-11-03T22:14:05.709594Z  WARN biomcp_cli::sources: served from cache, older than the provider's freshness window (16 h old) age_seconds=57695
+2026-11-03T22:14:06.957550Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="batch article search enrichment" class="internal" internal failure
+pass bio-015   turns=4 calls=8 trust=0.94 live=2 prompt=28706 grounding=0.86 
+pass omop-005  turns=2 calls=1 trust=0.97 live=0 prompt=11441 grounding=0.92 
+pass omop-010  turns=3 calls=3 trust=1.00 live=0 prompt=18652 grounding=1.00 
+pass x-002     turns=4 calls=5 trust=0.98 live=2 prompt=34682 grounding=0.96 
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:root:find_omop_concept called with keyword='acetaminophen', omop_table='drug_exposure', omop_field='drug_concept_id'
+INFO:httpx:HTTP Request: GET https://api.omophub.com/v1/concepts/suggest?query=acetaminophen&limit=10 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.omophub.com/v1/search/concepts?query=acetaminophen&page_size=10 "HTTP/1.1 200 OK"
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+pass x-006     turns=4 calls=7 trust=1.00 live=1 prompt=241559 grounding=1.00 
+pass x-007     turns=5 calls=13 trust=0.93 live=2 prompt=99831 grounding=0.84 
+pass x-009     turns=4 calls=7 trust=0.97 live=2 prompt=33233 grounding=0.92 
+p10-E3-ndc-tool-r1: 13/16 passed, 130 tool calls (30 live), 1,029,074 prompt 
+tokens

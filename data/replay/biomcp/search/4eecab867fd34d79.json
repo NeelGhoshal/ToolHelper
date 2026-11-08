@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "article_type": "review",
+    "keyword": [
+      "EGFR-mutant non-small cell lung cancer current treatment landscape osimertinib amivantamab lazertinib 2023 2024 review"
+    ],
+    "limit": 8,
+    "sort": "date"
+  },
+  "args_key": "4eecab867fd34d791bc1f74f7cb89606b8083a25d38a84c8db39e9e461974c64",
+  "recorded_at": "2026-11-03T15:34:24.455769+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 455.87459998205304,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR-mutant non-small cell lung cancer current treatment landscape osimertinib amivantamab lazertinib 2023 2024 review, type=review, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 8 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42926199|Clinical and molecular prognostic factors associated with ou…|Europe PMC|2026-09-11|-|0| \n|PMID 42621139|The role of FGFR signaling in SCLC and NSCLC: Current insigh…|Europe PMC|2026-08-11|-|0| \n|PMID 42588636|Prevalence and Clinical Implications of Somatic and Germline…|Europe PMC|2026-07-27|-|0| \n|PMID 42453333|Exploring the Impact of Multiple Gene Mutations on Epidermal…|Europe PMC|2026-06-23|-|0| \n|PMID 42154197|EGFR Exon 20 Insertion-Mutated Non-Small Cell Lung Cancer: C…|Europe PMC|2026-05-19|-|1| \n|PMID 42170254|The resistance landscape of EGFR tyrosine kinase inhibitors…|Europe PMC|2026-04-26|-|2| \n|PMID 42099877|Evolution of bispecific and multispecific antibodies in canc…|Europe PMC|2026-03-19|-|1| \n|PMID 40851511|Advances and Future Perspectives for the Management of Non-S…|Europe PMC|2025-08-25|-|0| \n \n \n \nNewest indexed: 2026-10-26 (8 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42926199\n  biomcp search article -k \"EGFR-mutant non-small cell lung cancer current treatment landscape osimertinib amivantamab lazertinib 2023 2024 review\" --type review --year-min 2025 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 8 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

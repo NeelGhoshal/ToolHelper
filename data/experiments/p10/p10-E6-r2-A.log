@@ -1,0 +1,4070 @@
+learning from 28 runs in bench-baseline-record (27 other-fold tasks)
+strategies: E6_shaping {'mode': 'projection', 'top_n': 5, 'tools': 
+['medical__search-clinical-guidelines', 'medical__search-drug-nomenclature', 
+'medical__search-drugs', 'medical__search-medical-databases', 
+'medical__search-medical-journals', 'medical__search-medical-literature', 
+'omop__find_omop_concept'], 'cdm': 
+'omop_mcp:data/omop_concept_id_fields.json@sha256:c04a7c7c71ade72d'}
+pass med-001   turns=2 calls=2 trust=1.00 live=0 prompt=10349 grounding=- 
+fail med-004   turns=2 calls=1 trust=0.95 live=0 prompt=12985 grounding=0.88 
+failed=['answer_includes_any']
+🚨 MEDICAL MCP SERVER - SAFETY NOTICE:
+This server provides medical information for educational purposes only.
+NEVER use this information as the sole basis for clinical decisions.
+Always consult qualified healthcare professionals for patient care.
+
+📊 DYNAMIC DATA SOURCE NOTICE:
+This system queries live medical databases (FDA, WHO, PubMed, RxNorm)
+NO hardcoded medical data is used - all information is retrieved dynamically
+Data freshness depends on source database updates and API availability
+Network connectivity required for all medical information retrieval
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='✅ Medical MCP Server running on stdio', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Error fetching WHO indicators: Error: Internal Server Error
+    at Request.callback (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1079:17)
+    at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:18)
+    at IncomingMessage.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 500,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 5,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 14,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null,
+      Symbol(kAbortSignalSocket): null,
+      Symbol(kAbortSignalListener): null,
+      Symbol(kAbortSignalDetached): true
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'https://ghoapi.azureedge.net/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27life%20expectancy%20at%20birth%20%28both%20sexes%29%27%29&%24format=json',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'https:',
+      host: 'ghoapi.azureedge.net',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      _fullfilledPromise: [Promise],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27life%20expectancy%20at%20birth%20%28both%20sexes%29%27%29&%24format=json HTTP/1.1\r\n' +
+        'User-Agent: medical-mcp/1.0\r\n' +
+        'Host: ghoapi.azureedge.net\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      httpValidation: undefined,
+      joinDuplicateHeaders: undefined,
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'ghoapi.azureedge.net',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kWritableFinished): true,
+      Symbol(kEndCallbacks): null,
+      Symbol(kFlushError): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kPath): '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27life%20expectancy%20at%20birth%20%28both%20sexes%29%27%29&%24format=json',
+      Symbol(kProxyRewrittenToAbsolute): false,
+      Symbol(kAuthority): 'ghoapi.azureedge.net',
+      Symbol(kUniqueHeaders): null
+    },
+    text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+    files: undefined,
+    buffered: true,
+    headers: {
+      date: 'Tue, 03 Nov 2026 19:56:35 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T195634Z-1588bbd57b4rkk4nhC1BN1c1f00000000s400000000075dd',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    header: {
+      date: 'Tue, 03 Nov 2026 19:56:35 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T195634Z-1588bbd57b4rkk4nhC1BN1c1f00000000s400000000075dd',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    statusCode: 500,
+    status: 500,
+    statusType: 5,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: false,
+    serverError: true,
+    error: Error: cannot GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27life%20expectancy%20at%20birth%20%28both%20sexes%29%27%29&%24format=json (500)
+        at Response.toError (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:116:17)
+        at ResponseBase._setStatusProperties (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\response-base.js:107:48)
+        at new Response (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:47:8)
+        at Request._emitResponse (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1125:20)
+        at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:38)
+        at IncomingMessage.emit (node:events:526:24)
+        at endReadableNT (node:internal/streams/readable:1764:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+      status: 500,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      method: 'GET',
+      path: '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27life%20expectancy%20at%20birth%20%28both%20sexes%29%27%29&%24format=json'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: false,
+    unprocessableEntity: false,
+    type: 'text/html',
+    charset: 'UTF-8',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    pipe: [Function (anonymous)],
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+Error fetching WHO indicators: Error: Internal Server Error
+    at Request.callback (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1079:17)
+    at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:18)
+    at IncomingMessage.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 500,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 5,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 14,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null,
+      Symbol(kAbortSignalSocket): null,
+      Symbol(kAbortSignalListener): null,
+      Symbol(kAbortSignalDetached): true
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'https://ghoapi.azureedge.net/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Life%20expectancy%20at%20birth%20%28SDG%203.2%29%27%29&%24format=json',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'https:',
+      host: 'ghoapi.azureedge.net',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      _fullfilledPromise: [Promise],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Life%20expectancy%20at%20birth%20%28SDG%203.2%29%27%29&%24format=json HTTP/1.1\r\n' +
+        'User-Agent: medical-mcp/1.0\r\n' +
+        'Host: ghoapi.azureedge.net\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      httpValidation: undefined,
+      joinDuplicateHeaders: undefined,
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'ghoapi.azureedge.net',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kWritableFinished): true,
+      Symbol(kEndCallbacks): null,
+      Symbol(kFlushError): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kPath): '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Life%20expectancy%20at%20birth%20%28SDG%203.2%29%27%29&%24format=json',
+      Symbol(kProxyRewrittenToAbsolute): false,
+      Symbol(kAuthority): 'ghoapi.azureedge.net',
+      Symbol(kUniqueHeaders): null
+    },
+    text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+    files: undefined,
+    buffered: true,
+    headers: {
+      date: 'Tue, 03 Nov 2026 19:56:38 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T195637Z-1588bbd57b4rtskvhC1BN1gfw80000000np000000000cfaw',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    header: {
+      date: 'Tue, 03 Nov 2026 19:56:38 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T195637Z-1588bbd57b4rtskvhC1BN1gfw80000000np000000000cfaw',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    statusCode: 500,
+    status: 500,
+    statusType: 5,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: false,
+    serverError: true,
+    error: Error: cannot GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Life%20expectancy%20at%20birth%20%28SDG%203.2%29%27%29&%24format=json (500)
+        at Response.toError (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:116:17)
+        at ResponseBase._setStatusProperties (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\response-base.js:107:48)
+        at new Response (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:47:8)
+        at Request._emitResponse (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1125:20)
+        at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:38)
+        at IncomingMessage.emit (node:events:526:24)
+        at endReadableNT (node:internal/streams/readable:1764:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+      status: 500,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      method: 'GET',
+      path: '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Life%20expectancy%20at%20birth%20%28SDG%203.2%29%27%29&%24format=json'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: false,
+    unprocessableEntity: false,
+    type: 'text/html',
+    charset: 'UTF-8',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    pipe: [Function (anonymous)],
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+Error fetching WHO indicators: Error: Internal Server Error
+    at Request.callback (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1079:17)
+    at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:18)
+    at IncomingMessage.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 500,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 5,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 14,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null,
+      Symbol(kAbortSignalSocket): null,
+      Symbol(kAbortSignalListener): null,
+      Symbol(kAbortSignalDetached): true
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'https://ghoapi.azureedge.net/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Life%20expectancy%20at%20age%2060%27%29&%24format=json',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'https:',
+      host: 'ghoapi.azureedge.net',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      _fullfilledPromise: [Promise],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Life%20expectancy%20at%20age%2060%27%29&%24format=json HTTP/1.1\r\n' +
+        'User-Agent: medical-mcp/1.0\r\n' +
+        'Host: ghoapi.azureedge.net\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      httpValidation: undefined,
+      joinDuplicateHeaders: undefined,
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'ghoapi.azureedge.net',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kWritableFinished): true,
+      Symbol(kEndCallbacks): null,
+      Symbol(kFlushError): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kPath): '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Life%20expectancy%20at%20age%2060%27%29&%24format=json',
+      Symbol(kProxyRewrittenToAbsolute): false,
+      Symbol(kAuthority): 'ghoapi.azureedge.net',
+      Symbol(kUniqueHeaders): null
+    },
+    text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+    files: undefined,
+    buffered: true,
+    headers: {
+      date: 'Tue, 03 Nov 2026 19:56:38 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T195638Z-1588bbd57b4jnd2whC1BN1kuxg0000000wn000000000n1nh',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    header: {
+      date: 'Tue, 03 Nov 2026 19:56:38 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T195638Z-1588bbd57b4jnd2whC1BN1kuxg0000000wn000000000n1nh',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    statusCode: 500,
+    status: 500,
+    statusType: 5,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: false,
+    serverError: true,
+    error: Error: cannot GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Life%20expectancy%20at%20age%2060%27%29&%24format=json (500)
+        at Response.toError (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:116:17)
+        at ResponseBase._setStatusProperties (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\response-base.js:107:48)
+        at new Response (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:47:8)
+        at Request._emitResponse (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1125:20)
+        at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:38)
+        at IncomingMessage.emit (node:events:526:24)
+        at endReadableNT (node:internal/streams/readable:1764:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+      status: 500,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      method: 'GET',
+      path: '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Life%20expectancy%20at%20age%2060%27%29&%24format=json'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: false,
+    unprocessableEntity: false,
+    type: 'text/html',
+    charset: 'UTF-8',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    pipe: [Function (anonymous)],
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+Error fetching WHO indicators: Error: Internal Server Error
+    at Request.callback (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1079:17)
+    at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:18)
+    at IncomingMessage.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 500,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 5,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 14,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null,
+      Symbol(kAbortSignalSocket): null,
+      Symbol(kAbortSignalListener): null,
+      Symbol(kAbortSignalDetached): true
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'https://ghoapi.azureedge.net/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Total%20population%27%29&%24format=json',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'https:',
+      host: 'ghoapi.azureedge.net',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      _fullfilledPromise: [Promise],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Total%20population%27%29&%24format=json HTTP/1.1\r\n' +
+        'User-Agent: medical-mcp/1.0\r\n' +
+        'Host: ghoapi.azureedge.net\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      httpValidation: undefined,
+      joinDuplicateHeaders: undefined,
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'ghoapi.azureedge.net',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kWritableFinished): true,
+      Symbol(kEndCallbacks): null,
+      Symbol(kFlushError): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kPath): '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Total%20population%27%29&%24format=json',
+      Symbol(kProxyRewrittenToAbsolute): false,
+      Symbol(kAuthority): 'ghoapi.azureedge.net',
+      Symbol(kUniqueHeaders): null
+    },
+    text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+    files: undefined,
+    buffered: true,
+    headers: {
+      date: 'Tue, 03 Nov 2026 19:56:42 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T195642Z-1588bbd57b4lpclvhC1BN1xxc80000000wyg000000008rhm',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    header: {
+      date: 'Tue, 03 Nov 2026 19:56:42 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T195642Z-1588bbd57b4lpclvhC1BN1xxc80000000wyg000000008rhm',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    statusCode: 500,
+    status: 500,
+    statusType: 5,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: false,
+    serverError: true,
+    error: Error: cannot GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Total%20population%27%29&%24format=json (500)
+        at Response.toError (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:116:17)
+        at ResponseBase._setStatusProperties (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\response-base.js:107:48)
+        at new Response (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:47:8)
+        at Request._emitResponse (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1125:20)
+        at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:38)
+        at IncomingMessage.emit (node:events:526:24)
+        at endReadableNT (node:internal/streams/readable:1764:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+      status: 500,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      method: 'GET',
+      path: '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Total%20population%27%29&%24format=json'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: false,
+    unprocessableEntity: false,
+    type: 'text/html',
+    charset: 'UTF-8',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    pipe: [Function (anonymous)],
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+Error fetching WHO indicators: Error: Internal Server Error
+    at Request.callback (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1079:17)
+    at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:18)
+    at IncomingMessage.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 500,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 5,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 14,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null,
+      Symbol(kAbortSignalSocket): null,
+      Symbol(kAbortSignalListener): null,
+      Symbol(kAbortSignalDetached): true
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'https://ghoapi.azureedge.net/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27life%20expectancy%20at%20birth%2C%20total%20%28years%29%27%29&%24format=json',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'https:',
+      host: 'ghoapi.azureedge.net',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      _fullfilledPromise: [Promise],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27life%20expectancy%20at%20birth%2C%20total%20%28years%29%27%29&%24format=json HTTP/1.1\r\n' +
+        'User-Agent: medical-mcp/1.0\r\n' +
+        'Host: ghoapi.azureedge.net\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      httpValidation: undefined,
+      joinDuplicateHeaders: undefined,
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'ghoapi.azureedge.net',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kWritableFinished): true,
+      Symbol(kEndCallbacks): null,
+      Symbol(kFlushError): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kPath): '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27life%20expectancy%20at%20birth%2C%20total%20%28years%29%27%29&%24format=json',
+      Symbol(kProxyRewrittenToAbsolute): false,
+      Symbol(kAuthority): 'ghoapi.azureedge.net',
+      Symbol(kUniqueHeaders): null
+    },
+    text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+    files: undefined,
+    buffered: true,
+    headers: {
+      date: 'Tue, 03 Nov 2026 19:56:43 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T195643Z-1588bbd57b48wvsnhC1BN1w20g0000000nqg000000003qee',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    header: {
+      date: 'Tue, 03 Nov 2026 19:56:43 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T195643Z-1588bbd57b48wvsnhC1BN1w20g0000000nqg000000003qee',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    statusCode: 500,
+    status: 500,
+    statusType: 5,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: false,
+    serverError: true,
+    error: Error: cannot GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27life%20expectancy%20at%20birth%2C%20total%20%28years%29%27%29&%24format=json (500)
+        at Response.toError (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:116:17)
+        at ResponseBase._setStatusProperties (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\response-base.js:107:48)
+        at new Response (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:47:8)
+        at Request._emitResponse (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1125:20)
+        at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:38)
+        at IncomingMessage.emit (node:events:526:24)
+        at endReadableNT (node:internal/streams/readable:1764:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+      status: 500,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      method: 'GET',
+      path: '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27life%20expectancy%20at%20birth%2C%20total%20%28years%29%27%29&%24format=json'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: false,
+    unprocessableEntity: false,
+    type: 'text/html',
+    charset: 'UTF-8',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    pipe: [Function (anonymous)],
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+Error fetching WHO indicators: Error: Internal Server Error
+    at Request.callback (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1079:17)
+    at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:18)
+    at IncomingMessage.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 500,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 5,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 14,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null,
+      Symbol(kAbortSignalSocket): null,
+      Symbol(kAbortSignalListener): null,
+      Symbol(kAbortSignalDetached): true
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'https://ghoapi.azureedge.net/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27GHO%20life%20expectancy%20at%20birth%27%29&%24format=json',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'https:',
+      host: 'ghoapi.azureedge.net',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      _fullfilledPromise: [Promise],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27GHO%20life%20expectancy%20at%20birth%27%29&%24format=json HTTP/1.1\r\n' +
+        'User-Agent: medical-mcp/1.0\r\n' +
+        'Host: ghoapi.azureedge.net\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      httpValidation: undefined,
+      joinDuplicateHeaders: undefined,
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'ghoapi.azureedge.net',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kWritableFinished): true,
+      Symbol(kEndCallbacks): null,
+      Symbol(kFlushError): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kPath): '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27GHO%20life%20expectancy%20at%20birth%27%29&%24format=json',
+      Symbol(kProxyRewrittenToAbsolute): false,
+      Symbol(kAuthority): 'ghoapi.azureedge.net',
+      Symbol(kUniqueHeaders): null
+    },
+    text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+    files: undefined,
+    buffered: true,
+    headers: {
+      date: 'Tue, 03 Nov 2026 19:56:43 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T195643Z-1588bbd57b4hbzx2hC1BN133mw0000000nkg00000000eg75',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    header: {
+      date: 'Tue, 03 Nov 2026 19:56:43 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T195643Z-1588bbd57b4hbzx2hC1BN133mw0000000nkg00000000eg75',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    statusCode: 500,
+    status: 500,
+    statusType: 5,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: false,
+    serverError: true,
+    error: Error: cannot GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27GHO%20life%20expectancy%20at%20birth%27%29&%24format=json (500)
+        at Response.toError (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:116:17)
+        at ResponseBase._setStatusProperties (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\response-base.js:107:48)
+        at new Response (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:47:8)
+        at Request._emitResponse (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1125:20)
+        at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:38)
+        at IncomingMessage.emit (node:events:526:24)
+        at endReadableNT (node:internal/streams/readable:1764:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+      status: 500,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      method: 'GET',
+      path: '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27GHO%20life%20expectancy%20at%20birth%27%29&%24format=json'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: false,
+    unprocessableEntity: false,
+    type: 'text/html',
+    charset: 'UTF-8',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    pipe: [Function (anonymous)],
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+fail med-005   turns=8 calls=23 trust=1.00 live=6 prompt=42815 grounding=- 
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...876, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...054, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...145, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Error fetching full text from PMC 12083876: Error: Execution context was destroyed, most likely because of a navigation.
+    at rewriteError (file:///C:/Users/neelg/src/medical-mcp/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/ExecutionContext.js:454:15)
+    at async #evaluate (file:///C:/Users/neelg/src/medical-mcp/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/ExecutionContext.js:386:60)
+    at async ExecutionContext.evaluate (file:///C:/Users/neelg/src/medical-mcp/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/ExecutionContext.js:274:16)
+    at async IsolatedWorld.evaluate (file:///C:/Users/neelg/src/medical-mcp/node_modules/puppeteer-core/lib/esm/puppeteer/cdp/IsolatedWorld.js:102:16)
+    at async CdpFrame.evaluate (file:///C:/Users/neelg/src/medical-mcp/node_modules/puppeteer-core/lib/esm/puppeteer/api/Frame.js:359:20)
+    at async CdpPage.evaluate (file:///C:/Users/neelg/src/medical-mcp/node_modules/puppeteer-core/lib/esm/puppeteer/api/Page.js:826:20)
+    at async fetchFullTextFromPMC (file:///C:/Users/neelg/src/medical-mcp/node_modules/medical-mcp/build/utils.js:1301:26)
+    at async file:///C:/Users/neelg/src/medical-mcp/node_modules/medical-mcp/build/utils.js:1389:38
+    at async Promise.all (index 2)
+    at async searchPubMedArticles (file:///C:/Users/neelg/src/medical-mcp/node_modules/medical-mcp/build/utils.js:1386:38)
+pass med-007   turns=6 calls=14 trust=0.98 live=10 prompt=63275 grounding=0.95 
+fail med-009   turns=8 calls=15 trust=1.00 live=3 prompt=207961 grounding=- 
+failed=['answer_grounded']
+pass med-012   turns=2 calls=1 trust=1.00 live=0 prompt=10646 grounding=1.00 
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Searching medical j...l trial recent advances', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Scraping Google Sch...l trial recent advances', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Scraping Google Sch...l trial recent advances', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Scraping Google Sch...l trial recent advances', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Scraping Google Sch...l trial recent advances', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Scraping Google Sch...l trial recent advances', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Searching medical d...pproval exa-cel Casgevy', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Scraping Google Sch...pproval exa-cel Casgevy', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Scraping Cochrane L...pproval exa-cel Casgevy', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Searching ClinicalT...pproval exa-cel Casgevy', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Error searching ClinicalTrials.gov: Error: Bad Request
+    at Request.callback (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1079:17)
+    at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:18)
+    at IncomingMessage.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 400,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 400,
+      statusMessage: 'Bad Request',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 5,
+      text: '`query` is unknown parameter',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 28,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null,
+      Symbol(kAbortSignalSocket): null,
+      Symbol(kAbortSignalListener): null,
+      Symbol(kAbortSignalDetached): true
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'https://clinicaltrials.gov/api/v2/studies?query=CRISPR-Cas9%20gene%20therapy%20recent%20clinical%20trials%20FDA%20approval%20exa-cel%20Casgevy&format=json&limit=10',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'https:',
+      host: 'clinicaltrials.gov',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      _fullfilledPromise: [Promise],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET /api/v2/studies?query=CRISPR-Cas9%20gene%20therapy%20recent%20clinical%20trials%20FDA%20approval%20exa-cel%20Casgevy&format=json&limit=10 HTTP/1.1\r\n' +
+        'User-Agent: medical-mcp/1.0\r\n' +
+        'Host: clinicaltrials.gov\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      httpValidation: undefined,
+      joinDuplicateHeaders: undefined,
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'clinicaltrials.gov',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kWritableFinished): true,
+      Symbol(kEndCallbacks): null,
+      Symbol(kFlushError): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kPath): '/api/v2/studies?query=CRISPR-Cas9%20gene%20therapy%20recent%20clinical%20trials%20FDA%20approval%20exa-cel%20Casgevy&format=json&limit=10',
+      Symbol(kProxyRewrittenToAbsolute): false,
+      Symbol(kAuthority): 'clinicaltrials.gov',
+      Symbol(kUniqueHeaders): null
+    },
+    text: '`query` is unknown parameter',
+    files: undefined,
+    buffered: true,
+    headers: {
+      date: 'Tue, 03 Nov 2026 19:58:48 GMT',
+      server: 'istio-envoy',
+      'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+      'x-frame-options': 'SAMEORIGIN',
+      'content-type': 'text/plain; charset=UTF-8',
+      'content-length': '28',
+      etag: '"0/0.34.1/mw0io5mw"',
+      'x-envoy-upstream-service-time': '5',
+      'set-cookie': [Array],
+      'x-ua-compatible': 'IE=Edge',
+      'x-xss-protection': '1; mode=block',
+      via: '1.1 google',
+      'alt-svc': 'clear',
+      connection: 'close'
+    },
+    header: {
+      date: 'Tue, 03 Nov 2026 19:58:48 GMT',
+      server: 'istio-envoy',
+      'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+      'x-frame-options': 'SAMEORIGIN',
+      'content-type': 'text/plain; charset=UTF-8',
+      'content-length': '28',
+      etag: '"0/0.34.1/mw0io5mw"',
+      'x-envoy-upstream-service-time': '5',
+      'set-cookie': [Array],
+      'x-ua-compatible': 'IE=Edge',
+      'x-xss-protection': '1; mode=block',
+      via: '1.1 google',
+      'alt-svc': 'clear',
+      connection: 'close'
+    },
+    statusCode: 400,
+    status: 400,
+    statusType: 4,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: true,
+    serverError: false,
+    error: Error: cannot GET /api/v2/studies?query=CRISPR-Cas9%20gene%20therapy%20recent%20clinical%20trials%20FDA%20approval%20exa-cel%20Casgevy&format=json&limit=10 (400)
+        at Response.toError (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:116:17)
+        at ResponseBase._setStatusProperties (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\response-base.js:107:48)
+        at new Response (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:47:8)
+        at Request._emitResponse (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1125:20)
+        at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:38)
+        at IncomingMessage.emit (node:events:526:24)
+        at endReadableNT (node:internal/streams/readable:1764:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+      status: 400,
+      text: '`query` is unknown parameter',
+      method: 'GET',
+      path: '/api/v2/studies?query=CRISPR-Cas9%20gene%20therapy%20recent%20clinical%20trials%20FDA%20approval%20exa-cel%20Casgevy&format=json&limit=10'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: true,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: false,
+    unprocessableEntity: false,
+    type: 'text/plain',
+    charset: 'UTF-8',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    pipe: [Function (anonymous)],
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Scraping Google Sch...ase editing sickle cell', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+pass med-014   turns=3 calls=5 trust=0.97 live=4 prompt=32176 grounding=0.92 
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Searching medical j...ecline NEJM JAMA Lancet', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Scraping Google Sch...ecline NEJM JAMA Lancet', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Scraping Google Sch...ecline NEJM JAMA Lancet', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Scraping Google Sch...ecline NEJM JAMA Lancet', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Scraping Google Sch...ecline NEJM JAMA Lancet', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Scraping Google Sch...ecline NEJM JAMA Lancet', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+2026-11-03T20:00:08.769149Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="article search" class="internal" internal failure
+2026-11-03T20:00:10.663379Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="batch article search enrichment" class="internal" internal failure
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...480, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Error searching PubMed: Error: Too Many Requests
+    at Request.callback (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1079:17)
+    at C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:18
+    at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\parsers\json.js:26:7)
+    at Stream.emit (node:events:514:28)
+    at Unzip.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\unzip.js:62:12)
+    at Unzip.emit (node:events:514:28)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 429,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 429,
+      statusMessage: 'Too Many Requests',
+      client: [TLSSocket],
+      _consuming: true,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 4,
+      setEncoding: [Function (anonymous)],
+      on: [Function (anonymous)],
+      text: '{"error":"API rate limit exceeded","api-key":"71.69.167.46","count":"4","limit":"3"}\n',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 34,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null,
+      Symbol(kAbortSignalSocket): null,
+      Symbol(kAbortSignalListener): null,
+      Symbol(kAbortSignalDetached): true
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Heart%20Protection%20Study%20simvastatin%20cognition%20dementia%20secondary%20outcomes%2020536%20participants%20Lancet%202002&retmode=json&retmax=10',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'https:',
+      host: 'eutils.ncbi.nlm.nih.gov',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      _fullfilledPromise: [Promise],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'GET /entrez/eutils/esearch.fcgi?db=pubmed&term=Heart%20Protection%20Study%20simvastatin%20cognition%20dementia%20secondary%20outcomes%2020536%20participants%20Lancet%202002&retmode=json&retmax=10 HTTP/1.1\r\n' +
+        'User-Agent: medical-mcp/1.0\r\n' +
+        'Host: eutils.ncbi.nlm.nih.gov\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      httpValidation: undefined,
+      joinDuplicateHeaders: undefined,
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'eutils.ncbi.nlm.nih.gov',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kWritableFinished): true,
+      Symbol(kEndCallbacks): null,
+      Symbol(kFlushError): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kPath): '/entrez/eutils/esearch.fcgi?db=pubmed&term=Heart%20Protection%20Study%20simvastatin%20cognition%20dementia%20secondary%20outcomes%2020536%20participants%20Lancet%202002&retmode=json&retmax=10',
+      Symbol(kProxyRewrittenToAbsolute): false,
+      Symbol(kAuthority): 'eutils.ncbi.nlm.nih.gov',
+      Symbol(kUniqueHeaders): null
+    },
+    text: '{"error":"API rate limit exceeded","api-key":"71.69.167.46","count":"4","limit":"3"}\n',
+    files: undefined,
+    buffered: true,
+    headers: {
+      date: 'Tue, 03 Nov 2026 20:00:21 GMT',
+      server: 'Finatra',
+      'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+      'content-security-policy': 'upgrade-insecure-requests',
+      'referrer-policy': 'origin-when-cross-origin',
+      'retry-after': '2',
+      'content-type': 'application/json',
+      'content-encoding': 'gzip',
+      'x-ratelimit-limit': '3',
+      'x-ratelimit-remaining': '0',
+      'access-control-expose-headers': 'X-RateLimit-Limit,X-RateLimit-Remaining,Retry-After',
+      'x-ua-compatible': 'IE=Edge',
+      'x-xss-protection': '1; mode=block',
+      via: '1.1 google',
+      'alt-svc': 'clear',
+      connection: 'close',
+      'transfer-encoding': 'chunked'
+    },
+    header: {
+      date: 'Tue, 03 Nov 2026 20:00:21 GMT',
+      server: 'Finatra',
+      'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+      'content-security-policy': 'upgrade-insecure-requests',
+      'referrer-policy': 'origin-when-cross-origin',
+      'retry-after': '2',
+      'content-type': 'application/json',
+      'content-encoding': 'gzip',
+      'x-ratelimit-limit': '3',
+      'x-ratelimit-remaining': '0',
+      'access-control-expose-headers': 'X-RateLimit-Limit,X-RateLimit-Remaining,Retry-After',
+      'x-ua-compatible': 'IE=Edge',
+      'x-xss-protection': '1; mode=block',
+      via: '1.1 google',
+      'alt-svc': 'clear',
+      connection: 'close',
+      'transfer-encoding': 'chunked'
+    },
+    statusCode: 429,
+    status: 429,
+    statusType: 4,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: true,
+    serverError: false,
+    error: Error: cannot GET /entrez/eutils/esearch.fcgi?db=pubmed&term=Heart%20Protection%20Study%20simvastatin%20cognition%20dementia%20secondary%20outcomes%2020536%20participants%20Lancet%202002&retmode=json&retmax=10 (429)
+        at Response.toError (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:116:17)
+        at ResponseBase._setStatusProperties (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\response-base.js:107:48)
+        at new Response (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:47:8)
+        at Request._emitResponse (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1125:20)
+        at C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:38
+        at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\parsers\json.js:26:7)
+        at Stream.emit (node:events:514:28)
+        at Unzip.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\unzip.js:62:12)
+        at Unzip.emit (node:events:514:28)
+        at endReadableNT (node:internal/streams/readable:1764:12) {
+      status: 429,
+      text: '{"error":"API rate limit exceeded","api-key":"71.69.167.46","count":"4","limit":"3"}\n',
+      method: 'GET',
+      path: '/entrez/eutils/esearch.fcgi?db=pubmed&term=Heart%20Protection%20Study%20simvastatin%20cognition%20dementia%20secondary%20outcomes%2020536%20participants%20Lancet%202002&retmode=json&retmax=10'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: false,
+    unprocessableEntity: false,
+    type: 'application/json',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    _body: {
+      error: 'API rate limit exceeded',
+      'api-key': '71.69.167.46',
+      count: '4',
+      limit: '3'
+    },
+    pipe: [Function (anonymous)],
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...244, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Searching medical d...S simvastatin cognition', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Scraping Google Sch...S simvastatin cognition', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Scraping Cochrane L...S simvastatin cognition', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='🔍 Searching ClinicalT...S simvastatin cognition', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Error searching ClinicalTrials.gov: Error: Bad Request
+    at Request.callback (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1079:17)
+    at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:18)
+    at IncomingMessage.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 400,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 400,
+      statusMessage: 'Bad Request',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 5,
+      text: '`query` is unknown parameter',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 28,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null,
+      Symbol(kAbortSignalSocket): null,
+      Symbol(kAbortSignalListener): null,
+      Symbol(kAbortSignalDetached): true
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'https://clinicaltrials.gov/api/v2/studies?query=statins%20dementia%20risk%20meta-analysis%20randomized%20controlled%20trials%20PROSPER%20Heart%20Protection%20Study%20HPS%20simvastatin%20cognition&format=json&limit=10',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'https:',
+      host: 'clinicaltrials.gov',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      _fullfilledPromise: [Promise],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET /api/v2/studies?query=statins%20dementia%20risk%20meta-analysis%20randomized%20controlled%20trials%20PROSPER%20Heart%20Protection%20Study%20HPS%20simvastatin%20cognition&format=json&limit=10 HTTP/1.1\r\n' +
+        'User-Agent: medical-mcp/1.0\r\n' +
+        'Host: clinicaltrials.gov\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      httpValidation: undefined,
+      joinDuplicateHeaders: undefined,
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'clinicaltrials.gov',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kWritableFinished): true,
+      Symbol(kEndCallbacks): null,
+      Symbol(kFlushError): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kPath): '/api/v2/studies?query=statins%20dementia%20risk%20meta-analysis%20randomized%20controlled%20trials%20PROSPER%20Heart%20Protection%20Study%20HPS%20simvastatin%20cognition&format=json&limit=10',
+      Symbol(kProxyRewrittenToAbsolute): false,
+      Symbol(kAuthority): 'clinicaltrials.gov',
+      Symbol(kUniqueHeaders): null
+    },
+    text: '`query` is unknown parameter',
+    files: undefined,
+    buffered: true,
+    headers: {
+      date: 'Tue, 03 Nov 2026 20:00:39 GMT',
+      server: 'istio-envoy',
+      'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+      'x-frame-options': 'SAMEORIGIN',
+      'content-type': 'text/plain; charset=UTF-8',
+      'content-length': '28',
+      etag: '"0/0.34.1/mw0io5mw"',
+      'x-envoy-upstream-service-time': '7',
+      'set-cookie': [Array],
+      'x-ua-compatible': 'IE=Edge',
+      'x-xss-protection': '1; mode=block',
+      via: '1.1 google',
+      'alt-svc': 'clear',
+      connection: 'close'
+    },
+    header: {
+      date: 'Tue, 03 Nov 2026 20:00:39 GMT',
+      server: 'istio-envoy',
+      'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+      'x-frame-options': 'SAMEORIGIN',
+      'content-type': 'text/plain; charset=UTF-8',
+      'content-length': '28',
+      etag: '"0/0.34.1/mw0io5mw"',
+      'x-envoy-upstream-service-time': '7',
+      'set-cookie': [Array],
+      'x-ua-compatible': 'IE=Edge',
+      'x-xss-protection': '1; mode=block',
+      via: '1.1 google',
+      'alt-svc': 'clear',
+      connection: 'close'
+    },
+    statusCode: 400,
+    status: 400,
+    statusType: 4,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: true,
+    serverError: false,
+    error: Error: cannot GET /api/v2/studies?query=statins%20dementia%20risk%20meta-analysis%20randomized%20controlled%20trials%20PROSPER%20Heart%20Protection%20Study%20HPS%20simvastatin%20cognition&format=json&limit=10 (400)
+        at Response.toError (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:116:17)
+        at ResponseBase._setStatusProperties (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\response-base.js:107:48)
+        at new Response (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:47:8)
+        at Request._emitResponse (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1125:20)
+        at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:38)
+        at IncomingMessage.emit (node:events:526:24)
+        at endReadableNT (node:internal/streams/readable:1764:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+      status: 400,
+      text: '`query` is unknown parameter',
+      method: 'GET',
+      path: '/api/v2/studies?query=statins%20dementia%20risk%20meta-analysis%20randomized%20controlled%20trials%20PROSPER%20Heart%20Protection%20Study%20HPS%20simvastatin%20cognition&format=json&limit=10'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: true,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: false,
+    unprocessableEntity: false,
+    type: 'text/plain',
+    charset: 'UTF-8',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    pipe: [Function (anonymous)],
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+pass med-015   turns=5 calls=17 trust=0.90 live=15 prompt=68841 grounding=0.75 
+pass bio-001   turns=3 calls=3 trust=1.00 live=2 prompt=20571 grounding=1.00 
+pass bio-002   turns=2 calls=3 trust=1.00 live=0 prompt=44648 grounding=1.00 
+2026-11-03T20:02:12.201973Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="article search" class="internal" internal failure
+2026-11-03T20:02:14.370673Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="batch article search enrichment" class="internal" internal failure
+2026-11-03T20:02:31.745795Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="article search" class="internal" internal failure
+2026-11-03T20:02:34.011486Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="batch article search enrichment" class="internal" internal failure
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...482, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+2026-11-03T20:02:50.313748Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="article search" class="internal" internal failure
+2026-11-03T20:02:52.363511Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="batch article search enrichment" class="internal" internal failure
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...631, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...311, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+fail bio-004   turns=8 calls=31 trust=1.00 live=22 prompt=173171 grounding=- 
+pass bio-006   turns=5 calls=8 trust=0.93 live=1 prompt=58487 grounding=0.82 
+pass bio-009   turns=4 calls=6 trust=0.93 live=3 prompt=23986 grounding=0.83 
+pass bio-011   turns=3 calls=3 trust=0.84 live=0 prompt=24372 grounding=0.61 
+pass bio-013   turns=3 calls=7 trust=0.98 live=0 prompt=171903 grounding=0.95 
+fail bio-014   turns=8 calls=15 trust=1.00 live=10 prompt=49679 grounding=- 
+failed=['must_call_any', 'answer_includes_any']
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:root:find_omop_concept called with keyword='Hemoglobin A1c percent of total hemoglobin in Blood', omop_table='measurement', omop_field='measurement_concept_id'
+INFO:httpx:HTTP Request: GET https://api.omophub.com/v1/concepts/suggest?query=Hemoglobin+A1c+percent+of+total+hemoglobin+in+Blood&limit=10 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.omophub.com/v1/search/concepts?query=Hemoglobin+A1c+percent+of+total+hemoglobin+in+Blood&page_size=10 "HTTP/1.1 200 OK"
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+pass omop-002  turns=3 calls=3 trust=0.97 live=1 prompt=20468 grounding=0.93 
+pass omop-003  turns=3 calls=2 trust=0.97 live=0 prompt=16896 grounding=1.00 
+pass omop-005  turns=2 calls=1 trust=1.00 live=0 prompt=11319 grounding=1.00 
+pass omop-007  turns=2 calls=1 trust=0.97 live=0 prompt=11113 grounding=0.92 
+pass omop-009  turns=2 calls=1 trust=1.00 live=0 prompt=10961 grounding=1.00 
+pass omop-011  turns=2 calls=1 trust=1.00 live=0 prompt=10217 grounding=1.00 
+fail x-002     turns=8 calls=16 trust=0.95 live=8 prompt=78020 grounding=- 
+failed=['answer_includes_any']
+pass x-005     turns=3 calls=4 trust=0.97 live=0 prompt=22632 grounding=1.00 
+2026-11-03T20:23:48.006129Z  WARN biomcp_cli::sources::opentargets: Missing expected GraphQL field; degrading response source="opentargets" operation="TargetClinicalContext" field="data.target"
+2026-11-03T20:23:48.480344Z  WARN biomcp_cli::sources::opentargets: Missing expected GraphQL field; degrading response source="opentargets" operation="TargetDruggabilityContext" field="data.target"
+pass x-007     turns=5 calls=18 trust=0.85 live=6 prompt=142937 grounding=0.77 
+Error fetching WHO indicators: Error: Internal Server Error
+    at Request.callback (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1079:17)
+    at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:18)
+    at IncomingMessage.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 500,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 5,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 14,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null,
+      Symbol(kAbortSignalSocket): null,
+      Symbol(kAbortSignalListener): null,
+      Symbol(kAbortSignalDetached): true
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'https://ghoapi.azureedge.net/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27diabetes%20prevalence%20age%20standardized%27%29&%24format=json',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'https:',
+      host: 'ghoapi.azureedge.net',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      _fullfilledPromise: [Promise],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27diabetes%20prevalence%20age%20standardized%27%29&%24format=json HTTP/1.1\r\n' +
+        'User-Agent: medical-mcp/1.0\r\n' +
+        'Host: ghoapi.azureedge.net\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      httpValidation: undefined,
+      joinDuplicateHeaders: undefined,
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'ghoapi.azureedge.net',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kWritableFinished): true,
+      Symbol(kEndCallbacks): null,
+      Symbol(kFlushError): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kPath): '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27diabetes%20prevalence%20age%20standardized%27%29&%24format=json',
+      Symbol(kProxyRewrittenToAbsolute): false,
+      Symbol(kAuthority): 'ghoapi.azureedge.net',
+      Symbol(kUniqueHeaders): null
+    },
+    text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+    files: undefined,
+    buffered: true,
+    headers: {
+      date: 'Tue, 03 Nov 2026 20:24:25 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T202425Z-1588bbd57b4hwppqhC1BN1x4fw0000000kt0000000002zuc',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    header: {
+      date: 'Tue, 03 Nov 2026 20:24:25 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T202425Z-1588bbd57b4hwppqhC1BN1x4fw0000000kt0000000002zuc',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    statusCode: 500,
+    status: 500,
+    statusType: 5,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: false,
+    serverError: true,
+    error: Error: cannot GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27diabetes%20prevalence%20age%20standardized%27%29&%24format=json (500)
+        at Response.toError (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:116:17)
+        at ResponseBase._setStatusProperties (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\response-base.js:107:48)
+        at new Response (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:47:8)
+        at Request._emitResponse (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1125:20)
+        at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:38)
+        at IncomingMessage.emit (node:events:526:24)
+        at endReadableNT (node:internal/streams/readable:1764:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+      status: 500,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      method: 'GET',
+      path: '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27diabetes%20prevalence%20age%20standardized%27%29&%24format=json'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: false,
+    unprocessableEntity: false,
+    type: 'text/html',
+    charset: 'UTF-8',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    pipe: [Function (anonymous)],
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+Error fetching WHO indicators: Error: Internal Server Error
+    at Request.callback (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1079:17)
+    at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:18)
+    at IncomingMessage.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 500,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 5,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 14,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null,
+      Symbol(kAbortSignalSocket): null,
+      Symbol(kAbortSignalListener): null,
+      Symbol(kAbortSignalDetached): true
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'https://ghoapi.azureedge.net/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27NCD%20prevalence%20diabetes%27%29&%24format=json',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'https:',
+      host: 'ghoapi.azureedge.net',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      _fullfilledPromise: [Promise],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27NCD%20prevalence%20diabetes%27%29&%24format=json HTTP/1.1\r\n' +
+        'User-Agent: medical-mcp/1.0\r\n' +
+        'Host: ghoapi.azureedge.net\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      httpValidation: undefined,
+      joinDuplicateHeaders: undefined,
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'ghoapi.azureedge.net',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kWritableFinished): true,
+      Symbol(kEndCallbacks): null,
+      Symbol(kFlushError): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kPath): '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27NCD%20prevalence%20diabetes%27%29&%24format=json',
+      Symbol(kProxyRewrittenToAbsolute): false,
+      Symbol(kAuthority): 'ghoapi.azureedge.net',
+      Symbol(kUniqueHeaders): null
+    },
+    text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+    files: undefined,
+    buffered: true,
+    headers: {
+      date: 'Tue, 03 Nov 2026 20:24:26 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T202426Z-1588bbd57b4m995vhC1BN1sk3c0000000s5g00000000k1x4',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    header: {
+      date: 'Tue, 03 Nov 2026 20:24:26 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T202426Z-1588bbd57b4m995vhC1BN1sk3c0000000s5g00000000k1x4',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    statusCode: 500,
+    status: 500,
+    statusType: 5,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: false,
+    serverError: true,
+    error: Error: cannot GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27NCD%20prevalence%20diabetes%27%29&%24format=json (500)
+        at Response.toError (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:116:17)
+        at ResponseBase._setStatusProperties (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\response-base.js:107:48)
+        at new Response (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:47:8)
+        at Request._emitResponse (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1125:20)
+        at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:38)
+        at IncomingMessage.emit (node:events:526:24)
+        at endReadableNT (node:internal/streams/readable:1764:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+      status: 500,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      method: 'GET',
+      path: '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27NCD%20prevalence%20diabetes%27%29&%24format=json'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: false,
+    unprocessableEntity: false,
+    type: 'text/html',
+    charset: 'UTF-8',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    pipe: [Function (anonymous)],
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+Error fetching WHO indicators: Error: Internal Server Error
+    at Request.callback (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1079:17)
+    at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:18)
+    at IncomingMessage.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 500,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 5,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 14,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null,
+      Symbol(kAbortSignalSocket): null,
+      Symbol(kAbortSignalListener): null,
+      Symbol(kAbortSignalDetached): true
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'https://ghoapi.azureedge.net/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27life%20expectancy%20at%20birth%20%28years%29%27%29&%24format=json',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'https:',
+      host: 'ghoapi.azureedge.net',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      _fullfilledPromise: [Promise],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27life%20expectancy%20at%20birth%20%28years%29%27%29&%24format=json HTTP/1.1\r\n' +
+        'User-Agent: medical-mcp/1.0\r\n' +
+        'Host: ghoapi.azureedge.net\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      httpValidation: undefined,
+      joinDuplicateHeaders: undefined,
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'ghoapi.azureedge.net',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kWritableFinished): true,
+      Symbol(kEndCallbacks): null,
+      Symbol(kFlushError): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kPath): '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27life%20expectancy%20at%20birth%20%28years%29%27%29&%24format=json',
+      Symbol(kProxyRewrittenToAbsolute): false,
+      Symbol(kAuthority): 'ghoapi.azureedge.net',
+      Symbol(kUniqueHeaders): null
+    },
+    text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+    files: undefined,
+    buffered: true,
+    headers: {
+      date: 'Tue, 03 Nov 2026 20:24:41 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T202441Z-1656f8b79d7x46p9hC1BN12p840000000nzg00000000556m',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    header: {
+      date: 'Tue, 03 Nov 2026 20:24:41 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T202441Z-1656f8b79d7x46p9hC1BN12p840000000nzg00000000556m',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    statusCode: 500,
+    status: 500,
+    statusType: 5,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: false,
+    serverError: true,
+    error: Error: cannot GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27life%20expectancy%20at%20birth%20%28years%29%27%29&%24format=json (500)
+        at Response.toError (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:116:17)
+        at ResponseBase._setStatusProperties (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\response-base.js:107:48)
+        at new Response (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:47:8)
+        at Request._emitResponse (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1125:20)
+        at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:38)
+        at IncomingMessage.emit (node:events:526:24)
+        at endReadableNT (node:internal/streams/readable:1764:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+      status: 500,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      method: 'GET',
+      path: '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27life%20expectancy%20at%20birth%20%28years%29%27%29&%24format=json'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: false,
+    unprocessableEntity: false,
+    type: 'text/html',
+    charset: 'UTF-8',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    pipe: [Function (anonymous)],
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+Error fetching WHO indicators: Error: Internal Server Error
+    at Request.callback (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1079:17)
+    at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:18)
+    at IncomingMessage.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 500,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 5,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 14,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null,
+      Symbol(kAbortSignalSocket): null,
+      Symbol(kAbortSignalListener): null,
+      Symbol(kAbortSignalDetached): true
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'https://ghoapi.azureedge.net/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Age-standardized%20prevalence%20of%20diabetes%20mellitus%20among%20adults%20aged%2018%2B%20years%20%28%25%29%27%29&%24format=json',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'https:',
+      host: 'ghoapi.azureedge.net',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      _fullfilledPromise: [Promise],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Age-standardized%20prevalence%20of%20diabetes%20mellitus%20among%20adults%20aged%2018%2B%20years%20%28%25%29%27%29&%24format=json HTTP/1.1\r\n' +
+        'User-Agent: medical-mcp/1.0\r\n' +
+        'Host: ghoapi.azureedge.net\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      httpValidation: undefined,
+      joinDuplicateHeaders: undefined,
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'ghoapi.azureedge.net',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kWritableFinished): true,
+      Symbol(kEndCallbacks): null,
+      Symbol(kFlushError): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kPath): '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Age-standardized%20prevalence%20of%20diabetes%20mellitus%20among%20adults%20aged%2018%2B%20years%20%28%25%29%27%29&%24format=json',
+      Symbol(kProxyRewrittenToAbsolute): false,
+      Symbol(kAuthority): 'ghoapi.azureedge.net',
+      Symbol(kUniqueHeaders): null
+    },
+    text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+    files: undefined,
+    buffered: true,
+    headers: {
+      date: 'Tue, 03 Nov 2026 20:24:44 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T202444Z-1656f8b79d72bv5qhC1BN11m700000000x1000000000dpb1',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    header: {
+      date: 'Tue, 03 Nov 2026 20:24:44 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T202444Z-1656f8b79d72bv5qhC1BN11m700000000x1000000000dpb1',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    statusCode: 500,
+    status: 500,
+    statusType: 5,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: false,
+    serverError: true,
+    error: Error: cannot GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Age-standardized%20prevalence%20of%20diabetes%20mellitus%20among%20adults%20aged%2018%2B%20years%20%28%25%29%27%29&%24format=json (500)
+        at Response.toError (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:116:17)
+        at ResponseBase._setStatusProperties (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\response-base.js:107:48)
+        at new Response (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:47:8)
+        at Request._emitResponse (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1125:20)
+        at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:38)
+        at IncomingMessage.emit (node:events:526:24)
+        at endReadableNT (node:internal/streams/readable:1764:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+      status: 500,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      method: 'GET',
+      path: '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Age-standardized%20prevalence%20of%20diabetes%20mellitus%20among%20adults%20aged%2018%2B%20years%20%28%25%29%27%29&%24format=json'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: false,
+    unprocessableEntity: false,
+    type: 'text/html',
+    charset: 'UTF-8',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    pipe: [Function (anonymous)],
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+Error fetching WHO indicators: Error: Internal Server Error
+    at Request.callback (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1079:17)
+    at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:18)
+    at IncomingMessage.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 500,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 5,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 14,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null,
+      Symbol(kAbortSignalSocket): null,
+      Symbol(kAbortSignalListener): null,
+      Symbol(kAbortSignalDetached): true
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'https://ghoapi.azureedge.net/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Prevalence%20of%20raised%20fasting%20blood%20glucose%20%28age-standardized%29%20%28%25%29%27%29&%24format=json',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'https:',
+      host: 'ghoapi.azureedge.net',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      _fullfilledPromise: [Promise],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Prevalence%20of%20raised%20fasting%20blood%20glucose%20%28age-standardized%29%20%28%25%29%27%29&%24format=json HTTP/1.1\r\n' +
+        'User-Agent: medical-mcp/1.0\r\n' +
+        'Host: ghoapi.azureedge.net\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      httpValidation: undefined,
+      joinDuplicateHeaders: undefined,
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'ghoapi.azureedge.net',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kWritableFinished): true,
+      Symbol(kEndCallbacks): null,
+      Symbol(kFlushError): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kPath): '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Prevalence%20of%20raised%20fasting%20blood%20glucose%20%28age-standardized%29%20%28%25%29%27%29&%24format=json',
+      Symbol(kProxyRewrittenToAbsolute): false,
+      Symbol(kAuthority): 'ghoapi.azureedge.net',
+      Symbol(kUniqueHeaders): null
+    },
+    text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+    files: undefined,
+    buffered: true,
+    headers: {
+      date: 'Tue, 03 Nov 2026 20:24:45 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T202444Z-1656f8b79d74zkrmhC1BN1wq440000000wyg000000005ecz',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    header: {
+      date: 'Tue, 03 Nov 2026 20:24:45 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T202444Z-1656f8b79d74zkrmhC1BN1wq440000000wyg000000005ecz',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    statusCode: 500,
+    status: 500,
+    statusType: 5,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: false,
+    serverError: true,
+    error: Error: cannot GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Prevalence%20of%20raised%20fasting%20blood%20glucose%20%28age-standardized%29%20%28%25%29%27%29&%24format=json (500)
+        at Response.toError (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:116:17)
+        at ResponseBase._setStatusProperties (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\response-base.js:107:48)
+        at new Response (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:47:8)
+        at Request._emitResponse (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1125:20)
+        at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:38)
+        at IncomingMessage.emit (node:events:526:24)
+        at endReadableNT (node:internal/streams/readable:1764:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+      status: 500,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      method: 'GET',
+      path: '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Prevalence%20of%20raised%20fasting%20blood%20glucose%20%28age-standardized%29%20%28%25%29%27%29&%24format=json'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: false,
+    unprocessableEntity: false,
+    type: 'text/html',
+    charset: 'UTF-8',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    pipe: [Function (anonymous)],
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+Error fetching WHO indicators: Error: Internal Server Error
+    at Request.callback (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1079:17)
+    at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:18)
+    at IncomingMessage.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 500,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 5,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 14,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null,
+      Symbol(kAbortSignalSocket): null,
+      Symbol(kAbortSignalListener): null,
+      Symbol(kAbortSignalDetached): true
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'https://ghoapi.azureedge.net/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Diabetes%20mellitus%20prevalence%2C%2018%2B%20years%2C%20age-standardized%20%28%25%29%27%29&%24format=json',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'https:',
+      host: 'ghoapi.azureedge.net',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      _fullfilledPromise: [Promise],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Diabetes%20mellitus%20prevalence%2C%2018%2B%20years%2C%20age-standardized%20%28%25%29%27%29&%24format=json HTTP/1.1\r\n' +
+        'User-Agent: medical-mcp/1.0\r\n' +
+        'Host: ghoapi.azureedge.net\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      httpValidation: undefined,
+      joinDuplicateHeaders: undefined,
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'ghoapi.azureedge.net',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kWritableFinished): true,
+      Symbol(kEndCallbacks): null,
+      Symbol(kFlushError): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kPath): '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Diabetes%20mellitus%20prevalence%2C%2018%2B%20years%2C%20age-standardized%20%28%25%29%27%29&%24format=json',
+      Symbol(kProxyRewrittenToAbsolute): false,
+      Symbol(kAuthority): 'ghoapi.azureedge.net',
+      Symbol(kUniqueHeaders): null
+    },
+    text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+    files: undefined,
+    buffered: true,
+    headers: {
+      date: 'Tue, 03 Nov 2026 20:24:45 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T202445Z-1656f8b79d72bv5qhC1BN11m700000000wr000000000hy4t',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    header: {
+      date: 'Tue, 03 Nov 2026 20:24:45 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T202445Z-1656f8b79d72bv5qhC1BN11m700000000wr000000000hy4t',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    statusCode: 500,
+    status: 500,
+    statusType: 5,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: false,
+    serverError: true,
+    error: Error: cannot GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Diabetes%20mellitus%20prevalence%2C%2018%2B%20years%2C%20age-standardized%20%28%25%29%27%29&%24format=json (500)
+        at Response.toError (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:116:17)
+        at ResponseBase._setStatusProperties (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\response-base.js:107:48)
+        at new Response (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:47:8)
+        at Request._emitResponse (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1125:20)
+        at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:38)
+        at IncomingMessage.emit (node:events:526:24)
+        at endReadableNT (node:internal/streams/readable:1764:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+      status: 500,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      method: 'GET',
+      path: '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Diabetes%20mellitus%20prevalence%2C%2018%2B%20years%2C%20age-standardized%20%28%25%29%27%29&%24format=json'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: false,
+    unprocessableEntity: false,
+    type: 'text/html',
+    charset: 'UTF-8',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    pipe: [Function (anonymous)],
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+Error fetching WHO indicators: Error: Internal Server Error
+    at Request.callback (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1079:17)
+    at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:18)
+    at IncomingMessage.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 500,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 5,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 14,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null,
+      Symbol(kAbortSignalSocket): null,
+      Symbol(kAbortSignalListener): null,
+      Symbol(kAbortSignalDetached): true
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'https://ghoapi.azureedge.net/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Noncommunicable%20diseases%27%29&%24format=json',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'https:',
+      host: 'ghoapi.azureedge.net',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      _fullfilledPromise: [Promise],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Noncommunicable%20diseases%27%29&%24format=json HTTP/1.1\r\n' +
+        'User-Agent: medical-mcp/1.0\r\n' +
+        'Host: ghoapi.azureedge.net\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      httpValidation: undefined,
+      joinDuplicateHeaders: undefined,
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'ghoapi.azureedge.net',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kWritableFinished): true,
+      Symbol(kEndCallbacks): null,
+      Symbol(kFlushError): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kPath): '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Noncommunicable%20diseases%27%29&%24format=json',
+      Symbol(kProxyRewrittenToAbsolute): false,
+      Symbol(kAuthority): 'ghoapi.azureedge.net',
+      Symbol(kUniqueHeaders): null
+    },
+    text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+    files: undefined,
+    buffered: true,
+    headers: {
+      date: 'Tue, 03 Nov 2026 20:24:46 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T202446Z-1656f8b79d7v68s9hC1BN16y5s0000000x4g00000000580b',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    header: {
+      date: 'Tue, 03 Nov 2026 20:24:46 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T202446Z-1656f8b79d7v68s9hC1BN16y5s0000000x4g00000000580b',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    statusCode: 500,
+    status: 500,
+    statusType: 5,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: false,
+    serverError: true,
+    error: Error: cannot GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Noncommunicable%20diseases%27%29&%24format=json (500)
+        at Response.toError (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:116:17)
+        at ResponseBase._setStatusProperties (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\response-base.js:107:48)
+        at new Response (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:47:8)
+        at Request._emitResponse (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1125:20)
+        at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:38)
+        at IncomingMessage.emit (node:events:526:24)
+        at endReadableNT (node:internal/streams/readable:1764:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+      status: 500,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      method: 'GET',
+      path: '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Noncommunicable%20diseases%27%29&%24format=json'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: false,
+    unprocessableEntity: false,
+    type: 'text/html',
+    charset: 'UTF-8',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    pipe: [Function (anonymous)],
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+Error fetching WHO indicators: Error: Internal Server Error
+    at Request.callback (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1079:17)
+    at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:18)
+    at IncomingMessage.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  status: 500,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 5,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 14,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0,
+      Symbol(kAbortController): null,
+      Symbol(kAbortSignalSocket): null,
+      Symbol(kAbortSignalListener): null,
+      Symbol(kAbortSignalDetached): true
+    },
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'https://ghoapi.azureedge.net/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Probability%20of%20premature%20mortality%20from%20NCDs%20between%20ages%2030%20and%2070%20years%20%28%25%29%27%29&%24format=json',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'https:',
+      host: 'ghoapi.azureedge.net',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      _fullfilledPromise: [Promise],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: false,
+      _header: 'GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Probability%20of%20premature%20mortality%20from%20NCDs%20between%20ages%2030%20and%2070%20years%20%28%25%29%27%29&%24format=json HTTP/1.1\r\n' +
+        'User-Agent: medical-mcp/1.0\r\n' +
+        'Host: ghoapi.azureedge.net\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      httpValidation: undefined,
+      joinDuplicateHeaders: undefined,
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'ghoapi.azureedge.net',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kWritableFinished): true,
+      Symbol(kEndCallbacks): null,
+      Symbol(kFlushError): null,
+      Symbol(kHighWaterMark): 16384,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kPath): '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Probability%20of%20premature%20mortality%20from%20NCDs%20between%20ages%2030%20and%2070%20years%20%28%25%29%27%29&%24format=json',
+      Symbol(kProxyRewrittenToAbsolute): false,
+      Symbol(kAuthority): 'ghoapi.azureedge.net',
+      Symbol(kUniqueHeaders): null
+    },
+    text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+    files: undefined,
+    buffered: true,
+    headers: {
+      date: 'Tue, 03 Nov 2026 20:24:51 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T202450Z-1656f8b79d72wb9phC1BN167eg0000000qsg00000000gd92',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    header: {
+      date: 'Tue, 03 Nov 2026 20:24:51 GMT',
+      'content-type': 'text/html; charset=UTF-8',
+      'content-length': '82',
+      connection: 'close',
+      'x-azure-ref': '20261103T202450Z-1656f8b79d72wb9phC1BN167eg0000000qsg00000000gd92',
+      'x-fd-int-roxy-purgeid': '0',
+      'x-cache': 'TCP_MISS'
+    },
+    statusCode: 500,
+    status: 500,
+    statusType: 5,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: false,
+    serverError: true,
+    error: Error: cannot GET /api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Probability%20of%20premature%20mortality%20from%20NCDs%20between%20ages%2030%20and%2070%20years%20%28%25%29%27%29&%24format=json (500)
+        at Response.toError (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:116:17)
+        at ResponseBase._setStatusProperties (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\response-base.js:107:48)
+        at new Response (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\response.js:47:8)
+        at Request._emitResponse (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1125:20)
+        at IncomingMessage.<anonymous> (C:\Users\neelg\src\medical-mcp\node_modules\superagent\lib\node\index.js:1409:38)
+        at IncomingMessage.emit (node:events:526:24)
+        at endReadableNT (node:internal/streams/readable:1764:12)
+        at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+      status: 500,
+      text: '<html><head><title>Server Error</title></head><body>Server Error 500</body></html>',
+      method: 'GET',
+      path: '/api/Indicator?%24filter=contains%28IndicatorName%2C%20%27Probability%20of%20premature%20mortality%20from%20NCDs%20between%20ages%2030%20and%2070%20years%20%28%25%29%27%29&%24format=json'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: false,
+    unprocessableEntity: false,
+    type: 'text/html',
+    charset: 'UTF-8',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    pipe: [Function (anonymous)],
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+fail x-008     turns=8 calls=28 trust=1.00 live=8 prompt=52773 grounding=- 
+failed=['answer_includes_any']
+pass x-010     turns=2 calls=2 trust=0.99 live=0 prompt=12975 grounding=0.96 
+p10-E6-r2: 20/27 passed, 231 tool calls (99 live), 1,406,176 prompt tokens

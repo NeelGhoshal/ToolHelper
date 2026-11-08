@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "Keytruda"
+    ],
+    "entity": "article",
+    "limit": 5
+  },
+  "args_key": "143e77ae9525053bd172c821e3c644d1a70341e7974190bef2b4482ceeb2e109",
+  "recorded_at": "2026-11-03T08:19:06.118665+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5038.080299971625,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=Keytruda, exclude_retracted=true, sort=relevance, ranking_mode=lexical, ranking_policy=calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nEurope PMC source status: degraded (Europe PMC search unavailable) \nRetry: `biomcp search article --drug Keytruda --exclude-retracted --sort relevance --source europepmc --limit 5 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --drug Keytruda --exclude-retracted --sort relevance --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \nRanking: calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 36725738|[Pembrolizumab (Keytruda ) associated ocular hypotony].|PubTator3|2023-02-01|title 1/1|none| \n|PMID 36271954|Pembrolizumab for all|PubTator3|2022-10-22|-|none| \n|PMID 42971725|Enhanced melanoma-specific cytotoxic T-cell expansion and th…|PubMed|2026-11-02|-|none| \n|PMID 42969502|Impact of bone metastases on outcomes in patients with metas…|PubMed|2026-10-29|-|none| \n|PMID 33390489|Readministration of Pembrolizumab after Treatment of Tubercu…|PubTator3|2021-06-01|-|none| \n \n \n \nNewest indexed: 2026-11-02 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 36725738\n  biomcp search article --drug Keytruda --year-min 2021 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

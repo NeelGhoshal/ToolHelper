@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "BRAF",
+    "keyword": [
+      "V600E",
+      "melanoma",
+      "targeted therapy"
+    ],
+    "limit": 8,
+    "sort": "citations"
+  },
+  "args_key": "603f1f6580bddf24e2898ca8ab6d2f441ed7a6e8401c522cd239968a8867e731",
+  "recorded_at": "2026-11-03T05:37:22.586883+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3408.9204000192694,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=BRAF, keyword=V600E melanoma targeted therapy, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene BRAF --keyword \"V600E melanoma targeted therapy\" --exclude-retracted --sort citations --source semanticscholar --limit 8 --offset 0` \n \n \nFound 8 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 26462967|2015 American Thyroid Association Management Guidelines for…|Europe PMC|2016-01-01|-|10412| \n|PMID 23539594|Cancer genome landscapes.|Europe PMC|2013-03-01|-|6000| \n|PMID 25079317|Comprehensive molecular characterization of gastric adenocar…|Europe PMC|2014-07-23|-|5139| \n|PMID 42770269|A context-dependent modulatory role for eIF6 in acquired res…|PubMed|2026-09-22|-|0| \n|PMID 42907443|p38α orchestrates BRAF(V600E)-melanoma progression and immu…|PubMed|2026-09-22|-|0| \n|PMID 42794461|Predicted STAT1-BRAF and IRF7-MET Regulatory Links Are Assoc…|PubMed|2026-09-09|-|0| \n|PMID 38136350|The Targeted Degradation of BRAF V600E Reveals the Mechanism…|PubTator3|2023-12-12|-|none| \n|PMID 37065875|A Unique Case of Intracranial Amelanotic Melanoma with BRAF…|PubTator3|2023-03-24|-|none| \n \n \n \nNewest indexed: 2026-10-22 (12 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 26462967\n  biomcp search article -g BRAF -k \"V600E melanoma targeted therapy\" --year-min 2013 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 8 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

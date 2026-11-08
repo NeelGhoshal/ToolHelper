@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "trial",
+    "id": "NCT06112314",
+    "sections": [
+      "eligibility",
+      "arms"
+    ]
+  },
+  "args_key": "e7a409dd2017281e106cca58d8417578837fae5d3c43a7d5439103fef461d105",
+  "recorded_at": "2026-11-03T20:44:07.250702+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 167.98490000655875,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# NCT06112314 - eligibility, arms \n## Eligibility (ClinicalTrials.gov) \n \nSex: All\nEligible Ages: 18 Years to Any age\nHealthy Subjects: No\nInclusion Criteria:\n\n* Participants must be HLA-A\\*02:01-positive\n* Participants must have histologically confirmed Stage IV or unresectable Stage III melanoma\n* Archived or fresh tumor tissue sample that must be confirmed as adequate\n* Participants must have measurable disease per RECIST 1.1\n* Participant must have BRAF V600 mutation status determined\n* Participants must have an Eastern Cooperative Oncology Group (ECOG) performance status score of 0 or 1\n* Male and female participants of childbearing potential who are sexually active with a non-sterilized partner must agree to use highly effective methods of birth control from the study screening date until 5 months after the final dose of study intervention\n\nExclusion Criteria:\n\n* Participants with a history of a malignant disease other than those being treated in this study\n* Participants with untreated, active, or symptomatic central nervous system (CNS) metastases or carcinomatous meningitis\n* Hypersensitivity to IMC-F106C, nivolumab, relatlimab, or any associated excipients\n* Participants with clinically significant pulmonary disease or impaired lung function\n* Participants with clinically significant cardiac disease or impaired cardiac function\n* Participants with active autoimmune disease requiring immunosuppressive treatment\n* Participants with any medical condition that is poorly controlled or that would, in the Investigator's or Sponsor's judgment, adversely impact the participant's participation in the clinical study due to safety concerns, compliance with clinical study procedures, or interpretation of study results\n* Participants who received prior systemic anticancer therapy for unresectable or metastatic melanoma\n* Participants with a history of a life-threatening AE related to prior anti-PD-(L)1 or anti-LAG-3 \n## Arms (ClinicalTrials.gov) \n \n| Arm | Type | Interventions | Description | \n|---|---|---|---| \n| Arm A: Brenetafusp Low Dose + Nivolumab | EXPERIMENTAL | Brenetafusp, Nivolumab | Participants receive brenetafusp Low Dose once weekly (QW) f… | \n| Arm B: Brenetafusp High Dose + Nivolumab | EXPERIMENTAL | Brenetafusp, Nivolumab | Participants receive brenetafusp High Dose once weekly (QW)… | \n| Arm C: Nivolumab OR Nivolumab + Relatlimab | ACTIVE_COMPARATOR | Nivolumab, Nivolumab + Relatlimab | Participants receive nivolumab 480 mg monotherapy, or nivolu… | \nMore:\n  biomcp get trial NCT06112314 contacts   - central and site contact details\n  biomcp get trial NCT06112314 locations   - site list and contact details\n  biomcp get trial NCT06112314 outcomes   - endpoint measures and time frames\nAll:\n  biomcp get trial NCT06112314 all \nSee also:\n  biomcp search disease --query \"Advanced Melanoma\"\n  biomcp search article -d \"Advanced Melanoma\"\n  biomcp search trial -c \"Advanced Melanoma\"\n  biomcp search drug -q \"IMC-F106C\" \n\n[ClinicalTrials.gov](https://clinicaltrials.gov/study/NCT06112314)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "status": "recruiting",
+    "criteria": [
+      "vemurafenib OR encorafenib OR dabrafenib"
+    ]
+  },
+  "args_key": "44e0544539675b8bd3ba2626547218e5cfb2646999c7833c5fdf0f70a8cf4e93",
+  "recorded_at": "2026-11-03T09:51:20.636413+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 176.1187000083737,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 18 of 18 \n \nQuery: condition=melanoma, status=recruiting, criteria=vemurafenib OR encorafenib OR dabrafenib \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT07440290|DETERMINE Trial Treatment…|RECRUITING|2/3|Haematological Malignancy, Malignant Neoplasm… [abridged; 20 conditions total]| \n|NCT04511013|A Study to Compare the Ad…|RECRUITING|2|Acral Lentiginous Melanoma, Clinical Stage IV… [abridged; 7 conditions total]| \n|NCT04903119|Nilotinib Plus Dabrafenib…|RECRUITING|1|Metastatic Melanoma, BRAF Gene Mutation| \n|NCT05768178|DETERMINE Trial Treatment…|RECRUITING|2/3|Haematological Malignancy, Melanoma, Thyroid… [abridged; 12 conditions total]| \n|NCT03340506|Dabrafenib and/or Trameti…|RECRUITING|4|Melanoma, Non Small Cell Lung Cancer, Solid Tu… [abridged; 5 conditions total]| \n|NCT07504796|ctDNA-guided Addition of…|RECRUITING|2|Metastatic Melanoma, Advanced Melanoma| \n|NCT01638676|A Phase I/II Trial of Vem…|RECRUITING|1/2|Melanoma| \n|NCT06774989|Real-life Pharmacological…|RECRUITING|-|Melanoma (Skin)| \n|NCT04045691|Binimetinib Plus Encorafe…|RECRUITING|-|Melanoma Stage IV, Melanoma Stage III| \n|NCT07287917|Study of AMXT 1501 and DF…|RECRUITING|1/2|Melanoma (Skin Cancer), HER2-low Hormone Receptor Positive Breast Cancer| \n|NCT06887088|Encorafenib and biNimetin…|RECRUITING|2|Melanoma BRAF V600E/K Mutated, Melanoma and Brain Metastases| \n|NCT04741997|Adjuvant Therapy Based on…|RECRUITING|EARLY_PHASE1|Melanoma Stage III, Melanoma Stage IV, BRAF V600 Mutation| \n|NCT05969860|At-Home Cancer Directed T…|RECRUITING|2|Advanced Anal Carcinoma, Advanced Biliary Tra… [abridged; 44 conditions total]| \n|NCT06194929|Defactinib and Avutometin…|RECRUITING|1/2|Cutaneous Melanoma, Brain Metastases| \n|NCT06651151|NeoLIPA: Neoadjuvant LTX-…|RECRUITING|2|Melanoma Stage IIIB-IV| \n|NCT05428007|Interleukin-6 Receptor In…|RECRUITING|2|Melanoma, Unresectable Melanoma| \n|NCT07070232|A Clinical Study to Test…|RECRUITING|1/2|Advanced Solid Tumor| \n|NCT05914116|A Phase 1/2a Study of DB-…|RECRUITING|1/2|Advanced Solid Tumors| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-18 of 18 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

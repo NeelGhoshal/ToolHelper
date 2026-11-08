@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "81372d0086b1b8488f04faf7c1291d81209a9148bd3703413709d5c0d9b3d42d",
+  "recorded_at": "2026-11-03T06:02:30.314065+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5294.753900030628,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 23550210|Integrative analysis of complex cancer genomics and clinical…|Europe PMC|2013-04-02|-|12856| \n|PMID 26462967|2015 American Thyroid Association Management Guidelines for…|Europe PMC|2016-01-01|-|10412| \n|PMID 22810696|Comprehensive molecular characterization of human colon and…|Europe PMC|2012-07-18|-|7079| \n|PMID 23539594|Cancer genome landscapes.|Europe PMC|2013-03-01|-|6000| \n|PMID 42967654|[Construction and internal validation of a prognostic predic…|PubMed|2026-11-03|-|none| \n|PMID 42970403|The Modern Continuum of Care for Colorectal Liver Metastases…|PubMed|2026-11-02|-|none| \n|PMID 42969502|Impact of bone metastases on outcomes in patients with metas…|PubMed|2026-10-29|-|none| \n|PMID 42968308|[Early Detection of Serous Retinal Detachment During BRAF an…|PubMed|2026-01-01|-|none| \n|PMID 39006910|Modified TI-RADS Coupled with BRAFV600E Enhances Diagnostic…|PubTator3|2024-07-10|-|none| \n|PMID 39086414|An Overview on Prevalence and Detection Approaches of BRAF V…|PubTator3|2024-07-01|-|none| \n \n \n \nNewest indexed: 2026-11-02 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 23550210\n  biomcp variant articles \"BRAF V600E\"\n  biomcp search article -k \"BRAF V600E\" --year-min 2012 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

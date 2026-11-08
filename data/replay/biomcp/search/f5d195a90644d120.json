@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "mutation": [
+      "BRAF V600"
+    ]
+  },
+  "args_key": "f5d195a90644d120a85d9394e78d346888833f4bad29542723386375e3a6ae20",
+  "recorded_at": "2026-11-04T22:32:25.763117+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6492.045999999391,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 25 trial(s) \n \nQuery: condition=melanoma, mutation=BRAF V600 \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT06703398|A Study of GC101 TIL in A…|RECRUITING|2|Melanoma| \n|NCT05097378|Perioperative Encobini in…|ACTIVE_NOT_RECRUITING|2|Melanoma, Cancer| \n|NCT05544929|A Study of Safety and Eff…|ACTIVE_NOT_RECRUITING|1|Carcinoma, Non-Small-Cell Lung, Cutaneous Mel… [abridged; 12 conditions total]| \n|NCT06708455|Phase 2b of RAPA-201 Cell…|NOT_YET_RECRUITING|2|Malignant Melanoma With Metastasis, Malignant… [abridged; 4 conditions total]| \n|NCT01307397|A Study of Vemurafenib in…|COMPLETED|3|Malignant Melanoma| \n|NCT01682083|Dabrafenib With Trametini…|COMPLETED|3|Melanoma| \n|NCT01972347|Neoadjuvant Dabrafenib +…|COMPLETED|2|Melanoma| \n|NCT02159066|LGX818 and MEK162 in Comb…|COMPLETED|2|Melanoma| \n|NCT02296996|Dabrafenib and Trametinib…|COMPLETED|2|Malignant Melanoma| \n|NCT02799901|Nivolumab Plus Radiothera…|COMPLETED|2|Melanoma| \n|NCT03416933|Therapeutic Drug Monitori…|COMPLETED|NA|Melanoma (Skin)| \n|NCT04039672|Interest of Tumor Replica…|COMPLETED|NA|Melanoma| \n|NCT04240717|Shared Decision Making on…|COMPLETED|NA|Patient Decision Aid, Treatment As Usual| \n|NCT05806268|Patient Characteristics,…|COMPLETED|-|BRAF v600 Mutated Metastatic Melanoma| \n|NCT02915666|A Clinical Trial of Patie…|WITHDRAWN|1|Melanoma| \n|NCT03982134|PDR001 + Panobinostat for…|WITHDRAWN|1|Melanoma, Non Small Cell Lung Cancer| \n|NCT01942993|The Effects of Treatment…|TERMINATED|2|Melanoma| \n|NCT02974803|Concurrent Dabrafenib + T…|TERMINATED|2|Melanoma, Brain Metastases| \n|NCT03332589|E6201 Plus Dabrafenib for…|TERMINATED|1|Malignant Melanoma, Brain Metastases| \n|NCT03391050|A Study of APR-246 in Com…|TERMINATED|1/2|Melanoma| \n|NCT04198818|A Study to Evaluate the S…|TERMINATED|1/2|Advanced Tumors, Melanoma, Non-Small-Cell Lung… [abridged; 5 conditions total]| \n|NCT04221438|Testing Treatment With En…|TERMINATED|2|Melanoma of Unknown Primary, Metastatic Malign… [abridged; 6 conditions total]| \n|NCT04698187|CMP-001 in Combination Wi…|TERMINATED|2|Melanoma, Advanced Melanoma, Metastatic Melanoma, Unresectable Melanoma| \n|NCT04834973|A Trial of Tigilanol Tigl…|TERMINATED|1/2|Melanoma| \n|NCT05050006|ITIL-168 in Advanced Mela…|TERMINATED|2|Advanced Cutaneous Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 25 results (total unknown). Use --offset 25 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

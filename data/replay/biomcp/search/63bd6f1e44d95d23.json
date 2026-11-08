@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 5,
+    "query": "BRAF V600E melanoma significance"
+  },
+  "args_key": "63bd6f1e44d95d23c6de43417024abe1cc8ac07d07add803b9af579a0f1b2642",
+  "recorded_at": "2026-11-04T20:19:20.914544+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1273.0695999999853,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: BRAF V600E melanoma significance \n \nFound 1 gene \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| BRAF | B-Raf proto-oncogene, serine/threonine kinase | 673 | 7:140719327-140925199 | GRCh38 | P15056 | 164757 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1 of 1 results. \n \n\n\n## Next commands\n- `biomcp get gene BRAF`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

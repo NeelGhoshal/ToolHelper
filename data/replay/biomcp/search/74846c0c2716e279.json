@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "in vivo",
+      "base editing"
+    ],
+    "limit": 15,
+    "sort": "date"
+  },
+  "args_key": "74846c0c2716e2790e782d305d4e5324ce9d397eaae7c034f479600e0d6375fc",
+  "recorded_at": "2026-11-03T09:18:27.495884+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3867.684900003951,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR in vivo base editing, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CRISPR in vivo base editing\" --exclude-retracted --sort date --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42771307|Base Editing: Mechanisms and Therapeutic Applications.|Europe PMC|2027-01-01|-|0| \n|PMID 42771321|Electroporation for High-Efficiency Delivery of CRISPR to He…|PubTator3, Europe PMC|2027-01-01|-|0| \n|PMID 42771322|An Electroporation-Based Protocol for Ex Vivo Base Editing:…|PubTator3, Europe PMC|2027-01-01|-|0| \n|PMID 42963315|sox17 Mutagenesis Reveals Compounding Effects ofMaternal and…|Europe PMC|2027-01-01|-|0| \n|PMID 42771308|An Overview of Programmable Epigenetic Editing Based on CRIS…|PubTator3|2027-01-01|-|none| \n|PMID 42771312|Adeno-Associated Viral Vector (AAV)-Mediated In Vivo CRISPR-…|PubTator3|2027-01-01|-|none| \n|PMID 41593489|Microalgae as novel drug-delivery system for biomedical fiel…|PubTator3|2026-12-31|-|none| \n|PMID 41653064|Research progress of endophytes and their secondary metaboli…|PubTator3|2026-12-31|-|none| \n|PMID 42965655|A homozygous loss-of-function mutation in the C-terminal of…|PubMed|2026-10-31|-|0| \n|PMID 42950026|FOSL1-associated condensates modulate superenhancer-mediated…|PubMed|2026-10-30|-|0| \n|PMID 42957916|Research progress of gene correction for genetic diseases vi…|PubMed|2026-10-30|-|0| \n|PMID 42949002|A targeting delivery platform for the mapping of responses t…|PubMed|2026-10-28|-|0| \n|PMID 42947871|Knockout and re-expression system for mutant analysis in pri…|PubMed|2026-10-13|-|0| \n|PMID 42733772|Biomaterials for intervertebral disc regeneration: Niche rep…|Europe PMC|2026-09-03|-|0| \n|PMID 42729488|From RNA design to delivery: Computational strategies for fu…|Europe PMC|2026-08-31|-|0| \n \n \n \nNewest indexed: 2026-10-31 (3 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42771307\n  biomcp search article -k \"CRISPR in vivo base editing\" --year-min 2026 --year-max 2027 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

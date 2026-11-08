@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "meta-analysis",
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "Alzheimer",
+      "risk"
+    ],
+    "limit": 10
+  },
+  "args_key": "5612dfde63a284f8e9372e911d53e6a9a36d2d9663760fad032457780f156e9a",
+  "recorded_at": "2026-11-03T10:46:58.668184+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3734.3408000306226,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin Alzheimer risk, type=meta-analysis, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 34871380|Statin use and risk of dementia or Alzheimer's disease: a sy…|Europe PMC, PubMed|2022-05-01|hybrid 0.53 + title 3/3|167| \n|PMID 41083880|The role of APOE ε4 in modulating the relationship between…|Europe PMC, PubMed|2025-10-13|hybrid 0.271 + title 1/3|7| \n|PMID 41286463|Dissecting the genetic and proteomic risk factors for deliri…|Europe PMC|2025-11-24|hybrid 0.26 + title 1/3|9| \n|PMID 40579157|Treatment of Hypothyroidism That Contains Liothyronine is As…|Europe PMC|2026-01-01|hybrid 0.25 + title 1/3|5| \n|PMID 39689376|Dietary inflammatory potential and the risk of cognitive imp…|Europe PMC|2024-12-16|hybrid 0.247 + title 1/3|11| \n|PMID 31714636|Lipid lowering and Alzheimer disease risk: A mendelian rando…|PubMed|2020-01-01|hybrid 0.23 + title 2/3|95| \n|PMID 31574510|Association between Use of Statin and Risk of Dementia: A Me…|PubMed|2020-01-01|hybrid 0.22 + title 2/3|88| \n|PMID 29914039|Does Treating Vascular Risk Factors Prevent Dementia and Alz…|PubMed|2018-01-01|hybrid 0.2 + title 2/3|71| \n|PMID 40709486|A meta-analysis and systematic review of interventions to pr…|Europe PMC|2025-07-01|hybrid 0.184 + title 1/3|3| \n|PMID 39798939|GWAS of CRP response to statins further supports the role of…|PubMed|2025-02-01|hybrid 0.18 + title 1/3|3| \n \n \n \nNewest indexed: 2025-11-25 (343 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 34871380\n  biomcp search article -k \"statin Alzheimer risk\" --type meta-analysis --year-min 2018 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

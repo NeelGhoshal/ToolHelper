@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp list disease",
+    "json": true
+  },
+  "args_key": "9b582a48dc39b8538b36b18585dfb1477b022f15bad23e250d5d01429c796231",
+  "recorded_at": "2026-11-03T09:46:53.891073+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 3.1234999769367278,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"kind\": \"list_entity\",\n  \"entity\": \"disease\",\n  \"entries\": [\n    {\n      \"kind\": \"prose\",\n      \"section\": \"routing\",\n      \"text\": \"Use literal commands directly. Replace every typed placeholder in a template before execution.\"\n    },\n    {\n      \"kind\": \"template\",\n      \"section\": \"commands\",\n      \"template\": \"search disease <query>\",\n      \"placeholders\": [\n        {\n          \"name\": \"query\",\n          \"type\": \"text\"\n        }\n      ]\n    },\n    {\n      \"kind\": \"template\",\n      \"section\": \"commands\",\n      \"template\": \"get disease <id>\",\n      \"placeholders\": [\n        {\n          \"name\": \"id\",\n          \"type\": \"identifier\"\n        }\n      ]\n    }\n  ]\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

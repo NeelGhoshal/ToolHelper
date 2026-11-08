@@ -1,0 +1,28 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp get drug sertraline"
+  },
+  "args_key": "d23cb7f1aef547568728c21c8c94e08d8c798af6291fa6f034a7160abc2ae30c",
+  "recorded_at": "2026-11-04T21:07:00.324692+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 2130.3486000001612,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# sertraline \n \nDrugBank ID: DB01104 \nType (MyChem.info): small-molecule \nFDA Approved (DrugCentral): December 30, 1991 \nBrand Names (DrugBank): Sertraline HCl \nRoute (MyChem.info): oral \nSafety (OpenFDA FAERS): NAUSEA, DRUG INEFFECTIVE, FATIGUE \n \n## Mechanisms (MyChem.info / ChEMBL) \n \nSerotonin Uptake Inhibitors \n## Targets (ChEMBL / Open Targets) \nSLC6A4 \n## Indications (Open Targets) \n \nDepressive disorder, Obsessive-compulsive disorder, Panic disorder, Posttraumatic stress disorder, Premenstrual dysphoric disorder, Social phobia \nMore:\n  biomcp get drug sertraline approvals   - Drugs@FDA approval history\n  biomcp get drug sertraline label   - approved-indication and FDA label detail beyond the base card\n  biomcp get drug sertraline regulatory --region us   - approval and supplement history; use only if the base card lacks approval context\n\nAll:\n  biomcp get drug sertraline all --region us \nSee also:\n  biomcp search article --drug sertraline --type review --limit 5   - supplement sparse structured data with review literature for indication context\n  biomcp drug trials sertraline\n  biomcp drug adverse-events sertraline   - inspect safety reports and adverse-event signal\n  biomcp search pgx -d sertraline   - pharmacogenomics interactions\n  biomcp get gene SLC6A4 \n\n[DrugBank](https://go.drugbank.com/drugs/DB01104) | [ChEMBL](https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL809) | [OpenFDA FAERS](https://api.fda.gov/drug/event.json?search=%28patient.drug.openfda.generic_name%3A%22sertraline%22+OR+patient.drug.openfda.brand_name%3A%22sertraline%22+OR+patient.drug.medicinalproduct%3A%22sertraline%22%29+AND+patient.drug.drugcharacterization%3A1&count=patient.reaction.reactionmeddrapt.exact&limit=50) | [DailyMed](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=623b9672-b41e-4ec9-b2cc-f5bb383c39ba)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

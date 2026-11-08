@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "gene editing",
+      "clinical trial"
+    ],
+    "limit": 15,
+    "sort": "date"
+  },
+  "args_key": "f6e74946f86a4435b1aece5ef2b05ffc15adaeb6990bd6fc0b5e2db5a538a8d4",
+  "recorded_at": "2026-11-03T05:20:47.884948+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3904.530200001318,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR gene editing clinical trial, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CRISPR gene editing clinical trial\" --exclude-retracted --sort date --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41427517|Polymersome-based nanomedicine for combined cancer therapy|PubTator3|2026-12-31|-|none| \n|PMID 41543272|Non-Viral CRISPR carriers: transient delivery with lasting e…|PubTator3|2026-12-31|-|none| \n|PMID 41617669|Precise probiotic therapy: Advances, bottlenecks, and the ro…|PubTator3|2026-12-31|-|none| \n|PMID 41653064|Research progress of endophytes and their secondary metaboli…|PubTator3|2026-12-31|-|none| \n|PMID 41668545|Mitochondrial dysfunction and applications of mitochondrial-…|PubTator3|2026-12-31|-|none| \n|PMID 41888028|A dual-gene-deleted ASFV Lv17/WB/Rie1-DeltaCD candidate admi…|PubTator3|2026-12-31|-|none| \n|PMID 42933389|In vivo genome-editing therapy for Duchenne muscular dystrop…|PubMed|2026-10-26|-|0| \n|PMID 42919351|Innovations and emerging trends in adoptive cell therapies f…|PubMed|2026-10-22|-|0| \n|PMID 42921508|Potential Therapeutic Applications of Spherical Nucleic Acid…|PubMed|2026-10-19|-|0| \n|PMID 42890282|Individualized and Platform-Designated Gene-Editing Studies…|PubMed|2026-10-15|-|0| \n|PMID 42959597|Phase 1 evaluation of APN401, an autologous CBL-B-silenced P…|Europe PMC|2026-10-05|-|0| \n|PMID 42898339|Advancing cardiac xenotransplantation: overcoming challenges…|PubMed|2026-10-05|-|0| \n|PMID 42831006|Advances and perspectives in genetically encoded biosensors…|Europe PMC|2026-09-23|-|0| \n|PMID 42733772|Biomaterials for intervertebral disc regeneration: Niche rep…|Europe PMC|2026-09-03|-|0| \n|PMID 42729488|From RNA design to delivery: Computational strategies for fu…|Europe PMC|2026-08-31|-|0| \n \n \n \nNewest indexed: 2026-10-31 (3 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41427517\n  biomcp search article -k \"CRISPR gene editing clinical trial\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

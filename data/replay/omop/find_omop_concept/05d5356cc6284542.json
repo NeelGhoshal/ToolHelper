@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "metformin hydrochloride",
+    "max_results": 10,
+    "omop_field": "concept_name",
+    "omop_table": "concept"
+  },
+  "args_key": "05d5356cc6284542567e761f7f6ad9e847aadeb34120e6b528af66645d45da0b",
+  "recorded_at": "2026-11-05T03:57:59.274306+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1192.616199998156,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 40164902,\n      \"code\": \"861730\",\n      \"name\": \"metformin hydrochloride 250 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40164902\"\n    },\n    {\n      \"concept_id\": 40164903,\n      \"code\": \"860974\",\n      \"name\": \"metformin hydrochloride 500 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40164903\"\n    },\n    {\n      \"concept_id\": 40164934,\n      \"code\": \"861020\",\n      \"name\": \"metformin hydrochloride 625 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40164934\"\n    },\n    {\n      \"concept_id\": 40164938,\n      \"code\": \"860980\",\n      \"name\": \"metformin hydrochloride 750 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40164938\"\n    },\n    {\n      \"concept_id\": 40164942,\n      \"code\": \"861009\",\n      \"name\": \"metformin hydrochloride 850 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40164942\"\n    },\n    {\n      \"concept_id\": 40164884,\n      \"code\": \"860995\",\n      \"name\": \"metformin hydrochloride 1000 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40164884\"\n    },\n    {\n      \"concept_id\": 40164880,\n      \"code\": \"861024\",\n      \"name\": \"metformin hydrochloride 100 MG/ML\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40164880\"\n    },\n    {\n      \"concept_id\": 40164931,\n      \"code\": \"861001\",\n      \"name\": \"metformin hydrochloride 500 MG [Fortamet]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40164931\"\n    },\n    {\n      \"concept_id\": 40167189,\n      \"code\": \"875864\",\n      \"name\": \"metformin hydrochloride 500 MG [Glucamet]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40167189\"\n    },\n    {\n      \"concept_id\": 40164933,\n      \"code\": \"861017\",\n      \"name\": \"metformin hydrochloride 500 MG [Glumetza]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40164933\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"metformin hydrochloride\",\n    \"omop_table\": \"concept\",\n    \"omop_field\": \"concept_name\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

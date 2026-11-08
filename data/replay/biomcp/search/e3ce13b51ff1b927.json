@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "json": true,
+    "limit": 25,
+    "query": "melanoma BRAF NRAS CDKN2A driver mutations skin cancer"
+  },
+  "args_key": "e3ce13b51ff1b927911be144ae7d0d76d916a66bf9ab6cc62bd464b0cfa00fb6",
+  "recorded_at": "2026-11-03T07:55:04.200208+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 177.2546999854967,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 25,\n    \"returned\": 3,\n    \"total\": 3,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 3,\n  \"results\": [\n    {\n      \"symbol\": \"CDKN2A\",\n      \"name\": \"cyclin dependent kinase inhibitor 2A\",\n      \"entrez_id\": \"1029\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"9:21966924-21995301\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"P42771\",\n      \"omim_id\": \"600160\"\n    },\n    {\n      \"symbol\": \"NRAS\",\n      \"name\": \"NRAS proto-oncogene, GTPase\",\n      \"entrez_id\": \"4893\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"1:114704468-114716775\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"P01111\",\n      \"omim_id\": \"164790\"\n    },\n    {\n      \"symbol\": \"BRAF\",\n      \"name\": \"B-Raf proto-oncogene, serine/threonine kinase\",\n      \"entrez_id\": \"673\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"7:140719327-140925199\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"P15056\",\n      \"omim_id\": \"164757\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get gene CDKN2A\",\n      \"biomcp list gene\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

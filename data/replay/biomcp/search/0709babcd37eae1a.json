@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "HER2-targeted therapy",
+      "trastuzumab deruxtecan",
+      "antibody-drug conjugate"
+    ],
+    "limit": 10,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "0709babcd37eae1ae9e98d12f23f6a7e74145286d0785b877d358f02670455a4",
+  "recorded_at": "2026-11-04T07:28:17.539130+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1546.2729000719264,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=HER2-targeted therapy trastuzumab deruxtecan antibody-drug conjugate, exclude_retracted=true, sort=date, source=pubmed\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": false,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubmed\"\n    ],\n    \"enrichment_sources\": []\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": 150,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"42924615\",\n      \"title\": \"Advances in resistance mechanisms and counterstrategies for antibody‑drug conjugates in HER2‑low and HER2‑ultralow breast cancer (Review).\",\n      \"journal\": \"Oncology reports\",\n      \"date\": \"2026-12-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42914177\",\n      \"title\": \"Preclinical PET Imaging of Trastuzumab Deruxtecan in Tumors with Heterogeneous HER2 Expression.\",\n      \"journal\": \"Journal of nuclear medicine : official publication, Society of Nuclear Medicine\",\n      \"date\": \"2026-10-22\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42850399\",\n      \"title\": \"Right-sizing treatment for HER2-positive breast cancer: evolving algorithms across the disease continuum.\",\n      \"journal\": \"Nature reviews. Clinical oncology\",\n      \"date\": \"2026-10-08\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42842139\",\n      \"title\": \"Durable treatment response to Trastuzumab deruxtecan in two patients with recurrent grade III anaplastic ependymoma.\",\n      \"journal\": \"Molecular and cellular pediatrics\",\n      \"date\": \"2026-10-07\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42830854\",\n      \"title\": \"HER2-Targeted Antibody-Drug Conjugates in Advanced HER2-Low Breast Cancer: Mechanisms, Clinical Efficacy, and Resistance Strategies.\",\n      \"journal\": \"Cancer management and research\",\n      \"date\": \"2026-09-30\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42700519\",\n      \"title\": \"Facial palsy Revealing AR+/HER2+ Parotid carcinoma and the efficacy of HER2-Targeted therapy trastuzumab deruxtecan.\",\n      \"journal\": \"Oral oncology\",\n      \"date\": \"2026-09-05\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42682104\",\n      \"title\": \"DESTINY-Lung06: trastuzumab deruxtecan and pembrolizumab as first-line treatment for HER2-overexpressing, PD-L1 TPS <50% NSCLC.\",\n      \"journal\": \"Future oncology (London, England)\",\n      \"date\": \"2026-09-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42557411\",\n      \"title\": \"Redefining First-Line HER2-Positive Advanced Gastric Cancer: From Trastuzumab-Based Chemoimmunotherapy to Zanidatamab and Next-Generation HER2 Targeting.\",\n      \"journal\": \"Journal of gastrointestinal cancer\",\n      \"date\": \"2026-08-05\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42591577\",\n      \"title\": \"Emerging role of human epidermal growth factor 2-low status in the prognosis and management of triple-negative breast cancer: a narrative review.\",\n      \"journal\": \"Translational cancer research\",\n      \"date\": \"2026-07-31\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42591779\",\n      \"title\": \"Sequential HER2-targeted antibody-drug conjugate therapy for acquired resistance in a 55-year-old male kidney transplant recipient with metastatic urothelial carcinoma: a case report.\",\n      \"journal\": \"Translational cancer research\",\n      \"date\": \"2026-07-31\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42924615\",\n      \"biomcp search article -k \\\"HER2-targeted therapy trastuzumab deruxtecan antibody-drug conjugate\\\" --source pubmed --year-min 2026 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

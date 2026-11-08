@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2024-01-01",
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "trastuzumab deruxtecan",
+      "HER2"
+    ],
+    "limit": 10,
+    "sort": "date",
+    "source": "europepmc"
+  },
+  "args_key": "ed05a1c049c8fb61c13f79db3ebf4830c9f5d277606102097b92844e0ebdc7a3",
+  "recorded_at": "2026-11-05T05:16:21.416249+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3361.5097000001697,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: API request to Europe PMC failed. Retry the remote source."
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

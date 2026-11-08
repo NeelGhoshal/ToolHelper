@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "query": "ERBB2 HER2 human epidermal growth factor receptor 2"
+  },
+  "args_key": "7aa7fe927a39730bec25dd0e2aaf7578d38a19742578397bfbb8ae71d3d0430c",
+  "recorded_at": "2026-11-04T21:30:13.720970+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 915.9776999995302,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: ERBB2 HER2 human epidermal growth factor receptor 2 \n \nFound 1 gene \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| ERBB2 | erb-b2 receptor tyrosine kinase 2 | 2064 | 17:39687914-39730426 | GRCh38 | P04626 | 164870 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1 of 1 results. \n \n\n\n## Next commands\n- `biomcp get gene ERBB2`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

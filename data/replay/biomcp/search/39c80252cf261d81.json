@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "BRAF mutation"
+    ],
+    "intervention": [
+      "dabrafenib"
+    ],
+    "limit": 5,
+    "status": "recruiting"
+  },
+  "args_key": "39c80252cf261d816df4b7fa7ac2a8c632555c40184220c9a54e3e5460c7f2b3",
+  "recorded_at": "2026-11-03T13:51:05.874749+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 137.78099999763072,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 5 of 12 \n \nQuery: condition=BRAF mutation, intervention=dabrafenib, status=recruiting \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT06653517|Clinical Study of Neoadju…|RECRUITING|2|Ameloblastoma, BRAF V600E Mutation Positive| \n|NCT05722886|DETERMINE (Determining Ex…|RECRUITING|2/3|Haematological Malignancy, Solid Tumour| \n|NCT06079333|NEO- and Adjuvant Targete…|RECRUITING|2|Anaplastic Thyroid Cancer| \n|NCT06262919|Special Drug Use-results…|RECRUITING|-|BRAF V600E Mutation-positive Unresectable Advanced or Recurrent Solid Tumor| \n|NCT05525273|Treatment of BRAF ( B-Rap…|RECRUITING|2|Craniopharyngioma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-5 of 12 results. Use --offset 5 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "82728",
+    "json": true,
+    "sections": [
+      "label",
+      "indications",
+      "approvals",
+      "safety",
+      "targets",
+      "shortage",
+      "regulatory"
+    ]
+  },
+  "args_key": "bf05f5adc65d05529af5115dc274f0b38528059596dcaef96ed2173f26db7252",
+  "recorded_at": "2026-11-03T22:29:56.866143+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 3611.9192000478506,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"error\": {\n    \"code\": \"not_found\",\n    \"message\": \"No exact drug match for '82728'.\"\n  },\n  \"_meta\": {\n    \"not_found\": true,\n    \"alias_resolution\": {\n      \"kind\": \"ambiguous\",\n      \"requested_entity\": \"drug\",\n      \"query\": \"82728\",\n      \"candidates\": [\n        {\n          \"label\": \"82728000101\",\n          \"primary_type\": \"drug\",\n          \"primary_id\": \"DRON:00971962\",\n          \"confidence\": \"CanonicalId\",\n          \"match_tier\": \"Prefix\"\n        },\n        {\n          \"label\": \"S-(5-histidyl)cysteine sulfoxide dizwitterion\",\n          \"primary_type\": \"drug\",\n          \"primary_id\": \"CHEBI:82728\",\n          \"confidence\": \"CanonicalId\",\n          \"match_tier\": \"Weak\"\n        }\n      ]\n    },\n    \"next_commands\": [\n      \"biomcp discover 82728\",\n      \"biomcp search drug -q 82728\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

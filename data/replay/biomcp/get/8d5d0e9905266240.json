@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "sertraline",
+    "json": true,
+    "sections": [
+      "label",
+      "approvals",
+      "targets",
+      "xrefs"
+    ]
+  },
+  "args_key": "8d5d0e9905266240a32ffd97a294ad73afec52b141c60f28c3b998088e5266a0",
+  "recorded_at": "2026-11-04T21:49:44.322363+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.1454000004960108,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid drug section: xrefs"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "cognitive decline",
+      "randomized trial"
+    ],
+    "limit": 10,
+    "sort": "relevance"
+  },
+  "args_key": "cebe16c757ee3f522015fe4283180b130cf1920af0da6387c04c5002f6904030",
+  "recorded_at": "2026-11-04T06:39:06.973785+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5318.670899956487,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin cognitive decline randomized trial, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"statin cognitive decline randomized trial\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42535681|Visit-to-visit systolic blood pressure variability, blood pr…|Europe PMC|2026-08-01|hybrid 0.337 + title 2/5|1| \n|PMID 42010230|Brain, benefit, or burden? Revisiting statins and cognitive…|PubTator3, Europe PMC, PubMed|2026-04-20|hybrid 0.293 + title 1/5|1| \n|PMID 42863385|Pharmacological interventions for reducing the risk of cogni…|Europe PMC|2026-10-12|hybrid 0.203 + title 2/5|0| \n|PMID 41291653|Longitudinal investigation of the HbA1c/HDL-c ratio as a pot…|PubTator3|2025-11-25|hybrid 0.187 + title 2/5|none| \n|PMID 41870419|Effects of Exercise and Intensive Vascular Risk Reduction on…|PubMed|2026-05-01|hybrid 0.18 + title 3/5|4| \n|PMID 34331536|Statins and Cognitive Decline in the Cardiovascular Health S…|PubTator3|2022-05-05|hybrid 0.153 + title 2/5|none| \n|PMID 42825089|Association between timing of statin treatment after diabete…|Europe PMC|2026-08-27|hybrid 0.127 + title 1/5|0| \n|PMID 42930873|Heart and Brain: Linking Obesity-Related Inflammation, Cardi…|Europe PMC|2026-09-22|hybrid 0.11 + title 1/5|0| \n|PMID 38235315|What have clinical trials taught us about brain health?|PubTator3|2023-12-28|hybrid 0.083|none| \n|PMID 42711208|Safety of lipid-lowering therapies: it is time for a \"DOCebo…|PubMed|2026-08-18|hybrid 0.083|0| \n \n \n \nNewest indexed: 2026-10-27 (8 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42535681\n  biomcp search article -k \"statin cognitive decline randomized trial\" --year-min 2022 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

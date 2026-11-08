@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "pembrolizumab"
+    ],
+    "limit": 25,
+    "mutation": [
+      "BRAF V600E"
+    ],
+    "status": "recruiting"
+  },
+  "args_key": "af645a4df8c764664c91252f0c451462c03b4554a0a9fcd06813f7c586c2b4b0",
+  "recorded_at": "2026-11-04T01:26:26.882518+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 880.5397999240085,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 2 of 2 \n \nQuery: condition=melanoma, intervention=pembrolizumab, status=recruiting, mutation=BRAF V600E \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT06249048|Phase 1/2 Study of Intrat…|RECRUITING|1/2|Advanced Solid Tumor|pembrolizumab| \n|NCT07751042|Phase 1/2 Study of Intrav…|RECRUITING|1/2|Advanced Solid Tumor|pembrolizumab| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-2 of 2 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

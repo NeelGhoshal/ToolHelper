@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "type 2 diabetes",
+      "treatment",
+      "consensus"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "4d87425bbafbd27421e4e5101e83d6af4bf025898a3bb57005ca6f5266db152c",
+  "recorded_at": "2026-11-04T20:35:05.296941+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3016.34439999998,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=type 2 diabetes treatment consensus, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"type 2 diabetes treatment consensus\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41447360|A scoping review on the use of virtual patients for enhancin…|PubTator3|2026-12-31|-|6| \n|PMID 41721515|Diabetes specialist nurses' reasoning on their professional…|PubTator3|2026-12-31|-|0| \n|PMID 41778780|Beyond bacilli: integrating the microbiome into the TB resea…|PubTator3|2026-12-31|-|0| \n|PMID 41817101|Understanding barriers and facilitators of adherence to life…|PubTator3|2026-12-31|-|0| \n|PMID 42963492|Cultural adaptation of nutritional recommendations in the co…|PubMed|2026-10-31|-|0| \n|PMID 42898416|When bioactivity comes at a mechanical cost: toward mechanic…|Europe PMC|2026-10-11|-|0| \n|PMID 42948780|Systemic Glucose-Lowering Therapies and Periodontal and Peri…|PubMed|2026-09-27|-|0| \n|PMID 42732127|Successful Endoscopic Treatment of Walled-Off Necrosis With…|Europe PMC|2026-09-11|-|0| \n|PMID 42733788|The immune-microbe-metal triad: a vicious cycle driving biom…|Europe PMC|2026-09-03|-|0| \n|PMID 42602637|Risk Factors for Peritonitis Associated With Endoscopic Ultr…|Europe PMC|2026-08-14|-|0| \n \n \n \nNewest indexed: 2026-10-31 (4 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41447360\n  biomcp search article -k \"type 2 diabetes treatment consensus\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "NDA019839",
+    "json": true,
+    "sections": [
+      "regulatory",
+      "approvals",
+      "label"
+    ]
+  },
+  "args_key": "a106486404f0ced434267706aa27a1e147417a23e0d0403b688803f0e43e5a62",
+  "recorded_at": "2026-11-04T23:51:06.833331+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 2884.2431000011857,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: drug 'NDA019839' not found.\n\nTry searching: biomcp search drug -q \"NDA019839\""
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

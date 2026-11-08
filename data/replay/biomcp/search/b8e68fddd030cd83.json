@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "EGFR-mutated non-small cell lung cancer"
+    ],
+    "intervention": [
+      "osimertinib",
+      "amivantamab"
+    ],
+    "limit": 10
+  },
+  "args_key": "b8e68fddd030cd83386c966be66901f8116ac236fa244d8d9f186d1f0f42c8bb",
+  "recorded_at": "2026-11-03T23:26:12.472362+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1965.9523000009358,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 2 of 2 \n \nQuery: condition=EGFR-mutated non-small cell lung cancer, intervention=osimertinib amivantamab \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT05498428|A Study of Amivantamab in…|RECRUITING|2|Carcinoma, Non-small-Cell Lung| \n|NCT05801029|A Study to Investigate Sa…|ACTIVE_NOT_RECRUITING|2|Non-Small Cell Lung Cancer (NSCLC)| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-2 of 2 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

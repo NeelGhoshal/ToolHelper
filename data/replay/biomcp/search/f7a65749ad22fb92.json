@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "VERVE-101 base editing PCSK9 heart-1 first in human"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "f7a65749ad22fb923449ff05593d6b56be88b17a010d1d17bab0f48e55c52ae2",
+  "recorded_at": "2026-11-05T04:08:47.625736+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5834.220100001403,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=VERVE-101 base editing PCSK9 heart-1 first in human, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed search unavailable) \nRetry: `biomcp search article --keyword \"VERVE-101 base editing PCSK9 heart-1 first in human\" --exclude-retracted --sort date --source pubmed --limit 10 --offset 0` \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"VERVE-101 base editing PCSK9 heart-1 first in human\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42959445|Atherosclerosis: From Pathogenesis to Therapeutic Interventi…|Europe PMC|2026-10-29|-|0| \n|PMID 42781958|CRISPR-Cas9 and precision editing technologies linking funct…|Europe PMC|2026-09-01|-|0| \n|PMID 42738869|Emerging Nucleic Acid-Based Therapies for Hypercholesterolem…|Europe PMC|2026-08-29|-|0| \n|PMID 42554391|The Impact of PCSK9 Inhibitors on Circulatory Inflammation:…|Europe PMC|2026-08-01|-|1| \n|PMID 42654058|Two Classes of Protein Therapeutics: Why Dose-Response Archi…|Europe PMC|2026-07-30|-|0| \n|PMID 42486091|Base editing for precision therapeutics.|Europe PMC|2026-07-22|-|1| \n|PMID 42444979|Delivery Systems for Therapeutic Genome Editing: Challenges,…|Europe PMC|2026-07-12|-|1| \n|PMID 42366210|Biologics for cardiovascular diseases: from bench to bedside…|Europe PMC|2026-06-29|-|1| \n|PMID 42243955|Hypertriglyceridaemia and its multifaceted mechanisms drivin…|Europe PMC|2026-06-04|-|1| \n|PMID 42198846|In vivo base editing of Asgr1 reduces blood lipids in mice.|Europe PMC|2026-05-26|-|1| \n \n \n \nNewest indexed: 2026-10-31 (5 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42959445\n  biomcp search article -k \"VERVE-101 base editing PCSK9 heart-1 first in human\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

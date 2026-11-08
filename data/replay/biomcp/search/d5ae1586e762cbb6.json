@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 10,
+    "query": "PDGFRA"
+  },
+  "args_key": "d5ae1586e762cbb69f56ec59e22d9567bc7fc30cb73d01950c6444cd15019e35",
+  "recorded_at": "2026-11-04T06:02:14.967476+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 26.808399939909577,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: PDGFRA \n \nFound 1 gene \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| PDGFRA | platelet derived growth factor receptor alpha | 5156 | 4:54229130-54298246 | GRCh38 | P16234 | 173490 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1 of 1 results. \n \n\n\n## Next commands\n- `biomcp get gene PDGFRA`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

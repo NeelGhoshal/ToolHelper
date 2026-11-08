@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "mutation": [
+      "BRAF V600"
+    ],
+    "offset": 50
+  },
+  "args_key": "77991579fa8f2644f03b1a885c75138219d8594a0b1705ae24e0ebfb018be1b1",
+  "recorded_at": "2026-11-05T04:33:25.380748+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 12494.303800001944,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 25 trial(s) \n \nQuery: condition=melanoma, mutation=BRAF V600, offset=50 \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT06112314|IMC-F106C Regimen Versus…|RECRUITING|3|Advanced Melanoma| \n|NCT06121180|Study of Cemiplimab Plus…|RECRUITING|2|Metastatic Uveal Melanoma| \n|NCT06683755|Phase I/IIa Dose Finding…|RECRUITING|1/2|Melanoma| \n|NCT06697301|Safety and Efficacy of EI…|RECRUITING|2/3|Advanced Melanoma| \n|NCT06887088|Encorafenib and biNimetin…|RECRUITING|2|Melanoma BRAF V600E/K Mutated, Melanoma and Brain Metastases| \n|NCT06961357|Clinical Trial of CD40L-a…|RECRUITING|1/2|Melanoma| \n|NCT07440290|DETERMINE Trial Treatment…|RECRUITING|2/3|Haematological Malignancy, Malignant Neoplasm… [abridged; 20 conditions total]| \n|NCT02224781|Dabrafenib and Trametinib…|ACTIVE_NOT_RECRUITING|3|Clinical Stage III Cutaneous Melanoma AJCC v8,… [abridged; 5 conditions total]| \n|NCT04328844|A Study to Assess a PI3K…|ACTIVE_NOT_RECRUITING|1|Solid Tumor, Adult, Non-Hodgkin Lymphoma, Adul… [abridged; 5 conditions total]| \n|NCT07815873|Gut Microbiome in Patient…|NOT_YET_RECRUITING|NA|Non Small Cell Lung Cancer, Melanoma (Skin Can… [abridged; 4 conditions total]| \n|NCT01253564|A Study of RO5185426 in P…|COMPLETED|2|Malignant Melanoma| \n|NCT01264380|A Study of the Effect of…|COMPLETED|1|Malignant Melanoma| \n|NCT01783938|Study of Nivolumab Given…|COMPLETED|2|Advanced or Metastatic Melanoma| \n|NCT01898585|An Open-Label Study of Ze…|COMPLETED|4|Malignant Melanoma| \n|NCT02143999|An Observational Study of…|COMPLETED|-|Malignant Melanoma| \n|NCT02158520|Nab-Paclitaxel and Bevaci…|COMPLETED|2|Metastatic Melanoma, Mucosal Melanoma, Stage I… [abridged; 5 conditions total]| \n|NCT02902042|Encorafenib + Binimetinib…|COMPLETED|1/2|Malignant Melanoma| \n|NCT03864042|Pharmacokinetic Drug-drug…|COMPLETED|1|Advanced Solid Tumors, Metastatic Melanoma| \n|NCT04526899|A Study to Investigate th…|COMPLETED|2|Melanoma Stage III, Melanoma Stage IV, Unresectable Melanoma| \n|NCT02452294|Buparlisib in Melanoma Pa…|UNKNOWN|2|Malignant Melanoma, Metastases| \n|NCT01519323|BRIM-P: A Study of Vemura…|TERMINATED|1|Malignant Melanoma| \n|NCT01820364|LGX818 in Combination Wit…|TERMINATED|2|Melanoma| \n|NCT02097225|Onalespib, Dabrafenib, an…|TERMINATED|1|BRAF V600E Mutation Present, BRAF V600K Mutat… [abridged; 10 conditions total]| \n|NCT03272464|INCB039110 in Combination…|TERMINATED|1|Melanoma| \n|NCT03878719|Study of the Combination…|TERMINATED|1|Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 25 results (total unknown). Use --offset 75 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

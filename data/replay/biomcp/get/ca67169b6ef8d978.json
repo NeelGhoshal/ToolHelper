@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "clopidogrel",
+    "json": true,
+    "sections": [
+      "label",
+      "approvals",
+      "indications",
+      "safety",
+      "guidelines"
+    ]
+  },
+  "args_key": "ca67169b6ef8d978277fea9f2f8a64f9e408f11a71d3669270b93757115dde3b",
+  "recorded_at": "2026-11-03T23:02:31.234363+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.0734000243246555,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid drug section: guidelines"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

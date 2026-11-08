@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "exagamglogene",
+      "casgevy",
+      "BCL11A"
+    ],
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "3a47f69954804bbb966042d5f1a04dd9aab34b5d646ca14a0f2f796222ca185d",
+  "recorded_at": "2026-11-03T09:18:54.186662+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4773.773399996571,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=exagamglogene casgevy BCL11A, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"exagamglogene casgevy BCL11A\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 39609384|Nucleic acid drugs: recent progress and future perspectives.|Europe PMC|2024-11-29|-|132| \n|PMID 38507678|Nucleic Acid Therapeutics: Successes, Milestones, and Upcomi…|Europe PMC|2024-03-20|-|113| \n|PMID 39256822|Current landscape of mRNA technologies and delivery systems…|Europe PMC|2024-09-10|-|82| \n|PMID 38425279|Editorial: First Regulatory Approvals for CRISPR-Cas9 Therap…|PubTator3, Europe PMC|2024-03-01|-|66| \n|PMID 38246166|A new frontier: FDA approvals for gene therapy in sickle cel…|Europe PMC|2024-01-20|-|53| \n|PMID 39897578|Nucleic acid therapeutics: Past, present, and future.|Europe PMC|2024-12-23|-|50| \n|PMID 40119516|Recent advances in therapeutic gene-editing technologies.|Europe PMC|2025-03-20|-|42| \n|PMID 42400217|Efficacy, Safety, and Treatment-Delivery Feasibility of Auto…|PubMed|2026-11-01|-|0| \n|PMID 42859304|Recent trends and innovative strategies in the curative appr…|PubTator3, PubMed|2026-10-10|-|0| \n|PMID 42274009|Exa-cel in Children with Transfusion-Dependent β-Thalassemi…|PubMed|2026-09-10|-|2| \n|PMID 42193948|The Journey of Gene Therapy in Sickle Cell Disease: How Mole…|PubMed|2026-05-20|-|0| \n|PMID 42074029|Clinical Trial Landscape of Gene-Edited Autologous Hematopoi…|PubTator3, PubMed|2026-04-09|-|0| \n|PMID 41787916|CRISPR in Thalassemia: Global Research Trend Analysis.|PubTator3, PubMed|2026-03-05|-|0| \n|PMID 40612251|Challenges and advances in prenatal diagnosis and management…|PubTator3|2025-07-02|-|none| \n|PMID 39822266|Casgevy (exagamglogene autotemcel) and Lyfgenia (lovotibeglo…|PubTator3|2024-09-10|-|none| \n \n \n \nNewest indexed: 2026-07-04 (122 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 39609384\n  biomcp search article -k \"exagamglogene casgevy BCL11A\" --year-min 2024 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

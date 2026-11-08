@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "type 2 diabetes",
+      "treatment",
+      "guideline"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "cfff48e2d78fcc7dfdddd1a45504ab09994c6cc04c75f578f58279c6fb4e0854",
+  "recorded_at": "2026-11-03T05:20:09.387849+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5537.24020003574,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=type 2 diabetes treatment guideline, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"type 2 diabetes treatment guideline\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 25741868|Standards and guidelines for the interpretation of sequence…|Europe PMC|2015-03-05|-|26880| \n|PMID 32171076|Clinical course and risk factors for mortality of adult inpa…|Europe PMC|2020-03-11|-|18487| \n|PMID 19622552|The PRISMA statement for reporting systematic reviews and me…|Europe PMC|2009-07-21|-|13619| \n|PMID 12748199|The Seventh Report of the Joint National Committee on Preven…|Europe PMC|2003-05-14|-|12775| \n|PMID 42946534|Cortisol in cardio-kidney-metabolic disease.|PubMed|2026-10-28|-|0| \n|PMID 42959473|Protocol for a cohort study of comprehensive intervention of…|PubMed|2026-10-14|-|0| \n|PMID 42944684|Prescribing SGLTis and GLP-1 RAs for Patients With Type 2 Di…|PubMed|2026-10-01|-|0| \n|PMID 42543082|Guideline on treatment intensification with injectable thera…|PubTator3|2026-08-02|-|none| \n|PMID 42969250|Practical tips for implementing SGLT2i in practice.|PubMed|2026-08-01|-|none| \n|PMID 38639540|Visual Guideline - Newer Pharmacologic Treatments in Adults…|PubTator3|2024-04-19|-|none| \n \n \n \nNewest indexed: 2026-11-02 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 25741868\n  biomcp search article -k \"type 2 diabetes treatment guideline\" --year-min 2003 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

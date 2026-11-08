@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "TP53",
+      "somatic mutations",
+      "cancer types"
+    ],
+    "limit": 5
+  },
+  "args_key": "d2fb730b494db28a45d4c35aa71981cddb27cdf933fd5c15f3aa82cf0315355e",
+  "recorded_at": "2026-11-03T23:45:32.939790+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3548.560999915935,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=TP53 somatic mutations cancer types, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"sort\": \"relevance\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"ranking_policy\": \"hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 5,\n  \"results\": [\n    {\n      \"pmid\": \"35286522\",\n      \"title\": \"Differences in somatic TP53 mutation type in breast tumors by race and receptor status.\",\n      \"journal\": \"Breast Cancer Res Treat\",\n      \"date\": \"2022-04-01\",\n      \"citation_count\": 17,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"35852754\",\n      \"pmcid\": \"PMC9587954\",\n      \"title\": \"Genetics of Cushing's disease: from the lab to clinical practice\",\n      \"journal\": \"Pituitary\",\n      \"date\": \"2022-10-01\",\n      \"citation_count\": 13,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42864412\",\n      \"title\": \"A health-system-scale, episode-resolved multimodal atlas of cancer cachexia.\",\n      \"journal\": \"Nature medicine\",\n      \"date\": \"2026-10-12\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42930168\",\n      \"pmcid\": \"PMC13703249\",\n      \"doi\": \"10.3390/curroncol33100601\",\n      \"title\": \"Targeted Hotspot Mutation Analysis of KRAS, TP53, and PTEN in Endometrial Cancer Revealed by Next-Generation Sequencing.\",\n      \"journal\": \"Curr Oncol\",\n      \"date\": \"2026-10-06\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42431630\",\n      \"pmcid\": \"PMC13657166\",\n      \"doi\": \"10.1182/bloodadvances.2026020704\",\n      \"title\": \"Germ line landscape stratification defines distinct molecular and prognostic groups in therapy-related myeloid neoplasms.\",\n      \"journal\": \"Blood Adv\",\n      \"date\": \"2026-10-01\",\n      \"citation_count\": 1,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"TP53 somatic mutations cancer types\\\" --exclude-retracted --sort relevance --source semanticscholar --limit 5 --offset 0\",\n      \"biomcp get article 35286522\",\n      \"biomcp search article -k \\\"TP53 somatic mutations cancer types\\\" --year-min 2022 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "BRAF mutant melanoma"
+    ],
+    "limit": 5
+  },
+  "args_key": "ffa14b0eb609682c861d06f1c6c273ed012241b8e66245fb9f8371d655c67f46",
+  "recorded_at": "2026-11-04T05:36:25.630678+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 427.33870004303753,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 5 of 68 \n \nQuery: condition=BRAF mutant melanoma \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT01512251|BKM120 Combined With Vemu…|COMPLETED|1/2|BRAF Mutant Metastatic Melanoma| \n|NCT02902042|Encorafenib + Binimetinib…|COMPLETED|1/2|Malignant Melanoma| \n|NCT01777776|Safety and Efficacy of LE…|TERMINATED|1/2|Locally Advanced Metastatic BRAF Mutant Melanoma| \n|NCT03430947|Vemurafenib Plus Cobimeti…|TERMINATED|2|Malignant Melanoma Stage IV, BRAF V600 Mutation, Brain Metastases| \n|NCT05501912|A Study of ABM-1310 in Pa…|TERMINATED|1|Advanced Solid Tumor, BRAF V600 Mutation| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-5 of 68 results. Use --offset 5 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

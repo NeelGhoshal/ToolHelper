@@ -38,6 +38,7 @@ class LLMProfile(BaseModel):
     requests_per_minute: float | None = None
     max_retries: int | None = None
     timeout_s: float | None = None
+    max_wait_s: float | None = None  # keep retrying a stalled request this long
     options: ChatOptions = Field(default_factory=ChatOptions)
 
 
@@ -72,7 +73,7 @@ def make_backend(profile: LLMProfile, *, client: Any = None) -> LLMBackend:
                                        api_key_env=profile.api_key_env, client=client,
                                        requests_per_minute=profile.requests_per_minute,
                                        max_retries=profile.max_retries,
-                                       timeout_s=profile.timeout_s)
+                                       timeout_s=profile.timeout_s, max_wait_s=profile.max_wait_s)
         case "anthropic":
             from toolhelper.llm.anthropic import AnthropicBackend
 

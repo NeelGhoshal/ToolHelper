@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "meta-analysis",
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "dementia",
+      "meta-analysis"
+    ],
+    "limit": 20,
+    "sort": "citations"
+  },
+  "args_key": "18e25c13410267f26baa38df863e9036da3cb586e962235e2bedeb3ed1e39353",
+  "recorded_at": "2026-11-05T04:11:10.582686+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2951.4946000017517,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin dementia meta-analysis, type=meta-analysis, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed search unavailable) \nRetry: `biomcp search article --keyword \"statin dementia meta-analysis\" --type meta-analysis --exclude-retracted --sort citations --source pubmed --limit 20 --offset 0` \n \n \nFound 20 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 25412402|Interventions for enhancing medication adherence.|Europe PMC|2014-11-20|-|887| \n|PMID 23071076|Meta-analysis of early nonmotor features and risk factors fo…|Europe PMC|2012-10-15|-|557| \n|PMID 30736888|Treatment of Adult Obstructive Sleep Apnea With Positive Air…|Europe PMC|2019-02-15|-|474| \n|PMID 26343551|Interactive telemedicine: effects on professional practice a…|Europe PMC|2015-09-07|-|467| \n|PMID 26730878|Exercise-based cardiac rehabilitation for coronary heart dis…|Europe PMC|2016-01-05|-|426| \n|PMID 30388399|Genome Analyses of >200,000 Individuals Identify 58 Loci for…|Europe PMC|2018-11-01|-|385| \n|PMID 30025154|Interventions for increasing the use of shared decision maki…|Europe PMC|2018-07-19|-|377| \n|PMID 27077231|The feasibility and effect of deprescribing in older adults…|Europe PMC|2016-06-13|-|318| \n|PMID 22419320|Antioxidant supplements for prevention of mortality in healt…|Europe PMC|2012-03-14|-|309| \n|PMID 21975737|Exercise training for adults with chronic kidney disease.|Europe PMC|2011-10-05|-|278| \n|PMID 27911314|Updating the Evidence on the Association between Serum Chole…|Europe PMC|2017-01-01|-|275| \n|PMID 25754617|Hormone therapy for preventing cardiovascular disease in pos…|Europe PMC|2015-03-10|-|272| \n|PMID 28363508|Risk factors associated with the onset and progression of Al…|Europe PMC|2017-03-29|-|265| \n|PMID 30864165|Mediterranean-style diet for the primary and secondary preve…|Europe PMC|2019-03-13|-|253| \n|PMID 20702755|Predictors of nonadherence to statins: a systematic review a…|Europe PMC|2010-08-11|-|252| \n|PMID 19127292|Diabetes and the risk of multi-system aging phenotypes: a sy…|Europe PMC|2009-01-07|-|251| \n|PMID 28564681|Association of Microvascular Dysfunction With Late-Life Depr…|Europe PMC|2017-07-01|-|232| \n|PMID 23076904|Printed educational materials: effects on professional pract…|Europe PMC|2012-10-17|-|229| \n|PMID 32114706|Omega-3 fatty acids for the primary and secondary prevention…|Europe PMC|2020-02-29|-|217| \n|PMID 30182156|Mild cognitive impairment and progression to dementia in peo…|Europe PMC|2018-09-04|-|206| \n \n \n \nNewest indexed: 2020-03-03 (2438 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 25412402\n  biomcp search article -k \"statin dementia meta-analysis\" --type meta-analysis --year-min 2009 --year-max 2020 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-20 of 290 results. Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "2025 AHA ACC high blood pressure guideline adults"
+    ],
+    "limit": 10
+  },
+  "args_key": "ac319008b1439d64e1dbed2926360b8f7cb75ef566fd566092eeedde14a46d73",
+  "recorded_at": "2026-11-03T05:16:45.481263+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5093.983500031754,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=2025 AHA ACC high blood pressure guideline adults, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"2025 AHA ACC high blood pressure guideline adults\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41805831|2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/S…|PubTator3, Europe PMC|2026-03-10|hybrid 0.562 + title 8/8|2| \n|PMID 42907045|KDOQI Commentary on the 2025 AHA/ACC Guideline for the Preve…|PubTator3, Europe PMC, PubMed|2026-11-01|hybrid 0.383 + title 8/8|0| \n|PMID 42907046|Patient Perspective on the KDOQI Commentary on the 2025 AHA/…|PubTator3, Europe PMC, PubMed|2026-11-01|hybrid 0.379 + title 8/8|0| \n|PMID 42756877|2025 AHA/ACC blood pressure guideline and HEARTS 2.0: implic…|Europe PMC|2026-09-17|hybrid 0.275 + title 6/8|0| \n|PMID 42688995|Implications of the 2025 AHA/ACC hypertension guideline on h…|Europe PMC, PubMed|2026-09-01|hybrid 0.256 + title 6/8|0| \n|PMID 42704524|The 2025 AHA/ACC Hypertension Guidelines: Key Updates, Histo…|Europe PMC, PubMed|2026-09-07|hybrid 0.137 + title 3/8|0| \n|PMID 42824372|Hypertension Among Medical Students in Lubumbashi, Democrati…|Europe PMC|2026-09-30|hybrid 0.137 + title 3/8|0| \n|PMID 42522939|Population-Level 10-Year Implications of the New 2025 Americ…|PubMed|2026-08-04|hybrid 0.087 + title 2/8|0| \n|PMID 42783078|Age-Dependent Efficacy of Incidental Coronary Artery Calcium…|PubMed|2026-09-20|hybrid 0.062|0| \n|PMID 41926122|Thiazides and Risk of Hyponatremia by Age and Sex|PubTator3|2026-04-01|hybrid 0.05|none| \n \n \n \nNewest indexed: 2026-10-03 (31 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41805831\n  biomcp search article -k \"2025 AHA ACC high blood pressure guideline adults\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

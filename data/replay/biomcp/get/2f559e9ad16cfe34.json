@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "42613714",
+    "json": true,
+    "sections": [
+      "tldr",
+      "fulltext"
+    ]
+  },
+  "args_key": "2f559e9ad16cfe34abbca30c97fa49dc2817f2a9caaeeaf739d508139cf2ab6d",
+  "recorded_at": "2026-11-03T23:13:26.823113+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1751.2093000113964,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42613714/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42613714 tldr\",\n      \"biomcp article references 42613714 --limit 3\",\n      \"biomcp article citations 42613714 --limit 3\",\n      \"biomcp article recommendations 42613714 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"fulltext\",\n        \"label\": \"Full Text\",\n        \"outcome\": \"empty\",\n        \"sources\": [\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ]\n  },\n  \"abstract_text\": \"Imatinib, a Tyrosine Kinase Inhibitor (TKI) that targets the first-in-class, has been a major factor in the change of cancer treatment aimed at precision by selectively blocking Breakpoint Cluster Region-Abelson murine leukemia viral oncogene (BCR-ABL), KIT proto-oncogene receptor tyrosine kinase (c-KIT), and platelet-Derived Growth Factor Receptors (PDGFRs), along with additional inhibitory activity against Src Family Kinases (SFKs). Apart from Chronic Myeloid Leukemia (CML), for which it was first approved, clinicians have now expanded its application to include Gastrointestinal Stromal Tumors (GIST), Dermatofibrosarcoma Protuberans (DFSP), and kinase-driven cancers of various types. Imatinib inhibits phosphorylation and activation of cancer pathways by competitively binding to the ATP-binding site on these kinases. Inhibiting BCR-ABL thus deprives the leukemic cells of growth and survival signals. In the same way, inhibition of c-KIT and PDGFR results in GIST and DFSP tumor growth retardation through the impact on signaling pathways like PI3K/AKT (cell survival and proliferation), RAS/MAPK (tumor growth and differentiation), and JAK/STAT (immune evasion and cytokine signaling). Moreover, imatinib exerts anti-angiogenic properties by lowering the production of pro-angiogenic factors, hence preventing tumor vascularization. However, the drawback of imatinib in the form of resistance issues still hampers the progress of the dominant division. The causes of this phenomenon are secondary mutations, alterations of the kinase domain, activation of alternative pathways, and clonal evolution. This explores imatinib's inner mechanism in detail, the pivotal role it plays in modulating tumor/stromal cell interactions, as well as the impact that resistance mechanisms have on the therapy.\",\n  \"author_completeness\": \"complete\",\n  \"author_count\": 8,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Singh D\",\n    \"Dhankhar S\",\n    \"Goel K\",\n    \"Chauhan S\",\n    \"Sharma SC\",\n    \"Saini M\",\n    \"Singh TG\",\n    \"Mujwar S\"\n  ],\n  \"citation_count\": 0,\n  \"date\": \"2026-07-31\",\n  \"doi\": \"10.2174/0113816128488564260713055506\",\n  \"full_text_coverage\": {\n    \"attempts\": [\n      {\n        \"cache_state\": \"bypass\",\n        \"coverage\": \"none\",\n        \"outcome\": \"empty\",\n        \"provider\": {\n          \"label\": \"Europe PMC MED XML\",\n          \"source\": \"Europe PMC\"\n        },\n        \"reason\": \"no_content\",\n        \"source_kind\": \"jats_xml\"\n      }\n    ],\n    \"coverage\": \"none\"\n  },\n  \"full_text_note\": \"Full text not available: Article not in PubMed Central\",\n  \"journal\": \"Curr Pharm Des\",\n  \"open_access\": false,\n  \"pmid\": \"42613714\",\n  \"publication_type\": \"Research Article\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"empty\",\n      \"sources\": [\n        \"Europe PMC\"\n      ]\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"Imatinib: A Multifunctional Tyrosine Kinase Inhibitor with Diverse Mechanisms Targeting BCR-ABL, c-KIT, and PDGFR in Cancer Therapy.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

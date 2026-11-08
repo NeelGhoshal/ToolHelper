@@ -1,0 +1,28 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "health"
+  },
+  "args_key": "708529225e78de6e55746bd105bc11fc6af2ccc758945cc4c368fbde90ff55ae",
+  "recorded_at": "2026-11-03T10:13:05.271705+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 35028.702899988275,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# BioMCP Health Check\n\n| API | Status | Latency | Affects |\n|-----|--------|---------|---------|\n| GenCC | ok | 792ms | - |\n| MyGene | ok | 859ms | - |\n| MyVariant | ok | 775ms | - |\n| Cancerhotspots.org | ok | 652ms | - |\n| MyChem | ok | 1295ms | - |\n| PubTator3 | ok | 612ms | - |\n| PubMed | ok | 698ms | - |\n| Europe PMC | ok | 940ms | - |\n| NCBI E-utilities | ok | 649ms | - |\n| LitSense2 | ok | 677ms | - |\n| LitVar2 | ok | 649ms | - |\n| PMC OA | ok | 687ms | - |\n| NCBI ID Converter | ok | 128ms | - |\n| ClinicalTrials.gov | ok | 138ms | - |\n| NCI CTS | excluded (set NCI_API_KEY) | n/a | trial --source nci |\n| Enrichr | ok | 669ms | - |\n| OpenFDA | ok | 2085ms | - |\n| FDA Orphan Drug Designations | error | 1367ms | get drug regulatory --region us|all |\n| CDC WONDER VAERS | ok | 4314ms | - |\n| OncoKB | excluded (set ONCOKB_TOKEN) | n/a | variant oncokb command and variant evidence section |\n| DisGeNET | excluded (set DISGENET_API_KEY) | n/a | gene and disease disgenet sections |\n| AlphaGenome | excluded (set ALPHAGENOME_API_KEY) | n/a | variant predict section |\n| Semantic Scholar | unavailable (set S2_API_KEY for reliable access) | 239ms | - |\n| OpenCitations | ok | 504ms | - |\n| ORCID | available (unauthenticated, shared rate limit) | 358ms | - |\n| Figshare | ok | 760ms | - |\n| CPIC | ok | 444ms | - |\n| PharmGKB | ok | 473ms | - |\n| Monarch | ok | 434ms | - |\n| HPO | ok | 217ms | - |\n| MyDisease | ok | 558ms | - |\n| SEER Explorer | ok | 598ms | - |\n| NIH Reporter | ok | 653ms | - |\n| CIViC | ok | 344ms | - |\n| GWAS Catalog | error | 89ms (HTTP 410) | gwas search and variant gwas context |\n| GTEx | ok | 86ms | - |\n| DGIdb | ok | 784ms | - |\n| ClinGen | ok | 1927ms | - |\n| ClinGen Allele Registry | ok | 548ms | - |\n| ClinGen CSpec | ok | 536ms | - |\n| ClinGen ERepo | ok | 232ms | - |\n| ClinGen LDH | ok | 489ms | - |\n| dbSNP | ok | 432ms | - |\n| gnomAD | ok | 345ms | - |\n| UniProt | ok | 753ms | - |\n| QuickGO | ok | 179ms | - |\n| STRING | ok | 733ms | - |\n| Reactome | ok | 558ms | - |\n| Cellosaurus | ok | 867ms | - |\n| KEGG | ok | 1663ms | - |\n| WikiPathways | ok | 578ms | - |\n| g:Profiler | ok | 3055ms | - |\n| OpenTargets | ok | 303ms | - |\n| ChEMBL | error | 10001ms (timeout) | drug targets and indications sections, and the cell line ChEMBL section |\n| HPA | ok | 480ms | - |\n| InterPro | ok | 100ms | - |\n| ComplexPortal | ok | 198ms | - |\n| OLS4 | ok | 314ms | - |\n| UMLS | excluded (set UMLS_API_KEY) | n/a | discover command clinical crosswalk enrichment |\n| MedlinePlus | ok | 681ms | - |\n| cBioPortal | ok | 237ms | - |\n| PharmacoDB | ok | 301ms | - |\n| EMA local data | available (default path) | n/a | - |\n| CDC CVX/MVX local data | available (default path) | n/a | - |\n| DDInter local data | not configured | n/a | drug interactions helper plus get drug interactions section |\n| WHO Prequalification local data | available (default path) | n/a | - |\n| GTR local data | available (default path) | n/a | - |\n| WHO IVD local data | not configured | n/a | search/get diagnostic and local WHO IVD-backed infectious-disease diagnostic routing |\n| Cache dir | ok | 2ms | - |\n| Cache limits | ok | within limits | - |\n\nStatus: 60 ok, 3 error, 7 excluded\nExit policy: report_only; result: errors present\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

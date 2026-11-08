@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF mutations cancer Davies 2002"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "5eb9c38625ff997081559bd99f142ed0acf901b34b9aa26b1b03287b87a9bba1",
+  "recorded_at": "2026-11-03T23:53:09.515361+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3841.597499907948,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF mutations cancer Davies 2002, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF mutations cancer Davies 2002\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 12068308|Mutations of the BRAF gene in human cancer.|Europe PMC|2002-06-09|-|7722| \n|PMID 25860605|Immune checkpoint targeting in cancer therapy: toward combin…|Europe PMC|2015-04-01|-|1911| \n|PMID 41137979|Pyrimidin-4-bromobenzenesulfonamide/-4-nitrobenzenesulfonami…|PubTator3, PubMed|2025-10-25|-|0| \n|PMID 37576670|Challenges and Opportunities in the Crusade of BRAF Inhibito…|PubTator3, PubMed|2023-07-26|-|43| \n|PMID 27045886|Tumor-Infiltrating T Cells and the PD-1 Checkpoint Pathway i…|PubMed|2016-07-01|-|135| \n \n \n \nNewest indexed: 2016-04-06 (3863 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 12068308\n  biomcp search article -k \"BRAF mutations cancer Davies 2002\" --year-min 2002 --year-max 2025 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

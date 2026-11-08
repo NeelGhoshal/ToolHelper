@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "I10",
+    "max_results": 10,
+    "omop_field": "condition_concept_id",
+    "omop_table": "condition_occurrence"
+  },
+  "args_key": "a02948665f5a95e08bf965f0f4ea5ae21cda18fb7123f32f9d9ad51541b919d2",
+  "recorded_at": "2026-11-03T06:19:55.566044+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 766.8975999695249,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 4158044,\n      \"code\": \"272955001\",\n      \"name\": \"KI10\",\n      \"class\": \"Body Structure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Spec Anatomic Site\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4158044\"\n    },\n    {\n      \"concept_id\": 4155669,\n      \"code\": \"272767008\",\n      \"name\": \"LI10\",\n      \"class\": \"Body Structure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Spec Anatomic Site\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4155669\"\n    },\n    {\n      \"concept_id\": 4165962,\n      \"code\": \"272867003\",\n      \"name\": \"SI10\",\n      \"class\": \"Body Structure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Spec Anatomic Site\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4165962\"\n    },\n    {\n      \"concept_id\": 35810700,\n      \"code\": \"5699\",\n      \"name\": \"FI10 : arithmetic sequence recognition\",\n      \"class\": \"Question\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"UK Biobank\",\n      \"url\": \"https://omophub.com/concepts/35810700\"\n    },\n    {\n      \"concept_id\": 35811061,\n      \"code\": \"20183\",\n      \"name\": \"FI10 : arithmetic sequence recognition\",\n      \"class\": \"Question\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"UK Biobank\",\n      \"url\": \"https://omophub.com/concepts/35811061\"\n    },\n    {\n      \"concept_id\": 1296267,\n      \"code\": \"Q841\",\n      \"name\": \"DI10 worry far toilet DI\",\n      \"class\": \"Question\",\n      \"concept\": \"C\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"EORTC QLQ\",\n      \"url\": \"https://omophub.com/concepts/1296267\"\n    },\n    {\n      \"concept_id\": 44361961,\n      \"code\": \"e549b990-6139-4720-85e3-cd1a10a025d4\",\n      \"name\": \"CLE DE PEAU BEAUTE THE FOUNDATION I10 - octinoxate and titanium dioxide cream\",\n      \"class\": \"OTC Drug\",\n      \"concept\": \"C\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"SPL\",\n      \"url\": \"https://omophub.com/concepts/44361961\"\n    },\n    {\n      \"concept_id\": 44357011,\n      \"code\": \"a6b42bcc-4c6e-4e5a-9793-b5aa7c470c3e\",\n      \"name\": \"CLE DE PEAU BEAUTE RADIANT FOUNDATION I10 - octinoxate and titanium dioxide cream\",\n      \"class\": \"OTC Drug\",\n      \"concept\": \"C\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"SPL\",\n      \"url\": \"https://omophub.com/concepts/44357011\"\n    },\n    {\n      \"concept_id\": 46293777,\n      \"code\": \"da0d1af0-e724-4643-a60a-0b6b5835930d\",\n      \"name\": \"CLE DE PEAU BEAUTE RADIANT FOUNDATION I10 - octinoxate and titanium dioxide powder\",\n      \"class\": \"OTC Drug\",\n      \"concept\": \"C\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"SPL\",\n      \"url\": \"https://omophub.com/concepts/46293777\"\n    },\n    {\n      \"concept_id\": 36399825,\n      \"code\": \"05ffb157-5e28-4e94-866d-9e3371480d84\",\n      \"name\": \"CLE DE PEAU BEAUTE RADIANT FOUNDATION N I10 - octinoxate and titanium dioxide emulsion\",\n      \"class\": \"OTC Drug\",\n      \"concept\": \"C\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"SPL\",\n      \"url\": \"https://omophub.com/concepts/36399825\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"I10\",\n    \"omop_table\": \"condition_occurrence\",\n    \"omop_field\": \"condition_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

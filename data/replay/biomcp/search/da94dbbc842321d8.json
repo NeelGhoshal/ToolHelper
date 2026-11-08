@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "gene": "CYP2C19",
+    "limit": 10,
+    "significance": "loss of function"
+  },
+  "args_key": "da94dbbc842321d835e740eab781773277f225a039f9e9e54271ee364b1c742d",
+  "recorded_at": "2026-11-04T00:03:06.409269+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 11.743700015358627,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: Invalid argument: Invalid --significance value 'loss of function'. Expected one of: pathogenic, likely_pathogenic, benign, likely_benign, uncertain_significance, conflicting_interpretations_of_pathogenicity, drug_response, risk_factor, association, protective, affects, not_provided"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

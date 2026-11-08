@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "myocardial infarction",
+    "max_results": 10,
+    "omop_field": "condition_concept_id",
+    "omop_table": "condition_occurrence"
+  },
+  "args_key": "9d72436bc14f543346920c26df49e6ce9ebf33a63ac5aeb7f9cbc74795bbebe1",
+  "recorded_at": "2026-11-03T10:17:45.380407+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1016.0624000127427,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 4329847,\n      \"code\": \"22298006\",\n      \"name\": \"Myocardial infarction\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4329847\"\n    },\n    {\n      \"concept_id\": 40761359,\n      \"code\": \"58258-5\",\n      \"name\": \"Myocardial infarction\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/40761359\"\n    },\n    {\n      \"concept_id\": 314666,\n      \"code\": \"1755008\",\n      \"name\": \"Old myocardial infarction\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/314666\"\n    },\n    {\n      \"concept_id\": 4064609,\n      \"code\": \"164865005\",\n      \"name\": \"EKG: myocardial infarction\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4064609\"\n    },\n    {\n      \"concept_id\": 312327,\n      \"code\": \"57054005\",\n      \"name\": \"Acute myocardial infarction\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/312327\"\n    },\n    {\n      \"concept_id\": 4215259,\n      \"code\": \"394710008\",\n      \"name\": \"First myocardial infarction\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4215259\"\n    },\n    {\n      \"concept_id\": 4124686,\n      \"code\": \"233843008\",\n      \"name\": \"Silent myocardial infarction\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4124686\"\n    },\n    {\n      \"concept_id\": 4065281,\n      \"code\": \"164866006\",\n      \"name\": \"ECG: no myocardial infarction\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4065281\"\n    },\n    {\n      \"concept_id\": 4064348,\n      \"code\": \"164867002\",\n      \"name\": \"EKG: old myocardial infarction\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4064348\"\n    },\n    {\n      \"concept_id\": 4200113,\n      \"code\": \"314207007\",\n      \"name\": \"Non-Q wave myocardial infarction\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4200113\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"myocardial infarction\",\n    \"omop_table\": \"condition_occurrence\",\n    \"omop_field\": \"condition_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

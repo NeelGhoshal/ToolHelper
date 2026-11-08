@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "BRAF",
+    "limit": 8,
+    "sort": "date"
+  },
+  "args_key": "5f2111842e6cf55cd453e3a6d7e2f3430004b8a3c39f81c2f5eb35216b4dbe14",
+  "recorded_at": "2026-11-03T09:30:26.176865+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4278.890400019009,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=BRAF, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene BRAF --exclude-retracted --sort date --source semanticscholar --limit 8 --offset 0` \n \n \nFound 8 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42926279|Radiopharmaceuticals for Melanoma Theranostics.|PubTator3|2027-01-01|-|none| \n|PMID 41913413|Integrating tumor and immune cell transcriptomics to predict…|PubTator3|2026-12-31|-|none| \n|PMID 41562160|The P7 peptide antagonizes bFGF-induced malignant behaviors…|PubTator3|2026-12-01|-|none| \n|PMID 42970403|The Modern Continuum of Care for Colorectal Liver Metastases…|PubMed|2026-11-02|-|none| \n|PMID 42968613|Mesenchymal Malignant Transformation in Metanephric Stromal…|PubMed|2026-11-01|-|none| \n|PMID 42969502|Impact of bone metastases on outcomes in patients with metas…|PubMed|2026-10-29|-|none| \n|PMID 40063720|EXPOSOMES and GENES: The duo influencing CANCER initiation a…|Europe PMC|2025-03-10|-|1| \n|PMID 39996905|Abstracts of the 2024 Canadian Association of Medical Oncolo…|Europe PMC|2025-02-12|-|0| \n \n \n \nNewest indexed: 2026-11-02 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42926279\n  biomcp search article -g BRAF --year-min 2025 --year-max 2027 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 8 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

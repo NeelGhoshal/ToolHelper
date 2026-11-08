@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "heart attack",
+    "max_results": 10,
+    "omop_field": "condition_name",
+    "omop_table": "condition_occurrence"
+  },
+  "args_key": "f2c1e4e50278f774838551f9def702b09b92dcbebda7cd5d798301ec46d875d1",
+  "recorded_at": "2026-11-04T21:45:04.162192+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 863.063200000397,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 4329847,\n      \"code\": \"22298006\",\n      \"name\": \"Myocardial infarction\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4329847\"\n    },\n    {\n      \"concept_id\": 4085056,\n      \"code\": \"247818001\",\n      \"name\": \"Fear of having a heart attack\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4085056\"\n    },\n    {\n      \"concept_id\": 40765131,\n      \"code\": \"62390-0\",\n      \"name\": \"PhenX - family history heart attack protocol 040101\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/40765131\"\n    },\n    {\n      \"concept_id\": 4080567,\n      \"code\": \"277834005\",\n      \"name\": \"Anxiety about having a heart attack\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4080567\"\n    },\n    {\n      \"concept_id\": 40761446,\n      \"code\": \"58345-0\",\n      \"name\": \"Age when the first heart attack occurred Son\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/40761446\"\n    },\n    {\n      \"concept_id\": 40761447,\n      \"code\": \"58346-8\",\n      \"name\": \"Age when the first heart attack occurred Father\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/40761447\"\n    },\n    {\n      \"concept_id\": 40761448,\n      \"code\": \"58347-6\",\n      \"name\": \"Age when the first heart attack occurred Mother\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/40761448\"\n    },\n    {\n      \"concept_id\": 40761443,\n      \"code\": \"58342-7\",\n      \"name\": \"Age when the first heart attack occurred Sister\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/40761443\"\n    },\n    {\n      \"concept_id\": 40761334,\n      \"code\": \"58233-8\",\n      \"name\": \"Age when the first heart attack occurred Brother\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/40761334\"\n    },\n    {\n      \"concept_id\": 40761445,\n      \"code\": \"58344-3\",\n      \"name\": \"Age when the first heart attack occurred Daughter\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/40761445\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"heart attack\",\n    \"omop_table\": \"condition_occurrence\",\n    \"omop_field\": \"condition_name\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

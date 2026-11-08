@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "Cas9",
+      "gene editing"
+    ],
+    "limit": 20,
+    "sort": "date"
+  },
+  "args_key": "06476aefb940accac835bcc91b9416564d153bdb9881d7d3d64ee11a9faad556",
+  "recorded_at": "2026-11-04T20:38:38.343980+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5470.821699999988,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR Cas9 gene editing, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CRISPR Cas9 gene editing\" --exclude-retracted --sort date --source semanticscholar --limit 20 --offset 0` \n \n \nFound 20 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42771308|An Overview of Programmable Epigenetic Editing Based on CRIS…|PubTator3|2027-01-01|-|none| \n|PMID 42771312|Adeno-Associated Viral Vector (AAV)-Mediated In Vivo CRISPR-…|PubTator3|2027-01-01|-|none| \n|PMID 42771323|Nucleofection-Based CRISPR/Cas Delivery in Human T Cells for…|PubTator3|2027-01-01|-|none| \n|PMID 42814347|Composite Cucurbitaceae Plants as a Tool to Study Physiologi…|PubTator3|2027-01-01|-|none| \n|PMID 42879020|Genetic and Epigenetic Manipulation Using CRISPR Techniques…|PubTator3|2027-01-01|-|none| \n|PMID 42926261|Generation of Functional Gene Knockout Melanoma Cell Lines b…|PubTator3|2027-01-01|-|none| \n|PMID 41466342|TdNF-YA2A-1transcription factor confers salt and osmotic str…|PubTator3|2026-12-31|-|none| \n|PMID 41543272|Non-Viral CRISPR carriers: transient delivery with lasting e…|PubTator3|2026-12-31|-|none| \n|PMID 42979959|Recombinant Fusion of Polyglutamic Acid Enhances Cell-Penetr…|PubMed|2026-11-04|-|none| \n|PMID 42980409|FASTOP─Fast Editing Toolkit for Top Expression Sites in Ye…|PubMed|2026-11-04|-|none| \n|PMID 42975205|Interleukin-6 signaling disrupts blastocyst development and…|PubMed|2026-11-03|-|0| \n|PMID 42977761|Genotoxic safety and long-term engraftment dynamics of effic…|PubMed|2026-11-03|-|0| \n|PMID 42973349|CRISPR/Cas9-based Genome Editing in Inherited Diseases: Mech…|PubMed|2026-10-21|-|0| \n|PMID 42979657|The potato (Solanum tuberosum L.) transcription factor StPHR…|PubMed|2026-10-21|-|none| \n|PMID 42973564|Same hydrolase knockouts, different outcomes: CRISPR/Cas9 ed…|PubMed|2026-10-19|-|0| \n|PMID 42904109|A base-editing and auxotrophic selection platform for linkin…|Europe PMC|2026-10-13|-|0| \n|PMID 42979796|[Specific treatment of transthyretin amyloid cardiomyopathy:…|PubMed|2026-10-01|-|none| \n|PMID 42831006|Advances and perspectives in genetically encoded biosensors…|Europe PMC|2026-09-23|-|0| \n|PMID 42824861|Harnessing synthetic microbial communities for desert vegeta…|Europe PMC|2026-09-19|-|0| \n|PMID 42774404|Genetic engineering of cyanophages for harmful cyanobacteria…|Europe PMC|2026-09-15|-|0| \n \n \n \nNewest indexed: 2026-11-04 (0 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42771308\n  biomcp search article -k \"CRISPR Cas9 gene editing\" --year-min 2026 --year-max 2027 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 20 results (total unknown). Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "json": true,
+    "limit": 5,
+    "query": "CYP2C19 clopidogrel pharmacogenomics CPIC guideline"
+  },
+  "args_key": "255a5d6d543e2bec5569b39ca40b5ea9fb1594ed9bda33e79c3bafd845aeb1f5",
+  "recorded_at": "2026-11-03T22:06:29.996140+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 927.3928001057357,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 1,\n    \"total\": 1,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 1,\n  \"results\": [\n    {\n      \"symbol\": \"CYP2C19\",\n      \"name\": \"cytochrome P450 family 2 subfamily C member 19\",\n      \"entrez_id\": \"1557\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"10:94762536-94922264\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"P33261\",\n      \"omim_id\": \"124020\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get gene CYP2C19\",\n      \"biomcp list gene\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

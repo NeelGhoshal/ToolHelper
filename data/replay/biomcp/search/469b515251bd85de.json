@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gwas",
+    "gene": "BRAF",
+    "limit": 5
+  },
+  "args_key": "469b515251bd85ded3e7995b8ab01e8762596d56f65c293886acbacd6ae0a1c1",
+  "recorded_at": "2026-11-05T04:37:02.417737+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4089.452299998811,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# GWAS Search: gene=BRAF \n \nFound 5 GWAS associations \n \n| rsID | Trait | p-value | Effect | Risk AF | Genes | Study | PMID | \n|---|---|---|---|---|---|---|---| \n| rs10487888 | body height | 3e-101 | - | 0.4878 | BRAF | GCST90245848 | 36224396 | \n| rs2364399 | body height | 2e-74 | - | 0.1653 | BRAF | GCST90245848 | 36224396 | \n| rs10487888 | body height | 1e-30 | - | 0.3835 | BRAF | GCST90245844 | 36224396 | \n| rs9886260 | health trait | 1e-21 | - | 0.274517 | BRAF, CCT4P1 | GCST90565837 | 40374629 | \n| rs3829814 | health trait | 6e-21 | - | 0.436011 | BRAF | GCST90565837 | 40374629 | \n \n \nMore results available. Continue with `--offset 5`. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

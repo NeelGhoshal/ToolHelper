@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2025-01-01",
+    "entity": "article",
+    "gene": "ERBB2",
+    "limit": 10,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "d329088de699fefa5975cec3dd6941cff17dc3e7848eb103012c3bdafc7a1206",
+  "recorded_at": "2026-11-03T19:43:47.555473+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1121.0797000094317,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=ERBB2, date_from=2025-01-01, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 10 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42967914|Neoadjuvant concurrent or sequential anthracycline-containin…|PubMed|2026-11-02|-|none| \n|PMID 42969075|Agreement Between Medical Laboratory Technologists and Patho…|PubMed|2026-11-02|-|none| \n|PMID 42969719|Preliminary Evaluation of Synthetic Amanitin Analogs as Nove…|PubMed|2026-11-02|-|none| \n|PMID 42970860|Genomic landscape of ERBB3 alterations in metastatic solid t…|PubMed|2026-11-02|-|none| \n|PMID 42966626|Route-aware Therapeutic Target Atlas for Desmoplastic Small…|PubMed|2026-11-01|-|none| \n|PMID 42965781|Reference frequencies of selected non-ICI genomic alteration…|PubMed|2026-10-31|-|none| \n|PMID 42966291|Bisphenol S facilitates breast cancer progression through DR…|PubMed|2026-10-31|-|none| \n|PMID 42965725|Myristoylated alanine rich C kinase substrate (MARCKS) and i…|PubMed|2026-10-29|-|none| \n|PMID 42969552|Preparation and comprehensive physicochemical characterizati…|PubMed|2026-10-01|-|none| \n|PMID 42968162|Safety and treatment duration of ribociclib + nonsteroid…|PubMed|2026-08-04|-|none| \n \n \n \nNewest indexed: 2026-11-02 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42967914 \n \n \n \nShowing 1-10 of 26770 results. Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

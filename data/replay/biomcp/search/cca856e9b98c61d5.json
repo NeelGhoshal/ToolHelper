@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "json": true,
+    "limit": 25,
+    "mutation": [
+      "BRAF V600E",
+      "BRAF V600"
+    ],
+    "status": "recruiting"
+  },
+  "args_key": "cca856e9b98c61d5f6e554507944bff364a7dfa16b807927311fc517af4a775f",
+  "recorded_at": "2026-11-03T23:15:43.959998+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 176.14210001192987,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 25,\n    \"returned\": 0,\n    \"total\": 0,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 0,\n  \"results\": [],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search trial -c melanoma -s recruiting\",\n      \"biomcp search trial -c melanoma --mutation \\\"BRAF V600E BRAF V600\\\"\",\n      \"biomcp search trial -c melanoma -s recruiting --biomarker BRAF\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

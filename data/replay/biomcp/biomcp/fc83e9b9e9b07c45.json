@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp get drug \"sertraline hydrochloride\" label --region us",
+    "json": true
+  },
+  "args_key": "fc83e9b9e9b07c450c9f5bd673a7b0e994c091cd3e6aa4f6533c6c1d44a70836",
+  "recorded_at": "2026-11-03T14:19:39.147120+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 2.6208999915979803,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: Invalid argument: --region can only be used with regulatory, safety, shortage, or all."
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

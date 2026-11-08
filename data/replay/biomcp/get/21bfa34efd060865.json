@@ -1,0 +1,40 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "BRAF",
+    "json": true,
+    "sections": [
+      "clinvar",
+      "clingen",
+      "gwas",
+      "civic",
+      "cosmic",
+      "disgenet",
+      "conservation",
+      "population"
+    ]
+  },
+  "args_key": "21bfa34efd06086504c05f3e4ed4bab85a789f152732fedc818ae61f84301927",
+  "recorded_at": "2026-11-04T21:32:24.067785+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.1061000004701782,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: clinvar"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

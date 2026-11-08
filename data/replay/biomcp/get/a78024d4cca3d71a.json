@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "trial",
+    "id": "NCT03340506",
+    "sections": [
+      "arms",
+      "eligibility"
+    ]
+  },
+  "args_key": "a78024d4cca3d71a56b9a2087feabf77d4b8e3e3681409262e97aae73426e24b",
+  "recorded_at": "2026-11-03T15:39:36.127787+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 160.90030001942068,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# NCT03340506 - arms, eligibility \n## Eligibility (ClinicalTrials.gov) \n \nSex: All\nEligible Ages: 18 Years to 100 Years\nHealthy Subjects: No\nInclusion Criteria:\n\n* Patient is currently receiving treatment with dabrafenib/trametinib monotherapy or combination within a Novartis or former GSK sponsored study which has fulfilled the requirements for the primary objective.\n* In the opinion of the Investigator would benefit from continued treatment.\n\nExclusion Criteria:\n\n* Patient has been previously permanently discontinued from study treatment in the parent protocol.\n* Patient's indication is commercially available and reimbursed in the local country.\n* Patient currently has unresolved toxicities for which dabrafenib and/or trametinib dosing has been interrupted in the parent study. \n## Arms (ClinicalTrials.gov) \n \n| Arm | Type | Interventions | Description | \n|---|---|---|---| \n| dabrafenib monotherapy | EXPERIMENTAL | dabrafenib | Patients in this study may receive:\n\n\\- monotherapy of dabra… | \n| trametinib monotherapy | EXPERIMENTAL | trametinib | Patients in this study may receive:\n\n\\- monotherapy of trame… | \n| Combination therapy (dabrafenib & trametinib) | EXPERIMENTAL | dabrafenib, trametinib | Patients in this study may receive:\n\n\\- the combination of d… | \nMore:\n  biomcp get trial NCT03340506 contacts   - central and site contact details\n  biomcp get trial NCT03340506 locations   - site list and contact details\n  biomcp get trial NCT03340506 outcomes   - endpoint measures and time frames\nAll:\n  biomcp get trial NCT03340506 all \nSee also:\n  biomcp search disease --query Melanoma\n  biomcp search article -d Melanoma\n  biomcp search trial -c Melanoma\n  biomcp search drug -q dabrafenib\n  biomcp drug trials dabrafenib \n\n[ClinicalTrials.gov](https://clinicaltrials.gov/study/NCT03340506)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

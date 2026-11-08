@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 25,
+    "query": "melanoma KIT MITF NF1 RAC1 GNAQ GNA11"
+  },
+  "args_key": "7037f5e02e0c467898f294d9aa521a78701114604bb35aba0ca3ef09d46c3566",
+  "recorded_at": "2026-11-03T20:12:32.772072+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 394.8085999581963,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: melanoma KIT MITF NF1 RAC1 GNAQ GNA11 \n \nFound 6 genes \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| GNAQ | G protein subunit alpha q | 2776 | 9:77716097-78032500 | GRCh38 | P50148 | 600998 | \n| GNA11 | G protein subunit alpha 11 | 2767 | 19:3094320-3124001 | GRCh38 | P29992 | 139313 | \n| KIT | KIT proto-oncogene, receptor tyrosine kinase | 3815 | 4:54657267-54740783 | GRCh38 | P10721 | 164920 | \n| MITF | melanocyte inducing transcription factor | 4286 | 3:69738536-69968336 | GRCh38 | O75030 | 156845 | \n| NF1 | neurofibromin 1 | 4763 | 17:31094883-31382116 | GRCh38 | P21359 | 613113 | \n| RAC1 | Rac family small GTPase 1 | 5879 | 7:6374098-6404016 | GRCh38 | P63000 | 602048 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1-6 of 6 results. \n \n\n\n## Next commands\n- `biomcp get gene GNAQ`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

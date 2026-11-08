@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "variant_articles",
+  "arguments": {
+    "items": [
+      {
+        "gene": "EGFR",
+        "limit": 5
+      }
+    ],
+    "limit": 5
+  },
+  "args_key": "f423271afbec48ff500ce355398b9dcdf4263bf610b6a4c32bb29e2fc9e057af",
+  "recorded_at": "2026-11-03T08:45:46.141199+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "70147d049a9e3bd31190ae3b87d93f1485386242eee6a9cc9a986c130f8b3d8f",
+  "latency_ms": 5.830799986142665,
+  "result": null,
+  "protocol_error": {
+    "code": -32602,
+    "message": "failed to deserialize parameters: unknown field `limit`, expected one of `request_id`, `gene`, `protein`, `coding`, `transcript`, `genomic`, `accession`, `build`, `position`, `ref`, `alt`, `rsid`",
+    "data": null
+  }
+}

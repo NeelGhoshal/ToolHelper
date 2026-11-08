@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "metformin"
+    ],
+    "entity": "article",
+    "keyword": [
+      "cardiovascular outcomes",
+      "heart failure"
+    ],
+    "limit": 10,
+    "offset": 15,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "3459ebe1e62476301e63d00a8b890d673a216f82825401e11a86e9eba632a8cd",
+  "recorded_at": "2026-11-03T10:25:47.106182+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3880.9455999871716,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=metformin, keyword=cardiovascular outcomes heart failure, exclude_retracted=true, sort=date, source=pubmed, offset=15 \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 10 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42368998|Impact of AIFA Note 100 on innovative antidiabetic prescribi…|PubMed|2026-06-26|-|none| \n|PMID 41984016|Comparative Cardiovascular Effectiveness of Glucagon-Like Pe…|PubMed|2026-06-02|-|none| \n|PMID 41942012|Cardiorenal protective effects of anti-diabetic drugs in ear…|PubMed|2026-06-01|-|none| \n|PMID 41975014|Evaluating Cost-Effectiveness in Relation to the Supporting…|PubMed|2026-06-01|-|none| \n|PMID 42249941|PERsonalised Medicine for Intensification of Treatment (PERM…|PubMed|2026-06-01|-|none| \n|PMID 42132163|Comparative Effectiveness of Individual Sodium Glucose Trans…|PubMed|2026-05-19|-|none| \n|PMID 42156933|Sex differences in cardiac structure and function following…|PubMed|2026-05-19|-|none| \n|PMID 42328113|Genetic Evidence for the Benefits and Risks of Glucose-Lower…|PubMed|2026-05-11|-|none| \n|PMID 41985055|Antidiabetic Drug Associations With Heart Failure Outcomes:…|PubMed|2026-04-15|-|none| \n|PMID 28402618|Management of Type 2 Diabetes: Selecting Amongst Available P…|PubMed|2026-04-12|-|none| \n \n \n \nNewest indexed: 2026-06-29 (127 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42368998\n  biomcp search article --drug metformin -k \"cardiovascular outcomes heart failure\" --source pubmed --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 16-25 of 390 results. Use --offset 25 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

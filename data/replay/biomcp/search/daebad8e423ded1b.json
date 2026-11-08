@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR mutations predict gefitinib sensitivity Science 2004 Lynch Paez exon 19 L858R discovery"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "daebad8e423ded1b04432fd95e373302bd29ea2fc71095e500e319532eb36988",
+  "recorded_at": "2026-11-03T15:32:50.283701+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2158.6429000017233,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR mutations predict gefitinib sensitivity Science 2004 Lynch Paez exon 19 L858R discovery, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR mutations predict gefitinib sensitivity Science 2004 Lynch Paez exon 19 L858R discovery\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 8 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 24651011|ERBB receptors: from oncogene discovery to basic science to…|Europe PMC|2014-03-01|-|839| \n|PMID 17325698|Which biomarker predicts benefit from EGFR-TKI treatment for…|PubTator3, Europe PMC|2007-03-26|-|77| \n|PMID 29848757|Dynamics of multiple resistance mechanisms in plasma DNA dur…|Europe PMC|2018-06-01|-|62| \n|PMID 39239557|Clinical applications of circulating biomarkers in non-small…|Europe PMC|2024-08-21|-|5| \n|PMID 28894880|EANM'17.|Europe PMC|2017-10-01|-|3| \n|PMID 41988299|Global trends and research progress on immunotherapy for EGF…|Europe PMC|2026-02-26|-|2| \n|PMID 40498965|EACR 2025 Congress: Innovative Cancer Science, 16-19 June 20…|Europe PMC|2025-06-01|-|0| \n|PMID 38947223|A Visual Analysis of the Research Dynamics in Resistance to…|PubTator3|2024-06-26|-|none| \n \n \n \nNewest indexed: 2026-04-17 (200 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 24651011\n  biomcp search article -k \"EGFR mutations predict gefitinib sensitivity Science 2004 Lynch Paez exon 19 L858R discovery\" --year-min 2007 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 8 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

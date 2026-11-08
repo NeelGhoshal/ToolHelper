@@ -3,7 +3,7 @@
 Field types the README leaves implicit are strings, except the clearly numeric
 `success_rate`, `mean_tokens`, `expand_rate` and `ttl_seconds`. `Evidence` is an
 addition: WarmHub has no evidence relation, so evidence is an assertion about the
-exact version it supports. `RunSummary` and `Experiment` get fields in Phases 5 and 10.
+exact version it supports. `Experiment` (frozen inputs, plan, folds) and `RunSummary` (one per run group) are Phase 10's.
 """
 
 from __future__ import annotations
@@ -33,6 +33,11 @@ SHAPES: dict[str, dict[str, Any]] = {
     "Decision": {"title": "string", "objective": "string", "chosen_config_json": "string",
                  "constraints_json": "string", "evidence": ["wref"], "rejected_json": "string",
                  "approved_by?": "string", "status": STATUS},
+    "Experiment": {"title": "string", "inputs_json": "string", "plan_json": "string", "folds_json": "string",
+                   "status": STATUS},
+    "RunSummary": {"experiment": "wref", "arm": "string", "group": "string", "repeat": "number",
+                   "runs": "number", "success_rate": "number", "tokens_per_success": "number",
+                   "trust_mean": "number", "run_ids": ["string"]},
     "Evidence": {"about": "wref", "kind": {"type": "string", "enum": ["dataset_row", "run", "schema_hash"]},
                  "ref": "string", "detail_json?": "string"},
 }

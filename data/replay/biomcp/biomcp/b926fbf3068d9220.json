@@ -1,0 +1,28 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search drug -q Tylenol --json"
+  },
+  "args_key": "b926fbf3068d92207c02098208252ea158e5c9242d48e7fe59c6169cc19b9e3c",
+  "recorded_at": "2026-11-03T22:54:26.495289+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 25844.143999973312,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"region\": \"all\",\n  \"regions\": {\n    \"us\": {\n      \"region\": \"us\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 10,\n        \"total\": 23,\n        \"has_more\": true,\n        \"next_page_token\": null\n      },\n      \"count\": 10,\n      \"results\": [\n        {\n          \"name\": \"acetaminophen\",\n          \"drugbank_id\": \"DB00316\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Inhibitor of Cyclooxygenase\",\n          \"target\": \"TRPV4\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"phenylephrine\",\n          \"drugbank_id\": \"DB00388\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Adrenergic alpha1-Agonists\",\n          \"target\": \"ADRA1A\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"dextromethorphan\",\n          \"drugbank_id\": \"DB00514\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Uncompetitive NMDA Receptor Antagonists\",\n          \"target\": \"GRIN2C\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"guaifenesin\",\n          \"drugbank_id\": \"DB00874\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Uncompetitive NMDA Receptor Antagonists\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"doxylamine\",\n          \"drugbank_id\": \"DB00366\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Uncompetitive NMDA Receptor Antagonists\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"diphenhydramine\",\n          \"drugbank_id\": \"DB01075\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Histamine H1 Receptor Antagonists\",\n          \"target\": \"HRH1\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"chlorpheniramine\",\n          \"drugbank_id\": \"DB01114\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Adrenergic alpha1-Agonists\",\n          \"target\": \"HRH1\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"pseudoephedrine\",\n          \"drugbank_id\": \"DB00852\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Adrenergic alpha-Agonists\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"acetaminophen, lidocaine, menthol\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"lidocaine\",\n          \"drugbank_id\": \"DB00281\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Blocker of Sodium channel alpha subunit\",\n          \"target\": \"Scn2a\",\n          \"match_kind\": \"broad_text\"\n        }\n      ],\n      \"continuation_command\": \"biomcp search drug --query Tylenol --region us --limit 10 --offset 10\"\n    },\n    \"eu\": {\n      \"region\": \"eu\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 0,\n        \"total\": 0,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"count\": 0,\n      \"results\": []\n    },\n    \"who\": {\n      \"region\": \"who\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 0,\n        \"total\": 0,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"count\": 0,\n      \"results\": []\n    }\n  },\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get drug acetaminophen\",\n      \"biomcp list drug\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

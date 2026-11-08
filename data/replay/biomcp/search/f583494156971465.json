@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "EGFR",
+    "keyword": [
+      "lung cancer",
+      "EGFR mutation",
+      "NSCLC"
+    ],
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "f58349415697146594873a3d39a36f5fa2d4da1ff677e168fd0deeb5378988db",
+  "recorded_at": "2026-11-03T23:24:59.196186+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 9346.302299993113,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, keyword=lung cancer EGFR mutation NSCLC, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene EGFR --keyword \"lung cancer EGFR mutation NSCLC\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 27718847|Pembrolizumab versus Chemotherapy for PD-L1-Positive Non-Sma…|Europe PMC|2016-10-08|-|8158| \n|PMID 26412456|Nivolumab versus Docetaxel in Advanced Nonsquamous Non-Small…|Europe PMC|2015-09-27|-|7733| \n|PMID 15118125|EGFR mutations in lung cancer: correlation with clinical res…|Europe PMC|2004-04-29|-|7336| \n|PMID 23539594|Cancer genome landscapes.|Europe PMC|2013-03-01|-|6000| \n|PMID 28187290|Primary, Adaptive, and Acquired Resistance to Cancer Immunot…|Europe PMC|2017-02-01|-|4728| \n|PMID 29151359|Osimertinib in Untreated EGFR-Mutated Advanced Non-Small-Cel…|Europe PMC|2017-11-18|-|4492| \n|PMID 42965979|Transcription activator-like effector base editing delivered…|PubMed|2026-10-29|-|0| \n|PMID 42973333|Clinical and Molecular Outcomes of Dabrafenib/Trametinib-Bas…|PubMed|2026-10-20|-|none| \n|PMID 42964983|Overcoming EGFR Resistance by Monovalent and Bident Inhibito…|PubMed|2026-09-29|-|0| \n|PMID 42972485|The TGF-β signaling activated by cancer-associated macropha…|PubMed|2026-08-04|-|0| \n|PMID 42975994|FLAURA2 - a step forward in first-line treatment of advanced…|PubMed|2026-01-01|-|none| \n|PMID 42976000|Detection of RET fusion in late-line treatment of NSCLC foll…|PubMed|2026-01-01|-|none| \n|PMID 40704256|Retreatment With EGFR-Tyrosine Kinase Inhibitor After Diseas…|PubTator3|2025-06-23|-|none| \n|PMID 37251503|NSCLC With Synchronous EGFR Mutations in Li Fraumeni Syndrom…|PubTator3|2023-04-30|-|none| \n|PMID 36556319|Efficacy and Failure Patterns of Early SBRT to the Primary T…|PubTator3|2022-11-22|-|none| \n \n \n \nNewest indexed: 2026-11-03 (0 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 27718847\n  biomcp search article -g EGFR -k \"lung cancer EGFR mutation NSCLC\" --year-min 2004 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n\nCache note: PubTator 3 data served from cache, 9 h old (older than the provider's freshness window).\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

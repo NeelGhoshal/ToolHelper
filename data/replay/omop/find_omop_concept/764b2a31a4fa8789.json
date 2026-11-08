@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "Hemoglobin A1c/Hemoglobin.total in Blood",
+    "max_results": 20,
+    "omop_field": "measurement_concept_id",
+    "omop_table": "measurement"
+  },
+  "args_key": "764b2a31a4fa878987585b23cac0fb1cfd3ab8bf07f92b4a632a967692b50f14",
+  "recorded_at": "2026-11-03T11:28:29.611447+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1091.5700999903493,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 3004410,\n      \"code\": \"4548-4\",\n      \"name\": \"Hemoglobin A1c/Hemoglobin.total in Blood\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3004410\"\n    },\n    {\n      \"concept_id\": 3005673,\n      \"code\": \"17856-6\",\n      \"name\": \"Hemoglobin A1c/Hemoglobin.total in Blood by HPLC\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3005673\"\n    },\n    {\n      \"concept_id\": 3007263,\n      \"code\": \"17855-8\",\n      \"name\": \"Hemoglobin A1c/Hemoglobin.total in Blood by calculation\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3007263\"\n    },\n    {\n      \"concept_id\": 3003309,\n      \"code\": \"4549-2\",\n      \"name\": \"Hemoglobin A1c/Hemoglobin.total in Blood by Electrophoresis\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3003309\"\n    },\n    {\n      \"concept_id\": 40765129,\n      \"code\": \"62388-4\",\n      \"name\": \"Hemoglobin A1c/Hemoglobin.total in Blood by JDS/JSCC protocol\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/40765129\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"Hemoglobin A1c/Hemoglobin.total in Blood\",\n    \"omop_table\": \"measurement\",\n    \"omop_field\": \"measurement_concept_id\",\n    \"total_found\": 5,\n    \"candidates_returned\": 5,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

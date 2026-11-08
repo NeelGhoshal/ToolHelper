@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "biomarker": [
+      "BRAF"
+    ],
+    "limit": 10
+  },
+  "args_key": "c707134d1a50773e35116735d6574c6df88fe3b8dcefb427694506325529f796",
+  "recorded_at": "2026-11-04T22:35:05.658039+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 143.71160000155214,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 360 \n \nQuery: biomarker=BRAF \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT06207656|Study to Evaluate the Eff…|RECRUITING|2|Colorectal Cancer| \n|NCT06603376|Irinotecan Hydrochloride…|RECRUITING|2|Colorectal Carcinoma| \n|NCT05370469|Real-Time Monitoring of S…|ACTIVE_NOT_RECRUITING|NA|Lung Cancer, EGFR Gene Mutation, EGFR, ALK Gen… [abridged; 9 conditions total]| \n|NCT02296996|Dabrafenib and Trametinib…|COMPLETED|2|Malignant Melanoma| \n|NCT03416933|Therapeutic Drug Monitori…|COMPLETED|NA|Melanoma (Skin)| \n|NCT04236102|KEBI-Cyto Study - Use of…|COMPLETED|NA|Pancreatic Adenocarcinoma, Lung Cancer| \n|NCT05054725|Combination Study of RMC-…|COMPLETED|2|Non-Small Cell Lung Cancer| \n|NCT04108481|Immunotherapy With Y90-Ra…|TERMINATED|1|Colorectal Cancer Metastatic, Colon Cancer, M… [abridged; 10 conditions total]| \n|NCT05576896|Hydroxychloroquine in Com…|TERMINATED|2|Stage IV Colorectal Cancer Positive for BRAF V… [abridged; 3 conditions total]| \n|NCT03975231|Dabrafenib, Trametinib, a…|SUSPENDED|1|BRAF NP_004324.2:p.V600E, BRAF V600K Mutation… [abridged; 3 conditions total]| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-10 of 360 results. Use --offset 10 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

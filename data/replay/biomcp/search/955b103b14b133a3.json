@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E dabrafenib trametinib"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "955b103b14b133a319e9e1c929fed2456f4821c9e79e8d5d854dfb070335e4c0",
+  "recorded_at": "2026-11-03T15:58:57.048392+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4352.427700010594,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E dabrafenib trametinib, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E dabrafenib trametinib\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 29195078|A Next Generation Connectivity Map: L1000 Platform and the F…|Europe PMC|2017-11-01|-|3014| \n|PMID 28889792|Overall Survival with Combined Nivolumab and Ipilimumab in A…|Europe PMC|2017-09-11|-|2911| \n|PMID 26091043|Genomic Classification of Cutaneous Melanoma.|Europe PMC|2015-06-01|-|2588| \n|PMID 31942075|B cells and tertiary lymphoid structures promote immunothera…|Europe PMC|2020-01-15|-|2439| \n|PMID 42954328|Standard treatment against paediatric BRAF-V600E glioma prom…|PubMed|2026-10-29|-|0| \n|PMID 42957845|Post-transplant BRAF/MEK inhibitor maintenance sustains comp…|PubMed|2026-10-28|-|0| \n|PMID 42897968|Precision Thyroid Oncology Using Genetic-Based Therapies: A…|PubMed|2026-10-20|-|0| \n|PMID 42973333|Clinical and Molecular Outcomes of Dabrafenib/Trametinib-Bas…|PubMed|2026-10-20|-|none| \n|PMID 39759653|Remarkable Response to Dabrafenib and Trametinib in a V-Raf…|PubTator3|2024-12-06|-|none| \n|PMID 38538919|BRAF/MEK-targeted therapy in BRAF ex15 p.T599dup mutation-dr…|PubTator3|2024-03-27|-|none| \n \n \n \nNewest indexed: 2026-11-03 (0 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 29195078\n  biomcp search article -k \"BRAF V600E dabrafenib trametinib\" --year-min 2015 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

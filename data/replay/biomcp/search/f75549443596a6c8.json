@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CYP2C19 clopidogrel CPIC 2022 update recommendations"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "f75549443596a6c86f2b1305564b6d4d92cf5d15545aa066eeb0c7cb2bb0c9b5",
+  "recorded_at": "2026-11-04T00:02:10.175581+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2676.888099987991,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CYP2C19 clopidogrel CPIC 2022 update recommendations, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CYP2C19 clopidogrel CPIC 2022 update recommendations\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 35034351|Clinical Pharmacogenetics Implementation Consortium Guidelin…|PubTator3, Europe PMC, PubMed|2022-11-01|-|396| \n|PMID 32602114|PharmVar GeneFocus: CYP2C19.|Europe PMC|2020-07-22|-|122| \n|PMID 38181729|Building a vertically integrated genomic learning health sys…|Europe PMC|2024-01-01|-|55| \n|PMID 35537468|Advancing Pharmacogenomics from Single-Gene to Preemptive Te…|Europe PMC|2022-05-10|-|50| \n|PMID 36082121|Evaluation of race and ethnicity disparities in outcome stud…|PubTator3, Europe PMC|2022-08-23|-|45| \n \n \n \nNewest indexed: 2024-01-07 (1032 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 35034351\n  biomcp search article -k \"CYP2C19 clopidogrel CPIC 2022 update recommendations\" --year-min 2020 --year-max 2024 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

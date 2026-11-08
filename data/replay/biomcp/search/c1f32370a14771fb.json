@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "disease": [
+      "dementia",
+      "Alzheimer disease"
+    ],
+    "drug": [
+      "statin",
+      "simvastatin",
+      "atorvastatin"
+    ],
+    "entity": "article",
+    "limit": 20,
+    "sort": "citations"
+  },
+  "args_key": "c1f32370a14771fbf50462c17620262b374b3e9ccf896abee84fe80e51149e2d",
+  "recorded_at": "2026-11-03T09:16:10.341503+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4455.010399979074,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: disease=dementia Alzheimer disease, drug=statin simvastatin atorvastatin, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --disease \"dementia Alzheimer disease\" --drug \"statin simvastatin atorvastatin\" --exclude-retracted --sort citations --source semanticscholar --limit 20 --offset 0` \n \n \nFound 20 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 33237691|Lipid and Lipoprotein Levels in Patients with Covid-19 Infec…|PubMed|2026-01-15|-|0| \n|PMID 41048558|Statins, cholesterol and cognition at the time of Alzheimer'…|PubTator3, PubMed|2025-10-03|-|2| \n|PMID 40834163|Associations between selected genetic variants and lipid pro…|PubTator3, PubMed|2025-08-15|-|1| \n|PMID 40482451|Neuroinflammation to neurodegeneration: Boulevard of broken…|PubTator3|2025-06-06|-|none| \n|PMID 40145346|Commonly prescribed multi-medication therapies exert sex-spe…|PubMed|2025-03-01|-|7| \n|PMID 39772858|Medications and cognitive decline in Alzheimer's disease: Co…|PubMed|2025-02-01|-|7| \n|PMID 39126062|Effects of Atorvastatin and Simvastatin on the Bioenergetic…|PubTator3|2024-08-03|-|none| \n|PMID 38930515|Simvastatin, Its Antimicrobial Activity and Its Prevention o…|PubTator3|2024-06-01|-|none| \n|PMID 38115091|Statins and cognitive decline in patients with Alzheimer's a…|PubTator3, PubMed|2023-12-20|-|61| \n|PMID 40703952|Protective Effects of Statins against Alzheimer Disease|PubTator3|2023-10-01|-|none| \n|PMID 37431946|The Effects of Statins on Cognitive Performance Are Mediated…|PubTator3|2023-07-11|-|none| \n|PMID 37251243|The neuroprotective effect of statin in traumatic brain inju…|PubTator3|2023-05-13|-|none| \n|PMID 36648628|Molecular and Computational Analysis Identify Statins as Sel…|PubTator3|2023-04-01|-|none| \n|PMID 36688200|Beneficial Effects of Statins on Seizures Independent of The…|PubTator3|2023-01-01|-|none| \n|PMID 36291224|Statins Use in Alzheimer Disease: Bane or Boon from Frantic…|PubTator3|2022-09-24|-|none| \n|PMID 36135833|Medication-Wide Association Study Plus (MWAS+): A Proof of C…|PubTator3|2022-08-31|-|none| \n|PMID 36046494|Statins and cognition: Modifying factors and possible underl…|PubTator3|2022-08-15|-|none| \n|PMID 35104501|The calcium-free form of atorvastatin inhibits amyloid-beta(…|PubTator3|2022-03-01|-|none| \n|PMID 34830387|Neuroprotective Effect of Statins in a Rat Model of Chronic…|PubTator3|2021-11-19|-|none| \n|PMID 34405076|Statins' Effect on Cognitive Outcome After Traumatic Brain I…|PubTator3|2021-08-06|-|none| \n \n \n \nNewest indexed: 2025-03-27 (586 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 33237691\n  biomcp search article -d \"dementia Alzheimer disease\" --drug \"statin simvastatin atorvastatin\" --year-min 2021 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 20 results (total unknown). Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

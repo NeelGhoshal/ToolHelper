@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "dementia",
+      "meta-analysis"
+    ],
+    "limit": 10,
+    "sort": "relevance"
+  },
+  "args_key": "15af42b5b4634b5f588b047e4a668e6e5c80117175004831a07da41e824f5854",
+  "recorded_at": "2026-11-04T06:38:49.571432+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4994.6078000357375,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin dementia meta-analysis, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"statin dementia meta-analysis\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 39822593|Statin use and dementia risk: A systematic review and update…|PubTator3|2025-01-16|hybrid 0.371 + title 3/3|none| \n|PMID 34871380|Statin use and risk of dementia or Alzheimer's disease: a sy…|PubTator3|2022-05-05|hybrid 0.357 + title 3/3|none| \n|PMID 40199829|Statins and the risk of dementia: a meta-analysis.|PubTator3|2025-04-09|hybrid 0.286 + title 2/3|none| \n|PMID 42825089|Association between timing of statin treatment after diabete…|Europe PMC|2026-08-27|hybrid 0.286 + title 2/3|0| \n|PMID 41840386|Deprescribing preventive medications in older adults with ad…|PubMed|2026-03-17|hybrid 0.257 + title 2/3|4| \n|PMID 39963242|The role of statins in dementia or Alzheimer's disease incid…|PubTator3|2025-02-03|hybrid 0.243 + title 2/3|none| \n|PMID 41083880|The role of APOE ε4 in modulating the relationship between…|PubMed|2025-10-13|hybrid 0.2 + title 2/3|7| \n|PMID 42566699|Secondary prevention of myocardial infarction in people with…|Europe PMC, PubMed|2026-08-01|hybrid 0.171 + title 1/3|0| \n|PMID 42903333|Association of statin use with reduced risk of Alzheimer's d…|Europe PMC|2026-10-06|hybrid 0.157 + title 1/3|0| \n|PMID 42863385|Pharmacological interventions for reducing the risk of cogni…|Europe PMC|2026-10-12|hybrid 0.143 + title 1/3|0| \n \n \n \nNewest indexed: 2026-10-23 (12 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 39822593\n  biomcp search article -k \"statin dementia meta-analysis\" --year-min 2022 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

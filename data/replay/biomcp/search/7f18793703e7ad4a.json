@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "limit": 10,
+    "query": "BRAF V600E rs28357569 dbSNP"
+  },
+  "args_key": "7f18793703e7ad4a6fa5e72e52796a12fb2998da131e976f087bf494edcca870",
+  "recorded_at": "2026-11-03T15:38:00.767257+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 899.0840999758802,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Requested variant: BRAF V600E\n\nVariant identity: unresolved\n\n# Variant Search Results \n \nFound: 0 variant(s) \nQuery: gene=BRAF, hgvsp=V600E, condition=rs28357569 dbSNP \n \n \n## Filter evaluation \n \ncondition: evaluated \n \ngene: evaluated \n \nhgvsp: evaluated \n \n \n \nNo variants found matching the filters. \n\nShowing 0 of 0 results.\n\n\nNo variants matched the routed phrase. Read as gene=BRAF, hgvsp=V600E, condition=rs28357569 dbSNP. Try the same filters without the condition: biomcp search variant -g BRAF --hgvsp V600E"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

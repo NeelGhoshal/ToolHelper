@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "metformin"
+    ],
+    "entity": "article",
+    "keyword": [
+      "cardiovascular outcomes",
+      "UKPDS",
+      "all-cause mortality"
+    ],
+    "limit": 20,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "d0b762b36fcdfb0991fe21daaa39a3427fc50c15090b41bc5d18abe1d4a71b33",
+  "recorded_at": "2026-11-03T09:03:50.589153+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 449.414299975615,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=metformin, keyword=cardiovascular outcomes UKPDS all-cause mortality, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 6 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 33516224|Association of metformin monotherapy or combined therapy wit…|PubMed|2021-01-30|-|none| \n|PMID 28770324|Impact of metformin on cardiovascular disease: a meta-analys…|PubMed|2017-09-01|-|none| \n|PMID 26861811|Early Treatment with Basal Insulin Glargine in People with T…|PubMed|2016-06-01|-|none| \n|PMID 20807681|Intensive glucose control and cardiovascular outcomes in typ…|PubMed|2011-10-01|-|none| \n|PMID 18613325|Metformin as first choice in oral diabetes treatment: the UK…|PubMed|2007-01-01|-|none| \n|PMID 14502099|Improving survival with metformin: the evidence base today.|PubMed|2003-09-01|-|none| \n \n \n \nNewest indexed: 2021-01-31 (2102 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 33516224\n  biomcp search article --drug metformin -k \"cardiovascular outcomes UKPDS all-cause mortality\" --source pubmed --year-min 2003 --year-max 2021 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-6 of 6 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

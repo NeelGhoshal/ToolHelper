@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "dementia",
+      "meta-analysis"
+    ],
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "cff3ea0d0dbdb272dd63a5a03d68bd3fd8a988705aba60ddcdf2b047368b0b8f",
+  "recorded_at": "2026-11-03T12:42:58.146083+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5593.7943999888375,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin dementia meta-analysis, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"statin dementia meta-analysis\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 30496104|Global, regional, and national incidence, prevalence, and ye…|Europe PMC|2018-11-08|-|10173| \n|PMID 32738937|Dementia prevention, intervention, and care: 2020 report of…|Europe PMC|2020-07-30|-|7936| \n|PMID 28122885|Heart Disease and Stroke Statistics-2017 Update: A Report Fr…|Europe PMC|2017-01-25|-|6484| \n|PMID 19812666|Finding the missing heritability of complex diseases.|Europe PMC|2009-10-01|-|6131| \n|PMID 33501848|Heart Disease and Stroke Statistics-2021 Update: A Report Fr…|Europe PMC|2021-01-27|-|4456| \n|PMID 17941715|Strengthening the Reporting of Observational Studies in Epid…|Europe PMC|2007-10-01|-|4253| \n|PMID 42735389|Cardiometabolic medication exposures and cognitive outcomes…|PubMed|2026-09-04|-|0| \n|PMID 42566699|Secondary prevention of myocardial infarction in people with…|PubMed|2026-08-03|-|0| \n|PMID 41840386|Deprescribing preventive medications in older adults with ad…|PubMed|2026-03-17|-|4| \n|PMID 41716550|The effects of cholesterol-lowering drugs on neurocognitive…|PubMed|2026-02-04|-|0| \n|PMID 41304916|Cognitive Safety and Outcomes of Pharmacological Management…|PubMed|2025-11-05|-|0| \n|PMID 41295435|Impact of Statin Therapy on the Risk of Stroke Recurrence, M…|PubTator3, PubMed|2025-11-01|-|4| \n|PMID 41083880|The role of APOE ε4 in modulating the relationship between…|PubMed|2025-10-13|-|7| \n|PMID 40199829|Statins and the risk of dementia: a meta-analysis.|PubTator3, PubMed|2025-04-09|-|2| \n|PMID 39963242|The role of statins in dementia or Alzheimer's disease incid…|PubTator3, PubMed|2025-02-03|-|9| \n \n \n \nNewest indexed: 2026-09-14 (50 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 30496104\n  biomcp search article -k \"statin dementia meta-analysis\" --year-min 2007 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

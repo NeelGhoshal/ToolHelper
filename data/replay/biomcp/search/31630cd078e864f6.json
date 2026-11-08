@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "json": true,
+    "limit": 5,
+    "query": "ABL1"
+  },
+  "args_key": "31630cd078e864f66de83882ff48e2264ec22288d2e026168cdbdcfc75cc6bab",
+  "recorded_at": "2026-11-03T10:03:14.071465+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 27.672700001858175,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 1,\n    \"total\": 1,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 1,\n  \"results\": [\n    {\n      \"symbol\": \"ABL1\",\n      \"name\": \"ABL proto-oncogene 1, non-receptor tyrosine kinase\",\n      \"entrez_id\": \"25\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"9:130713043-130887675\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"P00519\",\n      \"omim_id\": \"189980\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get gene ABL1\",\n      \"biomcp list gene\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

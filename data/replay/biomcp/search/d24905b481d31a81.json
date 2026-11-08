@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "query": "CYP2C19 clopidogrel pharmacogenomics CPIC guideline",
+    "limit": 10
+  },
+  "args_key": "d24905b481d31a816dc248f7803c4097e49f35b30bc3497c78d83d5b5829da22",
+  "recorded_at": "2026-11-03T09:55:17.267535+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 371.1347000207752,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: CYP2C19 clopidogrel pharmacogenomics CPIC guideline \n \nFound 1 gene \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| CYP2C19 | cytochrome P450 family 2 subfamily C member 19 | 1557 | 10:94762536-94922264 | GRCh38 | P33261 | 124020 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1 of 1 results. \n \n\n\n## Next commands\n- `biomcp get gene CYP2C19`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

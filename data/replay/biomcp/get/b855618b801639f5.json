@@ -1,0 +1,44 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "BRAF",
+    "json": true,
+    "sections": [
+      "pathways",
+      "ontology",
+      "diseases",
+      "protein",
+      "go",
+      "interactions",
+      "expression",
+      "druggability",
+      "constraint",
+      "clinvar",
+      "gwas",
+      "annotations"
+    ]
+  },
+  "args_key": "b855618b801639f5f6dda663709c6878ad8909849027ca8f7572203fcbe6e39b",
+  "recorded_at": "2026-11-04T05:34:59.231318+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.2607000535354018,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: clinvar"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

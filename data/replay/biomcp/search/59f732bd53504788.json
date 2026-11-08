@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "limit": 10,
+    "keyword": [
+      "PROSPER trial pravastatin cognitive function dementia HPS heart protection study simvastatin cognition randomized trial results"
+    ]
+  },
+  "args_key": "59f732bd535047888d2fd26e43696c0f6fca51d17dd317e3f27c55b83d68b79a",
+  "recorded_at": "2026-11-04T20:42:19.756148+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3306.067899999789,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=PROSPER trial pravastatin cognitive function dementia HPS heart protection study simvastatin cognition randomized trial results, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"PROSPER trial pravastatin cognitive function dementia HPS heart protection study simvastatin cognition randomized trial results\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 36046494|Statins and cognition: Modifying factors and possible underl…|PubTator3, Europe PMC|2022-08-15|hybrid 0.247 + title 1/14|50| \n|PMID 34167639|Effect of Statin Therapy on Cognitive Decline and Incident…|Europe PMC|2021-06-01|hybrid 0.243 + title 2/14|87| \n|PMID 39520593|Do Statins Affect Cognitive Health? A Narrative Review and C…|Europe PMC|2024-11-09|hybrid 0.231 + title 1/14|17| \n|PMID 34199243|Cognition, Statins, and Cholesterol in Elderly Ischemic Stro…|PubTator3, Europe PMC|2021-06-13|hybrid 0.174 + title 1/14|13| \n|PMID 42010230|Brain, benefit, or burden? Revisiting statins and cognitive…|Europe PMC|2026-04-20|hybrid 0.164 + title 2/14|1| \n|PMID 40207842|Managing Hypercholesterolemia in Adults Older Than 75 years…|PubTator3, Europe PMC|2025-04-10|hybrid 0.163|9| \n|PMID 40546882|Navigating the treatment landscape of Alzheimer's disease: C…|Europe PMC|2025-05-10|hybrid 0.153|7| \n|PMID 36556202|Cholesterol Management in Neurology: Time for Revised Strate…|PubTator3, Europe PMC|2022-11-30|hybrid 0.152|6| \n|PMID 36465767|Neurocognitive Impairment in Cardiovascular Disease Patients…|PubTator3, Europe PMC|2022-10-31|hybrid 0.145|5| \n|PMID 36598445|Primary Prevention Statin Therapy in Older Adults|PubTator3, Europe PMC|2023-01-01|hybrid 0.145|12| \n \n \n \nNewest indexed: 2026-04-21 (197 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 36046494\n  biomcp search article -k \"PROSPER trial pravastatin cognitive function dementia HPS heart protection study simvastatin cognition randomized trial results\" --year-min 2021 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

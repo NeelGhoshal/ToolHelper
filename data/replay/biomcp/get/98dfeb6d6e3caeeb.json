@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "sertraline",
+    "json": true
+  },
+  "args_key": "98dfeb6d6e3caeebf4d8a44df76d68e4a9043f716b2bb9ca3f687069e9e68257",
+  "recorded_at": "2026-11-03T06:46:31.629137+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 453.18270003190264,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"DrugBank\",\n        \"url\": \"https://go.drugbank.com/drugs/DB01104\"\n      },\n      {\n        \"label\": \"ChEMBL\",\n        \"url\": \"https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL809\"\n      },\n      {\n        \"label\": \"OpenFDA FAERS\",\n        \"url\": \"https://api.fda.gov/drug/event.json?search=%28patient.drug.openfda.generic_name%3A%22sertraline%22+OR+patient.drug.openfda.brand_name%3A%22sertraline%22+OR+patient.drug.medicinalproduct%3A%22sertraline%22%29+AND+patient.drug.drugcharacterization%3A1&count=patient.reaction.reactionmeddrapt.exact&limit=50\"\n      },\n      {\n        \"label\": \"DailyMed\",\n        \"url\": \"https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=623b9672-b41e-4ec9-b2cc-f5bb383c39ba\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get drug sertraline approvals\",\n      \"biomcp get drug sertraline label\",\n      \"biomcp get drug sertraline regulatory --region us\",\n      \"biomcp get drug sertraline all --region us\",\n      \"biomcp search article --drug sertraline --type review --limit 5\",\n      \"biomcp drug trials sertraline\",\n      \"biomcp drug adverse-events sertraline\",\n      \"biomcp search pgx -d sertraline\",\n      \"biomcp get gene SLC6A4\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"overview\",\n        \"label\": \"Overview\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"MyChem.info\"\n        ]\n      },\n      {\n        \"key\": \"fda_approved\",\n        \"label\": \"FDA Approved\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"DrugCentral\"\n        ]\n      },\n      {\n        \"key\": \"brand_names\",\n        \"label\": \"Brand Names\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"DrugBank\"\n        ]\n      },\n      {\n        \"key\": \"mechanisms\",\n        \"label\": \"Mechanisms\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"MyChem.info\",\n          \"ChEMBL\"\n        ]\n      },\n      {\n        \"key\": \"targets\",\n        \"label\": \"Targets\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"Guide to PHARMACOLOGY\",\n          \"Open Targets\"\n        ]\n      }\n    ],\n    \"workflow\": \"pharmacogene-cumulative\",\n    \"workflow_playbook\": \"biomcp skill pharmacogene-cumulative\",\n    \"workflow_rationale\": \"Use the PGx search and detail surfaces before collecting literature for multi-gene drug-response evidence.\"\n  },\n  \"approval_date\": \"1991-12-30\",\n  \"approval_date_display\": \"December 30, 1991\",\n  \"approval_date_raw\": \"1991-12-30\",\n  \"approval_summary\": \"FDA approved on December 30, 1991\",\n  \"brand_names\": [\n    \"Sertraline HCl\"\n  ],\n  \"chembl_id\": \"CHEMBL809\",\n  \"drug_type\": \"small-molecule\",\n  \"drugbank_id\": \"DB01104\",\n  \"indications\": [\n    \"Depressive disorder\",\n    \"Obsessive-compulsive disorder\",\n    \"Panic disorder\",\n    \"Posttraumatic stress disorder\",\n    \"Premenstrual dysphoric disorder\",\n    \"Social phobia\"\n  ],\n  \"mechanism\": \"Serotonin Uptake Inhibitors\",\n  \"mechanisms\": [\n    \"Serotonin Uptake Inhibitors\"\n  ],\n  \"name\": \"sertraline\",\n  \"pharm_classes\": [\n    \"Cytochrome P450 2D6 Inhibitors\",\n    \"Serotonin Uptake Inhibitors\"\n  ],\n  \"route\": \"oral\",\n  \"section_outcomes\": {\n    \"approvals\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"cell_lines\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"civic\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indications\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"interactions\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"label\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"safety\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"targets\": {\n      \"outcome\": \"data\",\n      \"sources\": [\n        \"Guide to PHARMACOLOGY\",\n        \"Open Targets\"\n      ]\n    }\n  },\n  \"targets\": [\n    \"SLC6A4\"\n  ],\n  \"top_adverse_events\": [\n    \"NAUSEA\",\n    \"DRUG INEFFECTIVE\",\n    \"FATIGUE\"\n  ],\n  \"unii\": \"QUC7NX6WMB\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

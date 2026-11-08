@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "HER2 targeted therapy review 2025 resistance mechanisms antibody drug conjugate bispecific"
+    ],
+    "limit": 8,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "1ebb3c0731dd40f826ff2fa6c6b8d77523b16b41ff7bf0be190cc8b7afbd26d0",
+  "recorded_at": "2026-11-04T07:33:59.052915+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 450.89860004372895,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=HER2 targeted therapy review 2025 resistance mechanisms antibody drug conjugate bispecific, exclude_retracted=true, sort=date, source=pubmed\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": false,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubmed\"\n    ],\n    \"enrichment_sources\": []\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 8,\n    \"returned\": 6,\n    \"total\": 6,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 6,\n  \"results\": [\n    {\n      \"pmid\": \"41222552\",\n      \"title\": \"Antibody-drug conjugates in lung cancer: current landscape and future perspectives.\",\n      \"journal\": \"Current opinion in oncology\",\n      \"date\": \"2026-01-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41391577\",\n      \"title\": \"Antibody-drug conjugates: A new twist to overcome EGFR-TKIs resistance in non-small cell lung cancer.\",\n      \"journal\": \"Pharmacological research\",\n      \"date\": \"2026-01-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41243354\",\n      \"title\": \"Expanding indications and developmental landscape of HER2-targeted therapies in breast cancer: a pharmacotherapeutic perspective.\",\n      \"journal\": \"Expert opinion on pharmacotherapy\",\n      \"date\": \"2025-12-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41630133\",\n      \"title\": \"Antibody-Drug Conjugates (ADCs) for Breast Cancer Therapeutic Landscape: Concept and Mechanisms of Action.\",\n      \"journal\": \"Hematology/oncology and stem cell therapy\",\n      \"date\": \"2025-10-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"40460510\",\n      \"title\": \"Mechanisms of resistance to antibody-drug conjugates in cancers.\",\n      \"journal\": \"Respiratory investigation\",\n      \"date\": \"2025-07-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"40615323\",\n      \"title\": \"[Antibody-drug conjugates in breast cancer: Resistance mechanisms and prospects].\",\n      \"journal\": \"Bulletin du cancer\",\n      \"date\": \"2025-07-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 41222552\",\n      \"biomcp search article -k \\\"HER2 targeted therapy review 2025 resistance mechanisms antibody drug conjugate bispecific\\\" --source pubmed --year-min 2025 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

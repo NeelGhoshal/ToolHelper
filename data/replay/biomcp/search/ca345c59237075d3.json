@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 10,
+    "query": "imatinib target ABL1 BCR-ABL KIT PDGFRA"
+  },
+  "args_key": "ca345c59237075d3f6b117e4cb1d8673d5bd9dfe9cf9360ee7f3e6477e72cdaa",
+  "recorded_at": "2026-11-03T11:49:09.074026+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 627.6300000026822,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: imatinib target ABL1 BCR-ABL KIT PDGFRA \n \nFound 3 genes \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| KIT | KIT proto-oncogene, receptor tyrosine kinase | 3815 | 4:54657267-54740783 | GRCh38 | P10721 | 164920 | \n| ABL1 | ABL proto-oncogene 1, non-receptor tyrosine kinase | 25 | 9:130713043-130887675 | GRCh38 | P00519 | 189980 | \n| PDGFRA | platelet derived growth factor receptor alpha | 5156 | 4:54229130-54298246 | GRCh38 | P16234 | 173490 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1-3 of 3 results. \n \n\n\n## Next commands\n- `biomcp get gene KIT`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

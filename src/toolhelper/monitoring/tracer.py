@@ -33,6 +33,8 @@ class LLMCallRecord(BaseModel):
     applied_options: dict[str, Any] = Field(default_factory=dict)
     ignored_options: list[str] = Field(default_factory=list)
     tool_calls: list[str] = Field(default_factory=list)  # call ids the model issued
+    retries: int = 0  # transient API failures retried before the reply (stalled free tier)
+    waited_s: float = 0.0
 
 
 class ToolCallRecord(BaseModel):

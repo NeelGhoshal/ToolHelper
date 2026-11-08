@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "CYP2C19",
+    "sections": [
+      "druggability",
+      "pathways",
+      "diseases"
+    ]
+  },
+  "args_key": "7ca5a85ff41eb3642462e37eef2284ed07db43b5b61d2b7906ffa541c6e99122",
+  "recorded_at": "2026-11-03T23:43:22.267362+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 814.7700999397784,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# CYP2C19 - druggability, pathways, diseases \n## Pathways \n \n| Source | ID | Name | \n|---|---|---| \n| KEGG | hsa00590 | Arachidonic acid metabolism - Homo sapiens (human) | \n| KEGG | hsa00591 | Linoleic acid metabolism - Homo sapiens (human) | \n| KEGG | hsa00982 | Drug metabolism - cytochrome P450 - Homo sapiens (human) | \n| KEGG | hsa04726 | Serotonergic synapse - Homo sapiens (human) | \n| KEGG | hsa05204 | Chemical carcinogenesis - Homo sapiens (human) | \n| Reactome | R-HSA-211055 | CYP2C19 | \n| Reactome | R-HSA-211929 | CYP2C19 5-hydroxylates omeprazole | \n| Reactome | R-HSA-2161899 | Arachidonate is epoxidated to 8,9-EET by CYP(5) | \n| Reactome | R-HSA-9915997 | Arachidonate is epoxidated to 14,15-EET by CYP(5) | \n| Reactome | R-HSA-9915971 | Arachidonate is epoxidated to 11,12-EET by CYP(5) | \n| Reactome | R-HSA-2161814 | Arachidonate is hydroxylated to 19-HETE by CYP(2) | \n| Reactome | R-HSA-3222363 | Cytochrome P450 (CYP2C19 based) | \n## Diseases (Enrichr) \n \n| Term | P-value | Library | \n|---|---|---| \n| Sore Throat | 3.50e-4 | DisGeNET | \n| Alkalemia | 3.50e-4 | DisGeNET | \n| Hypergonadotropic Ovarian Failure, X-Linked | 4.00e-4 | DisGeNET | \n| Gonadotropin-Resistant Ovary Syndrome | 4.00e-4 | DisGeNET | \n| Pharyngitis | 6.00e-4 | DisGeNET | \n## Druggability (DGIdb / Open Targets) \n \nCategories: Cytochrome P450, Druggable Genome, Enzyme \n### OpenTargets tractability \n \n| Modality | Tractable | Evidence | \n|---|---|---| \n| small molecule | yes | Structure with Ligand, High-Quality Ligand, Druggable Family | \n| antibody | yes | GO CC high conf, UniProt loc med conf | \n| PROTAC | yes | Small Molecule Binder | \n| other modality | no | - | \n### OpenTargets safety liabilities \n \n| Event | Datasource | Effect | Biosample | \n|---|---|---|---| \n| adverse cardiac and cerebrovascular events | ClinPGx | - | - | \n| agitation and dysphoria | ClinPGx | - | - | \n| becoming overweight | ClinPGx | - | - | \n| bleeding | ClinPGx | - | - | \n| bleeding events | ClinPGx | - | - | \n| drug reaction with eosinophilia and systemic symptoms (DRESS) | ClinPGx | - | - | \n| drug toxicity | ClinPGx | - | - | \n| hemorrhage | ClinPGx | - | - | \n| Drug | Interaction Types | Score | Approved | Sources | \n|---|---|---|---|---| \n| NORCLOBAZAM | - | 0.286 | no | 1 | \n| 6BETA-HYDROXYTESTOSTERONE | - | 0.172 | no | 1 | \n| NORMEPERIDINE | - | 0.172 | no | 1 | \n| PROGUANIL | - | 0.086 | yes | 2 | \n| ANABASINE | - | 0.086 | no | 1 | \n| CHEMBL:CHEMBL1257081 | - | 0.086 | no | 1 | \n| CHEMBL:CHEMBL250053 | - | 0.086 | no | 1 | \n| COMPOUND 30 [PMID: 22239545] | inhibitor | 0.086 | no | 1 | \n| HYDRASTINE | - | 0.086 | no | 1 | \n| MONO-N-ACETYL DAPSONE | - | 0.086 | no | 1 | \n| BMS-191011 | - | 0.057 | no | 1 | \n| BELZUTIFAN | - | 0.052 | yes | 1 | \n| PRAZIQUANTEL | - | 0.052 | yes | 1 | \n| TOLBUTAMIDE | - | 0.048 | yes | 2 | \n| AMBRISENTAN | - | 0.043 | yes | 2 | \nMore:\n  biomcp get gene CYP2C19 ontology   - GO-style functional enrichment\n  biomcp get gene CYP2C19 diagnostics   - diagnostic tests for this gene from GTR\n  biomcp get gene CYP2C19 funding   - NIH Reporter grant support\n  biomcp get gene CYP2C19 protein   - UniProt function and localization detail\nAll:\n  biomcp get gene CYP2C19 all \nSee also:\n  biomcp search diagnostic --gene CYP2C19   - diagnostic tests for this gene\n  biomcp search pgx -g CYP2C19   - pharmacogenomics interactions\n  biomcp search variant -g CYP2C19\n  biomcp search article -g CYP2C19\n  biomcp search drug --target CYP2C19\n  biomcp gene trials CYP2C19 \n\n[NCBI Gene](https://www.ncbi.nlm.nih.gov/gene/1557) | [UniProt](https://www.uniprot.org/uniprot/P33261) | [Ensembl](https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000165841) | [OMIM](https://www.omim.org/entry/124020)\n\n\n## Sources\n- Identity: NCBI Gene / MyGene.info\n- Summary: NCBI Gene\n- Aliases: NCBI Gene / MyGene.info\n- Pathways: KEGG, Reactome\n- Diseases: Enrichr\n- Druggability: DGIdb, Open Targets\n\n## Next commands\n- `biomcp get gene CYP2C19 ontology`\n- `biomcp get gene CYP2C19 diagnostics`\n- `biomcp get gene CYP2C19 funding`\n- `biomcp get gene CYP2C19 protein`\n- `biomcp search diagnostic --gene CYP2C19`\n- `biomcp search pgx -g CYP2C19`\n- `biomcp search variant -g CYP2C19`\n- `biomcp search article -g CYP2C19`\n- `biomcp search drug --target CYP2C19`\n- `biomcp gene trials CYP2C19`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

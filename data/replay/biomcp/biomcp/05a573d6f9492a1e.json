@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search pgx --gene CYP2C19 --json",
+    "json": true
+  },
+  "args_key": "05a573d6f9492a1ecc57c59d11068b8cce66edbe8dfffe2acbe774a1dc5afed8",
+  "recorded_at": "2026-11-05T04:39:18.661702+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 297.5874000003387,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": 27,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"count\": 10,\n  \"results\": [\n    {\n      \"genesymbol\": \"CYP2C19\",\n      \"drugname\": \"amitriptyline\",\n      \"cpiclevel\": \"A\",\n      \"guidelinename\": \"CYP2D6, CYP2C19 and Tricyclic Antidepressants\"\n    },\n    {\n      \"genesymbol\": \"CYP2C19\",\n      \"drugname\": \"citalopram\",\n      \"cpiclevel\": \"A\",\n      \"pgxtesting\": \"Actionable PGx\",\n      \"guidelinename\": \"CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants\"\n    },\n    {\n      \"genesymbol\": \"CYP2C19\",\n      \"drugname\": \"clopidogrel\",\n      \"cpiclevel\": \"A\",\n      \"pgxtesting\": \"Actionable PGx\",\n      \"guidelinename\": \"CYP2C19 and Clopidogrel\"\n    },\n    {\n      \"genesymbol\": \"CYP2C19\",\n      \"drugname\": \"escitalopram\",\n      \"cpiclevel\": \"A\",\n      \"pgxtesting\": \"Informative PGx\",\n      \"guidelinename\": \"CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants\"\n    },\n    {\n      \"genesymbol\": \"CYP2C19\",\n      \"drugname\": \"lansoprazole\",\n      \"cpiclevel\": \"A\",\n      \"pgxtesting\": \"Informative PGx\",\n      \"guidelinename\": \"CYP2C19 and Proton Pump Inhibitors\"\n    },\n    {\n      \"genesymbol\": \"CYP2C19\",\n      \"drugname\": \"omeprazole\",\n      \"cpiclevel\": \"A\",\n      \"pgxtesting\": \"Informative PGx\",\n      \"guidelinename\": \"CYP2C19 and Proton Pump Inhibitors\"\n    },\n    {\n      \"genesymbol\": \"CYP2C19\",\n      \"drugname\": \"pantoprazole\",\n      \"cpiclevel\": \"A\",\n      \"pgxtesting\": \"Actionable PGx\",\n      \"guidelinename\": \"CYP2C19 and Proton Pump Inhibitors\"\n    },\n    {\n      \"genesymbol\": \"CYP2C19\",\n      \"drugname\": \"sertraline\",\n      \"cpiclevel\": \"A\",\n      \"guidelinename\": \"CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants\"\n    },\n    {\n      \"genesymbol\": \"CYP2C19\",\n      \"drugname\": \"voriconazole\",\n      \"cpiclevel\": \"A\",\n      \"pgxtesting\": \"Informative PGx\",\n      \"guidelinename\": \"CYP2C19 and Voriconazole\"\n    },\n    {\n      \"genesymbol\": \"CYP2C19\",\n      \"drugname\": \"brivaracetam\",\n      \"cpiclevel\": \"B\",\n      \"pgxtesting\": \"Actionable PGx\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get pgx CYP2C19\",\n      \"biomcp list pgx\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

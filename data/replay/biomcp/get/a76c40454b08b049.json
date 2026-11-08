@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "imatinib",
+    "json": true,
+    "sections": [
+      "targets",
+      "mechanisms",
+      "variant_targets",
+      "druggability"
+    ]
+  },
+  "args_key": "a76c40454b08b04967f4381700ced294fd37ddf41828cb3a72740a3c1dc29018",
+  "recorded_at": "2026-11-03T20:29:11.724227+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.053999993018806,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid drug section: mechanisms"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

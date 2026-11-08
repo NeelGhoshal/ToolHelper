@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "ERBB2",
+    "json": true,
+    "sections": [
+      "diseases",
+      "pathways",
+      "druggability",
+      "pgx",
+      "constraint"
+    ]
+  },
+  "args_key": "73ad741a0b4483878815f1530fa4e660ff7c1f5efe4d6852a8bf80b662192c06",
+  "recorded_at": "2026-11-03T06:47:35.097734+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 0.9634000016376376,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: pgx"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

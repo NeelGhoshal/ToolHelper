@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "HER2-targeted therapy",
+      "antibody-drug conjugate",
+      "trastuzumab deruxtecan"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "22346aaa37d23464a819839450ee24953d1e6642d43fe11fd162c9b37809c291",
+  "recorded_at": "2026-11-03T09:08:19.953323+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4958.644500002265,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=HER2-targeted therapy antibody-drug conjugate trastuzumab deruxtecan, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"HER2-targeted therapy antibody-drug conjugate trastuzumab deruxtecan\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41866709|Extracellular payload release from non-internalizing antibod…|PubTator3, Europe PMC|2026-12-31|-|1| \n|PMID 41560619|Antibodies to watch in 2026|PubTator3, Europe PMC|2026-12-01|-|24| \n|PMID 41630477|A data-driven cartography of NSCLC vaccine research: Quantif…|PubTator3, Europe PMC|2026-12-01|-|0| \n|PMID 42924615|Advances in resistance mechanisms and counterstrategies for…|PubTator3, PubMed|2026-12-01|-|0| \n|PMID 42927317|Beyond PD-L1 and HER2: emerging predictive biomarkers in gas…|Europe PMC|2026-10-17|-|0| \n|PMID 42842139|Durable treatment response to Trastuzumab deruxtecan in two…|PubMed|2026-10-07|-|0| \n|PMID 42830854|HER2-Targeted Antibody-Drug Conjugates in Advanced HER2-Low…|PubMed|2026-09-30|-|0| \n|PMID 42781505|New insights into breast cancer therapy: application and mec…|Europe PMC|2026-09-13|-|0| \n|PMID 42700519|Facial palsy Revealing AR+/HER2+ Parotid carcinoma and the e…|PubMed|2026-09-05|-|0| \n|PMID 42682104|DESTINY-Lung06: trastuzumab deruxtecan and pembrolizumab as…|PubMed|2026-09-01|-|0| \n \n \n \nNewest indexed: 2026-10-26 (8 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41866709\n  biomcp search article -k \"HER2-targeted therapy antibody-drug conjugate trastuzumab deruxtecan\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

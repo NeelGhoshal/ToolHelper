@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "statin use",
+      "incident dementia",
+      "target trial emulation"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "d4205b45e6a7393929968288856f6e1c0576da5591847640556584a5ee7a4fb2",
+  "recorded_at": "2026-11-05T04:11:13.957983+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3362.6933000014105,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin use incident dementia target trial emulation, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed search unavailable) \nRetry: `biomcp search article --keyword \"statin use incident dementia target trial emulation\" --exclude-retracted --sort citations --source pubmed --limit 10 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"statin use incident dementia target trial emulation\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 39866113|2025 Heart Disease and Stroke Statistics: A Report of US and…|Europe PMC|2025-01-27|-|1147| \n|PMID 40129946|A comprehensive review of methodologies and application to u…|Europe PMC|2025-03-10|-|213| \n|PMID 31118153|Deprescribing in Older Adults With Cardiovascular Disease.|Europe PMC|2019-05-01|-|167| \n|PMID 39266768|Aged bone marrow macrophages drive systemic aging and age-re…|Europe PMC|2024-09-12|-|116| \n|PMID 29203418|Electronic medical records can be used to emulate target tri…|Europe PMC|2018-04-01|-|110| \n|PMID 37072150|Denosumab and incidence of type 2 diabetes among adults with…|Europe PMC|2023-04-18|-|48| \n|PMID 32753444|Emulating a target trial of statin use and risk of dementia…|Europe PMC|2020-08-04|-|46| \n|PMID 38055276|Statins, Mortality, and Major Adverse Cardiovascular Events…|PubTator3, Europe PMC|2023-12-01|-|25| \n|PMID 40268291|Glucagon-like peptide 1 receptor agonist and reduced liver a…|Europe PMC|2025-04-23|-|21| \n|PMID 32250527|Transparency in real-world evidence (RWE) studies to build c…|Europe PMC|2020-04-01|-|20| \n \n \n \nNewest indexed: 2025-04-24 (560 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 39866113\n  biomcp search article -k \"statin use incident dementia target trial emulation\" --year-min 2018 --year-max 2025 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

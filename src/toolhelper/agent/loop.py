@@ -203,6 +203,7 @@ class Agent:
                 tool_results_in_context={m.tool_call_id: self.counter(m.content) for m in messages
                                          if m.role == "tool" and m.tool_call_id},
                 applied_options=result.applied_options, ignored_options=result.ignored_options,
+                retries=result.retries, waited_s=result.waited_s,
                 tool_calls=[c.id for c in calls],
             ))
             messages.append(message)
@@ -257,7 +258,8 @@ class Agent:
             messages_sent=len(messages),
             tool_results_in_context={m.tool_call_id: self.counter(m.content) for m in messages
                                      if m.role == "tool" and m.tool_call_id},
-            applied_options=result.applied_options, ignored_options=result.ignored_options, tool_calls=[],
+            applied_options=result.applied_options, ignored_options=result.ignored_options,
+                retries=result.retries, waited_s=result.waited_s, tool_calls=[],
         ))
         messages.append(message)
         run.trace.stop_reason, run.trace.answer = "final_at_limit", message.content

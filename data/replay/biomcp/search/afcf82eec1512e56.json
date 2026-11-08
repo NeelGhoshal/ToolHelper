@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 1,
+    "query": "BCR breakpoint cluster region"
+  },
+  "args_key": "afcf82eec1512e564bb3b04951402c3654e2eac96bee810c3d21d2cabdfc3ec5",
+  "recorded_at": "2026-11-03T19:49:37.756076+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 225.2050000242889,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: BCR breakpoint cluster region \n \nFound 1 gene \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| BCR | BCR activator of RhoGEF and GTPase | 613 | 22:23179704-23318037 | GRCh38 | P11274 | 151410 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1-1 of 19 results. Use --offset 1 for more. \n \n\n\n## Next commands\n- `biomcp get gene BCR`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

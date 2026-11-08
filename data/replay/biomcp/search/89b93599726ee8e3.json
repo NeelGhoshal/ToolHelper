@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E melanoma targeted therapy review"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "89b93599726ee8e3c93407c3a58622ead30c91b52064ef6e280ddb16c31c6470",
+  "recorded_at": "2026-11-03T23:34:16.607053+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3783.613899955526,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E melanoma targeted therapy review, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E melanoma targeted therapy review\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 26462967|2015 American Thyroid Association Management Guidelines for…|Europe PMC|2016-01-01|-|10412| \n|PMID 23539594|Cancer genome landscapes.|Europe PMC|2013-03-01|-|6000| \n|PMID 42487519|New Treatment Strategy and Future Research Direction for BRA…|PubMed|2026-11-01|-|0| \n|PMID 42245718|TIL cell therapy in HIV positive patient with metastatic mel…|PubMed|2026-05-20|-|0| \n|PMID 37627054|BRAF Mutations in Melanoma: Biological Aspects, Therapeutic…|PubTator3|2023-08-08|-|none| \n \n \n \nNewest indexed: 2026-07-23 (103 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 26462967\n  biomcp search article -k \"BRAF V600E melanoma targeted therapy review\" --year-min 2013 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

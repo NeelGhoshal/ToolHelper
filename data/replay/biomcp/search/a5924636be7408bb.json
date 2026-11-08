@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "BRAF mutant melanoma"
+    ],
+    "limit": 10
+  },
+  "args_key": "a5924636be7408bb4140bfb914384daba804a10772be5f4c03504dc876baef7f",
+  "recorded_at": "2026-11-03T05:36:24.841111+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 129.05039999168366,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 68 \n \nQuery: condition=BRAF mutant melanoma \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT01072175|Investigate Safety, Pharm…|COMPLETED|2|Cancer| \n|NCT01153763|A Study of GSK2118436 in…|COMPLETED|2|Melanoma| \n|NCT01266967|A Study of GSK2118436 in…|COMPLETED|2|Melanoma and Brain Metastases| \n|NCT01320085|A Phase II Study of Singl…|COMPLETED|2|BRAF or NRAS Mutant Metastatic Melanoma| \n|NCT02251314|Use of Exome Sequence Ana…|COMPLETED|-|Melanoma| \n|NCT04911998|A Prospective Observation…|COMPLETED|-|Melanoma (Skin), Metastatic Melanoma, BRAF V600 Mutation| \n|NCT02263898|Intermittent LGX818 and M…|WITHDRAWN|2|Recurrent Melanoma, Stage IV Melanoma| \n|NCT02097225|Onalespib, Dabrafenib, an…|TERMINATED|1|BRAF V600E Mutation Present, BRAF V600K Mutat… [abridged; 10 conditions total]| \n|NCT02974725|A Phase Ib Study of LXH25…|TERMINATED|1|Non-Small Cell Lung Cancer, Melanoma| \n|NCT04543188|A FIH Study of PF-0728489…|TERMINATED|1|Malignant Melanoma, Carcinoma, Non-Small-Cell… [abridged; 5 conditions total]| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-10 of 68 results. Use --offset 10 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

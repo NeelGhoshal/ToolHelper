@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "vemurafenib"
+    ],
+    "limit": 25,
+    "status": "recruiting"
+  },
+  "args_key": "857e5000337719c82fdfff4207837bd7bc12b2e606e06284f4ed7713faafa122",
+  "recorded_at": "2026-11-03T05:33:58.021293+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 950.0307000125758,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 2 of 2 \n \nQuery: condition=melanoma, intervention=vemurafenib, status=recruiting \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT05768178|DETERMINE Trial Treatment…|RECRUITING|2/3|Haematological Malignancy, Melanoma, Thyroid… [abridged; 12 conditions total]|vemurafenib| \n|NCT01638676|A Phase I/II Trial of Vem…|RECRUITING|1/2|Melanoma|vemurafenib| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-2 of 2 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

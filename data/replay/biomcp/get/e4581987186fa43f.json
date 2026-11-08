@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "trial",
+    "id": "NCT06249048",
+    "sections": [
+      "arms"
+    ]
+  },
+  "args_key": "e4581987186fa43f2b7249839c8022c31d8d376c1eab6c85a4c41c1c39e61866",
+  "recorded_at": "2026-11-04T21:31:46.453311+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 195.4128999996101,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# NCT06249048 - arms \n## Arms (ClinicalTrials.gov) \n \n| Arm | Type | Interventions | Description | \n|---|---|---|---| \n| Phase 1 Monotherapy (STX-001) | EXPERIMENTAL | STX-001 | A Phase 1, first-in-human (FIH), multiple ascending dose adm… | \n| Phase 1 Combination (STX-001 with Pembrolizumab) | EXPERIMENTAL | STX-001, Keytruda® | A Phase 1, first-in-human (FIH), multiple ascending STX-001… | \n| Phase 2 Combination (STX-001 with Pembrolizumab) | EXPERIMENTAL | STX-001, Keytruda® | Phase 2 consists of dose expansion cohorts in patients with… | \n| Phase 1 Visceral-lesion Monotherapy (Cohort 1Vm) | EXPERIMENTAL | STX-001 | Phase 1, first-in-human (FIH) monotherapy cohort targeting v… | \n| Phase 2 Advanced-Melanoma Monotherapy | EXPERIMENTAL | STX-001 | Phase 2 dose expansion cohort evaluating STX-001 monotherapy… | \nMore:\n  biomcp get trial NCT06249048 eligibility   - inclusion and exclusion criteria\n  biomcp get trial NCT06249048 contacts   - central and site contact details\n  biomcp get trial NCT06249048 locations   - site list and contact details\nAll:\n  biomcp get trial NCT06249048 all \nSee also:\n  biomcp search disease --query \"Advanced Solid Tumor\"\n  biomcp search article -d \"Advanced Solid Tumor\"\n  biomcp search trial -c \"Advanced Solid Tumor\"\n  biomcp search drug -q \"Pembrolizumab\" \n\n[ClinicalTrials.gov](https://clinicaltrials.gov/study/NCT06249048)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

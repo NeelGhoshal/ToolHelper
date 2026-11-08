@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "TP53",
+      "Li-Fraumeni",
+      "disease"
+    ],
+    "limit": 10
+  },
+  "args_key": "58f9748aef9def1aa51e499e5dbd6f890a9f973e3cd2ba91072b09ecf655b9a5",
+  "recorded_at": "2026-11-03T14:16:32.921195+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4978.988200018648,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=TP53 Li-Fraumeni disease, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"sort\": \"relevance\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"ranking_policy\": \"hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"42928139\",\n      \"title\": \"Characterisation of a novel p53 mutation (p53(N263Tfs*7)) associated with li-fraumeni syndrome.\",\n      \"journal\": \"BMC cancer\",\n      \"date\": \"2026-07-29\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42832373\",\n      \"doi\": \"10.1158/1078-0432.ccr-26-2137\",\n      \"title\": \"Progress in Clinical Care and Research for Li-Fraumeni Syndrome: Perspectives from the 7th Li-Fraumeni Syndrome Association REACH Symposium.\",\n      \"journal\": \"Clin Cancer Res\",\n      \"date\": \"2026-10-05\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"37536919\",\n      \"title\": \"CHEK2 is not a Li-Fraumeni syndrome gene: time to update public resources.\",\n      \"journal\": \"J Med Genet\",\n      \"date\": \"2023-08-03\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"36529791\",\n      \"pmcid\": \"PMC9761972\",\n      \"title\": \"Rectal leiomyosarcoma as the initial phenotypic manifestation of Li-Fraumeni-like syndrome: a case report and review of the literature\",\n      \"journal\": \"J Med Case Rep\",\n      \"date\": \"2022-12-19\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"39404911\",\n      \"pmcid\": \"PMC11480288\",\n      \"title\": \"Current insights and future directions of Li-Fraumeni syndrome\",\n      \"journal\": \"Discov Oncol\",\n      \"date\": \"2024-10-15\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42607671\",\n      \"doi\": \"10.1016/j.ajhg.2026.07.011\",\n      \"title\": \"Shared inheritance reveals landscape of somatic and germline cancer risk in TP53.\",\n      \"journal\": \"Am J Hum Genet\",\n      \"date\": \"2026-08-17\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42463867\",\n      \"title\": \"Missense but mis-spliced: germline TP53 variant c.671A > C (p.E224A) and the path from uncertainty to pathogenicity.\",\n      \"journal\": \"Scientific reports\",\n      \"date\": \"2026-07-16\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"33917271\",\n      \"pmcid\": \"PMC8167791\",\n      \"title\": \"Malignant Phyllodes Tumor of the Breast: A Practice Review\",\n      \"journal\": \"Clin Pract\",\n      \"date\": \"2021-04-06\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41266114\",\n      \"pmcid\": \"PMC7619150\",\n      \"doi\": \"10.1136/jme-2025-111111\",\n      \"title\": \"Germline genomic testing to assess the suitability of stem cell donors in the treatment of haematological malignancy: clinical ethics commentary.\",\n      \"journal\": \"J Med Ethics\",\n      \"date\": \"2026-09-22\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42660424\",\n      \"title\": \"Myxoid Pleomorphic Liposarcoma: A Clinicopathological and Cytogenomic Study of 24 Cases.\",\n      \"journal\": \"Modern pathology : an official journal of the United States and Canadian Academy of Pathology, Inc\",\n      \"date\": \"2026-08-27\",\n      \"citation_count\": 1,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"partial_query_match\",\n        \"message\": \"The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"TP53 Li-Fraumeni disease\\\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0\",\n      \"biomcp get article 42928139\",\n      \"biomcp search article -k \\\"TP53 Li-Fraumeni disease\\\" --year-min 2021 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

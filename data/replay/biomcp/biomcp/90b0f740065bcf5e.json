@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp search trial --condition melanoma --intervention \"KIN-2787\" --status RECRUITING --limit 10 --json",
+    "json": true
+  },
+  "args_key": "90b0f740065bcf5e4922851917467f93fae2f173c163e459e65e49c819ba3627",
+  "recorded_at": "2026-11-03T23:42:16.553927+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 1584.2284999089316,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 1,\n    \"total\": 1,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 1,\n  \"results\": [\n    {\n      \"nct_id\": \"NCT04913285\",\n      \"title\": \"A Study to Evaluate KIN-2787 in Participants With BRAF and/or NRAS Mutation Positive Solid Tumors\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE1\",\n      \"conditions\": [\n        \"Solid Tumor, Adult\",\n        \"Non-small Cell Lung Cancer\",\n        \"Melanoma\"\n      ],\n      \"sponsor\": \"Pierre Fabre Medicament\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get trial NCT04913285\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CYP2C19",
+      "clopidogrel"
+    ],
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "d90b03f88b4d5184397765b8f8b7eea76dba2a3ba71d1d721393137e184929fb",
+  "recorded_at": "2026-11-04T05:29:43.438564+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4568.013699958101,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CYP2C19 clopidogrel, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CYP2C19 clopidogrel\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 38033089|2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Manage…|Europe PMC|2023-11-30|-|2342| \n|PMID 32311448|COVID-19 and Thrombotic or Thromboembolic Disease: Implicati…|Europe PMC|2020-04-17|-|2107| \n|PMID 19106084|Cytochrome p-450 polymorphisms and response to clopidogrel.|Europe PMC|2008-12-22|-|1748| \n|PMID 24088041|Clinical whole-exome sequencing for the diagnosis of mendeli…|Europe PMC|2013-10-02|-|1537| \n|PMID 32201335|Cardiovascular Considerations for Patients, Health Care Work…|Europe PMC|2020-03-19|-|1297| \n|PMID 19106083|Genetic determinants of response to clopidogrel and cardiova…|Europe PMC|2008-12-22|-|1178| \n|PMID 42973244|Global distribution of CYP2C19 variants in clopidogrel-indic…|PubMed|2026-11-03|-|0| \n|PMID 42975600|Guided P2Y12 inhibitor selection after rapid CYP2C19 genotyp…|PubMed|2026-11-02|-|none| \n|PMID 42960585|Beyond CYP2C19: The Lysosome-CMA-SORT1-CES1 Axis as a Potent…|PubMed|2026-10-30|-|0| \n|PMID 42953922|F2R Polymorphisms and Efficacy of Clopidogrel Initiated With…|PubMed|2026-10-29|-|0| \n|PMID 42949291|Meta-Analysis: Potassium-Competitive Acid Blockers Versus Pr…|PubMed|2026-10-28|-|0| \n|PMID 42938391|From Frequencies to Priorities: Interethnic Distribution of…|PubMed|2026-10-14|-|0| \n|PMID 41338248|CYP2C19 genotype testing for clopidogrel: A guideline develo…|PubTator3|2025-12-03|-|none| \n|PMID 40184070|Cytochrome P450 2C19 Genotypes and Clopidogrel in Patients W…|PubTator3|2025-04-01|-|none| \n|PMID 38817377|Computational drug-drug interaction prediction mediated by C…|PubTator3|2024-05-20|-|none| \n \n \n \nNewest indexed: 2026-11-03 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 38033089\n  biomcp search article -k \"CYP2C19 clopidogrel\" --year-min 2008 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

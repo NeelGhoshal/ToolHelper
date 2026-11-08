@@ -1,0 +1,28 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp get drug \"sertraline hydrochloride\" safety --region us"
+  },
+  "args_key": "af25be66c980ac6be8b17c5a8cdc5e97726c18eed3860837a9e2ea0fcc233d55",
+  "recorded_at": "2026-11-04T21:07:01.055045+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 725.8333999998285,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# sertraline hydrochloride - safety \n## Safety (US - OpenFDA)\n\n### Top adverse events (FAERS)\nDRUG INEFFECTIVE, NAUSEA, FATIGUE\n\n### Boxed Warning\nWARNING: SUICIDAL THOUGHTS AND BEHAVIORS Antidepressants increased the risk of suicidal thoughts and behavior in pediatric and young adult patients in short-term studies. Closely monitor all antidepressant-treated patients for clinical worsening, and for emergence of suicidal thoughts and behaviors [See Warnings and Precautions (5.1) ] . WARNING: SUICIDAL THOUGHTS AND BEHAVIORS See full prescribing information for complete boxed warning. Antidepressants increased the risk of suicidal thoughts and behaviors in pediatric and young adult patients ( 5.1 ) Closely monitor for clinical worsening and emergence of suicidal thoughts and behaviors ( 5.1 )\n\n### Warnings\n5 WARNINGS AND PRECAUTIONS Serotonin Syndrome: Increased risk when co-administered with other serotonergic agents, but also when taken alone. If it occurs, discontinue sertraline hydrochloride and serotonergic agents and initiate supportive treatment. ( 5.2 ) Increased Risk of Bleeding: Concomitant use of aspirin, nonsteroidal anti-inflammatory drugs (NSAIDs), other antiplatelet drugs, warfarin, and other anticoagulants may increase this risk. ( 5.3 ) Activation of Mania/Hypomania: Screen patients for bipolar disorder. ( 5.4 ) Seizures: Use with caution in patients with seizure disorders. ( 5.6 ) Angle Closure Glaucoma: Avoid use of antidepressants, including sertraline hydrochloride in patients with untreated anatomically narrow angles. ( 5.7 ) QTc Prolongation: Sertraline hydrochloride should be used with caution in patients with risk factors for QTc prolongation. ( 5.10 ) Sexual Dysfunction: Sertraline hydrochloride may cause symptoms of sexual dysfunction. ( 5.11 ) 5.1 Suicidal Thoughts and Behaviors in Pediatric and Young Adult Patients In pooled analyses of placebo-controlled trials of antidepressant drugs (SSRIs and other antidepressant classes) that included approximately 77,000 adult patients and over 4,400 pediatric patients, the incidence of suicidal thoughts and behaviors in pediatric and young adult patients was greater in antidepressant-treated patients than in placebo-treated patients. The drug-placebo differences in the number of cases of suicidal thoughts and behaviors per 1,000 patients treated are provided in Table 2. No suicides occurred in any of the pediatric studies. There were suicides in the adult studies, but the number was not sufficient to reach any conclusion about antidepressant drug effect on suicide. Table 2: Risk Differences of the Number of Cases of Suicidal Thoughts or Behaviors in the Pooled Placebo-Controlled Trials of Antidepressants in Pediatric and Adult Patients Age Range (years) Drug-Placebo Difference in Number of Patients \n\n(truncated, 11256 chars total; full label: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3)\n \nMore:\n  biomcp get drug \"sertraline hydrochloride\" approvals   - Drugs@FDA approval history\n  biomcp get drug \"sertraline hydrochloride\" label   - approved-indication and FDA label detail beyond the base card\n  biomcp get drug \"sertraline hydrochloride\" regulatory --region us   - approval and supplement history; use only if the base card lacks approval context\n\nAll:\n  biomcp get drug \"sertraline hydrochloride\" all --region us \nSee also:\n  biomcp search article --drug \"sertraline hydrochloride\" --type review --limit 5   - supplement sparse structured data with review literature for indication context\n  biomcp drug trials \"sertraline hydrochloride\"\n  biomcp drug adverse-events \"sertraline hydrochloride\"   - inspect safety reports and adverse-event signal\n  biomcp search pgx -d \"sertraline hydrochloride\"   - pharmacogenomics interactions\n  biomcp get gene SLC6A4 \n\n[DrugBank](https://go.drugbank.com/drugs/DB01104) | [ChEMBL](https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL809) | [OpenFDA FAERS](https://api.fda.gov/drug/event.json?search=%28patient.drug.openfda.generic_name%3A%22sertraline+hydrochloride%22+OR+patient.drug.openfda.brand_name%3A%22sertraline+hydrochloride%22+OR+patient.drug.medicinalproduct%3A%22sertraline+hydrochloride%22%29+AND+patient.drug.drugcharacterization%3A1&count=patient.reaction.reactionmeddrapt.exact&limit=50) | [DailyMed](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

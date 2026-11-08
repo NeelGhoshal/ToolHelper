@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "42924615",
+    "json": true,
+    "sections": [
+      "tldr",
+      "fulltext"
+    ]
+  },
+  "args_key": "6cd01443987c78839171f8bf9809f55d2c207d3c2a4739fd5baf55a096f25190",
+  "recorded_at": "2026-11-03T06:48:22.369898+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1523.6380999558605,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42924615/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42924615 tldr\",\n      \"biomcp article references 42924615 --limit 3\",\n      \"biomcp article citations 42924615 --limit 3\",\n      \"biomcp article recommendations 42924615 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"fulltext\",\n        \"label\": \"Full Text\",\n        \"outcome\": \"empty\",\n        \"sources\": [\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ]\n  },\n  \"abstract_text\": \"The development of antibody-drug conjugates (ADCs) is reshaping human epidermal growth factor receptor (HER)2 expression stratification and treatment decision-making in breast cancer. HER2-low and HER2-ultralow breast cancers were previously included largely within the conventional HER2-negative category. However, newer HER2-targeted ADCs, represented by trastuzumab deruxtecan, have created therapeutic opportunities for these patients and have moved HER2 assessment beyond a binary 'positive/negative' model toward a more refined, continuum-based stratification system. Even so, HER2-low and HER2-ultralow breast cancers should not be regarded as stable or independent molecular subtypes. They should be understood as treatment-relevant states marked by low target density, spatial heterogeneity, temporal variation and diagnostic uncertainty. Although clinical studies have shown that HER2-targeted ADCs can improve outcomes in some patients with low HER2 expression, several challenges still limit durable benefit. These include primary resistance, acquired resistance, limited ability to predict which patients will benefit and unclear combination or sequencing strategies after progression on ADC therapy. The present review summarized the biological basis, resistance mechanisms and potential counterstrategies of ADC therapy in HER2-low and HER2-ultralow breast cancer. In tumors with low HER2 expression, ADC resistance may arise from multiple interacting factors, including decreased or lost HER2 expression, spatial heterogeneity of target distribution, impaired ADC delivery and intracellular processing, reduced payload sensitivity, enhanced DNA damage repair, tumor microenvironment-related barriers and biases caused by pathological interpretation and sampling. To address these mechanisms, future therapeutic optimization should move beyond single-agent selection and toward mechanism-guided combination therapy, rational sequencing of ADCs with different targets or payloads and the design of next-generation ADCs. Precision treatment for HER2-low and HER2-ultralow breast cancer should also rely on more than HER2 immunohistochemistry alone. Dynamic reassessment, digital pathology, liquid biopsy, multi-omics biomarkers and prior treatment exposure should be integrated to build multidimensional predictive models. Such models may improve patient selection, strengthen resistance identification and support longer-term therapeutic benefit.\",\n  \"author_completeness\": \"complete\",\n  \"author_count\": 3,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Yu X\",\n    \"Ren M\",\n    \"Yao L\"\n  ],\n  \"citation_count\": 0,\n  \"date\": \"2026-12-01\",\n  \"doi\": \"10.3892/or.2026.9214\",\n  \"full_text_coverage\": {\n    \"attempts\": [\n      {\n        \"cache_state\": \"bypass\",\n        \"coverage\": \"none\",\n        \"outcome\": \"empty\",\n        \"provider\": {\n          \"label\": \"Europe PMC MED XML\",\n          \"source\": \"Europe PMC\"\n        },\n        \"reason\": \"no_content\",\n        \"source_kind\": \"jats_xml\"\n      }\n    ],\n    \"coverage\": \"none\"\n  },\n  \"full_text_note\": \"Full text not available: Article not in PubMed Central\",\n  \"journal\": \"Oncol Rep\",\n  \"open_access\": false,\n  \"pmid\": \"42924615\",\n  \"publication_type\": \"Review\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"empty\",\n      \"sources\": [\n        \"Europe PMC\"\n      ]\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"Advances in resistance mechanisms and counterstrategies for antibody-drug conjugates in HER2-low and HER2-ultralow breast cancer (Review).\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

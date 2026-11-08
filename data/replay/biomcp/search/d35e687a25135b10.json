@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "BRAF V600E melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "offset": 25
+  },
+  "args_key": "d35e687a25135b10e63b963c947d3c92cd1c950a0ad69ad31b59c8b36ef9f7ab",
+  "recorded_at": "2026-11-05T04:18:34.120457+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 294.1924000006111,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 15 of 40 \n \nQuery: condition=BRAF V600E melanoma, offset=25 \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT04439292|Testing Trametinib and Da…|ACTIVE_NOT_RECRUITING|2|Advanced Lymphoma, Advanced Malignant Solid Ne… [abridged; 6 conditions total]| \n|NCT05270044|Adjuvant Encorafenib and…|ACTIVE_NOT_RECRUITING|3|Melanoma| \n|NCT01245062|GSK1120212 vs Chemotherap…|COMPLETED|3|Melanoma| \n|NCT01584648|A Study Comparing Trameti…|COMPLETED|3|Melanoma| \n|NCT01689519|A Study Comparing Vemuraf…|COMPLETED|3|Malignant Melanoma| \n|NCT01767454|Study of Dabrafenib +/- T…|COMPLETED|1|Solid Tumours| \n|NCT01928940|Japan PhI/II of GSK211843…|COMPLETED|2|Solid Tumours| \n|NCT02392871|Radiotherapy & Combi in M…|COMPLETED|1/2|Metastatic Melanoma| \n|NCT05003622|Phase 1 Safety Study of E…|COMPLETED|1|BRAF V600E Unresectable or Metastatic Melanoma… [abridged; 3 conditions total]| \n|NCT05304546|Overcoming Primary Resist…|COMPLETED|2|Malignant Melanoma, Metastatic Melanoma, Immun… [abridged; 5 conditions total]| \n|NCT02202200|Phase I-II Study With Tum…|UNKNOWN|1/2|Melanoma BRAF V600E/K Mutated, CDNKN2A Loss Defined| \n|NCT02143050|Study of Dabrafenib, Tram…|WITHDRAWN|1/2|Melanoma| \n|NCT02427893|Trial of Vemurafenib and…|WITHDRAWN|3|Melanoma| \n|NCT01978236|Dabrafenib/Trametinib, BR…|TERMINATED|2|Melanoma and Brain Metastases| \n|NCT02410863|Biopsy- and Biology-drive…|TERMINATED|2|Malignant Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 26-40 of 40 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

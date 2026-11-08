@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "2017 ACC AHA guideline prevention detection evaluation management high blood pressure adults report task force clinical practice guidelines Hypertension"
+    ],
+    "limit": 10
+  },
+  "args_key": "b88eeeefa3aaac976258140a5eb58864862258953ebc303cae657417e0b4f8d2",
+  "recorded_at": "2026-11-05T04:02:07.935932+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4978.72869999992,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=2017 ACC AHA guideline prevention detection evaluation management high blood pressure adults report task force clinical practice guidelines Hypertension, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed search unavailable) \nRetry: `biomcp search article --keyword \"2017 ACC AHA guideline prevention detection evaluation management high blood pressure adults report task force clinical practice guidelines Hypertension\" --exclude-retracted --sort relevance --source pubmed --limit 10 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"2017 ACC AHA guideline prevention detection evaluation management high blood pressure adults report task force clinical practice guidelines Hypertension\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41628971|National Heart Center/Saudi Heart Association 2025 Guideline…|Europe PMC|2026-01-01|hybrid 0.272 + title 2/19|3| \n|PMID 39349033|Optimal Blood Pressure Targets with Age.|Europe PMC|2024-05-10|hybrid 0.252 + title 2/19|3| \n|PMID 39069971|What Constitutes Adequate Control of High Blood Pressure? Cu…|PubTator3, Europe PMC|2024-07-04|hybrid 0.246 + title 3/19|2| \n|PMID 36604475|Status of ambulatory blood pressure monitoring and home bloo…|PubTator3|2023-01-05|hybrid 0.143 + title 4/19|none| \n|PMID 42205123|2026 Expert Consensus Recommendations on Hypertrophic Cardio…|Europe PMC|2026-05-01|hybrid 0.137 + title 3/19|0| \n|PMID 33754796|Characteristics of Populations Excluded From Clinical Trials…|PubTator3|2021-04-06|hybrid 0.123 + title 4/19|none| \n|PMID 36523741|The Evolution of Hypertension Guidelines Over the Last 20+ Y…|PubTator3|2022-11-13|hybrid 0.122 + title 2/19|none| \n|PMID 41902649|Hypertension Prevalence, Awareness, Treatment, and Control A…|Europe PMC|2026-03-28|hybrid 0.112 + title 2/19|0| \n|PMID 42073383|Artificial Intelligence-Driven Hypertension Management: Impl…|Europe PMC|2026-04-01|hybrid 0.107 + title 3/19|0| \n|PMID 38424641|Quality appraisal and descriptive analysis of clinical pract…|PubTator3|2024-02-29|hybrid 0.087 + title 3/19|none| \n \n \n \nNewest indexed: 2026-05-29 (160 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41628971\n  biomcp search article -k \"2017 ACC AHA guideline prevention detection evaluation management high blood pressure adults report task force clinical practice guidelines Hypertension\" --year-min 2021 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

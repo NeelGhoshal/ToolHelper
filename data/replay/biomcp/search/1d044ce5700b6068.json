@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "research-article",
+    "entity": "article",
+    "limit": 10,
+    "keyword": [
+      "statin use incident dementia Alzheimer disease risk cohort"
+    ]
+  },
+  "args_key": "1d044ce5700b6068a934b925bed893519bbf140ca9746161cc4f4b499c3dc2b2",
+  "recorded_at": "2026-11-04T20:42:03.668369+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3186.35919999997,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin use incident dementia Alzheimer disease risk cohort, type=research-article, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41761642|Alzheimer's disease in patients prescribed statins: A real-w…|Europe PMC, PubMed|2026-02-27|hybrid 0.33 + title 2/8|2| \n|PMID 41988982|Dementia Risk in the Decade Before and After Coronary Heart…|Europe PMC|2026-04-16|hybrid 0.22 + title 4/8|0| \n|PMID 42252551|The Use of Statins in Parkinson's and Alzheimer's Disease: A…|PubMed|2026-06-01|hybrid 0.193 + title 3/8|2| \n|PMID 41243816|Statin Use Is Not Associated With Reduced Cardio- and Cerebr…|PubMed|2026-02-01|hybrid 0.172 + title 3/8|0| \n|PMID 41106437|Impact of statins on mortality and disease progression in pa…|PubMed|2025-10-01|hybrid 0.162 + title 3/8|2| \n|PMID 42424274|Metabolic risk and metabolic dysfunction-associated steatoti…|Europe PMC|2026-07-09|hybrid 0.162 + title 3/8|0| \n|PMID 42567093|Cardiorespiratory Fitness, Coronary Artery Calcium, and Risk…|Europe PMC|2026-08-07|hybrid 0.155 + title 2/8|0| \n|PMID 39963242|The role of statins in dementia or Alzheimer's disease incid…|PubMed|2025-02-03|hybrid 0.15 + title 4/8|9| \n|PMID 40169354|Low-density lipoprotein cholesterol levels and risk of incid…|PubMed|2025-09-12|hybrid 0.132 + title 3/8|7| \n|PMID 42090782|Tetanus, diphtheria and pertussis vaccination and risk for i…|Europe PMC|2026-05-05|hybrid 0.132 + title 3/8|0| \n \n \n \nNewest indexed: 2026-08-09 (87 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41761642\n  biomcp search article -k \"statin use incident dementia Alzheimer disease risk cohort\" --type research-article --year-min 2025 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

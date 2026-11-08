@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "42933389",
+    "json": true
+  },
+  "args_key": "975f7519f36c0473f91a10b7a6c9eb2ce5bd498c44f7d77efa15899e90e42060",
+  "recorded_at": "2026-11-04T01:31:29.655976+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 731.5126000903547,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42933389/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42933389 tldr\",\n      \"biomcp article entities 42933389\",\n      \"biomcp search gene -q dystrophin\",\n      \"biomcp search disease --query \\\"Duchenne muscular dystrophy\\\"\",\n      \"biomcp search disease --query DMD\",\n      \"biomcp search drug -q hfCas12Max\",\n      \"biomcp article references 42933389 --limit 3\",\n      \"biomcp article citations 42933389 --limit 3\",\n      \"biomcp article recommendations 42933389 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"annotations\",\n        \"label\": \"PubTator Annotations\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ],\n    \"workflow\": \"article-follow-up\",\n    \"workflow_playbook\": \"biomcp skill article-follow-up\",\n    \"workflow_rationale\": \"Use article annotations first, then citation and recommendation graph pivots for efficient literature expansion.\"\n  },\n  \"abstract_text\": \"We report the preclinical and early clinical evaluation of in vivo genome editing for Duchenne muscular dystrophy (DMD), delivered via a single AAV9 vector. In humanized DMD mice, systemic administration achieved targeted genome editing, partial dystrophin restoration, and improved muscle function. In non-human primates, efficient on-target editing was achieved with no dose-limiting toxicity identified under the conditions tested. In an open-label, dose-escalation, first-in-human clinical trial (NCT06594094), post-treatment muscle biopsies provided early molecular evidence of hfCas12Max-mediated genome editing and detectable dystrophin expression in participants with DMD. However, at the higher dose level (1.0 x 1014 vg/kg), one participant experienced a treatment-related fatal serious adverse event, characterized by marked complement activation and systemic cytokine response shortly after dosing. This work provides initial human proof-of-concept for muscle genome editing while crucially highlighting the critical role of immunologic risks and the narrow therapeutic window of systemic adeno-associated virus (AAV)-CRISPR therapies, underscoring the need to develop safer dosing and immunomodulation strategies.\",\n  \"annotations\": {\n    \"chemicals\": [\n      {\n        \"count\": 1,\n        \"text\": \"hfCas12Max\"\n      }\n    ],\n    \"diseases\": [\n      {\n        \"count\": 3,\n        \"identifier\": \"MESH:D020388\",\n        \"name\": \"Muscular Dystrophy Duchenne\",\n        \"namespace\": \"MESH\",\n        \"text\": \"DMD\"\n      },\n      {\n        \"count\": 2,\n        \"identifier\": \"MESH:D020388\",\n        \"name\": \"Muscular Dystrophy Duchenne\",\n        \"namespace\": \"MESH\",\n        \"text\": \"Duchenne muscular dystrophy\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"MESH:D064420\",\n        \"name\": \"Drug-Related Side Effects and Adverse Reactions\",\n        \"namespace\": \"MESH\",\n        \"text\": \"toxicity\"\n      }\n    ],\n    \"genes\": [\n      {\n        \"count\": 2,\n        \"identifier\": \"1756\",\n        \"namespace\": \"NCBIGene\",\n        \"text\": \"dystrophin\"\n      }\n    ]\n  },\n  \"author_completeness\": \"complete\",\n  \"author_count\": 22,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Li G\",\n    \"Han F\",\n    \"Wang C\",\n    \"Jin M\",\n    \"Lin J\",\n    \"Zhang H\",\n    \"Yan X\",\n    \"Wang X\",\n    \"Sun X\",\n    \"Yuan Y\",\n    \"Zhang S\",\n    \"Zhang S\",\n    \"Zhu J\",\n    \"Xu Y\",\n    \"Wang Y\",\n    \"Deng Y\",\n    \"Li F\",\n    \"Shi L\",\n    \"Luk A\",\n    \"Wang N\",\n    \"Yang H\",\n    \"Wang J\"\n  ],\n  \"citation_count\": 0,\n  \"date\": \"2026-10-26\",\n  \"doi\": \"10.1016/j.cell.2026.09.059\",\n  \"journal\": \"Cell\",\n  \"open_access\": false,\n  \"pmid\": \"42933389\",\n  \"publication_type\": \"Research Article\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"In vivo genome-editing therapy for Duchenne muscular dystrophy: Preclinical studies and first-in-human trial.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

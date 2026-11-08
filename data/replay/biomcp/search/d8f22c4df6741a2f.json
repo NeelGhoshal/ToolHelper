@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "BRAF mutation melanoma"
+    ],
+    "limit": 10
+  },
+  "args_key": "d8f22c4df6741a2f71a5f4ba7a109688b986f33d03ca25d27dccbaeb93ee0ef9",
+  "recorded_at": "2026-11-03T15:44:55.579812+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 287.37619996536523,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 142 \n \nQuery: condition=BRAF mutation melanoma \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT01597908|Dabrafenib Plus Trametini…|COMPLETED|3|Melanoma| \n|NCT01767454|Study of Dabrafenib +/- T…|COMPLETED|1|Solid Tumours| \n|NCT02083354|Study to Investigate the…|COMPLETED|2|Cancer, Melanoma| \n|NCT03663647|Advanced Melanoma in Russ…|COMPLETED|-|Cutaneous Melanoma, Stage IV, BRAF V600 Mutation| \n|NCT05510466|Triple BRAFinh/MEKinh /an…|UNKNOWN|-|Metastatic Melanoma| \n|NCT01551693|STA-9090(Ganetespib) in P…|TERMINATED|2|Melanoma| \n|NCT02410863|Biopsy- and Biology-drive…|TERMINATED|2|Malignant Melanoma| \n|NCT03332589|E6201 Plus Dabrafenib for…|TERMINATED|1|Malignant Melanoma, Brain Metastases| \n|NCT03430947|Vemurafenib Plus Cobimeti…|TERMINATED|2|Malignant Melanoma Stage IV, BRAF V600 Mutation, Brain Metastases| \n|NCT05501912|A Study of ABM-1310 in Pa…|TERMINATED|1|Advanced Solid Tumor, BRAF V600 Mutation| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-10 of 142 results. Use --offset 10 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

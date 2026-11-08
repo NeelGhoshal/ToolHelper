@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "2017 ACC AHA high blood pressure clinical practice guideline Whelton"
+    ],
+    "limit": 10
+  },
+  "args_key": "30b5fde56887a7e4917ff2a0618b302b01ddb4056d1a50b36dd8ea2bdb850f19",
+  "recorded_at": "2026-11-05T04:01:59.946672+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 12219.929399998364,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=2017 ACC AHA high blood pressure clinical practice guideline Whelton, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed timed out after 12s) \nRetry: `biomcp search article --keyword \"2017 ACC AHA high blood pressure clinical practice guideline Whelton\" --exclude-retracted --sort relevance --source pubmed --limit 10 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"2017 ACC AHA high blood pressure clinical practice guideline Whelton\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 40811516|2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/S…|Europe PMC|2025-08-14|hybrid 0.491 + title 8/10|185| \n|PMID 40811497|2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/S…|Europe PMC|2025-08-14|hybrid 0.474 + title 8/10|152| \n|PMID 40815242|2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/S…|Europe PMC|2025-08-14|hybrid 0.46 + title 8/10|239| \n|PMID 42756877|2025 AHA/ACC blood pressure guideline and HEARTS 2.0: implic…|Europe PMC|2026-09-17|hybrid 0.265 + title 5/10|1| \n|PMID 41162004|The Evolution of High Blood Pressure Guidelines in the Unite…|Europe PMC|2025-11-01|hybrid 0.195 + title 3/10|1| \n|PMID 41821612|Impact of the 2017 ACC/AHA hypertension guidelines on antihy…|Europe PMC|2026-02-25|hybrid 0.185 + title 3/10|1| \n|PMID 34398316|Commentary on the KDIGO 2021 Clinical Practice Guideline for…|PubTator3|2021-08-16|hybrid 0.17 + title 5/10|none| \n|PMID 36100239|Harmonization of the American College of Cardiology/American…|PubTator3|2022-09-14|hybrid 0.15 + title 2/10|none| \n|PMID 35260709|Prevalence, awareness, treatment, and control of hypertensio…|PubTator3|2022-03-08|hybrid 0.14 + title 2/10|none| \n|PMID 41460074|Evolution in the targets for blood pressure treatment.|Europe PMC|2025-12-29|hybrid 0.125 + title 2/10|1| \n \n \n \nNewest indexed: 2026-09-19 (47 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 40811516\n  biomcp search article -k \"2017 ACC AHA high blood pressure clinical practice guideline Whelton\" --year-min 2021 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "limit": 15,
+    "mutation": [
+      "CRISPR",
+      "gene editing"
+    ]
+  },
+  "args_key": "91284bee174ef3dcf49424e598e01b6714a8ff035c3582a34b755da0b9f619a7",
+  "recorded_at": "2026-11-03T09:18:28.159683+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 657.7219999744557,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 3 of 3 \n \nQuery: mutation=CRISPR gene editing \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT06594094|An Open-label, Multidose…|ACTIVE_NOT_RECRUITING|EARLY_PHASE1|Duchenne Muscular Dystrophin (DMD)| \n|NCT04426669|A Study of Metastatic Gas…|COMPLETED|1/2|Gastrointestinal Epithelial Cancer, Gastroint… [abridged; 11 conditions total]| \n|NCT05566223|CISH Inactivated TILs in…|WITHDRAWN|1/2|Carcinoma, Non-Small-Cell Lung, Metastatic Non… [abridged; 6 conditions total]| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-3 of 3 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

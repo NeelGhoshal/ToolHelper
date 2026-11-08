@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E",
+      "immunotherapy"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "9037be276833eaf93bc5d6c7aa76f0b2204e2c652edf346abf2c542db4ea23ee",
+  "recorded_at": "2026-11-05T05:25:01.485100+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 7184.313300000213,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E immunotherapy, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed search unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E immunotherapy\" --exclude-retracted --sort date --source pubmed --limit 10 --offset 0` \nEurope PMC source status: degraded (Europe PMC search unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E immunotherapy\" --exclude-retracted --sort date --source europepmc --limit 10 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E immunotherapy\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41560593|Killing cancer takes guts: lessons learned from the manipula…|PubTator3|2026-12-31|-|none| \n|PMID 41630477|A data-driven cartography of NSCLC vaccine research: Quantif…|PubTator3|2026-12-01|-|none| \n|PMID 42878587|Molecular biomarkers for diagnosis, prognosis, precision the…|PubTator3|2026-10-14|-|none| \n|PMID 42828116|Colorectal Cancer: Epidemiology, Risk Factors, Signaling Pat…|PubTator3|2026-10-02|-|none| \n|PMID 42907443|p38alpha orchestrates BRAFV600E-melanoma progression and imm…|PubTator3|2026-09-22|-|none| \n|PMID 42767904|Next-generation tumor-agnostic targets on the horizon.|PubTator3|2026-09-21|-|none| \n|PMID 42744133|Biomarker-guided treatment selection in metastatic colorecta…|PubTator3|2026-09-15|-|none| \n|PMID 42807160|Case Report: Unexpected long-term survival in metastatic ana…|PubTator3|2026-09-14|-|none| \n|PMID 42774118|Clinical activity of chidamide-containing regimens after pri…|PubTator3|2026-09-08|-|none| \n|PMID 42719379|Thyroid Cancer in the Modern Era: From Molecular Landscape a…|PubTator3|2026-09-05|-|none| \n \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41560593\n  biomcp search article -k \"BRAF V600E immunotherapy\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR",
+      "osimertinib",
+      "resistance"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "ef5969ed79eb7fc1c8d6f17e89b639966bc58ed0e0a6e2b79136b3aac1416b8b",
+  "recorded_at": "2026-11-05T04:39:38.832625+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5379.1729000004125,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR osimertinib resistance, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed search unavailable) \nRetry: `biomcp search article --keyword \"EGFR osimertinib resistance\" --exclude-retracted --sort citations --source pubmed --limit 10 --offset 0` \nEurope PMC source status: degraded (Europe PMC search unavailable) \nRetry: `biomcp search article --keyword \"EGFR osimertinib resistance\" --exclude-retracted --sort citations --source europepmc --limit 10 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR osimertinib resistance\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 40243603|Strategies to Overcome Resistance to Osimertinib in EGFR-Mut…|PubTator3|2025-03-25|-|none| \n|PMID 39216477|A bispecific antibody targeting EGFR and AXL delays resistan…|PubTator3|2024-08-22|-|none| \n|PMID 39018064|PIKing up and AKTing on resistance mutations in osimertinib-…|PubTator3|2024-07-17|-|none| \n|PMID 39061985|Potential Utility of a 4th-Generation EGFR-TKI and Explorati…|PubTator3|2024-06-25|-|none| \n|PMID 37376053|The Resistance to EGFR-TKIs in Non-Small Cell Lung Cancer: F…|PubTator3|2023-05-27|-|none| \n|PMID 35883645|Diverse Mechanisms of Resistance against Osimertinib, a Thir…|PubTator3|2022-07-14|-|none| \n|PMID 35626123|Treatment Strategies for Non-Small Cell Lung Cancer Harborin…|PubTator3|2022-05-20|-|none| \n|PMID 34344199|Combination EGFR and RET Inhibition in Acquired Resistance t…|PubTator3|2022-04-01|-|none| \n|PMID 33992097|ID1 mediates resistance to osimertinib in EGFR T790M-positiv…|PubTator3|2021-05-15|-|none| \n|PMID 33572269|Cell Line Models for Acquired Resistance to First-Line Osime…|PubTator3|2021-02-09|-|none| \n \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 40243603\n  biomcp search article -k \"EGFR osimertinib resistance\" --year-min 2021 --year-max 2025 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

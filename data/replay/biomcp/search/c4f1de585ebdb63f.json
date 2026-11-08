@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "json": true,
+    "limit": 10,
+    "query": "BRAF V600E rs113488022 dbSNP"
+  },
+  "args_key": "c4f1de585ebdb63f09335783edf1b15e04f339ba963a5b2537db3c3b11b8fe5d",
+  "recorded_at": "2026-11-03T16:01:10.587547+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 878.0208000098355,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search variant -g BRAF --hgvsp V600E\"\n    ]\n  },\n  \"count\": 0,\n  \"diagnostics\": [],\n  \"filter_evaluation\": {\n    \"condition\": \"evaluated\",\n    \"gene\": \"evaluated\",\n    \"hgvsp\": \"evaluated\"\n  },\n  \"pagination\": {\n    \"has_more\": false,\n    \"limit\": 10,\n    \"next_page_token\": null,\n    \"offset\": 0,\n    \"returned\": 0,\n    \"total\": 0\n  },\n  \"requested_variant\": {\n    \"gene\": \"BRAF\",\n    \"protein_change\": \"V600E\"\n  },\n  \"resolution\": {\n    \"exhaustive\": true,\n    \"normalized_aliases\": {\n      \"coding_changes\": [],\n      \"genomic_ids\": [],\n      \"protein_changes\": [\n        \"V600E\"\n      ],\n      \"rsids\": []\n    },\n    \"status\": \"unresolved\"\n  },\n  \"results\": []\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

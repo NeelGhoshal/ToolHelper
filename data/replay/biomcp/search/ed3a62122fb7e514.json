@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "melanoma"
+    ],
+    "intervention": [
+      "dabrafenib"
+    ],
+    "limit": 5
+  },
+  "args_key": "ed3a62122fb7e514662714c87322cca280ddf00def253918f4ef60c73947890c",
+  "recorded_at": "2026-11-03T05:35:23.755681+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 110.41439999826252,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 5 of 104 \n \nQuery: condition=melanoma, intervention=dabrafenib \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT03563729|Melanoma Metastasized to…|RECRUITING|2|Malignant Melanoma| \n|NCT01266967|A Study of GSK2118436 in…|COMPLETED|2|Melanoma and Brain Metastases| \n|NCT07649252|A Study of Patient Charac…|COMPLETED|-|Melanoma| \n|NCT02052193|Evaluation of Photosensit…|TERMINATED|2|Metastatic Melanoma (Carrying BRAF V600 Mutation)| \n|NCT03332589|E6201 Plus Dabrafenib for…|TERMINATED|1|Malignant Melanoma, Brain Metastases| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-5 of 104 results. Use --offset 5 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

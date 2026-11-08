@@ -1,0 +1,40 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "Zoloft",
+    "json": true,
+    "sections": [
+      "label",
+      "indications",
+      "approvals",
+      "safety",
+      "targets",
+      "shortage",
+      "regulatory",
+      "xrefs"
+    ]
+  },
+  "args_key": "63e9ee3e1f24d25d815f2cb54b637c3294123a7c671101ea0f7f5e3070fb392b",
+  "recorded_at": "2026-11-03T22:29:51.860067+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 0.8553999941796064,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid drug section: xrefs"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

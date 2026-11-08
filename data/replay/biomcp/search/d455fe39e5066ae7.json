@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "biomarker": [
+      "BRAF"
+    ],
+    "limit": 10,
+    "status": "completed",
+    "phase": "PHASE3"
+  },
+  "args_key": "d455fe39e5066ae794a4395f23f6d6ab242dd634c3639f4a8db24e1b541bff62",
+  "recorded_at": "2026-11-04T22:36:02.052553+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 182.0833000001585,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 9 of 9 \n \nQuery: status=completed, phase=PHASE3, biomarker=BRAF \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT01682083|Dabrafenib With Trametini…|COMPLETED|3|Melanoma| \n|NCT01597908|Dabrafenib Plus Trametini…|COMPLETED|3|Melanoma| \n|NCT01227889|A Study Comparing GSK2118…|COMPLETED|3|Cancer| \n|NCT02928224|Study of Encorafenib + Ce…|COMPLETED|3|BRAF V600E-mutant Metastatic Colorectal Cancer| \n|NCT01909453|Study Comparing Combinati…|COMPLETED|3|Melanoma| \n|NCT03231722|First Line mFOLFOXIRI + P…|COMPLETED|3|Metastatic Colorectal Cancer| \n|NCT01689519|A Study Comparing Vemuraf…|COMPLETED|3|Malignant Melanoma| \n|NCT01584648|A Study Comparing Trameti…|COMPLETED|3|Melanoma| \n|NCT01245062|GSK1120212 vs Chemotherap…|COMPLETED|3|Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-9 of 9 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

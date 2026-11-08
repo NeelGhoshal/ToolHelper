@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 25,
+    "query": "imatinib"
+  },
+  "args_key": "ab61bf24e33b3ed4669898845af8b1d1889514a4b5a5b6e36594b932003936b1",
+  "recorded_at": "2026-11-03T08:05:24.094487+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 166.10850003780797,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: imatinib \n \nFound 4 genes \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| LNCRNA-IUR | lncRNA imatinib upregulated | 101929295 | 11:95150499-95309854 | GRCh38 | none | none | \n| IUR1 | imatinib upregulated ABL suppressing lncRNA 1 |  | 11:73157173-73182971 | GRCh38 | none | none | \n| PDGFRA | platelet derived growth factor receptor alpha | 5156 | 4:54229130-54298246 | GRCh38 | P16234 | 173490 | \n| KIT | KIT proto-oncogene, receptor tyrosine kinase | 3815 | 4:54657267-54740783 | GRCh38 | P10721 | 164920 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1-4 of 4 results. \n \n\n\n## Next commands\n- `biomcp get gene LNCRNA-IUR`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

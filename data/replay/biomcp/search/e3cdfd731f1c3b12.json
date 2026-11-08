@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 10,
+    "query": "MYH7 ClinGen variant curation specification hypertrophic cardiomyopathy"
+  },
+  "args_key": "e3cdfd731f1c3b122a1417dce7d2fb1b3653179693437113dbaa5f0a390882ea",
+  "recorded_at": "2026-11-04T00:08:05.948980+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 821.8574000056833,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: MYH7 ClinGen variant curation specification hypertrophic cardiomyopathy \n \nFound 1 gene \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| MYH7 | myosin heavy chain 7 | 4625 | 14:23412732-23436137 | GRCh38 | P12883 | 160760 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1 of 1 results. \n \n\n\n## Next commands\n- `biomcp get gene MYH7`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

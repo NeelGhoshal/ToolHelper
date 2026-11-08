@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "sickle cell",
+      "thalassemia"
+    ],
+    "limit": 20,
+    "sort": "date"
+  },
+  "args_key": "362c2b920f8342b851be4dcc46890e818525128f738e07e86684a6b88935c6c7",
+  "recorded_at": "2026-11-03T07:48:11.884551+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2263.045600033365,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR sickle cell thalassemia, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CRISPR sickle cell thalassemia\" --exclude-retracted --sort date --source semanticscholar --limit 20 --offset 0` \n \n \nFound 20 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42950026|FOSL1-associated condensates modulate superenhancer-mediated…|Europe PMC|2026-10-28|-|0| \n|PMID 42925849|When prevention constrains cure: Institutional lock-in and g…|PubTator3, Europe PMC|2026-10-23|-|0| \n|PMID 42900716|Transient ATM inhibition enhances knock-in efficiency in hem…|Europe PMC|2026-10-20|-|0| \n|PMID 42870130|Genomic medicine knowledge, self-assessment, and training ne…|Europe PMC|2026-10-14|-|0| \n|PMID 42940449|Inherited Anemia: A Contemporary Clinical and Lab Review.|PubTator3, Europe PMC|2026-10-12|-|0| \n|PMID 42853488|Advancing genomic medicine in Nigeria: research progress, cl…|Europe PMC|2026-10-09|-|0| \n|PMID 42940043|Gene-Editing in Respiratory Disease: From Pre-Clinical Human…|Europe PMC|2026-10-03|-|0| \n|PMID 42827100|Current translational perspectives for diagnosis and individ…|Europe PMC|2026-10-02|-|0| \n|PMID 42827680|Iron and Other Metal Ions in Human Health and Disease.|Europe PMC|2026-10-02|-|0| \n|PMID 42820292|Small populations, big impact: leveraging rare disease gene…|Europe PMC|2026-10-01|-|0| \n|PMID 42823531|Reactivation of the embryonic ζ-globin gene ameliorates sev…|Europe PMC|2026-10-01|-|0| \n|PMID 42872486|CRISPR-HAWK: haplotype- and variant-aware guide design toolk…|Europe PMC|2026-10-01|-|0| \n|PMID 42936485|Stealthy lentiviral vectors: Breaking the barriers to system…|Europe PMC|2026-09-29|-|0| \n|PMID 42755327|CRISPR-Based Mediated Reactivation of Fetal Hemoglobin as a…|PubTator3|2026-09-18|-|none| \n|PMID 42758354|CRISPR-Cas9 genome editing: technological advances, delivery…|PubTator3|2026-09-18|-|none| \n|PMID 42787623|Clinical translation of CRISPR-Cas9 therapeutics in cancer a…|PubTator3|2026-09-10|-|none| \n|PMID 42705539|Heme as a versatile signaling molecule: Coordinating mitocho…|Europe PMC|2026-09-07|-|0| \n|PMID 42671510|From Design to Single-Cell Cloning: A Complete RNP-Based CRI…|Europe PMC|2026-08-31|-|0| \n|PMID 42922501|LNP-mediated BCL11A Editing Corrects Sickling Phenotypes and…|PubTator3|2026-08-31|-|none| \n|PMID 42761173|Gene therapy for hereditary hematological disorders: From cl…|Europe PMC|2026-08-27|-|0| \n \n \n \nNewest indexed: 2026-10-29 (5 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42950026\n  biomcp search article -k \"CRISPR sickle cell thalassemia\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 20 results (total unknown). Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

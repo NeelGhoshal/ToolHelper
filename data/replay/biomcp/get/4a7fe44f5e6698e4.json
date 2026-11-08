@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "BRAF",
+    "json": true,
+    "sections": [
+      "civic",
+      "clingen",
+      "cosmic",
+      "disgenet",
+      "hpa",
+      "diagnostics",
+      "gencc"
+    ]
+  },
+  "args_key": "4a7fe44f5e6698e458e5ac73d4ac8ae2313e0c85666df24c7d27a174628cef70",
+  "recorded_at": "2026-11-04T21:32:28.722946+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 0.8390000002691522,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: cosmic"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

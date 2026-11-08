@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CYP2C19 clopidogrel prasugrel ticagrelor alternative"
+    ],
+    "limit": 10
+  },
+  "args_key": "64b355577c43b54dd779a536f004cb80f764b51b4e4ed0998091956d1c338b7a",
+  "recorded_at": "2026-11-03T20:11:14.600690+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2864.1296999994665,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CYP2C19 clopidogrel prasugrel ticagrelor alternative, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"CYP2C19 clopidogrel prasugrel ticagrelor alternative\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 38899464|CYP2C19 Genetic Testing for Oral P2Y12 Inhibitor Therapy: A…|PubMed|2024-08-06|hybrid 0.5 + title+abstract 5/5|108| \n|PMID 39953666|Risk of major adverse cardiovascular events in CYP2C19 LoF g…|PubTator3, PubMed|2025-02-01|hybrid 0.462 + title+abstract 5/5|9| \n|PMID 36588476|Pharmacogenetics of P2Y12 Receptor Inhibitors|PubTator3|2023-02-01|hybrid 0.422 + abstract 4/5|25| \n|PMID 40844153|Interaction of CYP2C19 with the effect of clopidogrel in sec…|PubTator3, PubMed|2025-08-22|hybrid 0.411 + title+abstract 5/5|2| \n|PMID 39360670|Real-world evaluation of CYP2C19 guided antiplatelet therapy…|PubMed|2024-01-01|hybrid 0.405 + title+abstract 5/5|5| \n|PMID 39140670|Can CYP2C19 genotyping improve antiplatelet therapy efficacy…|PubMed|2024-01-01|hybrid 0.337 + title+abstract 4/5|6| \n|PMID 41638031|Impact of Area-Level Socioeconomic Deprivation on Post-PCI O…|PubMed|2026-03-01|hybrid 0.326 + abstract 4/5|0| \n|PMID 38581109|The association of CYP2C19 LoF alleles with adverse clinical…|PubTator3|2024-04-01|hybrid 0.316 + title+abstract 2/5|25| \n|PMID 42533475|CYP2C19 Genotyping to Guide Clopidogrel Prescribing for Neur…|Europe PMC|2026-07-30|hybrid 0.312 + title+abstract 4/5|1| \n|PMID 42807560|Routine CYP2C19 Genotyping, Antiplatelet Prescription Change…|Europe PMC|2026-09-28|hybrid 0.266 + title+abstract 3/5|0| \n \n \n \nNewest indexed: 2026-09-30 (34 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 38899464\n  biomcp search article -k \"CYP2C19 clopidogrel prasugrel ticagrelor alternative\" --year-min 2023 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

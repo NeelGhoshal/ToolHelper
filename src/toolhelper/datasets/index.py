@@ -216,14 +216,15 @@ class EntityIndex:
                       dataset=r[7], row=json.loads(zlib.decompress(r[10])), rows=1, method="exact", score=100.0)
                 for r in self.db.execute(sql + " ORDER BY d.priority, r.id", args)]
 
-    def resolve(self, surface: str, type: str | None = None) -> Resolution:
+    def resolve(self, surface: str, type: str | None = None, *, fuzzy: bool = True) -> Resolution:
+        """`fuzzy=False` stops after exact and normalized matching (the fuzzy stage is the slow one)."""
         query = surface.strip()
         key = normalize(query)
         scored: list[tuple[tuple, Method, float]] = []
         for r in self._by_norm(key, type) if key else []:
             method: Method = "exact" if r[2].casefold() == query.casefold() else "normalized"
             scored.append((r, method, SCORES[method]))
-        if not scored:
+        if not scored and fuzzy:
             scored = [(r, "fuzzy", s) for r, s in self._fuzzy(query, type)]
         if not scored:
             return Resolution(query=query, status="none", matches=[])

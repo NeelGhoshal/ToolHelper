@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E colorectal cancer prognosis microsatellite"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "7d36e9cc8b8c399c2f4baf99a0ba43f2d85e9eafd718e24ea148727908b11e2e",
+  "recorded_at": "2026-11-03T15:59:14.380771+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3320.2953999862075,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E colorectal cancer prognosis microsatellite, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E colorectal cancer prognosis microsatellite\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 22810696|Comprehensive molecular characterization of human colon and…|Europe PMC|2012-07-18|-|7228| \n|PMID 21252716|International association for the study of lung cancer/ameri…|Europe PMC|2011-02-01|-|3664| \n|PMID 42525921|COMMIT: A Randomized Study of mFOLFOX6/Bevacizumab/Atezolizu…|PubMed|2026-10-10|-|2| \n|PMID 42921908|RAS-Pathway Mutation Profiles and Clinical Outcomes Among Pa…|PubMed|2026-10-01|-|0| \n|PMID 37736078|Microsatellite Instability with BRAF V600E Associated with D…|PubTator3|2023-01-01|-|none| \n \n \n \nNewest indexed: 2026-10-24 (10 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 22810696\n  biomcp search article -k \"BRAF V600E colorectal cancer prognosis microsatellite\" --year-min 2011 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

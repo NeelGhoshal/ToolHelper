@@ -1,0 +1,51 @@
+baseline: {'runs': 162, 'repeats': 3, 'success_rate': 0.8209876543209876, 
+'tokens_per_success': 57901.082706766916, 'median_tokens': 42481.0, 
+'p90_tokens': 98899, 'trust_mean': 0.9755203703703703, 'transient_excluded': 0}
+E1: success -0.0988 tokens/success -0.0405 trust 0.9808666666666667 gate FAIL 
+success -9.9 points (limit -2)
+E2: success 0.0309 tokens/success -0.1402 trust 0.9345796296296296 gate pass
+E3: success 0.0123 tokens/success 0.1212 trust 0.9880555555555556 gate pass
+E4: success 0.0494 tokens/success -0.0603 trust 0.9600055555555556 gate pass
+E5: success 0.0123 tokens/success -0.1268 trust 0.9728064814814815 gate pass
+E6: success -0.0432 tokens/success 0.1516 trust 0.9778185185185185 gate FAIL 
+success -4.3 points (limit -2)
+E7: success -0.0062 tokens/success 0.0338 trust 0.9785268518518518 gate pass
+E8: success -0.1173 tokens/success 0.3664 trust 0.9517388888888889 gate FAIL 
+success -11.7 points (limit -2)
+E9: success 0.1235 tokens/success -0.1251 trust 0.9725962962962963 gate pass
+E3 grid task subsets: {'ndc': 16, 'rxnorm': 17, 'hgnc': 16, 'countries': 3, 
+'clinvar': 5, 'omop_eunomia': 10}
+greedy 1: + E5 -> rejected (tokens/success -20.6% vs current; gate: success 
+-6.2 points (limit -2))
+greedy 2: + E9 -> rejected (tokens/success +0.1% vs current)
+greedy 3: + E4 -> rejected (tokens/success -6.2% vs current)
+greedy 4: + E7 -> rejected (tokens/success -3.6% vs current)
+greedy 5: + E3 -> rejected (tokens/success -29.9% vs current)
+start p10-E2-final-r2: 49 tasks, ['E2:level=light']
+start p10-E2-final-r3: 50 tasks, ['E2:level=light']
+finished p10-E2-final-r2 (exit 0); 0 tasks still missing
+finished p10-E2-final-r3 (exit 0); 0 tasks still missing
+chosen ['E2']: {'tasks': 54, 'delta_success': -0.0123, 'delta_success_ci': 
+[-0.0679, 0.0432], 'delta_tokens_per_success': 0.0026, 
+'delta_tokens_per_success_ci': [-0.1532, 0.205], 'mcnemar': {'lost': 10, 
+'gained': 8, 'p': 0.8145}}
+decision written: decisions/p10@v1 (proposed; approve with `toolhelper curate 
+decisions/p10`)
+start p10-live-baseline: 27 tasks, no strategies
+start p10-live-chosen: 27 tasks, ['E2:level=light']
+finished p10-live-baseline (exit 0); 0 tasks still missing
+finished p10-live-chosen (exit 0); 0 tasks still missing
+live confirmation on fold A: {'p10-live-baseline': {'runs': 27, 'repeats': 1, 
+'success_rate': 0.8148148148148148, 'tokens_per_success': 63663.36363636364, 
+'median_tokens': 31901, 'p90_tokens': 134717, 'trust_mean': 0.9517222222222222,
+'transient_excluded': 0}, 'p10-live-chosen': {'runs': 27, 'repeats': 1, 
+'success_rate': 0.7407407407407407, 'tokens_per_success': 64464.55, 
+'median_tokens': 31041, 'p90_tokens': 84426, 'trust_mean': 0.9073925925925926, 
+'transient_excluded': 0}}; replay on the same tasks: {'baseline': {'runs': 81, 
+'repeats': 3, 'success_rate': 0.8148148148148148, 'tokens_per_success': 
+55396.28787878788, 'median_tokens': 36607, 'p90_tokens': 86061, 'trust_mean': 
+0.9722839506172839, 'transient_excluded': 0}, 'chosen': {'runs': 81, 'repeats':
+3, 'success_rate': 0.8024691358024691, 'tokens_per_success': 
+52494.584615384614, 'median_tokens': 29131, 'p90_tokens': 97549, 'trust_mean': 
+0.9254740740740741, 'transient_excluded': 0}}
+experiment finished

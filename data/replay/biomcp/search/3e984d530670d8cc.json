@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "statins",
+      "dementia"
+    ],
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "3e984d530670d8cc64b7729bcec41230b1c9a588645114a6939d936f9546ee5e",
+  "recorded_at": "2026-11-04T05:29:47.894073+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4820.233499980532,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statins dementia, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"statins dementia\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 30496104|Global, regional, and national incidence, prevalence, and ye…|Europe PMC|2018-11-08|-|10335| \n|PMID 32738937|Dementia prevention, intervention, and care: 2020 report of…|Europe PMC|2020-07-30|-|7936| \n|PMID 28985560|Ferroptosis: A Regulated Cell Death Nexus Linking Metabolism…|Europe PMC|2017-10-01|-|6612| \n|PMID 28122885|Heart Disease and Stroke Statistics-2017 Update: A Report Fr…|Europe PMC|2017-01-25|-|6484| \n|PMID 33501848|Heart Disease and Stroke Statistics-2021 Update: A Report Fr…|Europe PMC|2021-01-27|-|4456| \n|PMID 17237348|Nitric oxide and peroxynitrite in health and disease.|Europe PMC|2007-01-01|-|4381| \n|PMID 42971235|Efficacy and safety of statin discontinuation in patients 65…|PubMed|2027-09-21|-|0| \n|PMID 42955217|Highlights of Cardiovascular Disease Prevention Studies Pres…|PubMed|2026-10-29|-|0| \n|PMID 42903333|Association of statin use with reduced risk of Alzheimer's d…|PubMed|2026-10-06|-|0| \n|PMID 42881853|The Association of Fasting Glucose and Total Cholesterol wit…|PubMed|2026-09-23|-|0| \n|PMID 42825089|Association between timing of statin treatment after diabete…|PubMed|2026-08-27|-|0| \n|PMID 42818896|Exploring the role of statin interventions on cognitive func…|PubMed|2026-04-06|-|0| \n|PMID 40199829|Statins and the risk of dementia: a meta-analysis.|PubTator3|2025-04-09|-|none| \n|PMID 39963242|The role of statins in dementia or Alzheimer's disease incid…|PubTator3|2025-02-03|-|none| \n|PMID 39822593|Statin use and dementia risk: A systematic review and update…|PubTator3|2025-01-16|-|none| \n \n \n \nNewest indexed: 2026-11-02 (2 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 30496104\n  biomcp search article -k \"statins dementia\" --year-min 2007 --year-max 2027 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

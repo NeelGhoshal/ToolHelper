@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "json": true,
+    "limit": 15,
+    "query": "melanoma KIT TERT PTEN NF1 MC1R MITF"
+  },
+  "args_key": "6f46088d5d90933ecc1882788164a6cb4c2faa22c358546c1e8d9c702021f234",
+  "recorded_at": "2026-11-03T07:55:09.232856+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 204.17920005274937,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 15,\n    \"returned\": 6,\n    \"total\": 6,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 6,\n  \"results\": [\n    {\n      \"symbol\": \"KIT\",\n      \"name\": \"KIT proto-oncogene, receptor tyrosine kinase\",\n      \"entrez_id\": \"3815\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"4:54657267-54740783\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"P10721\",\n      \"omim_id\": \"164920\"\n    },\n    {\n      \"symbol\": \"MC1R\",\n      \"name\": \"melanocortin 1 receptor\",\n      \"entrez_id\": \"4157\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"16:89912119-89920977\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"Q01726\",\n      \"omim_id\": \"155555\"\n    },\n    {\n      \"symbol\": \"MITF\",\n      \"name\": \"melanocyte inducing transcription factor\",\n      \"entrez_id\": \"4286\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"3:69738536-69968336\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"O75030\",\n      \"omim_id\": \"156845\"\n    },\n    {\n      \"symbol\": \"PTEN\",\n      \"name\": \"phosphatase and tensin homolog\",\n      \"entrez_id\": \"5728\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"10:87862638-87971930\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"P60484\",\n      \"omim_id\": \"601728\"\n    },\n    {\n      \"symbol\": \"NF1\",\n      \"name\": \"neurofibromin 1\",\n      \"entrez_id\": \"4763\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"17:31094883-31382116\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"P21359\",\n      \"omim_id\": \"613113\"\n    },\n    {\n      \"symbol\": \"TERT\",\n      \"name\": \"telomerase reverse transcriptase\",\n      \"entrez_id\": \"7015\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"5:1253147-1295086\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"O14746\",\n      \"omim_id\": \"187270\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get gene KIT\",\n      \"biomcp list gene\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

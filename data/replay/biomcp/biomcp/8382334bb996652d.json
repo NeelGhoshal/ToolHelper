@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp search pathway -q \"PI3K AKT\" --limit 10 --json; echo \"====\"; biomcp search pathway -q \"RAS MAPK\" --limit 10 --json; echo \"====\"; biomcp search pathway -q \"JAK STAT\" --limit 5 --json; echo \"====\"; biomcp search pathway -q \"calcium signaling\" --limit 5 --json; echo \"====\"; biomcp search pathway -q \"endocytosis\" --limit 5 --json; echo \"====\"; biomcp search pathway -q \"focal adhesion\" --limit 5 --json",
+    "json": false
+  },
+  "args_key": "8382334bb996652d213c72a3a123ff3c4415b2f908ed7f34e572c22f62ee0ba4",
+  "recorded_at": "2026-11-03T15:12:29.644781+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 2.233400009572506,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: BioMCP allows read-only commands only. Allowed families are search/get/helpers/list/version/health/batch/enrich/discover/skill plus MCP-safe study commands (`study list`, `study download --list`, `study top-mutated`, `study query`, `study filter`, `study cohort`, `study survival`, `study compare`, `study co-occurrence`)."
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

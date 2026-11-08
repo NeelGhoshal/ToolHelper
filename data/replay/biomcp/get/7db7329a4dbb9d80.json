@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "CYP2C19",
+    "json": true,
+    "sections": [
+      "druggability",
+      "diseases",
+      "clinvar",
+      "pathways"
+    ]
+  },
+  "args_key": "7db7329a4dbb9d802ba1c7ced606ef9adbb7fe113c050a7d46b7e0a44a8bcbe4",
+  "recorded_at": "2026-11-03T22:10:47.967644+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.09629996586591,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: clinvar"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

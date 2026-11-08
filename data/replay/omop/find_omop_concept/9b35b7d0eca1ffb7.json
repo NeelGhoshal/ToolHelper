@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "Body weight",
+    "max_results": 10,
+    "omop_field": "measurement_concept_id",
+    "omop_table": "measurement"
+  },
+  "args_key": "9b35b7d0eca1ffb7e09f8d5565f3441692dc90aae17ab00ad210c748d178ebdc",
+  "recorded_at": "2026-11-03T06:14:39.392233+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1004.0743999998085,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 4099154,\n      \"code\": \"27113001\",\n      \"name\": \"Body weight\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4099154\"\n    },\n    {\n      \"concept_id\": 3025315,\n      \"code\": \"29463-7\",\n      \"name\": \"Body weight\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3025315\"\n    },\n    {\n      \"concept_id\": 40484200,\n      \"code\": \"445541000\",\n      \"name\": \"Dry body weight\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/40484200\"\n    },\n    {\n      \"concept_id\": 3661507,\n      \"code\": \"840358001\",\n      \"name\": \"High body weight\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/3661507\"\n    },\n    {\n      \"concept_id\": 37020574,\n      \"code\": \"91557-9\",\n      \"name\": \"Lean body weight\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/37020574\"\n    },\n    {\n      \"concept_id\": 4062985,\n      \"code\": \"170804003\",\n      \"name\": \"Ideal body weight\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4062985\"\n    },\n    {\n      \"concept_id\": 4181668,\n      \"code\": \"363809009\",\n      \"name\": \"Usual body weight\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4181668\"\n    },\n    {\n      \"concept_id\": 3032445,\n      \"code\": \"50064-5\",\n      \"name\": \"Ideal body weight\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3032445\"\n    },\n    {\n      \"concept_id\": 37160426,\n      \"code\": \"1162388008\",\n      \"name\": \"Dosing body weight\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/37160426\"\n    },\n    {\n      \"concept_id\": 3023166,\n      \"code\": \"3142-7\",\n      \"name\": \"Body weight Stated\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3023166\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"Body weight\",\n    \"omop_table\": \"measurement\",\n    \"omop_field\": \"measurement_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

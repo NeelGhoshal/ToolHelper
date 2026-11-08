@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "mutation": [
+      "BRAF V600E"
+    ],
+    "offset": 6,
+    "status": "recruiting"
+  },
+  "args_key": "3ba3e9829c15a87c0219f45a68a9221eeb1804dc734bc31324267d657f4999d1",
+  "recorded_at": "2026-11-04T00:43:20.736235+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1586.7309999885038,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 0 of 6 \n \nQuery: condition=melanoma, status=recruiting, mutation=BRAF V600E, offset=6 \n \n \nNo trials found matching the filters. \nTry broadening the filtered search: \n- ClinicalTrials.gov matched 11 trial(s) on this eligibility text, but registry eligibility verification removed all of them (the term appears only in exclusion criteria or outside the inclusion section). Try a shorter phrase or `--mutation` for broader field coverage. \n- loosen or drop `--mutation`; it is an exact free-text boolean search over title, summary, eligibility, and keywords, so specific protein changes can be brittle \n- add or widen `--distance` only after confirming geography is intended \n- relax `--status` to include non-recruiting or not-yet-recruiting trials \n- try `--biomarker <gene>` for a phrase search across keyword, intervention, and condition when `--mutation` is too specific \n\nShowing 0 of 6 results.\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

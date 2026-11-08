@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "TP53",
+    "json": true,
+    "keyword": [
+      "cancer spectrum",
+      "tumor suppressor",
+      "somatic mutations"
+    ],
+    "limit": 5
+  },
+  "args_key": "08503118cdfedffca5d4638dfe5e83c03d8e86eaad081d83929336f6162575c1",
+  "recorded_at": "2026-11-04T22:43:45.724536+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3048.3026999991125,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=TP53, keyword=cancer spectrum tumor suppressor somatic mutations, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"sort\": \"relevance\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"ranking_policy\": \"hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 5,\n  \"results\": [\n    {\n      \"pmid\": \"41465506\",\n      \"title\": \"TP53 Splice Mutations Have Tumour-Independent Effects on Genomic Stability and Prognosis: An In Silico Study.\",\n      \"journal\": \"Int J Mol Sci\",\n      \"date\": \"2025-12-16\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42099507\",\n      \"title\": \"Identification of Somatic and Germline Mutations Influencing Treatment Outcomes and Disease Susceptibility in Tunisian Triple-Negative Breast Cancer Using Next-Generation Sequencing.\",\n      \"journal\": \"British journal of biomedical science\",\n      \"date\": \"2026-04-22\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"35204500\",\n      \"pmcid\": \"PMC8871212\",\n      \"title\": \"Update on Molecular Diagnosis in Extranodal NK/T-Cell Lymphoma and Its Role in the Era of Personalized Medicine\",\n      \"journal\": \"Diagnostics (Basel)\",\n      \"date\": \"2022-02-05\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42546295\",\n      \"doi\": \"10.1097/dad.0000000000003398\",\n      \"title\": \"Primary Cutaneous Anaplastic Large Cell Lymphoma in a Patient With Li Fraumeni Syndrome.\",\n      \"journal\": \"Am J Dermatopathol\",\n      \"date\": \"2026-08-03\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42741779\",\n      \"pmcid\": \"PMC13574328\",\n      \"doi\": \"10.7759/cureus.114575\",\n      \"title\": \"Li-Fraumeni Syndrome: Current Perspectives on Molecular Pathogenesis, Surveillance Strategies, Clinical Management and Pediatric Considerations.\",\n      \"journal\": \"Cureus\",\n      \"date\": \"2026-08-15\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"partial_query_match\",\n        \"message\": \"The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search article --gene TP53 --keyword \\\"cancer spectrum tumor suppressor somatic mutations\\\" --exclude-retracted --sort relevance --source semanticscholar --limit 5 --offset 0\",\n      \"biomcp get article 41465506\",\n      \"biomcp search article -g TP53 -k \\\"cancer spectrum tumor suppressor somatic mutations\\\" --year-min 2022 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "acute myocardial infarction",
+    "max_results": 10,
+    "omop_field": "condition_concept_id",
+    "omop_table": "condition_occurrence"
+  },
+  "args_key": "cfa5db7e18f2be135e5084ed5c5983e35d69608ad6ca2f236cfbaf79d06df42f",
+  "recorded_at": "2026-11-03T16:13:32.234844+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1257.7619000221603,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 312327,\n      \"code\": \"57054005\",\n      \"name\": \"Acute myocardial infarction\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/312327\"\n    },\n    {\n      \"concept_id\": 4108669,\n      \"code\": \"194809007\",\n      \"name\": \"Acute myocardial infarction of atrium\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4108669\"\n    },\n    {\n      \"concept_id\": 4303359,\n      \"code\": \"79009004\",\n      \"name\": \"Acute myocardial infarction of septum\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4303359\"\n    },\n    {\n      \"concept_id\": 37160791,\n      \"code\": \"1163440003\",\n      \"name\": \"Postoperative acute myocardial infarction\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/37160791\"\n    },\n    {\n      \"concept_id\": 436706,\n      \"code\": \"58612006\",\n      \"name\": \"Acute myocardial infarction of lateral wall\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/436706\"\n    },\n    {\n      \"concept_id\": 45766115,\n      \"code\": \"703212004\",\n      \"name\": \"Acute myocardial infarction during procedure\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/45766115\"\n    },\n    {\n      \"concept_id\": 434376,\n      \"code\": \"54329005\",\n      \"name\": \"Acute myocardial infarction of anterior wall\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/434376\"\n    },\n    {\n      \"concept_id\": 3654466,\n      \"code\": \"836294006\",\n      \"name\": \"Acute myocardial infarction of apex of heart\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/3654466\"\n    },\n    {\n      \"concept_id\": 438170,\n      \"code\": \"73795002\",\n      \"name\": \"Acute myocardial infarction of inferior wall\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/438170\"\n    },\n    {\n      \"concept_id\": 3654465,\n      \"code\": \"836293000\",\n      \"name\": \"Acute myocardial infarction of right ventricle\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/3654465\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"acute myocardial infarction\",\n    \"omop_table\": \"condition_occurrence\",\n    \"omop_field\": \"condition_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

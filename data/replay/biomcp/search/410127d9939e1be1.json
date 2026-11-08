@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "genome editing",
+      "hereditary angioedema",
+      "landmark trial"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "410127d9939e1be1f54df8281d5bed55f33612470184d3a346b5402c9962f207",
+  "recorded_at": "2026-11-04T20:39:32.320723+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3110.8328000000256,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=genome editing hereditary angioedema landmark trial, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"genome editing hereditary angioedema landmark trial\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42854678|Genome editing for hereditary angioedema: A landmark trial a…|PubTator3, Europe PMC, PubMed|2026-10-09|-|0| \n|PMID 42855639|ESICM LIVES 2026.|Europe PMC|2026-10-09|-|0| \n|PMID 42940043|Gene-Editing in Respiratory Disease: From Pre-Clinical Human…|Europe PMC|2026-10-03|-|0| \n|PMID 42737995|Genetically Modified and Gene-Edited Organisms-Objectives, P…|Europe PMC|2026-09-07|-|0| \n|PMID 42797269|Recent Advances in Non-Viral Vectors for Gene Therapy and Ge…|Europe PMC|2026-08-30|-|0| \n|PMID 42504735|LONVOGURAN ZICLUMERAN: a CRISPR-CAS9-BASED GENE THERAPY FOR…|PubTator3, PubMed|2026-07-29|-|0| \n|PMID 42662940|The landscape and trajectory of global CRISPR therapeutics.|Europe PMC|2026-07-10|-|1| \n|PMID 42076098|Antisense Oligonucleotides: Technological Advances, Clinical…|Europe PMC|2026-04-04|-|5| \n|PMID 41972732|CRISPR-Cas9 Therapeutics in Early Clinical Development: Deli…|Europe PMC|2026-04-02|-|1| \n|PMID 42165046|The 2025 WAO Guidelines for the classification, diagnosis, a…|Europe PMC|2026-03-19|-|6| \n \n \n \nNewest indexed: 2026-10-28 (7 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42854678\n  biomcp search article -k \"genome editing hereditary angioedema landmark trial\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

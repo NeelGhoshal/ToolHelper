@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "TP53",
+    "json": true,
+    "sections": [
+      "diseases",
+      "ontology",
+      "disgenet",
+      "clingen",
+      "clinvar",
+      "gwas",
+      "annotations"
+    ]
+  },
+  "args_key": "143e8de8147781ab4939c50308731873f24ea11814a8a4483f80718d733defdd",
+  "recorded_at": "2026-11-04T21:37:17.417746+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.8350999998801854,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: clinvar"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

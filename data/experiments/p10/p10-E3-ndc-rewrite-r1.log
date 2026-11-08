@@ -1,0 +1,142 @@
+learning from 55 runs in bench-baseline-record
+strategies: E3_grounding {'modes': ['rewrite'], 'datasets': ['ndc'], 
+'versions': ['datasets/ndc@v1']}
+pass med-001   turns=2 calls=2 trust=1.00 live=0 prompt=10184 grounding=- 
+🚨 MEDICAL MCP SERVER - SAFETY NOTICE:
+This server provides medical information for educational purposes only.
+NEVER use this information as the sole basis for clinical decisions.
+Always consult qualified healthcare professionals for patient care.
+
+📊 DYNAMIC DATA SOURCE NOTICE:
+This system queries live medical databases (FDA, WHO, PubMed, RxNorm)
+NO hardcoded medical data is used - all information is retrieved dynamically
+Data freshness depends on source database updates and API availability
+Network connectivity required for all medical information retrieval
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='✅ Medical MCP Server running on stdio', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+fail med-002   turns=8 calls=15 trust=1.00 live=9 prompt=93497 grounding=- 
+failed=['must_call_any', 'answer_includes_any']
+pass med-003   turns=2 calls=1 trust=1.00 live=0 prompt=11110 grounding=- 
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...223, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...335, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...718, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...876, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...787, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...787, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...146, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...792, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...670, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+pass med-007   turns=5 calls=10 trust=1.00 live=8 prompt=63127 grounding=1.00 
+pass med-009   turns=7 calls=13 trust=1.00 live=1 prompt=173850 grounding=1.00 
+pass med-010   turns=3 calls=3 trust=1.00 live=0 prompt=69863 grounding=1.00 
+pass med-016   turns=6 calls=16 trust=1.00 live=2 prompt=46513 grounding=- 
+pass bio-008   turns=3 calls=4 trust=1.00 live=2 prompt=29253 grounding=1.00 
+pass bio-010   turns=4 calls=10 trust=1.00 live=1 prompt=41889 grounding=1.00 
+pass bio-015   turns=4 calls=7 trust=0.92 live=0 prompt=35760 grounding=0.80 
+pass omop-005  turns=2 calls=1 trust=1.00 live=0 prompt=11167 grounding=1.00 
+pass omop-010  turns=2 calls=1 trust=0.92 live=0 prompt=10951 grounding=0.80 
+pass x-002     turns=5 calls=10 trust=1.00 live=2 prompt=42113 grounding=1.00 
+pass x-006     turns=3 calls=4 trust=1.00 live=0 prompt=125977 grounding=1.00 
+pass x-007     turns=4 calls=12 trust=0.90 live=3 prompt=51614 grounding=0.76 
+pass x-009     turns=3 calls=4 trust=1.00 live=1 prompt=20769 grounding=1.00 
+p10-E3-ndc-rewrite-r1: 15/16 passed, 113 tool calls (29 live), 837,637 prompt 
+tokens

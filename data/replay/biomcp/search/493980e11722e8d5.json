@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "author": [
+      "Lynch TJ",
+      "Paez JG",
+      "Haber DA"
+    ],
+    "keyword": [
+      "EGFR mutations gefitinib NSCLC"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "493980e11722e8d5c2f25ce07c69ab305fb331e6f032220037e4201b6147a115",
+  "recorded_at": "2026-11-03T15:33:16.947980+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1655.111100000795,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: author=Lynch TJ Paez JG Haber DA, keyword=EGFR mutations gefitinib NSCLC, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nNo articles found matching the filters. \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n \nTry broader search terms or check spelling. \n\nShowing 0 results (total unknown). Use --offset 10 for more.\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

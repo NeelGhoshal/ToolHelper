@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "json": true,
+    "limit": 10,
+    "query": "BRAF c.1799T>A rsID dbSNP chr7 140453136"
+  },
+  "args_key": "48dd1b039b7584f2598617277d6efaa0f2b63d4b3f33db963b33b0b7dce74498",
+  "recorded_at": "2026-11-03T14:06:30.422916+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 389.5910999854095,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search variant -g BRAF\"\n    ]\n  },\n  \"count\": 0,\n  \"diagnostics\": [],\n  \"filter_evaluation\": {\n    \"condition\": \"evaluated\",\n    \"gene\": \"evaluated\"\n  },\n  \"pagination\": {\n    \"has_more\": false,\n    \"limit\": 10,\n    \"next_page_token\": null,\n    \"offset\": 0,\n    \"returned\": 0,\n    \"total\": 0\n  },\n  \"results\": []\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

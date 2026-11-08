@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "trial",
+    "id": "NCT07870265",
+    "sections": [
+      "eligibility"
+    ]
+  },
+  "args_key": "8795eb69cdd787c37d3ae3dccdfe810cc13701ffdf5777f2268ecf0b5cc68a79",
+  "recorded_at": "2026-11-03T09:51:47.838695+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 111.62959999637678,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# NCT07870265 - eligibility \n## Eligibility (ClinicalTrials.gov) \n \nSex: All\nEligible Ages: 18 Years to Any age\nHealthy Subjects: No\nInclusion Criteria:\n\n* Age ≥ 18 years.\n* Subject willing and able to provide written informed consent for biological sample collection.\n* Ability to communicate effectively with the investigator in the local language, as well as the ability to understand and comply with study requirements.\n* Histologically confirmed malignant melanoma.\n* Radiologically or histologically confirmed disease relapse.\n* Feasibility/possibility of peripheral blood sampling for ctDNA analysis.\n* Documented, known \\*BRAF\\* mutation status (wild-type vs. V600E).\n\nExclusion Criteria:\n\n* Operable disease relapse.\n* Age under 18 years.\n* Pregnant or breastfeeding women.\n* Patients receiving palliative care with an estimated life expectancy ≤ 3 months.\n* Severe alcohol and/or drug abuse during therapy.\n* Inability to obtain a valid biological sample for molecular analysis \nMore:\n  biomcp get trial NCT07870265 contacts   - central and site contact details\n  biomcp get trial NCT07870265 locations   - site list and contact details\n  biomcp get trial NCT07870265 outcomes   - endpoint measures and time frames\nAll:\n  biomcp get trial NCT07870265 all \nSee also:\n  biomcp search disease --query \"Unresectable Metastatic Melanoma\"\n  biomcp search article -d \"Unresectable Metastatic Melanoma\"\n  biomcp search trial -c \"Unresectable Metastatic Melanoma\"\n  biomcp search drug -q \"Novel CRISPR/Cas12a Electrochemical Bioassay\"\n  biomcp drug trials \"Novel CRISPR/Cas12a Electrochemical Bioassay\" \n\n[ClinicalTrials.gov](https://clinicaltrials.gov/study/NCT07870265)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

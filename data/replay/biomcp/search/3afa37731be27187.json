@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E",
+      "melanoma"
+    ],
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "3afa37731be271875273f294003d11d25a81cbe8f9210cb3ca872f315eaa354a",
+  "recorded_at": "2026-11-04T00:38:35.160994+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 9643.402700079605,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E melanoma, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E melanoma\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 26462967|2015 American Thyroid Association Management Guidelines for…|Europe PMC|2016-01-01|-|10412| \n|PMID 23539594|Cancer genome landscapes.|Europe PMC|2013-03-01|-|6000| \n|PMID 21639808|Improved survival with vemurafenib in melanoma with BRAF V60…|Europe PMC|2011-06-05|-|5808| \n|PMID 24138928|DNA methylation age of human tissues and cell types.|Europe PMC|2013-01-01|-|5694| \n|PMID 25079317|Comprehensive molecular characterization of gastric adenocar…|Europe PMC|2014-07-23|-|5139| \n|PMID 24336571|Genome-scale CRISPR-Cas9 knockout screening in human cells.|Europe PMC|2013-12-12|-|4502| \n|PMID 42878812|[Melanocytomas : Intermediate melanocytic neoplasms with dis…|PubMed|2026-11-01|-|0| \n|PMID 42969502|Impact of bone metastases on outcomes in patients with metas…|PubMed|2026-10-29|-|0| \n|PMID 42816143|Molecular Characterization of Sclerosing Nevi With Pseudomel…|PubMed|2026-09-30|-|0| \n|PMID 42856236|Tumor cell-intrinsic mtDNA instability drives cGAS-dependent…|PubMed|2026-09-30|-|0| \n|PMID 42907443|p38α orchestrates BRAF(V600E)-melanoma progression and immu…|PubMed|2026-09-22|-|0| \n|PMID 42903041|Adaptive drug resistance in melanoma is characterised by lip…|PubMed|2026-09-16|-|0| \n|PMID 39052013|CTHRC1 is associated with BRAF(V600E) mutation and correlate…|PubTator3|2024-07-23|-|none| \n|PMID 37065875|A Unique Case of Intracranial Amelanotic Melanoma with BRAF…|PubTator3|2023-03-24|-|none| \n|PMID 36299811|BRAF V600E Immunohistochemistry Predicts Prognosis of Patien…|PubTator3|2022-10-24|-|none| \n \n \n \nNewest indexed: 2026-11-02 (2 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 26462967\n  biomcp search article -k \"BRAF V600E melanoma\" --year-min 2011 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

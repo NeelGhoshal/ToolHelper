@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "aspirin 81 MG Oral Tablet",
+    "max_results": 5,
+    "omop_field": "drug_concept_id",
+    "omop_table": "drug_exposure"
+  },
+  "args_key": "72e615fc1959bed55a0c97ddd1d8450ffbff995d4f10c4f13efb0d4822429af4",
+  "recorded_at": "2026-11-05T05:10:59.545534+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1258.3267000009073,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 19059056,\n      \"code\": \"243670\",\n      \"name\": \"aspirin 81 MG Oral Tablet\",\n      \"class\": \"Clinical Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19059056\"\n    },\n    {\n      \"concept_id\": 35873199,\n      \"code\": \"OMOP5029598\",\n      \"name\": \"aspirin 81 MG Oral Tablet [Annituo]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/35873199\"\n    },\n    {\n      \"concept_id\": 44100362,\n      \"code\": \"OMOP1094993\",\n      \"name\": \"Aspirin 81 MG Oral Tablet [Pms-Asa]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/44100362\"\n    },\n    {\n      \"concept_id\": 40178201,\n      \"code\": \"979118\",\n      \"name\": \"aspirin 81 MG Oral Tablet [Bufferin]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40178201\"\n    },\n    {\n      \"concept_id\": 19046611,\n      \"code\": \"211900\",\n      \"name\": \"aspirin 81 MG Oral Tablet [Minitabs]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19046611\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"aspirin 81 MG Oral Tablet\",\n    \"omop_table\": \"drug_exposure\",\n    \"omop_field\": \"drug_concept_id\",\n    \"total_found\": 5,\n    \"candidates_returned\": 5,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

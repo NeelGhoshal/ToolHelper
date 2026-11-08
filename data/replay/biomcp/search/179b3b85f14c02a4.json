@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "intervention": [
+      "vemurafenib"
+    ],
+    "limit": 8
+  },
+  "args_key": "179b3b85f14c02a4856baae188d965acf7be697ec4707b2217d373dedd481a8f",
+  "recorded_at": "2026-11-03T20:02:16.964012+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 499.66370000038296,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 8 trial(s) \n \nQuery: intervention=vemurafenib \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT05525858|KPMNG Study of MOlecular…|ACTIVE_NOT_RECRUITING|-|Solid Tumor, Advanced Solid Tumor, Metastatic Cancer|vemurafenib| \n|NCT06692491|Study of Precision Treatm…|NOT_YET_RECRUITING|2|Rare Tumour|Vemurafenibum| \n|NCT01512251|BKM120 Combined With Vemu…|COMPLETED|1/2|BRAF Mutant Metastatic Melanoma|Vemurafenibum| \n|NCT01597908|Dabrafenib Plus Trametini…|COMPLETED|3|Melanoma|vemurafenib| \n|NCT01656642|A Phase 1b Study of Atezo…|COMPLETED|1|Malignant Melanoma|Vemurafenibum| \n|NCT01781026|Phase 2 Study of Neoadjuv…|COMPLETED|2|Melanoma|vemurafenib| \n|NCT03108209|Prevention of Phototoxici…|COMPLETED|NA|Phototoxicity|vemurafenib| \n|NCT04462471|Vemurafenib Plus Copanlis…|COMPLETED|1|Thyroid Carcinoma, Thyroid Cancer, Thyroid Can… [abridged; 6 conditions total]|vemurafenib| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 8 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

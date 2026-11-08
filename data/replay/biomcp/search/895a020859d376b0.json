@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "BRAF inhibitor"
+    ],
+    "limit": 25
+  },
+  "args_key": "895a020859d376b0441cf39dcec42ebfcc74ae25325bd9e63c2a343ae7bce103",
+  "recorded_at": "2026-11-03T11:08:20.719743+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2592.6890000118874,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 25 of 57 \n \nQuery: condition=melanoma, intervention=BRAF inhibitor \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT03563729|Melanoma Metastasized to…|RECRUITING|2|Malignant Melanoma| \n|NCT01989585|Testing the Addition of N…|ACTIVE_NOT_RECRUITING|1/2|Clinical Stage III Cutaneous Melanoma AJCC v8,… [abridged; 5 conditions total]| \n|NCT02224781|Dabrafenib and Trametinib…|ACTIVE_NOT_RECRUITING|3|Clinical Stage III Cutaneous Melanoma AJCC v8,… [abridged; 5 conditions total]| \n|NCT01072175|Investigate Safety, Pharm…|COMPLETED|2|Cancer| \n|NCT01266967|A Study of GSK2118436 in…|COMPLETED|2|Melanoma and Brain Metastases| \n|NCT01596140|Vemurafenib in Combinatio…|COMPLETED|1|Advanced Cancer, Solid Tumor| \n|NCT01603212|Systemic Therapy With Int…|COMPLETED|1|Melanoma| \n|NCT01689519|A Study Comparing Vemuraf…|COMPLETED|3|Malignant Melanoma| \n|NCT01894672|BRAF Inhibitor, LGX818, U…|COMPLETED|2|Melanoma| \n|NCT01943422|Safety and Efficacy Study…|COMPLETED|1|Melanoma| \n|NCT03101254|LY3022855 With BRAF/MEK I…|COMPLETED|1/2|Melanoma| \n|NCT04760080|Association of Hydroxychl…|COMPLETED|-|Dermatology and Oncology| \n|NCT04720768|Encorafenib, Binimetinib…|UNKNOWN|1/2|Melanoma, Metastasis| \n|NCT03972046|Neoadjuvant Use of Talimo…|WITHDRAWN|2|Melanoma (Skin), Melanoma Stage IIIb-IVM1a, Me… [abridged; 5 conditions total]| \n|NCT07092410|Surgical or Radiotherapeu…|WITHDRAWN|4|Melanoma BRAF V600E/K Mutated| \n|NCT01585415|Vemurafenib and White Blo…|TERMINATED|1|Metastatic Cancer, Melanoma| \n|NCT01777776|Safety and Efficacy of LE…|TERMINATED|1/2|Locally Advanced Metastatic BRAF Mutant Melanoma| \n|NCT01820364|LGX818 in Combination Wit…|TERMINATED|2|Melanoma| \n|NCT01835184|Cabozantinib-S-Malate and…|TERMINATED|1|Recurrent Melanoma, Stage IIIA Melanoma, Stage… [abridged; 6 conditions total]| \n|NCT01978236|Dabrafenib/Trametinib, BR…|TERMINATED|2|Melanoma and Brain Metastases| \n|NCT02097225|Onalespib, Dabrafenib, an…|TERMINATED|1|BRAF V600E Mutation Present, BRAF V600K Mutat… [abridged; 10 conditions total]| \n|NCT02314143|Phase II Biomarker Study…|TERMINATED|2|Melanoma| \n|NCT04543188|A FIH Study of PF-0728489…|TERMINATED|1|Malignant Melanoma, Carcinoma, Non-Small-Cell… [abridged; 5 conditions total]| \n|NCT05388877|E6201 and Dabrafenib for…|TERMINATED|1|Clinical Stage IV Cutaneous Melanoma AJCC v8,… [abridged; 4 conditions total]| \n|NCT01841463|Study of an Oral Cdk Inhi…|SUSPENDED|1|Advanced or Inoperable Malignant Melanoma With BRAF Mutation| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-25 of 57 results. Use --offset 25 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

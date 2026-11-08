@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "limit": 8,
+    "keyword": [
+      "Rotterdam Study statin use reduced risk Alzheimer disease 2000 2001 Li Haag Skoog cohort prospective population-based"
+    ]
+  },
+  "args_key": "0bb6cbf2ff731b732e811ccfb4fbf355e1b63b270d10d6ae08e621f09a7dd636",
+  "recorded_at": "2026-11-04T20:43:11.413329+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3876.062300000058,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=Rotterdam Study statin use reduced risk Alzheimer disease 2000 2001 Li Haag Skoog cohort prospective population-based, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"Rotterdam Study statin use reduced risk Alzheimer disease 2000 2001 Li Haag Skoog cohort prospective population-based\" --exclude-retracted --sort relevance --source semanticscholar --limit 8 --offset 0` \n \n \nFound 1 article \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 32218879|Abstracts of the 14th International Congress of the European…|Europe PMC|2018-10-04|hybrid 0.2|2| \n \n \n \nNewest indexed: 2020-03-29 (2411 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 32218879\n  biomcp search article -k \"Rotterdam Study statin use reduced risk Alzheimer disease 2000 2001 Li Haag Skoog cohort prospective population-based\" --year-min 2018 --year-max 2018 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

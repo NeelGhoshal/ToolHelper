@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "metastatic melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "mutation": [
+      "V600E"
+    ],
+    "status": "recruiting"
+  },
+  "args_key": "32099caf59fc2ffbbb2640deb983ef71fe49ee1ea2b4f9dd2c2e30d3af68116d",
+  "recorded_at": "2026-11-04T06:44:51.537094+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 855.4755999939516,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 5 of 5 \n \nQuery: condition=metastatic melanoma, status=recruiting, mutation=V600E \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT05940311|Versatile Ampification Si…|RECRUITING|-|Liquid Biopsy, Melanoma (Skin), Melanoma Stage III, Melanoma Stage IV| \n|NCT07870265|Detection of the BRAF V60…|RECRUITING|NA|Unresectable Metastatic Melanoma| \n|NCT05914116|A Phase 1/2a Study of DB-…|RECRUITING|1/2|Advanced Solid Tumors| \n|NCT05076760|MEM-288 Oncolytic Virus A…|RECRUITING|1|Solid Tumor, Advanced Cancer, Metastatic Canc… [abridged; 10 conditions total]| \n|NCT06172478|A Study of HER3-DXd in Su…|RECRUITING|2|Advanced Solid Tumor, Melanoma, Head and Neck… [abridged; 14 conditions total]| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-5 of 5 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

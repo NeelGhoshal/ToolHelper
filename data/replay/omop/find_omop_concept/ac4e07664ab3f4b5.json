@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "cutaneous melanoma",
+    "max_results": 10,
+    "omop_field": "condition_concept_id",
+    "omop_table": "condition_occurrence"
+  },
+  "args_key": "ac4e07664ab3f4b5615a12e6a0f3f9d17d4252d51d7dbbcce7c2b09331110067",
+  "recorded_at": "2026-11-03T20:13:17.741081+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1103.7073000334203,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 670682,\n      \"code\": \"MONDO_0005012\",\n      \"name\": \"cutaneous melanoma\",\n      \"class\": \"Disorder\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"Mondo\",\n      \"url\": \"https://omophub.com/concepts/670682\"\n    },\n    {\n      \"concept_id\": 37429011,\n      \"code\": \"HP_0012056\",\n      \"name\": \"Cutaneous melanoma\",\n      \"class\": \"Disorder\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"HPO\",\n      \"url\": \"https://omophub.com/concepts/37429011\"\n    },\n    {\n      \"concept_id\": 671742,\n      \"code\": \"MONDO_0006320\",\n      \"name\": \"non-cutaneous melanoma\",\n      \"class\": \"Disorder\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"Mondo\",\n      \"url\": \"https://omophub.com/concepts/671742\"\n    },\n    {\n      \"concept_id\": 777817,\n      \"code\": \"SKCM\",\n      \"name\": \"Cutaneous Melanoma (SKCM)\",\n      \"class\": \"Condition\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"OncoTree\",\n      \"url\": \"https://omophub.com/concepts/777817\"\n    },\n    {\n      \"concept_id\": 684852,\n      \"code\": \"MONDO_0024462\",\n      \"name\": \"susceptibility to familial cutaneous melanoma\",\n      \"class\": \"Disorder\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"Mondo\",\n      \"url\": \"https://omophub.com/concepts/684852\"\n    },\n    {\n      \"concept_id\": 141232,\n      \"code\": \"93655004\",\n      \"name\": \"Malignant melanoma of skin\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/141232\"\n    },\n    {\n      \"concept_id\": 37111319,\n      \"code\": \"726019003\",\n      \"name\": \"Familial malignant melanoma of skin\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/37111319\"\n    },\n    {\n      \"concept_id\": 1314458,\n      \"code\": \"G9785\",\n      \"name\": \"Pathology report diagnosing cutaneous basal cell carcinoma, squamous cell carcinoma, or melanoma (to include in situ disease) sent from the pathologist/ dermatopathologist to the biopsying clinician for review within 7 days from the time when the tissu...\",\n      \"class\": \"HCPCS\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"HCPCS\",\n      \"url\": \"https://omophub.com/concepts/1314458\"\n    },\n    {\n      \"concept_id\": 1314459,\n      \"code\": \"G9786\",\n      \"name\": \"Pathology report diagnosing cutaneous basal cell carcinoma, squamous cell carcinoma, or melanoma (to include in situ disease) was not sent from the pathologist/ dermatopathologist to the biopsying clinician for review within 7 days from the time when t...\",\n      \"class\": \"HCPCS\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"HCPCS\",\n      \"url\": \"https://omophub.com/concepts/1314459\"\n    },\n    {\n      \"concept_id\": 1181945,\n      \"code\": \"D000096142\",\n      \"name\": \"Cutaneous Malignant Melanoma\",\n      \"class\": \"Main Heading\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"MeSH\",\n      \"url\": \"https://omophub.com/concepts/1181945\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"cutaneous melanoma\",\n    \"omop_table\": \"condition_occurrence\",\n    \"omop_field\": \"condition_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR exon 19 deletion L858R"
+    ],
+    "limit": 10,
+    "sort": "relevance"
+  },
+  "args_key": "2b5c216d9f17bae048dc6a78aaf3d97b26698292f0cd1beddd7a7ed71f97ad2d",
+  "recorded_at": "2026-11-03T20:50:10.693485+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2379.716900002677,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR exon 19 deletion L858R, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR exon 19 deletion L858R\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 40088185|Aumolertinib plus chemotherapy as first-line treatment for a…|PubTator3|2025-03-10|hybrid 0.36 + title 5/5|none| \n|PMID 37321664|Differential clinicopathological features, treatments and ou…|PubTator3|2023-06-01|hybrid 0.34 + title 5/5|none| \n|PMID 42548887|Case Report: Short-term disease control with subsequent icot…|Europe PMC|2026-07-20|hybrid 0.2 + title 2/5|0| \n|PMID 34298851|A Nationwide Study on the Impact of Routine Testing for EGFR…|PubTator3|2021-07-20|hybrid 0.15 + title 1/5|none| \n|PMID 42935491|Chinese medicine combined with EGFR-TKIs in EGFR-mutated adv…|Europe PMC|2026-10-12|hybrid 0.15 + title 1/5|0| \n|PMID 41761381|Dacomitinib as a First-Line Therapy for Advanced EGFR-Mutate…|PubTator3|2026-03-01|hybrid 0.14 + title 1/5|none| \n|PMID 42926199|Clinical and molecular prognostic factors associated with ou…|Europe PMC|2026-09-11|hybrid 0.13 + title 1/5|0| \n|PMID 42723906|Osimertinib vs. erlotinib combined with an angiogenesis inhi…|Europe PMC|2026-07-30|hybrid 0.12 + title 1/5|0| \n|PMID 36386461|Multiple mutations in the EGFR gene in lung cancer: a system…|PubTator3|2022-10-01|hybrid 0.11 + title 1/5|none| \n|PMID 42520966|Impact of Genomic Subtype on Intracranial Outcomes in Treatm…|Europe PMC|2026-07-28|hybrid 0.11 + title 1/5|0| \n \n \n \nNewest indexed: 2026-10-28 (6 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 40088185\n  biomcp search article -k \"EGFR exon 19 deletion L858R\" --year-min 2021 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

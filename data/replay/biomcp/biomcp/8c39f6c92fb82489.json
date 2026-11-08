@@ -1,0 +1,28 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search gene BRAF --json"
+  },
+  "args_key": "8c39f6c92fb82489fa306adb9a60d9008d97d7f9aec26eef8be8afbb5647b33f",
+  "recorded_at": "2026-11-03T06:03:50.645390+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 3.6861999542452395,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 1,\n    \"total\": 1,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 1,\n  \"results\": [\n    {\n      \"symbol\": \"BRAF\",\n      \"name\": \"B-Raf proto-oncogene, serine/threonine kinase\",\n      \"entrez_id\": \"673\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"7:140719327-140925199\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"P15056\",\n      \"omim_id\": \"164757\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get gene BRAF\",\n      \"biomcp list gene\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

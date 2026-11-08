@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "EGFR",
+    "keyword": [
+      "EGFR-mutant NSCLC",
+      "resistance",
+      "TKI"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "25003d62400f43834dda2e60a83846a34f0ebaba4a0b513f53427a5c1e906a3b",
+  "recorded_at": "2026-11-04T22:40:17.240471+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5574.336600000606,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, keyword=EGFR-mutant NSCLC resistance TKI, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene EGFR --keyword \"EGFR-mutant NSCLC resistance TKI\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 15329413|EGF receptor gene mutations are common in lung cancers from…|Europe PMC|2004-08-25|-|3292| \n|PMID 27959700|Osimertinib or Platinum-Pemetrexed in EGFR T790M-Positive Lu…|Europe PMC|2016-12-06|-|2833| \n|PMID 21430269|Genotypic and histological evolution of lung cancers acquiri…|Europe PMC|2011-03-01|-|2797| \n|PMID 29405201|Targeting the IL-6/JAK/STAT3 signalling axis in cancer.|Europe PMC|2018-02-06|-|2694| \n|PMID 42906730|Antibody-drug conjugates after EGFR-TKI resistance in EGFR-m…|PubMed|2026-10-21|-|0| \n|PMID 42930180|Triple Genetic Alterations (EGFR Mutation, ALK Fusion, and M…|PubMed|2026-10-12|-|0| \n|PMID 42935491|Chinese medicine combined with EGFR-TKIs in EGFR-mutated adv…|PubMed|2026-10-12|-|0| \n|PMID 42957912|Genomic landscape of EGFR-TKI resistance: from known mechani…|PubMed|2026-08-04|-|0| \n|PMID 41544644|Targeting MET-mediated TKI resistance in EGFR-mutant NSCLC.|PubTator3|2026-01-13|-|none| \n|PMID 41219394|Navigating the landscape of EGFR TKI resistance in EGFR-muta…|PubTator3|2025-11-11|-|none| \n \n \n \nNewest indexed: 2026-10-30 (5 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 15329413\n  biomcp search article -g EGFR -k \"EGFR-mutant NSCLC resistance TKI\" --year-min 2004 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 10,
+    "offset": 15,
+    "status": "recruiting"
+  },
+  "args_key": "1d050323733ac2696ef45234a41a99687cc1441d14c00cab21e7d8b8608f5d7a",
+  "recorded_at": "2026-11-03T21:17:09.803906+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 561.3529999973252,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 484 \n \nQuery: condition=melanoma, status=recruiting, offset=15 \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT05098210|Personalized Neo-Antigen…|RECRUITING|1|Anatomic Stage IV Breast Cancer AJCC v8, Clin… [abridged; 25 conditions total]| \n|NCT07686835|Dietary Fiber to Induce G…|RECRUITING|2|Melanoma (Skin) Stage IV, Melanoma (Skin Cance… [abridged; 5 conditions total]| \n|NCT06675643|Digital Remote Monitoring…|RECRUITING|-|Malignant Skin Neoplasm, Melanoma| \n|NCT06028724|A Study on the Prevalence…|RECRUITING|-|Solid Tumor, Advanced Solid Tumor, Locally Ad… [abridged; 14 conditions total]| \n|NCT06305962|177Lu-anti-PD-L1 sdAb in…|RECRUITING|EARLY_PHASE1|PDL1 Gene Mutation, Non Small Cell Lung Cancer… [abridged; 9 conditions total]| \n|NCT06439979|Rural Adult and Youth Sun…|RECRUITING|NA|Melanoma (Skin), Skin Cancer| \n|NCT06630611|Evaluation of a Pragmatic…|RECRUITING|2|Melanoma, Non Small Cell Lung Cancer, Cervical Cancer| \n|NCT07476326|Pharmacokinetics, Safety,…|RECRUITING|1|Melanoma| \n|NCT06605443|Precision Medicine for L/…|RECRUITING|-|Melanoma (Skin Cancer), Nevi and Melanomas, Congenital Melanocytic Nevus| \n|NCT06861023|Review of the Literature…|RECRUITING|-|Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 16-25 of 484 results. Use --offset 25 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

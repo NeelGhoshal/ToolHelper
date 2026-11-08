@@ -1,0 +1,41 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "TP53",
+    "json": true,
+    "sections": [
+      "diseases",
+      "ontology",
+      "pathways",
+      "druggability",
+      "clingen",
+      "gencc",
+      "constraint",
+      "disgenet",
+      "xrefs"
+    ]
+  },
+  "args_key": "72c50e1f258fee0638f05e91d0ed6e8403f9474105065c52db39c8e2db15c0e3",
+  "recorded_at": "2026-11-03T23:32:15.655980+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.316600013524294,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: xrefs"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

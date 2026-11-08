@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "HER2-targeted therapy"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "95d75a0d684f6a2adc00cc5aee8890f39c9f343c13be0e81033f7e5ca339950e",
+  "recorded_at": "2026-11-03T08:29:30.501725+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6681.913600012194,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=HER2-targeted therapy, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nEurope PMC source status: degraded (Europe PMC search unavailable) \nRetry: `biomcp search article --keyword \"HER2-targeted therapy\" --exclude-retracted --sort date --source europepmc --limit 10 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"HER2-targeted therapy\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41423932|Nanotherapeutics for enhanced treatments for ovarian cancer:…|PubTator3|2026-12-31|-|none| \n|PMID 41427517|Polymersome-based nanomedicine for combined cancer therapy|PubTator3|2026-12-31|-|none| \n|PMID 41454916|Downregulation of the lncRNA PGM5P4-AS1 predicts poor progno…|PubTator3|2026-12-31|-|none| \n|PMID 41496523|The LXRbeta/NF-kappaB axis reprograms CAR-T cells to resist…|PubTator3|2026-12-31|-|none| \n|PMID 41496551|Oncolytic virus OVV-03 enhances CAR-T cell therapy against g…|PubTator3|2026-12-31|-|none| \n|PMID 41530924|Multi-platform analysis of the tumor immune microenvironment…|PubTator3|2026-12-31|-|none| \n|PMID 41837409|The role of copper and cuproptosis in digestive system cance…|PubTator3|2026-12-31|-|none| \n|PMID 41936024|Tokenizing loops of antibodies|PubTator3|2026-12-31|-|none| \n|PMID 42445966|xinguangA preliminary characterization of PI4K/PIPK alterati…|PubTator3|2026-12-31|-|none| \n|PMID 42684015|A phase II multi-institutional single arm trial evaluating T…|PubTator3|2026-12-31|-|none| \n \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41423932\n  biomcp get drug \"HER2-targeted Therapy\"\n  biomcp search article -k \"HER2-targeted therapy\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

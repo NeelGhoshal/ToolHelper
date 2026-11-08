@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "TP53",
+    "json": true,
+    "keyword": [
+      "Li-Fraumeni",
+      "cancer",
+      "syndrome"
+    ],
+    "limit": 5
+  },
+  "args_key": "5620eb833b68469ac9e258148333a6ceeb57b55ad00da9bd62e2840a921e3d8f",
+  "recorded_at": "2026-11-04T22:43:24.531576+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3404.266000001371,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=TP53, keyword=Li-Fraumeni cancer syndrome, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"sort\": \"relevance\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"ranking_policy\": \"hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 5,\n  \"results\": [\n    {\n      \"pmid\": \"35033608\",\n      \"title\": \"Characteristics of TP53 germline variants and their correlations with Li-Fraumeni syndrome or Li-Fraumeni-like syndrome in Chinese tumor patients.\",\n      \"journal\": \"J Genet Genomics\",\n      \"date\": \"2022-07-01\",\n      \"citation_count\": 5,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"33880204\",\n      \"pmcid\": \"PMC8053471\",\n      \"title\": \"Multiple meningiomas arising within the same hemisphere associated with Li-Fraumeni syndrome\",\n      \"journal\": \"Surg Neurol Int\",\n      \"date\": \"2021-03-17\",\n      \"citation_count\": 2,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42960272\",\n      \"pmcid\": \"PMC13718836\",\n      \"doi\": \"10.1016/j.ajoc.2026.102689\",\n      \"title\": \"Li-Fraumeni syndrome presenting with early-onset eyelid sebaceous carcinoma.\",\n      \"journal\": \"Am J Ophthalmol Case Rep\",\n      \"date\": \"2026-10-16\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42928139\",\n      \"title\": \"Characterisation of a novel p53 mutation (p53(N263Tfs*7)) associated with li-fraumeni syndrome.\",\n      \"journal\": \"BMC cancer\",\n      \"date\": \"2026-07-29\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42814862\",\n      \"title\": \"Interpreting TP53 pathogenic variants in germline testing and cancer genomics: pathogenicity, origin, and clinical actionability.\",\n      \"journal\": \"Japanese journal of clinical oncology\",\n      \"date\": \"2026-09-30\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --gene TP53 --keyword \\\"Li-Fraumeni cancer syndrome\\\" --exclude-retracted --sort relevance --source semanticscholar --limit 5 --offset 0\",\n      \"biomcp get article 35033608\",\n      \"biomcp search article -g TP53 -k \\\"Li-Fraumeni cancer syndrome\\\" --year-min 2021 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

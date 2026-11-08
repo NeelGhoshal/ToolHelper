@@ -1,0 +1,36 @@
+learning from 55 runs in bench-baseline-record
+strategies: E3_grounding {'modes': ['tool'], 'datasets': ['omop_eunomia'], 
+'versions': ['datasets/omop_eunomia@v1']}
+pass med-003   turns=2 calls=1 trust=1.00 live=0 prompt=11384 grounding=- 
+🚨 MEDICAL MCP SERVER - SAFETY NOTICE:
+This server provides medical information for educational purposes only.
+NEVER use this information as the sole basis for clinical decisions.
+Always consult qualified healthcare professionals for patient care.
+
+📊 DYNAMIC DATA SOURCE NOTICE:
+This system queries live medical databases (FDA, WHO, PubMed, RxNorm)
+NO hardcoded medical data is used - all information is retrieved dynamically
+Data freshness depends on source database updates and API availability
+Network connectivity required for all medical information retrieval
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='✅ Medical MCP Server running on stdio', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+pass med-016   turns=7 calls=14 trust=1.00 live=2 prompt=55884 grounding=1.00 
+pass bio-010   turns=4 calls=9 trust=0.97 live=0 prompt=39774 grounding=0.92 
+pass omop-001  turns=2 calls=1 trust=1.00 live=0 prompt=11276 grounding=1.00 
+pass omop-003  turns=2 calls=1 trust=1.00 live=0 prompt=11266 grounding=1.00 
+pass omop-008  turns=2 calls=1 trust=0.98 live=0 prompt=11232 grounding=0.95 
+pass omop-010  turns=2 calls=1 trust=0.90 live=0 prompt=11225 grounding=0.75 
+pass omop-012  turns=2 calls=1 trust=1.00 live=0 prompt=11951 grounding=1.00 
+pass x-006     turns=4 calls=6 trust=1.00 live=0 prompt=187474 grounding=1.00 
+pass x-010     turns=2 calls=4 trust=1.00 live=1 prompt=13841 grounding=1.00 
+p10-E3-omop_eunomia-tool-r1: 10/10 passed, 39 tool calls (3 live), 365,307 
+prompt tokens

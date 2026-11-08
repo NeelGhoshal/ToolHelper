@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "HER2-targeted therapy",
+      "trastuzumab deruxtecan"
+    ],
+    "limit": 10,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "c8f06d04669ab3f4ad9d8430a853cc57dcdedfac308d802a0a39aa322afbd6a1",
+  "recorded_at": "2026-11-03T10:22:35.347192+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1331.3806000514887,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=HER2-targeted therapy trastuzumab deruxtecan, exclude_retracted=true, sort=date, source=pubmed\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": false,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubmed\"\n    ],\n    \"enrichment_sources\": []\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": 286,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"42924615\",\n      \"title\": \"Advances in resistance mechanisms and counterstrategies for antibody‑drug conjugates in HER2‑low and HER2‑ultralow breast cancer (Review).\",\n      \"journal\": \"Oncology reports\",\n      \"date\": \"2026-12-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42854349\",\n      \"title\": \"Advancing therapies for HER2-positive metastatic breast cancer: Navigating a wealth of treatment options.\",\n      \"journal\": \"Cancer treatment reviews\",\n      \"date\": \"2026-11-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42931932\",\n      \"title\": \"HER2 protein expression patterns in gallbladder adenocarcinoma and extrahepatic cholangiocarcinoma.\",\n      \"journal\": \"Virchows Archiv : an international journal of pathology\",\n      \"date\": \"2026-10-26\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42914177\",\n      \"title\": \"Preclinical PET Imaging of Trastuzumab Deruxtecan in Tumors with Heterogeneous HER2 Expression.\",\n      \"journal\": \"Journal of nuclear medicine : official publication, Society of Nuclear Medicine\",\n      \"date\": \"2026-10-22\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42850399\",\n      \"title\": \"Right-sizing treatment for HER2-positive breast cancer: evolving algorithms across the disease continuum.\",\n      \"journal\": \"Nature reviews. Clinical oncology\",\n      \"date\": \"2026-10-08\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42842139\",\n      \"title\": \"Durable treatment response to Trastuzumab deruxtecan in two patients with recurrent grade III anaplastic ependymoma.\",\n      \"journal\": \"Molecular and cellular pediatrics\",\n      \"date\": \"2026-10-07\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42830854\",\n      \"title\": \"HER2-Targeted Antibody-Drug Conjugates in Advanced HER2-Low Breast Cancer: Mechanisms, Clinical Efficacy, and Resistance Strategies.\",\n      \"journal\": \"Cancer management and research\",\n      \"date\": \"2026-09-30\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42880094\",\n      \"title\": \"Chemotherapy outcomes in human epidermal growth factor receptor 2-low, hormone receptor-positive metastatic breast cancer: Insights from the French multicenter ESME database.\",\n      \"journal\": \"Breast (Edinburgh, Scotland)\",\n      \"date\": \"2026-09-27\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42700519\",\n      \"title\": \"Facial palsy Revealing AR+/HER2+ Parotid carcinoma and the efficacy of HER2-Targeted therapy trastuzumab deruxtecan.\",\n      \"journal\": \"Oral oncology\",\n      \"date\": \"2026-09-05\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42871456\",\n      \"title\": \"Metastatic HER2-positive breast cancer in a 19-year-old woman following a 4-year diagnostic delay: a case report.\",\n      \"journal\": \"AME case reports\",\n      \"date\": \"2026-07-30\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42924615\",\n      \"biomcp search article -k \\\"HER2-targeted therapy trastuzumab deruxtecan\\\" --source pubmed --year-min 2026 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

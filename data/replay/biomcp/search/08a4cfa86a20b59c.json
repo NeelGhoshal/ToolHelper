@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "meta-analysis",
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "dementia",
+      "meta-analysis"
+    ],
+    "limit": 15,
+    "sort": "date"
+  },
+  "args_key": "08a4cfa86a20b59c109697d959328b76b4f1b412b75e3c9f4bb31bde1ebb8f7a",
+  "recorded_at": "2026-11-04T01:35:49.571954+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3949.461399926804,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin dementia meta-analysis, type=meta-analysis, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 15 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42905873|Meta-analysis of over 8,000 individuals from Hawai'i and Sam…|Europe PMC|2026-10-21|-|0| \n|PMID 42566699|Secondary prevention of myocardial infarction in people with…|Europe PMC, PubMed|2026-08-01|-|0| \n|PMID 42517224|Effects of Omega-3 Fatty Acid Treatment on Risk for Atrial F…|Europe PMC|2026-07-28|-|2| \n|PMID 42398769|Impact of Milk Fat Globule Membrane and Its Associated Polar…|Europe PMC|2026-07-25|-|1| \n|PMID 42517337|Association between pulse pressure and markers of cognitive…|Europe PMC|2026-07-24|-|0| \n|PMID 42162431|Genetic analysis of circulating metabolic traits in 619,372…|Europe PMC|2026-05-20|-|12| \n|PMID 41840386|Deprescribing preventive medications in older adults with ad…|Europe PMC, PubMed|2026-03-17|-|4| \n|PMID 41715180|Prognostic models in populations with heart failure: a syste…|Europe PMC|2026-02-19|-|0| \n|PMID 41684115|Pharmacological interventions for social cognitive impairmen…|Europe PMC|2026-02-13|-|0| \n|PMID 41605872|Rates and risk factors for major adverse cardiovascular and…|Europe PMC|2026-01-28|-|2| \n|PMID 41559638|Efficacy and safety of anti-inflammatory drug-assisted treat…|Europe PMC|2026-01-20|-|1| \n|PMID 41555252|Cardiovascular outcomes and adverse drug reactions associate…|Europe PMC|2026-01-19|-|0| \n|PMID 42361059|Association Between TNF-Alpha Levels and Atrial Fibrillation…|Europe PMC|2026-01-01|-|0| \n|PMID 41325697|Genome-wide gene-sleep interaction study identifies novel li…|Europe PMC|2025-11-26|-|2| \n|PMID 41286463|Dissecting the genetic and proteomic risk factors for deliri…|Europe PMC|2025-11-24|-|9| \n \n \n \nNewest indexed: 2026-10-23 (12 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42905873\n  biomcp search article -k \"statin dementia meta-analysis\" --type meta-analysis --year-min 2025 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

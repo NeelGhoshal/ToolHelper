@@ -1,0 +1,40 @@
+{
+  "server": "biomcp",
+  "tool": "variant_articles",
+  "arguments": {
+    "items": [
+      {
+        "alt": "T",
+        "build": "GRCh38",
+        "gene": "BRAF",
+        "genomic": "chr7:g.140753336A>T",
+        "protein": "p.Val600Glu",
+        "ref": "A",
+        "rsid": "rs113488022"
+      }
+    ],
+    "limit": 10,
+    "strategy": "union"
+  },
+  "args_key": "b9cf8307d206d1f6d9dc5854efcb2a8bfe9da3dd8b40c79dc27d76060a4239c0",
+  "recorded_at": "2026-11-03T13:18:27.278551+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "70147d049a9e3bd31190ae3b87d93f1485386242eee6a9cc9a986c130f8b3d8f",
+  "latency_ms": 1.573599991388619,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"items\": [\n    {\n      \"request_id\": \"item-1\",\n      \"requested_variant\": {\n        \"gene\": \"BRAF\",\n        \"protein_change\": \"p.Val600Glu\",\n        \"genomic_accession\": \"chr7\",\n        \"genome_build\": \"GRCh38\",\n        \"position\": 140753336,\n        \"reference\": \"A\",\n        \"alternate\": \"T\",\n        \"rsid\": \"rs113488022\"\n      },\n      \"resolution\": null,\n      \"complete\": false,\n      \"truncated\": false,\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 0,\n        \"total\": null,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"source_status\": [],\n      \"error\": {\n        \"code\": \"invalid_argument\",\n        \"message\": \"variant article item cannot combine genomic with accession, position, ref, or alt\"\n      },\n      \"results\": []\n    }\n  ],\n  \"complete\": false,\n  \"truncated\": false,\n  \"_meta\": {\n    \"next_commands\": []\n  }\n}"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

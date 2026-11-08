@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF mutation V600E discovery melanoma 2002 Davies"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "92034d831e17928c0e05cb6c05dee9c6a36c2b9ad44e02e5bc70492db8d1151f",
+  "recorded_at": "2026-11-03T06:02:44.565082+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2387.541499978397,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF mutation V600E discovery melanoma 2002 Davies, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"BRAF mutation V600E discovery melanoma 2002 Davies\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 23477830|Oncogenic BRAF regulates oxidative metabolism via PGC1α and…|Europe PMC|2013-03-07|-|753| \n|PMID 22000016|In vivo identification of tumor- suppressive PTEN ceRNAs in…|Europe PMC|2011-10-01|-|548| \n|PMID 23766237|Highly prevalent TERT promoter mutations in aggressive thyro…|Europe PMC|2013-07-12|-|500| \n|PMID 21483012|Clinical characteristics of patients with lung adenocarcinom…|Europe PMC|2011-04-11|-|499| \n|PMID 17299132|A new mouse model to explore the initiation, progression, an…|Europe PMC|2007-02-13|-|416| \n \n \n \nNewest indexed: 2013-06-16 (4888 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 23477830\n  biomcp search article -k \"BRAF mutation V600E discovery melanoma 2002 Davies\" --year-min 2007 --year-max 2013 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

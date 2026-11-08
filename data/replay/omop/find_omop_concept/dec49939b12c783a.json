@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "metformin hydrochloride ingredient",
+    "max_results": 10,
+    "omop_field": "concept_name",
+    "omop_table": "concept"
+  },
+  "args_key": "dec49939b12c783a4f0d860988fdd929c40c638d49749c11b3182011fce71c56",
+  "recorded_at": "2026-11-05T03:58:06.587651+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 771.587900002487,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"error\": \"No results found for keyword 'metformin hydrochloride ingredient'. The search term may not exist in the OMOP vocabulary.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

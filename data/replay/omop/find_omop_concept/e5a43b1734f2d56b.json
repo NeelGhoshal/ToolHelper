@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "HbA1c",
+    "max_results": 10,
+    "omop_field": "measurement_concept_id",
+    "omop_table": "measurement"
+  },
+  "args_key": "e5a43b1734f2d56b7a73b97427bd200ff1287024f37064436291ba93512f3f61",
+  "recorded_at": "2026-11-03T08:53:47.570533+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1005.284299957566,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 36304734,\n      \"code\": \"86910-7\",\n      \"name\": \"Hemoglobin A1c/Hemoglobin.total goal Blood\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/36304734\"\n    },\n    {\n      \"concept_id\": 4235420,\n      \"code\": \"408591000\",\n      \"name\": \"HBA1c target\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4235420\"\n    },\n    {\n      \"concept_id\": 4197971,\n      \"code\": \"313835008\",\n      \"name\": \"HbA1c measurement (DCCT aligned)\",\n      \"class\": \"Procedure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4197971\"\n    },\n    {\n      \"concept_id\": 3031232,\n      \"code\": \"41960-6\",\n      \"name\": \"Type of HbA1c measurement device\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3031232\"\n    },\n    {\n      \"concept_id\": 3032856,\n      \"code\": \"41961-4\",\n      \"name\": \"HbA1c measurement device Vendor name\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3032856\"\n    },\n    {\n      \"concept_id\": 3034070,\n      \"code\": \"41962-2\",\n      \"name\": \"HbA1c measurement device Vendor model code\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3034070\"\n    },\n    {\n      \"concept_id\": 3034957,\n      \"code\": \"41963-0\",\n      \"name\": \"HbA1c measurement device Vendor serial number\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3034957\"\n    },\n    {\n      \"concept_id\": 3031861,\n      \"code\": \"41964-8\",\n      \"name\": \"HbA1c measurement device Vendor software version\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3031861\"\n    },\n    {\n      \"concept_id\": 37171451,\n      \"code\": \"3531000237106\",\n      \"name\": \"HbA1c (glycated haemoglobin A1c)/HbA1 (haemoglobin A1) percent in blood\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/37171451\"\n    },\n    {\n      \"concept_id\": 37395559,\n      \"code\": \"1049321000000109\",\n      \"name\": \"HbA1c (haemoglobin A1c) level (monitoring ranges) - IFCC (International Federation of Clinical Chemistry and Laboratory Medicine) standardised\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/37395559\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"HbA1c\",\n    \"omop_table\": \"measurement\",\n    \"omop_field\": \"measurement_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

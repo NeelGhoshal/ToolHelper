@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "pgx",
+    "drug": [
+      "vemurafenib",
+      "dabrafenib"
+    ],
+    "limit": 10
+  },
+  "args_key": "00f627708c702712189dcdfebb09b866a8f1ea1860f509e8780efdcd47df1b19",
+  "recorded_at": "2026-11-04T22:35:11.624393+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2.6109000009455485,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: error: the argument '--drug <DRUG>' cannot be used multiple times\n\nUsage: biomcp search pgx [OPTIONS] [QUERY]\n\nFor more information, try '--help'.\n"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

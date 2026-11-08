@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "meta-analysis",
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "dementia",
+      "risk"
+    ],
+    "limit": 15,
+    "offset": 10,
+    "sort": "citations",
+    "source": "pubmed"
+  },
+  "args_key": "fa825c2fdfa8a54a4993fbdf5decf15619c105d7564cd32b152e80185dec5474",
+  "recorded_at": "2026-11-03T07:37:09.402639+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 605.6705000228249,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin dementia risk, type=meta-analysis, exclude_retracted=true, sort=citations, source=pubmed, offset=10 \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 15 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 33609477|Risk of stroke in relation to degree of asymptomatic carotid…|PubMed|2021-03-01|-|none| \n|PMID 34700321|Evaluation of High Cholesterol and Risk of Dementia and Cogn…|PubMed|2021-01-01|-|none| \n|PMID 32039479|Benefits and Harms of Statins in People with Dementia: A Sys…|PubMed|2020-03-01|-|none| \n|PMID 31505259|Association of blood lipids, atherosclerosis and statin use…|PubMed|2020-01-01|-|none| \n|PMID 31574510|Association between Use of Statin and Risk of Dementia: A Me…|PubMed|2020-01-01|-|none| \n|PMID 31714636|Lipid lowering and Alzheimer disease risk: A mendelian rando…|PubMed|2020-01-01|-|none| \n|PMID 30182156|Mild cognitive impairment and progression to dementia in peo…|PubMed|2018-11-01|-|none| \n|PMID 30045255|Statins use and risk of dementia: A dose-response meta analy…|PubMed|2018-07-01|-|none| \n|PMID 29360935|A Systematic Review and Meta-analysis of the Factors Associa…|PubMed|2018-05-09|-|none| \n|PMID 29643479|Use of statins and the risk of dementia and mild cognitive i…|PubMed|2018-04-11|-|none| \n|PMID 29914039|Does Treating Vascular Risk Factors Prevent Dementia and Alz…|PubMed|2018-01-01|-|none| \n|PMID 28363508|Risk factors associated with the onset and progression of Al…|PubMed|2017-07-01|-|none| \n|PMID 28212683|Evidence for benefit of statins to modify cognitive decline…|PubMed|2017-02-17|-|none| \n|PMID 26727124|Statins for the prevention of dementia.|PubMed|2016-01-04|-|none| \n|PMID 28013304|Benzodiazepine Use and Risk of Dementia in the Elderly Popul…|PubMed|2016-01-01|-|none| \n \n \n \nNewest indexed: 2021-10-26 (1834 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 33609477\n  biomcp search article -k \"statin dementia risk\" --type meta-analysis --source pubmed --year-min 2016 --year-max 2021 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 11-25 of 38 results. Use --offset 25 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "trial",
+    "id": "NCT04511013",
+    "sections": [
+      "arms"
+    ]
+  },
+  "args_key": "6b217db43c6ac5bdd91abaab2c3bb9e1bbe8d4f9a7e8f5c9e99b94149d8637bd",
+  "recorded_at": "2026-11-04T21:31:47.023064+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 199.13999999971566,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# NCT04511013 - arms \n## Arms (ClinicalTrials.gov) \n \n| Arm | Type | Interventions | Description | \n|---|---|---|---| \n| Arm I (encorafenib, binimetinib, nivolumab) | EXPERIMENTAL | Binimetinib, Encorafenib, Nivolumab | Patients receive encorafenib PO QD on days 1-28, binimetinib… | \n| Arm II (nivolumab, ipilimumab) | EXPERIMENTAL | Ipilimumab, Nivolumab | Patients receive nivolumab IV on day 1 of all cycles and ipi… | \nMore:\n  biomcp get trial NCT04511013 eligibility   - inclusion and exclusion criteria\n  biomcp get trial NCT04511013 contacts   - central and site contact details\n  biomcp get trial NCT04511013 locations   - site list and contact details\nAll:\n  biomcp get trial NCT04511013 all \nSee also:\n  biomcp search disease --query \"Acral Lentiginous Melanoma\"\n  biomcp search article -d \"Acral Lentiginous Melanoma\"\n  biomcp search trial -c \"Acral Lentiginous Melanoma\"\n  biomcp search drug -q \"ARRY-162\" \n\n[ClinicalTrials.gov](https://clinicaltrials.gov/study/NCT04511013)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

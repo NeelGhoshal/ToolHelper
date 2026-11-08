@@ -1,0 +1,40 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "variant",
+    "id": "chr7:g.140453136A>T",
+    "json": true,
+    "sections": [
+      "clinvar",
+      "civic",
+      "cosmic",
+      "population",
+      "druggability",
+      "guidelines",
+      "gwas",
+      "predictions"
+    ]
+  },
+  "args_key": "1c2e3fad3d452fc60ed9bbafec191049dd6bd183b48ba8c521fe07e2302ca84b",
+  "recorded_at": "2026-11-03T15:23:46.512030+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.2274999753572047,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid variant section: druggability"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

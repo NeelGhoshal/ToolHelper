@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "HER2-positive breast cancer"
+    ],
+    "entity": "trial",
+    "limit": 10,
+    "status": "recruiting"
+  },
+  "args_key": "aaa24e91da8c4d809aad736b4f044201ca454df0781112556b93551917e6c2ab",
+  "recorded_at": "2026-11-03T20:16:01.607749+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 360.1510000298731,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 404 \n \nQuery: condition=HER2-positive breast cancer, status=recruiting \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT07281001|A Study to Assess the Eff…|RECRUITING|NA|HER2-positive Breast Cancer, Trastuzumab Deruxtecan| \n|NCT06517212|Tirzepatide Weight Loss f…|RECRUITING|2|Breast Cancer, Breast Neoplasms, Breast Cancers| \n|NCT05950945|Trastuzumab Deruxtecan (T…|RECRUITING|3|Breast Cancer| \n|NCT06723990|Evaluation of HER2DX Assa…|RECRUITING|-|Breast Cancer Early Stage Breast Cancer (Stage 1-3)| \n|NCT06992882|A Randomized, Open-label,…|RECRUITING|3|HER2-positive Breast Cancer| \n|NCT04899908|Stereotactic Brain-direct…|RECRUITING|2|Brain Cancer, Brain Metastases, Melanoma, Lun… [abridged; 16 conditions total]| \n|NCT06686394|Study of Patritumab Derux…|RECRUITING|1/2|Breast Neoplasms, Breast Cancer| \n|NCT05187832|A Study of AND019 in Wome…|RECRUITING|1|Advanced or Metastatic Breast Cancer| \n|NCT06450314|Decreasing Treatment for…|RECRUITING|2|Metastatic Breast Cancer, HER2-positive Breast Cancer| \n|NCT05893966|Prospective Cohort for Tu…|RECRUITING|-|Breast Cancer| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-10 of 404 results. Use --offset 10 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

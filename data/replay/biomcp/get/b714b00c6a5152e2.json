@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "variant",
+    "id": "chr7:g.140453136A>T",
+    "json": true,
+    "sections": [
+      "clinvar",
+      "civic",
+      "population",
+      "tldr",
+      "cosmic",
+      "conservation"
+    ]
+  },
+  "args_key": "b714b00c6a5152e20d5229eed16b5d73c5ba83d50c3eaba74006c3c8f5a72e69",
+  "recorded_at": "2026-11-03T14:02:44.443485+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 2.036199963185936,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid variant section: tldr"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "BRAF",
+    "json": true,
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "27dff78224115299f656c94421786aae762a9a120800d0f30cf736cae32f3a6a",
+  "recorded_at": "2026-11-03T09:34:11.309558+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3983.9578000246547,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=BRAF, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"27653561\",\n      \"pmcid\": \"PMC6309165\",\n      \"doi\": \"10.1056/nejmp1607591\",\n      \"title\": \"Toward a Shared Vision for Cancer Genomic Data.\",\n      \"journal\": \"N Engl J Med\",\n      \"date\": \"2016-09-01\",\n      \"citation_count\": 1372,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"21428770\",\n      \"pmcid\": \"PMC3184612\",\n      \"doi\": \"10.1056/nejmra1010600\",\n      \"title\": \"Genomics and drug response.\",\n      \"journal\": \"N Engl J Med\",\n      \"date\": \"2011-03-01\",\n      \"citation_count\": 379,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"24473265\",\n      \"pmcid\": \"PMC4364402\",\n      \"doi\": \"10.1038/nn.3619\",\n      \"title\": \"Why we scratch an itch: the molecules, cells and circuits of itch.\",\n      \"journal\": \"Nat Neurosci\",\n      \"date\": \"2014-01-28\",\n      \"citation_count\": 266,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"27027665\",\n      \"pmcid\": \"PMC4968599\",\n      \"doi\": \"10.1111/cas.12941\",\n      \"title\": \"Gene aberrations for precision medicine against lung adenocarcinoma.\",\n      \"journal\": \"Cancer Sci\",\n      \"date\": \"2016-05-25\",\n      \"citation_count\": 198,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42970403\",\n      \"title\": \"The Modern Continuum of Care for Colorectal Liver Metastases: A Comprehensive Review.\",\n      \"journal\": \"The American surgeon\",\n      \"date\": \"2026-11-02\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42968552\",\n      \"title\": \"Treatment patterns and characteristics of Chinese patients with advanced or resectable melanoma: a multicenter retrospective study.\",\n      \"journal\": \"Future oncology (London, England)\",\n      \"date\": \"2026-11-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42968613\",\n      \"title\": \"Mesenchymal Malignant Transformation in Metanephric Stromal Tumor: Expanding the Pathologic Spectrum of Metanephric Neoplasia.\",\n      \"journal\": \"Pediatric and developmental pathology : the official journal of the Society for Pediatric Pathology and the Paediatric Pathology Society\",\n      \"date\": \"2026-11-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42969502\",\n      \"title\": \"Impact of bone metastases on outcomes in patients with metastatic melanoma treated with immune checkpoint inhibitors.\",\n      \"journal\": \"Melanoma research\",\n      \"date\": \"2026-10-29\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"38296628\",\n      \"pmcid\": \"PMC10895288\",\n      \"title\": \"BRAF\",\n      \"journal\": \"Zhongguo Fei Ai Za Zhi\",\n      \"date\": \"2024-01-20\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"37989341\",\n      \"pmcid\": \"PMC10663773\",\n      \"title\": \"BRAF\",\n      \"journal\": \"Zhongguo Fei Ai Za Zhi\",\n      \"date\": \"2023-10-20\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --gene BRAF --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0\",\n      \"biomcp get article 27653561\",\n      \"biomcp search article -g BRAF --year-min 2011 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

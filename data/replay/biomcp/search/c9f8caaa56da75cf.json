@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "metastatic melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "mutation": [
+      "BRAF"
+    ],
+    "status": "recruiting"
+  },
+  "args_key": "c9f8caaa56da75cff16183927afa6f6c492998efa08311e90ae0f1f9c6f61a27",
+  "recorded_at": "2026-11-04T00:42:11.886817+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6283.467100001872,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 25 trial(s) \n \nQuery: condition=metastatic melanoma, status=recruiting, mutation=BRAF \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT03888950|Interim FDG PET-CT in Mel…|RECRUITING|NA|Metastatic Melanoma| \n|NCT05098210|Personalized Neo-Antigen…|RECRUITING|1|Anatomic Stage IV Breast Cancer AJCC v8, Clin… [abridged; 25 conditions total]| \n|NCT02828202|Follow-up of a National C…|RECRUITING|-|Malignant Melanoma| \n|NCT06425926|Safety and Tolerability S…|RECRUITING|1/2|Melanoma Stage IV, Solid Tumor| \n|NCT06697301|Safety and Efficacy of EI…|RECRUITING|2/3|Advanced Melanoma| \n|NCT06683755|Phase I/IIa Dose Finding…|RECRUITING|1/2|Melanoma| \n|NCT06121180|Study of Cemiplimab Plus…|RECRUITING|2|Metastatic Uveal Melanoma| \n|NCT03452774|SYNERGY-AI: Artificial In…|RECRUITING|-|Cancer, Metastatic, Cancer, Cancer of Pancrea… [abridged; 43 conditions total]| \n|NCT07050940|Anti PD-1 Plus Postbiotic…|RECRUITING|NA|Melanoma Metastatic| \n|NCT05877430|Safety, Tolerability, and…|RECRUITING|1/2|NSCLC, HNSCC, Melanoma, Metastatic Cancer, Advanced Solid Tumor, Advanced Cancer| \n|NCT04045691|Binimetinib Plus Encorafe…|RECRUITING|-|Melanoma Stage IV, Melanoma Stage III| \n|NCT07130032|Efficacy And Safety Of An…|RECRUITING|2|Metastatic Non-small Cell Lung Cancer (NSCLC), Metastatic Cutaneous Melanoma| \n|NCT05269381|Personalized Neoantigen P…|RECRUITING|1/2|Anatomic Stage III Breast Cancer AJCC v8, An… [abridged; 101 conditions total]| \n|NCT03340129|Anti-PD 1 Brain Collabora…|RECRUITING|2|Melanoma Stage Iv| \n|NCT07281924|Hepzato Kit and Opdualag…|RECRUITING|1/2|Metastatic Melanoma, Liver Metastases| \n|NCT05940311|Versatile Ampification Si…|RECRUITING|-|Liquid Biopsy, Melanoma (Skin), Melanoma Stage III, Melanoma Stage IV| \n|NCT06940739|A Study to Investigate th…|RECRUITING|1/2|Unresectable Melanoma, Metastatic Melanoma, Ocular Melanoma| \n|NCT07870265|Detection of the BRAF V60…|RECRUITING|NA|Unresectable Metastatic Melanoma| \n|NCT07221734|Study to Compare Pharmaco…|RECRUITING|3|Advanced (Unresectable or Metastatic) Melanoma| \n|NCT04119024|Gene Modified Immune Cell…|RECRUITING|1|Metastatic Malignant Solid Neoplasm, Metastat… [abridged; 17 conditions total]| \n|NCT05914116|A Phase 1/2a Study of DB-…|RECRUITING|1/2|Advanced Solid Tumors| \n|NCT06743126|SUPRAME-ACTengine® IMA20…|RECRUITING|3|Melanoma, Cutaneous Malignant, Mucosal Melanoma| \n|NCT07112170|Consolidative Use of Radi…|RECRUITING|NA|Metastatic Melanoma, OligoProgressive Metastatic Disease| \n|NCT05522660|Immunotherapy or Targeted…|RECRUITING|3|Non-Small Cell Lung Cancer, Melanoma| \n|NCT05076760|MEM-288 Oncolytic Virus A…|RECRUITING|1|Solid Tumor, Advanced Cancer, Metastatic Canc… [abridged; 10 conditions total]| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 25 results (total unknown). Use --offset 25 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

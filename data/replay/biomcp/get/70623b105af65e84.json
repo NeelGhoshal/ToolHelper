@@ -1,0 +1,41 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "variant",
+    "id": "chr7:g.140453136A>T",
+    "json": true,
+    "sections": [
+      "clinvar",
+      "civic",
+      "population",
+      "drug_response",
+      "guidelines",
+      "recommendations",
+      "frequencies",
+      "cosmic",
+      "all"
+    ]
+  },
+  "args_key": "70623b105af65e843e49dde5d70ed0afb88f9865999c93d03879fcdc92c9bd06",
+  "recorded_at": "2026-11-03T20:43:31.790862+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.303600030951202,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid variant section: drug_response"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

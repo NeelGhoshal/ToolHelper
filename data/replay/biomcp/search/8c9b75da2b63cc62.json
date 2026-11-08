@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "TP53",
+      "Li-Fraumeni"
+    ],
+    "limit": 5
+  },
+  "args_key": "8c9b75da2b63cc621d459585b8ba4422253785a601f30a7ca976ef7fff00c742",
+  "recorded_at": "2026-11-03T11:10:27.770014+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3629.079499980435,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=TP53 Li-Fraumeni, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"sort\": \"relevance\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"ranking_policy\": \"hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 5,\n  \"results\": [\n    {\n      \"pmid\": \"37508646\",\n      \"pmcid\": \"PMC10378136\",\n      \"title\": \"A Novel Variant in the TP53 Gene Causing Li-Fraumeni Syndrome\",\n      \"journal\": \"Children (Basel)\",\n      \"date\": \"2023-06-30\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"35232817\",\n      \"pmcid\": \"PMC9059784\",\n      \"title\": \"A novel TP53 tandem duplication in a child with Li-Fraumeni syndrome\",\n      \"journal\": \"Cold Spring Harb Mol Case Stud\",\n      \"date\": \"2022-04-28\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42960272\",\n      \"pmcid\": \"PMC13718836\",\n      \"doi\": \"10.1016/j.ajoc.2026.102689\",\n      \"title\": \"Li-Fraumeni syndrome presenting with early-onset eyelid sebaceous carcinoma.\",\n      \"journal\": \"Am J Ophthalmol Case Rep\",\n      \"date\": \"2026-10-16\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42928139\",\n      \"title\": \"Characterisation of a novel p53 mutation (p53(N263Tfs*7)) associated with li-fraumeni syndrome.\",\n      \"journal\": \"BMC cancer\",\n      \"date\": \"2026-07-29\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42879099\",\n      \"doi\": \"10.1007/s12328-026-02466-2\",\n      \"title\": \"Colorectal neoplasia detected during colonoscopic surveillance in Li-Fraumeni syndrome: a retrospective case series.\",\n      \"journal\": \"Clin J Gastroenterol\",\n      \"date\": \"2026-10-15\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"TP53 Li-Fraumeni\\\" --exclude-retracted --sort relevance --source semanticscholar --limit 5 --offset 0\",\n      \"biomcp get article 37508646\",\n      \"biomcp search article -k \\\"TP53 Li-Fraumeni\\\" --year-min 2022 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

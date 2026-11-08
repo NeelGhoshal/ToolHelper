@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "pgx",
+    "id": "CYP2C19",
+    "json": true
+  },
+  "args_key": "6d3ca8928e83abbd0332e5e9ece7253775dadbd12da9b10cdd989d91c321d2e4",
+  "recorded_at": "2026-11-03T23:43:21.446687+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 386.62949996069074,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"CPIC\",\n        \"url\": \"https://cpicpgx.org/genes/cyp2c19/\"\n      },\n      {\n        \"label\": \"PharmGKB\",\n        \"url\": \"https://www.pharmgkb.org/gene/CYP2C19\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search pgx -g CYP2C19\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"interactions\",\n        \"label\": \"Interactions\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"CPIC\"\n        ]\n      }\n    ]\n  },\n  \"gene\": \"CYP2C19\",\n  \"interactions\": [\n    {\n      \"cpiclevel\": \"A\",\n      \"drugname\": \"amitriptyline\",\n      \"genesymbol\": \"CYP2C19\",\n      \"guidelinename\": \"CYP2D6, CYP2C19 and Tricyclic Antidepressants\",\n      \"guidelineurl\": \"https://www.clinpgx.org/guideline/PA166251445\"\n    },\n    {\n      \"cpiclevel\": \"A\",\n      \"drugname\": \"citalopram\",\n      \"genesymbol\": \"CYP2C19\",\n      \"guidelinename\": \"CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants\",\n      \"guidelineurl\": \"https://www.clinpgx.org/guideline/PA166251452\",\n      \"pgxtesting\": \"Actionable PGx\"\n    },\n    {\n      \"cpiclevel\": \"A\",\n      \"drugname\": \"clopidogrel\",\n      \"genesymbol\": \"CYP2C19\",\n      \"guidelinename\": \"CYP2C19 and Clopidogrel\",\n      \"guidelineurl\": \"https://www.clinpgx.org/guideline/PA166251443\",\n      \"pgxtesting\": \"Actionable PGx\"\n    },\n    {\n      \"cpiclevel\": \"A\",\n      \"drugname\": \"escitalopram\",\n      \"genesymbol\": \"CYP2C19\",\n      \"guidelinename\": \"CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants\",\n      \"guidelineurl\": \"https://www.clinpgx.org/guideline/PA166251452\",\n      \"pgxtesting\": \"Informative PGx\"\n    },\n    {\n      \"cpiclevel\": \"A\",\n      \"drugname\": \"lansoprazole\",\n      \"genesymbol\": \"CYP2C19\",\n      \"guidelinename\": \"CYP2C19 and Proton Pump Inhibitors\",\n      \"guidelineurl\": \"https://www.clinpgx.org/guideline/PA166251441\",\n      \"pgxtesting\": \"Informative PGx\"\n    },\n    {\n      \"cpiclevel\": \"A\",\n      \"drugname\": \"omeprazole\",\n      \"genesymbol\": \"CYP2C19\",\n      \"guidelinename\": \"CYP2C19 and Proton Pump Inhibitors\",\n      \"guidelineurl\": \"https://www.clinpgx.org/guideline/PA166251441\",\n      \"pgxtesting\": \"Informative PGx\"\n    },\n    {\n      \"cpiclevel\": \"A\",\n      \"drugname\": \"pantoprazole\",\n      \"genesymbol\": \"CYP2C19\",\n      \"guidelinename\": \"CYP2C19 and Proton Pump Inhibitors\",\n      \"guidelineurl\": \"https://www.clinpgx.org/guideline/PA166251441\",\n      \"pgxtesting\": \"Actionable PGx\"\n    },\n    {\n      \"cpiclevel\": \"A\",\n      \"drugname\": \"sertraline\",\n      \"genesymbol\": \"CYP2C19\",\n      \"guidelinename\": \"CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants\",\n      \"guidelineurl\": \"https://www.clinpgx.org/guideline/PA166251452\"\n    },\n    {\n      \"cpiclevel\": \"A\",\n      \"drugname\": \"voriconazole\",\n      \"genesymbol\": \"CYP2C19\",\n      \"guidelinename\": \"CYP2C19 and Voriconazole\",\n      \"guidelineurl\": \"https://www.clinpgx.org/guideline/PA166251456\",\n      \"pgxtesting\": \"Informative PGx\"\n    },\n    {\n      \"cpiclevel\": \"B\",\n      \"drugname\": \"brivaracetam\",\n      \"genesymbol\": \"CYP2C19\",\n      \"pgxtesting\": \"Actionable PGx\"\n    }\n  ],\n  \"query\": \"CYP2C19\",\n  \"section_outcomes\": {\n    \"annotations\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"frequencies\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    }\n  },\n  \"section_pagination\": {\n    \"interactions\": {\n      \"has_more\": true,\n      \"limit\": 10,\n      \"next_offset\": 10,\n      \"offset\": 0,\n      \"returned\": 10,\n      \"total\": 27\n    }\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

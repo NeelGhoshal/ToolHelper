@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "BRAF V600E colorectal cancer"
+    ],
+    "limit": 5
+  },
+  "args_key": "e80c81fed362dfab0ce25566170c1a254ee6463b49b14d8173d461390e145beb",
+  "recorded_at": "2026-11-03T23:42:53.466581+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 181.40400003176183,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 5 of 47 \n \nQuery: condition=BRAF V600E colorectal cancer \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT06967155|A Study of Irinotecan Wit…|ACTIVE_NOT_RECRUITING|2|Neoplasms| \n|NCT05510895|Neoadjuvant Encorafenib,…|COMPLETED|2|Colorectal Cancer, Colon Cancer, BRAF V600E, B… [abridged; 5 conditions total]| \n|NCT04117945|Regorafenib, With Cetuxim…|UNKNOWN|2|BRAF V600E Negative, KRAS Gene Mutation Negat… [abridged; 13 conditions total]| \n|NCT05127759|The Efficacy and Safety o…|UNKNOWN|2|Metastatic Colorectal Cancer, mCRC| \n|NCT04294160|A Study of Select Drug Co…|TERMINATED|1|BRAF V600 Colorectal Cancer| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-5 of 47 results. Use --offset 5 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

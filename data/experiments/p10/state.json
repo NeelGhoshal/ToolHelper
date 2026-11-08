@@ -1,0 +1,5439 @@
+{
+  "baseline": {
+    "summary": {
+      "runs": 162,
+      "repeats": 3,
+      "success_rate": 0.8209876543209876,
+      "tokens_per_success": 57901.082706766916,
+      "median_tokens": 42481.0,
+      "p90_tokens": 98899,
+      "trust_mean": 0.9755203703703703,
+      "transient_excluded": 0
+    },
+    "by_kind": {
+      "biomcp": {
+        "runs": 45,
+        "repeats": 3,
+        "success_rate": 0.8666666666666667,
+        "tokens_per_success": 54603.02564102564,
+        "median_tokens": 47149,
+        "p90_tokens": 74738,
+        "trust_mean": 0.9470533333333333,
+        "transient_excluded": 0
+      },
+      "cross": {
+        "runs": 30,
+        "repeats": 3,
+        "success_rate": 0.8,
+        "tokens_per_success": 95629.20833333333,
+        "median_tokens": 64712.5,
+        "p90_tokens": 128721,
+        "trust_mean": 0.98686,
+        "transient_excluded": 0
+      },
+      "medical": {
+        "runs": 48,
+        "repeats": 3,
+        "success_rate": 0.6458333333333334,
+        "tokens_per_success": 87098.03225806452,
+        "median_tokens": 48220.0,
+        "p90_tokens": 104787,
+        "trust_mean": 0.98769375,
+        "transient_excluded": 0
+      },
+      "omop": {
+        "runs": 39,
+        "repeats": 3,
+        "success_rate": 1.0,
+        "tokens_per_success": 14774.0,
+        "median_tokens": 11706,
+        "p90_tokens": 21062,
+        "trust_mean": 0.9846615384615385,
+        "transient_excluded": 0
+      }
+    }
+  },
+  "log": [
+    "2026-11-03 07:12:51 baseline: {'runs': 162, 'repeats': 3, 'success_rate': 0.8209876543209876, 'tokens_per_success': 57901.082706766916, 'median_tokens': 42481.0, 'p90_tokens': 98899, 'trust_mean': 0.9755203703703703, 'transient_excluded': 0}",
+    "2026-11-03 07:12:51 start p10-E1-r1 fold A: 27 tasks, ['E1:top_k=8']",
+    "2026-11-03 07:12:51 start p10-E1-r1 fold B: 27 tasks, ['E1:top_k=8']",
+    "2026-11-03 07:12:51 start p10-E2-r1: 54 tasks, ['E2:level=light']",
+    "2026-11-03 08:17:22 finished p10-E1-r1 fold A (exit 0); 0 tasks still missing",
+    "2026-11-03 08:17:22 start p10-E3-r1: 54 tasks, ['E3:modes=hints']",
+    "2026-11-03 08:49:52 finished p10-E1-r1 fold B (exit 0); 0 tasks still missing",
+    "2026-11-03 08:49:52 start p10-E4-r1 fold A: 27 tasks, ['E4:mode=repair']",
+    "2026-11-03 09:28:52 finished p10-E2-r1 (exit 0); 0 tasks still missing",
+    "2026-11-03 09:28:52 start p10-E4-r1 fold B: 27 tasks, ['E4:mode=repair']",
+    "2026-11-03 10:16:22 finished p10-E4-r1 fold A (exit 0); 0 tasks still missing",
+    "2026-11-03 10:16:22 start p10-E5-r1 fold A: 27 tasks, ['E5:mode=plan']",
+    "2026-11-03 10:43:52 finished p10-E4-r1 fold B (exit 0); 0 tasks still missing",
+    "2026-11-03 10:43:52 start p10-E5-r1 fold B: 27 tasks, ['E5:mode=plan']",
+    "2026-11-03 12:01:50 finished p10-E5-r1 fold A (exit 0); 0 tasks still missing",
+    "2026-11-03 12:01:50 start p10-E6-r1 fold A: 27 tasks, ['E6:mode=projection']",
+    "2026-11-03 12:09:20 finished p10-E3-r1 (exit 0); 0 tasks still missing",
+    "2026-11-03 12:09:20 start p10-E6-r1 fold B: 27 tasks, ['E6:mode=projection']",
+    "2026-11-03 12:18:50 finished p10-E5-r1 fold B (exit 0); 0 tasks still missing",
+    "2026-11-03 12:18:50 start p10-E7-r1: 54 tasks, ['E7']",
+    "2026-11-03 14:01:50 finished p10-E6-r1 fold A (exit 0); 0 tasks still missing",
+    "2026-11-03 14:01:50 start p10-E8-r1: 54 tasks, ['E8:mode=after_use']",
+    "2026-11-03 14:12:20 finished p10-E6-r1 fold B (exit 0); 0 tasks still missing",
+    "2026-11-03 14:12:20 start p10-E9-r1: 54 tasks, ['E9']",
+    "2026-11-03 16:03:21 finished p10-E7-r1 (exit 0); 0 tasks still missing",
+    "2026-11-03 19:41:15 baseline: {'runs': 162, 'repeats': 3, 'success_rate': 0.8209876543209876, 'tokens_per_success': 57901.082706766916, 'median_tokens': 42481.0, 'p90_tokens': 98899, 'trust_mean': 0.9755203703703703, 'transient_excluded': 0}",
+    "2026-11-03 19:41:15 start p10-E8-r1: 9 tasks, ['E8:mode=after_use']",
+    "2026-11-03 19:41:15 start p10-E9-r1: 24 tasks, ['E9']",
+    "2026-11-03 19:52:15 finished p10-E8-r1 (exit 0); 0 tasks still missing",
+    "2026-11-03 19:55:15 finished p10-E9-r1 (exit 0); 0 tasks still missing",
+    "2026-11-03 19:55:17 close calls get a second repeat: ['E5', 'E6', 'E7']",
+    "2026-11-03 19:55:17 start p10-E5-r2 fold A: 27 tasks, ['E5:mode=plan']",
+    "2026-11-03 19:55:17 start p10-E5-r2 fold B: 27 tasks, ['E5:mode=plan']",
+    "2026-11-03 19:55:17 start p10-E6-r2 fold A: 27 tasks, ['E6:mode=projection']",
+    "2026-11-03 20:16:01 finished p10-E5-r2 fold A (exit 0); 0 tasks still missing",
+    "2026-11-03 20:16:01 start p10-E6-r2 fold B: 27 tasks, ['E6:mode=projection']",
+    "2026-11-03 20:24:47 finished p10-E5-r2 fold B (exit 0); 0 tasks still missing",
+    "2026-11-03 20:24:47 start p10-E7-r2: 54 tasks, ['E7']",
+    "2026-11-03 20:25:17 finished p10-E6-r2 fold A (exit 0); 0 tasks still missing",
+    "2026-11-03 20:48:17 finished p10-E6-r2 fold B (exit 0); 0 tasks still missing",
+    "2026-11-03 21:25:17 finished p10-E7-r2 (exit 0); 0 tasks still missing",
+    "2026-11-03 21:25:19 E1: success -0.0988 tokens/success -0.0405 trust 0.9808666666666667 gate FAIL success -9.9 points (limit -2)",
+    "2026-11-03 21:25:19 E2: success 0.0309 tokens/success -0.1402 trust 0.9345796296296296 gate pass",
+    "2026-11-03 21:25:19 E3: success 0.0123 tokens/success 0.1212 trust 0.9880555555555556 gate pass",
+    "2026-11-03 21:25:19 E4: success 0.0494 tokens/success -0.0603 trust 0.9600055555555556 gate pass",
+    "2026-11-03 21:25:19 E5: success 0.0123 tokens/success -0.1268 trust 0.9728064814814815 gate pass",
+    "2026-11-03 21:25:19 E6: success -0.0432 tokens/success 0.1516 trust 0.9778185185185185 gate FAIL success -4.3 points (limit -2)",
+    "2026-11-03 21:25:19 E7: success -0.0062 tokens/success 0.0338 trust 0.9785268518518518 gate pass",
+    "2026-11-03 21:25:19 E8: success -0.1173 tokens/success 0.3664 trust 0.9517388888888889 gate FAIL success -11.7 points (limit -2)",
+    "2026-11-03 21:25:19 E9: success 0.1235 tokens/success -0.1251 trust 0.9725962962962963 gate pass",
+    "2026-11-03 21:39:04 baseline: {'runs': 162, 'repeats': 3, 'success_rate': 0.8209876543209876, 'tokens_per_success': 57901.082706766916, 'median_tokens': 42481.0, 'p90_tokens': 98899, 'trust_mean': 0.9755203703703703, 'transient_excluded': 0}",
+    "2026-11-03 21:39:07 E1: success -0.0988 tokens/success -0.0405 trust 0.9808666666666667 gate FAIL success -9.9 points (limit -2)",
+    "2026-11-03 21:39:07 E2: success 0.0309 tokens/success -0.1402 trust 0.9345796296296296 gate pass",
+    "2026-11-03 21:39:07 E3: success 0.0123 tokens/success 0.1212 trust 0.9880555555555556 gate pass",
+    "2026-11-03 21:39:07 E4: success 0.0494 tokens/success -0.0603 trust 0.9600055555555556 gate pass",
+    "2026-11-03 21:39:07 E5: success 0.0123 tokens/success -0.1268 trust 0.9728064814814815 gate pass",
+    "2026-11-03 21:39:07 E6: success -0.0432 tokens/success 0.1516 trust 0.9778185185185185 gate FAIL success -4.3 points (limit -2)",
+    "2026-11-03 21:39:07 E7: success -0.0062 tokens/success 0.0338 trust 0.9785268518518518 gate pass",
+    "2026-11-03 21:39:07 E8: success -0.1173 tokens/success 0.3664 trust 0.9517388888888889 gate FAIL success -11.7 points (limit -2)",
+    "2026-11-03 21:39:07 E9: success 0.1235 tokens/success -0.1251 trust 0.9725962962962963 gate pass",
+    "2026-11-03 21:39:08 E3 grid task subsets: {'ndc': 16, 'rxnorm': 17, 'hgnc': 16, 'countries': 3, 'clinvar': 5, 'omop_eunomia': 10}",
+    "2026-11-03 21:39:08 start p10-E3-ndc-hints-r1: 16 tasks, ['E3:modes=hints,datasets=ndc']",
+    "2026-11-03 21:39:08 start p10-E3-ndc-tool-r1: 16 tasks, ['E3:modes=tool,datasets=ndc']",
+    "2026-11-03 21:39:09 start p10-E3-ndc-rewrite-r1: 16 tasks, ['E3:modes=rewrite,datasets=ndc']",
+    "2026-11-03 22:20:09 finished p10-E3-ndc-rewrite-r1 (exit 0); 0 tasks still missing",
+    "2026-11-03 22:20:09 start p10-E3-rxnorm-hints-r1: 17 tasks, ['E3:modes=hints,datasets=rxnorm']",
+    "2026-11-03 22:23:39 finished p10-E3-ndc-tool-r1 (exit 0); 0 tasks still missing",
+    "2026-11-03 22:23:39 start p10-E3-rxnorm-tool-r1: 17 tasks, ['E3:modes=tool,datasets=rxnorm']",
+    "2026-11-03 22:36:39 finished p10-E3-ndc-hints-r1 (exit 0); 0 tasks still missing",
+    "2026-11-03 22:36:39 start p10-E3-rxnorm-rewrite-r1: 17 tasks, ['E3:modes=rewrite,datasets=rxnorm']",
+    "2026-11-03 23:08:09 finished p10-E3-rxnorm-tool-r1 (exit 0); 0 tasks still missing",
+    "2026-11-03 23:08:09 start p10-E3-hgnc-hints-r1: 16 tasks, ['E3:modes=hints,datasets=hgnc']",
+    "2026-11-03 23:16:09 finished p10-E3-rxnorm-rewrite-r1 (exit 0); 0 tasks still missing",
+    "2026-11-03 23:16:09 start p10-E3-hgnc-tool-r1: 16 tasks, ['E3:modes=tool,datasets=hgnc']",
+    "2026-11-03 23:24:09 finished p10-E3-rxnorm-hints-r1 (exit 0); 0 tasks still missing",
+    "2026-11-03 23:24:09 start p10-E3-hgnc-rewrite-r1: 16 tasks, ['E3:modes=rewrite,datasets=hgnc']",
+    "2026-11-04 00:06:39 finished p10-E3-hgnc-hints-r1 (exit 0); 0 tasks still missing",
+    "2026-11-04 00:06:39 start p10-E3-countries-hints-r1: 3 tasks, ['E3:modes=hints,datasets=countries']",
+    "2026-11-04 00:11:10 finished p10-E3-hgnc-tool-r1 (exit 0); 0 tasks still missing",
+    "2026-11-04 00:11:10 start p10-E3-countries-tool-r1: 3 tasks, ['E3:modes=tool,datasets=countries']",
+    "2026-11-04 00:19:40 finished p10-E3-countries-hints-r1 (exit 0); 0 tasks still missing",
+    "2026-11-04 00:19:40 start p10-E3-countries-rewrite-r1: 3 tasks, ['E3:modes=rewrite,datasets=countries']",
+    "2026-11-04 00:28:40 finished p10-E3-countries-tool-r1 (exit 0); 0 tasks still missing",
+    "2026-11-04 00:28:40 start p10-E3-clinvar-hints-r1: 5 tasks, ['E3:modes=hints,datasets=clinvar']",
+    "2026-11-04 00:32:40 finished p10-E3-hgnc-rewrite-r1 (exit 0); 0 tasks still missing",
+    "2026-11-04 00:32:40 start p10-E3-clinvar-tool-r1: 5 tasks, ['E3:modes=tool,datasets=clinvar']",
+    "2026-11-04 00:34:40 finished p10-E3-countries-rewrite-r1 (exit 0); 0 tasks still missing",
+    "2026-11-04 00:34:40 start p10-E3-clinvar-rewrite-r1: 5 tasks, ['E3:modes=rewrite,datasets=clinvar']",
+    "2026-11-04 00:40:10 finished p10-E3-clinvar-hints-r1 (exit 0); 0 tasks still missing",
+    "2026-11-04 00:40:10 start p10-E3-omop_eunomia-hints-r1: 10 tasks, ['E3:modes=hints,datasets=omop_eunomia']",
+    "2026-11-04 00:53:11 finished p10-E3-clinvar-rewrite-r1 (exit 0); 0 tasks still missing",
+    "2026-11-04 00:53:11 start p10-E3-omop_eunomia-tool-r1: 10 tasks, ['E3:modes=tool,datasets=omop_eunomia']",
+    "2026-11-04 00:54:41 finished p10-E3-omop_eunomia-hints-r1 (exit 0); 0 tasks still missing",
+    "2026-11-04 00:54:41 start p10-E3-omop_eunomia-rewrite-r1: 10 tasks, ['E3:modes=rewrite,datasets=omop_eunomia']",
+    "2026-11-04 00:57:41 finished p10-E3-clinvar-tool-r1 (exit 0); 0 tasks still missing",
+    "2026-11-04 01:03:11 finished p10-E3-omop_eunomia-tool-r1 (exit 0); 0 tasks still missing",
+    "2026-11-04 01:06:11 finished p10-E3-omop_eunomia-rewrite-r1 (exit 0); 0 tasks still missing",
+    "2026-11-04 01:06:12 start p10-greedy-1-r1 fold A: 27 tasks, ['E2:level=light', 'E5:mode=plan']",
+    "2026-11-04 01:06:12 start p10-greedy-1-r1 fold B: 27 tasks, ['E2:level=light', 'E5:mode=plan']",
+    "2026-11-04 05:24:29 baseline: {'runs': 162, 'repeats': 3, 'success_rate': 0.8209876543209876, 'tokens_per_success': 57901.082706766916, 'median_tokens': 42481.0, 'p90_tokens': 98899, 'trust_mean': 0.9755203703703703, 'transient_excluded': 0}",
+    "2026-11-04 05:24:31 E1: success -0.0988 tokens/success -0.0405 trust 0.9808666666666667 gate FAIL success -9.9 points (limit -2)",
+    "2026-11-04 05:24:31 E2: success 0.0309 tokens/success -0.1402 trust 0.9345796296296296 gate pass",
+    "2026-11-04 05:24:31 E3: success 0.0123 tokens/success 0.1212 trust 0.9880555555555556 gate pass",
+    "2026-11-04 05:24:31 E4: success 0.0494 tokens/success -0.0603 trust 0.9600055555555556 gate pass",
+    "2026-11-04 05:24:31 E5: success 0.0123 tokens/success -0.1268 trust 0.9728064814814815 gate pass",
+    "2026-11-04 05:24:31 E6: success -0.0432 tokens/success 0.1516 trust 0.9778185185185185 gate FAIL success -4.3 points (limit -2)",
+    "2026-11-04 05:24:31 E7: success -0.0062 tokens/success 0.0338 trust 0.9785268518518518 gate pass",
+    "2026-11-04 05:24:31 E8: success -0.1173 tokens/success 0.3664 trust 0.9517388888888889 gate FAIL success -11.7 points (limit -2)",
+    "2026-11-04 05:24:31 E9: success 0.1235 tokens/success -0.1251 trust 0.9725962962962963 gate pass",
+    "2026-11-04 05:24:32 E3 grid task subsets: {'ndc': 16, 'rxnorm': 17, 'hgnc': 16, 'countries': 3, 'clinvar': 5, 'omop_eunomia': 10}",
+    "2026-11-04 05:24:32 start p10-greedy-1-r1 fold A: 20 tasks, ['E2:level=light', 'E5:mode=plan']",
+    "2026-11-04 05:25:56 baseline: {'runs': 162, 'repeats': 3, 'success_rate': 0.8209876543209876, 'tokens_per_success': 57901.082706766916, 'median_tokens': 42481.0, 'p90_tokens': 98899, 'trust_mean': 0.9755203703703703, 'transient_excluded': 0}",
+    "2026-11-04 05:25:58 E1: success -0.0988 tokens/success -0.0405 trust 0.9808666666666667 gate FAIL success -9.9 points (limit -2)",
+    "2026-11-04 05:25:58 E2: success 0.0309 tokens/success -0.1402 trust 0.9345796296296296 gate pass",
+    "2026-11-04 05:25:58 E3: success 0.0123 tokens/success 0.1212 trust 0.9880555555555556 gate pass",
+    "2026-11-04 05:25:58 E4: success 0.0494 tokens/success -0.0603 trust 0.9600055555555556 gate pass",
+    "2026-11-04 05:25:58 E5: success 0.0123 tokens/success -0.1268 trust 0.9728064814814815 gate pass",
+    "2026-11-04 05:25:58 E6: success -0.0432 tokens/success 0.1516 trust 0.9778185185185185 gate FAIL success -4.3 points (limit -2)",
+    "2026-11-04 05:25:58 E7: success -0.0062 tokens/success 0.0338 trust 0.9785268518518518 gate pass",
+    "2026-11-04 05:25:58 E8: success -0.1173 tokens/success 0.3664 trust 0.9517388888888889 gate FAIL success -11.7 points (limit -2)",
+    "2026-11-04 05:25:58 E9: success 0.1235 tokens/success -0.1251 trust 0.9725962962962963 gate pass",
+    "2026-11-04 05:25:59 E3 grid task subsets: {'ndc': 16, 'rxnorm': 17, 'hgnc': 16, 'countries': 3, 'clinvar': 5, 'omop_eunomia': 10}",
+    "2026-11-04 05:26:00 start p10-greedy-1-r1 fold A: 20 tasks, ['E2:level=light', 'E5:mode=plan']",
+    "2026-11-04 05:27:10 baseline: {'runs': 162, 'repeats': 3, 'success_rate': 0.8209876543209876, 'tokens_per_success': 57901.082706766916, 'median_tokens': 42481.0, 'p90_tokens': 98899, 'trust_mean': 0.9755203703703703, 'transient_excluded': 0}",
+    "2026-11-04 05:27:12 E1: success -0.0988 tokens/success -0.0405 trust 0.9808666666666667 gate FAIL success -9.9 points (limit -2)",
+    "2026-11-04 05:27:12 E2: success 0.0309 tokens/success -0.1402 trust 0.9345796296296296 gate pass",
+    "2026-11-04 05:27:12 E3: success 0.0123 tokens/success 0.1212 trust 0.9880555555555556 gate pass",
+    "2026-11-04 05:27:12 E4: success 0.0494 tokens/success -0.0603 trust 0.9600055555555556 gate pass",
+    "2026-11-04 05:27:12 E5: success 0.0123 tokens/success -0.1268 trust 0.9728064814814815 gate pass",
+    "2026-11-04 05:27:12 E6: success -0.0432 tokens/success 0.1516 trust 0.9778185185185185 gate FAIL success -4.3 points (limit -2)",
+    "2026-11-04 05:27:12 E7: success -0.0062 tokens/success 0.0338 trust 0.9785268518518518 gate pass",
+    "2026-11-04 05:27:12 E8: success -0.1173 tokens/success 0.3664 trust 0.9517388888888889 gate FAIL success -11.7 points (limit -2)",
+    "2026-11-04 05:27:12 E9: success 0.1235 tokens/success -0.1251 trust 0.9725962962962963 gate pass",
+    "2026-11-04 05:27:13 E3 grid task subsets: {'ndc': 16, 'rxnorm': 17, 'hgnc': 16, 'countries': 3, 'clinvar': 5, 'omop_eunomia': 10}",
+    "2026-11-04 05:27:14 start p10-greedy-1-r1 fold A: 20 tasks, ['E2:level=light', 'E5:mode=plan']",
+    "2026-11-04 05:27:14 start p10-greedy-1-r1 fold B: 15 tasks, ['E2:level=light', 'E5:mode=plan']",
+    "2026-11-04 05:59:44 finished p10-greedy-1-r1 fold B (exit 0); 0 tasks still missing",
+    "2026-11-04 06:07:44 finished p10-greedy-1-r1 fold A (exit 0); 0 tasks still missing",
+    "2026-11-04 06:07:44 greedy 1: + E5 -> rejected (tokens/success -20.6% vs current; gate: success -6.2 points (limit -2))",
+    "2026-11-04 06:07:44 start p10-greedy-2-r1: 54 tasks, ['E2:level=light', 'E9']",
+    "2026-11-04 20:17:28 baseline: {'runs': 162, 'repeats': 3, 'success_rate': 0.8209876543209876, 'tokens_per_success': 57901.082706766916, 'median_tokens': 42481.0, 'p90_tokens': 98899, 'trust_mean': 0.9755203703703703, 'transient_excluded': 0}",
+    "2026-11-04 20:17:31 E1: success -0.0988 tokens/success -0.0405 trust 0.9808666666666667 gate FAIL success -9.9 points (limit -2)",
+    "2026-11-04 20:17:31 E2: success 0.0309 tokens/success -0.1402 trust 0.9345796296296296 gate pass",
+    "2026-11-04 20:17:31 E3: success 0.0123 tokens/success 0.1212 trust 0.9880555555555556 gate pass",
+    "2026-11-04 20:17:31 E4: success 0.0494 tokens/success -0.0603 trust 0.9600055555555556 gate pass",
+    "2026-11-04 20:17:31 E5: success 0.0123 tokens/success -0.1268 trust 0.9728064814814815 gate pass",
+    "2026-11-04 20:17:31 E6: success -0.0432 tokens/success 0.1516 trust 0.9778185185185185 gate FAIL success -4.3 points (limit -2)",
+    "2026-11-04 20:17:31 E7: success -0.0062 tokens/success 0.0338 trust 0.9785268518518518 gate pass",
+    "2026-11-04 20:17:31 E8: success -0.1173 tokens/success 0.3664 trust 0.9517388888888889 gate FAIL success -11.7 points (limit -2)",
+    "2026-11-04 20:17:31 E9: success 0.1235 tokens/success -0.1251 trust 0.9725962962962963 gate pass",
+    "2026-11-04 20:17:33 E3 grid task subsets: {'ndc': 16, 'rxnorm': 17, 'hgnc': 16, 'countries': 3, 'clinvar': 5, 'omop_eunomia': 10}",
+    "2026-11-04 20:17:34 greedy 1: + E5 -> rejected (tokens/success -20.6% vs current; gate: success -6.2 points (limit -2))",
+    "2026-11-04 20:17:34 start p10-greedy-2-r1: 7 tasks, ['E2:level=light', 'E9']",
+    "2026-11-04 20:28:35 finished p10-greedy-2-r1 (exit 0); 0 tasks still missing",
+    "2026-11-04 20:28:35 greedy 2: + E9 -> rejected (tokens/success +0.1% vs current)",
+    "2026-11-04 20:28:35 start p10-greedy-3-r1 fold A: 27 tasks, ['E2:level=light', 'E4:mode=repair']",
+    "2026-11-04 20:28:35 start p10-greedy-3-r1 fold B: 27 tasks, ['E2:level=light', 'E4:mode=repair']",
+    "2026-11-04 20:59:05 finished p10-greedy-3-r1 fold B (exit 0); 0 tasks still missing",
+    "2026-11-04 21:04:35 finished p10-greedy-3-r1 fold A (exit 0); 0 tasks still missing",
+    "2026-11-04 21:04:35 greedy 3: + E4 -> rejected (tokens/success -6.2% vs current)",
+    "2026-11-04 21:04:35 start p10-greedy-4-r1: 54 tasks, ['E2:level=light', 'E7']",
+    "2026-11-04 22:04:36 finished p10-greedy-4-r1 (exit 0); 0 tasks still missing",
+    "2026-11-04 22:04:36 greedy 4: + E7 -> rejected (tokens/success -3.6% vs current)",
+    "2026-11-04 22:04:36 start p10-greedy-5-r1: 54 tasks, ['E2:level=light', 'E3:modes=hints']",
+    "2026-11-04 23:41:36 finished p10-greedy-5-r1 (exit 0); 0 tasks still missing",
+    "2026-11-04 23:41:37 greedy 5: + E3 -> rejected (tokens/success -29.9% vs current)",
+    "2026-11-04 23:41:37 start p10-E2-final-r2: 54 tasks, ['E2:level=light']",
+    "2026-11-04 23:41:37 start p10-E2-final-r3: 54 tasks, ['E2:level=light']",
+    "2026-11-05 03:40:25 baseline: {'runs': 162, 'repeats': 3, 'success_rate': 0.8209876543209876, 'tokens_per_success': 57901.082706766916, 'median_tokens': 42481.0, 'p90_tokens': 98899, 'trust_mean': 0.9755203703703703, 'transient_excluded': 0}",
+    "2026-11-05 03:40:27 E1: success -0.0988 tokens/success -0.0405 trust 0.9808666666666667 gate FAIL success -9.9 points (limit -2)",
+    "2026-11-05 03:40:27 E2: success 0.0309 tokens/success -0.1402 trust 0.9345796296296296 gate pass",
+    "2026-11-05 03:40:27 E3: success 0.0123 tokens/success 0.1212 trust 0.9880555555555556 gate pass",
+    "2026-11-05 03:40:27 E4: success 0.0494 tokens/success -0.0603 trust 0.9600055555555556 gate pass",
+    "2026-11-05 03:40:27 E5: success 0.0123 tokens/success -0.1268 trust 0.9728064814814815 gate pass",
+    "2026-11-05 03:40:27 E6: success -0.0432 tokens/success 0.1516 trust 0.9778185185185185 gate FAIL success -4.3 points (limit -2)",
+    "2026-11-05 03:40:27 E7: success -0.0062 tokens/success 0.0338 trust 0.9785268518518518 gate pass",
+    "2026-11-05 03:40:27 E8: success -0.1173 tokens/success 0.3664 trust 0.9517388888888889 gate FAIL success -11.7 points (limit -2)",
+    "2026-11-05 03:40:27 E9: success 0.1235 tokens/success -0.1251 trust 0.9725962962962963 gate pass",
+    "2026-11-05 03:40:28 E3 grid task subsets: {'ndc': 16, 'rxnorm': 17, 'hgnc': 16, 'countries': 3, 'clinvar': 5, 'omop_eunomia': 10}",
+    "2026-11-05 03:40:29 greedy 1: + E5 -> rejected (tokens/success -20.6% vs current; gate: success -6.2 points (limit -2))",
+    "2026-11-05 03:40:29 greedy 2: + E9 -> rejected (tokens/success +0.1% vs current)",
+    "2026-11-05 03:40:29 greedy 3: + E4 -> rejected (tokens/success -6.2% vs current)",
+    "2026-11-05 03:40:29 greedy 4: + E7 -> rejected (tokens/success -3.6% vs current)",
+    "2026-11-05 03:40:29 greedy 5: + E3 -> rejected (tokens/success -29.9% vs current)",
+    "2026-11-05 03:40:29 start p10-E2-final-r2: 49 tasks, ['E2:level=light']",
+    "2026-11-05 03:40:29 start p10-E2-final-r3: 50 tasks, ['E2:level=light']",
+    "2026-11-05 05:44:10 finished p10-E2-final-r2 (exit 0); 0 tasks still missing",
+    "2026-11-05 05:44:10 finished p10-E2-final-r3 (exit 0); 0 tasks still missing",
+    "2026-11-05 05:44:10 chosen ['E2']: {'tasks': 54, 'delta_success': -0.0123, 'delta_success_ci': [-0.0679, 0.0432], 'delta_tokens_per_success': 0.0026, 'delta_tokens_per_success_ci': [-0.1532, 0.205], 'mcnemar': {'lost': 10, 'gained': 8, 'p': 0.8145}}",
+    "2026-11-05 05:44:23 decision written: decisions/p10@v1 (proposed; approve with `toolhelper curate decisions/p10`)",
+    "2026-11-05 05:44:23 start p10-live-baseline: 27 tasks, no strategies",
+    "2026-11-05 05:44:23 start p10-live-chosen: 27 tasks, ['E2:level=light']",
+    "2026-11-05 07:13:24 finished p10-live-baseline (exit 0); 0 tasks still missing",
+    "2026-11-05 07:25:54 finished p10-live-chosen (exit 0); 0 tasks still missing",
+    "2026-11-05 07:25:54 live confirmation on fold A: {'p10-live-baseline': {'runs': 27, 'repeats': 1, 'success_rate': 0.8148148148148148, 'tokens_per_success': 63663.36363636364, 'median_tokens': 31901, 'p90_tokens': 134717, 'trust_mean': 0.9517222222222222, 'transient_excluded': 0}, 'p10-live-chosen': {'runs': 27, 'repeats': 1, 'success_rate': 0.7407407407407407, 'tokens_per_success': 64464.55, 'median_tokens': 31041, 'p90_tokens': 84426, 'trust_mean': 0.9073925925925926, 'transient_excluded': 0}}; replay on the same tasks: {'baseline': {'runs': 81, 'repeats': 3, 'success_rate': 0.8148148148148148, 'tokens_per_success': 55396.28787878788, 'median_tokens': 36607, 'p90_tokens': 86061, 'trust_mean': 0.9722839506172839, 'transient_excluded': 0}, 'chosen': {'runs': 81, 'repeats': 3, 'success_rate': 0.8024691358024691, 'tokens_per_success': 52494.584615384614, 'median_tokens': 29131, 'p90_tokens': 97549, 'trust_mean': 0.9254740740740741, 'transient_excluded': 0}}",
+    "2026-11-05 07:25:54 experiment finished"
+  ],
+  "repeats": {
+    "E5": 2,
+    "E6": 2,
+    "E7": 2
+  },
+  "singles": {
+    "E1": {
+      "groups": [
+        "p10-E1-r1"
+      ],
+      "summary": {
+        "runs": 54,
+        "repeats": 1,
+        "success_rate": 0.7222222222222222,
+        "tokens_per_success": 55556.846153846156,
+        "median_tokens": 28464.0,
+        "p90_tokens": 71791,
+        "trust_mean": 0.9808666666666667,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 15,
+          "repeats": 1,
+          "success_rate": 0.5333333333333333,
+          "tokens_per_success": 86660.75,
+          "median_tokens": 38613,
+          "p90_tokens": 71791,
+          "trust_mean": 0.96344,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 10,
+          "repeats": 1,
+          "success_rate": 0.8,
+          "tokens_per_success": 77472.75,
+          "median_tokens": 53630.5,
+          "p90_tokens": 66701,
+          "trust_mean": 0.98116,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 16,
+          "repeats": 1,
+          "success_rate": 0.625,
+          "tokens_per_success": 75548.5,
+          "median_tokens": 30535.0,
+          "p90_tokens": 120127,
+          "trust_mean": 0.98515,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 13,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 7551.076923076923,
+          "median_tokens": 6653,
+          "p90_tokens": 14337,
+          "trust_mean": 0.995476923076923,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 54,
+        "delta_success": -0.0988,
+        "delta_success_ci": [
+          -0.1914,
+          -0.0185
+        ],
+        "delta_tokens_per_success": -0.0405,
+        "delta_tokens_per_success_ci": [
+          -0.2616,
+          0.2562
+        ],
+        "mcnemar": {
+          "lost": 6,
+          "gained": 1,
+          "p": 0.125
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "success -9.9 points (limit -2)"
+        ],
+        "close_call": false
+      }
+    },
+    "E2": {
+      "groups": [
+        "p10-E2-r1"
+      ],
+      "summary": {
+        "runs": 54,
+        "repeats": 1,
+        "success_rate": 0.8518518518518519,
+        "tokens_per_success": 49783.82608695652,
+        "median_tokens": 31925.5,
+        "p90_tokens": 91349,
+        "trust_mean": 0.9345796296296296,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 15,
+          "repeats": 1,
+          "success_rate": 0.9333333333333333,
+          "tokens_per_success": 45484.78571428572,
+          "median_tokens": 40697,
+          "p90_tokens": 65942,
+          "trust_mean": 0.8768866666666667,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 10,
+          "repeats": 1,
+          "success_rate": 0.9,
+          "tokens_per_success": 78304.22222222222,
+          "median_tokens": 55509.5,
+          "p90_tokens": 161404,
+          "trust_mean": 0.93512,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 16,
+          "repeats": 1,
+          "success_rate": 0.6875,
+          "tokens_per_success": 72595.81818181818,
+          "median_tokens": 37727.5,
+          "p90_tokens": 121991,
+          "trust_mean": 0.962375,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 13,
+          "repeats": 1,
+          "success_rate": 0.9230769230769231,
+          "tokens_per_success": 12498.083333333334,
+          "median_tokens": 10195,
+          "p90_tokens": 16810,
+          "trust_mean": 0.9665230769230769,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 54,
+        "delta_success": 0.0309,
+        "delta_success_ci": [
+          -0.0432,
+          0.0988
+        ],
+        "delta_tokens_per_success": -0.1402,
+        "delta_tokens_per_success_ci": [
+          -0.2911,
+          0.0448
+        ],
+        "mcnemar": {
+          "lost": 2,
+          "gained": 4,
+          "p": 0.6875
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": false
+      }
+    },
+    "E3": {
+      "groups": [
+        "p10-E3-r1"
+      ],
+      "summary": {
+        "runs": 54,
+        "repeats": 1,
+        "success_rate": 0.8333333333333334,
+        "tokens_per_success": 64920.02222222222,
+        "median_tokens": 42849.0,
+        "p90_tokens": 127204,
+        "trust_mean": 0.9880555555555556,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 15,
+          "repeats": 1,
+          "success_rate": 0.8666666666666667,
+          "tokens_per_success": 68983.69230769231,
+          "median_tokens": 50373,
+          "p90_tokens": 118908,
+          "trust_mean": 0.9823466666666667,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 10,
+          "repeats": 1,
+          "success_rate": 0.7,
+          "tokens_per_success": 114213.28571428571,
+          "median_tokens": 51057.0,
+          "p90_tokens": 158098,
+          "trust_mean": 0.99148,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 16,
+          "repeats": 1,
+          "success_rate": 0.75,
+          "tokens_per_success": 85151.91666666667,
+          "median_tokens": 44482.5,
+          "p90_tokens": 127204,
+          "trust_mean": 0.99089375,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 13,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 15638.23076923077,
+          "median_tokens": 12020,
+          "p90_tokens": 22214,
+          "trust_mean": 0.9885153846153846,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 54,
+        "delta_success": 0.0123,
+        "delta_success_ci": [
+          -0.0556,
+          0.0802
+        ],
+        "delta_tokens_per_success": 0.1212,
+        "delta_tokens_per_success_ci": [
+          -0.1815,
+          0.4478
+        ],
+        "mcnemar": {
+          "lost": 1,
+          "gained": 2,
+          "p": 1.0
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": false
+      }
+    },
+    "E4": {
+      "groups": [
+        "p10-E4-r1"
+      ],
+      "summary": {
+        "runs": 54,
+        "repeats": 1,
+        "success_rate": 0.8703703703703703,
+        "tokens_per_success": 54411.48936170213,
+        "median_tokens": 32754.5,
+        "p90_tokens": 82331,
+        "trust_mean": 0.9600055555555556,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 15,
+          "repeats": 1,
+          "success_rate": 0.9333333333333333,
+          "tokens_per_success": 54308.57142857143,
+          "median_tokens": 45148,
+          "p90_tokens": 77014,
+          "trust_mean": 0.9245666666666666,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 10,
+          "repeats": 1,
+          "success_rate": 0.9,
+          "tokens_per_success": 57614.444444444445,
+          "median_tokens": 52408.0,
+          "p90_tokens": 82331,
+          "trust_mean": 0.97395,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 16,
+          "repeats": 1,
+          "success_rate": 0.6875,
+          "tokens_per_success": 99748.63636363637,
+          "median_tokens": 44807.0,
+          "p90_tokens": 226776,
+          "trust_mean": 0.97199375,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 13,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 13942.692307692309,
+          "median_tokens": 12079,
+          "p90_tokens": 21538,
+          "trust_mean": 0.9754153846153846,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 54,
+        "delta_success": 0.0494,
+        "delta_success_ci": [
+          0.0185,
+          0.0864
+        ],
+        "delta_tokens_per_success": -0.0603,
+        "delta_tokens_per_success_ci": [
+          -0.2479,
+          0.1899
+        ],
+        "mcnemar": {
+          "lost": 0,
+          "gained": 3,
+          "p": 0.25
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": false
+      }
+    },
+    "E5": {
+      "groups": [
+        "p10-E5-r1",
+        "p10-E5-r2"
+      ],
+      "summary": {
+        "runs": 108,
+        "repeats": 2,
+        "success_rate": 0.8333333333333334,
+        "tokens_per_success": 50556.97777777778,
+        "median_tokens": 32973.0,
+        "p90_tokens": 72883,
+        "trust_mean": 0.9728064814814815,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 30,
+          "repeats": 2,
+          "success_rate": 0.8,
+          "tokens_per_success": 61285.708333333336,
+          "median_tokens": 45843.0,
+          "p90_tokens": 72883,
+          "trust_mean": 0.9533433333333333,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 20,
+          "repeats": 2,
+          "success_rate": 0.9,
+          "tokens_per_success": 66382.77777777778,
+          "median_tokens": 48743.0,
+          "p90_tokens": 103600,
+          "trust_mean": 0.982475,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 32,
+          "repeats": 2,
+          "success_rate": 0.71875,
+          "tokens_per_success": 66358.13043478261,
+          "median_tokens": 42252.5,
+          "p90_tokens": 80443,
+          "trust_mean": 0.98119375,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 26,
+          "repeats": 2,
+          "success_rate": 0.9615384615384616,
+          "tokens_per_success": 14325.76,
+          "median_tokens": 11779.5,
+          "p90_tokens": 20515,
+          "trust_mean": 0.9775038461538461,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 54,
+        "delta_success": 0.0123,
+        "delta_success_ci": [
+          -0.0432,
+          0.0617
+        ],
+        "delta_tokens_per_success": -0.1268,
+        "delta_tokens_per_success_ci": [
+          -0.2364,
+          -0.0039
+        ],
+        "mcnemar": {
+          "lost": 5,
+          "gained": 6,
+          "p": 1.0
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": false
+      }
+    },
+    "E6": {
+      "groups": [
+        "p10-E6-r1",
+        "p10-E6-r2"
+      ],
+      "summary": {
+        "runs": 108,
+        "repeats": 2,
+        "success_rate": 0.7777777777777778,
+        "tokens_per_success": 66680.09523809524,
+        "median_tokens": 45082.0,
+        "p90_tokens": 106466,
+        "trust_mean": 0.9778185185185185,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 30,
+          "repeats": 2,
+          "success_rate": 0.7666666666666667,
+          "tokens_per_success": 74929.39130434782,
+          "median_tokens": 47731.0,
+          "p90_tokens": 101070,
+          "trust_mean": 0.9690633333333334,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 20,
+          "repeats": 2,
+          "success_rate": 0.75,
+          "tokens_per_success": 104833.53333333334,
+          "median_tokens": 78272.5,
+          "p90_tokens": 117620,
+          "trust_mean": 0.97382,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 32,
+          "repeats": 2,
+          "success_rate": 0.625,
+          "tokens_per_success": 94013.65,
+          "median_tokens": 50430.0,
+          "p90_tokens": 92370,
+          "trust_mean": 0.985215625,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 26,
+          "repeats": 2,
+          "success_rate": 1.0,
+          "tokens_per_success": 16345.23076923077,
+          "median_tokens": 11935.0,
+          "p90_tokens": 21468,
+          "trust_mean": 0.9818923076923077,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 54,
+        "delta_success": -0.0432,
+        "delta_success_ci": [
+          -0.1111,
+          0.0185
+        ],
+        "delta_tokens_per_success": 0.1516,
+        "delta_tokens_per_success_ci": [
+          -0.0135,
+          0.3589
+        ],
+        "mcnemar": {
+          "lost": 8,
+          "gained": 3,
+          "p": 0.2266
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "success -4.3 points (limit -2)"
+        ],
+        "close_call": false
+      }
+    },
+    "E7": {
+      "groups": [
+        "p10-E7-r1",
+        "p10-E7-r2"
+      ],
+      "summary": {
+        "runs": 108,
+        "repeats": 2,
+        "success_rate": 0.8148148148148148,
+        "tokens_per_success": 59856.40909090909,
+        "median_tokens": 38350.5,
+        "p90_tokens": 102373,
+        "trust_mean": 0.9785268518518518,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 30,
+          "repeats": 2,
+          "success_rate": 0.8333333333333334,
+          "tokens_per_success": 57151.84,
+          "median_tokens": 44934.0,
+          "p90_tokens": 66145,
+          "trust_mean": 0.96057,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 20,
+          "repeats": 2,
+          "success_rate": 0.8,
+          "tokens_per_success": 100235.3125,
+          "median_tokens": 68815.5,
+          "p90_tokens": 156361,
+          "trust_mean": 0.98309,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 32,
+          "repeats": 2,
+          "success_rate": 0.65625,
+          "tokens_per_success": 89222.19047619047,
+          "median_tokens": 47134.0,
+          "p90_tokens": 104735,
+          "trust_mean": 0.984371875,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 26,
+          "repeats": 2,
+          "success_rate": 1.0,
+          "tokens_per_success": 13889.884615384615,
+          "median_tokens": 11636.5,
+          "p90_tokens": 21553,
+          "trust_mean": 0.9885423076923077,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 54,
+        "delta_success": -0.0062,
+        "delta_success_ci": [
+          -0.0463,
+          0.0278
+        ],
+        "delta_tokens_per_success": 0.0338,
+        "delta_tokens_per_success_ci": [
+          -0.0743,
+          0.1416
+        ],
+        "mcnemar": {
+          "lost": 5,
+          "gained": 4,
+          "p": 1.0
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": true
+      }
+    },
+    "E8": {
+      "groups": [
+        "p10-E8-r1"
+      ],
+      "summary": {
+        "runs": 54,
+        "repeats": 1,
+        "success_rate": 0.7037037037037037,
+        "tokens_per_success": 79117.97368421052,
+        "median_tokens": 45180.0,
+        "p90_tokens": 124545,
+        "trust_mean": 0.9517388888888889,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 15,
+          "repeats": 1,
+          "success_rate": 0.6666666666666666,
+          "tokens_per_success": 88085.3,
+          "median_tokens": 58333,
+          "p90_tokens": 99961,
+          "trust_mean": 0.9315133333333333,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 10,
+          "repeats": 1,
+          "success_rate": 0.8,
+          "tokens_per_success": 81747.75,
+          "median_tokens": 54720.5,
+          "p90_tokens": 119483,
+          "trust_mean": 0.97141,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 16,
+          "repeats": 1,
+          "success_rate": 0.4375,
+          "tokens_per_success": 184034.14285714287,
+          "median_tokens": 63819.0,
+          "p90_tokens": 160976,
+          "trust_mean": 0.930775,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 13,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 14108.384615384615,
+          "median_tokens": 11743,
+          "p90_tokens": 19619,
+          "trust_mean": 0.9857461538461538,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 54,
+        "delta_success": -0.1173,
+        "delta_success_ci": [
+          -0.2222,
+          -0.0247
+        ],
+        "delta_tokens_per_success": 0.3664,
+        "delta_tokens_per_success_ci": [
+          0.0363,
+          0.7736
+        ],
+        "mcnemar": {
+          "lost": 8,
+          "gained": 2,
+          "p": 0.1094
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "success -11.7 points (limit -2)"
+        ],
+        "close_call": false
+      }
+    },
+    "E9": {
+      "groups": [
+        "p10-E9-r1"
+      ],
+      "summary": {
+        "runs": 54,
+        "repeats": 1,
+        "success_rate": 0.9444444444444444,
+        "tokens_per_success": 50660.43137254902,
+        "median_tokens": 37143.0,
+        "p90_tokens": 99250,
+        "trust_mean": 0.9725962962962963,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 15,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 56449.333333333336,
+          "median_tokens": 55017,
+          "p90_tokens": 105826,
+          "trust_mean": 0.9477933333333334,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 10,
+          "repeats": 1,
+          "success_rate": 0.9,
+          "tokens_per_success": 55056.0,
+          "median_tokens": 47100.0,
+          "p90_tokens": 80473,
+          "trust_mean": 0.97537,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 16,
+          "repeats": 1,
+          "success_rate": 0.9375,
+          "tokens_per_success": 70317.93333333333,
+          "median_tokens": 48602.5,
+          "p90_tokens": 149768,
+          "trust_mean": 0.98650625,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 13,
+          "repeats": 1,
+          "success_rate": 0.9230769230769231,
+          "tokens_per_success": 15555.75,
+          "median_tokens": 11692,
+          "p90_tokens": 21609,
+          "trust_mean": 0.9819615384615384,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 54,
+        "delta_success": 0.1235,
+        "delta_success_ci": [
+          0.0247,
+          0.2346
+        ],
+        "delta_tokens_per_success": -0.1251,
+        "delta_tokens_per_success_ci": [
+          -0.2691,
+          0.0422
+        ],
+        "mcnemar": {
+          "lost": 2,
+          "gained": 9,
+          "p": 0.0654
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": false
+      }
+    }
+  },
+  "e3_grid": {
+    "p10-E3-ndc-hints-r1": {
+      "dataset": "ndc",
+      "mode": "hints",
+      "groups": [
+        "p10-E3-ndc-hints-r1"
+      ],
+      "summary": {
+        "runs": 16,
+        "repeats": 1,
+        "success_rate": 0.875,
+        "tokens_per_success": 77123.35714285714,
+        "median_tokens": 63150.5,
+        "p90_tokens": 142918,
+        "trust_mean": 0.99434375,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 3,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 55270.0,
+          "median_tokens": 40119,
+          "p90_tokens": 100412,
+          "trust_mean": 0.9788,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 4,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 77457.75,
+          "median_tokens": 70271.0,
+          "p90_tokens": 142918,
+          "trust_mean": 0.993275,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 7,
+          "repeats": 1,
+          "success_rate": 0.7142857142857143,
+          "tokens_per_success": 104565.4,
+          "median_tokens": 70615,
+          "p90_tokens": 99503,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 2,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 40629.5,
+          "median_tokens": 40629.5,
+          "p90_tokens": 41117,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 16,
+        "delta_success": 0.0833,
+        "delta_success_ci": [
+          0.0208,
+          0.1667
+        ],
+        "delta_tokens_per_success": -0.0179,
+        "delta_tokens_per_success_ci": [
+          -0.2416,
+          0.2976
+        ],
+        "mcnemar": {
+          "lost": 0,
+          "gained": 2,
+          "p": 0.5
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": false
+      }
+    },
+    "p10-E3-ndc-tool-r1": {
+      "dataset": "ndc",
+      "mode": "tool",
+      "groups": [
+        "p10-E3-ndc-tool-r1"
+      ],
+      "summary": {
+        "runs": 16,
+        "repeats": 1,
+        "success_rate": 0.8125,
+        "tokens_per_success": 80599.15384615384,
+        "median_tokens": 40213.5,
+        "p90_tokens": 189882,
+        "trust_mean": 0.98176875,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 3,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 32009.0,
+          "median_tokens": 30504,
+          "p90_tokens": 44328,
+          "trust_mean": 0.9702333333333334,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 4,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 103922.75,
+          "median_tokens": 69017.5,
+          "p90_tokens": 242787,
+          "trust_mean": 0.97075,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 7,
+          "repeats": 1,
+          "success_rate": 0.5714285714285714,
+          "tokens_per_success": 126167.25,
+          "median_tokens": 74266,
+          "p90_tokens": 77074,
+          "trust_mean": 0.9923285714285714,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 2,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 15701.0,
+          "median_tokens": 15701.0,
+          "p90_tokens": 19413,
+          "trust_mean": 0.9841500000000001,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 16,
+        "delta_success": 0.0208,
+        "delta_success_ci": [
+          -0.1042,
+          0.125
+        ],
+        "delta_tokens_per_success": 0.0264,
+        "delta_tokens_per_success_ci": [
+          -0.2224,
+          0.3223
+        ],
+        "mcnemar": {
+          "lost": 0,
+          "gained": 1,
+          "p": 1.0
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": false
+      }
+    },
+    "p10-E3-ndc-rewrite-r1": {
+      "dataset": "ndc",
+      "mode": "rewrite",
+      "groups": [
+        "p10-E3-ndc-rewrite-r1"
+      ],
+      "summary": {
+        "runs": 16,
+        "repeats": 1,
+        "success_rate": 0.9375,
+        "tokens_per_success": 57037.53333333333,
+        "median_tokens": 43691.0,
+        "p90_tokens": 126890,
+        "trust_mean": 0.98359375,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 3,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 37010.333333333336,
+          "median_tokens": 37461,
+          "p90_tokens": 43458,
+          "trust_mean": 0.9725333333333334,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 4,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 61621.5,
+          "median_tokens": 48810.0,
+          "p90_tokens": 126890,
+          "trust_mean": 0.975575,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 7,
+          "repeats": 1,
+          "success_rate": 0.8571428571428571,
+          "tokens_per_success": 79176.16666666667,
+          "median_tokens": 64824,
+          "p90_tokens": 95252,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 2,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 11494.5,
+          "median_tokens": 11494.5,
+          "p90_tokens": 11591,
+          "trust_mean": 0.9588,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 16,
+        "delta_success": 0.1458,
+        "delta_success_ci": [
+          0.0417,
+          0.2917
+        ],
+        "delta_tokens_per_success": -0.2737,
+        "delta_tokens_per_success_ci": [
+          -0.4364,
+          -0.1096
+        ],
+        "mcnemar": {
+          "lost": 0,
+          "gained": 3,
+          "p": 0.25
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": false
+      }
+    },
+    "p10-E3-rxnorm-hints-r1": {
+      "dataset": "rxnorm",
+      "mode": "hints",
+      "groups": [
+        "p10-E3-rxnorm-hints-r1"
+      ],
+      "summary": {
+        "runs": 17,
+        "repeats": 1,
+        "success_rate": 0.8235294117647058,
+        "tokens_per_success": 94692.07142857143,
+        "median_tokens": 51152,
+        "p90_tokens": 157817,
+        "trust_mean": 0.989,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 3,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 51268.666666666664,
+          "median_tokens": 37683,
+          "p90_tokens": 80513,
+          "trust_mean": 0.965,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 4,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 73886.0,
+          "median_tokens": 76260.0,
+          "p90_tokens": 91872,
+          "trust_mean": 0.982225,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 7,
+          "repeats": 1,
+          "success_rate": 0.5714285714285714,
+          "tokens_per_success": 205785.5,
+          "median_tokens": 85276,
+          "p90_tokens": 158399,
+          "trust_mean": 0.9984428571428572,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 3,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 17732.333333333332,
+          "median_tokens": 19954,
+          "p90_tokens": 21373,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 17,
+        "delta_success": 0.0196,
+        "delta_success_ci": [
+          -0.1373,
+          0.1373
+        ],
+        "delta_tokens_per_success": 0.275,
+        "delta_tokens_per_success_ci": [
+          -0.2703,
+          1.4839
+        ],
+        "mcnemar": {
+          "lost": 1,
+          "gained": 2,
+          "p": 1.0
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": false
+      }
+    },
+    "p10-E3-rxnorm-tool-r1": {
+      "dataset": "rxnorm",
+      "mode": "tool",
+      "groups": [
+        "p10-E3-rxnorm-tool-r1"
+      ],
+      "summary": {
+        "runs": 17,
+        "repeats": 1,
+        "success_rate": 0.9411764705882353,
+        "tokens_per_success": 56962.5625,
+        "median_tokens": 38104,
+        "p90_tokens": 76694,
+        "trust_mean": 0.9758235294117648,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 3,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 39046.666666666664,
+          "median_tokens": 38104,
+          "p90_tokens": 50112,
+          "trust_mean": 0.9495666666666667,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 4,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 48229.25,
+          "median_tokens": 47844.0,
+          "p90_tokens": 69107,
+          "trust_mean": 0.9814,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 7,
+          "repeats": 1,
+          "success_rate": 0.8571428571428571,
+          "tokens_per_success": 92983.66666666667,
+          "median_tokens": 68323,
+          "p90_tokens": 79076,
+          "trust_mean": 0.9882285714285715,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 3,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 14480.666666666666,
+          "median_tokens": 12009,
+          "p90_tokens": 19757,
+          "trust_mean": 0.9657,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 17,
+        "delta_success": 0.1373,
+        "delta_success_ci": [
+          0.0392,
+          0.2745
+        ],
+        "delta_tokens_per_success": -0.233,
+        "delta_tokens_per_success_ci": [
+          -0.5701,
+          0.318
+        ],
+        "mcnemar": {
+          "lost": 0,
+          "gained": 3,
+          "p": 0.25
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": false
+      }
+    },
+    "p10-E3-rxnorm-rewrite-r1": {
+      "dataset": "rxnorm",
+      "mode": "rewrite",
+      "groups": [
+        "p10-E3-rxnorm-rewrite-r1"
+      ],
+      "summary": {
+        "runs": 17,
+        "repeats": 1,
+        "success_rate": 0.7647058823529411,
+        "tokens_per_success": 80182.38461538461,
+        "median_tokens": 56234,
+        "p90_tokens": 81782,
+        "trust_mean": 0.9886941176470588,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 3,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 35700.0,
+          "median_tokens": 30996,
+          "p90_tokens": 59017,
+          "trust_mean": 0.9588,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 4,
+          "repeats": 1,
+          "success_rate": 0.5,
+          "tokens_per_success": 202025.0,
+          "median_tokens": 73759.5,
+          "p90_tokens": 201034,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 7,
+          "repeats": 1,
+          "success_rate": 0.7142857142857143,
+          "tokens_per_success": 97110.2,
+          "median_tokens": 65152,
+          "p90_tokens": 76845,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 3,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 15223.333333333334,
+          "median_tokens": 11640,
+          "p90_tokens": 22608,
+          "trust_mean": 0.9771333333333333,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 17,
+        "delta_success": -0.0392,
+        "delta_success_ci": [
+          -0.1765,
+          0.0588
+        ],
+        "delta_tokens_per_success": 0.0796,
+        "delta_tokens_per_success_ci": [
+          -0.2367,
+          0.6699
+        ],
+        "mcnemar": {
+          "lost": 1,
+          "gained": 1,
+          "p": 1.0
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "success -3.9 points (limit -2)"
+        ],
+        "close_call": true
+      }
+    },
+    "p10-E3-hgnc-hints-r1": {
+      "dataset": "hgnc",
+      "mode": "hints",
+      "groups": [
+        "p10-E3-hgnc-hints-r1"
+      ],
+      "summary": {
+        "runs": 16,
+        "repeats": 1,
+        "success_rate": 0.8125,
+        "tokens_per_success": 82220.92307692308,
+        "median_tokens": 50883.5,
+        "p90_tokens": 130101,
+        "trust_mean": 0.977175,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 11,
+          "repeats": 1,
+          "success_rate": 0.7272727272727273,
+          "tokens_per_success": 101159.625,
+          "median_tokens": 52119,
+          "p90_tokens": 130101,
+          "trust_mean": 0.9741272727272727,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 3,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 79342.0,
+          "median_tokens": 73948,
+          "p90_tokens": 122567,
+          "trust_mean": 0.9731333333333333,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 1,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 11082.0,
+          "median_tokens": 11082,
+          "p90_tokens": 11082,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 1,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 10487.0,
+          "median_tokens": 10487,
+          "p90_tokens": 10487,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 16,
+        "delta_success": -0.0625,
+        "delta_success_ci": [
+          -0.2292,
+          0.0417
+        ],
+        "delta_tokens_per_success": 0.2927,
+        "delta_tokens_per_success_ci": [
+          -0.1127,
+          0.9604
+        ],
+        "mcnemar": {
+          "lost": 2,
+          "gained": 1,
+          "p": 1.0
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "success -6.2 points (limit -2)"
+        ],
+        "close_call": false
+      }
+    },
+    "p10-E3-hgnc-tool-r1": {
+      "dataset": "hgnc",
+      "mode": "tool",
+      "groups": [
+        "p10-E3-hgnc-tool-r1"
+      ],
+      "summary": {
+        "runs": 16,
+        "repeats": 1,
+        "success_rate": 0.75,
+        "tokens_per_success": 79807.16666666667,
+        "median_tokens": 51757.5,
+        "p90_tokens": 118927,
+        "trust_mean": 0.972075,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 11,
+          "repeats": 1,
+          "success_rate": 0.8181818181818182,
+          "tokens_per_success": 72676.66666666667,
+          "median_tokens": 51235,
+          "p90_tokens": 105596,
+          "trust_mean": 0.9693818181818182,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 3,
+          "repeats": 1,
+          "success_rate": 0.6666666666666666,
+          "tokens_per_success": 121494.5,
+          "median_tokens": 71782,
+          "p90_tokens": 118927,
+          "trust_mean": 0.9633333333333334,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 1,
+          "repeats": 1,
+          "success_rate": 0.0,
+          "tokens_per_success": null,
+          "median_tokens": 49869,
+          "p90_tokens": 49869,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 1,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 10738.0,
+          "median_tokens": 10738,
+          "p90_tokens": 10738,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 16,
+        "delta_success": -0.125,
+        "delta_success_ci": [
+          -0.3542,
+          0.0833
+        ],
+        "delta_tokens_per_success": 0.2548,
+        "delta_tokens_per_success_ci": [
+          -0.0832,
+          0.9263
+        ],
+        "mcnemar": {
+          "lost": 3,
+          "gained": 1,
+          "p": 0.625
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "success -12.5 points (limit -2)"
+        ],
+        "close_call": false
+      }
+    },
+    "p10-E3-hgnc-rewrite-r1": {
+      "dataset": "hgnc",
+      "mode": "rewrite",
+      "groups": [
+        "p10-E3-hgnc-rewrite-r1"
+      ],
+      "summary": {
+        "runs": 16,
+        "repeats": 1,
+        "success_rate": 0.875,
+        "tokens_per_success": 64363.642857142855,
+        "median_tokens": 46811.0,
+        "p90_tokens": 138902,
+        "trust_mean": 0.95819375,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 11,
+          "repeats": 1,
+          "success_rate": 0.8181818181818182,
+          "tokens_per_success": 71244.77777777778,
+          "median_tokens": 48250,
+          "p90_tokens": 83381,
+          "trust_mean": 0.9539818181818182,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 3,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 79464.66666666667,
+          "median_tokens": 61174,
+          "p90_tokens": 155757,
+          "trust_mean": 0.9732333333333333,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 1,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 11010.0,
+          "median_tokens": 11010,
+          "p90_tokens": 11010,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 1,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 10484.0,
+          "median_tokens": 10484,
+          "p90_tokens": 10484,
+          "trust_mean": 0.9176,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 16,
+        "delta_success": 0.0,
+        "delta_success_ci": [
+          -0.0625,
+          0.0625
+        ],
+        "delta_tokens_per_success": 0.012,
+        "delta_tokens_per_success_ci": [
+          -0.2294,
+          0.2877
+        ],
+        "mcnemar": {
+          "lost": 1,
+          "gained": 1,
+          "p": 1.0
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": true
+      }
+    },
+    "p10-E3-countries-hints-r1": {
+      "dataset": "countries",
+      "mode": "hints",
+      "groups": [
+        "p10-E3-countries-hints-r1"
+      ],
+      "summary": {
+        "runs": 3,
+        "repeats": 1,
+        "success_rate": 0.0,
+        "tokens_per_success": null,
+        "median_tokens": 48779,
+        "p90_tokens": 53501,
+        "trust_mean": 1.0,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "cross": {
+          "runs": 1,
+          "repeats": 1,
+          "success_rate": 0.0,
+          "tokens_per_success": null,
+          "median_tokens": 53501,
+          "p90_tokens": 53501,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 2,
+          "repeats": 1,
+          "success_rate": 0.0,
+          "tokens_per_success": null,
+          "median_tokens": 46169.0,
+          "p90_tokens": 48779,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 3,
+        "delta_success": 0.0,
+        "delta_success_ci": [
+          0.0,
+          0.0
+        ],
+        "delta_tokens_per_success": null,
+        "delta_tokens_per_success_ci": null,
+        "mcnemar": {
+          "lost": 0,
+          "gained": 0,
+          "p": 1.0
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": true
+      }
+    },
+    "p10-E3-countries-tool-r1": {
+      "dataset": "countries",
+      "mode": "tool",
+      "groups": [
+        "p10-E3-countries-tool-r1"
+      ],
+      "summary": {
+        "runs": 3,
+        "repeats": 1,
+        "success_rate": 0.0,
+        "tokens_per_success": null,
+        "median_tokens": 46863,
+        "p90_tokens": 53816,
+        "trust_mean": 1.0,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "cross": {
+          "runs": 1,
+          "repeats": 1,
+          "success_rate": 0.0,
+          "tokens_per_success": null,
+          "median_tokens": 53816,
+          "p90_tokens": 53816,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 2,
+          "repeats": 1,
+          "success_rate": 0.0,
+          "tokens_per_success": null,
+          "median_tokens": 46058.5,
+          "p90_tokens": 46863,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 3,
+        "delta_success": 0.0,
+        "delta_success_ci": [
+          0.0,
+          0.0
+        ],
+        "delta_tokens_per_success": null,
+        "delta_tokens_per_success_ci": null,
+        "mcnemar": {
+          "lost": 0,
+          "gained": 0,
+          "p": 1.0
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": true
+      }
+    },
+    "p10-E3-countries-rewrite-r1": {
+      "dataset": "countries",
+      "mode": "rewrite",
+      "groups": [
+        "p10-E3-countries-rewrite-r1"
+      ],
+      "summary": {
+        "runs": 3,
+        "repeats": 1,
+        "success_rate": 0.0,
+        "tokens_per_success": null,
+        "median_tokens": 44769,
+        "p90_tokens": 53725,
+        "trust_mean": 1.0,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "cross": {
+          "runs": 1,
+          "repeats": 1,
+          "success_rate": 0.0,
+          "tokens_per_success": null,
+          "median_tokens": 53725,
+          "p90_tokens": 53725,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 2,
+          "repeats": 1,
+          "success_rate": 0.0,
+          "tokens_per_success": null,
+          "median_tokens": 44535.5,
+          "p90_tokens": 44769,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 3,
+        "delta_success": 0.0,
+        "delta_success_ci": [
+          0.0,
+          0.0
+        ],
+        "delta_tokens_per_success": null,
+        "delta_tokens_per_success_ci": null,
+        "mcnemar": {
+          "lost": 0,
+          "gained": 0,
+          "p": 1.0
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": true
+      }
+    },
+    "p10-E3-clinvar-hints-r1": {
+      "dataset": "clinvar",
+      "mode": "hints",
+      "groups": [
+        "p10-E3-clinvar-hints-r1"
+      ],
+      "summary": {
+        "runs": 5,
+        "repeats": 1,
+        "success_rate": 1.0,
+        "tokens_per_success": 87450.6,
+        "median_tokens": 79618,
+        "p90_tokens": 184567,
+        "trust_mean": 0.99454,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 3,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 80508.0,
+          "median_tokens": 79618,
+          "p90_tokens": 111268,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 1,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 184567.0,
+          "median_tokens": 184567,
+          "p90_tokens": 184567,
+          "trust_mean": 0.9727,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 1,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 11162.0,
+          "median_tokens": 11162,
+          "p90_tokens": 11162,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 5,
+        "delta_success": 0.1333,
+        "delta_success_ci": [
+          0.0,
+          0.4
+        ],
+        "delta_tokens_per_success": 0.1025,
+        "delta_tokens_per_success_ci": [
+          -0.2146,
+          0.3358
+        ],
+        "mcnemar": {
+          "lost": 0,
+          "gained": 0,
+          "p": 1.0
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": false
+      }
+    },
+    "p10-E3-clinvar-tool-r1": {
+      "dataset": "clinvar",
+      "mode": "tool",
+      "groups": [
+        "p10-E3-clinvar-tool-r1"
+      ],
+      "summary": {
+        "runs": 5,
+        "repeats": 1,
+        "success_rate": 0.8,
+        "tokens_per_success": 112728.5,
+        "median_tokens": 63593,
+        "p90_tokens": 207960,
+        "trust_mean": 0.97508,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 3,
+          "repeats": 1,
+          "success_rate": 0.6666666666666666,
+          "tokens_per_success": 102310.5,
+          "median_tokens": 63593,
+          "p90_tokens": 85592,
+          "trust_mean": 0.9927666666666667,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 1,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 207960.0,
+          "median_tokens": 207960,
+          "p90_tokens": 207960,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 1,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 38333.0,
+          "median_tokens": 38333,
+          "p90_tokens": 38333,
+          "trust_mean": 0.8971,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 5,
+        "delta_success": -0.0667,
+        "delta_success_ci": [
+          -0.2,
+          0.0
+        ],
+        "delta_tokens_per_success": 0.4212,
+        "delta_tokens_per_success_ci": [
+          0.1648,
+          0.9398
+        ],
+        "mcnemar": {
+          "lost": 1,
+          "gained": 0,
+          "p": 1.0
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "success -6.7 points (limit -2)"
+        ],
+        "close_call": false
+      }
+    },
+    "p10-E3-clinvar-rewrite-r1": {
+      "dataset": "clinvar",
+      "mode": "rewrite",
+      "groups": [
+        "p10-E3-clinvar-rewrite-r1"
+      ],
+      "summary": {
+        "runs": 5,
+        "repeats": 1,
+        "success_rate": 0.8,
+        "tokens_per_success": 82439.5,
+        "median_tokens": 49143,
+        "p90_tokens": 170120,
+        "trust_mean": 0.97138,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 3,
+          "repeats": 1,
+          "success_rate": 0.6666666666666666,
+          "tokens_per_success": 74275.5,
+          "median_tokens": 49143,
+          "p90_tokens": 69854,
+          "trust_mean": 0.9589333333333333,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 1,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 170120.0,
+          "median_tokens": 170120,
+          "p90_tokens": 170120,
+          "trust_mean": 0.9801,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 1,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 11087.0,
+          "median_tokens": 11087,
+          "p90_tokens": 11087,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 5,
+        "delta_success": -0.0667,
+        "delta_success_ci": [
+          -0.2,
+          0.0
+        ],
+        "delta_tokens_per_success": 0.0393,
+        "delta_tokens_per_success_ci": [
+          -0.1716,
+          0.405
+        ],
+        "mcnemar": {
+          "lost": 1,
+          "gained": 0,
+          "p": 1.0
+        }
+      },
+      "gate": {
+        "passed": false,
+        "reasons": [
+          "success -6.7 points (limit -2)"
+        ],
+        "close_call": false
+      }
+    },
+    "p10-E3-omop_eunomia-hints-r1": {
+      "dataset": "omop_eunomia",
+      "mode": "hints",
+      "groups": [
+        "p10-E3-omop_eunomia-hints-r1"
+      ],
+      "summary": {
+        "runs": 10,
+        "repeats": 1,
+        "success_rate": 1.0,
+        "tokens_per_success": 25074.4,
+        "median_tokens": 11997.0,
+        "p90_tokens": 57435,
+        "trust_mean": 1.0,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 1,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 44163.0,
+          "median_tokens": 44163,
+          "p90_tokens": 44163,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 2,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 39834.5,
+          "median_tokens": 39834.5,
+          "p90_tokens": 65817,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 2,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 34416.5,
+          "median_tokens": 34416.5,
+          "p90_tokens": 57435,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 5,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 11615.8,
+          "median_tokens": 11421,
+          "p90_tokens": 12541,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 10,
+        "delta_success": 0.0333,
+        "delta_success_ci": [
+          0.0,
+          0.1
+        ],
+        "delta_tokens_per_success": -0.2858,
+        "delta_tokens_per_success_ci": [
+          -0.4502,
+          -0.0439
+        ],
+        "mcnemar": {
+          "lost": 0,
+          "gained": 1,
+          "p": 1.0
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": false
+      }
+    },
+    "p10-E3-omop_eunomia-tool-r1": {
+      "dataset": "omop_eunomia",
+      "mode": "tool",
+      "groups": [
+        "p10-E3-omop_eunomia-tool-r1"
+      ],
+      "summary": {
+        "runs": 10,
+        "repeats": 1,
+        "success_rate": 1.0,
+        "tokens_per_success": 37269.8,
+        "median_tokens": 12112.5,
+        "p90_tokens": 57176,
+        "trust_mean": 0.98448,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 1,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 41454.0,
+          "median_tokens": 41454,
+          "p90_tokens": 41454,
+          "trust_mean": 0.9683,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 2,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 101664.5,
+          "median_tokens": 101664.5,
+          "p90_tokens": 188373,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 2,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 34426.0,
+          "median_tokens": 34426.0,
+          "p90_tokens": 57176,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 5,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 11812.6,
+          "median_tokens": 11663,
+          "p90_tokens": 12444,
+          "trust_mean": 0.9753000000000001,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 10,
+        "delta_success": 0.0333,
+        "delta_success_ci": [
+          0.0,
+          0.1
+        ],
+        "delta_tokens_per_success": 0.0615,
+        "delta_tokens_per_success_ci": [
+          -0.1319,
+          0.222
+        ],
+        "mcnemar": {
+          "lost": 0,
+          "gained": 1,
+          "p": 1.0
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": false
+      }
+    },
+    "p10-E3-omop_eunomia-rewrite-r1": {
+      "dataset": "omop_eunomia",
+      "mode": "rewrite",
+      "groups": [
+        "p10-E3-omop_eunomia-rewrite-r1"
+      ],
+      "summary": {
+        "runs": 10,
+        "repeats": 1,
+        "success_rate": 1.0,
+        "tokens_per_success": 25127.0,
+        "median_tokens": 13007.5,
+        "p90_tokens": 56443,
+        "trust_mean": 0.99771,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 1,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 56443.0,
+          "median_tokens": 56443,
+          "p90_tokens": 56443,
+          "trust_mean": 0.9771,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 2,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 39850.5,
+          "median_tokens": 39850.5,
+          "p90_tokens": 65804,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 2,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 27333.5,
+          "median_tokens": 27333.5,
+          "p90_tokens": 43198,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 5,
+          "repeats": 1,
+          "success_rate": 1.0,
+          "tokens_per_success": 12091.8,
+          "median_tokens": 11448,
+          "p90_tokens": 14176,
+          "trust_mean": 1.0,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 10,
+        "delta_success": 0.0333,
+        "delta_success_ci": [
+          0.0,
+          0.1
+        ],
+        "delta_tokens_per_success": -0.2843,
+        "delta_tokens_per_success_ci": [
+          -0.4633,
+          0.0576
+        ],
+        "mcnemar": {
+          "lost": 0,
+          "gained": 1,
+          "p": 1.0
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": false
+      }
+    }
+  },
+  "greedy": [
+    {
+      "step": 0,
+      "add": "E2",
+      "result": {
+        "groups": [
+          "p10-E2-r1"
+        ],
+        "summary": {
+          "runs": 54,
+          "repeats": 1,
+          "success_rate": 0.8518518518518519,
+          "tokens_per_success": 49783.82608695652,
+          "median_tokens": 31925.5,
+          "p90_tokens": 91349,
+          "trust_mean": 0.9345796296296296,
+          "transient_excluded": 0
+        },
+        "by_kind": {
+          "biomcp": {
+            "runs": 15,
+            "repeats": 1,
+            "success_rate": 0.9333333333333333,
+            "tokens_per_success": 45484.78571428572,
+            "median_tokens": 40697,
+            "p90_tokens": 65942,
+            "trust_mean": 0.8768866666666667,
+            "transient_excluded": 0
+          },
+          "cross": {
+            "runs": 10,
+            "repeats": 1,
+            "success_rate": 0.9,
+            "tokens_per_success": 78304.22222222222,
+            "median_tokens": 55509.5,
+            "p90_tokens": 161404,
+            "trust_mean": 0.93512,
+            "transient_excluded": 0
+          },
+          "medical": {
+            "runs": 16,
+            "repeats": 1,
+            "success_rate": 0.6875,
+            "tokens_per_success": 72595.81818181818,
+            "median_tokens": 37727.5,
+            "p90_tokens": 121991,
+            "trust_mean": 0.962375,
+            "transient_excluded": 0
+          },
+          "omop": {
+            "runs": 13,
+            "repeats": 1,
+            "success_rate": 0.9230769230769231,
+            "tokens_per_success": 12498.083333333334,
+            "median_tokens": 10195,
+            "p90_tokens": 16810,
+            "trust_mean": 0.9665230769230769,
+            "transient_excluded": 0
+          }
+        },
+        "vs_baseline": {
+          "tasks": 54,
+          "delta_success": 0.0309,
+          "delta_success_ci": [
+            -0.0432,
+            0.0988
+          ],
+          "delta_tokens_per_success": -0.1402,
+          "delta_tokens_per_success_ci": [
+            -0.2911,
+            0.0448
+          ],
+          "mcnemar": {
+            "lost": 2,
+            "gained": 4,
+            "p": 0.6875
+          }
+        },
+        "gate": {
+          "passed": true,
+          "reasons": [],
+          "close_call": false
+        }
+      },
+      "accepted": true,
+      "reason": "best single strategy"
+    },
+    {
+      "step": 1,
+      "add": "E5",
+      "group": "p10-greedy-1-r1",
+      "specs": [
+        "E2:level=light",
+        "E5:mode=plan"
+      ],
+      "result": {
+        "groups": [
+          "p10-greedy-1-r1"
+        ],
+        "summary": {
+          "runs": 54,
+          "repeats": 1,
+          "success_rate": 0.7592592592592593,
+          "tokens_per_success": 60041.04878048781,
+          "median_tokens": 34426.0,
+          "p90_tokens": 100160,
+          "trust_mean": 0.9155981481481481,
+          "transient_excluded": 0
+        },
+        "by_kind": {
+          "biomcp": {
+            "runs": 15,
+            "repeats": 1,
+            "success_rate": 0.8666666666666667,
+            "tokens_per_success": 52106.769230769234,
+            "median_tokens": 34221,
+            "p90_tokens": 84344,
+            "trust_mean": 0.8453866666666666,
+            "transient_excluded": 0
+          },
+          "cross": {
+            "runs": 10,
+            "repeats": 1,
+            "success_rate": 0.8,
+            "tokens_per_success": 89259.625,
+            "median_tokens": 55829.0,
+            "p90_tokens": 177093,
+            "trust_mean": 0.9313,
+            "transient_excluded": 0
+          },
+          "medical": {
+            "runs": 16,
+            "repeats": 1,
+            "success_rate": 0.5625,
+            "tokens_per_success": 101122.66666666667,
+            "median_tokens": 45264.0,
+            "p90_tokens": 116190,
+            "trust_mean": 0.90731875,
+            "transient_excluded": 0
+          },
+          "omop": {
+            "runs": 13,
+            "repeats": 1,
+            "success_rate": 0.8461538461538461,
+            "tokens_per_success": 14555.818181818182,
+            "median_tokens": 10516,
+            "p90_tokens": 18491,
+            "trust_mean": 0.9947230769230769,
+            "transient_excluded": 0
+          }
+        },
+        "vs_baseline": {
+          "tasks": 54,
+          "delta_success": -0.0617,
+          "delta_success_ci": [
+            -0.1543,
+            0.0247
+          ],
+          "delta_tokens_per_success": 0.037,
+          "delta_tokens_per_success_ci": [
+            -0.173,
+            0.3186
+          ],
+          "mcnemar": {
+            "lost": 6,
+            "gained": 3,
+            "p": 0.5078
+          }
+        },
+        "gate": {
+          "passed": false,
+          "reasons": [
+            "success -6.2 points (limit -2)"
+          ],
+          "close_call": true
+        }
+      },
+      "accepted": false,
+      "gain": -0.20603524276368756,
+      "reason": "tokens/success -20.6% vs current; gate: success -6.2 points (limit -2)"
+    },
+    {
+      "step": 2,
+      "add": "E9",
+      "group": "p10-greedy-2-r1",
+      "specs": [
+        "E2:level=light",
+        "E9"
+      ],
+      "result": {
+        "groups": [
+          "p10-greedy-2-r1"
+        ],
+        "summary": {
+          "runs": 54,
+          "repeats": 1,
+          "success_rate": 0.9814814814814815,
+          "tokens_per_success": 49748.92452830189,
+          "median_tokens": 40734.0,
+          "p90_tokens": 98335,
+          "trust_mean": 0.9319407407407407,
+          "transient_excluded": 0
+        },
+        "by_kind": {
+          "biomcp": {
+            "runs": 15,
+            "repeats": 1,
+            "success_rate": 1.0,
+            "tokens_per_success": 55943.4,
+            "median_tokens": 43707,
+            "p90_tokens": 98335,
+            "trust_mean": 0.8442866666666666,
+            "transient_excluded": 0
+          },
+          "cross": {
+            "runs": 10,
+            "repeats": 1,
+            "success_rate": 1.0,
+            "tokens_per_success": 70334.9,
+            "median_tokens": 64918.5,
+            "p90_tokens": 124858,
+            "trust_mean": 0.93739,
+            "transient_excluded": 0
+          },
+          "medical": {
+            "runs": 16,
+            "repeats": 1,
+            "success_rate": 0.9375,
+            "tokens_per_success": 62188.2,
+            "median_tokens": 43659.0,
+            "p90_tokens": 166968,
+            "trust_mean": 0.97556875,
+            "transient_excluded": 0
+          },
+          "omop": {
+            "runs": 13,
+            "repeats": 1,
+            "success_rate": 1.0,
+            "tokens_per_success": 12413.076923076924,
+            "median_tokens": 10188,
+            "p90_tokens": 20220,
+            "trust_mean": 0.9751923076923077,
+            "transient_excluded": 0
+          }
+        },
+        "vs_baseline": {
+          "tasks": 54,
+          "delta_success": 0.1605,
+          "delta_success_ci": [
+            0.0864,
+            0.2593
+          ],
+          "delta_tokens_per_success": -0.1408,
+          "delta_tokens_per_success_ci": [
+            -0.2732,
+            0.0086
+          ],
+          "mcnemar": {
+            "lost": 0,
+            "gained": 9,
+            "p": 0.0039
+          }
+        },
+        "gate": {
+          "passed": true,
+          "reasons": [],
+          "close_call": false
+        }
+      },
+      "accepted": false,
+      "gain": 0.0007010622002749933,
+      "reason": "tokens/success +0.1% vs current"
+    },
+    {
+      "step": 3,
+      "add": "E4",
+      "group": "p10-greedy-3-r1",
+      "specs": [
+        "E2:level=light",
+        "E4:mode=repair"
+      ],
+      "result": {
+        "groups": [
+          "p10-greedy-3-r1"
+        ],
+        "summary": {
+          "runs": 54,
+          "repeats": 1,
+          "success_rate": 0.8888888888888888,
+          "tokens_per_success": 52860.708333333336,
+          "median_tokens": 35350.0,
+          "p90_tokens": 96617,
+          "trust_mean": 0.9211462962962963,
+          "transient_excluded": 0
+        },
+        "by_kind": {
+          "biomcp": {
+            "runs": 15,
+            "repeats": 1,
+            "success_rate": 0.9333333333333333,
+            "tokens_per_success": 45487.357142857145,
+            "median_tokens": 40827,
+            "p90_tokens": 70445,
+            "trust_mean": 0.86314,
+            "transient_excluded": 0
+          },
+          "cross": {
+            "runs": 10,
+            "repeats": 1,
+            "success_rate": 0.9,
+            "tokens_per_success": 73394.22222222222,
+            "median_tokens": 60946.5,
+            "p90_tokens": 92120,
+            "trust_mean": 0.917,
+            "transient_excluded": 0
+          },
+          "medical": {
+            "runs": 16,
+            "repeats": 1,
+            "success_rate": 0.75,
+            "tokens_per_success": 87976.66666666667,
+            "median_tokens": 41400.5,
+            "p90_tokens": 214182,
+            "trust_mean": 0.93566875,
+            "transient_excluded": 0
+          },
+          "omop": {
+            "runs": 13,
+            "repeats": 1,
+            "success_rate": 1.0,
+            "tokens_per_success": 14171.0,
+            "median_tokens": 10195,
+            "p90_tokens": 25610,
+            "trust_mean": 0.9733923076923077,
+            "transient_excluded": 0
+          }
+        },
+        "vs_baseline": {
+          "tasks": 54,
+          "delta_success": 0.0679,
+          "delta_success_ci": [
+            0.0247,
+            0.1235
+          ],
+          "delta_tokens_per_success": -0.0871,
+          "delta_tokens_per_success_ci": [
+            -0.2127,
+            0.0668
+          ],
+          "mcnemar": {
+            "lost": 0,
+            "gained": 4,
+            "p": 0.125
+          }
+        },
+        "gate": {
+          "passed": true,
+          "reasons": [],
+          "close_call": false
+        }
+      },
+      "accepted": false,
+      "gain": -0.06180485688268478,
+      "reason": "tokens/success -6.2% vs current"
+    },
+    {
+      "step": 4,
+      "add": "E7",
+      "group": "p10-greedy-4-r1",
+      "specs": [
+        "E2:level=light",
+        "E7"
+      ],
+      "result": {
+        "groups": [
+          "p10-greedy-4-r1"
+        ],
+        "summary": {
+          "runs": 54,
+          "repeats": 1,
+          "success_rate": 0.8333333333333334,
+          "tokens_per_success": 51560.77777777778,
+          "median_tokens": 38893.5,
+          "p90_tokens": 77479,
+          "trust_mean": 0.9317851851851852,
+          "transient_excluded": 0
+        },
+        "by_kind": {
+          "biomcp": {
+            "runs": 15,
+            "repeats": 1,
+            "success_rate": 0.8666666666666667,
+            "tokens_per_success": 57214.230769230766,
+            "median_tokens": 41432,
+            "p90_tokens": 87803,
+            "trust_mean": 0.84506,
+            "transient_excluded": 0
+          },
+          "cross": {
+            "runs": 10,
+            "repeats": 1,
+            "success_rate": 0.8,
+            "tokens_per_success": 75558.5,
+            "median_tokens": 51896.0,
+            "p90_tokens": 87467,
+            "trust_mean": 0.93604,
+            "transient_excluded": 0
+          },
+          "medical": {
+            "runs": 16,
+            "repeats": 1,
+            "success_rate": 0.75,
+            "tokens_per_success": 67273.5,
+            "median_tokens": 43898.0,
+            "p90_tokens": 75147,
+            "trust_mean": 0.970975,
+            "transient_excluded": 0
+          },
+          "omop": {
+            "runs": 13,
+            "repeats": 1,
+            "success_rate": 0.9230769230769231,
+            "tokens_per_success": 13725.0,
+            "median_tokens": 10183,
+            "p90_tokens": 19359,
+            "trust_mean": 0.9803461538461539,
+            "transient_excluded": 0
+          }
+        },
+        "vs_baseline": {
+          "tasks": 54,
+          "delta_success": 0.0123,
+          "delta_success_ci": [
+            -0.0679,
+            0.0864
+          ],
+          "delta_tokens_per_success": -0.1095,
+          "delta_tokens_per_success_ci": [
+            -0.2305,
+            0.0568
+          ],
+          "mcnemar": {
+            "lost": 3,
+            "gained": 4,
+            "p": 1.0
+          }
+        },
+        "gate": {
+          "passed": true,
+          "reasons": [],
+          "close_call": false
+        }
+      },
+      "accepted": false,
+      "gain": -0.035693353253273274,
+      "reason": "tokens/success -3.6% vs current"
+    },
+    {
+      "step": 5,
+      "add": "E3",
+      "group": "p10-greedy-5-r1",
+      "specs": [
+        "E2:level=light",
+        "E3:modes=hints"
+      ],
+      "result": {
+        "groups": [
+          "p10-greedy-5-r1"
+        ],
+        "summary": {
+          "runs": 54,
+          "repeats": 1,
+          "success_rate": 0.8518518518518519,
+          "tokens_per_success": 64663.63043478261,
+          "median_tokens": 39664.0,
+          "p90_tokens": 122508,
+          "trust_mean": 0.9307333333333333,
+          "transient_excluded": 0
+        },
+        "by_kind": {
+          "biomcp": {
+            "runs": 15,
+            "repeats": 1,
+            "success_rate": 0.9333333333333333,
+            "tokens_per_success": 70949.5,
+            "median_tokens": 44789,
+            "p90_tokens": 155888,
+            "trust_mean": 0.8653666666666666,
+            "transient_excluded": 0
+          },
+          "cross": {
+            "runs": 10,
+            "repeats": 1,
+            "success_rate": 0.9,
+            "tokens_per_success": 77001.22222222222,
+            "median_tokens": 62733.0,
+            "p90_tokens": 101175,
+            "trust_mean": 0.91818,
+            "transient_excluded": 0
+          },
+          "medical": {
+            "runs": 16,
+            "repeats": 1,
+            "success_rate": 0.6875,
+            "tokens_per_success": 99802.63636363637,
+            "median_tokens": 44499.0,
+            "p90_tokens": 199064,
+            "trust_mean": 0.9541375,
+            "transient_excluded": 0
+          },
+          "omop": {
+            "runs": 13,
+            "repeats": 1,
+            "success_rate": 0.9230769230769231,
+            "tokens_per_success": 15866.166666666666,
+            "median_tokens": 10213,
+            "p90_tokens": 20325,
+            "trust_mean": 0.9870076923076924,
+            "transient_excluded": 0
+          }
+        },
+        "vs_baseline": {
+          "tasks": 54,
+          "delta_success": 0.0309,
+          "delta_success_ci": [
+            -0.0247,
+            0.0802
+          ],
+          "delta_tokens_per_success": 0.1168,
+          "delta_tokens_per_success_ci": [
+            -0.0755,
+            0.3484
+          ],
+          "mcnemar": {
+            "lost": 1,
+            "gained": 3,
+            "p": 0.625
+          }
+        },
+        "gate": {
+          "passed": true,
+          "reasons": [],
+          "close_call": false
+        }
+      },
+      "accepted": false,
+      "gain": -0.29888832412831823,
+      "reason": "tokens/success -29.9% vs current"
+    }
+  ],
+  "chosen": {
+    "strategies": [
+      "E2"
+    ],
+    "specs": [
+      "E2:level=light"
+    ],
+    "groups": [
+      "p10-E2-r1",
+      "p10-E2-final-r2",
+      "p10-E2-final-r3"
+    ],
+    "result": {
+      "groups": [
+        "p10-E2-r1",
+        "p10-E2-final-r2",
+        "p10-E2-final-r3"
+      ],
+      "summary": {
+        "runs": 162,
+        "repeats": 3,
+        "success_rate": 0.808641975308642,
+        "tokens_per_success": 58053.6106870229,
+        "median_tokens": 36984.5,
+        "p90_tokens": 93835,
+        "trust_mean": 0.9213703703703704,
+        "transient_excluded": 0
+      },
+      "by_kind": {
+        "biomcp": {
+          "runs": 45,
+          "repeats": 3,
+          "success_rate": 0.8444444444444444,
+          "tokens_per_success": 51749.92105263158,
+          "median_tokens": 40506,
+          "p90_tokens": 65942,
+          "trust_mean": 0.8482488888888889,
+          "transient_excluded": 0
+        },
+        "cross": {
+          "runs": 30,
+          "repeats": 3,
+          "success_rate": 0.8666666666666667,
+          "tokens_per_success": 79739.65384615384,
+          "median_tokens": 63029.5,
+          "p90_tokens": 135894,
+          "trust_mean": 0.9221866666666667,
+          "transient_excluded": 0
+        },
+        "medical": {
+          "runs": 48,
+          "repeats": 3,
+          "success_rate": 0.6041666666666666,
+          "tokens_per_success": 106248.20689655172,
+          "median_tokens": 41787.5,
+          "p90_tokens": 119786,
+          "trust_mean": 0.9398916666666667,
+          "transient_excluded": 0
+        },
+        "omop": {
+          "runs": 39,
+          "repeats": 3,
+          "success_rate": 0.9743589743589743,
+          "tokens_per_success": 12739.394736842105,
+          "median_tokens": 10175,
+          "p90_tokens": 18865,
+          "trust_mean": 0.9823179487179488,
+          "transient_excluded": 0
+        }
+      },
+      "vs_baseline": {
+        "tasks": 54,
+        "delta_success": -0.0123,
+        "delta_success_ci": [
+          -0.0679,
+          0.0432
+        ],
+        "delta_tokens_per_success": 0.0026,
+        "delta_tokens_per_success_ci": [
+          -0.1532,
+          0.205
+        ],
+        "mcnemar": {
+          "lost": 10,
+          "gained": 8,
+          "p": 0.8145
+        }
+      },
+      "gate": {
+        "passed": true,
+        "reasons": [],
+        "close_call": true
+      }
+    }
+  },
+  "e3_routing": [
+    {
+      "tool": "biomcp__biomcp",
+      "dataset": "ndc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.8888888888888888,
+      "delta_arg_errors_per_run": -0.08333333333333331,
+      "delta_calls_per_run": 0.10416666666666685,
+      "hint_tokens_per_run": 21.9375,
+      "delta_tokens_per_success": -0.0179,
+      "delta_success": 0.0833,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__get",
+      "dataset": "ndc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.8888888888888888,
+      "delta_arg_errors_per_run": 0.5416666666666669,
+      "delta_calls_per_run": 0.5625000000000007,
+      "hint_tokens_per_run": 21.9375,
+      "delta_tokens_per_success": -0.0179,
+      "delta_success": 0.0833,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__search",
+      "dataset": "ndc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.8888888888888888,
+      "delta_arg_errors_per_run": 0.02083333333333348,
+      "delta_calls_per_run": -0.33333333333333304,
+      "hint_tokens_per_run": 21.9375,
+      "delta_tokens_per_success": -0.0179,
+      "delta_success": 0.0833,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-article-details",
+      "dataset": "ndc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.8888888888888888,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.2916666666666667,
+      "hint_tokens_per_run": 21.9375,
+      "delta_tokens_per_success": -0.0179,
+      "delta_success": 0.0833,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-drug-details",
+      "dataset": "ndc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.8888888888888888,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.5625,
+      "hint_tokens_per_run": 21.9375,
+      "delta_tokens_per_success": -0.0179,
+      "delta_success": 0.0833,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-clinical-guidelines",
+      "dataset": "ndc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.8888888888888888,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.02083333333333333,
+      "hint_tokens_per_run": 21.9375,
+      "delta_tokens_per_success": -0.0179,
+      "delta_success": 0.0833,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drug-nomenclature",
+      "dataset": "ndc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.8888888888888888,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.2916666666666681,
+      "hint_tokens_per_run": 21.9375,
+      "delta_tokens_per_success": -0.0179,
+      "delta_success": 0.0833,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drugs",
+      "dataset": "ndc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.8888888888888888,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.708333333333337,
+      "hint_tokens_per_run": 21.9375,
+      "delta_tokens_per_success": -0.0179,
+      "delta_success": 0.0833,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-google-scholar",
+      "dataset": "ndc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.8888888888888888,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.020833333333333332,
+      "hint_tokens_per_run": 21.9375,
+      "delta_tokens_per_success": -0.0179,
+      "delta_success": 0.0833,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-databases",
+      "dataset": "ndc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.8888888888888888,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.04166666666666667,
+      "hint_tokens_per_run": 21.9375,
+      "delta_tokens_per_success": -0.0179,
+      "delta_success": 0.0833,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-literature",
+      "dataset": "ndc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.8888888888888888,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.20833333333333337,
+      "hint_tokens_per_run": 21.9375,
+      "delta_tokens_per_success": -0.0179,
+      "delta_success": 0.0833,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "omop__find_omop_concept",
+      "dataset": "ndc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.8888888888888888,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.08333333333333343,
+      "hint_tokens_per_run": 21.9375,
+      "delta_tokens_per_success": -0.0179,
+      "delta_success": 0.0833,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__biomcp",
+      "dataset": "ndc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.08333333333333331,
+      "delta_calls_per_run": -0.20833333333333315,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0264,
+      "delta_success": 0.0208,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__get",
+      "dataset": "ndc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.39583333333333315,
+      "delta_calls_per_run": -0.49999999999999933,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0264,
+      "delta_success": 0.0208,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__search",
+      "dataset": "ndc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.10416666666666652,
+      "delta_calls_per_run": -0.45833333333333304,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0264,
+      "delta_success": 0.0208,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-article-details",
+      "dataset": "ndc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.10416666666666669,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0264,
+      "delta_success": 0.0208,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-drug-details",
+      "dataset": "ndc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.1875,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0264,
+      "delta_success": 0.0208,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-clinical-guidelines",
+      "dataset": "ndc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.02083333333333333,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0264,
+      "delta_success": 0.0208,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drug-nomenclature",
+      "dataset": "ndc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.020833333333331927,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0264,
+      "delta_success": 0.0208,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drugs",
+      "dataset": "ndc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.583333333333337,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0264,
+      "delta_success": 0.0208,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-google-scholar",
+      "dataset": "ndc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.020833333333333332,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0264,
+      "delta_success": 0.0208,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-databases",
+      "dataset": "ndc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.020833333333333332,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0264,
+      "delta_success": 0.0208,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-literature",
+      "dataset": "ndc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.02083333333333337,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0264,
+      "delta_success": 0.0208,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "omop__find_omop_concept",
+      "dataset": "ndc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.020833333333333426,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0264,
+      "delta_success": 0.0208,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__biomcp",
+      "dataset": "ndc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.08333333333333331,
+      "delta_calls_per_run": -0.14583333333333315,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2737,
+      "delta_success": 0.1458,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__get",
+      "dataset": "ndc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.14583333333333315,
+      "delta_calls_per_run": -0.18749999999999933,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2737,
+      "delta_success": 0.1458,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__search",
+      "dataset": "ndc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.16666666666666652,
+      "delta_calls_per_run": -0.45833333333333304,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2737,
+      "delta_success": 0.1458,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-article-details",
+      "dataset": "ndc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.08333333333333331,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2737,
+      "delta_success": 0.1458,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-drug-details",
+      "dataset": "ndc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.25,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2737,
+      "delta_success": 0.1458,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-clinical-guidelines",
+      "dataset": "ndc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.02083333333333333,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2737,
+      "delta_success": 0.1458,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drug-nomenclature",
+      "dataset": "ndc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.4583333333333319,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2737,
+      "delta_success": 0.1458,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drugs",
+      "dataset": "ndc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.39583333333333703,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2737,
+      "delta_success": 0.1458,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-google-scholar",
+      "dataset": "ndc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.020833333333333332,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2737,
+      "delta_success": 0.1458,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-databases",
+      "dataset": "ndc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.020833333333333332,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2737,
+      "delta_success": 0.1458,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-literature",
+      "dataset": "ndc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.08333333333333337,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2737,
+      "delta_success": 0.1458,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "omop__find_omop_concept",
+      "dataset": "ndc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.020833333333333426,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2737,
+      "delta_success": 0.1458,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__biomcp",
+      "dataset": "rxnorm",
+      "mode": "hints",
+      "tasks": 17,
+      "uptake": 1.0,
+      "delta_arg_errors_per_run": 0.27450980392156865,
+      "delta_calls_per_run": 0.15686274509803938,
+      "hint_tokens_per_run": 16.470588235294116,
+      "delta_tokens_per_success": 0.275,
+      "delta_success": 0.0196,
+      "wrong_hint_rate": 0.058823529411764705
+    },
+    {
+      "tool": "biomcp__get",
+      "dataset": "rxnorm",
+      "mode": "hints",
+      "tasks": 17,
+      "uptake": 1.0,
+      "delta_arg_errors_per_run": 0.3333333333333335,
+      "delta_calls_per_run": 0.529411764705883,
+      "hint_tokens_per_run": 16.470588235294116,
+      "delta_tokens_per_success": 0.275,
+      "delta_success": 0.0196,
+      "wrong_hint_rate": 0.058823529411764705
+    },
+    {
+      "tool": "biomcp__search",
+      "dataset": "rxnorm",
+      "mode": "hints",
+      "tasks": 17,
+      "uptake": 1.0,
+      "delta_arg_errors_per_run": 0.19607843137254916,
+      "delta_calls_per_run": 0.09803921568627479,
+      "hint_tokens_per_run": 16.470588235294116,
+      "delta_tokens_per_success": 0.275,
+      "delta_success": 0.0196,
+      "wrong_hint_rate": 0.058823529411764705
+    },
+    {
+      "tool": "medical__get-article-details",
+      "dataset": "rxnorm",
+      "mode": "hints",
+      "tasks": 17,
+      "uptake": 1.0,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.5098039215686275,
+      "hint_tokens_per_run": 16.470588235294116,
+      "delta_tokens_per_success": 0.275,
+      "delta_success": 0.0196,
+      "wrong_hint_rate": 0.058823529411764705
+    },
+    {
+      "tool": "medical__get-drug-details",
+      "dataset": "rxnorm",
+      "mode": "hints",
+      "tasks": 17,
+      "uptake": 1.0,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.23529411764705882,
+      "hint_tokens_per_run": 16.470588235294116,
+      "delta_tokens_per_success": 0.275,
+      "delta_success": 0.0196,
+      "wrong_hint_rate": 0.058823529411764705
+    },
+    {
+      "tool": "medical__search-clinical-guidelines",
+      "dataset": "rxnorm",
+      "mode": "hints",
+      "tasks": 17,
+      "uptake": 1.0,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.019607843137254898,
+      "hint_tokens_per_run": 16.470588235294116,
+      "delta_tokens_per_success": 0.275,
+      "delta_success": 0.0196,
+      "wrong_hint_rate": 0.058823529411764705
+    },
+    {
+      "tool": "medical__search-drug-nomenclature",
+      "dataset": "rxnorm",
+      "mode": "hints",
+      "tasks": 17,
+      "uptake": 1.0,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.07843137254901829,
+      "hint_tokens_per_run": 16.470588235294116,
+      "delta_tokens_per_success": 0.275,
+      "delta_success": 0.0196,
+      "wrong_hint_rate": 0.058823529411764705
+    },
+    {
+      "tool": "medical__search-drugs",
+      "dataset": "rxnorm",
+      "mode": "hints",
+      "tasks": 17,
+      "uptake": 1.0,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.6666666666666702,
+      "hint_tokens_per_run": 16.470588235294116,
+      "delta_tokens_per_success": 0.275,
+      "delta_success": 0.0196,
+      "wrong_hint_rate": 0.058823529411764705
+    },
+    {
+      "tool": "medical__search-google-scholar",
+      "dataset": "rxnorm",
+      "mode": "hints",
+      "tasks": 17,
+      "uptake": 1.0,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.0196078431372549,
+      "hint_tokens_per_run": 16.470588235294116,
+      "delta_tokens_per_success": 0.275,
+      "delta_success": 0.0196,
+      "wrong_hint_rate": 0.058823529411764705
+    },
+    {
+      "tool": "medical__search-medical-databases",
+      "dataset": "rxnorm",
+      "mode": "hints",
+      "tasks": 17,
+      "uptake": 1.0,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.0196078431372549,
+      "hint_tokens_per_run": 16.470588235294116,
+      "delta_tokens_per_success": 0.275,
+      "delta_success": 0.0196,
+      "wrong_hint_rate": 0.058823529411764705
+    },
+    {
+      "tool": "medical__search-medical-literature",
+      "dataset": "rxnorm",
+      "mode": "hints",
+      "tasks": 17,
+      "uptake": 1.0,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.019607843137254936,
+      "hint_tokens_per_run": 16.470588235294116,
+      "delta_tokens_per_success": 0.275,
+      "delta_success": 0.0196,
+      "wrong_hint_rate": 0.058823529411764705
+    },
+    {
+      "tool": "omop__find_omop_concept",
+      "dataset": "rxnorm",
+      "mode": "hints",
+      "tasks": 17,
+      "uptake": 1.0,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.0588235294117646,
+      "hint_tokens_per_run": 16.470588235294116,
+      "delta_tokens_per_success": 0.275,
+      "delta_success": 0.0196,
+      "wrong_hint_rate": 0.058823529411764705
+    },
+    {
+      "tool": "biomcp__biomcp",
+      "dataset": "rxnorm",
+      "mode": "tool",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.1372549019607843,
+      "delta_calls_per_run": -0.25490196078431354,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.233,
+      "delta_success": 0.1373,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__get",
+      "dataset": "rxnorm",
+      "mode": "tool",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.2745098039215688,
+      "delta_calls_per_run": 0.47058823529411825,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.233,
+      "delta_success": 0.1373,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__search",
+      "dataset": "rxnorm",
+      "mode": "tool",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.13725490196078446,
+      "delta_calls_per_run": -0.19607843137254874,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.233,
+      "delta_success": 0.1373,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-article-details",
+      "dataset": "rxnorm",
+      "mode": "tool",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.07843137254901959,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.233,
+      "delta_success": 0.1373,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-drug-details",
+      "dataset": "rxnorm",
+      "mode": "tool",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.23529411764705882,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.233,
+      "delta_success": 0.1373,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-clinical-guidelines",
+      "dataset": "rxnorm",
+      "mode": "tool",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.019607843137254898,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.233,
+      "delta_success": 0.1373,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drug-nomenclature",
+      "dataset": "rxnorm",
+      "mode": "tool",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.19607843137254768,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.233,
+      "delta_success": 0.1373,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drugs",
+      "dataset": "rxnorm",
+      "mode": "tool",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.8431372549019642,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.233,
+      "delta_success": 0.1373,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-google-scholar",
+      "dataset": "rxnorm",
+      "mode": "tool",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.0196078431372549,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.233,
+      "delta_success": 0.1373,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-databases",
+      "dataset": "rxnorm",
+      "mode": "tool",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.0196078431372549,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.233,
+      "delta_success": 0.1373,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-literature",
+      "dataset": "rxnorm",
+      "mode": "tool",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.37254901960784315,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.233,
+      "delta_success": 0.1373,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "omop__find_omop_concept",
+      "dataset": "rxnorm",
+      "mode": "tool",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 1.0449157878825003e-16,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.233,
+      "delta_success": 0.1373,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__biomcp",
+      "dataset": "rxnorm",
+      "mode": "rewrite",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.07843137254901959,
+      "delta_calls_per_run": -0.31372549019607826,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0796,
+      "delta_success": -0.0392,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__get",
+      "dataset": "rxnorm",
+      "mode": "rewrite",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.13725490196078413,
+      "delta_calls_per_run": 6.269494727295002e-16,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0796,
+      "delta_success": -0.0392,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__search",
+      "dataset": "rxnorm",
+      "mode": "rewrite",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.19607843137254916,
+      "delta_calls_per_run": 0.2156862745098042,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0796,
+      "delta_success": -0.0392,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-article-details",
+      "dataset": "rxnorm",
+      "mode": "rewrite",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.07843137254901959,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0796,
+      "delta_success": -0.0392,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-drug-details",
+      "dataset": "rxnorm",
+      "mode": "rewrite",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.058823529411764705,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0796,
+      "delta_success": -0.0392,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-clinical-guidelines",
+      "dataset": "rxnorm",
+      "mode": "rewrite",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.019607843137254898,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0796,
+      "delta_success": -0.0392,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drug-nomenclature",
+      "dataset": "rxnorm",
+      "mode": "rewrite",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.01960784313725358,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0796,
+      "delta_success": -0.0392,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drugs",
+      "dataset": "rxnorm",
+      "mode": "rewrite",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.509803921568624,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0796,
+      "delta_success": -0.0392,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-google-scholar",
+      "dataset": "rxnorm",
+      "mode": "rewrite",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.0196078431372549,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0796,
+      "delta_success": -0.0392,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-databases",
+      "dataset": "rxnorm",
+      "mode": "rewrite",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.0196078431372549,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0796,
+      "delta_success": -0.0392,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-literature",
+      "dataset": "rxnorm",
+      "mode": "rewrite",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.13725490196078435,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0796,
+      "delta_success": -0.0392,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "omop__find_omop_concept",
+      "dataset": "rxnorm",
+      "mode": "rewrite",
+      "tasks": 17,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.05882352941176481,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0796,
+      "delta_success": -0.0392,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__biomcp",
+      "dataset": "hgnc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.9375,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.12499999999999989,
+      "hint_tokens_per_run": 14.4375,
+      "delta_tokens_per_success": 0.2927,
+      "delta_success": -0.0625,
+      "wrong_hint_rate": 0.125
+    },
+    {
+      "tool": "biomcp__gene_cspec",
+      "dataset": "hgnc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.9375,
+      "delta_arg_errors_per_run": -0.04166666666666646,
+      "delta_calls_per_run": -0.1250000000000001,
+      "hint_tokens_per_run": 14.4375,
+      "delta_tokens_per_success": 0.2927,
+      "delta_success": -0.0625,
+      "wrong_hint_rate": 0.125
+    },
+    {
+      "tool": "biomcp__get",
+      "dataset": "hgnc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.9375,
+      "delta_arg_errors_per_run": 0.5625000000000004,
+      "delta_calls_per_run": 0.8958333333333317,
+      "hint_tokens_per_run": 14.4375,
+      "delta_tokens_per_success": 0.2927,
+      "delta_success": -0.0625,
+      "wrong_hint_rate": 0.125
+    },
+    {
+      "tool": "biomcp__search",
+      "dataset": "hgnc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.9375,
+      "delta_arg_errors_per_run": 0.37499999999999933,
+      "delta_calls_per_run": 2.374999999999994,
+      "hint_tokens_per_run": 14.4375,
+      "delta_tokens_per_success": 0.2927,
+      "delta_success": -0.0625,
+      "wrong_hint_rate": 0.125
+    },
+    {
+      "tool": "biomcp__variant_articles",
+      "dataset": "hgnc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.9375,
+      "delta_arg_errors_per_run": -0.10416666666666666,
+      "delta_calls_per_run": -0.14583333333333334,
+      "hint_tokens_per_run": 14.4375,
+      "delta_tokens_per_success": 0.2927,
+      "delta_success": -0.0625,
+      "wrong_hint_rate": 0.125
+    },
+    {
+      "tool": "biomcp__variant_erepo",
+      "dataset": "hgnc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.9375,
+      "delta_arg_errors_per_run": 0.0625,
+      "delta_calls_per_run": 0.1875,
+      "hint_tokens_per_run": 14.4375,
+      "delta_tokens_per_success": 0.2927,
+      "delta_success": -0.0625,
+      "wrong_hint_rate": 0.125
+    },
+    {
+      "tool": "biomcp__variant_normalize_car",
+      "dataset": "hgnc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.9375,
+      "delta_arg_errors_per_run": -0.041666666666666664,
+      "delta_calls_per_run": -0.041666666666666664,
+      "hint_tokens_per_run": 14.4375,
+      "delta_tokens_per_success": 0.2927,
+      "delta_success": -0.0625,
+      "wrong_hint_rate": 0.125
+    },
+    {
+      "tool": "medical__get-article-details",
+      "dataset": "hgnc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.9375,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.12499999999999989,
+      "hint_tokens_per_run": 14.4375,
+      "delta_tokens_per_success": 0.2927,
+      "delta_success": -0.0625,
+      "wrong_hint_rate": 0.125
+    },
+    {
+      "tool": "medical__search-clinical-guidelines",
+      "dataset": "hgnc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.9375,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.04166666666666667,
+      "hint_tokens_per_run": 14.4375,
+      "delta_tokens_per_success": 0.2927,
+      "delta_success": -0.0625,
+      "wrong_hint_rate": 0.125
+    },
+    {
+      "tool": "medical__search-drug-nomenclature",
+      "dataset": "hgnc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.9375,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.27083333333333337,
+      "hint_tokens_per_run": 14.4375,
+      "delta_tokens_per_success": 0.2927,
+      "delta_success": -0.0625,
+      "wrong_hint_rate": 0.125
+    },
+    {
+      "tool": "medical__search-drugs",
+      "dataset": "hgnc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.9375,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.35416666666666685,
+      "hint_tokens_per_run": 14.4375,
+      "delta_tokens_per_success": 0.2927,
+      "delta_success": -0.0625,
+      "wrong_hint_rate": 0.125
+    },
+    {
+      "tool": "medical__search-google-scholar",
+      "dataset": "hgnc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.9375,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.020833333333333315,
+      "hint_tokens_per_run": 14.4375,
+      "delta_tokens_per_success": 0.2927,
+      "delta_success": -0.0625,
+      "wrong_hint_rate": 0.125
+    },
+    {
+      "tool": "medical__search-medical-databases",
+      "dataset": "hgnc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.9375,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.04166666666666667,
+      "hint_tokens_per_run": 14.4375,
+      "delta_tokens_per_success": 0.2927,
+      "delta_success": -0.0625,
+      "wrong_hint_rate": 0.125
+    },
+    {
+      "tool": "medical__search-medical-journals",
+      "dataset": "hgnc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.9375,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.0,
+      "hint_tokens_per_run": 14.4375,
+      "delta_tokens_per_success": 0.2927,
+      "delta_success": -0.0625,
+      "wrong_hint_rate": 0.125
+    },
+    {
+      "tool": "medical__search-medical-literature",
+      "dataset": "hgnc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.9375,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.8333333333333306,
+      "hint_tokens_per_run": 14.4375,
+      "delta_tokens_per_success": 0.2927,
+      "delta_success": -0.0625,
+      "wrong_hint_rate": 0.125
+    },
+    {
+      "tool": "omop__batch_map_concepts_from_csv",
+      "dataset": "hgnc",
+      "mode": "hints",
+      "tasks": 16,
+      "uptake": 0.9375,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.0,
+      "hint_tokens_per_run": 14.4375,
+      "delta_tokens_per_success": 0.2927,
+      "delta_success": -0.0625,
+      "wrong_hint_rate": 0.125
+    },
+    {
+      "tool": "biomcp__biomcp",
+      "dataset": "hgnc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.12499999999999989,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.2548,
+      "delta_success": -0.125,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__gene_cspec",
+      "dataset": "hgnc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.08333333333333354,
+      "delta_calls_per_run": -0.06250000000000011,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.2548,
+      "delta_success": -0.125,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__get",
+      "dataset": "hgnc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.31249999999999956,
+      "delta_calls_per_run": -0.041666666666668295,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.2548,
+      "delta_success": -0.125,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__search",
+      "dataset": "hgnc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.12500000000000067,
+      "delta_calls_per_run": 0.24999999999999378,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.2548,
+      "delta_success": -0.125,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__variant_articles",
+      "dataset": "hgnc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.10416666666666666,
+      "delta_calls_per_run": -0.08333333333333334,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.2548,
+      "delta_success": -0.125,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__variant_erepo",
+      "dataset": "hgnc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 1.3877787807814457e-17,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.2548,
+      "delta_success": -0.125,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__variant_normalize_car",
+      "dataset": "hgnc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.020833333333333336,
+      "delta_calls_per_run": 0.020833333333333336,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.2548,
+      "delta_success": -0.125,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-article-details",
+      "dataset": "hgnc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.12499999999999989,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.2548,
+      "delta_success": -0.125,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-clinical-guidelines",
+      "dataset": "hgnc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.04166666666666667,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.2548,
+      "delta_success": -0.125,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drug-nomenclature",
+      "dataset": "hgnc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.04166666666666666,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.2548,
+      "delta_success": -0.125,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drugs",
+      "dataset": "hgnc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.14583333333333315,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.2548,
+      "delta_success": -0.125,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-google-scholar",
+      "dataset": "hgnc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.7291666666666667,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.2548,
+      "delta_success": -0.125,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-databases",
+      "dataset": "hgnc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.04166666666666667,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.2548,
+      "delta_success": -0.125,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-journals",
+      "dataset": "hgnc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.0625,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.2548,
+      "delta_success": -0.125,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-literature",
+      "dataset": "hgnc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.1458333333333306,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.2548,
+      "delta_success": -0.125,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "omop__batch_map_concepts_from_csv",
+      "dataset": "hgnc",
+      "mode": "tool",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.0,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.2548,
+      "delta_success": -0.125,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__biomcp",
+      "dataset": "hgnc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0625,
+      "delta_calls_per_run": 1.8125,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.012,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__gene_cspec",
+      "dataset": "hgnc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.08333333333333354,
+      "delta_calls_per_run": -1.1102230246251565e-16,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.012,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__get",
+      "dataset": "hgnc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.31249999999999956,
+      "delta_calls_per_run": -0.8541666666666683,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.012,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__search",
+      "dataset": "hgnc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.18749999999999933,
+      "delta_calls_per_run": 0.4374999999999938,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.012,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__variant_articles",
+      "dataset": "hgnc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.04166666666666666,
+      "delta_calls_per_run": -0.020833333333333343,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.012,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__variant_erepo",
+      "dataset": "hgnc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 1.3877787807814457e-17,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.012,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__variant_normalize_car",
+      "dataset": "hgnc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.041666666666666664,
+      "delta_calls_per_run": -0.041666666666666664,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.012,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-article-details",
+      "dataset": "hgnc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.3749999999999999,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.012,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-clinical-guidelines",
+      "dataset": "hgnc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.04166666666666667,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.012,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drug-nomenclature",
+      "dataset": "hgnc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.04166666666666666,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.012,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drugs",
+      "dataset": "hgnc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.39583333333333315,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.012,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-google-scholar",
+      "dataset": "hgnc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.020833333333333315,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.012,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-databases",
+      "dataset": "hgnc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.10416666666666667,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.012,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-journals",
+      "dataset": "hgnc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.0,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.012,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-literature",
+      "dataset": "hgnc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.3958333333333306,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.012,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "omop__batch_map_concepts_from_csv",
+      "dataset": "hgnc",
+      "mode": "rewrite",
+      "tasks": 16,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.0,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.012,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-health-statistics",
+      "dataset": "countries",
+      "mode": "hints",
+      "tasks": 3,
+      "uptake": 1.0,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 2.5555555555555904,
+      "hint_tokens_per_run": 8.666666666666666,
+      "delta_tokens_per_success": null,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "omop__find_omop_concept",
+      "dataset": "countries",
+      "mode": "hints",
+      "tasks": 3,
+      "uptake": 1.0,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.0,
+      "hint_tokens_per_run": 8.666666666666666,
+      "delta_tokens_per_success": null,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-health-statistics",
+      "dataset": "countries",
+      "mode": "tool",
+      "tasks": 3,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -2.1111111111110765,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": null,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "omop__find_omop_concept",
+      "dataset": "countries",
+      "mode": "tool",
+      "tasks": 3,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.0,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": null,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-health-statistics",
+      "dataset": "countries",
+      "mode": "rewrite",
+      "tasks": 3,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.4444444444444097,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": null,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "omop__find_omop_concept",
+      "dataset": "countries",
+      "mode": "rewrite",
+      "tasks": 3,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.0,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": null,
+      "delta_success": 0.0,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__biomcp",
+      "dataset": "clinvar",
+      "mode": "hints",
+      "tasks": 5,
+      "uptake": 0.6,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.06666666666666667,
+      "hint_tokens_per_run": 37.0,
+      "delta_tokens_per_success": 0.1025,
+      "delta_success": 0.1333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__get",
+      "dataset": "clinvar",
+      "mode": "hints",
+      "tasks": 5,
+      "uptake": 0.6,
+      "delta_arg_errors_per_run": 0.46666666666666606,
+      "delta_calls_per_run": 1.6000000000000043,
+      "hint_tokens_per_run": 37.0,
+      "delta_tokens_per_success": 0.1025,
+      "delta_success": 0.1333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__search",
+      "dataset": "clinvar",
+      "mode": "hints",
+      "tasks": 5,
+      "uptake": 0.6,
+      "delta_arg_errors_per_run": -0.46666666666666606,
+      "delta_calls_per_run": 0.6000000000000014,
+      "hint_tokens_per_run": 37.0,
+      "delta_tokens_per_success": 0.1025,
+      "delta_success": 0.1333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__variant_articles",
+      "dataset": "clinvar",
+      "mode": "hints",
+      "tasks": 5,
+      "uptake": 0.6,
+      "delta_arg_errors_per_run": -0.3333333333333333,
+      "delta_calls_per_run": -0.2666666666666666,
+      "hint_tokens_per_run": 37.0,
+      "delta_tokens_per_success": 0.1025,
+      "delta_success": 0.1333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__variant_erepo",
+      "dataset": "clinvar",
+      "mode": "hints",
+      "tasks": 5,
+      "uptake": 0.6,
+      "delta_arg_errors_per_run": 0.2,
+      "delta_calls_per_run": 0.4,
+      "hint_tokens_per_run": 37.0,
+      "delta_tokens_per_success": 0.1025,
+      "delta_success": 0.1333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__variant_normalize_car",
+      "dataset": "clinvar",
+      "mode": "hints",
+      "tasks": 5,
+      "uptake": 0.6,
+      "delta_arg_errors_per_run": 0.06666666666666668,
+      "delta_calls_per_run": 0.06666666666666668,
+      "hint_tokens_per_run": 37.0,
+      "delta_tokens_per_success": 0.1025,
+      "delta_success": 0.1333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-article-details",
+      "dataset": "clinvar",
+      "mode": "hints",
+      "tasks": 5,
+      "uptake": 0.6,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.06666666666666667,
+      "hint_tokens_per_run": 37.0,
+      "delta_tokens_per_success": 0.1025,
+      "delta_success": 0.1333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-clinical-guidelines",
+      "dataset": "clinvar",
+      "mode": "hints",
+      "tasks": 5,
+      "uptake": 0.6,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.06666666666666667,
+      "hint_tokens_per_run": 37.0,
+      "delta_tokens_per_success": 0.1025,
+      "delta_success": 0.1333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-google-scholar",
+      "dataset": "clinvar",
+      "mode": "hints",
+      "tasks": 5,
+      "uptake": 0.6,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.06666666666666665,
+      "hint_tokens_per_run": 37.0,
+      "delta_tokens_per_success": 0.1025,
+      "delta_success": 0.1333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-literature",
+      "dataset": "clinvar",
+      "mode": "hints",
+      "tasks": 5,
+      "uptake": 0.6,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -1.1333333333333346,
+      "hint_tokens_per_run": 37.0,
+      "delta_tokens_per_success": 0.1025,
+      "delta_success": 0.1333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__biomcp",
+      "dataset": "clinvar",
+      "mode": "tool",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.06666666666666667,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.4212,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__get",
+      "dataset": "clinvar",
+      "mode": "tool",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.46666666666666606,
+      "delta_calls_per_run": 4.263256414560601e-15,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.4212,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__search",
+      "dataset": "clinvar",
+      "mode": "tool",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.733333333333334,
+      "delta_calls_per_run": 1.8000000000000014,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.4212,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__variant_articles",
+      "dataset": "clinvar",
+      "mode": "tool",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.1333333333333333,
+      "delta_calls_per_run": -0.06666666666666661,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.4212,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__variant_erepo",
+      "dataset": "clinvar",
+      "mode": "tool",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.2,
+      "delta_calls_per_run": 0.4,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.4212,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__variant_normalize_car",
+      "dataset": "clinvar",
+      "mode": "tool",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.13333333333333333,
+      "delta_calls_per_run": -0.13333333333333333,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.4212,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-article-details",
+      "dataset": "clinvar",
+      "mode": "tool",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.06666666666666667,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.4212,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-clinical-guidelines",
+      "dataset": "clinvar",
+      "mode": "tool",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.06666666666666667,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.4212,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-google-scholar",
+      "dataset": "clinvar",
+      "mode": "tool",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 1.3333333333333335,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.4212,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-literature",
+      "dataset": "clinvar",
+      "mode": "tool",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 2.8666666666666654,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.4212,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__biomcp",
+      "dataset": "clinvar",
+      "mode": "rewrite",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.06666666666666667,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0393,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__get",
+      "dataset": "clinvar",
+      "mode": "rewrite",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": 1.066666666666666,
+      "delta_calls_per_run": 0.20000000000000426,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0393,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__search",
+      "dataset": "clinvar",
+      "mode": "rewrite",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.06666666666666607,
+      "delta_calls_per_run": 1.4000000000000015,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0393,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__variant_articles",
+      "dataset": "clinvar",
+      "mode": "rewrite",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.1333333333333333,
+      "delta_calls_per_run": -0.06666666666666661,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0393,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__variant_normalize_car",
+      "dataset": "clinvar",
+      "mode": "rewrite",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.13333333333333333,
+      "delta_calls_per_run": -0.13333333333333333,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0393,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-article-details",
+      "dataset": "clinvar",
+      "mode": "rewrite",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.13333333333333336,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0393,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-clinical-guidelines",
+      "dataset": "clinvar",
+      "mode": "rewrite",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.13333333333333336,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0393,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-google-scholar",
+      "dataset": "clinvar",
+      "mode": "rewrite",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.06666666666666665,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0393,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-literature",
+      "dataset": "clinvar",
+      "mode": "rewrite",
+      "tasks": 5,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.06666666666666536,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0393,
+      "delta_success": -0.0667,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__get",
+      "dataset": "omop_eunomia",
+      "mode": "hints",
+      "tasks": 10,
+      "uptake": 0.9,
+      "delta_arg_errors_per_run": 0.06666666666666668,
+      "delta_calls_per_run": 0.06666666666666668,
+      "hint_tokens_per_run": 17.1,
+      "delta_tokens_per_success": -0.2858,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__search",
+      "dataset": "omop_eunomia",
+      "mode": "hints",
+      "tasks": 10,
+      "uptake": 0.9,
+      "delta_arg_errors_per_run": -0.16666666666666666,
+      "delta_calls_per_run": -0.09999999999999983,
+      "hint_tokens_per_run": 17.1,
+      "delta_tokens_per_success": -0.2858,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-article-details",
+      "dataset": "omop_eunomia",
+      "mode": "hints",
+      "tasks": 10,
+      "uptake": 0.9,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.0,
+      "hint_tokens_per_run": 17.1,
+      "delta_tokens_per_success": -0.2858,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-clinical-guidelines",
+      "dataset": "omop_eunomia",
+      "mode": "hints",
+      "tasks": 10,
+      "uptake": 0.9,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.10000000000000002,
+      "hint_tokens_per_run": 17.1,
+      "delta_tokens_per_success": -0.2858,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drug-nomenclature",
+      "dataset": "omop_eunomia",
+      "mode": "hints",
+      "tasks": 10,
+      "uptake": 0.9,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.1333333333333333,
+      "hint_tokens_per_run": 17.1,
+      "delta_tokens_per_success": -0.2858,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drugs",
+      "dataset": "omop_eunomia",
+      "mode": "hints",
+      "tasks": 10,
+      "uptake": 0.9,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.09999999999999928,
+      "hint_tokens_per_run": 17.1,
+      "delta_tokens_per_success": -0.2858,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-databases",
+      "dataset": "omop_eunomia",
+      "mode": "hints",
+      "tasks": 10,
+      "uptake": 0.9,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.03333333333333333,
+      "hint_tokens_per_run": 17.1,
+      "delta_tokens_per_success": -0.2858,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-literature",
+      "dataset": "omop_eunomia",
+      "mode": "hints",
+      "tasks": 10,
+      "uptake": 0.9,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.16666666666666666,
+      "hint_tokens_per_run": 17.1,
+      "delta_tokens_per_success": -0.2858,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "omop__find_omop_concept",
+      "dataset": "omop_eunomia",
+      "mode": "hints",
+      "tasks": 10,
+      "uptake": 0.9,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.09999999999999983,
+      "hint_tokens_per_run": 17.1,
+      "delta_tokens_per_success": -0.2858,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__get",
+      "dataset": "omop_eunomia",
+      "mode": "tool",
+      "tasks": 10,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.033333333333333326,
+      "delta_calls_per_run": -0.033333333333333326,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0615,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__search",
+      "dataset": "omop_eunomia",
+      "mode": "tool",
+      "tasks": 10,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.06666666666666665,
+      "delta_calls_per_run": -0.19999999999999982,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0615,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-article-details",
+      "dataset": "omop_eunomia",
+      "mode": "tool",
+      "tasks": 10,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.0,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0615,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-clinical-guidelines",
+      "dataset": "omop_eunomia",
+      "mode": "tool",
+      "tasks": 10,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.2,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0615,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drug-nomenclature",
+      "dataset": "omop_eunomia",
+      "mode": "tool",
+      "tasks": 10,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.0666666666666667,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0615,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drugs",
+      "dataset": "omop_eunomia",
+      "mode": "tool",
+      "tasks": 10,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.10000000000000071,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0615,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-databases",
+      "dataset": "omop_eunomia",
+      "mode": "tool",
+      "tasks": 10,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.03333333333333333,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0615,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-literature",
+      "dataset": "omop_eunomia",
+      "mode": "tool",
+      "tasks": 10,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.16666666666666666,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0615,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "omop__find_omop_concept",
+      "dataset": "omop_eunomia",
+      "mode": "tool",
+      "tasks": 10,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.09999999999999983,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": 0.0615,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__get",
+      "dataset": "omop_eunomia",
+      "mode": "rewrite",
+      "tasks": 10,
+      "uptake": null,
+      "delta_arg_errors_per_run": -0.033333333333333326,
+      "delta_calls_per_run": -0.033333333333333326,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2843,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "biomcp__search",
+      "dataset": "omop_eunomia",
+      "mode": "rewrite",
+      "tasks": 10,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.13333333333333336,
+      "delta_calls_per_run": -0.09999999999999983,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2843,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__get-article-details",
+      "dataset": "omop_eunomia",
+      "mode": "rewrite",
+      "tasks": 10,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.0,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2843,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-clinical-guidelines",
+      "dataset": "omop_eunomia",
+      "mode": "rewrite",
+      "tasks": 10,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": 0.10000000000000002,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2843,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drug-nomenclature",
+      "dataset": "omop_eunomia",
+      "mode": "rewrite",
+      "tasks": 10,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.033333333333333305,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2843,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-drugs",
+      "dataset": "omop_eunomia",
+      "mode": "rewrite",
+      "tasks": 10,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.5000000000000007,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2843,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-databases",
+      "dataset": "omop_eunomia",
+      "mode": "rewrite",
+      "tasks": 10,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.03333333333333333,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2843,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "medical__search-medical-literature",
+      "dataset": "omop_eunomia",
+      "mode": "rewrite",
+      "tasks": 10,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.06666666666666665,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2843,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    },
+    {
+      "tool": "omop__find_omop_concept",
+      "dataset": "omop_eunomia",
+      "mode": "rewrite",
+      "tasks": 10,
+      "uptake": null,
+      "delta_arg_errors_per_run": 0.0,
+      "delta_calls_per_run": -0.09999999999999983,
+      "hint_tokens_per_run": 0.0,
+      "delta_tokens_per_success": -0.2843,
+      "delta_success": 0.0333,
+      "wrong_hint_rate": 0.0
+    }
+  ],
+  "decision": "decisions/p10@v1",
+  "live": {
+    "live": {
+      "p10-live-baseline": {
+        "runs": 27,
+        "repeats": 1,
+        "success_rate": 0.8148148148148148,
+        "tokens_per_success": 63663.36363636364,
+        "median_tokens": 31901,
+        "p90_tokens": 134717,
+        "trust_mean": 0.9517222222222222,
+        "transient_excluded": 0
+      },
+      "p10-live-chosen": {
+        "runs": 27,
+        "repeats": 1,
+        "success_rate": 0.7407407407407407,
+        "tokens_per_success": 64464.55,
+        "median_tokens": 31041,
+        "p90_tokens": 84426,
+        "trust_mean": 0.9073925925925926,
+        "transient_excluded": 0
+      }
+    },
+    "replay_same_tasks": {
+      "baseline": {
+        "runs": 81,
+        "repeats": 3,
+        "success_rate": 0.8148148148148148,
+        "tokens_per_success": 55396.28787878788,
+        "median_tokens": 36607,
+        "p90_tokens": 86061,
+        "trust_mean": 0.9722839506172839,
+        "transient_excluded": 0
+      },
+      "chosen": {
+        "runs": 81,
+        "repeats": 3,
+        "success_rate": 0.8024691358024691,
+        "tokens_per_success": 52494.584615384614,
+        "median_tokens": 29131,
+        "p90_tokens": 97549,
+        "trust_mean": 0.9254740740740741,
+        "transient_excluded": 0
+      }
+    }
+  }
+}

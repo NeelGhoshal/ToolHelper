@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E acquired mutation oncogenic kinase"
+    ],
+    "limit": 8,
+    "sort": "citations"
+  },
+  "args_key": "bc5ae2539b7deea76097a328931a4cb3a4840ff5cbfd29357af6c852e91e757f",
+  "recorded_at": "2026-11-04T00:15:02.886779+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 7730.959099950269,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E acquired mutation oncogenic kinase, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E acquired mutation oncogenic kinase\" --exclude-retracted --sort citations --source semanticscholar --limit 8 --offset 0` \n \n \nFound 8 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 26462967|2015 American Thyroid Association Management Guidelines for…|Europe PMC|2016-01-01|-|10412| \n|PMID 21252716|International association for the study of lung cancer/ameri…|Europe PMC|2011-02-01|-|3664| \n|PMID 20579941|Integrative genomic profiling of human prostate cancer.|Europe PMC|2010-06-24|-|3167| \n|PMID 42544547|Practical management of BRAF inhibitors in glioma: toxicity…|PubMed|2026-12-01|-|0| \n|PMID 42973333|Clinical and Molecular Outcomes of Dabrafenib/Trametinib-Bas…|PubMed|2026-10-20|-|none| \n|PMID 42720827|Langerhans cell histiocytosis: molecular mechanisms underlyi…|PubTator3, PubMed|2026-09-10|-|0| \n|PMID 42562082|A pathway-dependency framework for acquired resistance to ta…|PubMed|2026-09-01|-|0| \n|PMID 36924302|Challenges and strategies to combat resistance mechanisms in…|PubTator3|2023-04-21|-|none| \n \n \n \nNewest indexed: 2026-11-03 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 26462967\n  biomcp search article -k \"BRAF V600E acquired mutation oncogenic kinase\" --year-min 2010 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 8 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "42957066",
+    "json": true,
+    "sections": [
+      "tldr",
+      "fulltext"
+    ]
+  },
+  "args_key": "690bc047a78896a39a15ab026d83bf3c4cac7bf3948e0cc1f8ad0db33b7fbc44",
+  "recorded_at": "2026-11-03T12:45:57.682834+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 2304.8500000149943,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42957066/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42957066 tldr\",\n      \"biomcp article references 42957066 --limit 3\",\n      \"biomcp article citations 42957066 --limit 3\",\n      \"biomcp article recommendations 42957066 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"fulltext\",\n        \"label\": \"Full Text\",\n        \"outcome\": \"empty\",\n        \"sources\": [\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ]\n  },\n  \"author_completeness\": \"source_limited\",\n  \"author_count\": 5,\n  \"author_source\": \"europepmc\",\n  \"authors\": [\n    \"Go CC\",\n    \"Alcantara ACM\",\n    \"Annie F\",\n    \"Drabish K\",\n    \"Eslami MH.\"\n  ],\n  \"citation_count\": 0,\n  \"date\": \"2026-10-29\",\n  \"doi\": \"10.1016/j.jvs.2026.09.053\",\n  \"full_text_coverage\": {\n    \"attempts\": [\n      {\n        \"cache_state\": \"bypass\",\n        \"coverage\": \"none\",\n        \"outcome\": \"empty\",\n        \"provider\": {\n          \"label\": \"Europe PMC MED XML\",\n          \"source\": \"Europe PMC\"\n        },\n        \"reason\": \"no_content\",\n        \"source_kind\": \"jats_xml\"\n      }\n    ],\n    \"coverage\": \"none\"\n  },\n  \"full_text_note\": \"Full text not available: Article not in PubMed Central\",\n  \"journal\": \"J Vasc Surg\",\n  \"open_access\": false,\n  \"pmid\": \"42957066\",\n  \"publication_type\": \"Research Article\",\n  \"pubtator_fallback\": true,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"empty\",\n      \"sources\": [\n        \"Europe PMC\"\n      ]\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"GLP-1 Receptor Agonists Decrease the Rate of Rupture, Cardiac Events, and Death in Patients with Abdominal Aortic Aneurysms.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

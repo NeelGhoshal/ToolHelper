@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "biomarker": [
+      "BRAF"
+    ],
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "status": "recruiting"
+  },
+  "args_key": "fc905102392a452ae931504f90b65278fd6fb893b006ee760c4ca9a48f373d58",
+  "recorded_at": "2026-11-03T09:28:43.719165+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 147.74560002842918,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 12 of 12 \n \nQuery: condition=melanoma, status=recruiting, biomarker=BRAF \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT03563729|Melanoma Metastasized to…|RECRUITING|2|Malignant Melanoma| \n|NCT06599619|Effects of Anti-PD1 Adjuv…|RECRUITING|-|Melanoma| \n|NCT05727904|Study to Investigate Lifi…|RECRUITING|3|Metastatic Melanoma, Unresectable Melanoma, Melanoma| \n|NCT04903119|Nilotinib Plus Dabrafenib…|RECRUITING|1|Metastatic Melanoma, BRAF Gene Mutation| \n|NCT03340506|Dabrafenib and/or Trameti…|RECRUITING|4|Melanoma, Non Small Cell Lung Cancer, Solid Tu… [abridged; 5 conditions total]| \n|NCT06985056|Reducing Symptom Burden T…|RECRUITING|NA|Malignant Melanoma| \n|NCT06774989|Real-life Pharmacological…|RECRUITING|-|Melanoma (Skin)| \n|NCT06887088|Encorafenib and biNimetin…|RECRUITING|2|Melanoma BRAF V600E/K Mutated, Melanoma and Brain Metastases| \n|NCT07244835|A Study of DEG6498 in Par…|RECRUITING|1|Malignant Neoplasms| \n|NCT04741997|Adjuvant Therapy Based on…|RECRUITING|EARLY_PHASE1|Melanoma Stage III, Melanoma Stage IV, BRAF V600 Mutation| \n|NCT07870265|Detection of the BRAF V60…|RECRUITING|NA|Unresectable Metastatic Melanoma| \n|NCT04913285|A Study to Evaluate KIN-2…|RECRUITING|1|Solid Tumor, Adult, Non-small Cell Lung Cancer, Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-12 of 12 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

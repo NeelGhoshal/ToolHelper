@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "mutation": [
+      "BRAF"
+    ],
+    "status": "recruiting"
+  },
+  "args_key": "ce8578397a824816ba45fc6af8cfb7db17e26af15d7cd8291c86bfaeb466096b",
+  "recorded_at": "2026-11-03T09:28:50.381964+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6654.562300012913,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 25 trial(s) \n \nQuery: condition=melanoma, status=recruiting, mutation=BRAF \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT07221734|Study to Compare Pharmaco…|RECRUITING|3|Advanced (Unresectable or Metastatic) Melanoma| \n|NCT03563729|Melanoma Metastasized to…|RECRUITING|2|Malignant Melanoma| \n|NCT03452774|SYNERGY-AI: Artificial In…|RECRUITING|-|Cancer, Metastatic, Cancer, Cancer of Pancrea… [abridged; 43 conditions total]| \n|NCT06599619|Effects of Anti-PD1 Adjuv…|RECRUITING|-|Melanoma| \n|NCT06425926|Safety and Tolerability S…|RECRUITING|1/2|Melanoma Stage IV, Solid Tumor| \n|NCT07130032|Efficacy And Safety Of An…|RECRUITING|2|Metastatic Non-small Cell Lung Cancer (NSCLC), Metastatic Cutaneous Melanoma| \n|NCT05940311|Versatile Ampification Si…|RECRUITING|-|Liquid Biopsy, Melanoma (Skin), Melanoma Stage III, Melanoma Stage IV| \n|NCT07148245|Symptoms of Immune Checkp…|RECRUITING|-|Cutaneous Melanoma, Cutaneous Melanoma, Stage… [abridged; 4 conditions total]| \n|NCT04729543|MAGE-C2 TCR T Cell Trial…|RECRUITING|1/2|Melanoma, Melanoma, Uveal, Head and Neck Cancer| \n|NCT03888950|Interim FDG PET-CT in Mel…|RECRUITING|NA|Metastatic Melanoma| \n|NCT07440290|DETERMINE Trial Treatment…|RECRUITING|2/3|Haematological Malignancy, Malignant Neoplasm… [abridged; 20 conditions total]| \n|NCT06284590|Study of the Efficacy of…|RECRUITING|2|Melanoma Stage III, Melanoma Stage IV| \n|NCT07718243|Investigating the Combina…|RECRUITING|1/2|Melanoma (Skin Cancer), Non Small Cell Lung Ca… [abridged; 3 conditions total]| \n|NCT07224425|A Study of BI 3810944 in…|RECRUITING|1|Solid Tumours, Melanoma| \n|NCT05859074|A Study of MQ710 With and…|RECRUITING|1|Cutaneous Squamous Cell Carcinoma, SCC - Squa… [abridged; 19 conditions total]| \n|NCT05076760|MEM-288 Oncolytic Virus A…|RECRUITING|1|Solid Tumor, Advanced Cancer, Metastatic Canc… [abridged; 10 conditions total]| \n|NCT04511013|A Study to Compare the Ad…|RECRUITING|2|Acral Lentiginous Melanoma, Clinical Stage IV… [abridged; 7 conditions total]| \n|NCT06743126|SUPRAME-ACTengine® IMA20…|RECRUITING|3|Melanoma, Cutaneous Malignant, Mucosal Melanoma| \n|NCT04903119|Nilotinib Plus Dabrafenib…|RECRUITING|1|Metastatic Melanoma, BRAF Gene Mutation| \n|NCT06889766|NY-ESO-1-redirected T Cel…|RECRUITING|1|Advanced Melanoma, Melanoma Metastatic, Sarcoma| \n|NCT06150664|A Phase 1 of CTX-8371 in…|RECRUITING|1|Non Small Cell Lung Cancer, Triple Negative Br… [abridged; 5 conditions total]| \n|NCT05522660|Immunotherapy or Targeted…|RECRUITING|3|Non-Small Cell Lung Cancer, Melanoma| \n|NCT06488482|Assessment of Short Immun…|RECRUITING|3|High-risk Melanoma| \n|NCT05768178|DETERMINE Trial Treatment…|RECRUITING|2/3|Haematological Malignancy, Melanoma, Thyroid… [abridged; 12 conditions total]| \n|NCT06940739|A Study to Investigate th…|RECRUITING|1/2|Unresectable Melanoma, Metastatic Melanoma, Ocular Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 25 results (total unknown). Use --offset 25 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

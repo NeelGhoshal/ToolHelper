@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR mutation",
+      "lung cancer"
+    ],
+    "limit": 20,
+    "sort": "citations",
+    "source": "pubmed"
+  },
+  "args_key": "237f1f9d0edf3848838e8210c6b7ec29d2bdc0a60b0951d9ce9ec6532406e92e",
+  "recorded_at": "2026-11-03T13:58:53.472224+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3218.7000999692827,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR mutation lung cancer, exclude_retracted=true, sort=citations, source=pubmed \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 20 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42967630|[PD-L1 expression in brain metastatic lung adenocarcinoma: c…|PubMed|2026-11-08|-|none| \n|PMID 42957218|Long-term Disease Control After Probable Endobronchial Small…|PubMed|2026-11-01|-|none| \n|PMID 42968496|Integrated Whole-Genome and RNA Sequencing Analysis of FFPE…|PubMed|2026-11-01|-|none| \n|PMID 42965610|Machine learning-assisted Ti(3)C(2)T(x) MXene/Au@Fe(3)O(4) c…|PubMed|2026-10-31|-|none| \n|PMID 42965979|Transcription activator-like effector base editing delivered…|PubMed|2026-10-29|-|none| \n|PMID 42955151|Spectrum of ocular adverse events associated with first-gene…|PubMed|2026-10-28|-|none| \n|PMID 42955614|Local ablative therapy plus systemic treatment versus system…|PubMed|2026-10-28|-|none| \n|PMID 42957742|ACK1 inhibition suppresses topoisomerase IIα, causing DNA d…|PubMed|2026-10-28|-|none| \n|PMID 42973333|Clinical and Molecular Outcomes of Dabrafenib/Trametinib-Bas…|PubMed|2026-10-20|-|none| \n|PMID 42958288|MRI-based intratumoral and peritumoral heterogeneity for pre…|PubMed|2026-10-17|-|none| \n|PMID 42959092|Simultaneous occurrence of HER2 mutation and PD-L1 high expr…|PubMed|2026-10-15|-|none| \n|PMID 42966193|Stage I Lung Adenocarcinoma in Young Patients (Aged ≤…|PubMed|2026-10-07|-|none| \n|PMID 42964983|Overcoming EGFR Resistance by Monovalent and Bident Inhibito…|PubMed|2026-09-29|-|none| \n|PMID 42972594|Anlotinib combined with almonertinib reverses almonertinib r…|PubMed|2026-08-05|-|none| \n|PMID 42957912|Genomic landscape of EGFR-TKI resistance: from known mechani…|PubMed|2026-08-04|-|none| \n|PMID 42972485|The TGF-β signaling activated by cancer-associated macropha…|PubMed|2026-08-04|-|none| \n|PMID 42958137|Tertiary lymphoid structures in the tumor immune microenviro…|PubMed|2026-08-01|-|none| \n|PMID 42958117|Real-world treatment pattern and clinical outcomes in Chines…|PubMed|2026-07-30|-|none| \n|PMID 42963764|PD-L1 expression across molecular driver subsets in non-smal…|PubMed|2026-07-30|-|none| \n|PMID 42964815|High PD-L1 Expression and Clinical Outcomes of First-Line Os…|PubMed|2026-07-24|-|none| \n \n \n \nNewest indexed: 2026-11-03 (0 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42967630\n  biomcp search article -k \"EGFR mutation lung cancer\" --source pubmed --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-20 of 21370 results. Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

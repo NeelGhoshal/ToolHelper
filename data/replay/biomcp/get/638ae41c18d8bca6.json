@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "PDGFRB",
+    "json": true
+  },
+  "args_key": "638ae41c18d8bca6aa4f44cdd364dc7ee405a0742c35d24c7de0c018c2fc3315",
+  "recorded_at": "2026-11-03T19:51:27.974887+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 256.70859997626394,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"NCBI Gene\",\n        \"url\": \"https://www.ncbi.nlm.nih.gov/gene/5159\"\n      },\n      {\n        \"label\": \"UniProt\",\n        \"url\": \"https://www.uniprot.org/uniprot/P09619\"\n      },\n      {\n        \"label\": \"Ensembl\",\n        \"url\": \"https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000113721\"\n      },\n      {\n        \"label\": \"OMIM\",\n        \"url\": \"https://www.omim.org/entry/173410\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get gene PDGFRB pathways\",\n      \"biomcp get gene PDGFRB ontology\",\n      \"biomcp get gene PDGFRB diseases\",\n      \"biomcp get gene PDGFRB diagnostics\",\n      \"biomcp search diagnostic --gene PDGFRB\",\n      \"biomcp search pgx -g PDGFRB\",\n      \"biomcp search variant -g PDGFRB\",\n      \"biomcp search article -g PDGFRB\",\n      \"biomcp search drug --target PDGFRB\",\n      \"biomcp gene trials PDGFRB\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"identity\",\n        \"label\": \"Identity\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"NCBI Gene / MyGene.info\"\n        ]\n      },\n      {\n        \"key\": \"summary\",\n        \"label\": \"Summary\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"NCBI Gene\"\n        ]\n      },\n      {\n        \"key\": \"aliases\",\n        \"label\": \"Aliases\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"NCBI Gene / MyGene.info\"\n        ]\n      }\n    ],\n    \"suggestions\": [\n      \"biomcp search diagnostic --gene PDGFRB\",\n      \"biomcp search pgx -g PDGFRB\",\n      \"biomcp search variant -g PDGFRB\",\n      \"biomcp search article -g PDGFRB\",\n      \"biomcp search drug --target PDGFRB\",\n      \"biomcp gene trials PDGFRB\"\n    ],\n    \"workflow\": \"mechanism-pathway\",\n    \"workflow_playbook\": \"biomcp skill mechanism-pathway\",\n    \"workflow_rationale\": \"Orient from a mechanism-relevant drug to target and pathway context, then confirm the disease mechanism in review literature.\"\n  },\n  \"aliases\": [\n    \"CD140B\",\n    \"IBGC4\",\n    \"IMF1\",\n    \"JTK12\",\n    \"KOGS\"\n  ],\n  \"clinical_diseases\": [\n    \"bilateral striopallidodentate calcinosis\",\n    \"myofibromatosis, infantile, 1\",\n    \"infantile myofibromatosis\",\n    \"skeletal overgrowth-craniofacial dysmorphism-hyperelastic skin-white matter lesions syndrome\",\n    \"acroosteolysis-keloid-like lesions-premature aging syndrome\"\n  ],\n  \"clinical_drugs\": [\n    \"NINTEDANIB ESYLATE\",\n    \"TIVOZANIB\",\n    \"TANDUTINIB\",\n    \"CEDIRANIB\",\n    \"BECAPLERMIN\"\n  ],\n  \"ensembl_id\": \"ENSG00000113721\",\n  \"entrez_id\": \"5159\",\n  \"gene_type\": \"protein-coding\",\n  \"genomic_coordinates\": {\n    \"coordinate\": \"5:150113839-150186363 (strand: -1)\",\n    \"genome_build\": \"GRCh38\",\n    \"provenance\": \"MyGene.info provider default\",\n    \"source\": \"MyGene.info\"\n  },\n  \"location\": \"5\",\n  \"name\": \"platelet derived growth factor receptor beta\",\n  \"omim_id\": \"173410\",\n  \"section_outcomes\": {\n    \"civic\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"clingen\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"constraint\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"diagnostics\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"diseases\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"disgenet\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"druggability\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"expression\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"funding\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"gencc\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"go\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"hpa\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"interactions\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"ontology\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"pathways\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"protein\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    }\n  },\n  \"summary\": \"The protein encoded by this gene is a cell surface tyrosine kinase receptor for members of the platelet-derived growth factor family. These growth factors are mitogens for cells of mesenchymal origin.\",\n  \"symbol\": \"PDGFRB\",\n  \"uniprot_id\": \"P09619\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,3 +1,4 @@
+import pytest
 from conftest import FakeOpenAIClient, load_fixture
 
 from toolhelper.llm.base import ChatOptions, Message, ToolCall
@@ -72,3 +73,56 @@ def test_profile_timeout_reaches_the_sdk_client():
                          timeout_s=300, max_retries=3)
     client = make_backend(profile).client
     assert client.timeout == 300 and client.max_retries == 3
+
+
+class StallingClient:
+    """Raises the SDK's real transient errors `stalls` times, then answers with a recorded response."""
+
+    def __init__(self, stalls, response):
+        import httpx
+        import openai
+        from openai.types.chat import ChatCompletion
+
+        self.left, self.response, self.requests = stalls, ChatCompletion.model_validate(response), 0
+        req = httpx.Request("POST", "https://integrate.api.nvidia.com/v1/chat/completions")
+        self.errors = [openai.APITimeoutError(request=req),
+                       openai.APIConnectionError(request=req),
+                       openai.InternalServerError("busy", response=httpx.Response(503, request=req), body=None)]
+        from types import SimpleNamespace
+        self.chat = SimpleNamespace(completions=SimpleNamespace(create=self._create))
+
+    def _create(self, **request):
+        self.requests += 1
+        if self.left:
+            self.left -= 1
+            raise self.errors[self.left % len(self.errors)]
+        return self.response
+
+
+def test_stalled_requests_are_retried_until_answered(drug_tool):
+    now, slept = [0.0], []
+
+    def sleep(s):
+        slept.append(s)
+        now[0] += s
+
+    client = StallingClient(5, TOOL_CALL["response"])
+    backend = OpenAICompatBackend("m", client=client, max_wait_s=3600, clock=lambda: now[0], sleep=sleep)
+    result = backend.chat([{"role": "user", "content": "a"}], [drug_tool])
+    assert client.requests == 6 and result.tool_calls  # same request, same turn: nothing restarted
+    assert result.retries == 5 and result.waited_s == sum(slept) and slept == [5, 10, 20, 40, 60]
+
+
+def test_wait_budget_is_the_only_reason_to_give_up(drug_tool):
+    import openai
+
+    now = [0.0]
+
+    def sleep(s):
+        now[0] += s
+
+    backend = OpenAICompatBackend("m", client=StallingClient(10**6, TOOL_CALL["response"]), max_wait_s=300,
+                                  clock=lambda: now[0], sleep=sleep)
+    with pytest.raises(openai.APIError):
+        backend.chat([{"role": "user", "content": "a"}], [drug_tool])
+    assert now[0] >= 300

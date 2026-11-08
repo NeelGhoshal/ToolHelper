@@ -1,0 +1,40 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "82728",
+    "json": true,
+    "sections": [
+      "label",
+      "indications",
+      "approvals",
+      "safety",
+      "targets",
+      "shortage",
+      "regulatory",
+      "xrefs"
+    ]
+  },
+  "args_key": "62383178a4008dd21213acc99085a71cc4cb489eca7202805c33743fc24886cc",
+  "recorded_at": "2026-11-03T22:29:51.856067+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.0369999799877405,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid drug section: xrefs"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "hgvsp": "p.Val600Glu",
+    "json": true,
+    "limit": 10,
+    "query": "BRAF V600E"
+  },
+  "args_key": "f3b225e51bdadf4945b6498d2f49118f0c2b7dec65bff56cfa7a90ceb409193e",
+  "recorded_at": "2026-11-04T00:39:16.572242+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3.837500000372529,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: Invalid argument: Positional \"GENE CHANGE\" conflicts with --hgvsp"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

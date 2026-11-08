@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "CYP2C19",
+    "drug": [
+      "clopidogrel"
+    ],
+    "limit": 10
+  },
+  "args_key": "de16b496f631e155ac5ef78a26ab842895f0e5fb39d8634e2817f1e1df692b9a",
+  "recorded_at": "2026-11-03T23:35:05.341481+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 12434.829800040461,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=CYP2C19, drug=clopidogrel, exclude_retracted=true, sort=relevance, ranking_mode=lexical, ranking_policy=calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --gene CYP2C19 --drug clopidogrel --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42975600|Guided P2Y12 inhibitor selection after rapid CYP2C19 genotyp…|PubMed|2026-11-02|pubmed-rescue + title 1/2|none| \n|PMID 42960585|Beyond CYP2C19: The Lysosome-CMA-SORT1-CES1 Axis as a Potent…|Europe PMC, PubMed|2026-10-30|title 2/2|0| \n|PMID 41338248|CYP2C19 genotype testing for clopidogrel: A guideline develo…|PubTator3|2025-12-03|title 2/2|18| \n|PMID 35140503|Clopidogrel Use and CYP2C19 Genotypes in Patients Undergoing…|PubTator3|2022-02-02|title 2/2|5| \n|PMID 42723528|Association Between CYP2C19 Genotype and P2Y12 Reaction Unit…|Europe PMC|2026-10-01|title 2/2|1| \n|PMID 42973244|Global distribution of CYP2C19 variants in clopidogrel-indic…|PubMed|2026-11-03|title 2/2|0| \n|PMID 36843628|The role of clopidogrel resistance-related genetic and epige…|PubTator3|2023-02-08|title+abstract 2/2|18| \n|PMID 38817377|Computational drug-drug interaction prediction mediated by C…|PubTator3|2024-05-20|title+abstract 2/2|5| \n|PMID 42953922|F2R Polymorphisms and Efficacy of Clopidogrel Initiated With…|Europe PMC, PubMed|2026-10-29|title+abstract 2/2|0| \n|PMID 42807560|Routine CYP2C19 Genotyping, Antiplatelet Prescription Change…|Europe PMC|2026-09-28|title+abstract 2/2|0| \n \n \n \nNewest indexed: 2026-11-03 (0 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42975600\n  biomcp search article -g CYP2C19 --drug clopidogrel --year-min 2022 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

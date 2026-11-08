@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "gene": "EGFR",
+    "json": true,
+    "limit": 10,
+    "significance": "pathogenic"
+  },
+  "args_key": "e865bc7002c02313b1c71a885a41b8657082bfd5c550b54411f2c896dd560356",
+  "recorded_at": "2026-11-04T21:34:59.331886+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 38.33149999991292,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get variant \\\"chr7:g.55225431G>A\\\"\",\n      \"biomcp get gene EGFR\",\n      \"biomcp list variant\"\n    ]\n  },\n  \"count\": 10,\n  \"diagnostics\": [],\n  \"filter_evaluation\": {\n    \"gene\": \"evaluated\",\n    \"significance\": \"evaluated\"\n  },\n  \"pagination\": {\n    \"has_more\": true,\n    \"limit\": 10,\n    \"next_page_token\": null,\n    \"offset\": 0,\n    \"returned\": 10,\n    \"total\": 88\n  },\n  \"results\": [\n    {\n      \"clinvar_stars\": 1,\n      \"gene\": \"EGFR\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.93,\n      \"gnomad_af\": 3.97652e-6,\n      \"hgvs_c\": \"c.1283G>A\",\n      \"hgvs_p\": \"p.Gly428Asp\",\n      \"id\": \"chr7:g.55225431G>A\",\n      \"legacy_name\": \"EGFR G428D\",\n      \"revel\": 0.914,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_005228.5\"\n    },\n    {\n      \"clinvar_stars\": 1,\n      \"gene\": \"EGFR\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 4.92,\n      \"gnomad_af\": 3.97662e-6,\n      \"hgvs_c\": \"c.763C>T\",\n      \"hgvs_p\": \"p.Arg255*\",\n      \"id\": \"chr7:g.55221719C>T\",\n      \"legacy_name\": \"EGFR R255stop\",\n      \"revel\": null,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_005228.5\"\n    },\n    {\n      \"clinvar_stars\": 0,\n      \"gene\": \"EGFR\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.85,\n      \"hgvs_c\": \"c.2287G>A\",\n      \"hgvs_p\": \"p.Ala763Thr\",\n      \"id\": \"chr7:g.55248989G>A\",\n      \"legacy_name\": \"EGFR A763T\",\n      \"revel\": 0.562,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_005228.5\"\n    },\n    {\n      \"clinvar_stars\": 1,\n      \"gene\": \"EGFR\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.85,\n      \"hgvs_c\": \"c.2303G>T\",\n      \"hgvs_p\": \"p.Ser768Ile\",\n      \"id\": \"chr7:g.55249005G>T\",\n      \"legacy_name\": \"EGFR S768I\",\n      \"revel\": 0.765,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_005228.5\"\n    },\n    {\n      \"clinvar_stars\": 0,\n      \"gene\": \"EGFR\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.82,\n      \"hgvs_c\": \"c.2561C>T\",\n      \"hgvs_p\": \"p.Thr854Ile\",\n      \"id\": \"chr7:g.55259503C>T\",\n      \"legacy_name\": \"EGFR T854I\",\n      \"revel\": 0.891,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_005228.5\"\n    },\n    {\n      \"clinvar_stars\": 1,\n      \"gene\": \"EGFR\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 4.74,\n      \"hgvs_c\": \"c.877A>T\",\n      \"hgvs_p\": \"p.Lys293*\",\n      \"id\": \"chr7:g.55221833A>T\",\n      \"legacy_name\": \"EGFR K293stop\",\n      \"revel\": null,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_005228.5\"\n    },\n    {\n      \"clinvar_stars\": 1,\n      \"gene\": \"EGFR\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.67,\n      \"hgvs_c\": \"c.1430G>A\",\n      \"hgvs_p\": \"p.Trp477*\",\n      \"id\": \"chr7:g.55227963G>A\",\n      \"legacy_name\": \"EGFR W477stop\",\n      \"revel\": null,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_005228.5\"\n    },\n    {\n      \"clinvar_stars\": 1,\n      \"gene\": \"EGFR\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 0.83,\n      \"hgvs_c\": \"c.1605C>A\",\n      \"hgvs_p\": \"p.Cys535*\",\n      \"id\": \"chr7:g.55229298C>A\",\n      \"legacy_name\": \"EGFR C535stop\",\n      \"revel\": null,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_005228.5\"\n    },\n    {\n      \"clinvar_stars\": 1,\n      \"gene\": \"EGFR\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.7,\n      \"hgvs_c\": \"c.2650G>T\",\n      \"hgvs_p\": \"p.Glu884*\",\n      \"id\": \"chr7:g.55260483G>T\",\n      \"legacy_name\": \"EGFR E884stop\",\n      \"revel\": null,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_005228.5\"\n    },\n    {\n      \"clinvar_stars\": 1,\n      \"gene\": \"EGFR\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.13,\n      \"hgvs_c\": \"c.2720T>A\",\n      \"hgvs_p\": \"p.Leu907*\",\n      \"id\": \"chr7:g.55266428T>A\",\n      \"legacy_name\": \"EGFR L907stop\",\n      \"revel\": null,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_005228.5\"\n    }\n  ]\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

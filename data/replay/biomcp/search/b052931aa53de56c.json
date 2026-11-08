@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "imatinib"
+    ],
+    "entity": "article",
+    "limit": 25
+  },
+  "args_key": "b052931aa53de56c8cd5aa6800b19632b0af45148d68f078dc0eed05a413f5d3",
+  "recorded_at": "2026-11-03T08:05:05.516433+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 12869.86259999685,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=imatinib, exclude_retracted=true, sort=relevance, ranking_mode=lexical, ranking_policy=calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nEurope PMC source status: degraded (Europe PMC search degraded: API request to Europe PMC failed. Retry the remote source.) \nRetry: `biomcp search article --drug imatinib --exclude-retracted --sort relevance --source europepmc --limit 25 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --drug imatinib --exclude-retracted --sort relevance --source semanticscholar --limit 25 --offset 0` \n \n \nFound 25 articles \n \n \nSemantic Scholar: enabled \n \nRanking: calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42813090|Generic versus branded imatinib in frontline chronic myeloid…|Europe PMC|2026-09-29|title 1/1|0| \n|PMID 35960131|Complete response of advanced rectal gastrointestinal stroma…|PubTator3|2022-08-12|title 1/1|none| \n|PMID 42910559|Drug-drug interaction between vonoprazan and imatinib: in vi…|Europe PMC, PubMed|2026-10-30|title 1/1|0| \n|PMID 42895164|Imatinib-Based Derivative: Synthesis, Computational Modeling…|Europe PMC|2026-10-14|title 1/1|0| \n|PMID 42957582|Correction to \"Impact of Imatinib Therapy on Immunometabolis…|Europe PMC, PubMed|2026-11-01|title 1/1|0| \n|PMID 42962084|Assessment of Interpatient and Intrapatient Variability of D…|Europe PMC, PubMed|2026-10-30|title 1/1|0| \n|PMID 42940003|Imatinib Resistance in Chronic Myeloid Leukemia Is Associate…|Europe PMC, PubMed|2026-09-28|title 1/1|0| \n|PMID 42849149|Functional substitution of imatinib-inactivated canonical on…|Europe PMC|2026-10-06|title 1/1|0| \n|PMID 42910848|A 5-Metabolite Plasma Panel Predicts Progression-Free Surviv…|Europe PMC, PubMed|2026-10-21|title 1/1|0| \n|PMID 42786390|Pre-progression Surgery Added to Imatinib is Associated with…|Europe PMC|2026-09-24|title 1/1|0| \n|PMID 33876424|How much imatinib is enough?|PubTator3|2021-05-01|title 1/1|none| \n|PMID 33628019|In vivo Pharmacokinetics and in vitro Release of Imatinib Me…|PubTator3|2021-02-16|title 1/1|none| \n|PMID 35669281|Determination of the Cut-off Value for Imatinib Plasma Level…|PubTator3|2022-05-30|title 1/1|none| \n|PMID 37296838|Measuring Tumour Imatinib Concentrations in Gastrointestinal…|PubTator3|2023-05-23|title 1/1|none| \n|PMID 37079223|Improved Efficacy of First-Line Imatinib in Advanced Gastroi…|PubTator3|2023-05-01|title 1/1|none| \n|PMID 42951702|Subclonal AGGF1::PDGFRB rearrangement in a myelodysplastic/m…|PubMed|2026-10-10|title 1/1|0| \n|PMID 42961548|Pancreatic gastrointestinal stromal tumor: a case report and…|PubMed|2026-10-30|-|0| \n|PMID 42961021|Neoadjuvant Therapy in Mohs Surgery: A Scoping Review of the…|PubMed|2026-11-02|-|0| \n|PMID 42905366|Clinical outcomes and germline implications of primary KIT e…|Europe PMC|2026-10-21|-|0| \n|PMID 42963063|Malignant histiocytic neoplasm with dendritic differentiatio…|PubMed|2026-10-30|-|0| \n|PMID 34885012|Regulatory T Cell as a Biomarker of Treatment-Free Remission…|PubTator3|2021-11-24|-|none| \n|PMID 42962804|Organic Anion Transporting Polypeptides in Cancer: Biologica…|PubMed|2026-10-30|-|0| \n|PMID 36918528|Current CML guidelines overemphasize second generation TKIs:…|PubTator3|2023-03-15|-|none| \n|PMID 42959738|Mapping the immune microenvironment of KIT- and PDGFRA-mutan…|PubMed|2026-10-15|-|0| \n|PMID 41741599|Magnetic molecularly imprinted polymer coated with chitosan…|PubTator3|2026-02-25|-|none| \n \n \n \nNewest indexed: 2026-10-31 (3 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42813090\n  biomcp search article --drug imatinib --year-min 2021 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 25 results (total unknown). Use --offset 25 for more. \n \n\nCache note: Europe PMC data served from cache, 1 h old (older than the provider's freshness window).\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

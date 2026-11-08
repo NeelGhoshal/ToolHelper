@@ -1,0 +1,44 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "BRAF",
+    "json": true,
+    "sections": [
+      "protein",
+      "go",
+      "interactions",
+      "civic",
+      "hpa",
+      "disgenet",
+      "gencc",
+      "clingen",
+      "cbioportal",
+      "predictions",
+      "population",
+      "conservation"
+    ]
+  },
+  "args_key": "25933b9f29e8bdb8f1890d7f51ae4d8e9f822ea9ebb5e69db358ccbc00875f6d",
+  "recorded_at": "2026-11-03T12:58:33.926348+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 0.7532999734394252,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: cbioportal"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

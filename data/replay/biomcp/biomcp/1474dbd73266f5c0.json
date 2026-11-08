@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp get article 42957066 fulltext --json",
+    "json": true
+  },
+  "args_key": "1474dbd73266f5c05f31cb65326299afe34da7e6e8ad6167e1440d67aa3af093",
+  "recorded_at": "2026-11-03T14:30:27.543101+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 1774.5716000208631,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42957066/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp article references 42957066 --limit 3\",\n      \"biomcp article citations 42957066 --limit 3\",\n      \"biomcp article recommendations 42957066 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"fulltext\",\n        \"label\": \"Full Text\",\n        \"outcome\": \"empty\",\n        \"sources\": [\n          \"Europe PMC\"\n        ]\n      }\n    ]\n  },\n  \"author_completeness\": \"source_limited\",\n  \"author_count\": 5,\n  \"author_source\": \"europepmc\",\n  \"authors\": [\n    \"Go CC\",\n    \"Alcantara ACM\",\n    \"Annie F\",\n    \"Drabish K\",\n    \"Eslami MH.\"\n  ],\n  \"citation_count\": 0,\n  \"date\": \"2026-10-29\",\n  \"doi\": \"10.1016/j.jvs.2026.09.053\",\n  \"full_text_coverage\": {\n    \"attempts\": [\n      {\n        \"cache_state\": \"bypass\",\n        \"coverage\": \"none\",\n        \"outcome\": \"empty\",\n        \"provider\": {\n          \"label\": \"Europe PMC MED XML\",\n          \"source\": \"Europe PMC\"\n        },\n        \"reason\": \"no_content\",\n        \"source_kind\": \"jats_xml\"\n      }\n    ],\n    \"coverage\": \"none\"\n  },\n  \"full_text_note\": \"Full text not available: Article not in PubMed Central\",\n  \"journal\": \"J Vasc Surg\",\n  \"open_access\": false,\n  \"pmid\": \"42957066\",\n  \"publication_type\": \"Research Article\",\n  \"pubtator_fallback\": true,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"empty\",\n      \"sources\": [\n        \"Europe PMC\"\n      ]\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"GLP-1 Receptor Agonists Decrease the Rate of Rupture, Cardiac Events, and Death in Patients with Abdominal Aortic Aneurysms.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

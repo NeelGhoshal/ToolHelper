@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR",
+      "T790M",
+      "resistance"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "1639895f2c0776188c1eae58bbba680868f2abe441b0a6aaae8c09cc43fc825a",
+  "recorded_at": "2026-11-03T13:05:02.450328+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4978.730499977246,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR T790M resistance, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR T790M resistance\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 29151359|Osimertinib in Untreated EGFR-Mutated Advanced Non-Small-Cel…|Europe PMC|2017-11-18|-|4492| \n|PMID 21252716|International association for the study of lung cancer/ameri…|Europe PMC|2011-02-01|-|3664| \n|PMID 27959700|Osimertinib or Platinum-Pemetrexed in EGFR T790M-Positive Lu…|Europe PMC|2016-12-06|-|2833| \n|PMID 21430269|Genotypic and histological evolution of lung cancers acquiri…|Europe PMC|2011-03-01|-|2797| \n|PMID 42965610|Machine learning-assisted Ti(3)C(2)T(x) MXene/Au@Fe(3)O(4) c…|PubMed|2026-10-31|-|0| \n|PMID 42868668|Design, synthesis and biological evaluation of novel aminopy…|PubMed|2026-10-10|-|0| \n|PMID 42888981|Early disease control with a biochemical response to aumoler…|PubMed|2026-10-01|-|0| \n|PMID 42871070|Dacomitinib With or Without Dose Titration in Treatment-Naiv…|PubMed|2026-06-01|-|0| \n|PMID 35785185|Efficacy of Osimertinib in EGFR-Mutated Advanced Non-small-C…|PubTator3|2022-06-07|-|none| \n|PMID 35462930|Acquired Concurrent EGFR T790M and Driver Gene Resistance Fr…|PubTator3|2022-04-06|-|none| \n \n \n \nNewest indexed: 2026-10-31 (3 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 29151359\n  biomcp search article -k \"EGFR T790M resistance\" --year-min 2011 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

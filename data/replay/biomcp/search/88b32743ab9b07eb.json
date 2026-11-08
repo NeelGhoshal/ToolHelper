@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "pgx",
+    "drug": [
+      "vemurafenib",
+      "dabrafenib",
+      "encorafenib"
+    ],
+    "gene": "BRAF",
+    "json": true,
+    "limit": 10
+  },
+  "args_key": "88b32743ab9b07ebece74cdad8c480ffde6f8d2756af5e5ddad62af429599cb0",
+  "recorded_at": "2026-11-03T19:46:02.421325+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4.23590000718832,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: error: the argument '--drug <DRUG>' cannot be used multiple times\n\nUsage: biomcp search pgx [OPTIONS] [QUERY]\n\nFor more information, try '--help'.\n"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

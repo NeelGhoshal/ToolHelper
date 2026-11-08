@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "I10 essential primary hypertension ICD-10",
+    "max_results": 10,
+    "omop_field": "condition_concept_id",
+    "omop_table": "condition_occurrence"
+  },
+  "args_key": "2bf4a7f01cd34b1b634dbe35b727c3d02277caaf6a4f486f2d1a399864cfd780",
+  "recorded_at": "2026-11-03T06:29:51.082101+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 541.8301999452524,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"error\": \"No results found for keyword 'I10 essential primary hypertension ICD-10'. The search term may not exist in the OMOP vocabulary.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

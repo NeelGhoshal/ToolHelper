@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "Zoloft",
+    "sections": [
+      "concomitant",
+      "events",
+      "drug_response",
+      "domains"
+    ]
+  },
+  "args_key": "e2fbb0d65960d91c8fb26b5947c2f14fcca6ef6d8211d1d958c6dc58073db9e2",
+  "recorded_at": "2026-11-03T21:47:17.204681+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.1427000863477588,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid drug section: concomitant"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

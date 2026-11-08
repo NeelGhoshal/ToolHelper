@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "query": "BRAF"
+  },
+  "args_key": "dd54e8ebe2b2c6bff94a565c16b1c860402ec5e8803ac3c16fbd8ab49193c0c1",
+  "recorded_at": "2026-11-04T05:34:43.001876+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 36.01929999422282,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: BRAF \n \nFound 1 gene \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| BRAF | B-Raf proto-oncogene, serine/threonine kinase | 673 | 7:140719327-140925199 | GRCh38 | P15056 | 164757 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1 of 1 results. \n \n\n\n## Next commands\n- `biomcp get gene BRAF`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

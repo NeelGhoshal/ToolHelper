@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "acetaminophen 500 MG Oral Tablet",
+    "max_results": 10,
+    "omop_field": "drug_concept_id",
+    "omop_table": "drug_exposure"
+  },
+  "args_key": "ccd55d0bfdf1a741db5260ece9585e25929b43d0819df407eacd90f3c53f8623",
+  "recorded_at": "2026-11-03T06:45:15.929785+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1021.4113999973051,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 19020053,\n      \"code\": \"198440\",\n      \"name\": \"acetaminophen 500 MG Oral Tablet\",\n      \"class\": \"Clinical Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19020053\"\n    },\n    {\n      \"concept_id\": 21084383,\n      \"code\": \"OMOP406649\",\n      \"name\": \"Acetaminophen 500 MG Oral Tablet by DE\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/21084383\"\n    },\n    {\n      \"concept_id\": 2932509,\n      \"code\": \"OMOP5149268\",\n      \"name\": \"acetaminophen 500 MG Oral Tablet by APO\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/2932509\"\n    },\n    {\n      \"concept_id\": 44039136,\n      \"code\": \"OMOP1033767\",\n      \"name\": \"Acetaminophen 500 MG Oral Tablet by Gfr\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/44039136\"\n    },\n    {\n      \"concept_id\": 37593490,\n      \"code\": \"OMOP4782927\",\n      \"name\": \"Acetaminophen 500 MG Oral Tablet by GIB\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/37593490\"\n    },\n    {\n      \"concept_id\": 857705,\n      \"code\": \"OMOP5580632\",\n      \"name\": \"acetaminophen 500 MG Oral Tablet by Key\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/857705\"\n    },\n    {\n      \"concept_id\": 44090882,\n      \"code\": \"OMOP1085513\",\n      \"name\": \"Acetaminophen 500 MG Oral Tablet by Zee\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/44090882\"\n    },\n    {\n      \"concept_id\": 19041464,\n      \"code\": \"209443\",\n      \"name\": \"acetaminophen 500 MG Oral Tablet [Mapap]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19041464\"\n    },\n    {\n      \"concept_id\": 35872113,\n      \"code\": \"OMOP5028865\",\n      \"name\": \"acetaminophen 500 MG Oral Tablet [Binuo]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/35872113\"\n    },\n    {\n      \"concept_id\": 40721524,\n      \"code\": \"OMOP4735659\",\n      \"name\": \"Acetaminophen 500 MG Oral Tablet by Bell\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/40721524\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"acetaminophen 500 MG Oral Tablet\",\n    \"omop_table\": \"drug_exposure\",\n    \"omop_field\": \"drug_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

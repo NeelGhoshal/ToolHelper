@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "get article 30045255",
+    "json": true
+  },
+  "args_key": "2d0e55f63bc4e0d3566f5fdea8566599b56d04ccf60320442e26c1b5af657eab",
+  "recorded_at": "2026-11-03T07:38:10.960550+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 1977.170699974522,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/30045255/\"\n      },\n      {\n        \"label\": \"PMC\",\n        \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC6078755/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 30045255 tldr\",\n      \"biomcp article entities 30045255\",\n      \"biomcp search disease --query dementia\",\n      \"biomcp search disease --query AD\",\n      \"biomcp article references 30045255 --limit 3\",\n      \"biomcp article citations 30045255 --limit 3\",\n      \"biomcp article recommendations 30045255 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"annotations\",\n        \"label\": \"PubTator Annotations\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ],\n    \"workflow\": \"article-follow-up\",\n    \"workflow_playbook\": \"biomcp skill article-follow-up\",\n    \"workflow_rationale\": \"Use article annotations first, then citation and recommendation graph pivots for efficient literature expansion.\"\n  },\n  \"abstract_text\": \"Previous studies have indicated that statins use is associated with risk of dementia, but presented controversial results. Medline, Embase, Web of Science, and the Cochrane Database were searched update to November 2017 to identify the potential relationship between statins use and dementia. Thirty-one eligible studies involving a total of 3332,706 participants with 184,666 incident cases were included in this meta-analysis. Statins use was associated with dementia risk decrement (relevant risk [RR]: 0.85; 95% confidence interval [CI], 0.80-0.89). Subgroup analysis showed statins use was associated with Alzheimer disease (AD) (RR: 0.81; 95% CI, 0.73-0.89) and non-AD dementia (RR: 0.81; 95% CI, 0.73-0.89) risk decrement. Furthermore, statins use was associated with dementia risk decrement in female (RR: 0.89; 95% CI, 0.80-0.98) and male (RR: 0.88; 95% CI, 0.83-0.93). In addition, a dose-response showed per 1 year of duration of statins use incremental increase was associated with 20% dementia risk decrement (RR: 0.80; 95% CI, 0.73-0.87), and per 5-mg mean daily dose incremental increase in statins use was associated with 11% dementia risk decrement (RR: 0.89; 95% CI, 0.83-0.96). Statins use was associated with dementia risk decrement. The potency and the cumulative duration of statin utilized played critical roles.\",\n  \"annotations\": {\n    \"diseases\": [\n      {\n        \"count\": 9,\n        \"identifier\": \"MESH:D003704\",\n        \"name\": \"Dementia\",\n        \"namespace\": \"MESH\",\n        \"text\": \"dementia\"\n      },\n      {\n        \"count\": 2,\n        \"identifier\": \"MESH:D000544\",\n        \"name\": \"Alzheimer Disease\",\n        \"namespace\": \"MESH\",\n        \"text\": \"AD\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"MESH:D000544\",\n        \"name\": \"Alzheimer Disease\",\n        \"namespace\": \"MESH\",\n        \"text\": \"Alzheimer disease\"\n      }\n    ]\n  },\n  \"author_completeness\": \"complete\",\n  \"author_count\": 3,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Zhang X\",\n    \"Wen J\",\n    \"Zhang Z\"\n  ],\n  \"citation_count\": 67,\n  \"date\": \"2018-07-01\",\n  \"doi\": \"10.1097/md.0000000000011304\",\n  \"journal\": \"Medicine (Baltimore)\",\n  \"open_access\": true,\n  \"pmcid\": \"PMC6078755\",\n  \"pmid\": \"30045255\",\n  \"publication_type\": \"Meta-Analysis\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"Statins use and risk of dementia: A dose-response meta analysis.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

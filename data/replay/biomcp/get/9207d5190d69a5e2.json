@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "202433",
+    "json": true
+  },
+  "args_key": "9207d5190d69a5e2350c0a098e8362fa7f112d696b03a5f41fc8c007e42f0928",
+  "recorded_at": "2026-11-03T22:48:03.696844+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 2901.5178000554442,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"error\": {\n    \"code\": \"not_found\",\n    \"message\": \"No exact drug match for '202433'.\"\n  },\n  \"_meta\": {\n    \"not_found\": true,\n    \"alias_resolution\": {\n      \"kind\": \"ambiguous\",\n      \"requested_entity\": \"drug\",\n      \"query\": \"202433\",\n      \"candidates\": [\n        {\n          \"label\": \"Epoxyquinol A\",\n          \"primary_type\": \"drug\",\n          \"primary_id\": \"CHEBI:202433\",\n          \"confidence\": \"CanonicalId\",\n          \"match_tier\": \"Weak\"\n        }\n      ]\n    },\n    \"next_commands\": [\n      \"biomcp discover 202433\",\n      \"biomcp search drug -q 202433\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

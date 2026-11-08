@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E",
+      "melanoma",
+      "targeted therapy"
+    ],
+    "limit": 8,
+    "sort": "citations"
+  },
+  "args_key": "cf613eddb527a55e447f5391116e287286b1eceac55dc536d7a91f47ff1b3b57",
+  "recorded_at": "2026-11-05T04:37:57.412144+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 12302.474600001005,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E melanoma targeted therapy, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed search unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E melanoma targeted therapy\" --exclude-retracted --sort citations --source pubmed --limit 8 --offset 0` \nEurope PMC source status: degraded (Europe PMC timed out after 12s) \nRetry: `biomcp search article --keyword \"BRAF V600E melanoma targeted therapy\" --exclude-retracted --sort citations --source europepmc --limit 8 --offset 0` \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E melanoma targeted therapy\" --exclude-retracted --sort citations --source semanticscholar --limit 8 --offset 0` \n \n \nFound 8 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 33747149|BRAF, MEK and EGFR inhibition as treatment strategies in BRA…|PubTator3|2021-02-22|-|64| \n|PMID 36324735|Systemic adjuvant therapy for high-risk cutaneous melanoma|PubTator3|2022-10-28|-|25| \n|PMID 38136350|The Targeted Degradation of BRAF V600E Reveals the Mechanism…|PubTator3|2023-12-12|-|13| \n|PMID 36299811|BRAF V600E Immunohistochemistry Predicts Prognosis of Patien…|PubTator3|2022-10-24|-|5| \n|PMID 34703985|BRAF V600 Mutation Detection in Plasma Cell-Free DNA: NCCTG…|PubTator3|2021-10-13|-|5| \n|PMID 37065875|A Unique Case of Intracranial Amelanotic Melanoma with BRAF…|PubTator3|2023-03-24|-|3| \n|PMID 36277559|Incidence of BRAF V600E Gene Mutation Among Lebanese Populat…|PubTator3|2022-09-19|-|1| \n|PMID 37156689|The association of BRAF V600E gene mutation with proliferati…|PubTator3|2023-05-06|-|none| \n \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 33747149\n  biomcp search article -k \"BRAF V600E melanoma targeted therapy\" --year-min 2021 --year-max 2023 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 8 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

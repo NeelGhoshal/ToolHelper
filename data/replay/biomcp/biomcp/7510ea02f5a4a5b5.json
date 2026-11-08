@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "get gene TP53 disgenet --json 2>/dev/null | head -c 4000",
+    "json": true
+  },
+  "args_key": "7510ea02f5a4a5b5536d5603cbf7f7ac7f1c79538ba9c7123390767af0dc6d18",
+  "recorded_at": "2026-11-03T13:08:03.335404+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 2.496899978723377,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: Invalid argument: Unknown section \"2>/dev/null\" for gene. Available: pathways, ontology, diseases, diagnostics, protein, go, interactions, civic, expression, hpa, druggability, clingen, gencc, constraint, disgenet, funding, all"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "metformin",
+    "sections": [
+      "xrefs",
+      "label",
+      "approvals",
+      "indications"
+    ]
+  },
+  "args_key": "366e2de6015d6c445b03b29ad1ef81a84f02831ffc063546340bf2a94b398e7f",
+  "recorded_at": "2026-11-03T21:58:32.345103+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.8088000360876322,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid drug section: xrefs"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

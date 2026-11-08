@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "GLP-1 receptor agonists abdominal aortic aneurysm"
+    ],
+    "limit": 5
+  },
+  "args_key": "b623d4dd345843604fb5594de451ce30adfd68ec2ab4bb6c07a74b1ac16b5ffe",
+  "recorded_at": "2026-11-03T12:19:36.879129+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4050.4260000307113,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=GLP-1 receptor agonists abdominal aortic aneurysm, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"GLP-1 receptor agonists abdominal aortic aneurysm\" --exclude-retracted --sort relevance --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42957066|GLP-1 Receptor Agonists Decrease the Rate of Rupture, Cardia…|Europe PMC, PubMed|2026-10-29|hybrid 0.33 + title 5/6|0| \n|PMID 42342001|Tirzepatide, a dual GIP/GLP-1 receptor agonist, attenuates e…|PubTator3, Europe PMC, PubMed|2026-06-24|hybrid 0.303 + title 5/6|0| \n|PMID 37145254|Glucagon-Like Peptide-1 Inhibits the Progression of Abdomina…|PubTator3|2023-05-05|hybrid 0.21 + title 3/6|none| \n|PMID 40963159|Beyond Glycemic Control: Glucagon-Like Peptide-1 Receptor Ag…|PubTator3|2025-09-18|hybrid 0.19 + title 3/6|none| \n|PMID 42288888|Perivascular adipokine signaling in abdominal aortic aneurys…|Europe PMC, PubMed|2026-06-13|hybrid 0.17 + title 3/6|0| \n \n \n \nNewest indexed: 2026-10-30 (4 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42957066\n  biomcp search article -k \"GLP-1 receptor agonists abdominal aortic aneurysm\" --year-min 2023 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

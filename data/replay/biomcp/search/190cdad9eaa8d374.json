@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "BRAF",
+    "keyword": [
+      "V600E",
+      "review"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "190cdad9eaa8d374715719ac7372c8a1b3369889e1f09418341264d6be3eafb8",
+  "recorded_at": "2026-11-05T05:26:52.245959+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6930.973900001845,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=BRAF, keyword=V600E review, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed search unavailable) \nRetry: `biomcp search article --gene BRAF --keyword \"V600E review\" --exclude-retracted --sort citations --source pubmed --limit 10 --offset 0` \nEurope PMC source status: degraded (Europe PMC search unavailable) \nRetry: `biomcp search article --gene BRAF --keyword \"V600E review\" --exclude-retracted --sort citations --source europepmc --limit 10 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene BRAF --keyword \"V600E review\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 40421333|Hairy Cell Leukemia and Its Mimics: A Case-Based Exploration…|PubTator3|2025-04-26|-|none| \n|PMID 39449865|The Co-Occurrence of Medullary and Papillary Thyroid Carcino…|PubTator3|2024-10-17|-|none| \n|PMID 39072179|BRAF K601E-mutated metastatic colorectal cancer in response…|PubTator3|2024-07-15|-|none| \n|PMID 38376733|Molecular Mutations in Histiocytosis: A Comprehensive Survey…|PubTator3|2024-02-20|-|none| \n|PMID 38371183|Relationship of Recurrence Rate with some Characteristics in…|PubTator3|2023-11-01|-|none| \n|PMID 36596981|Differential profile of primary and recurrent ameloblastomas…|PubTator3|2023-01-03|-|none| \n|PMID 36428683|BRAF V600E Mutation in Ameloblastoma: A Systematic Review an…|PubTator3|2022-11-14|-|none| \n|PMID 35812780|Encorafenib plus cetuximab for the treatment of BRAF-V600E-m…|PubTator3|2022-07-04|-|none| \n|PMID 34156770|Increased diagnostic sensitivity of palpation-guided thyroid…|PubTator3|2021-11-01|-|none| \n|PMID 33779771|Radiohistogenomics of pediatric low-grade neuroepithelial tu…|PubTator3|2021-08-01|-|none| \n \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 40421333\n  biomcp search article -g BRAF -k \"V600E review\" --year-min 2021 --year-max 2025 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

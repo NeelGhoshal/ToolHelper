@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "get drug \"sertraline hydrochloride\" label dosage",
+    "json": true
+  },
+  "args_key": "a3af1dfc1daa81d88493976b22ee57102cb0da11f4557639076083c33d79858b",
+  "recorded_at": "2026-11-04T20:31:25.849838+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 6.806600000004437,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: Invalid argument: Unknown section \"dosage\" for drug. Available: label, regulatory, safety, shortage, targets, indications, interactions, civic, approvals, cell_lines, all. If \"dosage\" is part of a multi-word drug name, use `biomcp get drug --name \"sertraline hydrochloride dosage\"`."
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "KIT",
+    "json": true
+  },
+  "args_key": "8232f96ed78902fadc8d49866a4396378f97ddaa0ef62700aaa219eed61a13c6",
+  "recorded_at": "2026-11-03T19:51:13.222451+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 322.1477000042796,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"NCBI Gene\",\n        \"url\": \"https://www.ncbi.nlm.nih.gov/gene/3815\"\n      },\n      {\n        \"label\": \"UniProt\",\n        \"url\": \"https://www.uniprot.org/uniprot/P10721\"\n      },\n      {\n        \"label\": \"Ensembl\",\n        \"url\": \"https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000157404\"\n      },\n      {\n        \"label\": \"OMIM\",\n        \"url\": \"https://www.omim.org/entry/164920\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get gene KIT pathways\",\n      \"biomcp get gene KIT ontology\",\n      \"biomcp get gene KIT diseases\",\n      \"biomcp get gene KIT diagnostics\",\n      \"biomcp search diagnostic --gene KIT\",\n      \"biomcp search pgx -g KIT\",\n      \"biomcp search variant -g KIT\",\n      \"biomcp search article -g KIT\",\n      \"biomcp search drug --target KIT\",\n      \"biomcp gene trials KIT\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"identity\",\n        \"label\": \"Identity\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"NCBI Gene / MyGene.info\"\n        ]\n      },\n      {\n        \"key\": \"summary\",\n        \"label\": \"Summary\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"NCBI Gene\"\n        ]\n      },\n      {\n        \"key\": \"aliases\",\n        \"label\": \"Aliases\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"NCBI Gene / MyGene.info\"\n        ]\n      }\n    ],\n    \"suggestions\": [\n      \"biomcp search diagnostic --gene KIT\",\n      \"biomcp search pgx -g KIT\",\n      \"biomcp search variant -g KIT\",\n      \"biomcp search article -g KIT\",\n      \"biomcp search drug --target KIT\",\n      \"biomcp gene trials KIT\"\n    ],\n    \"workflow\": \"mechanism-pathway\",\n    \"workflow_playbook\": \"biomcp skill mechanism-pathway\",\n    \"workflow_rationale\": \"Orient from a mechanism-relevant drug to target and pathway context, then confirm the disease mechanism in review literature.\"\n  },\n  \"aliases\": [\n    \"CD117\",\n    \"MASTC\",\n    \"PBT\",\n    \"SCFR\"\n  ],\n  \"clinical_diseases\": [\n    \"gastrointestinal stromal tumor\",\n    \"piebaldism\",\n    \"cutaneous mastocytosis\",\n    \"acute myeloid leukemia\",\n    \"chronic myeloid leukemia\"\n  ],\n  \"clinical_drugs\": [\n    \"SEMAXANIB\",\n    \"SORAFENIB\",\n    \"XL-820\",\n    \"DOVITINIB\",\n    \"PEXIDARTINIB HYDROCHLORIDE\"\n  ],\n  \"ensembl_id\": \"ENSG00000157404\",\n  \"entrez_id\": \"3815\",\n  \"gene_type\": \"protein-coding\",\n  \"genomic_coordinates\": {\n    \"coordinate\": \"4:54657267-54740783 (strand: 1)\",\n    \"genome_build\": \"GRCh38\",\n    \"provenance\": \"MyGene.info provider default\",\n    \"source\": \"MyGene.info\"\n  },\n  \"location\": \"4\",\n  \"name\": \"KIT proto-oncogene, receptor tyrosine kinase\",\n  \"omim_id\": \"164920\",\n  \"section_outcomes\": {\n    \"civic\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"clingen\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"constraint\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"diagnostics\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"diseases\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"disgenet\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"druggability\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"expression\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"funding\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"gencc\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"go\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"hpa\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"interactions\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"ontology\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"pathways\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"protein\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    }\n  },\n  \"summary\": \"This gene encodes a receptor tyrosine kinase. This gene was initially identified as a homolog of the feline sarcoma viral oncogene v-kit and is often referred to as proto-oncogene c-Kit.\",\n  \"symbol\": \"KIT\",\n  \"uniprot_id\": \"P10721\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

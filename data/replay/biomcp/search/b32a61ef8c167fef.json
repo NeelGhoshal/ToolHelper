@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "statins",
+      "dementia",
+      "cognitive decline"
+    ],
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "b32a61ef8c167fef1f1e091cb44480d697bb8b37a30522da87da8dc944c681b8",
+  "recorded_at": "2026-11-03T09:13:35.348341+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5013.326600019354,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statins dementia cognitive decline, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"statins dementia cognitive decline\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 30496104|Global, regional, and national incidence, prevalence, and ye…|Europe PMC|2018-11-08|-|10173| \n|PMID 32738937|Dementia prevention, intervention, and care: 2020 report of…|Europe PMC|2020-07-30|-|7936| \n|PMID 28985560|Ferroptosis: A Regulated Cell Death Nexus Linking Metabolism…|Europe PMC|2017-10-01|-|6612| \n|PMID 28122885|Heart Disease and Stroke Statistics-2017 Update: A Report Fr…|Europe PMC|2017-01-25|-|6484| \n|PMID 33501848|Heart Disease and Stroke Statistics-2021 Update: A Report Fr…|Europe PMC|2021-01-27|-|4456| \n|PMID 17237348|Nitric oxide and peroxynitrite in health and disease.|Europe PMC|2007-01-01|-|4381| \n|PMID 42903333|Association of statin use with reduced risk of Alzheimer's d…|PubMed|2026-10-06|-|0| \n|PMID 42735389|Cardiometabolic medication exposures and cognitive outcomes…|PubMed|2026-09-04|-|0| \n|PMID 42546862|Neurocognitive outcomes and survival with high- vs low-inten…|PubMed|2026-09-01|-|0| \n|PMID 42417497|Targeting Autophagy in Alzheimer's Disease: Role of the AMPK…|PubMed|2026-08-01|-|0| \n|PMID 42642765|Blood-brain barrier water permeability is elevated in type 2…|PubMed|2026-07-22|-|0| \n|PMID 42439669|What Are the Potential Therapeutic Benefits of Targeting Blo…|PubMed|2026-06-30|-|0| \n|PMID 40826451|Lipoprotein levels and statin treatment related to dementia…|PubTator3|2025-08-18|-|none| \n|PMID 38115091|Statins and cognitive decline in patients with Alzheimer's a…|PubTator3|2023-12-20|-|none| \n|PMID 37167234|What is the impact of ongoing statin use on cognitive declin…|PubTator3|2023-05-11|-|none| \n \n \n \nNewest indexed: 2026-10-22 (12 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 30496104\n  biomcp search article -k \"statins dementia cognitive decline\" --year-min 2007 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

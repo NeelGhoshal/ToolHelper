@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR mutation lung cancer",
+      "T790M",
+      "exon 19 deletion"
+    ],
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "2735e6ea9bef15e2d6b053030f3d24f41b9ddca3c580bd360b00df7ef74d36f6",
+  "recorded_at": "2026-11-03T05:42:47.132678+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2195.4907000181265,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR mutation lung cancer T790M exon 19 deletion, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR mutation lung cancer T790M exon 19 deletion\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 29151359|Osimertinib in Untreated EGFR-Mutated Advanced Non-Small-Cel…|Europe PMC|2017-11-18|-|4492| \n|PMID 21252716|International association for the study of lung cancer/ameri…|Europe PMC|2011-02-01|-|3664| \n|PMID 27959700|Osimertinib or Platinum-Pemetrexed in EGFR T790M-Positive Lu…|Europe PMC|2016-12-06|-|2833| \n|PMID 21430269|Genotypic and histological evolution of lung cancers acquiri…|Europe PMC|2011-03-01|-|2797| \n|PMID 15737014|Acquired resistance of lung adenocarcinomas to gefitinib or…|Europe PMC|2005-02-22|-|2640| \n|PMID 31751012|Overall Survival with Osimertinib in Untreated, EGFR-Mutated…|Europe PMC|2019-11-21|-|2495| \n|PMID 23470965|Analysis of tumor specimens at the time of acquired resistan…|Europe PMC|2013-03-07|-|2071| \n|PMID 18815398|Lung cancer.|Europe PMC|2008-09-01|-|2001| \n|PMID 29449508|Multiplexed and portable nucleic acid detection platform wit…|Europe PMC|2018-02-15|-|1992| \n|PMID 25801821|Memorial Sloan Kettering-Integrated Mutation Profiling of Ac…|Europe PMC|2015-03-20|-|1978| \n|PMID 24893891|AZD9291, an irreversible EGFR TKI, overcomes T790M-mediated…|Europe PMC|2014-06-03|-|1849| \n|PMID 27397505|A Landscape of Pharmacogenomic Interactions in Cancer.|Europe PMC|2016-07-07|-|1677| \n|PMID 18227510|The T790M mutation in EGFR kinase causes drug resistance by…|Europe PMC|2008-01-28|-|1608| \n|PMID 25056707|Non-small-cell lung cancers: a heterogeneous set of diseases…|Europe PMC|2014-08-01|-|1593| \n|PMID 28513565|Epidermal Growth Factor Receptor Cell Proliferation Signalin…|Europe PMC|2017-05-17|-|1544| \n \n \n \nNewest indexed: 2019-11-22 (2538 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 29151359\n  biomcp search article -k \"EGFR mutation lung cancer T790M exon 19 deletion\" --year-min 2005 --year-max 2019 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

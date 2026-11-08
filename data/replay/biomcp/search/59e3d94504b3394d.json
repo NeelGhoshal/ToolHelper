@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2023-01-01",
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "HER2-targeted therapy",
+      "trastuzumab deruxtecan",
+      "HER2 breast cancer"
+    ],
+    "limit": 10,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "59e3d94504b3394df0a1ba5bb355144de51d2f3db0735cf530a005c9b7ff7509",
+  "recorded_at": "2026-11-05T05:14:36.918357+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3510.5791999994835,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: API response from PubMed could not be decoded. Retry the remote source."
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

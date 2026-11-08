@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "pathway",
+    "id": "hsa04012",
+    "json": true
+  },
+  "args_key": "668c3da18dcfafc4f0066587f0af4126c3b30c5996ed95fce6f0fb501b96f0d3",
+  "recorded_at": "2026-11-03T15:08:51.747925+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 2289.7264000494033,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"KEGG\",\n        \"url\": \"https://www.kegg.jp/entry/hsa04012\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp pathway drugs hsa04012\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"identity\",\n        \"label\": \"Identity\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"KEGG\"\n        ]\n      },\n      {\n        \"key\": \"summary\",\n        \"label\": \"Summary\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"KEGG\"\n        ]\n      }\n    ]\n  },\n  \"enrichment\": [],\n  \"events\": [],\n  \"genes\": [],\n  \"id\": \"hsa04012\",\n  \"name\": \"ErbB signaling pathway - Homo sapiens (human)\",\n  \"section_outcomes\": {\n    \"enrichment\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"events\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"genes\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    }\n  },\n  \"source\": \"KEGG\",\n  \"species\": \"Homo sapiens\",\n  \"summary\": \"The ErbB family of receptor tyrosine kinases (RTKs) couples binding of extracellular growth factor ligands to intracellular signaling pathways regulating diverse biologic responses, including proliferation, differentiation, cell motility, and survival. Ligand binding to the four closely related members of this RTK family -epidermal growth factor receptor (EGFR, also known as ErbB-1 or HER1), ErbB-2 (HER2), ErbB-3 (HER3), and ErbB-4 (HER4)-induces the formation of receptor homo- and heterodimers and the activation of the intrinsic kinase domain, resulting in phosphorylation on specific tyrosine residues (pY) within the cytoplasmic tail. Signaling effectors containing binding pockets for pY-containing peptides are recruited to activated receptors and induce the various signaling pathways. The Shc- and/or Grb2-activated mitogen-activated protein kinase (MAPK) pathway is a common target downstream of all ErbB receptors. Similarly, the phosphatidylinositol-3-kinase (PI-3K) pathway is directly or indirectly activated by most ErbBs. Several cytoplasmic docking proteins appear to be recruited by specific ErbB receptors and less exploited by others. These include the adaptors Crk, Nck, the phospholipase C gamma (PLCgamma), the intracellular tyrosine kinase Src, or the Cbl E3 ubiquitin protein ligase.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

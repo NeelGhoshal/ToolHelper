@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E",
+      "prevalence",
+      "targeted therapy"
+    ],
+    "limit": 8,
+    "sort": "citations"
+  },
+  "args_key": "0597f5b0601cf5fa71e8d48e4250004480793ef70762aef20a1d0d68c198cddd",
+  "recorded_at": "2026-11-03T13:52:08.511233+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3378.6346999695525,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E prevalence targeted therapy, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E prevalence targeted therapy\" --exclude-retracted --sort citations --source semanticscholar --limit 8 --offset 0` \n \n \nFound 8 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 26462967|2015 American Thyroid Association Management Guidelines for…|Europe PMC|2016-01-01|-|10412| \n|PMID 25079317|Comprehensive molecular characterization of gastric adenocar…|Europe PMC|2014-07-23|-|5139| \n|PMID 24120142|The somatic genomic landscape of glioblastoma.|Europe PMC|2013-10-01|-|4244| \n|PMID 42957919|Survival Outcomes in Metastatic Colorectal Cancer Patients w…|PubMed|2026-10-30|-|0| \n|PMID 42897968|Precision Thyroid Oncology Using Genetic-Based Therapies: A…|PubMed|2026-10-20|-|0| \n|PMID 42921908|RAS-Pathway Mutation Profiles and Clinical Outcomes Among Pa…|PubMed|2026-10-01|-|0| \n|PMID 40191760|A multi-center cross-sectional investigation of  BRAF V600E…|PubTator3|2025-04-03|-|none| \n|PMID 39086414|An Overview on Prevalence and Detection Approaches of BRAF V…|PubTator3|2024-07-01|-|none| \n \n \n \nNewest indexed: 2026-10-30 (4 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 26462967\n  biomcp search article -k \"BRAF V600E prevalence targeted therapy\" --year-min 2013 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 8 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

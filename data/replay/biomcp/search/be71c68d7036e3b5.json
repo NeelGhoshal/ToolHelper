@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "intervention": [
+      "atorvastatin"
+    ],
+    "limit": 10
+  },
+  "args_key": "be71c68d7036e3b501ff4dfea5a8a6a8eb55e196604ef65b6f66f952f82e809b",
+  "recorded_at": "2026-11-04T06:39:44.480318+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1347.3920999094844,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 10 trial(s) \n \nQuery: intervention=atorvastatin calcium \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT06765265|Impact of Atorvastatin Ve…|RECRUITING|4|Acute Coronary Syndromes|atorvastatin| \n|NCT04575857|Role of Statins In Slowin…|ACTIVE_NOT_RECRUITING|-|Rheumatic Heart Disease, Valvular Disease|atorvastatin| \n|NCT04789057|Atorvastatin Effect on Re…|ACTIVE_NOT_RECRUITING|4|Copd, COPD Exacerbation, Smoking, Gene Expression, Atorvastatin|atorvastatin| \n|NCT07508254|Triple vs Dual Lipid-Lowe…|NOT_YET_RECRUITING|4|Acute Coronary Syndromes (ACS), Hypercholesterolemia|atorvastatin| \n|NCT00610545|Atorvastatin in Periopera…|COMPLETED|4|Vascular Surgery|atorvastatin| \n|NCT01208701|The Effects of Atorvastat…|COMPLETED|2|Nephropathy, Cardiovascular Diseases, Diabetes Mellitus|atorvastatin| \n|NCT01363999|A Formulation Screening S…|COMPLETED|1|Healthy Volunteer|atorvastatin| \n|NCT01569100|Atorvastatin After Aneury…|COMPLETED|-|SAH|atorvastatin| \n|NCT04850001|Cognitive Decline in Asym…|UNKNOWN|-|Magnetic Resonance Imaging, Asymptomatic Intra… [abridged; 3 conditions total]|atorvastatin| \n|NCT00767572|Statins and Endothelial F…|TERMINATED|4|Coarctation of the Aorta|atorvastatin| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "trial",
+    "id": "NCT07751042",
+    "sections": [
+      "arms"
+    ]
+  },
+  "args_key": "f7b6b5564e6431e64277d5c6ae7eac2d70fe867133137c4d2e6edebe393e40a1",
+  "recorded_at": "2026-11-04T21:31:46.253658+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 152.53369999936695,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# NCT07751042 - arms \n## Arms (ClinicalTrials.gov) \n \n| Arm | Type | Interventions | Description | \n|---|---|---|---| \n| Phase 1 Monotherapy | EXPERIMENTAL | STX-003 | STX-003 administered intravenously, at ascending doses acros… | \n| Phase 1 Combination (STX-003 with Pembrolizumab) | EXPERIMENTAL | STX-003, KEYTRUDA® | STX-003 administered intravenously, at ascending doses acros… | \n| Phase 2 Monotherapy (STX-003) | EXPERIMENTAL | STX-003 | STX-003 administered intravenously, at 4 planned dose expans… | \n| Phase 2 Combination (STX-003 with Pembrolizumab) | EXPERIMENTAL | STX-003, KEYTRUDA® | STX-003 administered intravenously, at 4 planned dose expans… | \nMore:\n  biomcp get trial NCT07751042 eligibility   - inclusion and exclusion criteria\n  biomcp get trial NCT07751042 contacts   - central and site contact details\n  biomcp get trial NCT07751042 locations   - site list and contact details\nAll:\n  biomcp get trial NCT07751042 all \nSee also:\n  biomcp search disease --query \"Advanced Solid Tumor\"\n  biomcp search article -d \"Advanced Solid Tumor\"\n  biomcp search trial -c \"Advanced Solid Tumor\"\n  biomcp search drug -q STX-003\n  biomcp drug trials STX-003 \n\n[ClinicalTrials.gov](https://clinicaltrials.gov/study/NCT07751042)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

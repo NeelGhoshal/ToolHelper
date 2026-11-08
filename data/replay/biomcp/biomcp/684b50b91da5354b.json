@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp list variant",
+    "json": true
+  },
+  "args_key": "684b50b91da5354b1ab6f4bc2c9c2126b19e219daef5c491ad30189ea70fd42f",
+  "recorded_at": "2026-11-03T07:46:58.094352+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 3.885100013576448,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"kind\": \"list_entity\",\n  \"entity\": \"variant\",\n  \"entries\": [\n    {\n      \"kind\": \"prose\",\n      \"section\": \"routing\",\n      \"text\": \"Use literal commands directly. Replace every typed placeholder in a template before execution.\"\n    },\n    {\n      \"kind\": \"template\",\n      \"section\": \"commands\",\n      \"template\": \"search variant <query>\",\n      \"placeholders\": [\n        {\n          \"name\": \"query\",\n          \"type\": \"text\"\n        }\n      ]\n    },\n    {\n      \"kind\": \"template\",\n      \"section\": \"commands\",\n      \"template\": \"get variant <id>\",\n      \"placeholders\": [\n        {\n          \"name\": \"id\",\n          \"type\": \"identifier\"\n        }\n      ]\n    },\n    {\n      \"kind\": \"template\",\n      \"section\": \"helpers\",\n      \"template\": \"variant articles <id> --strategy <strategy>\",\n      \"placeholders\": [\n        {\n          \"name\": \"id\",\n          \"type\": \"identifier\"\n        },\n        {\n          \"name\": \"strategy\",\n          \"type\": \"enum:union|annotation|exact|lexical\"\n        }\n      ]\n    },\n    {\n      \"kind\": \"template\",\n      \"section\": \"helpers\",\n      \"template\": \"variant structure <variant>\",\n      \"placeholders\": [\n        {\n          \"name\": \"variant\",\n          \"type\": \"variant\"\n        }\n      ]\n    },\n    {\n      \"kind\": \"template\",\n      \"section\": \"helpers\",\n      \"template\": \"variant normalize <service> <transcript_hgvs>\",\n      \"placeholders\": [\n        {\n          \"name\": \"service\",\n          \"type\": \"enum:all|mutalyzer|variantvalidator\"\n        },\n        {\n          \"name\": \"transcript_hgvs\",\n          \"type\": \"transcript_hgvs\"\n        }\n      ]\n    }\n  ]\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

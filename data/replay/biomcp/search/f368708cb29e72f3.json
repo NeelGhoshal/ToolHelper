@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "TP53",
+    "json": true,
+    "keyword": [
+      "Li-Fraumeni syndrome",
+      "cancer predisposition"
+    ],
+    "limit": 5
+  },
+  "args_key": "f368708cb29e72f3f181c1a09e42e9d73ea4e82e3c865b6029e140f27ce89fd5",
+  "recorded_at": "2026-11-03T15:45:14.913262+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5453.071700001601,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=TP53, keyword=Li-Fraumeni syndrome cancer predisposition, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"sort\": \"relevance\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"ranking_policy\": \"hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 5,\n  \"results\": [\n    {\n      \"pmid\": \"35954327\",\n      \"pmcid\": \"PMC9367397\",\n      \"title\": \"Li-Fraumeni Syndrome: Mutation of TP53 Is a Biomarker of Hereditary Predisposition to Tumor: New Insights and Advances in the Treatment\",\n      \"journal\": \"Cancers (Basel)\",\n      \"date\": \"2022-07-27\",\n      \"citation_count\": 39,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42928139\",\n      \"title\": \"Characterisation of a novel p53 mutation (p53(N263Tfs*7)) associated with li-fraumeni syndrome.\",\n      \"journal\": \"BMC cancer\",\n      \"date\": \"2026-07-29\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42832373\",\n      \"doi\": \"10.1158/1078-0432.ccr-26-2137\",\n      \"title\": \"Progress in Clinical Care and Research for Li-Fraumeni Syndrome: Perspectives from the 7th Li-Fraumeni Syndrome Association REACH Symposium.\",\n      \"journal\": \"Clin Cancer Res\",\n      \"date\": \"2026-10-05\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42648386\",\n      \"title\": \"iPSC models of hereditary cancer predisposition: Mechanistic insights into premalignant evolution and lineage-specific vulnerability.\",\n      \"journal\": \"Biochimica et biophysica acta. Reviews on cancer\",\n      \"date\": \"2026-10-01\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"36128143\",\n      \"pmcid\": \"PMC9479555\",\n      \"title\": \"Choroid plexus carcinoma in two siblings, with a novel genetic mutation in TP53 - A case report and review of literature\",\n      \"journal\": \"Surg Neurol Int\",\n      \"date\": \"2022-08-26\",\n      \"citation_count\": 0,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"partial_query_match\",\n        \"message\": \"The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search article --gene TP53 --keyword \\\"Li-Fraumeni syndrome cancer predisposition\\\" --exclude-retracted --sort relevance --source semanticscholar --limit 5 --offset 0\",\n      \"biomcp get article 35954327\",\n      \"biomcp search article -g TP53 -k \\\"Li-Fraumeni syndrome cancer predisposition\\\" --year-min 2022 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ],\n    \"notes\": [\n      \"PubTator 3 data served from cache, 9 h old (older than the provider's freshness window).\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

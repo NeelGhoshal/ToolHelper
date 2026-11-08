@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "clopidogrel"
+    ],
+    "entity": "pgx",
+    "gene": "CYP2C19",
+    "json": true,
+    "limit": 10
+  },
+  "args_key": "587ad5819d4e04076950b63d72be66ee1378836194a671ac023773c688b792cb",
+  "recorded_at": "2026-11-03T15:45:52.693023+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 693.7855999567546,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 1,\n    \"total\": 27,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"count\": 1,\n  \"results\": [\n    {\n      \"genesymbol\": \"CYP2C19\",\n      \"drugname\": \"clopidogrel\",\n      \"cpiclevel\": \"A\",\n      \"pgxtesting\": \"Actionable PGx\",\n      \"guidelinename\": \"CYP2C19 and Clopidogrel\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get pgx CYP2C19\",\n      \"biomcp list pgx\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

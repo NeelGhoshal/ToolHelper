@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E"
+    ],
+    "limit": 8,
+    "sort": "citations"
+  },
+  "args_key": "8b8a152ebd55dcc666dc58941d54e31f097b8e3b0ad8bcf4d45150d1033ebc8e",
+  "recorded_at": "2026-11-04T22:53:36.147846+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3083.752699998513,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E\" --exclude-retracted --sort citations --source semanticscholar --limit 8 --offset 0` \n \n \nFound 8 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 23550210|Integrative analysis of complex cancer genomics and clinical…|Europe PMC|2013-04-02|-|12856| \n|PMID 26462967|2015 American Thyroid Association Management Guidelines for…|Europe PMC|2016-01-01|-|10412| \n|PMID 22810696|Comprehensive molecular characterization of human colon and…|Europe PMC|2012-07-18|-|7228| \n|PMID 38607456|Genetic alterations and allele frequency of BRAF V600E and T…|PubTator3|2024-04-12|-|15| \n|PMID 39086414|An Overview on Prevalence and Detection Approaches of BRAF V…|PubTator3|2024-07-01|-|8| \n|PMID 39006910|Modified TI-RADS Coupled with BRAFV600E Enhances Diagnostic…|PubTator3|2024-07-10|-|2| \n|PMID 42973333|Clinical and Molecular Outcomes of Dabrafenib/Trametinib-Bas…|PubMed|2026-10-20|-|0| \n|PMID 42974534|Calvarial erosion secondary to epithelioid glioblastoma: A m…|PubMed|2026-10-16|-|0| \n \n \n \nNewest indexed: 2026-11-03 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 23550210\n  biomcp variant articles \"BRAF V600E\"\n  biomcp search article -k \"BRAF V600E\" --year-min 2012 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 8 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR tyrosine kinase inhibitor osimertinib T790M resistance mechanism"
+    ],
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "022dfcf969e56194cabaa9aa5aeec60f647b35c7544f78e32fcc1fbab8fd3bc9",
+  "recorded_at": "2026-11-03T15:32:05.338780+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6118.568700039759,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR tyrosine kinase inhibitor osimertinib T790M resistance mechanism, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR tyrosine kinase inhibitor osimertinib T790M resistance mechanism\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 31723286|A view on drug resistance in cancer.|Europe PMC|2019-11-13|-|2196| \n|PMID 32203277|Targeting apoptosis in cancer therapy.|Europe PMC|2020-03-23|-|2031| \n|PMID 24893891|AZD9291, an irreversible EGFR TKI, overcomes T790M-mediated…|Europe PMC|2014-06-03|-|1849| \n|PMID 25923549|AZD9291 in EGFR inhibitor-resistant non-small-cell lung canc…|Europe PMC|2015-04-01|-|1709| \n|PMID 28513565|Epidermal Growth Factor Receptor Cell Proliferation Signalin…|Europe PMC|2017-05-17|-|1544| \n|PMID 25939061|Acquired EGFR C797S mutation mediates resistance to AZD9291…|Europe PMC|2015-05-04|-|1294| \n|PMID 42440354|Osimertinib plus Gefitinib in Patients with EGFR-Mutated Adv…|PubMed|2026-10-01|-|1| \n|PMID 42757013|Mechanisms of acquired resistance to osimertinib in EGFR T79…|PubMed|2026-09-04|-|0| \n|PMID 42420587|USP20-mediated PGAM1 stabilization promotes glycolysis and c…|PubMed|2026-08-01|-|0| \n|PMID 42515911|Lazertinib: A Selective EGFR Mutant Inhibitor to Treat Non-S…|PubMed|2026-07-23|-|0| \n|PMID 42466433|Treatment-Emergent Isolated EGFR C797S Mutation Following Fi…|PubMed|2026-07-15|-|1| \n|PMID 42352924|Resistance to EGFR Inhibitors in NSCLC: Mechanistic Insights…|PubMed|2026-06-09|-|0| \n|PMID 40114956|Unravelling the complexity of EGFR-mutated lung adenocarcino…|PubTator3|2025-02-28|-|none| \n|PMID 39113087|Complete response in a lung adenocarcinoma with pleural meta…|PubTator3|2024-08-08|-|none| \n|PMID 36849494|Candidate mechanisms of acquired resistance to first-line os…|PubTator3|2023-02-27|-|none| \n \n \n \nNewest indexed: 2026-09-18 (46 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 31723286\n  biomcp search article -k \"EGFR tyrosine kinase inhibitor osimertinib T790M resistance mechanism\" --year-min 2014 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

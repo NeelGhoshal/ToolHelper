@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "limit": 10,
+    "query": "rs113488022"
+  },
+  "args_key": "d22bdb000fb3bd458006e9c4e5a296330f28bdef8d821c30bd24e041e1eddd26",
+  "recorded_at": "2026-11-03T15:38:49.841976+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 34.332399955019355,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Requested variant: rs113488022\n\nVariant identity: ambiguous\n\n# Variant Search Results \n \nFound: 3 variant(s) \nQuery: rsid=rs113488022 \n \n \n## Filter evaluation \n \nrsid: evaluated \n \n \n \n| ID | Build | Gene | Transcript | Coding | Protein | Legacy Name | Significance | ClinVar Stars | gnomAD AF | REVEL | GERP | \n|---|---|---|---|---|---|---|---|---|---|---|---| \n| chr7:g.140453136A>T | GRCh37 | BRAF | NM_004333.6 | c.1799T>A | p.Val600Glu | BRAF V600E | Pathogenic | 2 | 0.00000397994 | 0.931 | 5.65 | \n| chr7:g.140453136A>C | GRCh37 | BRAF | NM_004333.6 | c.1799T>G | p.Val600Gly | BRAF V600G | Pathogenic | 3 | - | 0.925 | 5.65 | \n| chr7:g.140453136A>G | GRCh37 | BRAF | NM_004333.4 | c.1799T>C | p.Val600Ala | BRAF V600A | - | none | - | 0.672 | 5.65 | \n \n \nUse `get variant <id>` for details. \nSignificance is the most severe ClinVar RCV classification in MyVariant.info's cached copy; run `get variant <id> clinvar` for the current NCBI ClinVar record-level classification. \nFilters: -g <gene>, --hgvsp <protein>, --significance <value>, --max-frequency <0-1>, --min-cadd <score>, --consequence <term>, --review-status <stars>, --population <pop>, --revel-min <score>, --gerp-min <score>, --tumor-site <site>, --condition <name>, --impact <level>, --lof, --has <field>, --missing <field>, --therapy <name> \n \n \nSee also:\n  biomcp get variant \"chr7:g.140453136A>T\" \n \n \n \nShowing 1-3 of 3 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,167 @@
+learning from 55 runs in bench-baseline-record
+strategies: E3_grounding {'modes': ['hints'], 'datasets': ['clinvar'], 
+'versions': ['datasets/clinvar@v1']}
+pass med-012   turns=2 calls=1 trust=1.00 live=0 prompt=10588 grounding=1.00 
+pass bio-002   turns=3 calls=5 trust=1.00 live=2 prompt=77719 grounding=1.00 
+pass bio-003   turns=7 calls=37 trust=1.00 live=8 prompt=107179 grounding=1.00 
+pass bio-006   turns=4 calls=5 trust=1.00 live=2 prompt=49932 grounding=1.00 
+🚨 MEDICAL MCP SERVER - SAFETY NOTICE:
+This server provides medical information for educational purposes only.
+NEVER use this information as the sole basis for clinical decisions.
+Always consult qualified healthcare professionals for patient care.
+
+📊 DYNAMIC DATA SOURCE NOTICE:
+This system queries live medical databases (FDA, WHO, PubMed, RxNorm)
+NO hardcoded medical data is used - all information is retrieved dynamically
+Data freshness depends on source database updates and API availability
+Network connectivity required for all medical information retrieval
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='✅ Medical MCP Server running on stdio', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+2026-11-04T00:37:06.482735Z  WARN biomcp_cli::sources: served from cache, older than the provider's freshness window (4 h old) age_seconds=15539
+2026-11-04T00:37:10.822576Z  WARN biomcp_cli::sources: served from cache, older than the provider's freshness window (11 h old) age_seconds=40665
+2026-11-04T00:37:15.450917Z  WARN biomcp_cli::sources: served from cache, older than the provider's freshness window (3271 s old) age_seconds=3271
+2026-11-04T00:37:20.435893Z  WARN biomcp_cli::sources: served from cache, older than the provider's freshness window (11 h old) age_seconds=40674
+2026-11-04T00:37:24.197526Z  WARN biomcp_cli::sources: served from cache, older than the provider's freshness window (16 h old) age_seconds=60340
+2026-11-04T00:37:26.556144Z  WARN biomcp_cli::sources: served from cache, older than the provider's freshness window (11 h old) age_seconds=40683
+2026-11-04T00:37:28.815028Z  WARN biomcp_cli::error: External provider operation failed provider="PubMed" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.815330Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.815383Z  WARN biomcp_cli::error: External provider operation failed provider="PubTator 3" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.815407Z  WARN biomcp_cli::error: External provider operation failed provider="Europe PMC" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.815430Z  WARN biomcp_cli::error: External provider operation failed provider="PubMed" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.815445Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816244Z  WARN biomcp_cli::error: External provider operation failed provider="PubTator 3" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816337Z  WARN biomcp_cli::error: External provider operation failed provider="Europe PMC" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816364Z  WARN biomcp_cli::error: External provider operation failed provider="PubMed" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816385Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816419Z  WARN biomcp_cli::error: External provider operation failed provider="PubTator 3" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816452Z  WARN biomcp_cli::error: External provider operation failed provider="Europe PMC" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816471Z  WARN biomcp_cli::error: External provider operation failed provider="PubMed" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816486Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816523Z  WARN biomcp_cli::error: External provider operation failed provider="PubTator 3" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816543Z  WARN biomcp_cli::error: External provider operation failed provider="Europe PMC" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816561Z  WARN biomcp_cli::error: External provider operation failed provider="PubMed" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816577Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816602Z  WARN biomcp_cli::error: External provider operation failed provider="PubTator 3" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816624Z  WARN biomcp_cli::error: External provider operation failed provider="Europe PMC" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816654Z  WARN biomcp_cli::error: External provider operation failed provider="PubMed" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816672Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816705Z  WARN biomcp_cli::error: External provider operation failed provider="PubTator 3" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816729Z  WARN biomcp_cli::error: External provider operation failed provider="Europe PMC" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816747Z  WARN biomcp_cli::error: External provider operation failed provider="PubMed" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:28.816762Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="federated article search" class="internal" internal failure
+2026-11-04T00:37:31.746670Z  WARN biomcp_cli::error: External provider operation failed provider="PubTator 3" operation="visible article metadata fallback" class="unavailable" unavailable failure
+2026-11-04T00:37:31.746720Z  WARN biomcp_cli::error: External provider operation failed provider="PubTator 3" operation="visible article metadata fallback" class="unavailable" unavailable failure
+2026-11-04T00:37:31.746734Z  WARN biomcp_cli::error: External provider operation failed provider="PubTator 3" operation="visible article metadata fallback" class="unavailable" unavailable failure
+2026-11-04T00:37:31.746746Z  WARN biomcp_cli::error: External provider operation failed provider="PubTator 3" operation="visible article metadata fallback" class="unavailable" unavailable failure
+2026-11-04T00:37:31.746822Z  WARN biomcp_cli::error: External provider operation failed provider="PubTator 3" operation="visible article metadata fallback" class="unavailable" unavailable failure
+2026-11-04T00:37:31.746836Z  WARN biomcp_cli::error: External provider operation failed provider="PubTator 3" operation="visible article metadata fallback" class="unavailable" unavailable failure
+2026-11-04T00:37:38.572932Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="article search" class="internal" internal failure
+2026-11-04T00:37:41.809718Z  WARN biomcp_cli::sources: served from cache, older than the provider's freshness window (15 h old) age_seconds=54210
+2026-11-04T00:37:44.437256Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="batch article search enrichment" class="internal" internal failure
+2026-11-04T00:37:45.940496Z  WARN biomcp_cli::error: External provider operation failed provider="PubTator 3" operation="visible article metadata fallback" class="internal" internal failure
+2026-11-04T00:37:46.450405Z  WARN biomcp_cli::error: External provider operation failed provider="PubTator 3" operation="visible article metadata fallback" class="internal" internal failure
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...083, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...828, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...056, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...839, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...777, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...589, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...304, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...150, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+2026-11-04T00:38:25.844797Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="article search" class="internal" internal failure
+2026-11-04T00:38:30.170109Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="batch article search enrichment" class="internal" internal failure
+2026-11-04T00:38:31.090479Z  WARN biomcp_cli::error: External provider operation failed provider="PubTator 3" operation="visible article metadata fallback" class="internal" internal failure
+2026-11-04T00:38:33.669806Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="article search" class="internal" internal failure
+2026-11-04T00:38:36.619337Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="batch article search enrichment" class="internal" internal failure
+pass x-004     turns=6 calls=22 trust=0.97 live=20 prompt=180134 grounding=0.92
+p10-E3-clinvar-hints-r1: 5/5 passed, 70 tool calls (32 live), 425,552 prompt 
+tokens

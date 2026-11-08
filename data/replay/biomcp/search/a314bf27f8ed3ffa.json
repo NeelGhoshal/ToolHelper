@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "author": [
+      "Gillmore"
+    ],
+    "entity": "article",
+    "keyword": [
+      "CRISPR transthyretin amyloidosis"
+    ],
+    "limit": 10
+  },
+  "args_key": "a314bf27f8ed3ffa90be3ceecfcbf19e159d27e2448f27ff3a59359e148fb01b",
+  "recorded_at": "2026-11-05T04:07:56.047390+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 7920.05529999733,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: author=Gillmore, keyword=CRISPR transthyretin amyloidosis, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed search unavailable) \nRetry: `biomcp search article --author Gillmore --keyword \"CRISPR transthyretin amyloidosis\" --exclude-retracted --sort relevance --source pubmed --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: disabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 37901600|World Heart Federation Consensus on Transthyretin Amyloidosi…|Europe PMC|2023-10-26|hybrid 0.42 + title 2/3|82| \n|PMID 36795354|RNA Targeting and Gene Editing Strategies for Transthyretin…|Europe PMC|2023-02-16|hybrid 0.404 + title 2/3|72| \n|PMID 36345805|Liver-directed drugs for transthyretin-mediated amyloidosis.|Europe PMC|2022-11-16|hybrid 0.351 + title 2/3|26| \n|PMID 39555828|CRISPR-Cas9 Gene Editing with Nexiguran Ziclumeran for ATTR…|Europe PMC|2024-11-16|hybrid 0.35 + title 1/3|105| \n|PMID 41030053|Transthyretin amyloid cardiomyopathy: from cause to novel tr…|Europe PMC|2026-01-01|hybrid 0.331 + title 1/3|33| \n|PMID 39797879|The Last Decade in Cardiac Amyloidosis: Advances in Understa…|Europe PMC|2025-01-08|hybrid 0.32 + title 1/3|66| \n|PMID 42104840|Rationale and Design of CARDIO-TTRansform, a Phase 3 Trial o…|Europe PMC|2026-05-09|hybrid 0.279 + title 1/3|7| \n|PMID 36741843|Cardiac transplantation in transthyretin amyloid cardiomyopa…|Europe PMC|2023-01-19|hybrid 0.222 + title 1/3|16| \n|PMID 40108078|Rationale and Design of ANTHOLOGY: An ATTR Amyloidosis Real-…|Europe PMC|2025-03-19|hybrid 0.219 + title 1/3|3| \n|PMID 41002250|Nexiguran Ziclumeran Gene Editing in Hereditary ATTR with Po…|Europe PMC|2025-09-25|hybrid 0.196|18| \n \n \n \nNewest indexed: 2026-05-13 (176 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 37901600\n  biomcp search article -a Gillmore -k \"CRISPR transthyretin amyloidosis\" --year-min 2022 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-10 of 15 results. Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

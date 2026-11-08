@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "get article 35034351 fulltext",
+    "json": true
+  },
+  "args_key": "270b4a0fe0e95f73c5a3bbe547c0547b4c9407b4aee7bbaa4be63757e066123a",
+  "recorded_at": "2026-11-03T20:11:11.730857+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 9079.66759998817,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/35034351/\"\n      },\n      {\n        \"label\": \"PMC\",\n        \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC9287492/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp article references 35034351 --limit 3\",\n      \"biomcp article citations 35034351 --limit 3\",\n      \"biomcp article recommendations 35034351 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"fulltext\",\n        \"label\": \"Full Text\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"NCBI EFetch\"\n        ]\n      }\n    ]\n  },\n  \"abstract_text\": \"CYP2C19 catalyzes the bioactivation of the antiplatelet prodrug clopidogrel, and CYP2C19 genotype impacts clopidogrel active metabolite formation. CYP2C19 intermediate and poor metabolizers who receive clopidogrel experience reduced platelet inhibition and increased risk for major adverse cardiovascular and cerebrovascular events. This guideline is an update to the 2013 Clinical Pharmacogenetics Implementation Consortium (CPIC) guideline for the use of clopidogrel based on CYP2C19 genotype and includes expanded indications for CYP2C19 genotype-guided antiplatelet therapy, increased strength of recommendation for CYP2C19 intermediate metabolizers, updated CYP2C19 genotype to phenotype translation, and evidence from an expanded literature review (updates at www.cpicpgx.org).\",\n  \"author_completeness\": \"complete\",\n  \"author_count\": 17,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Lee CR\",\n    \"Luzum JA\",\n    \"Sangkuhl K\",\n    \"Gammal RS\",\n    \"Sabatine MS\",\n    \"Stein CM\",\n    \"Kisor DF\",\n    \"Limdi NA\",\n    \"Lee YM\",\n    \"Scott SA\",\n    \"Hulot JS\",\n    \"Roden DM\",\n    \"Gaedigk A\",\n    \"Caudle KE\",\n    \"Klein TE\",\n    \"Johnson JA\",\n    \"Shuldiner AR\"\n  ],\n  \"citation_count\": 396,\n  \"date\": \"2022-11-01\",\n  \"doi\": \"10.1002/cpt.2526\",\n  \"full_text_available\": true,\n  \"full_text_coverage\": {\n    \"attempts\": [\n      {\n        \"cache_state\": \"bypass\",\n        \"coverage\": \"unavailable\",\n        \"outcome\": \"unavailable\",\n        \"provider\": {\n          \"label\": \"Europe PMC XML\",\n          \"source\": \"Europe PMC\"\n        },\n        \"reason\": \"source_unavailable\",\n        \"source_kind\": \"jats_xml\"\n      },\n      {\n        \"cache_state\": \"bypass\",\n        \"coverage\": \"full_text\",\n        \"outcome\": \"data\",\n        \"provider\": {\n          \"label\": \"NCBI EFetch PMC XML\",\n          \"source\": \"NCBI EFetch\"\n        },\n        \"reason\": \"body_detected\",\n        \"source_kind\": \"jats_xml\"\n      }\n    ],\n    \"coverage\": \"full_text\"\n  },\n  \"full_text_manifest\": {\n    \"provenance\": {\n      \"open_access\": false,\n      \"retracted\": false\n    },\n    \"provider\": {\n      \"label\": \"NCBI EFetch PMC XML\",\n      \"source\": \"NCBI EFetch\"\n    },\n    \"quality\": {\n      \"has_entity_annotations\": false,\n      \"has_fulltext_signal\": true,\n      \"has_references\": true,\n      \"has_sections\": true,\n      \"has_tables\": true\n    },\n    \"reuse\": {\n      \"license_present\": false,\n      \"reuse_warning\": \"License/reuse status is unknown; verify rights before reuse.\"\n    },\n    \"source_identifier\": \"PMC9287492\",\n    \"source_kind\": \"jats_xml\"\n  },\n  \"full_text_source\": {\n    \"kind\": \"jats_xml\",\n    \"label\": \"NCBI EFetch PMC XML\",\n    \"source\": \"NCBI EFetch\"\n  },\n  \"full_text_summary\": {\n    \"byte_size\": 53800,\n    \"section_count\": 24,\n    \"total_lines\": 196\n  },\n  \"journal\": \"Clin Pharmacol Ther\",\n  \"open_access\": false,\n  \"pmcid\": \"PMC9287492\",\n  \"pmid\": \"35034351\",\n  \"publication_type\": \"Research Article\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"data\",\n      \"sources\": [\n        \"NCBI EFetch\"\n      ]\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"Clinical Pharmacogenetics Implementation Consortium Guideline for CYP2C19 Genotype and Clopidogrel Therapy: 2022 Update.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

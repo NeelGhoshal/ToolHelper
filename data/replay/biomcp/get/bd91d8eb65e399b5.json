@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "disease",
+    "id": "MONDO:0005105",
+    "json": true,
+    "sections": [
+      "genes",
+      "ontology",
+      "all"
+    ]
+  },
+  "args_key": "bd91d8eb65e399b53a707df3bfbd3598dbca57d55d59c6e9a755719f1c3271f9",
+  "recorded_at": "2026-11-03T08:48:20.914850+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.1825000401586294,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid disease section: ontology"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

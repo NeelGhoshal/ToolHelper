@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "clopidogrel"
+    ],
+    "entity": "pgx",
+    "limit": 25
+  },
+  "args_key": "41f92c6c59f2d42ba17c7c5e021cc41dd09209b610f12a0e843b2ae18d312887",
+  "recorded_at": "2026-11-03T05:49:25.737724+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 669.7502000024542,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# PGx Search: drug=clopidogrel \n \nFound 2 interactions \n \n| Gene | Drug | CPIC Level | PGx Testing | Guideline | \n|---|---|---|---|---| \n| CYP2C19 | clopidogrel | A | Actionable PGx | CYP2C19 and Clopidogrel | \n| CES1 | clopidogrel | C | - | - | \n \n \nShowing 1-2 of 2 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

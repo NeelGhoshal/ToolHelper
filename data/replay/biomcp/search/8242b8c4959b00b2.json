@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CYP2C19 clopidogrel CPIC guideline"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "8242b8c4959b00b2884fa243a64e73351e7e4f09cf5125fbab228de068b361ac",
+  "recorded_at": "2026-11-05T04:36:13.582851+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 12096.975000000384,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CYP2C19 clopidogrel CPIC guideline, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed search unavailable) \nRetry: `biomcp search article --keyword \"CYP2C19 clopidogrel CPIC guideline\" --exclude-retracted --sort citations --source pubmed --limit 10 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CYP2C19 clopidogrel CPIC guideline\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 21270786|CPIC: Clinical Pharmacogenetics Implementation Consortium of…|Europe PMC|2011-01-26|-|874| \n|PMID 23698643|Clinical Pharmacogenetics Implementation Consortium guidelin…|Europe PMC|2013-05-22|-|673| \n|PMID 26469045|Pharmacogenomics in the clinic.|Europe PMC|2015-10-01|-|585| \n|PMID 35034351|Clinical Pharmacogenetics Implementation Consortium Guidelin…|PubTator3, Europe PMC|2022-11-01|-|396| \n|PMID 21716271|Clinical Pharmacogenetics Implementation Consortium guidelin…|Europe PMC|2011-06-29|-|365| \n|PMID 24479687|Incorporation of pharmacogenomics into routine clinical prac…|Europe PMC|2014-02-01|-|326| \n|PMID 23486447|Clinical Pharmacogenetics Implementation Consortium guidelin…|Europe PMC|2013-01-16|-|312| \n|PMID 27981572|Clinical Pharmacogenetics Implementation Consortium (CPIC) G…|Europe PMC|2017-04-18|-|311| \n|PMID 31395440|Pharmacogenomics.|Europe PMC|2019-08-05|-|292| \n|PMID 32189324|Clinical Pharmacogenetics Implementation Consortium Guidelin…|Europe PMC|2020-04-28|-|269| \n \n \n \nNewest indexed: 2020-03-20 (2421 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 21270786\n  biomcp search article -k \"CYP2C19 clopidogrel CPIC guideline\" --year-min 2011 --year-max 2022 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

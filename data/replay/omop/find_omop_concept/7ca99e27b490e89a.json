@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "Atrial fibrillation",
+    "max_results": 10,
+    "omop_field": "condition_concept_id",
+    "omop_table": "condition_occurrence"
+  },
+  "args_key": "7ca99e27b490e89a67f54860c580d6998b909f9d5ace961827453bea8dfb8e53",
+  "recorded_at": "2026-11-03T06:59:53.241579+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 850.3430999699049,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 313217,\n      \"code\": \"49436004\",\n      \"name\": \"Atrial fibrillation\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/313217\"\n    },\n    {\n      \"concept_id\": 40761369,\n      \"code\": \"58268-4\",\n      \"name\": \"Ever told you have or had atrial fibrillation\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/40761369\"\n    },\n    {\n      \"concept_id\": 4064452,\n      \"code\": \"164889003\",\n      \"name\": \"ECG: atrial fibrillation\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4064452\"\n    },\n    {\n      \"concept_id\": 4119601,\n      \"code\": \"233910005\",\n      \"name\": \"Lone atrial fibrillation\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4119601\"\n    },\n    {\n      \"concept_id\": 4199501,\n      \"code\": \"314208002\",\n      \"name\": \"Rapid atrial fibrillation\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4199501\"\n    },\n    {\n      \"concept_id\": 4141360,\n      \"code\": \"426749004\",\n      \"name\": \"Chronic atrial fibrillation\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4141360\"\n    },\n    {\n      \"concept_id\": 42689664,\n      \"code\": \"1066831000000104\",\n      \"name\": \"Atrial fibrillation detected\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/42689664\"\n    },\n    {\n      \"concept_id\": 37395821,\n      \"code\": \"715395008\",\n      \"name\": \"Familial atrial fibrillation\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/37395821\"\n    },\n    {\n      \"concept_id\": 4232691,\n      \"code\": \"440028005\",\n      \"name\": \"Permanent atrial fibrillation\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4232691\"\n    },\n    {\n      \"concept_id\": 4117112,\n      \"code\": \"300996004\",\n      \"name\": \"Controlled atrial fibrillation\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4117112\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"Atrial fibrillation\",\n    \"omop_table\": \"condition_occurrence\",\n    \"omop_field\": \"condition_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

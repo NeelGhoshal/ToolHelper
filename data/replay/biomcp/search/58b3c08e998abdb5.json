@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CRISPR sickle cell exagamglogene phase 3 trial"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "58b3c08e998abdb56e68b9761064736ab2aa2ad27f4ae0264eb30e74b022bad6",
+  "recorded_at": "2026-11-05T04:07:20.930685+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5673.884499999986,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR sickle cell exagamglogene phase 3 trial, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed search unavailable) \nRetry: `biomcp search article --keyword \"CRISPR sickle cell exagamglogene phase 3 trial\" --exclude-retracted --sort date --source pubmed --limit 10 --offset 0` \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"CRISPR sickle cell exagamglogene phase 3 trial\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42972926|Nucleic Acid Therapeutics in Rare Disease: From Precision Me…|Europe PMC|2026-11-01|-|0| \n|PMID 42894775|India's indigenous CRISPR-based gene-editing therapy for sic…|Europe PMC|2026-10-10|-|0| \n|PMID 42827100|Current translational perspectives for diagnosis and individ…|Europe PMC|2026-10-02|-|0| \n|PMID 42786162|RNA therapeutics: current status and future directions.|Europe PMC|2026-09-24|-|0| \n|PMID 42782748|Beyond Precision: A Multidimensional Framework for Selecting…|Europe PMC|2026-09-11|-|0| \n|PMID 42798774|A review of genetic modification for ex vivo cellular therap…|Europe PMC|2026-09-01|-|0| \n|PMID 42761173|Gene therapy for hereditary hematological disorders: From cl…|Europe PMC|2026-08-27|-|0| \n|PMID 42668627|Advanced therapy medicinal products in Saudi Arabia: Regulat…|Europe PMC|2026-08-24|-|1| \n|PMID 42699102|Targeted Nanoparticle Delivery CRISPR/Cas9: overcoming biolo…|Europe PMC|2026-08-19|-|0| \n|PMID 42448320|Red lines and green lights: Gene therapy for inherited eryth…|Europe PMC|2026-07-14|-|0| \n \n \n \nNewest indexed: 2026-11-04 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42972926\n  biomcp search article -k \"CRISPR sickle cell exagamglogene phase 3 trial\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 5,
+    "query": "BRAF RAS MAPK pathway serine threonine kinase"
+  },
+  "args_key": "9746de031ce19291d0470cb1dab847bc7a015ba58278650e45e4d42940b0021c",
+  "recorded_at": "2026-11-03T15:46:36.497723+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 615.8767000306398,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: BRAF RAS MAPK pathway serine threonine kinase \n \nFound 5 genes \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| BRAF | B-Raf proto-oncogene, serine/threonine kinase | 673 | 7:140719327-140925199 | GRCh38 | P15056 | 164757 | \n| ARAF | A-Raf proto-oncogene, serine/threonine kinase | 369 | X:47561043-47571921 | GRCh38 | P10398 | 311010 | \n| MAP3K11 | mitogen-activated protein kinase kinase kinase 11 | 4296 | 11:65597149-65615382 | GRCh38 | Q16584 | 600050 | \n| RAF1 | Raf-1 proto-oncogene, serine/threonine kinase | 5894 | 3:12582101-12664201 | GRCh38 | P04049 | 164760 | \n| CAMK2A | calcium/calmodulin dependent protein kinase II alpha | 815 | 5:150219491-150290324 | GRCh38 | Q9UQM7 | 114078 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1-5 of 9 results. Use --offset 5 for more. \n \n\n\n## Next commands\n- `biomcp get gene BRAF`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

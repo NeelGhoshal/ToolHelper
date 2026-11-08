@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "Hemoglobin A1c percent of total hemoglobin blood",
+    "max_results": 10,
+    "omop_field": "measurement_concept_id",
+    "omop_table": "measurement"
+  },
+  "args_key": "df9efa535be9b6bb17018643def6493c0424a56ea3be185668db2214ba5b0bf1",
+  "recorded_at": "2026-11-05T05:04:22.484386+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1025.9027000029164,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"error\": \"No results found for keyword 'Hemoglobin A1c percent of total hemoglobin blood'. The search term may not exist in the OMOP vocabulary.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

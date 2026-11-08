@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "get pathway R-HSA-372889 --json",
+    "json": true
+  },
+  "args_key": "68c4568f652d3065abd75eda44431d76d91fa50a0ba612715a8de88787cb6947",
+  "recorded_at": "2026-11-03T10:58:26.959008+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 180.23850000463426,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"Reactome\",\n        \"url\": \"https://reactome.org/content/detail/R-HSA-372889\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp pathway drugs R-HSA-372889\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"identity\",\n        \"label\": \"Identity\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"Reactome\"\n        ]\n      }\n    ]\n  },\n  \"enrichment\": [],\n  \"events\": [],\n  \"genes\": [],\n  \"id\": \"R-HSA-372889\",\n  \"name\": \"ERBB2 [plasma membrane]\",\n  \"section_outcomes\": {\n    \"enrichment\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"events\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"genes\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    }\n  },\n  \"source\": \"Reactome\",\n  \"species\": \"Homo sapiens\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

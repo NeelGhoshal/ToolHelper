@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "BRAF V600E discovery 2002 Davies Nature melanoma"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "b42e40a903f0081ff92989ea4d45145b7fb35dbffe91e4507fbdea73b4551427",
+  "recorded_at": "2026-11-04T06:49:59.614939+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6272.422799956985,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=BRAF V600E discovery 2002 Davies Nature melanoma, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 5,\n  \"results\": [\n    {\n      \"pmid\": \"21483012\",\n      \"pmcid\": \"PMC3107760\",\n      \"doi\": \"10.1200/jco.2010.33.1280\",\n      \"title\": \"Clinical characteristics of patients with lung adenocarcinomas harboring BRAF mutations.\",\n      \"journal\": \"J Clin Oncol\",\n      \"date\": \"2011-04-11\",\n      \"citation_count\": 499,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"17299132\",\n      \"pmcid\": \"PMC1804325\",\n      \"doi\": \"10.1101/gad.1516407\",\n      \"title\": \"A new mouse model to explore the initiation, progression, and therapy of BRAFV600E-induced lung tumors.\",\n      \"journal\": \"Genes Dev\",\n      \"date\": \"2007-02-13\",\n      \"citation_count\": 418,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"22661227\",\n      \"pmcid\": \"PMC3371404\",\n      \"doi\": \"10.1101/gad.191999.112\",\n      \"title\": \"Melanoma: from mutations to medicine.\",\n      \"journal\": \"Genes Dev\",\n      \"date\": \"2012-06-01\",\n      \"citation_count\": 387,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"22440008\",\n      \"pmcid\": \"PMC3476506\",\n      \"doi\": \"10.1016/j.molonc.2012.02.004\",\n      \"title\": \"Discovery of small molecule cancer drugs: successes, challenges and opportunities.\",\n      \"journal\": \"Mol Oncol\",\n      \"date\": \"2012-03-03\",\n      \"citation_count\": 381,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"21779496\",\n      \"pmcid\": \"PMC3128629\",\n      \"doi\": \"10.1177/1947601911407323\",\n      \"title\": \"Raf family kinases: old dogs have learned new tricks.\",\n      \"journal\": \"Genes Cancer\",\n      \"date\": \"2011-03-01\",\n      \"citation_count\": 318,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"BRAF V600E discovery 2002 Davies Nature melanoma\\\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0\",\n      \"biomcp get article 21483012\",\n      \"biomcp search article -k \\\"BRAF V600E discovery 2002 Davies Nature melanoma\\\" --year-min 2007 --year-max 2012 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

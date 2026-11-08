@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "variant",
+    "id": "chr7:g.140453136A>T",
+    "json": true,
+    "sections": [
+      "clinvar",
+      "population",
+      "cosmic",
+      "civic",
+      "cgi",
+      "frequencies",
+      "conservation"
+    ]
+  },
+  "args_key": "a419146c1683b80e1119bf26f73fa1866e008e73997bf7d5d0c49b2ca04bd73e",
+  "recorded_at": "2026-11-04T22:35:43.695935+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 0.9688000009191455,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid variant section: frequencies"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

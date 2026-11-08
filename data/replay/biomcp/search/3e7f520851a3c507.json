@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "metformin"
+    ],
+    "entity": "pgx",
+    "limit": 3
+  },
+  "args_key": "3e7f520851a3c5078d60880330cbef331982c022520303beb6df31e255955157",
+  "recorded_at": "2026-11-04T20:34:16.678899+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 757.9373000000942,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# PGx Search: drug=metformin \n \nFound 1 interaction \n \n| Gene | Drug | CPIC Level | PGx Testing | Guideline | \n|---|---|---|---|---| \n| C11ORF65 | metformin | D | - | - | \n \n \nShowing 1 of 1 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

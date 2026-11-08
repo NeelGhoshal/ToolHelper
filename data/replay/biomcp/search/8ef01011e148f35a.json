@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 25,
+    "query": "melanoma oncogene tumor suppressor CDKN2A PTEN TERT"
+  },
+  "args_key": "8ef01011e148f35a809843da14fda861c725ed3f18b1caf8b7b542e521eddaea",
+  "recorded_at": "2026-11-03T20:12:27.288195+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 234.1594000463374,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: melanoma oncogene tumor suppressor CDKN2A PTEN TERT \n \nFound 3 genes \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| CDKN2A | cyclin dependent kinase inhibitor 2A | 1029 | 9:21966924-21995301 | GRCh38 | P42771 | 600160 | \n| PTEN | phosphatase and tensin homolog | 5728 | 10:87862638-87971930 | GRCh38 | P60484 | 601728 | \n| TERT | telomerase reverse transcriptase | 7015 | 5:1253147-1295086 | GRCh38 | O14746 | 187270 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1-3 of 3 results. \n \n\n\n## Next commands\n- `biomcp get gene CDKN2A`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,104 @@
+learning from 55 runs in bench-baseline-record
+strategies: E3_grounding {'modes': ['rewrite'], 'datasets': ['rxnorm'], 
+'versions': ['datasets/rxnorm@v1']}
+pass med-001   turns=2 calls=2 trust=1.00 live=0 prompt=10184 grounding=1.00 
+🚨 MEDICAL MCP SERVER - SAFETY NOTICE:
+This server provides medical information for educational purposes only.
+NEVER use this information as the sole basis for clinical decisions.
+Always consult qualified healthcare professionals for patient care.
+
+📊 DYNAMIC DATA SOURCE NOTICE:
+This system queries live medical databases (FDA, WHO, PubMed, RxNorm)
+NO hardcoded medical data is used - all information is retrieved dynamically
+Data freshness depends on source database updates and API availability
+Network connectivity required for all medical information retrieval
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='✅ Medical MCP Server running on stdio', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+fail med-002   turns=8 calls=16 trust=1.00 live=8 prompt=63537 grounding=- 
+failed=['must_call_any', 'answer_includes_any']
+pass med-003   turns=2 calls=1 trust=1.00 live=0 prompt=11110 grounding=- 
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...146, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...822, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...787, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='PMC XML method failed fo...855, trying HTML method', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+pass med-007   turns=6 calls=12 trust=1.00 live=7 prompt=67196 grounding=1.00 
+fail med-009   turns=8 calls=14 trust=1.00 live=4 prompt=195133 grounding=- 
+failed=['answer_grounded']
+pass med-010   turns=4 calls=5 trust=1.00 live=0 prompt=75889 grounding=1.00 
+pass med-016   turns=7 calls=15 trust=1.00 live=5 prompt=55288 grounding=1.00 
+pass bio-008   turns=2 calls=2 trust=0.96 live=0 prompt=16387 grounding=0.90 
+2026-11-03T22:52:14.124686Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="article search" class="internal" internal failure
+2026-11-03T22:52:19.766471Z  WARN biomcp_cli::error: External provider operation failed provider="PubTator 3" operation="article entity autocomplete" class="http_status" status=500 http_status failure
+2026-11-03T22:52:21.081391Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="batch article search enrichment" class="internal" internal failure
+pass bio-010   turns=5 calls=13 trust=1.00 live=6 prompt=57061 grounding=1.00 
+pass bio-015   turns=4 calls=8 trust=0.92 live=1 prompt=29325 grounding=0.80 
+pass omop-005  turns=2 calls=1 trust=1.00 live=0 prompt=11167 grounding=1.00 
+pass omop-010  turns=2 calls=1 trust=0.93 live=0 prompt=10951 grounding=0.83 
+pass omop-013  turns=3 calls=4 trust=1.00 live=0 prompt=21867 grounding=1.00 
+2026-11-03T23:07:14.218434Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="article search" class="internal" internal failure
+2026-11-03T23:07:18.937882Z  WARN biomcp_cli::error: External provider operation failed provider="PubTator 3" operation="article entity autocomplete" class="http_status" status=500 http_status failure
+2026-11-03T23:07:21.967173Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="batch article search enrichment" class="internal" internal failure
+2026-11-03T23:07:22.791039Z  WARN biomcp_cli::error: External provider operation failed provider="PubTator 3" operation="visible article metadata fallback" class="internal" internal failure
+INFO:mcp.server.lowlevel.server:Processing request of type CallToolRequest
+INFO:root:find_omop_concept called with keyword='sertraline 50 MG oral tablet', omop_table='drug_exposure', omop_field='drug_concept_id'
+INFO:httpx:HTTP Request: GET https://api.omophub.com/v1/concepts/suggest?query=sertraline+50+MG+oral+tablet&limit=10 "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://api.omophub.com/v1/search/concepts?query=sertraline+50+MG+oral+tablet&page_size=10 "HTTP/1.1 200 OK"
+INFO:mcp.server.lowlevel.server:Processing request of type ListToolsRequest
+pass x-002     turns=6 calls=11 trust=1.00 live=4 prompt=53334 grounding=1.00 
+pass x-006     turns=2 calls=2 trust=1.00 live=0 prompt=65076 grounding=1.00 
+2026-11-03T23:12:46.020002Z  WARN biomcp_cli::error: External provider operation failed provider="Semantic Scholar" operation="article search" class="internal" internal failure
+fail x-007     turns=8 calls=30 trust=1.00 live=15 prompt=198059 grounding=- 
+failed=['answer_includes_any']
+fail x-009     turns=8 calls=15 trust=1.00 live=6 prompt=80037 grounding=- 
+failed=['answer_includes_any']
+p10-E3-rxnorm-rewrite-r1: 13/17 passed, 152 tool calls (56 live), 1,021,601 
+prompt tokens

@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "review",
+    "entity": "article",
+    "limit": 10,
+    "sort": "citations",
+    "keyword": [
+      "EGFR-mutant NSCLC osimertinib first-line treatment FLAURA MARIPOSA review overall survival"
+    ]
+  },
+  "args_key": "7f77f14b6d4662be2d0a267b399ec33f822a174bb3d3c5c78f0eb2b890c93748",
+  "recorded_at": "2026-11-04T20:38:52.801733+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 497.0733999998629,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR-mutant NSCLC osimertinib first-line treatment FLAURA MARIPOSA review overall survival, type=review, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 36482474|Therapeutic strategies for EGFR-mutated non-small cell lung…|Europe PMC|2022-12-08|-|337| \n|PMID 38347643|Oncogenic alterations in advanced NSCLC: a molecular super-h…|Europe PMC|2024-02-12|-|127| \n|PMID 40140911|Recent advances in therapeutic strategies for non-small cell…|Europe PMC|2025-03-27|-|123| \n|PMID 33671873|Targeted Therapy in Advanced and Metastatic Non-Small Cell L…|Europe PMC|2021-02-15|-|99| \n|PMID 40517166|Advances in molecular pathology and therapy of non-small cel…|Europe PMC|2025-06-15|-|85| \n|PMID 37279591|Current treatment strategies for EGFR-mutated non-small cell…|Europe PMC|2023-06-01|-|78| \n|PMID 39184861|Mechanisms of resistance to tyrosine kinase inhibitor-target…|Europe PMC|2024-08-24|-|66| \n|PMID 40136350|Lung Cancer: Targeted Therapy in 2025.|Europe PMC|2025-03-02|-|49| \n|PMID 37376053|The Resistance to EGFR-TKIs in Non-Small Cell Lung Cancer: F…|Europe PMC|2023-05-27|-|47| \n|PMID 37894445|New Generations of Tyrosine Kinase Inhibitors in Treating NS…|Europe PMC|2023-10-20|-|44| \n \n \n \nNewest indexed: 2025-06-15 (507 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 36482474\n  biomcp search article -k \"EGFR-mutant NSCLC osimertinib first-line treatment FLAURA MARIPOSA review overall survival\" --type review --year-min 2021 --year-max 2025 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

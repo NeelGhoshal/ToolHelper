@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gwas",
+    "gene": "BRAF",
+    "limit": 10
+  },
+  "args_key": "8a0abe9ee8ef94ab8a576af7a2e6279d30c2aba2ef0eadfcdb0d11956aee7738",
+  "recorded_at": "2026-11-04T22:35:11.617348+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5949.249100000088,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# GWAS Search: gene=BRAF \n \nFound 10 GWAS associations \n \n| rsID | Trait | p-value | Effect | Risk AF | Genes | Study | PMID | \n|---|---|---|---|---|---|---|---| \n| rs10487888 | body height | 3e-101 | - | 0.4878 | BRAF | GCST90245848 | 36224396 | \n| rs2364399 | body height | 2e-74 | - | 0.1653 | BRAF | GCST90245848 | 36224396 | \n| rs10487888 | body height | 1e-30 | - | 0.3835 | BRAF | GCST90245844 | 36224396 | \n| rs9886260 | health trait | 1e-21 | - | 0.274517 | BRAF, CCT4P1 | GCST90565837 | 40374629 | \n| rs3829814 | health trait | 6e-21 | - | 0.436011 | BRAF | GCST90565837 | 40374629 | \n| rs13438418 | type 2 diabetes mellitus | 4e-17 | - | 0.11751 | BRAF, CCT4P1 | GCST90492734 | 38374256 | \n| rs11762469 | vital capacity | 6e-16 | - | - | BRAF | GCST007081 | 30595370 | \n| rs1292982927 | Alzheimer disease | 2e-15 | - | - | BRAF, CCT4P1 | GCST90624094 | 39998322 | \n| rs13227429 | vital capacity | 1e-14 | - | 0.515 | BRAF | GCST90244093 | 36914875 | \n| rs9886260 | size | 1e-14 | - | - | BRAF, CCT4P1 | GCST90309355 | 38965376 | \n \n \nMore results available. Continue with `--offset 10`. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "primary hypertension",
+    "max_results": 10,
+    "omop_field": "condition_concept_id",
+    "omop_table": "condition_occurrence"
+  },
+  "args_key": "de4bd08124e15b80ad99864699a75079e7c6b5b703847f2e180eca242076a459",
+  "recorded_at": "2026-11-03T20:31:52.101250+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1307.8235000139102,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 320128,\n      \"code\": \"59621000\",\n      \"name\": \"Essential hypertension\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/320128\"\n    },\n    {\n      \"concept_id\": 45423520,\n      \"code\": \"G20..12\",\n      \"name\": \"Primary hypertension\",\n      \"class\": \"Read\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"Read\",\n      \"url\": \"https://omophub.com/concepts/45423520\"\n    },\n    {\n      \"concept_id\": 667340,\n      \"code\": \"MONDO_0001134\",\n      \"name\": \"essential hypertension\",\n      \"class\": \"Disorder\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"Mondo\",\n      \"url\": \"https://omophub.com/concepts/667340\"\n    },\n    {\n      \"concept_id\": 979260,\n      \"code\": \"D000075222\",\n      \"name\": \"Essential Hypertension\",\n      \"class\": \"Main Heading\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"MeSH\",\n      \"url\": \"https://omophub.com/concepts/979260\"\n    },\n    {\n      \"concept_id\": 42488328,\n      \"code\": \"I10.9\",\n      \"name\": \"Other and unspecified primary hypertension\",\n      \"class\": \"KCD7 code\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"KCD7\",\n      \"url\": \"https://omophub.com/concepts/42488328\"\n    },\n    {\n      \"concept_id\": 37208890,\n      \"code\": \"1110081000000100\",\n      \"name\": \"Primary ocular hypertension\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/37208890\"\n    },\n    {\n      \"concept_id\": 4119611,\n      \"code\": \"233944003\",\n      \"name\": \"Familial primary pulmonary hypertension\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4119611\"\n    },\n    {\n      \"concept_id\": 4124831,\n      \"code\": \"233943009\",\n      \"name\": \"Sporadic primary pulmonary hypertension\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4124831\"\n    },\n    {\n      \"concept_id\": 1245116,\n      \"code\": \"1296754005\",\n      \"name\": \"Bilateral primary ocular hypertension\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/1245116\"\n    },\n    {\n      \"concept_id\": 1245115,\n      \"code\": \"1296752009\",\n      \"name\": \"Primary ocular hypertension of left eye\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/1245115\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"primary hypertension\",\n    \"omop_table\": \"condition_occurrence\",\n    \"omop_field\": \"condition_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

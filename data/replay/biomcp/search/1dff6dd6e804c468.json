@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "ERBB2",
+    "json": true,
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "1dff6dd6e804c468cecd9b390a533b4901ec0bc3a0426a60a3ab37d73fab0496",
+  "recorded_at": "2026-11-03T06:37:59.948492+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4509.483400033787,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=ERBB2, exclude_retracted=true, sort=date\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"41423932\",\n      \"pmcid\": \"PMC12724186\",\n      \"title\": \"Nanotherapeutics for enhanced treatments for ovarian cancer: a comprehensive minireview\",\n      \"journal\": \"Drug Deliv\",\n      \"date\": \"2026-12-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41427517\",\n      \"pmcid\": \"PMC12724104\",\n      \"title\": \"Polymersome-based nanomedicine for combined cancer therapy\",\n      \"journal\": \"Drug Deliv\",\n      \"date\": \"2026-12-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41496551\",\n      \"pmcid\": \"PMC12785206\",\n      \"title\": \"Oncolytic virus OVV-03 enhances CAR-T cell therapy against glioblastoma via immune modulation and specific HER2 upregulation\",\n      \"journal\": \"Oncoimmunology\",\n      \"date\": \"2026-12-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42684015\",\n      \"title\": \"A phase II multi-institutional single arm trial evaluating TG4010 vaccine plus nivolumab in non-small cell lung cancer.\",\n      \"journal\": \"Oncoimmunology\",\n      \"date\": \"2026-12-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42969075\",\n      \"title\": \"Agreement Between Medical Laboratory Technologists and Pathologists' Assessment of ERBB2 (HER2) Fluorescence In Situ Hybridization Across Breast and Gastric Scoring Criteria.\",\n      \"journal\": \"Applied immunohistochemistry & molecular morphology : AIMM\",\n      \"date\": \"2026-11-02\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42969719\",\n      \"title\": \"Preliminary Evaluation of Synthetic Amanitin Analogs as Novel Payloads for Potent Antibody-Drug Conjugates.\",\n      \"journal\": \"Molecular pharmaceutics\",\n      \"date\": \"2026-11-02\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42970860\",\n      \"title\": \"Genomic landscape of ERBB3 alterations in metastatic solid tumours: a real-world data analysis.\",\n      \"journal\": \"ESMO open\",\n      \"date\": \"2026-11-02\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42969552\",\n      \"title\": \"Preparation and comprehensive physicochemical characterization of trastuzumab-loaded PEGylated liposomal nanoparticles for systemic delivery.\",\n      \"journal\": \"Science progress\",\n      \"date\": \"2026-10-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"39749966\",\n      \"pmcid\": \"PMC11924144\",\n      \"doi\": \"10.1002/cpt.3540\",\n      \"title\": \"PMDA Perspective on Use of Real-World Data and Real-World Evidence as an External Control: Recent Examples and Considerations.\",\n      \"journal\": \"Clin Pharmacol Ther\",\n      \"date\": \"2025-01-03\",\n      \"citation_count\": 7,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"37466981\",\n      \"pmcid\": \"PMC10802905\",\n      \"doi\": \"10.1001/jamasurg.2023.2856\",\n      \"title\": \"Will Targeted Axillary Surgery Suffice for Adjuvant Treatment Decision-Making?\",\n      \"journal\": \"JAMA Surg\",\n      \"date\": \"2023-10-01\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search article --gene ERBB2 --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0\",\n      \"biomcp get article 41423932\",\n      \"biomcp search article -g ERBB2 --year-min 2023 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

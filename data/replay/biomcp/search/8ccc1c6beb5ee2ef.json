@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "gene": "BRAF",
+    "json": true,
+    "limit": 10,
+    "query": "V600E Val600Glu c.1799T>A rs113488022"
+  },
+  "args_key": "8ccc1c6beb5ee2ef879e75a86c91b0308721ba96df8985256cf8e58a5ac2508d",
+  "recorded_at": "2026-11-05T04:17:23.174711+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 808.4880000023986,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"count\": 0,\n  \"diagnostics\": [],\n  \"filter_evaluation\": {\n    \"condition\": \"evaluated\",\n    \"gene\": \"evaluated\"\n  },\n  \"pagination\": {\n    \"has_more\": false,\n    \"limit\": 10,\n    \"next_page_token\": null,\n    \"offset\": 0,\n    \"returned\": 0,\n    \"total\": 0\n  },\n  \"results\": []\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

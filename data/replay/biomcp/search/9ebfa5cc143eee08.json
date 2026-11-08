@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 5,
+    "query": "KIT"
+  },
+  "args_key": "9ebfa5cc143eee0810f74b2bdc548bd0885c8b5a4b05530778efdfbfb956231a",
+  "recorded_at": "2026-11-03T06:46:06.960251+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 196.5786999789998,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: KIT \n \nFound 1 gene \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| KIT | KIT proto-oncogene, receptor tyrosine kinase | 3815 | 4:54657267-54740783 | GRCh38 | P10721 | 164920 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1 of 1 results. \n \n\n\n## Next commands\n- `biomcp get gene KIT`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "metformin hydrochloride 500 MG oral tablet",
+    "max_results": 5,
+    "omop_field": "drug_concept_id",
+    "omop_table": "drug_exposure"
+  },
+  "args_key": "29efd8fc3c42ff82b61783e05c07c9f8c667455c9af277044dadd565ff2cf220",
+  "recorded_at": "2026-11-03T19:46:10.247098+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 990.3640000266023,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 40164929,\n      \"code\": \"861007\",\n      \"name\": \"metformin hydrochloride 500 MG Oral Tablet\",\n      \"class\": \"Clinical Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40164929\"\n    },\n    {\n      \"concept_id\": 19006932,\n      \"code\": \"105376\",\n      \"name\": \"metformin hydrochloride 500 MG Oral Tablet [Glucamet]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19006932\"\n    },\n    {\n      \"concept_id\": 40164930,\n      \"code\": \"861008\",\n      \"name\": \"metformin hydrochloride 500 MG Oral Tablet [Glucophage]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40164930\"\n    },\n    {\n      \"concept_id\": 40165975,\n      \"code\": \"861740\",\n      \"name\": \"glipizide 5 MG / metformin hydrochloride 500 MG Oral Tablet\",\n      \"class\": \"Clinical Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40165975\"\n    },\n    {\n      \"concept_id\": 40166002,\n      \"code\": \"861753\",\n      \"name\": \"glyburide 5 MG / metformin hydrochloride 500 MG Oral Tablet\",\n      \"class\": \"Clinical Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40166002\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"metformin hydrochloride 500 MG oral tablet\",\n    \"omop_table\": \"drug_exposure\",\n    \"omop_field\": \"drug_concept_id\",\n    \"total_found\": 5,\n    \"candidates_returned\": 5,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

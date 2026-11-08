@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "article_type": "review",
+    "date_from": "2024",
+    "json": true,
+    "keyword": [
+      "BRAF V600E",
+      "inhibitor",
+      "resistance"
+    ],
+    "limit": 10
+  },
+  "args_key": "ef4a884833c65d285ec7caf1b2a28451633f2203b0161fd29ed98e2e8ba94f8e",
+  "recorded_at": "2026-11-04T00:25:18.737006+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5757.572300033644,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=BRAF V600E inhibitor resistance, type=review, date_from=2024, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"sort\": \"relevance\",\n  \"semantic_scholar_enabled\": false,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"europepmc\",\n      \"pubmed\"\n    ],\n    \"enrichment_sources\": [\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"ranking_policy\": \"hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"note\": \"Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering.\",\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"42769885\",\n      \"pmcid\": \"PMC13591381\",\n      \"doi\": \"10.3389/fneur.2026.1921351\",\n      \"title\": \"Programmed cell death evasion in BRAF V600E-driven primary CNS tumors and thyroid cancer brain metastases.\",\n      \"journal\": \"Front Neurol\",\n      \"date\": \"2026-09-02\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42544547\",\n      \"pmcid\": \"PMC13449833\",\n      \"doi\": \"10.1080/20450907.2026.2711620\",\n      \"title\": \"Practical management of BRAF inhibitors in glioma: toxicity and resistance.\",\n      \"journal\": \"CNS Oncol\",\n      \"date\": \"2026-08-03\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42879043\",\n      \"title\": \"Resistance Phenotypes and Treatment Sequencing After Immune Checkpoint Blockade in MSI-H/dMMR Metastatic Colorectal Cancer: A Review.\",\n      \"journal\": \"Journal of gastrointestinal cancer\",\n      \"date\": \"2026-10-15\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42747511\",\n      \"pmcid\": \"PMC13582093\",\n      \"doi\": \"10.1007/s00408-026-00932-9\",\n      \"title\": \"Unveiling BRAF Mutations in Non-small Cell Lung Cancer: State of the Art and Future Perspectives.\",\n      \"journal\": \"Lung\",\n      \"date\": \"2026-09-16\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42487519\",\n      \"pmcid\": \"PMC13394550\",\n      \"doi\": \"10.1111/cas.70480\",\n      \"title\": \"New Treatment Strategy and Future Research Direction for BRAF-Mutated Cancer.\",\n      \"journal\": \"Cancer Sci\",\n      \"date\": \"2026-07-23\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42628758\",\n      \"title\": \"Targeting BRAF dimerization in cancer: structural insights and therapeutic strategies beyond monomer inhibition.\",\n      \"journal\": \"Biochemical pharmacology\",\n      \"date\": \"2026-08-21\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42596830\",\n      \"pmcid\": \"PMC13496938\",\n      \"doi\": \"10.3892/ijo.2026.5927\",\n      \"title\": \"Signaling pathways and targeted therapy in high‑risk refractory thyroid cancer: From bench to bedside (Review).\",\n      \"journal\": \"Int J Oncol\",\n      \"date\": \"2026-08-14\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42829473\",\n      \"title\": \"Papillary thyroid carcinoma in children: prevalence, morphology, molecular and cytogenetic characteristics, and prognostic determinants.\",\n      \"journal\": \"Journal of pediatric endocrinology & metabolism : JPEM\",\n      \"date\": \"2026-10-05\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42762133\",\n      \"title\": \"Precision medicine for pediatric gliomas.\",\n      \"journal\": \"Current opinion in oncology\",\n      \"date\": \"2026-11-01\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42720827\",\n      \"pmcid\": \"PMC13562304\",\n      \"doi\": \"10.1007/s10555-026-10378-3\",\n      \"title\": \"Langerhans cell histiocytosis: molecular mechanisms underlying pathogenesis and emerging targeted therapeutics.\",\n      \"journal\": \"Cancer Metastasis Rev\",\n      \"date\": \"2026-09-10\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"partial_query_match\",\n        \"message\": \"The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42769885\",\n      \"biomcp list article\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

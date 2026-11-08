@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "meta-analysis",
+    "entity": "article",
+    "keyword": [
+      "metformin",
+      "cardiovascular"
+    ],
+    "limit": 10,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "05d79432e7ea846b84587d461119bc2731c0855fdab0b0da4fafb69fcc0da8be",
+  "recorded_at": "2026-11-03T05:05:16.599395+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1008.9098000316881,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=metformin cardiovascular, type=meta-analysis, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 10 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42530338|Effect of Medications for Type 2 Diabetes on Cardiovascular…|PubMed|2026-10-01|-|none| \n|PMID 42614024|Dipeptidyl Peptidase-4 Inhibitors Associated Heart Failure E…|PubMed|2026-09-01|-|none| \n|PMID 42626880|Comparative neuroprotective effects of antidiabetic medicati…|PubMed|2026-08-21|-|none| \n|PMID 42250263|Metformin for COVID-19: An Updated Systematic Review and Met…|PubMed|2026-07-01|-|none| \n|PMID 42328113|Genetic Evidence for the Benefits and Risks of Glucose-Lower…|PubMed|2026-05-11|-|none| \n|PMID 41548682|Safety of metformin in chronic kidney disease and type 2 dia…|PubMed|2026-02-15|-|none| \n|PMID 41401897|Effect of metformin on central arterial stiffness in individ…|PubMed|2026-01-01|-|none| \n|PMID 41044631|Efficacy and safety of variable-dose metformin as adjunctive…|PubMed|2025-10-03|-|none| \n|PMID 40665260|The effects of non-insulin anti-diabetic medications on the…|PubMed|2025-07-16|-|none| \n|PMID 40390076|The role of diabetes mellitus on delirium onset: a systemati…|PubMed|2025-05-19|-|none| \n \n \n \nNewest indexed: 2026-08-21 (74 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42530338\n  biomcp search article -k \"metformin cardiovascular\" --type meta-analysis --source pubmed --year-min 2025 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-10 of 155 results. Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

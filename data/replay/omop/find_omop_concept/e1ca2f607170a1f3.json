@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "0378-6001",
+    "max_results": 10,
+    "omop_field": "drug_concept_id",
+    "omop_table": "drug_exposure"
+  },
+  "args_key": "e1ca2f607170a1f369abb961f8f5e090a96cab9b843425d77ecb3eb502174514",
+  "recorded_at": "2026-11-03T10:27:48.193605+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 763.2041999604553,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"error\": \"No results found for keyword '0378-6001'. The search term may not exist in the OMOP vocabulary.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

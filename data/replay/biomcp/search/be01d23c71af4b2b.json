@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR mutation lung cancer discovery"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "be01d23c71af4b2b1e3ec05e0f05563bf4786136c32a4d46bab22047e2af741a",
+  "recorded_at": "2026-11-03T13:06:33.688197+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3828.5278999828734,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR mutation lung cancer discovery, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR mutation lung cancer discovery\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 23000897|Comprehensive molecular portraits of human breast tumours.|Europe PMC|2012-09-23|-|10172| \n|PMID 27268795|The Ensembl Variant Effect Predictor.|Europe PMC|2016-06-06|-|7109| \n|PMID 27899662|KEGG: new perspectives on genomes, pathways, diseases and dr…|Europe PMC|2016-11-28|-|6809| \n|PMID 18772890|Comprehensive genomic characterization defines human gliobla…|Europe PMC|2008-09-04|-|6183| \n|PMID 42843136|In silico miniaturization of the necitumumab EGFR-binding in…|PubMed|2026-11-05|-|0| \n|PMID 42903845|Quantitative systems pharmacology modeling of class I-III BR…|PubMed|2026-10-13|-|0| \n|PMID 42870893|Bioelectrical impedance-derived body composition and systemi…|PubMed|2026-09-30|-|0| \n|PMID 42883213|Small-Molecule Drugs Approved by the FDA in 2025.|PubMed|2026-09-27|-|0| \n|PMID 37373532|Single-Droplet Microsensor for Ultra-Short Circulating EFGR…|PubTator3|2023-06-20|-|none| \n|PMID 36423823|Discovery of mobocertinib, a potent, oral inhibitor of EGFR…|PubTator3|2023-01-15|-|none| \n \n \n \nNewest indexed: 2026-10-22 (12 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 23000897\n  biomcp search article -k \"EGFR mutation lung cancer discovery\" --year-min 2008 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

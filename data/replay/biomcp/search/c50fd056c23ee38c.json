@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "research-article",
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "gene therapy",
+      "clinical trial"
+    ],
+    "limit": 20,
+    "sort": "date"
+  },
+  "args_key": "c50fd056c23ee38cf04963a95b6c06f955921a45a1f858a3ebd01c4fdab500ba",
+  "recorded_at": "2026-11-04T20:38:32.863275+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6586.512000000084,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR gene therapy clinical trial, type=research-article, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 20 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42567431|HPS-4/TIMI 65/ORION-4: A double-blind randomized placebo-con…|PubMed|2027-01-01|-|16| \n|PMID 42969232|A single liver-sparing myotropic AAV ameliorates muscular dy…|Europe PMC|2026-11-02|-|0| \n|PMID 42969235|TARBP2 facilitates renal cell carcinoma immune escape by sup…|Europe PMC|2026-11-02|-|0| \n|PMID 42969615|Spontaneous neuropathic pain.|Europe PMC|2026-11-02|-|0| \n|PMID 42543449|Cas12a/crRNA Recognition Catalyzed Triple Self-Priming Casca…|PubMed|2026-11-01|-|0| \n|PMID 42838069|The expanding therapeutic landscape of β-thalassaemia.|PubMed|2026-11-01|-|0| \n|PMID 42933389|In vivo genome-editing therapy for Duchenne muscular dystrop…|PubMed|2026-10-26|-|0| \n|PMID 42919351|Innovations and emerging trends in adoptive cell therapies f…|PubMed|2026-10-22|-|0| \n|PMID 42909385|EXO1 inhibition selectively kills replication repair-deficie…|Europe PMC|2026-10-21|-|0| \n|PMID 42921508|Potential Therapeutic Applications of Spherical Nucleic Acid…|PubMed|2026-10-19|-|0| \n|PMID 42927351|Generation of hypoimmunogenic cardiomyocytes from human indu…|Europe PMC|2026-10-17|-|0| \n|PMID 42890282|Individualized and Platform-Designated Gene-Editing Studies…|PubMed|2026-10-15|-|0| \n|PMID 42868209|Emerging Therapies for Genetic Deafness: The Rise of Precisi…|Europe PMC|2026-10-13|-|0| \n|PMID 42854678|Genome editing for hereditary angioedema: A landmark trial a…|PubMed|2026-10-09|-|0| \n|PMID 42959597|Phase 1 evaluation of APN401, an autologous CBL-B-silenced P…|Europe PMC|2026-10-05|-|0| \n|PMID 42898339|Advancing cardiac xenotransplantation: overcoming challenges…|PubMed|2026-10-05|-|0| \n|PMID 42556172|A scoping review of gene editing in clinical trials: identif…|PubMed|2026-10-01|-|0| \n|PMID 42822434|Flipping the fetal switch across β-hemoglobinopathies.|PubMed|2026-10-01|-|0| \n|PMID 42828130|Ultrasound-responsive nanotherapy promotes axonal regenerati…|Europe PMC|2026-09-22|-|0| \n|PMID 42750591|Immune checkpoint knockout screen reveals TIGIT-CD155 intera…|Europe PMC|2026-09-17|-|0| \n \n \n \nNewest indexed: 2026-11-03 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42567431\n  biomcp search article -k \"CRISPR gene therapy clinical trial\" --type research-article --year-min 2026 --year-max 2027 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 20 results (total unknown). Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

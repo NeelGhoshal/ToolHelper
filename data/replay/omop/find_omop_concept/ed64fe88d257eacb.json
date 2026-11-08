@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "hypertension (HTN)",
+    "max_results": 10,
+    "omop_field": "condition_concept_id",
+    "omop_table": "condition_occurrence"
+  },
+  "args_key": "ed64fe88d257eacb96aad5441080744da7b0555904ef013a244541922218d137",
+  "recorded_at": "2026-11-03T13:33:19.627257+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1137.11070001591,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 316866,\n      \"code\": \"38341003\",\n      \"name\": \"Hypertensive disorder\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/316866\"\n    },\n    {\n      \"concept_id\": 3966251,\n      \"code\": \"102035-3\",\n      \"name\": \"Screening anti-hypertensive and anti-thrombotic drugs [Presence] of Serum\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3966251\"\n    },\n    {\n      \"concept_id\": 36031389,\n      \"code\": \"95932-0\",\n      \"name\": \"Pulmonary hypertension [Class]\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/36031389\"\n    },\n    {\n      \"concept_id\": 40769278,\n      \"code\": \"66618-0\",\n      \"name\": \"Pulmonary hypertension [Reported]\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/40769278\"\n    },\n    {\n      \"concept_id\": 141693,\n      \"code\": \"371622005\",\n      \"name\": \"Elevated blood-pressure reading without diagnosis of hypertension\",\n      \"class\": \"Context-dependent\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/141693\"\n    },\n    {\n      \"concept_id\": 45924034,\n      \"code\": \"117399\",\n      \"name\": \"Hypertension\",\n      \"class\": \"Diagnosis\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"CIEL\",\n      \"url\": \"https://omophub.com/concepts/45924034\"\n    },\n    {\n      \"concept_id\": 37365197,\n      \"code\": \"168195\",\n      \"name\": \"Chronic kidney disease due to hypertension\",\n      \"class\": \"Diagnosis\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"CIEL\",\n      \"url\": \"https://omophub.com/concepts/37365197\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"hypertension (HTN)\",\n    \"omop_table\": \"condition_occurrence\",\n    \"omop_field\": \"condition_concept_id\",\n    \"total_found\": 7,\n    \"candidates_returned\": 7,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

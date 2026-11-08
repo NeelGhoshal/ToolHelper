@@ -1,0 +1,43 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "BRAF inhibitor",
+      "dabrafenib",
+      "vemurafenib",
+      "encorafenib",
+      "trametinib",
+      "binimetinib",
+      "cobimetinib"
+    ],
+    "json": true,
+    "limit": 25,
+    "status": "recruiting"
+  },
+  "args_key": "80986287515aa0db1b127618e2a996343dfec1a661258517ccf5c46598167386",
+  "recorded_at": "2026-11-03T23:16:05.144318+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 0.8950000628829002,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "intervention must contain 1-3 values"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

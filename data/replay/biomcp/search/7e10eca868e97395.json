@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "EGFR",
+    "limit": 15,
+    "sort": "citations",
+    "keyword": [
+      "lung cancer"
+    ]
+  },
+  "args_key": "7e10eca868e973953f36e5daa26c1ba69e37a66f3d5840a1985dc0b985cd1dba",
+  "recorded_at": "2026-11-04T20:37:58.728323+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4948.629099999835,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, keyword=lung cancer, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene EGFR --keyword \"lung cancer\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 23550210|Integrative analysis of complex cancer genomics and clinical…|Europe PMC|2013-04-02|-|12856| \n|PMID 23000897|Comprehensive molecular portraits of human breast tumours.|Europe PMC|2012-09-23|-|10271| \n|PMID 32029601|The biology, function, and biomedical applications of exosom…|Europe PMC|2020-02-01|-|8962| \n|PMID 20303878|Immunity, inflammation, and cancer.|Europe PMC|2010-03-01|-|8587| \n|PMID 15118073|Activating mutations in the epidermal growth factor receptor…|Europe PMC|2004-04-29|-|8565| \n|PMID 27718847|Pembrolizumab versus Chemotherapy for PD-L1-Positive Non-Sma…|Europe PMC|2016-10-08|-|8158| \n|PMID 42977173|Pharmacological targeting of ANO1/TMEM16A in cancer: from ch…|PubMed|2026-11-03|-|0| \n|PMID 42978067|PROTAC-induced protein degradation in lung cancer.|PubMed|2026-11-03|-|0| \n|PMID 42977475|Transformation to Small-Cell Lung Carcinoma and Then to Sarc…|PubMed|2026-11-01|-|0| \n|PMID 42979327|Concurrent loss of RB1 facilitates EGFR-TKI resistance in EG…|PubMed|2026-11-01|-|none| \n|PMID 42979409|A Narrative Review of the Cases of Co-altered EGFR and ALK i…|PubMed|2026-10-04|-|none| \n|PMID 42976000|Detection of RET fusion in late-line treatment of NSCLC foll…|PubMed|2026-01-01|-|0| \n|PMID 38851874|Impact of smoking on resected lung cancer depends on epiderm…|PubTator3|2024-06-08|-|none| \n|PMID 37013960|Inhibition of CDCP1 by 8-isopentenylnaringenin synergizes wi…|PubTator3|2023-04-04|-|none| \n|PMID 36313724|High rate of epidermal growth factor receptor-mutated primar…|PubTator3|2022-10-13|-|none| \n \n \n \nNewest indexed: 2026-11-04 (0 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 23550210\n  biomcp search article -g EGFR -k \"lung cancer\" --year-min 2004 --year-max 2026 --limit 5   - refine this search to the visible publication-year range\n  biomcp discover \"lung cancer\" \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

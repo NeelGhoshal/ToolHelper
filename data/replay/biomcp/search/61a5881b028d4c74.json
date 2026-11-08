@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "sertraline"
+    ],
+    "entity": "article",
+    "limit": 5
+  },
+  "args_key": "61a5881b028d4c74dcae04c9845e35a5a4adc7c7b3c5fe357f370923df05db8d",
+  "recorded_at": "2026-11-03T23:07:23.064050+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 9316.084599937312,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=sertraline, exclude_retracted=true, sort=relevance, ranking_mode=lexical, ranking_policy=calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --drug sertraline --exclude-retracted --sort relevance --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \nRanking: calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42968638|Sertraline disrupts ETFDH-mediated mitochondrial fatty acid…|Europe PMC, PubMed|2026-11-03|title 1/1|0| \n|PMID 42847820|Variability in Sertraline Pharmacokinetics in Routine Clinic…|Europe PMC|2026-11-01|title 1/1|0| \n|PMID 42972310|The molecular and neurochemical basis of altered intrinsic n…|PubMed|2026-08-05|title 1/1|none| \n|PMID 39693081|Brexpiprazole and Sertraline Combination Treatment in Posttr…|PubTator3|2024-12-18|title 1/1|none| \n|PMID 42962146|Correction to \"One-Step Electrodeposition of Feather-Like Au…|PubMed|2026-11-01|title 1/1|0| \n \n \n \nNewest indexed: 2026-11-03 (0 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42968638\n  biomcp search article --drug sertraline --year-min 2024 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

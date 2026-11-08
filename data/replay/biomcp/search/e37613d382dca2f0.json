@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "disease": [
+      "lung cancer"
+    ],
+    "entity": "article",
+    "gene": "EGFR",
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "e37613d382dca2f0a3ea3b5d09ef07c04fe02dc8b3a69e550bb5cae9eacf3207",
+  "recorded_at": "2026-11-03T20:50:08.309567+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 13127.619999984745,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, disease=lung cancer, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene EGFR --disease \"lung cancer\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 32029601|The biology, function, and biomedical applications of exosom…|Europe PMC|2020-02-01|-|8962| \n|PMID 20303878|Immunity, inflammation, and cancer.|Europe PMC|2010-03-01|-|8587| \n|PMID 15118073|Activating mutations in the epidermal growth factor receptor…|Europe PMC|2004-04-29|-|8565| \n|PMID 27718847|Pembrolizumab versus Chemotherapy for PD-L1-Positive Non-Sma…|Europe PMC|2016-10-08|-|8158| \n|PMID 42973333|Clinical and Molecular Outcomes of Dabrafenib/Trametinib-Bas…|PubMed|2026-10-20|-|none| \n|PMID 42973948|Epigenetic regulation of cancer stem cell plasticity and rel…|PubMed|2026-10-19|-|none| \n|PMID 42972594|Anlotinib combined with almonertinib reverses almonertinib r…|PubMed|2026-08-05|-|0| \n|PMID 42972485|The TGF-β signaling activated by cancer-associated macropha…|PubMed|2026-08-04|-|0| \n|PMID 38851874|Impact of smoking on resected lung cancer depends on epiderm…|PubTator3|2024-06-08|-|none| \n|PMID 37013960|Inhibition of CDCP1 by 8-isopentenylnaringenin synergizes wi…|PubTator3|2023-04-04|-|none| \n \n \n \nNewest indexed: 2026-11-03 (0 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 32029601\n  biomcp search article -g EGFR -d \"lung cancer\" --year-min 2004 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n\nCache note: PubTator 3 data served from cache, 6 h old (older than the provider's freshness window).\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

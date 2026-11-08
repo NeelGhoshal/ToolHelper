@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 5,
+    "query": "HER2"
+  },
+  "args_key": "0df25313d717019c328971867b3bc3a17c5cbfd322f1a96ed8155f6c440e9997",
+  "recorded_at": "2026-11-03T08:29:13.038997+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 40.694599971175194,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: HER2 \n \nFound 1 gene \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| ERBB2 | erb-b2 receptor tyrosine kinase 2 | 2064 | 17:39687914-39730426 | GRCh38 | P04626 | 164870 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1 of 1 results. \n \n\n\n## Next commands\n- `biomcp get gene ERBB2`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

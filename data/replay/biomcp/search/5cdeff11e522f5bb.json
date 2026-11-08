@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "gene": "BRAF",
+    "significance": "Pathogenic",
+    "json": true,
+    "limit": 10,
+    "review_status": "expert_panel"
+  },
+  "args_key": "5cdeff11e522f5bbe8f3fb42ad76c4e2937ccf427533d8ebe23777435306a16c",
+  "recorded_at": "2026-11-03T15:34:36.817286+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 550.0278999679722,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get variant \\\"chr7:g.140453136A>C\\\"\",\n      \"biomcp get gene BRAF\",\n      \"biomcp list variant\"\n    ]\n  },\n  \"count\": 10,\n  \"diagnostics\": [],\n  \"filter_evaluation\": {\n    \"gene\": \"evaluated\",\n    \"review_status\": \"evaluated\",\n    \"significance\": \"evaluated\"\n  },\n  \"pagination\": {\n    \"has_more\": true,\n    \"limit\": 10,\n    \"next_page_token\": null,\n    \"offset\": 0,\n    \"returned\": 10,\n    \"total\": 24\n  },\n  \"results\": [\n    {\n      \"clinvar_stars\": 3,\n      \"gene\": \"BRAF\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.65,\n      \"hgvs_c\": \"c.1799T>G\",\n      \"hgvs_p\": \"p.Val600Gly\",\n      \"id\": \"chr7:g.140453136A>C\",\n      \"legacy_name\": \"BRAF V600G\",\n      \"revel\": 0.925,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_004333.6\"\n    },\n    {\n      \"clinvar_stars\": 3,\n      \"gene\": \"BRAF\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.65,\n      \"hgvs_c\": \"c.1796C>T\",\n      \"hgvs_p\": \"p.Thr599Ile\",\n      \"id\": \"chr7:g.140453139G>A\",\n      \"legacy_name\": \"BRAF T599I\",\n      \"revel\": 0.883,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_004333.6\"\n    },\n    {\n      \"clinvar_stars\": 3,\n      \"gene\": \"BRAF\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.65,\n      \"hgvs_c\": \"c.1796C>G\",\n      \"hgvs_p\": \"p.Thr599Arg\",\n      \"id\": \"chr7:g.140453139G>C\",\n      \"legacy_name\": \"BRAF T599R\",\n      \"revel\": 0.693,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_004333.6\"\n    },\n    {\n      \"clinvar_stars\": 3,\n      \"gene\": \"BRAF\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.65,\n      \"hgvs_c\": \"c.1781A>T\",\n      \"hgvs_p\": \"p.Asp594Val\",\n      \"id\": \"chr7:g.140453154T>A\",\n      \"legacy_name\": \"BRAF D594V\",\n      \"revel\": 0.977,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_004333.6\"\n    },\n    {\n      \"clinvar_stars\": 3,\n      \"gene\": \"BRAF\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.68,\n      \"hgvs_c\": \"c.1595G>A\",\n      \"hgvs_p\": \"p.Cys532Tyr\",\n      \"id\": \"chr7:g.140476811C>T\",\n      \"legacy_name\": \"BRAF C532Y\",\n      \"revel\": 0.912,\n      \"significance\": \"Likely pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_004333.6\"\n    },\n    {\n      \"clinvar_stars\": 3,\n      \"gene\": \"BRAF\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.33,\n      \"hgvs_c\": \"c.793G>C\",\n      \"hgvs_p\": \"p.Gly265Arg\",\n      \"id\": \"chr7:g.140501279C>G\",\n      \"legacy_name\": \"BRAF G265R\",\n      \"revel\": 0.917,\n      \"significance\": \"Likely pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_004333.6\"\n    },\n    {\n      \"clinvar_stars\": 3,\n      \"gene\": \"BRAF\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 3.08,\n      \"hgvs_c\": \"c.741T>G\",\n      \"hgvs_p\": \"p.Phe247Leu\",\n      \"id\": \"chr7:g.140501331A>C\",\n      \"legacy_name\": \"BRAF F247L\",\n      \"revel\": 0.816,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_004333.6\"\n    },\n    {\n      \"clinvar_stars\": 3,\n      \"gene\": \"BRAF\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.43,\n      \"hgvs_c\": \"c.740T>C\",\n      \"hgvs_p\": \"p.Phe247Ser\",\n      \"id\": \"chr7:g.140501332A>G\",\n      \"legacy_name\": \"BRAF F247S\",\n      \"revel\": 0.935,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_004333.6\"\n    },\n    {\n      \"clinvar_stars\": 3,\n      \"gene\": \"BRAF\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 4.01,\n      \"hgvs_c\": \"c.730A>C\",\n      \"hgvs_p\": \"p.Thr244Pro\",\n      \"id\": \"chr7:g.140501342T>G\",\n      \"legacy_name\": \"BRAF T244P\",\n      \"revel\": 0.855,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_004333.6\"\n    },\n    {\n      \"clinvar_stars\": 3,\n      \"gene\": \"BRAF\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.17,\n      \"hgvs_c\": \"c.722C>A\",\n      \"hgvs_p\": \"p.Thr241Lys\",\n      \"id\": \"chr7:g.140501350G>T\",\n      \"legacy_name\": \"BRAF T241K\",\n      \"revel\": 0.946,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_004333.6\"\n    }\n  ]\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

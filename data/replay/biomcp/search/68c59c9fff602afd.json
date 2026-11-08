@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "trastuzumab deruxtecan"
+    ],
+    "entity": "article",
+    "limit": 8,
+    "sort": "date"
+  },
+  "args_key": "68c59c9fff602afd2de613115780ee41f88089b58f72e58b4bec8626e993b575",
+  "recorded_at": "2026-11-03T09:08:47.768023+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3165.908299968578,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=trastuzumab deruxtecan, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --drug \"trastuzumab deruxtecan\" --exclude-retracted --sort date --source semanticscholar --limit 8 --offset 0` \n \n \nFound 8 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41866709|Extracellular payload release from non-internalizing antibod…|PubTator3|2026-12-31|-|none| \n|PMID 42965705|Managing trastuzumab deruxtecan-related adverse events in pa…|PubMed|2026-10-31|-|0| \n|PMID 42957090|[Anti-HER2 tyrosine kinase inhibitors in the management of b…|PubMed|2026-10-29|-|0| \n|PMID 42929047|Preclinical modeling of trastuzumab deruxtecan in a mouse mo…|PubTator3|2026-10-24|-|none| \n|PMID 42924615|Advances in resistance mechanisms and counterstrategies for…|Europe PMC|2026-10-23|-|0| \n|PMID 42914177|Preclinical PET Imaging of Trastuzumab Deruxtecan in Tumors…|PubTator3|2026-10-22|-|none| \n|PMID 42927325|Timing of cranial radiotherapy in HER2-positive breast Cance…|Europe PMC|2026-10-07|-|0| \n|PMID 42828101|Engineering \"off-the-shelf\" TCR-T cells: A transient mRNA pl…|Europe PMC|2026-09-03|-|0| \n \n \n \nNewest indexed: 2026-10-31 (3 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41866709\n  biomcp search article --drug \"trastuzumab deruxtecan\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 8 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

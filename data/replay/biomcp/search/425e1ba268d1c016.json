@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "mutation": [
+      "BRAF V600E"
+    ],
+    "offset": 50
+  },
+  "args_key": "425e1ba268d1c0166ec98d4ce3feece9e060a94f6f9bfce4f2d77a705993ffee",
+  "recorded_at": "2026-11-05T04:34:14.732510+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 12225.989200000186,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 25 trial(s) \n \nQuery: condition=melanoma, mutation=BRAF V600E, offset=50 \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT06249048|Phase 1/2 Study of Intrat…|RECRUITING|1/2|Advanced Solid Tumor| \n|NCT07751042|Phase 1/2 Study of Intrav…|RECRUITING|1/2|Advanced Solid Tumor| \n|NCT03235245|Immunotherapy With Ipilim…|ACTIVE_NOT_RECRUITING|2|Unresectable Stage III Melanoma, Stage IV Melanoma| \n|NCT04439292|Testing Trametinib and Da…|ACTIVE_NOT_RECRUITING|2|Advanced Lymphoma, Advanced Malignant Solid Ne… [abridged; 6 conditions total]| \n|NCT05176470|Neoadj Admin Autologous T…|ACTIVE_NOT_RECRUITING|1|Locally Advanced Melanoma, Pathologic Stage II… [abridged; 5 conditions total]| \n|NCT05270044|Adjuvant Encorafenib and…|ACTIVE_NOT_RECRUITING|3|Melanoma| \n|NCT05789069|A Study of HFB200603 as a…|ACTIVE_NOT_RECRUITING|1|Renal Cell Carcinoma, Melanoma, Non Small Cell… [abridged; 5 conditions total]| \n|NCT07862530|Neoadjuvant RP2 + Nivolum…|NOT_YET_RECRUITING|2|MelanomaCutaneous Melanoma Resectable, Melanoma| \n|NCT00949702|A Study of Vemurafenib in…|COMPLETED|2|Malignant Melanoma| \n|NCT01248936|A Study of RO5185426 in P…|COMPLETED|2|Malignant Melanoma| \n|NCT01584648|A Study Comparing Trameti…|COMPLETED|3|Melanoma| \n|NCT01689519|A Study Comparing Vemuraf…|COMPLETED|3|Malignant Melanoma| \n|NCT02257424|Dabrafenib, Trametinib an…|COMPLETED|1/2|Advanced BRAF Mutant Melanoma| \n|NCT02392871|Radiotherapy & Combi in M…|COMPLETED|1/2|Metastatic Melanoma| \n|NCT03159117|Pfizer PF-06688992 in Pat…|COMPLETED|1|Melanoma| \n|NCT03239145|Pembrolizumab (Anti-PD-1)…|COMPLETED|1|Advanced Solid Tumor| \n|NCT03455764|MCS110 With BRAF/MEK Inhi…|COMPLETED|1/2|Melanoma| \n|NCT02357732|Study of the Anti-PD-1 An…|WITHDRAWN|1|Metastatic Melanoma| \n|NCT02447939|Pharmacokinetics of Repea…|WITHDRAWN|1|Melanoma| \n|NCT01166126|Temsirolimus/AZD 6244 for…|TERMINATED|2|Mucosal Melanoma, Recurrent Melanoma, Stage IV Melanoma| \n|NCT01978236|Dabrafenib/Trametinib, BR…|TERMINATED|2|Melanoma and Brain Metastases| \n|NCT02052193|Evaluation of Photosensit…|TERMINATED|2|Metastatic Melanoma (Carrying BRAF V600 Mutation)| \n|NCT02410863|Biopsy- and Biology-drive…|TERMINATED|2|Malignant Melanoma| \n|NCT03207867|A Phase 2 Study of NIR178…|TERMINATED|2|NSCLC, Non Small Cell Lung Cancer, RCC, Renal… [abridged; 10 conditions total]| \n|NCT04190628|Safety and Tolerability o…|TERMINATED|1|Advanced Solid Tumor, BRAF V600 Mutation| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 25 results (total unknown). Use --offset 75 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

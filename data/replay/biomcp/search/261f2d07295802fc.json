@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "mutation": [
+      "BRAF V600E"
+    ],
+    "offset": 25
+  },
+  "args_key": "261f2d07295802fc3af397757af776141bab0eeb3998edf0b70fbe58a834d4c4",
+  "recorded_at": "2026-11-03T05:35:50.620703+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 9251.505799998995,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 25 trial(s) \n \nQuery: condition=melanoma, mutation=BRAF V600E, offset=25 \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT06172478|A Study of HER3-DXd in Su…|RECRUITING|2|Advanced Solid Tumor, Melanoma, Head and Neck… [abridged; 14 conditions total]| \n|NCT07751042|Phase 1/2 Study of Intrav…|RECRUITING|1/2|Advanced Solid Tumor| \n|NCT02196181|Testing Two Different Tre…|ACTIVE_NOT_RECRUITING|2|Stage III Cutaneous Melanoma AJCC v7, Stage IV… [abridged; 3 conditions total]| \n|NCT03543969|Adaptive BRAF-MEK Inhibit…|ACTIVE_NOT_RECRUITING|EARLY_PHASE1|Melanoma (Skin), Skin Cancer, Skin Melanoma, Skin Carcinoma| \n|NCT04722575|Combination or Sequence o…|ACTIVE_NOT_RECRUITING|2|Melanoma| \n|NCT04949113|Neoadjuvant Ipilimumab Pl…|ACTIVE_NOT_RECRUITING|3|Malignant Melanoma Stage III| \n|NCT05789069|A Study of HFB200603 as a…|ACTIVE_NOT_RECRUITING|1|Renal Cell Carcinoma, Melanoma, Non Small Cell… [abridged; 5 conditions total]| \n|NCT01006980|A Study of Vemurafenib (R…|COMPLETED|3|Malignant Melanoma| \n|NCT01107418|A Pharmacokinetic/Pharmac…|COMPLETED|1|Malignant Melanoma| \n|NCT02257424|Dabrafenib, Trametinib an…|COMPLETED|1/2|Advanced BRAF Mutant Melanoma| \n|NCT03455764|MCS110 With BRAF/MEK Inhi…|COMPLETED|1/2|Melanoma| \n|NCT03864042|Pharmacokinetic Drug-drug…|COMPLETED|1|Advanced Solid Tumors, Metastatic Melanoma| \n|NCT04133948|Multicenter Phase 1b Tria…|COMPLETED|1/2|Malignant Melanoma Stage III| \n|NCT04961619|Adjuvant Dabrafenib and T…|COMPLETED|-|Melanoma| \n|NCT05304546|Overcoming Primary Resist…|COMPLETED|2|Malignant Melanoma, Metastatic Melanoma, Immun… [abridged; 5 conditions total]| \n|NCT02202200|Phase I-II Study With Tum…|UNKNOWN|1/2|Melanoma BRAF V600E/K Mutated, CDNKN2A Loss Defined| \n|NCT02968303|Induction Therapy With Ve…|UNKNOWN|2|Melanoma, Malignant, of Soft Parts| \n|NCT01166126|Temsirolimus/AZD 6244 for…|TERMINATED|2|Mucosal Melanoma, Recurrent Melanoma, Stage IV Melanoma| \n|NCT02346955|Study of CM-24 (MK-6018)…|TERMINATED|1|Non-small Cell Lung Carcinoma (NSCLC), Melanom… [abridged; 6 conditions total]| \n|NCT02410863|Biopsy- and Biology-drive…|TERMINATED|2|Malignant Melanoma| \n|NCT03224208|Vemurafenib Plus Cobimeti…|TERMINATED|2|Melanoma, Melanoma (Skin), Melanoma Stage| \n|NCT04157517|A Study of Modakafusp Alf…|TERMINATED|1/2|Neoplasms, Melanoma| \n|NCT04310397|Dabrafenib, Trametinib, a…|TERMINATED|2|Pathologic Stage IIIB Cutaneous Melanoma AJCC… [abridged; 3 conditions total]| \n|NCT05926960|A Study Comparing 3 Study…|TERMINATED|2|Melanoma| \n|NCT04544202|Compassionate Use Program…|NO_LONGER_AVAILABLE|-|Melanoma, Adjuvant| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 25 results (total unknown). Use --offset 50 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

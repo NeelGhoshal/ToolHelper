@@ -81,7 +81,7 @@ class Grounding(BaseStrategy):
         return self.datasets is None or m.dataset.split("/", 1)[1].split("@")[0] in self.datasets
 
     def lookup(self, surface: str, type: str | None = None) -> tuple[str, list[Match]]:
-        res = self.index.resolve(surface, type=type)
+        res = self.index.resolve(surface, type=type, fuzzy=False)  # E3 never uses fuzzy matches
         if res.status not in ("exact", "normalized", "ambiguous"):
             return "none", []
         matches = [m for m in res.matches if self._allowed(m) and m.method != "fuzzy"]

@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "mutation": [
+      "BRAF V600"
+    ],
+    "offset": 25,
+    "status": "recruiting"
+  },
+  "args_key": "bab77d62d228614e3375810283924039096c4b49fba9d6afb4ac811170c444b5",
+  "recorded_at": "2026-11-03T08:08:54.748559+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3479.0589999756776,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 2 of 27 \n \nQuery: condition=melanoma, status=recruiting, mutation=BRAF V600, offset=25 \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT05970497|A Study Assessing KB707 f…|RECRUITING|1/2|Cancer, Melanoma Stage III, Melanoma Stage IV, Cutaneous Melanoma| \n|NCT05877430|Safety, Tolerability, and…|RECRUITING|1/2|NSCLC, HNSCC, Melanoma, Metastatic Cancer, Advanced Solid Tumor, Advanced Cancer| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 26-27 of 27 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "6809",
+    "max_results": 5,
+    "omop_field": "concept_code",
+    "omop_table": "concept"
+  },
+  "args_key": "81a0200b4f0c4fc4434bb2d9444cc0e83ef252b202d923a9727a16bc5cc7a238",
+  "recorded_at": "2026-11-05T05:18:19.427589+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 897.3699000016495,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 1503297,\n      \"code\": \"6809\",\n      \"name\": \"metformin\",\n      \"class\": \"Ingredient\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/1503297\"\n    },\n    {\n      \"concept_id\": 35956905,\n      \"code\": \"6809\",\n      \"name\": \"MAGEB2 (MAGE family member B2) gene variant measurement\",\n      \"class\": \"Gene Variant\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"OMOP Genomic\",\n      \"url\": \"https://omophub.com/concepts/35956905\"\n    },\n    {\n      \"concept_id\": 1611383,\n      \"code\": \"4035873\",\n      \"name\": \"DRESSING,INTERSORB 12IN X 18IN #680900\",\n      \"class\": \"Device\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Device\",\n      \"vocab\": \"VANDF\",\n      \"url\": \"https://omophub.com/concepts/1611383\"\n    },\n    {\n      \"concept_id\": 19587240,\n      \"code\": \"OMOP5499721\",\n      \"name\": \"TBX3 on GRCh38 chr12: Deletion in position 114680907 measurement\",\n      \"class\": \"Gene DNA Variant\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"OMOP Genomic\",\n      \"url\": \"https://omophub.com/concepts/19587240\"\n    },\n    {\n      \"concept_id\": 19591591,\n      \"code\": \"OMOP5504208\",\n      \"name\": \"TBX3 on GRCh38 chr12: Deletion in position 114680927 measurement\",\n      \"class\": \"Gene DNA Variant\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"OMOP Genomic\",\n      \"url\": \"https://omophub.com/concepts/19591591\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"6809\",\n    \"omop_table\": \"concept\",\n    \"omop_field\": \"concept_code\",\n    \"total_found\": 5,\n    \"candidates_returned\": 5,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

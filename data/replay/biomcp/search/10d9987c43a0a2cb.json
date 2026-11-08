@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "limit": 10,
+    "keyword": [
+      "Cochrane review statins for the prevention of dementia 2016 McGuinness no effect randomized trials cognitive decline"
+    ]
+  },
+  "args_key": "10d9987c43a0a2cb30b4df71c2b625062231440af2c76a4a91c7743767ae2e3a",
+  "recorded_at": "2026-11-04T20:42:51.699868+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2951.8557999999757,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=Cochrane review statins for the prevention of dementia 2016 McGuinness no effect randomized trials cognitive decline, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"Cochrane review statins for the prevention of dementia 2016 McGuinness no effect randomized trials cognitive decline\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 34748207|Multi-domain interventions for the prevention of dementia an…|Europe PMC|2021-11-08|hybrid 0.384 + title+abstract 12/16|92| \n|PMID 39403360|Effect of Controlling the Cardiovascular Risk Factors on the…|Europe PMC|2024-05-01|hybrid 0.338 + title+abstract 12/16|3| \n|PMID 39866113|2025 Heart Disease and Stroke Statistics: A Report of US and…|Europe PMC|2025-01-27|hybrid 0.323 + title+abstract 5/16|1147| \n|PMID 38264914|2024 Heart Disease and Stroke Statistics: A Report of US and…|Europe PMC|2024-01-24|hybrid 0.31 + title+abstract 5/16|2360| \n|PMID 36695182|Heart Disease and Stroke Statistics-2023 Update: A Report Fr…|Europe PMC|2023-01-25|hybrid 0.294 + title+abstract 5/16|4105| \n|PMID 26727124|Statins for the prevention of dementia.|Europe PMC, PubMed|2016-01-04|hybrid 0.286 + title 6/16|167| \n|PMID 41761642|Alzheimer's disease in patients prescribed statins: A real-w…|PubTator3, Europe PMC|2026-02-27|hybrid 0.275 + title+abstract 9/16|1| \n|PMID 38903602|The role of statins in amyotrophic lateral sclerosis: protec…|Europe PMC|2024-06-05|hybrid 0.263 + title+abstract 7/16|12| \n|PMID 27610945|Statin withdrawal in people with dementia.|Europe PMC|2016-09-09|hybrid 0.089 + title 1/16|7| \n|PMID 42855639|ESICM LIVES 2026.|Europe PMC|2026-10-09|hybrid 0.04|0| \n \n \n \nNewest indexed: 2026-10-17 (18 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 34748207\n  biomcp search article -k \"Cochrane review statins for the prevention of dementia 2016 McGuinness no effect randomized trials cognitive decline\" --year-min 2016 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

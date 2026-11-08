@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "unresectable melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "mutation": [
+      "BRAF"
+    ],
+    "status": "recruiting"
+  },
+  "args_key": "9fb4d3d6252834be18611e34ac3c1c83e8e2250e011c3337d40714fe043648c0",
+  "recorded_at": "2026-11-04T06:44:54.266514+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2720.740200020373,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 16 of 16 \n \nQuery: condition=unresectable melanoma, status=recruiting, mutation=BRAF \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT05098210|Personalized Neo-Antigen…|RECRUITING|1|Anatomic Stage IV Breast Cancer AJCC v8, Clin… [abridged; 25 conditions total]| \n|NCT02828202|Follow-up of a National C…|RECRUITING|-|Malignant Melanoma| \n|NCT04045691|Binimetinib Plus Encorafe…|RECRUITING|-|Melanoma Stage IV, Melanoma Stage III| \n|NCT05269381|Personalized Neoantigen P…|RECRUITING|1/2|Anatomic Stage III Breast Cancer AJCC v8, An… [abridged; 101 conditions total]| \n|NCT06940739|A Study to Investigate th…|RECRUITING|1/2|Unresectable Melanoma, Metastatic Melanoma, Ocular Melanoma| \n|NCT07870265|Detection of the BRAF V60…|RECRUITING|NA|Unresectable Metastatic Melanoma| \n|NCT07221734|Study to Compare Pharmaco…|RECRUITING|3|Advanced (Unresectable or Metastatic) Melanoma| \n|NCT06743126|SUPRAME-ACTengine® IMA20…|RECRUITING|3|Melanoma, Cutaneous Malignant, Mucosal Melanoma| \n|NCT05655312|MC1R-targeted Alpha-parti…|RECRUITING|1/2|Recurrent Melanoma (Skin), Metastatic Melanoma… [abridged; 4 conditions total]| \n|NCT05361174|A Study to Investigate th…|RECRUITING|1/2|Unresectable Melanoma, Metastatic Melanoma, St… [abridged; 4 conditions total]| \n|NCT07627698|Dual-Target CSPG4/GD2 CAR…|RECRUITING|1/2|Unresectable Melanoma, Metastatic Cutaneous Melanoma, Metastatic Uveal Melanoma| \n|NCT06246916|A Study With Combinations…|RECRUITING|3|Melanoma| \n|NCT05896839|Immunotherapy in Combinat…|RECRUITING|1/2|Clinical Stage III Cutaneous Melanoma AJCC v8… [abridged; 13 conditions total]| \n|NCT05267626|Study of AU-007, A Monocl…|RECRUITING|1/2|Advanced Solid Tumor, Metastatic Cancer, Cutan… [abridged; 4 conditions total]| \n|NCT04913285|A Study to Evaluate KIN-2…|RECRUITING|1|Solid Tumor, Adult, Non-small Cell Lung Cancer, Melanoma| \n|NCT06284590|Study of the Efficacy of…|RECRUITING|2|Melanoma Stage III, Melanoma Stage IV| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-16 of 16 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

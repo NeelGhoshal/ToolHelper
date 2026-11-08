@@ -1,0 +1,28 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp get drug \"Zoloft\" label"
+  },
+  "args_key": "b7b3a2147f26e3940ab2a1f16c86f40088e0b84cad5a5cbe88b306b0a14ae89c",
+  "recorded_at": "2026-11-03T14:07:21.139697+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 8.753100002650172,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# sertraline hydrochloride - label \n## FDA Label \n \n### Boxed Warning \nWARNING: SUICIDAL THOUGHTS AND BEHAVIORS Antidepressants increased the risk of suicidal thoughts and behavior in pediatric and young adult patients in short-term studies. Closely monitor all antidepressant-treated patients for clinical worsening, and for emergence of suicidal thoughts and behaviors [See Warnings and Precautions (5.1) ] . WARNING: SUICIDAL THOUGHTS AND BEHAVIORS See full prescribing information for complete boxed warning. • Antidepressants increased the risk of suicidal thoughts and behaviors in pediatric and young adult patients ( 5.1 ) • Closely monitor for clinical worsening and emergence of suicidal thoughts and behaviors ( 5.1 ) \n### Indications and Usage \n1 INDICATIONS AND USAGE ZOLOFT is indicated for the treatment of the following [See Clinical Studies (14) ] : • Major depressive disorder (MDD) • Obsessive-compulsive disorder (OCD) • Panic disorder (PD) • Posttraumatic stress disorder (PTSD) • Social anxiety disorder (SAD) • Premenstrual dysphoric disorder (PMDD) ZOLOFT is a selective serotonin reuptake inhibitor (SSRI) indicated for the treatment of ( 1 ): • Major depressive disorder (MDD) • Obsessive-compulsive disorder (OCD) • Panic disorder (PD) • Posttraumatic stress disorder (PTSD) • Social anxiety disorder (SAD) • Premenstrual dysphoric disorder (PMDD) \nMore:\n  biomcp get drug \"sertraline hydrochloride\" approvals   - Drugs@FDA approval history\n  biomcp get drug \"sertraline hydrochloride\" regulatory --region us   - approval and supplement history; use only if the base card lacks approval context\n  biomcp get drug \"sertraline hydrochloride\" safety --region us   - regulatory safety detail; use `biomcp drug adverse-events <name>` first when you want post-marketing signal\n\nAll:\n  biomcp get drug \"sertraline hydrochloride\" all --region us \nSee also:\n  biomcp drug trials \"sertraline hydrochloride\"\n  biomcp drug adverse-events \"sertraline hydrochloride\"   - inspect safety reports and adverse-event signal\n  biomcp search pgx -d \"sertraline hydrochloride\"   - pharmacogenomics interactions\n  biomcp get gene SLC6A4 \n\n[DrugBank](https://go.drugbank.com/drugs/DB01104) | [ChEMBL](https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL809) | [DailyMed](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fda754f6-d0f3-4dce-a17a-927d64f912f7)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

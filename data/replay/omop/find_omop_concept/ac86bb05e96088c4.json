@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "2160-0 creatinine serum LOINC",
+    "max_results": 10,
+    "omop_field": "measurement_concept_id",
+    "omop_table": "measurement"
+  },
+  "args_key": "ac86bb05e96088c4c25df4add5440cbc7bc3a5b5767e869d3408f00937fd5d83",
+  "recorded_at": "2026-11-03T15:07:40.040662+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 837.0628000120632,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"error\": \"No results found for keyword '2160-0 creatinine serum LOINC'. The search term may not exist in the OMOP vocabulary.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

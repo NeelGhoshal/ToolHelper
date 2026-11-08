@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "aspirin Oral Tablet",
+    "max_results": 10,
+    "omop_field": "drug_concept_id",
+    "omop_table": "drug_exposure"
+  },
+  "args_key": "413327f7061854fb1ef609e4d94cfd641aa85a7c4607183d0f1509949c106944",
+  "recorded_at": "2026-11-03T13:40:49.901854+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 939.0691000153311,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 40009896,\n      \"code\": \"370611\",\n      \"name\": \"aspirin Oral Tablet\",\n      \"class\": \"Clinical Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40009896\"\n    },\n    {\n      \"concept_id\": 36034928,\n      \"code\": \"OMOP5044947\",\n      \"name\": \"aspirin Oral Tablet [Ass]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/36034928\"\n    },\n    {\n      \"concept_id\": 43834828,\n      \"code\": \"OMOP904310\",\n      \"name\": \"Aspirin Oral Tablet [Helm]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/43834828\"\n    },\n    {\n      \"concept_id\": 43204361,\n      \"code\": \"OMOP478617\",\n      \"name\": \"Aspirin Oral Tablet [ASPRO]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/43204361\"\n    },\n    {\n      \"concept_id\": 35872773,\n      \"code\": \"OMOP5029652\",\n      \"name\": \"aspirin Oral Tablet [Axile]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/35872773\"\n    },\n    {\n      \"concept_id\": 42950106,\n      \"code\": \"OMOP4676687\",\n      \"name\": \"Aspirin Oral Tablet [ENTAS]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/42950106\"\n    },\n    {\n      \"concept_id\": 40895923,\n      \"code\": \"OMOP2093885\",\n      \"name\": \"Aspirin Oral Tablet [Gepan]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/40895923\"\n    },\n    {\n      \"concept_id\": 35873241,\n      \"code\": \"OMOP5029640\",\n      \"name\": \"aspirin Oral Tablet [Siyue]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/35873241\"\n    },\n    {\n      \"concept_id\": 43816646,\n      \"code\": \"OMOP904327\",\n      \"name\": \"Aspirin Oral Tablet [Sofri]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/43816646\"\n    },\n    {\n      \"concept_id\": 43282044,\n      \"code\": \"OMOP551907\",\n      \"name\": \"Aspirin Oral Tablet [Spren]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/43282044\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"aspirin Oral Tablet\",\n    \"omop_table\": \"drug_exposure\",\n    \"omop_field\": \"drug_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

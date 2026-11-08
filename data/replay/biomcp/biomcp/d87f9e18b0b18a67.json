@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "discover \"ClinGen expert curated variant assertions BRAF RASopathy VCEP\"",
+    "json": true
+  },
+  "args_key": "d87f9e18b0b18a6767be5419e3a4f8de5aa31a073440746620e69133c9dcc051",
+  "recorded_at": "2026-11-03T07:47:30.950828+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 1165.0895000202581,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"discovery_sources\": [\n      \"OLS4\"\n    ],\n    \"evidence_urls\": [\n      {\n        \"label\": \"OLS4\",\n        \"url\": \"https://www.ebi.ac.uk/ols4/api/search?q=ClinGen+expert+curated+variant+assertions+BRAF+RASopathy+VCEP&rows=10&groupField=iri\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search disease -q \\\"ClinGen expert curated variant assertions BRAF RASopathy VCEP\\\" --limit 10\",\n      \"biomcp search trial -c \\\"ClinGen expert curated variant assertions BRAF RASopathy VCEP\\\" --limit 5\",\n      \"biomcp search article -k \\\"ClinGen expert curated variant assertions BRAF RASopathy VCEP\\\" --limit 5\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"structured_concepts\",\n        \"label\": \"Structured Concepts\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"OLS4\"\n        ]\n      }\n    ],\n    \"suggestions\": [\n      \"biomcp search disease -q \\\"ClinGen expert curated variant assertions BRAF RASopathy VCEP\\\" --limit 10\",\n      \"biomcp search trial -c \\\"ClinGen expert curated variant assertions BRAF RASopathy VCEP\\\" --limit 5\",\n      \"biomcp search article -k \\\"ClinGen expert curated variant assertions BRAF RASopathy VCEP\\\" --limit 5\"\n    ]\n  },\n  \"ambiguous\": false,\n  \"budget_truncated\": false,\n  \"concepts\": [\n    {\n      \"confidence\": \"CanonicalId\",\n      \"label\": \"Tip variant segmental glomerulosclerosis\",\n      \"label_truncated\": false,\n      \"match_tier\": \"Weak\",\n      \"primary_id\": \"HP:0033497\",\n      \"primary_type\": \"Symptom\",\n      \"sources\": [\n        {\n          \"id\": \"HP:0033497\",\n          \"label\": \"Tip variant segmental glomerulosclerosis\",\n          \"source\": \"OLS4\",\n          \"source_type\": \"HP\"\n        }\n      ],\n      \"xrefs\": {\n        \"has_more\": false,\n        \"omitted_oversized\": 0,\n        \"returned\": 1,\n        \"total\": 1,\n        \"values\": [\n          {\n            \"id\": \"0033497\",\n            \"source\": \"HP\"\n          }\n        ]\n      }\n    }\n  ],\n  \"has_more\": false,\n  \"intent\": \"General\",\n  \"limit\": 5,\n  \"malformed_candidates\": 0,\n  \"normalized_query\": \"clingen expert curated variant assertions braf rasopathy vcep\",\n  \"notes\": [\n    \"UMLS enrichment unavailable (set UMLS_API_KEY)\"\n  ],\n  \"offset\": 0,\n  \"query\": \"ClinGen expert curated variant assertions BRAF RASopathy VCEP\",\n  \"returned\": 1\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

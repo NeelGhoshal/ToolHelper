@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "Zoloft"
+  },
+  "args_key": "9868c0b4834fefb82ec5f64a2cde1914e974f4f625a139ce09fa61d8129360c1",
+  "recorded_at": "2026-11-03T07:13:15.814686+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 695.5868999939412,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# sertraline hydrochloride \n \nDrugBank ID: DB01104 \nType (MyChem.info): small-molecule \nFDA Approved (DrugCentral): December 30, 1991 \nBrand Names (DrugBank): Zoloft \nRoute (MyChem.info): oral \nSafety (OpenFDA FAERS): DRUG INEFFECTIVE, NAUSEA, FATIGUE \n \n## Mechanisms (MyChem.info / ChEMBL) \n \nSerotonin Uptake Inhibitors \n## Targets (ChEMBL / Open Targets) \nSLC6A4 \n## Indications (Open Targets) \n \nDepressive disorder, Obsessive-compulsive disorder, Panic disorder, Posttraumatic stress disorder, Premenstrual dysphoric disorder, Social phobia \nMore:\n  biomcp get drug \"sertraline hydrochloride\" approvals   - Drugs@FDA approval history\n  biomcp get drug \"sertraline hydrochloride\" label   - approved-indication and FDA label detail beyond the base card\n  biomcp get drug \"sertraline hydrochloride\" regulatory --region us   - approval and supplement history; use only if the base card lacks approval context\n\nAll:\n  biomcp get drug \"sertraline hydrochloride\" all --region us \nSee also:\n  biomcp search article --drug \"sertraline hydrochloride\" --type review --limit 5   - supplement sparse structured data with review literature for indication context\n  biomcp drug trials \"sertraline hydrochloride\"\n  biomcp drug adverse-events \"sertraline hydrochloride\"   - inspect safety reports and adverse-event signal\n  biomcp search pgx -d \"sertraline hydrochloride\"   - pharmacogenomics interactions\n  biomcp get gene SLC6A4 \n\n[DrugBank](https://go.drugbank.com/drugs/DB01104) | [ChEMBL](https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL809) | [OpenFDA FAERS](https://api.fda.gov/drug/event.json?search=%28patient.drug.openfda.generic_name%3A%22sertraline+hydrochloride%22+OR+patient.drug.openfda.brand_name%3A%22sertraline+hydrochloride%22+OR+patient.drug.medicinalproduct%3A%22sertraline+hydrochloride%22%29+AND+patient.drug.drugcharacterization%3A1&count=patient.reaction.reactionmeddrapt.exact&limit=50) | [DailyMed](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fda754f6-d0f3-4dce-a17a-927d64f912f7)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

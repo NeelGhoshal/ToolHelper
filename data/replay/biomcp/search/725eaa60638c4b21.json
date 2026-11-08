@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "BRAF",
+      "RAS-RAF-MEK-ERK",
+      "MAPK pathway"
+    ],
+    "limit": 8,
+    "sort": "citations"
+  },
+  "args_key": "725eaa60638c4b2111f3f5e2a269568a1913ac4857a604435d1c601b1d0dd53b",
+  "recorded_at": "2026-11-03T23:23:07.329915+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 7270.007000071928,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=BRAF RAS-RAF-MEK-ERK MAPK pathway, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 8,\n    \"returned\": 8,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 8,\n  \"results\": [\n    {\n      \"pmid\": \"23539594\",\n      \"pmcid\": \"PMC3749880\",\n      \"doi\": \"10.1126/science.1235122\",\n      \"title\": \"Cancer genome landscapes.\",\n      \"journal\": \"Science\",\n      \"date\": \"2013-03-01\",\n      \"citation_count\": 6000,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"24120142\",\n      \"pmcid\": \"PMC3910500\",\n      \"doi\": \"10.1016/j.cell.2013.09.034\",\n      \"title\": \"The somatic genomic landscape of glioblastoma.\",\n      \"journal\": \"Cell\",\n      \"date\": \"2013-10-01\",\n      \"citation_count\": 4244,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"25417114\",\n      \"pmcid\": \"PMC4243044\",\n      \"doi\": \"10.1016/j.cell.2014.09.050\",\n      \"title\": \"Integrated genomic characterization of papillary thyroid carcinoma.\",\n      \"journal\": \"Cell\",\n      \"date\": \"2014-10-01\",\n      \"citation_count\": 2425,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42562082\",\n      \"title\": \"A pathway-dependency framework for acquired resistance to targeted therapy in EGFR-mutant, KRAS G12C-mutant, and BRAF V600E-mutant NSCLC.\",\n      \"journal\": \"Pharmacological research\",\n      \"date\": \"2026-09-01\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42409582\",\n      \"title\": \"[Gilteritinib enhances the inhibitory effect of dabrafenib on anaplastic thyroid carcinoma cells by suppressing the AXL signaling pathway].\",\n      \"journal\": \"Zhejiang da xue xue bao. Yi xue ban = Journal of Zhejiang University. Medical sciences\",\n      \"date\": \"2026-07-06\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42515723\",\n      \"title\": \"Overcoming Resistance to Anti-EGFR Therapies: Mechanisms of Cetuximab and Panitumumab Resistance and Emerging Combination Strategies.\",\n      \"journal\": \"Pharmaceuticals (Basel, Switzerland)\",\n      \"date\": \"2026-07-03\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"40928301\",\n      \"pmcid\": \"PMC12424155\",\n      \"title\": \"Advances in ERK1/2 inhibition: a medicinal chemistry perspective on structure and regulation\",\n      \"journal\": \"J Enzyme Inhib Med Chem\",\n      \"date\": \"2025-12-01\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"40766587\",\n      \"pmcid\": \"PMC12324506\",\n      \"title\": \"Modulation of the 14-3-3sigma/C-RAF \\\"auto\\\"inhibited complex by molecular glues\",\n      \"journal\": \"bioRxiv\",\n      \"date\": \"2025-07-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"BRAF RAS-RAF-MEK-ERK MAPK pathway\\\" --exclude-retracted --sort citations --source semanticscholar --limit 8 --offset 0\",\n      \"biomcp get article 23539594\",\n      \"biomcp search article -k \\\"BRAF RAS-RAF-MEK-ERK MAPK pathway\\\" --year-min 2013 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

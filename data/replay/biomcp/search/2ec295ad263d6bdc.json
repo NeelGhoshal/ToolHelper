@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2025-01-01",
+    "drug": [
+      "metformin"
+    ],
+    "entity": "article",
+    "keyword": [
+      "cardiovascular mortality"
+    ],
+    "limit": 25,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "2ec295ad263d6bdc1b365477886712e37e8d3dbbc45fb9123c1b5467bb742646",
+  "recorded_at": "2026-11-03T09:09:36.755077+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1088.0301999859512,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=metformin, keyword=cardiovascular mortality, date_from=2025-01-01, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 25 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42570748|The effects of Metformin on myocardial ischemia and reperfus…|PubMed|2026-12-01|-|none| \n|PMID 42655937|Impact of Metformin Plus Lifestyle Intervention Compared Wit…|PubMed|2026-11-01|-|none| \n|PMID 42765945|Association of Age at Type 1 Diabetes Onset With Survival, C…|PubMed|2026-11-01|-|none| \n|PMID 42957066|GLP-1 Receptor Agonists Decrease the Rate of Rupture, Cardia…|PubMed|2026-10-29|-|none| \n|PMID 42942351|Circulating Lipids, Statins, and Metformin in Thoracic and A…|PubMed|2026-10-21|-|none| \n|PMID 42887676|The triad of vascular ageing: Cellular senescence, inflammag…|PubMed|2026-10-16|-|none| \n|PMID 42869597|Can metformin prolong pregnancy in preterm pre-eclampsia? St…|PubMed|2026-10-13|-|none| \n|PMID 42472674|Age of Type 1 Diabetes Onset and Dementia Risk: A Swedish Na…|PubMed|2026-10-01|-|none| \n|PMID 42530338|Effect of Medications for Type 2 Diabetes on Cardiovascular…|PubMed|2026-10-01|-|none| \n|PMID 42696840|Prediabetes: Impact on cardiovascular risk and emerging ther…|PubMed|2026-10-01|-|none| \n|PMID 42585629|Preoperative Glucagon-like Peptide-1 Receptor Agonists and P…|PubMed|2026-09-25|-|none| \n|PMID 42767411|GLP-1 Analogues and Long-Term Outcomes in Adults With Obesit…|PubMed|2026-09-21|-|none| \n|PMID 42808164|Benefits of sodium-glucose cotransporter 2 inhibitors versus…|PubMed|2026-09-01|-|none| \n|PMID 42522575|Methylmalonate Overload Despite Glycemic Control Drives Diab…|PubMed|2026-08-28|-|none| \n|PMID 42737598|Therapeutic Modulation of Nitric Oxide Pathways to Address I…|PubMed|2026-08-28|-|none| \n|PMID 42636218|Antidiabetic medications and risk of cognitive disorders in…|PubMed|2026-08-24|-|none| \n|PMID 42599599|Mechanistic Insights into Houttuynia cordata Thunb. as a Pot…|PubMed|2026-08-14|-|none| \n|PMID 42730175|GLP-1 (Glucagon-Like Peptide-1) and GIP (Glucose-Dependent I…|PubMed|2026-08-12|-|none| \n|PMID 42573030|Glucagon-like peptide-1 receptor agonist-based regimens comp…|PubMed|2026-08-10|-|none| \n|PMID 42654410|Beyond Diabetes: Continuous Glucose Monitoring as a Candidat…|PubMed|2026-08-06|-|none| \n|PMID 42589668|Metabolomic Insights on Obesity and Diabetes from Feeding Di…|PubMed|2026-08-04|-|none| \n|PMID 42634517|Metformin Mitigates Hemodynamic, Autonomic, Oxidative, and I…|PubMed|2026-08-03|-|none| \n|PMID 42629210|Cardiovascular and renal protection of SGLT2i in early-stage…|PubMed|2026-07-29|-|none| \n|PMID 42432224|Semaglutide cardiovascular outcomes align more closely with…|PubMed|2026-07-10|-|none| \n|PMID 42519323|Aging-driven metabolic abnormalities remodel intercellular c…|PubMed|2026-07-06|-|none| \n \n \n \nNewest indexed: 2026-10-29 (5 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42570748 \n \n \n \nShowing 1-25 of 1091 results. Use --offset 25 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

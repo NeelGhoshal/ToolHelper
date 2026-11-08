@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "meta-analysis",
+    "entity": "article",
+    "limit": 10,
+    "keyword": [
+      "statins dementia risk cognitive decline"
+    ]
+  },
+  "args_key": "a886e77a80ec86e0e1c8f0cc1d150065ca9666dccf6d14f349121aec8e484608",
+  "recorded_at": "2026-11-04T20:42:00.474483+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3256.63499999996,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statins dementia risk cognitive decline, type=meta-analysis, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 39239841|Poststroke Cognitive Impairment and the Risk of Recurrent St…|Europe PMC|2024-09-06|hybrid 0.33 + title 2/5|26| \n|PMID 39689376|Dietary inflammatory potential and the risk of cognitive imp…|Europe PMC|2024-12-16|hybrid 0.321 + title 2/5|11| \n|PMID 40828095|Effects of herpes zoster infection, antivirals and vaccinati…|Europe PMC|2025-08-19|hybrid 0.32 + title 2/5|9| \n|PMID 34700321|Evaluation of High Cholesterol and Risk of Dementia and Cogn…|PubMed|2021-01-01|hybrid 0.31 + title 4/5|45| \n|PMID 29643479|Use of statins and the risk of dementia and mild cognitive i…|PubMed|2018-04-11|hybrid 0.28 + title 4/5|138| \n|PMID 40794911|Association of lipid-lowering therapy with dementia and cogn…|Europe PMC, PubMed|2025-08-01|hybrid 0.267 + title 2/5|2| \n|PMID 39728730|The association between diabetes mellitus and postoperative…|Europe PMC|2025-03-01|hybrid 0.265 + title 1/5|20| \n|PMID 28212683|Evidence for benefit of statins to modify cognitive decline…|PubMed|2017-02-17|hybrid 0.26 + title 4/5|157| \n|PMID 41840386|Deprescribing preventive medications in older adults with ad…|Europe PMC|2026-03-17|hybrid 0.238 + title 1/5|4| \n|PMID 34871380|Statin use and risk of dementia or Alzheimer's disease: a sy…|PubMed|2022-05-05|hybrid 0.2 + title 2/5|167| \n \n \n \nNewest indexed: 2026-03-17 (232 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 39239841\n  biomcp search article -k \"statins dementia risk cognitive decline\" --type meta-analysis --year-min 2017 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

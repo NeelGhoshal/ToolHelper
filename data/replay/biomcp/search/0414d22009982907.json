@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "biomarker": [
+      "BRAF V600"
+    ],
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "status": "recruiting"
+  },
+  "args_key": "0414d22009982907c5bc26a69bd707b13ef1e6b2c9aa29821cf86bf9f94533b8",
+  "recorded_at": "2026-11-04T00:32:07.537946+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 170.34279997460544,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 4 of 4 \n \nQuery: condition=melanoma, status=recruiting, biomarker=BRAF V600 \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT07870265|Detection of the BRAF V60…|RECRUITING|NA|Unresectable Metastatic Melanoma| \n|NCT05727904|Study to Investigate Lifi…|RECRUITING|3|Metastatic Melanoma, Unresectable Melanoma, Melanoma| \n|NCT03340506|Dabrafenib and/or Trameti…|RECRUITING|4|Melanoma, Non Small Cell Lung Cancer, Solid Tu… [abridged; 5 conditions total]| \n|NCT04741997|Adjuvant Therapy Based on…|RECRUITING|EARLY_PHASE1|Melanoma Stage III, Melanoma Stage IV, BRAF V600 Mutation| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-4 of 4 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

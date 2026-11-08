@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "ERBB2",
+    "json": true,
+    "sections": [
+      "ontology",
+      "diseases",
+      "druggability",
+      "pathways",
+      "constraint",
+      "clinvar"
+    ]
+  },
+  "args_key": "483e4d0e216dd21a30529725c0c71f1d0d26321a8f1b3093ab0bfbab67564b63",
+  "recorded_at": "2026-11-03T06:43:54.792372+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.5321000246331096,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: clinvar"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

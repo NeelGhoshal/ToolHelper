@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2024-01-01",
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E acquired resistance MAPK pathway reactivation"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "b17aa72d646c27a803ef1e231f26e1249cd1d195ca620073357c349652146165",
+  "recorded_at": "2026-11-05T05:26:53.896727+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 7878.253700000641,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E acquired resistance MAPK pathway reactivation, date_from=2024-01-01, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed search unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E acquired resistance MAPK pathway reactivation\" --date-from 2024-01-01 --exclude-retracted --sort date --source pubmed --limit 10 --offset 0` \nEurope PMC source status: degraded (Europe PMC search unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E acquired resistance MAPK pathway reactivation\" --date-from 2024-01-01 --exclude-retracted --sort date --source europepmc --limit 10 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E acquired resistance MAPK pathway reactivation\" --date-from 2024-01-01 --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42720827|Langerhans cell histiocytosis: molecular mechanisms underlyi…|PubTator3|2026-09-10|-|none| \n|PMID 42794461|Predicted STAT1-BRAF and IRF7-MET Regulatory Links Are Assoc…|PubTator3|2026-09-09|-|none| \n|PMID 42562082|A pathway-dependency framework for acquired resistance to ta…|PubTator3|2026-08-06|-|none| \n|PMID 41997132|Hallmarks of liver cancer: Therapeutic implications|PubTator3|2026-04-16|-|none| \n|PMID 41888884|Targeted therapy for Langerhans cell histiocytosis with maxi…|PubTator3|2026-03-26|-|none| \n|PMID 41874881|Recent Advances in Targeted Therapies for Adult Gliomas|PubTator3|2026-03-24|-|none| \n|PMID 41865130|ERKed by too much signaling: from oncogenic driver to therap…|PubTator3|2026-03-21|-|none| \n|PMID 41826571|Colorectal cancer pathogenesis, oncogenic signaling networks…|PubTator3|2026-03-14|-|none| \n|PMID 41807883|BRAF inhibitor resistance in melanoma: from resistance mecha…|PubTator3|2026-03-11|-|none| \n|PMID 41892176|Unlocking KRAS: Navigating Its Molecular Biology and Treatme…|PubTator3|2026-03-03|-|none| \n \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42720827 \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

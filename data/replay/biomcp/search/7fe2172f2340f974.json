@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR mutation prevalence epidemiology Asia never-smokers lung cancer"
+    ],
+    "limit": 10,
+    "sort": "relevance"
+  },
+  "args_key": "7fe2172f2340f974cc326622c3d9aec6934d2201223125b267cfc5134985b8e4",
+  "recorded_at": "2026-11-03T09:55:26.823123+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6052.541399956681,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR mutation prevalence epidemiology Asia never-smokers lung cancer, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR mutation prevalence epidemiology Asia never-smokers lung cancer\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42090048|Epidemiology and Real-World Outcomes in Patients with Human…|Europe PMC|2026-05-06|hybrid 0.362 + title 3/8|1| \n|PMID 42749289|Targeting EGFR-Mutant Non-Small Cell Lung Cancer in Asia: An…|PubTator3, Europe PMC, PubMed|2026-09-16|hybrid 0.228 + title 4/8|0| \n|PMID 41932615|Lung Cancer in Never Smokers: Genetics, Epidemiology, Enviro…|PubTator3|2026-04-01|hybrid 0.196 + title 3/8|none| \n|PMID 42571038|Clinical characteristics of lung cancer in never-smokers: a…|Europe PMC, PubMed|2026-07-01|hybrid 0.179 + title 3/8|0| \n|PMID 38455708|Geographic differences in lung cancer: focus on carcinogens,…|PubTator3|2024-03-06|hybrid 0.146 + title 3/8|none| \n|PMID 41793321|Clinicopathological and genomic features of early-onset non-…|PubMed|2026-07-15|hybrid 0.125 + title 2/8|0| \n|PMID 42131887|Pharmacogenetic landscape of epidermal growth factor recepto…|PubTator3, Europe PMC|2026-03-12|hybrid 0.117 + title 2/8|0| \n|PMID 40803053|Real-world progression-free survival of first line afatinib…|PubMed|2025-01-01|hybrid 0.092 + title 2/8|0| \n|PMID 42706377|A comprehensive analysis of lung cancer status changes over…|Europe PMC|2026-09-07|hybrid 0.092 + title 2/8|0| \n|PMID 40604281|The mutagenic forces shaping the genomes of lung cancer in n…|PubMed|2025-08-01|hybrid 0.075 + title 2/8|64| \n \n \n \nNewest indexed: 2026-09-09 (55 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42090048\n  biomcp search article -k \"EGFR mutation prevalence epidemiology Asia never-smokers lung cancer\" --year-min 2024 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

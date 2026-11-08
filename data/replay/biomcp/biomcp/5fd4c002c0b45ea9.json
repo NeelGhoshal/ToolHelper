@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp search gene melanoma --json",
+    "json": true
+  },
+  "args_key": "5fd4c002c0b45ea96097054c195fb837ebd92515f2531e40babc430e325f8bb0",
+  "recorded_at": "2026-11-03T11:24:57.331620+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 26.220599946100265,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": 444,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"count\": 10,\n  \"results\": [\n    {\n      \"symbol\": \"BAGE\",\n      \"name\": \"B melanoma antigen\",\n      \"entrez_id\": \"574\",\n      \"genomic_coordinates\": null,\n      \"uniprot_id\": \"Q13072\",\n      \"omim_id\": \"605167\"\n    },\n    {\n      \"symbol\": \"RMEL3\",\n      \"name\": \"enriched in melanoma 3\",\n      \"entrez_id\": \"\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"5:57395060-57534504\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": null,\n      \"omim_id\": null\n    },\n    {\n      \"symbol\": \"AIM2\",\n      \"name\": \"absent in melanoma 2\",\n      \"entrez_id\": \"9447\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"1:159056129-159188222\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"O14862\",\n      \"omim_id\": \"604578\"\n    },\n    {\n      \"symbol\": \"MCAM\",\n      \"name\": \"melanoma cell adhesion molecule\",\n      \"entrez_id\": \"4162\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"11:119307972-119321521\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"P43121\",\n      \"omim_id\": \"155735\"\n    },\n    {\n      \"symbol\": \"MEAT6\",\n      \"name\": \"melanoma-associated transcript 6\",\n      \"entrez_id\": \"105378111\",\n      \"genomic_coordinates\": null,\n      \"uniprot_id\": null,\n      \"omim_id\": null\n    },\n    {\n      \"symbol\": \"CMM4\",\n      \"name\": \"Melanoma, cutaneous malignant, 4\",\n      \"entrez_id\": \"474388\",\n      \"genomic_coordinates\": null,\n      \"uniprot_id\": null,\n      \"omim_id\": \"608035\"\n    },\n    {\n      \"symbol\": \"RMEL3\",\n      \"name\": \"enriched in melanoma 3\",\n      \"entrez_id\": \"102724122\",\n      \"genomic_coordinates\": null,\n      \"uniprot_id\": null,\n      \"omim_id\": null\n    },\n    {\n      \"symbol\": \"LOC124908139\",\n      \"name\": \"B melanoma antigen 3-like\",\n      \"entrez_id\": \"124908139\",\n      \"genomic_coordinates\": null,\n      \"uniprot_id\": null,\n      \"omim_id\": null\n    },\n    {\n      \"symbol\": \"CMM\",\n      \"name\": \"cutaneous malignant melanoma/dysplastic nevus\",\n      \"entrez_id\": \"1243\",\n      \"genomic_coordinates\": null,\n      \"uniprot_id\": null,\n      \"omim_id\": \"155600\"\n    },\n    {\n      \"symbol\": \"LOC124908467\",\n      \"name\": \"B melanoma antigen 3-like\",\n      \"entrez_id\": \"124908467\",\n      \"genomic_coordinates\": null,\n      \"uniprot_id\": null,\n      \"omim_id\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get gene BAGE\",\n      \"biomcp list gene\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

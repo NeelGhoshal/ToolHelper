@@ -1,0 +1,41 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "BRAF V600E melanoma"
+    ],
+    "drug": [
+      "dabrafenib",
+      "trametinib"
+    ],
+    "json": true,
+    "limit": 10,
+    "status": [
+      "recruiting",
+      "active_not_recruiting"
+    ]
+  },
+  "args_key": "252b0877852deeecb1475ca42fff38d47e81308d8030670aa4aeb3bb96fdd214",
+  "recorded_at": "2026-11-03T23:59:48.369814+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1.1450001038610935,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "unknown trial search field: drug"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

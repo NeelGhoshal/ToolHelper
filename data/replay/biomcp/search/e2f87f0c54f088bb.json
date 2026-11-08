@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CPIC",
+      "clopidogrel",
+      "guideline"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "e2f87f0c54f088bb6cdd5e170180742275e2443f1daa24aa8a2cd8c6865d5d42",
+  "recorded_at": "2026-11-03T11:28:50.034373+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3514.7598999901675,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CPIC clopidogrel guideline, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CPIC clopidogrel guideline\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 9 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 21270786|CPIC: Clinical Pharmacogenetics Implementation Consortium of…|Europe PMC|2011-01-26|-|874| \n|PMID 23698643|Clinical Pharmacogenetics Implementation Consortium guidelin…|Europe PMC|2013-05-22|-|673| \n|PMID 26469045|Pharmacogenomics in the clinic.|Europe PMC|2015-10-01|-|585| \n|PMID 35034351|Clinical Pharmacogenetics Implementation Consortium Guidelin…|PubTator3, Europe PMC, PubMed|2022-11-01|-|396| \n|PMID 21716271|Clinical Pharmacogenetics Implementation Consortium guidelin…|Europe PMC|2011-06-29|-|365| \n|PMID 42115787|Limited Visibility and Perception of the Clinical Relevance…|PubMed|2026-05-01|-|0| \n|PMID 37303270|An Introductory Tutorial on Cardiovascular Pharmacogenetics…|PubTator3|2023-05-24|-|none| \n|PMID 28520346|Clopidogrel Therapy and CYP2C19 Genotype|PubTator3, PubMed|2022-12-01|-|0| \n|PMID 36082121|Evaluation of race and ethnicity disparities in outcome stud…|PubTator3|2022-08-23|-|none| \n \n \n \nNewest indexed: 2026-05-11 (176 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 21270786\n  biomcp search article -k \"CPIC clopidogrel guideline\" --year-min 2011 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 9 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

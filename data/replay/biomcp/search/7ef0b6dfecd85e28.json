@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "TP53",
+      "Li-Fraumeni",
+      "cancer predisposition"
+    ],
+    "limit": 5
+  },
+  "args_key": "7ef0b6dfecd85e28b65ec409942ca80399163268c9abc85035f1806fea43c995",
+  "recorded_at": "2026-11-03T16:07:46.869791+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2960.4474999941885,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=TP53 Li-Fraumeni cancer predisposition, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"sort\": \"relevance\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"ranking_policy\": \"hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 5,\n  \"results\": [\n    {\n      \"pmid\": \"32998877\",\n      \"title\": \"TP53, a gene for colorectal cancer predisposition in the absence of Li-Fraumeni-associated phenotypes.\",\n      \"journal\": \"Gut\",\n      \"date\": \"2021-06-01\",\n      \"citation_count\": 16,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"35954327\",\n      \"pmcid\": \"PMC9367397\",\n      \"title\": \"Li-Fraumeni Syndrome: Mutation of TP53 Is a Biomarker of Hereditary Predisposition to Tumor: New Insights and Advances in the Treatment\",\n      \"journal\": \"Cancers (Basel)\",\n      \"date\": \"2022-07-27\",\n      \"citation_count\": 39,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42607671\",\n      \"doi\": \"10.1016/j.ajhg.2026.07.011\",\n      \"title\": \"Shared inheritance reveals landscape of somatic and germline cancer risk in TP53.\",\n      \"journal\": \"Am J Hum Genet\",\n      \"date\": \"2026-08-17\",\n      \"citation_count\": 1,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42928139\",\n      \"title\": \"Characterisation of a novel p53 mutation (p53(N263Tfs*7)) associated with li-fraumeni syndrome.\",\n      \"journal\": \"BMC cancer\",\n      \"date\": \"2026-07-29\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42832373\",\n      \"doi\": \"10.1158/1078-0432.ccr-26-2137\",\n      \"title\": \"Progress in Clinical Care and Research for Li-Fraumeni Syndrome: Perspectives from the 7th Li-Fraumeni Syndrome Association REACH Symposium.\",\n      \"journal\": \"Clin Cancer Res\",\n      \"date\": \"2026-10-05\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"TP53 Li-Fraumeni cancer predisposition\\\" --exclude-retracted --sort relevance --source semanticscholar --limit 5 --offset 0\",\n      \"biomcp get article 32998877\",\n      \"biomcp search article -k \\\"TP53 Li-Fraumeni cancer predisposition\\\" --year-min 2021 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

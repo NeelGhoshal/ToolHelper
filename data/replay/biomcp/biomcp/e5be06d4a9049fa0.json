@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp discover cspec",
+    "json": true
+  },
+  "args_key": "e5be06d4a9049fa0c16e8414e50efdd649ee3e23afaf1f636cd80079bbdf15d9",
+  "recorded_at": "2026-11-03T10:05:19.849642+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 988.7563000083901,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"discovery_sources\": [],\n    \"evidence_urls\": [\n      {\n        \"label\": \"OLS4\",\n        \"url\": \"https://www.ebi.ac.uk/ols4/api/search?q=cspec&rows=10&groupField=iri\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search article -k cspec --type review --limit 5\"\n    ],\n    \"section_sources\": [],\n    \"suggestions\": [\n      \"biomcp search article -k cspec --type review --limit 5\"\n    ]\n  },\n  \"ambiguous\": false,\n  \"budget_truncated\": false,\n  \"concepts\": [],\n  \"has_more\": false,\n  \"intent\": \"General\",\n  \"limit\": 5,\n  \"malformed_candidates\": 0,\n  \"normalized_query\": \"cspec\",\n  \"notes\": [\n    \"UMLS enrichment unavailable (set UMLS_API_KEY)\",\n    \"No biomedical entities resolved. Try: biomcp search article -k cspec --type review --limit 5\"\n  ],\n  \"offset\": 0,\n  \"query\": \"cspec\",\n  \"returned\": 0\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

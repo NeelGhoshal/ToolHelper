@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "sertraline 50 MG oral tablet",
+    "max_results": 10,
+    "omop_field": "drug_concept_id",
+    "omop_table": "drug_exposure"
+  },
+  "args_key": "7f48640e5a9c468d1db4962a8e7f4d4ff6c8135cd011ba8916417b6f8df328b2",
+  "recorded_at": "2026-11-03T23:08:00.950643+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1429.2634000303224,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 739209,\n      \"code\": \"312941\",\n      \"name\": \"sertraline 50 MG Oral Tablet\",\n      \"class\": \"Clinical Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/739209\"\n    },\n    {\n      \"concept_id\": 21160003,\n      \"code\": \"OMOP353179\",\n      \"name\": \"Sertraline 50 MG Oral Tablet by DE\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/21160003\"\n    },\n    {\n      \"concept_id\": 2921674,\n      \"code\": \"OMOP5138493\",\n      \"name\": \"sertraline 50 MG Oral Tablet by APO\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/2921674\"\n    },\n    {\n      \"concept_id\": 36958848,\n      \"code\": \"OMOP5200858\",\n      \"name\": \"sertraline 50 MG Oral Tablet by HFA\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/36958848\"\n    },\n    {\n      \"concept_id\": 853039,\n      \"code\": \"OMOP5575918\",\n      \"name\": \"sertraline 50 MG Oral Tablet by Key\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/853039\"\n    },\n    {\n      \"concept_id\": 36927461,\n      \"code\": \"OMOP5200860\",\n      \"name\": \"sertraline 50 MG Oral Tablet by Sun\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/36927461\"\n    },\n    {\n      \"concept_id\": 43295564,\n      \"code\": \"OMOP548460\",\n      \"name\": \"Sertraline 50 MG Oral Tablet by Auro\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/43295564\"\n    },\n    {\n      \"concept_id\": 21169824,\n      \"code\": \"OMOP353188\",\n      \"name\": \"Sertraline 50 MG Oral Tablet by Ivax\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/21169824\"\n    },\n    {\n      \"concept_id\": 21071631,\n      \"code\": \"OMOP353172\",\n      \"name\": \"Sertraline 50 MG Oral Tablet by Kent\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/21071631\"\n    },\n    {\n      \"concept_id\": 2921673,\n      \"code\": \"OMOP5138492\",\n      \"name\": \"sertraline 50 MG Oral Tablet by Lapl\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/2921673\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"sertraline 50 MG oral tablet\",\n    \"omop_table\": \"drug_exposure\",\n    \"omop_field\": \"drug_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

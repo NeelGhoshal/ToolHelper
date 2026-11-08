@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "melanoma of skin",
+    "max_results": 8,
+    "omop_field": "condition_concept_id",
+    "omop_table": "condition_occurrence"
+  },
+  "args_key": "f30e3500cc9162fcc75e8d9e4b003991e2261bcf0940e447528d4b3b77efb7c1",
+  "recorded_at": "2026-11-03T09:15:43.746799+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1145.8886000327766,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 42574059,\n      \"code\": \"321031000009106\",\n      \"name\": \"Melanoma of skin\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED Veterinary\",\n      \"url\": \"https://omophub.com/concepts/42574059\"\n    },\n    {\n      \"concept_id\": 141232,\n      \"code\": \"93655004\",\n      \"name\": \"Malignant melanoma of skin\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/141232\"\n    },\n    {\n      \"concept_id\": 44502043,\n      \"code\": \"8744/3-C44.5\",\n      \"name\": \"Acral melanoma of skin of trunk\",\n      \"class\": \"ICDO Condition\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"ICDO3\",\n      \"url\": \"https://omophub.com/concepts/44502043\"\n    },\n    {\n      \"concept_id\": 444462,\n      \"code\": \"93220006\",\n      \"name\": \"Malignant melanoma of skin of ear\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/444462\"\n    },\n    {\n      \"concept_id\": 4246790,\n      \"code\": \"93637008\",\n      \"name\": \"Malignant melanoma of skin of hip\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4246790\"\n    },\n    {\n      \"concept_id\": 140048,\n      \"code\": \"93640008\",\n      \"name\": \"Malignant melanoma of skin of lip\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/140048\"\n    },\n    {\n      \"concept_id\": 4247715,\n      \"code\": \"93650009\",\n      \"name\": \"Malignant melanoma of skin of toe\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4247715\"\n    },\n    {\n      \"concept_id\": 44499518,\n      \"code\": \"8721/3-C44.5\",\n      \"name\": \"Nodular melanoma of skin of trunk\",\n      \"class\": \"ICDO Condition\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"ICDO3\",\n      \"url\": \"https://omophub.com/concepts/44499518\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"melanoma of skin\",\n    \"omop_table\": \"condition_occurrence\",\n    \"omop_field\": \"condition_concept_id\",\n    \"total_found\": 8,\n    \"candidates_returned\": 8,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

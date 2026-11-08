@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "osimertinib",
+      "EGFR",
+      "resistance"
+    ],
+    "limit": 20,
+    "sort": "date"
+  },
+  "args_key": "8e736b080cc439a777c9a7e6e0117fcdd6cb74a64726ca8ec3efb483fe476e27",
+  "recorded_at": "2026-11-03T13:59:02.522294+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 9043.793199991342,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=osimertinib EGFR resistance, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"osimertinib EGFR resistance\" --exclude-retracted --sort date --source semanticscholar --limit 20 --offset 0` \n \n \nFound 20 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41601150|Synthetic strategies and therapeutic insights into FDA-appro…|PubTator3, Europe PMC|2026-12-01|-|2| \n|PMID 41606986|A system-level metastable model of cancer evolution: integra…|PubTator3, Europe PMC|2026-12-01|-|2| \n|PMID 41630477|A data-driven cartography of NSCLC vaccine research: Quantif…|PubTator3, Europe PMC|2026-12-01|-|0| \n|PMID 42971367|Reversal of acquired osimertinib resistance by YAP inhibitio…|PubMed|2026-11-02|-|0| \n|PMID 42957218|Long-term Disease Control After Probable Endobronchial Small…|PubMed|2026-11-01|-|0| \n|PMID 42937553|Efficacy Augmentation of Ferroptosis-Inducing Nanomedicine f…|PubTator3, PubMed|2026-10-27|-|0| \n|PMID 42918663|Removal notice to \"Characterization of a rare EGFR resistanc…|PubTator3, PubMed|2026-10-23|-|0| \n|PMID 42927948|[Drug sensitivity analysis of monotherapy and combination th…|PubMed|2026-10-23|-|0| \n|PMID 42911709|Development of Potent and Selective EGFR-PROTACs Based on Ma…|PubTator3, PubMed|2026-10-22|-|0| \n|PMID 42906730|Antibody-drug conjugates after EGFR-TKI resistance in EGFR-m…|PubTator3, PubMed|2026-10-21|-|0| \n|PMID 42897224|MMP14-mediated proteolytic cleavage of LAMC2 domain III frag…|PubTator3, PubMed|2026-10-19|-|0| \n|PMID 42959682|Optimal timing of thoracic radiotherapy with osimertinib in…|Europe PMC|2026-10-13|-|0| \n|PMID 42868668|Design, synthesis and biological evaluation of novel aminopy…|PubMed|2026-10-10|-|0| \n|PMID 42964983|Overcoming EGFR Resistance by Monovalent and Bident Inhibito…|PubMed|2026-09-29|-|0| \n|PMID 42787516|A multimodal AI biomarker PATH-ORACLE improves prediction of…|Europe PMC|2026-09-17|-|1| \n|PMID 42774563|Clinical and genomic determinants of early treatment discont…|Europe PMC|2026-09-15|-|0| \n|PMID 42740980|Engineering microRNAs as multimodal cancer therapeutics.|Europe PMC|2026-09-05|-|0| \n|PMID 42913244|Osimertinib Plus Platinum-based Chemotherapy in Patients Wit…|PubMed|2026-09-05|-|0| \n|PMID 42648586|LINC00511 drives osimertinib resistance in LUAD via PERK kin…|Europe PMC|2026-08-26|-|0| \n|PMID 42612716|A novel peptide encoded by circTLL1 drives osimertinib resis…|Europe PMC|2026-08-18|-|0| \n \n \n \nNewest indexed: 2026-11-02 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41601150\n  biomcp search article -k \"osimertinib EGFR resistance\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 20 results (total unknown). Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

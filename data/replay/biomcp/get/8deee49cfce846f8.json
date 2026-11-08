@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "32753444",
+    "json": true
+  },
+  "args_key": "8deee49cfce846f8ce74e686c62a49a76f8a2e4ac8e4d06e13d622759e66defe",
+  "recorded_at": "2026-11-05T04:11:43.274238+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 898.5642000006919,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/32753444/\"\n      },\n      {\n        \"label\": \"PMC\",\n        \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC7538212/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 32753444 tldr\",\n      \"biomcp article entities 32753444\",\n      \"biomcp search disease --query dementia\",\n      \"biomcp search disease --query death\",\n      \"biomcp article references 32753444 --limit 3\",\n      \"biomcp article citations 32753444 --limit 3\",\n      \"biomcp article recommendations 32753444 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"annotations\",\n        \"label\": \"PubTator Annotations\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ],\n    \"workflow\": \"article-follow-up\",\n    \"workflow_playbook\": \"biomcp skill article-follow-up\",\n    \"workflow_rationale\": \"Use article annotations first, then citation and recommendation graph pivots for efficient literature expansion.\"\n  },\n  \"abstract_text\": \"OBJECTIVE: Observational data can be used to attempt to emulate a target trial of statin use and estimate analogues of intention-to-treat and per protocol effects on dementia risk. METHODS: Using data from a prospective cohort study in the Netherlands, we conceptualized a sequence of \\\"trials\\\" in which eligible individuals ages 55-80 years were classified as statin initiators or noninitiators for every consecutive month between 1993 and 2007 and were followed until diagnosis of dementia, death, loss to follow-up, or the end of follow-up. We estimated 2 types of effects of statin use on dementia and a combined endpoint of dementia or death: the effect of initiation vs no initiation and the effect of sustained use vs no use. We estimated risk by statin treatment strategy over time via pooled logistic regression. We used inverse-probability weighting to account for treatment-confounder feedback in estimation of per-protocol effects. RESULTS: Of 233,526 eligible person-trials (6,373 individuals), there were 622 initiators and 232,904 noninitiators. Comparing statin initiation with no initiation, the 10-year risk differences (95% confidence interval) were -0.1% (-2.3% to 1.8%) for dementia and 0.3% (-2.7% to 3.3%) for dementia or death. Comparing sustained statin use vs no use, the 10-year risk differences were -2.2% (-5.2% to 1.6%) for dementia and -5.1% (-10.5% to -1.1%) for dementia or death. CONCLUSIONS: Individuals with sustained statin use, but not statin initiation alone, had reduced 10-year risks of dementia and dementia or death. Our results should be interpreted with caution due to the small number of initiators and events and potential for residual confounding.\",\n  \"annotations\": {\n    \"diseases\": [\n      {\n        \"count\": 11,\n        \"identifier\": \"MESH:D003704\",\n        \"name\": \"Dementia\",\n        \"namespace\": \"MESH\",\n        \"text\": \"dementia\"\n      },\n      {\n        \"count\": 5,\n        \"identifier\": \"MESH:D003643\",\n        \"name\": \"Death\",\n        \"namespace\": \"MESH\",\n        \"text\": \"death\"\n      }\n    ]\n  },\n  \"author_completeness\": \"complete\",\n  \"author_count\": 8,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Caniglia EC\",\n    \"Rojas-Saunero LP\",\n    \"Hilal S\",\n    \"Licher S\",\n    \"Logan R\",\n    \"Stricker B\",\n    \"Ikram MA\",\n    \"Swanson SA\"\n  ],\n  \"citation_count\": 46,\n  \"date\": \"2020-09-08\",\n  \"doi\": \"10.1212/wnl.0000000000010433\",\n  \"journal\": \"Neurology\",\n  \"open_access\": false,\n  \"pmcid\": \"PMC7538212\",\n  \"pmid\": \"32753444\",\n  \"publication_type\": \"research support, non-u.s. gov't\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"Emulating a target trial of statin use and risk of dementia using cohort data.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

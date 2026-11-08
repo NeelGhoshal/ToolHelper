@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "get drug pembrolizumab label --region us",
+    "json": true
+  },
+  "args_key": "8069fc03ac7a08efe3f53a7bea15d7d3bddf593c28d55d1205c2e979a7ddf5eb",
+  "recorded_at": "2026-11-04T22:58:33.626382+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 4.071100000146544,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: Invalid argument: --region can only be used with regulatory, safety, shortage, or all."
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

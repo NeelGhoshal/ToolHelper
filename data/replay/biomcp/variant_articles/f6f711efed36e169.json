@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "variant_articles",
+  "arguments": {
+    "items": [
+      {
+        "gene": "BRAF",
+        "hgvsp": "p.Val600Glu",
+        "genomic": "chr7:g.140453136A>T",
+        "ref": "A",
+        "alt": "T",
+        "build": "GRCh37",
+        "transcript": "NM_004333.6",
+        "coding": "c.1799T>A",
+        "protein": "p.Val600Glu"
+      }
+    ],
+    "limit": 15
+  },
+  "args_key": "f6f711efed36e1694d721bf37487bb7d01d5a2c918a001d4532a5b84c5a20b04",
+  "recorded_at": "2026-11-03T06:41:30.825121+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "70147d049a9e3bd31190ae3b87d93f1485386242eee6a9cc9a986c130f8b3d8f",
+  "latency_ms": 1.2224999954923987,
+  "result": null,
+  "protocol_error": {
+    "code": -32602,
+    "message": "failed to deserialize parameters: unknown field `hgvsp`, expected one of `request_id`, `gene`, `protein`, `coding`, `transcript`, `genomic`, `accession`, `build`, `position`, `ref`, `alt`, `rsid`",
+    "data": null
+  }
+}

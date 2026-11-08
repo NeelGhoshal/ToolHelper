@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 25,
+    "query": "melanoma driver mutation BRAF NRAS"
+  },
+  "args_key": "e71435d78ab454ea276f76bde75bfb845a86e68708888ab3efd8ff2301cbe3a7",
+  "recorded_at": "2026-11-03T20:12:23.641268+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 727.3511999519542,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: melanoma driver mutation BRAF NRAS \n \nFound 2 genes \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| NRAS | NRAS proto-oncogene, GTPase | 4893 | 1:114704468-114716775 | GRCh38 | P01111 | 164790 | \n| BRAF | B-Raf proto-oncogene, serine/threonine kinase | 673 | 7:140719327-140925199 | GRCh38 | P15056 | 164757 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1-2 of 2 results. \n \n\n\n## Next commands\n- `biomcp get gene NRAS`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

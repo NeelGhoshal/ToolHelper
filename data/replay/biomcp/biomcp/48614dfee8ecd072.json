@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp get drug DB00619 targets indications approvals label --json",
+    "json": true
+  },
+  "args_key": "48614dfee8ecd072e5bfdaaba9e6dd56dd939f7905d618eb54faf9b92acfdb8c",
+  "recorded_at": "2026-11-03T22:32:40.549658+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 1237.8131999867037,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: drug 'DB00619' not found.\n\nNo drug card matches \"DB00619\" by name, brand, or synonym. The MyChem text search matched other drugs: imatinib. Try searching: biomcp search drug -q \"DB00619\""
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 25,
+    "query": "imatinib target LYN RET HCK DDR2 CSF1R FIP1L1 CBL SLC22A1 SLC22A2"
+  },
+  "args_key": "9fa6eb6f03149b6520f8cd6041bf0afa262c3eae26f6e4d60d73ca3f3311e406",
+  "recorded_at": "2026-11-03T08:06:26.597017+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 205.11320000514388,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: imatinib target LYN RET HCK DDR2 CSF1R FIP1L1 CBL SLC22A1 SLC22A2 \n \nFound 9 genes \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| SLC22A1 | solute carrier family 22 member 1 | 6580 | 6:160121372-160160590 | GRCh38 | O15245 | 602607 | \n| SLC22A2 | solute carrier family 22 member 2 | 6582 | 6:160171061-160277638 | GRCh38 | O15244 | 602608 | \n| FIP1L1 | factor interacting with PAPOLA and CPSF1 | 81608 | 4:53377562-53464382 | GRCh38 | Q6UN15 | 607686 | \n| CSF1R | colony stimulating factor 1 receptor | 1436 | 5:150053291-150113372 | GRCh38 | P07333 | 164770 | \n| DDR2 | discoidin domain receptor tyrosine kinase 2 | 4921 | 1:162630857-162787405 | GRCh38 | Q16832 | 191311 | \n| HCK | HCK proto-oncogene, Src family tyrosine kinase | 3055 | 20:32052197-32101857 | GRCh38 | P08631 | 142370 | \n| LYN | LYN proto-oncogene, Src family tyrosine kinase | 4067 | 8:55879797-56014169 | GRCh38 | P07948 | 165120 | \n| RET | ret proto-oncogene | 5979 | 10:43077026-43130351 | GRCh38 | P07949 | 164761 | \n| CBL | Cbl proto-oncogene | 867 | 11:119206036-119313926 | GRCh38 | P22681 | 165360 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1-9 of 9 results. \n \n\n\n## Next commands\n- `biomcp get gene SLC22A1`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2024-01-01",
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E melanoma dabrafenib trametinib"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "f271f2ef7979f2566091ad2f4c01710b0e6547dfd91725e3506f76be91ff322e",
+  "recorded_at": "2026-11-05T05:26:40.894175+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5775.019400003657,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E melanoma dabrafenib trametinib, date_from=2024-01-01, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed search unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E melanoma dabrafenib trametinib\" --date-from 2024-01-01 --exclude-retracted --sort citations --source pubmed --limit 10 --offset 0` \nEurope PMC source status: degraded (Europe PMC search unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E melanoma dabrafenib trametinib\" --date-from 2024-01-01 --exclude-retracted --sort citations --source europepmc --limit 10 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E melanoma dabrafenib trametinib\" --date-from 2024-01-01 --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41290590|Neoadjuvant plus adjuvant dabrafenib and trametinib versus a…|PubTator3|2025-12-01|-|none| \n|PMID 41367868|Dabrafenib plus trametinib in an elderly patient with BRAF V…|PubTator3|2025-11-24|-|none| \n|PMID 41479589|Successful Treatment of BRAF-Mutated Metastatic Melanoma in…|PubTator3|2025-11-24|-|none| \n|PMID 40366077|Is One Year Enough? Extended Adjuvant Dabrafenib Plus Tramet…|PubTator3|2025-05-14|-|none| \n|PMID 39863702|Prognostic factors and outcomes of adjuvant and first-line m…|PubTator3|2025-01-25|-|none| \n|PMID 38899716|Final Results for Adjuvant Dabrafenib plus Trametinib in Sta…|PubTator3|2024-06-19|-|none| \n|PMID 38756640|Treatment of BRAF V600E mutant gastrointestinal stromal tumo…|PubTator3|2024-04-30|-|none| \n|PMID 38539548|Mutations in the Serine/Threonine Kinase BRAF: Oncogenic Dri…|PubTator3|2024-03-20|-|none| \n|PMID 38333370|Dabrafenib and trametinib administration in patients with BR…|PubTator3|2024-02-02|-|none| \n|PMID 38261444|A phase 1 study of triple-targeted therapy with BRAF, MEK, a…|PubTator3|2024-01-23|-|none| \n \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41290590 \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

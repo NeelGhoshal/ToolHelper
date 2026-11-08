@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 15,
+    "status": "recruiting"
+  },
+  "args_key": "039a008b26f4030f0296bd164f019c876e36bacf624ed3ec29f01b66d39686d4",
+  "recorded_at": "2026-11-03T06:54:39.363995+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 154.6756000025198,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 15 of 483 \n \nQuery: condition=melanoma, status=recruiting \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT07221734|Study to Compare Pharmaco…|RECRUITING|3|Advanced (Unresectable or Metastatic) Melanoma| \n|NCT05983237|Fluzoparib in Combination…|RECRUITING|1/2|Melanoma| \n|NCT05652673|Safe Stop Ipilimumab-nivo…|RECRUITING|NA|Melanoma Stage IV, Melanoma Stage III, Immunotherapy, Toxicity, Drug| \n|NCT07796061|Blood-Brain Barrier Disru…|RECRUITING|1|DMG, DIPG| \n|NCT05155033|Phase II Trial of Combina…|RECRUITING|2|Metastatic Melanoma, Advanced Locoregional Mel… [abridged; 4 conditions total]| \n|NCT07349940|Early Detection of Skin T…|RECRUITING|NA|Skin Cancer Prevention, Melanoma In Situ, Skin… [abridged; 5 conditions total]| \n|NCT00040352|Clinical, Laboratory, and…|RECRUITING|-|Melanoma, Dysplastic Nevus Syndrome| \n|NCT01772771|Molecular Testing for the…|RECRUITING|-|Glioma, Hematopoietic and Lymphoid Cell Neopla… [abridged; 5 conditions total]| \n|NCT06643286|Evaluation of a Personali…|RECRUITING|NA|Melanoma (Skin), Melanoma, Stage II, Stage I, Melanoma Stage, Survivorship| \n|NCT06560905|Preoperative Planning Wit…|RECRUITING|2|Malignant Melanoma| \n|NCT03563729|Melanoma Metastasized to…|RECRUITING|2|Malignant Melanoma| \n|NCT06384053|Skin Cancer and Hyperther…|RECRUITING|NA|Basal Cell Carcinoma, Squamous Cell Carcinoma Skin, Non-melanoma Skin Cancer| \n|NCT06621810|Artificial Intelligence B…|RECRUITING|-|Melanoma (Skin Cancer), Artificial Intelligence (AI), Pediatric Cancer| \n|NCT03452774|SYNERGY-AI: Artificial In…|RECRUITING|-|Cancer, Metastatic, Cancer, Cancer of Pancrea… [abridged; 43 conditions total]| \n|NCT06594991|A Study of Fianlimab, Cem…|RECRUITING|2|Advanced Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-15 of 483 results. Use --offset 15 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

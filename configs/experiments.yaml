@@ -1,0 +1,31 @@
+# Phase 10 (README section 3), trimmed plan agreed 2026-11-02: every README step, fewer passes.
+experiment: p10
+llm: nim-mistral
+mode: replay            # recordings first; misses fall through to live and are recorded
+max_turns: 8
+parallel: 3             # benchmark passes run at once (the free tier is latency-bound, ~2 req/min per pass)
+learn_from: bench-baseline-record   # frozen before the experiment; strategies learn only from the other fold
+baseline_repeats: 3
+close_call_repeats: 2   # a single-strategy arm within 2 points of a gate gets a second pass
+finalist_repeats: 3
+
+# Single-strategy arms (one variant each; variants where the README names a choice).
+arms:
+  E1: ["E1:top_k=8"]
+  E2: ["E2:level=light"]
+  E3: ["E3:modes=hints"]
+  E4: ["E4:mode=repair"]
+  E5: ["E5:mode=plan"]
+  E6: ["E6:mode=projection"]
+  E7: ["E7"]
+  E8: ["E8:mode=after_use"]
+  E9: ["E9"]
+
+# E3 dataset x mode grid, each run only on the tasks whose prompts the dataset can ground.
+e3_grid:
+  datasets: [ndc, rxnorm, hgnc, countries, clinvar, omop_eunomia]
+  modes: [hints, tool, rewrite]
+
+gate: {max_success_drop: 0.02, min_trust: 0.9}
+greedy: {min_gain: 0.03}
+bootstrap: {samples: 2000, seed: 7}

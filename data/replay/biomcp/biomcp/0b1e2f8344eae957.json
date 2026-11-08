@@ -1,0 +1,28 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "get disease melanoma"
+  },
+  "args_key": "0b1e2f8344eae9574a61cb8656b1fae7277a228f5ad1b68e8d3a2048f6b94973",
+  "recorded_at": "2026-11-03T10:13:29.632831+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 1523.491500003729,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# melanoma \n \nID: MONDO:0005105 \n \n## Definition (MyDisease.info) \n \nA malignant, usually aggressive tumor composed of atypical, neoplastic melanocytes. Most often, melanomas arise in the skin (cutaneous melanomas) and include the following histologic subtypes: superficial spreading melanoma, nodular melanoma, acral lentiginous melanoma, and lentigo maligna melanoma. Cutaneous melanomas may arise from acquired or congenital melanocytic or dysplastic nevi. Melanomas may also arise in other anatomic sites including the gastrointestinal system, eye, urinary tract, and reproductive system. Melanomas frequently metastasize to lymph nodes, liver, lungs, and brain. [NCIT:C3224] \nGenes (Open Targets): CDKN2A (OT 0.873), BRAF (OT 0.853), BAP1 (OT 0.816), MAP2K1 (OT 0.807), NRAS (OT 0.779) \nTreatments (MyChem.info indication search): dabrafenib, tebentafusp, cobimetinib, vindesine, binimetinib \nRecruiting Trials (ClinicalTrials.gov): 483 \n## Synonyms (MONDO / Disease Ontology via MyDisease.info) \n \nmalignant melanoma, melanoma (disease), melanoma, malignant, Naevocarcinoma \n## Parents (MONDO / Disease Ontology via MyDisease.info) \n \nmelanocytic neoplasm (MONDO:0021143), organ system cancer (DOID:0050687) \nMore:\n  biomcp get disease MONDO:0005105 genes   - associated genes\n  biomcp get disease MONDO:0005105 pathways   - pathways from associated genes\n  biomcp get disease MONDO:0005105 phenotypes   - HPO phenotype annotations\n  biomcp get disease MONDO:0005105 diagnostics   - diagnostic tests for this condition from GTR and WHO IVD\n  biomcp get disease MONDO:0005105 clinical_features   - Monarch/HPO phenotype rows as clinical features\n  biomcp get disease MONDO:0005105 survival   - SEER Explorer cancer survival rates\nAll:\n  biomcp get disease MONDO:0005105 all \nSee also:\n  biomcp get gene CDKN2A clingen constraint   - review ClinGen validity and constraint evidence for the top disease gene\n  biomcp search trial -c \"melanoma\"\n  biomcp search article -d \"melanoma\"\n  biomcp search diagnostic --disease \"melanoma\"   - diagnostic tests for this condition\n  biomcp search drug --indication \"melanoma\"   - treatment options for this condition\n  biomcp study download --list   - browse downloadable cancer genomics studies \n\n[Monarch](https://monarchinitiative.org/MONDO:0005105)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

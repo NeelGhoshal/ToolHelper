@@ -87,6 +87,7 @@ def test_fuzzy_match_is_labelled(built):
     res = index.resolve("Zolof")
     assert res.status == "fuzzy" and res.best.canonical == "sertraline hydrochloride"
     assert 0 < res.best.score < 100
+    assert index.resolve("Zolof", fuzzy=False).status == "none"  # callers can skip the slow fuzzy stage
     # A shared word is not a typo: no partial-string matches.
     assert index.resolve("Zoloft tablets").status == "none"
 

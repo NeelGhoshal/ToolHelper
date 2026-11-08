@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "get article 29493581 annotations",
+    "json": true
+  },
+  "args_key": "54baf5638ac1f7b85ad3a3061dffa5103258c6512414674a2410d88c69624251",
+  "recorded_at": "2026-11-03T07:50:55.953666+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 890.746199991554,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/29493581/\"\n      },\n      {\n        \"label\": \"PMC\",\n        \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC6119537/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp article entities 29493581\",\n      \"biomcp search disease --query RASopathy\",\n      \"biomcp search drug -q ACMG-AMP\",\n      \"biomcp article references 29493581 --limit 3\",\n      \"biomcp article citations 29493581 --limit 3\",\n      \"biomcp article recommendations 29493581 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"annotations\",\n        \"label\": \"PubTator Annotations\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      }\n    ],\n    \"workflow\": \"article-follow-up\",\n    \"workflow_playbook\": \"biomcp skill article-follow-up\",\n    \"workflow_rationale\": \"Use article annotations first, then citation and recommendation graph pivots for efficient literature expansion.\"\n  },\n  \"abstract_text\": \"PURPOSE: Standardized and accurate variant assessment is essential for effective medical care. To that end, Clinical Genome (ClinGen) Resource clinical domain working groups (CDWGs) are systematically reviewing disease-associated genes for sufficient evidence to support disease causality and creating disease-specific specifications of American College of Medical Genetics and Genomics-Association for Molecular Pathology (ACMG-AMP) guidelines for consistent and accurate variant classification. METHODS: The ClinGen RASopathy CDWG established an expert panel to curate gene information and generate gene- and disease-specific specifications to ACMG-AMP variant classification framework. These specifications were tested by classifying 37 exemplar pathogenic variants plus an additional 66 variants in ClinVar distributed across nine RASopathy genes. RESULTS: RASopathy-related specifications were applied to 16 ACMG-AMP criteria, with 5 also having adjustable strength with availability of additional evidence. Another 5 criteria were deemed not applicable. Key adjustments to minor allele frequency thresholds, multiple de novo occurrence events and/or segregation, and strength adjustments impacted 60% of variant classifications. Unpublished case-level data from participating laboratories impacted 45% of classifications supporting the need for data sharing. CONCLUSION: RAS-specific ACMG-AMP specifications optimized the utility of available clinical evidence and Ras/MAPK pathway-specific characteristics to consistently classify RASopathy-associated variants. These specifications highlight how grouping genes by shared features promotes rapid multigenic variant assessment without sacrificing specificity and accuracy.\",\n  \"annotations\": {\n    \"chemicals\": [\n      {\n        \"count\": 4,\n        \"text\": \"ACMG-AMP\"\n      }\n    ],\n    \"diseases\": [\n      {\n        \"count\": 5,\n        \"text\": \"RASopathy\"\n      }\n    ]\n  },\n  \"author_completeness\": \"complete\",\n  \"author_count\": 11,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Gelb BD\",\n    \"Cavé H\",\n    \"Dillon MW\",\n    \"Gripp KW\",\n    \"Lee JA\",\n    \"Mason-Suares H\",\n    \"Rauen KA\",\n    \"Williams B\",\n    \"Zenker M\",\n    \"Vincent LM\",\n    \"ClinGen RASopathy Working Group\"\n  ],\n  \"citation_count\": 153,\n  \"date\": \"2018-11-01\",\n  \"doi\": \"10.1038/gim.2018.3\",\n  \"journal\": \"Genet Med\",\n  \"open_access\": true,\n  \"pmcid\": \"PMC6119537\",\n  \"pmid\": \"29493581\",\n  \"publication_type\": \"research support, non-u.s. gov't\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"ClinGen's RASopathy Expert Panel consensus methods for variant interpretation.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

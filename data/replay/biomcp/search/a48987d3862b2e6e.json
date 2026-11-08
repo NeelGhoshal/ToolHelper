@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "disease": [
+      "lung adenocarcinoma",
+      "non-small cell lung cancer"
+    ],
+    "entity": "article",
+    "gene": "EGFR",
+    "limit": 10
+  },
+  "args_key": "a48987d3862b2e6ee0c1113b149a3baee27d41ec592dba9e8dd1e41d642bbe61",
+  "recorded_at": "2026-11-03T23:25:59.515585+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 13919.238099944778,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, disease=lung adenocarcinoma non-small cell lung cancer, exclude_retracted=true, sort=relevance, ranking_mode=lexical, ranking_policy=calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubTator3 source status: degraded (PubTator3 timed out after 12s) \nRetry: `biomcp search article --gene EGFR --disease \"lung adenocarcinoma non-small cell lung cancer\" --exclude-retracted --sort relevance --source pubtator --limit 10 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene EGFR --disease \"lung adenocarcinoma non-small cell lung cancer\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 35198656|Clinical and CT patterns to predict EGFR mutation in patient…|Europe PMC|2022-02-07|title 1/2|12| \n|PMID 42047936|Post-marketing safety surveillance of EGFR-targeted agents a…|Europe PMC|2026-04-28|title 1/2|0| \n|PMID 42959092|Simultaneous occurrence of HER2 mutation and PD-L1 high expr…|PubMed|2026-10-15|title 1/2|0| \n|PMID 42957218|Long-term Disease Control After Probable Endobronchial Small…|PubMed|2026-11-01|title 1/2|0| \n|PMID 42930180|Triple Genetic Alterations (EGFR Mutation, ALK Fusion, and M…|PubMed|2026-10-12|title 1/2|0| \n|PMID 42923081|Case Report: Coexpression of somatic EGFR, BRCA1, and BRCA2…|PubMed|2026-10-08|title 1/2|0| \n|PMID 39778860|Human γδ T cells in the tumor microenvironment: Key insigh…|Europe PMC|2025-01-06|-|6| \n|PMID 40453086|Emerging research themes in ferroptosis research for non-sma…|Europe PMC|2025-05-16|-|4| \n|PMID 42936263|NEDD4-1: from molecular mechanisms to clinical translation i…|Europe PMC|2026-10-12|-|0| \n|PMID 36691332|Tastin promotes non-small-cell lung cancer progression throu…|Europe PMC|2023-01-23|-|10| \n \n \n \nNewest indexed: 2026-10-30 (4 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 35198656\n  biomcp search article -g EGFR -d \"lung adenocarcinoma non-small cell lung cancer\" --year-min 2022 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n\nCache note: PubTator 3 data served from cache, 9 h old (older than the provider's freshness window).\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

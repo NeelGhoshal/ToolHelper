@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "biomarker": [
+      "BRAF V600E",
+      "BRAF V600",
+      "BRAF mutation"
+    ],
+    "entity": "trial",
+    "json": true,
+    "limit": 25,
+    "status": "recruiting"
+  },
+  "args_key": "ce5ae47bfad8191311b096c0dc050023a0ac3dfc23b40b78f2c079f27644255e",
+  "recorded_at": "2026-11-03T23:16:05.140315+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 172.47430002316833,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 25,\n    \"returned\": 0,\n    \"total\": 0,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 0,\n  \"results\": [],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search trial --biomarker \\\"BRAF V600E BRAF V600 BRAF mutation\\\"\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

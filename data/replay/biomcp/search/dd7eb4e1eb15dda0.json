@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 5,
+    "query": "CYP2C19 cytochrome P450 2C19 pharmacogenomics alleles star alleles"
+  },
+  "args_key": "dd7eb4e1eb15dda0931a97254cdcfc2e1b0aefd239335df3a3b8034111d0298c",
+  "recorded_at": "2026-11-03T20:11:20.227575+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 821.8663000152446,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: CYP2C19 cytochrome P450 2C19 pharmacogenomics alleles star alleles \n \nFound 2 genes \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| CYP2C19 | cytochrome P450 family 2 subfamily C member 19 | 1557 | 10:94762536-94922264 | GRCh38 | P33261 | 124020 | \n| STAR | steroidogenic acute regulatory protein | 6770 | 8:38138571-38151102 | GRCh38 | P49675 | 600617 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1-2 of 2 results. \n \n\n\n## Next commands\n- `biomcp get gene CYP2C19`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2025-01-01",
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "BRAF V600E",
+      "melanoma"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "69aa8bc7bf761ce2f98ddb8b8fc04348396d722279d3fb96189fcd58ce796724",
+  "recorded_at": "2026-11-04T00:38:39.398111+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5995.2775000128895,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=BRAF V600E melanoma, date_from=2025-01-01, exclude_retracted=true, sort=date\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"41560593\",\n      \"pmcid\": \"PMC12826705\",\n      \"title\": \"Killing cancer takes guts: lessons learned from the manipulation of gut microbiome and immunotherapy for the future of urothelial carcinoma\",\n      \"journal\": \"Oncoimmunology\",\n      \"date\": \"2026-12-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41630477\",\n      \"pmcid\": \"PMC12885418\",\n      \"title\": \"A data-driven cartography of NSCLC vaccine research: Quantifying the paradigm shift toward immuno-oncology combination therapies\",\n      \"journal\": \"Hum Vaccin Immunother\",\n      \"date\": \"2026-12-01\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42878812\",\n      \"title\": \"[Melanocytomas : Intermediate melanocytic neoplasms with distinct morphology and molecular background].\",\n      \"journal\": \"Pathologie (Heidelb)\",\n      \"date\": \"2026-11-01\",\n      \"citation_count\": 0,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42969502\",\n      \"title\": \"Impact of bone metastases on outcomes in patients with metastatic melanoma treated with immune checkpoint inhibitors.\",\n      \"journal\": \"Melanoma research\",\n      \"date\": \"2026-10-29\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42816143\",\n      \"title\": \"Molecular Characterization of Sclerosing Nevi With Pseudomelanomatous Features.\",\n      \"journal\": \"J Cutan Pathol\",\n      \"date\": \"2026-09-30\",\n      \"citation_count\": 0,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42770269\",\n      \"title\": \"A context-dependent modulatory role for eIF6 in acquired resistance to vemurafenib in melanoma.\",\n      \"journal\": \"FEBS letters\",\n      \"date\": \"2026-09-22\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42903041\",\n      \"title\": \"Adaptive drug resistance in melanoma is characterised by lipidome remodelling while maintaining cell membrane biophysical properties.\",\n      \"journal\": \"Cancer drug resistance (Alhambra, Calif.)\",\n      \"date\": \"2026-09-16\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42727358\",\n      \"title\": \"Combined multi-parameter filtering and prioritization of a chemical library for cancer disease target.\",\n      \"journal\": \"Computational biology and chemistry\",\n      \"date\": \"2026-09-08\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42613908\",\n      \"doi\": \"10.1002/ijc.70671\",\n      \"title\": \"Genomic and Transcriptomic Analysis of Sinonasal Mucosal Melanoma and Conjunctival Melanoma.\",\n      \"journal\": \"Int J Cancer\",\n      \"date\": \"2026-08-18\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42285341\",\n      \"doi\": \"10.1016/j.cca.2026.121178\",\n      \"title\": \"Molecular Landscape and Advanced Diagnostic Technologies for BRAF Mutations in Cancer: From Quantitative PCR and ddPCR to CRISPR-Based Platforms.\",\n      \"journal\": \"Clin Chim Acta\",\n      \"date\": \"2026-06-12\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"BRAF V600E melanoma\\\" --date-from 2025-01-01 --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0\",\n      \"biomcp get article 41560593\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

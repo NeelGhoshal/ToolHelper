@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR mutation",
+      "lung cancer",
+      "tyrosine kinase inhibitor"
+    ],
+    "limit": 15,
+    "sort": "relevance"
+  },
+  "args_key": "75d99a4d0546e0a67574bae68f6f58687524765b0795deed46b475e6f09e51ce",
+  "recorded_at": "2026-11-03T23:37:01.443337+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 8972.007900010794,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR mutation lung cancer tyrosine kinase inhibitor, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR mutation lung cancer tyrosine kinase inhibitor\" --exclude-retracted --sort relevance --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 38052760|Combination therapy with EGFR tyrosine kinase inhibitors and…|PubTator3|2023-12-06|hybrid 0.368 + title 7/7|none| \n|PMID 33855865|EGFR tyrosine kinase inhibitors for EGFR mutation-positive n…|PubTator3|2021-06-01|hybrid 0.336 + title 6/7|none| \n|PMID 38070005|Correction to: EGFR Tyrosine Kinase Inhibitors for the Treat…|PubTator3|2023-12-09|hybrid 0.272 + title 5/7|none| \n|PMID 34202566|Drug Tolerance to EGFR Tyrosine Kinase Inhibitors in Lung Ca…|PubTator3|2021-06-24|hybrid 0.261 + title 4/7|none| \n|PMID 42792909|AKT Inhibitor Capivasertib as a Target for Osimertinib Combi…|Europe PMC|2026-08-27|hybrid 0.261 + title 4/7|0| \n|PMID 42933457|Ruzaltatug rezetecan versus chemotherapy for EGFR-mutated ad…|Europe PMC, PubMed|2026-10-26|hybrid 0.257 + title 6/7|0| \n|PMID 34269297|EGFR tyrosine kinase inhibitors alone or in combination with…|PubTator3|2021-07-01|hybrid 0.251 + title 5/7|none| \n|PMID 42975994|FLAURA2 - a step forward in first-line treatment of advanced…|PubMed|2026-01-01|hybrid 0.208 + title 3/7|none| \n|PMID 42973333|Clinical and Molecular Outcomes of Dabrafenib/Trametinib-Bas…|PubMed|2026-10-20|hybrid 0.197 + title 3/7|none| \n|PMID 42972485|The TGF-β signaling activated by cancer-associated macropha…|PubMed|2026-08-04|hybrid 0.176 + title 3/7|0| \n|PMID 42639301|Immune checkpoint inhibitor-based combinatory and alternativ…|Europe PMC|2026-08-10|hybrid 0.133 + title 2/7|0| \n|PMID 42776017|FIN-EGFR: real-world treatment outcomes by EGFR mutational s…|Europe PMC|2026-09-23|hybrid 0.122 + title 1/7|0| \n|PMID 42729980|Resistance to third-generation EGFR TKIs - what can be expec…|Europe PMC|2026-09-03|hybrid 0.111 + title 1/7|0| \n|PMID 42972594|Anlotinib combined with almonertinib reverses almonertinib r…|PubMed|2026-08-05|hybrid 0.101 + title 1/7|0| \n|PMID 42976000|Detection of RET fusion in late-line treatment of NSCLC foll…|PubMed|2026-01-01|hybrid 0.089|none| \n \n \n \nNewest indexed: 2026-11-03 (0 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 38052760\n  biomcp search article -k \"EGFR mutation lung cancer tyrosine kinase inhibitor\" --year-min 2021 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

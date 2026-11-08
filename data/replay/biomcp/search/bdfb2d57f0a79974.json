@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "review",
+    "entity": "article",
+    "limit": 10,
+    "keyword": [
+      "statins cholesterol lowering drugs dementia Alzheimer prevention observational studies Mendelian randomization"
+    ]
+  },
+  "args_key": "bdfb2d57f0a7997475808e834b8a7a80e6e55f06b2bec037cf67cb1ee8dab2f0",
+  "recorded_at": "2026-11-04T20:42:16.444057+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3381.1264999999366,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statins cholesterol lowering drugs dementia Alzheimer prevention observational studies Mendelian randomization, type=review, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 39866113|2025 Heart Disease and Stroke Statistics: A Report of US and…|Europe PMC|2025-01-27|hybrid 0.2|1147| \n|PMID 36077172|Shared Risk Factors between Dementia and Atherosclerotic Car…|Europe PMC|2022-08-29|hybrid 0.179 + title 1/11|101| \n|PMID 42252551|The Use of Statins in Parkinson's and Alzheimer's Disease: A…|Europe PMC|2026-06-01|hybrid 0.166 + title 2/11|2| \n|PMID 41688855|Immunometabolism Reframes Alzheimer's Disease: From Systemic…|Europe PMC|2026-02-13|hybrid 0.15 + title 1/11|8| \n|PMID 38203341|Mechanisms of 3-Hydroxyl 3-Methylglutaryl CoA Reductase in A…|Europe PMC|2023-12-22|hybrid 0.132 + title 1/11|13| \n|PMID 41367378|The heart-brain axis: unraveling the interconnections betwee…|Europe PMC|2025-11-24|hybrid 0.13 + title 1/11|8| \n|PMID 42010230|Brain, benefit, or burden? Revisiting statins and cognitive…|PubMed|2026-06-01|hybrid 0.117 + title 1/11|1| \n|PMID 42439669|What Are the Potential Therapeutic Benefits of Targeting Blo…|Europe PMC|2026-06-30|hybrid 0.117 + title 1/11|0| \n|PMID 39121130|A Brief History of the Progress in Our Understanding of Gene…|Europe PMC|2024-01-01|hybrid 0.112 + title 1/11|13| \n|PMID 42470822|Recent advances in methotrexate pharmacology and potential t…|Europe PMC|2026-06-12|hybrid 0.09|1| \n \n \n \nNewest indexed: 2026-07-21 (106 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 39866113\n  biomcp search article -k \"statins cholesterol lowering drugs dementia Alzheimer prevention observational studies Mendelian randomization\" --type review --year-min 2022 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

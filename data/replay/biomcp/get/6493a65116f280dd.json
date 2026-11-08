@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "pembrolizumab",
+    "json": true,
+    "sections": [
+      "fda_approved",
+      "regulatory"
+    ]
+  },
+  "args_key": "6493a65116f280dd1a2cbe238b313c8e5e9f211d0f06afd4d314aadae43adf33",
+  "recorded_at": "2026-11-03T23:03:26.507803+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.2929999502375722,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid drug section: fda_approved"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

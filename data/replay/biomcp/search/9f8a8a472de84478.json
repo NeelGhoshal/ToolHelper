@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "BRAF V600E mutant melanoma",
+      "BRAF V600E colorectal cancer"
+    ],
+    "json": true,
+    "limit": 10,
+    "status": "recruiting"
+  },
+  "args_key": "9f8a8a472de844789c7e0e44db91eaafba35a73a2f6d244a73f20ea68529c020",
+  "recorded_at": "2026-11-04T00:24:49.762518+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 213.52300001308322,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 0,\n    \"total\": 0,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 0,\n  \"results\": [],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search trial -c \\\"BRAF V600E mutant melanoma BRAF V600E colorectal cancer\\\"\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

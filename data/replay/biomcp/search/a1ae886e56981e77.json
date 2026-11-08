@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "pembrolizumab"
+    ],
+    "entity": "article",
+    "limit": 5
+  },
+  "args_key": "a1ae886e56981e777c5f3bf1ad92befb1a3306c790ac0729c7268398aa501b05",
+  "recorded_at": "2026-11-03T06:12:28.943302+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2631.806699966546,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=pembrolizumab, exclude_retracted=true, sort=relevance, ranking_mode=lexical, ranking_policy=calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --drug pembrolizumab --exclude-retracted --sort relevance --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \nRanking: calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42956192|Serum Profiles of Pembrolizumab, Cardiac Troponin T, and Int…|Europe PMC|2026-10-29|title 1/1|0| \n|PMID 42957236|Salvage Chemotherapy After Pembrolizumab for Recurrent or Me…|Europe PMC|2026-11-01|title 1/1|0| \n|PMID 36271954|Pembrolizumab for all|PubTator3|2022-10-22|title 1/1|none| \n|PMID 42971725|Enhanced melanoma-specific cytotoxic T-cell expansion and th…|PubMed|2026-11-02|title 1/1|none| \n|PMID 36725738|[Pembrolizumab (Keytruda ) associated ocular hypotony].|PubTator3|2023-02-01|title 1/1|none| \n \n \n \nNewest indexed: 2026-11-02 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42956192\n  biomcp search article --drug pembrolizumab --year-min 2022 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

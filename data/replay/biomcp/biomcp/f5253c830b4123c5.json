@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp get article 42957066 --json 2>/dev/null | head -c 4000; echo; echo \"---EUROPEPMC---\"; curl -s \"https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:42957066&format=json&resultType=core\" 2>/dev/null | head -c 6000",
+    "json": true
+  },
+  "args_key": "f5253c830b4123c5a0eeaa01c6bbbba352c35e92e77da247ade3b7d8174ae248",
+  "recorded_at": "2026-11-03T20:19:14.268624+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 3.1781999859958887,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: BioMCP allows read-only commands only. Allowed families are search/get/helpers/list/version/health/batch/enrich/discover/skill plus MCP-safe study commands (`study list`, `study download --list`, `study top-mutated`, `study query`, `study filter`, `study cohort`, `study survival`, `study compare`, `study co-occurrence`)."
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

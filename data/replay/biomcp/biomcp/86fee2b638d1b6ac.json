@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp search trial --condition melanoma --intervention \"BRAF inhibitor\" --status RECRUITING --limit 25 --json",
+    "json": true
+  },
+  "args_key": "86fee2b638d1b6acc03f9a70218a44084ee92cb849162ff7d1f14336a339a51c",
+  "recorded_at": "2026-11-03T23:41:13.273546+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 2308.378800051287,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 25,\n    \"returned\": 2,\n    \"total\": 2,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 2,\n  \"results\": [\n    {\n      \"nct_id\": \"NCT03563729\",\n      \"title\": \"Melanoma Metastasized to the Brain and Steroids\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE2\",\n      \"conditions\": [\n        \"Malignant Melanoma\"\n      ],\n      \"sponsor\": \"Inge Marie Svane\"\n    },\n    {\n      \"nct_id\": \"NCT04913285\",\n      \"title\": \"A Study to Evaluate KIN-2787 in Participants With BRAF and/or NRAS Mutation Positive Solid Tumors\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE1\",\n      \"conditions\": [\n        \"Solid Tumor, Adult\",\n        \"Non-small Cell Lung Cancer\",\n        \"Melanoma\"\n      ],\n      \"sponsor\": \"Pierre Fabre Medicament\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get trial NCT03563729\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

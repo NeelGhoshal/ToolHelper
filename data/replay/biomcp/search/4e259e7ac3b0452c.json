@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "statin use",
+      "dementia",
+      "meta-analysis observational"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "4e259e7ac3b0452cf3b5e2ab6d9e296de6efa79400c1c1b87287844fecc881ce",
+  "recorded_at": "2026-11-05T04:11:52.555211+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3700.6426000007195,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin use dementia meta-analysis observational, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed search unavailable) \nRetry: `biomcp search article --keyword \"statin use dementia meta-analysis observational\" --exclude-retracted --sort citations --source pubmed --limit 10 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"statin use dementia meta-analysis observational\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 32738937|Dementia prevention, intervention, and care: 2020 report of…|Europe PMC|2020-07-30|-|7936| \n|PMID 28122885|Heart Disease and Stroke Statistics-2017 Update: A Report Fr…|Europe PMC|2017-01-25|-|6484| \n|PMID 33501848|Heart Disease and Stroke Statistics-2021 Update: A Report Fr…|Europe PMC|2021-01-27|-|4456| \n|PMID 17941715|Strengthening the Reporting of Observational Studies in Epid…|Europe PMC|2007-10-01|-|4253| \n|PMID 36695182|Heart Disease and Stroke Statistics-2023 Update: A Report Fr…|Europe PMC|2023-01-25|-|4105| \n|PMID 24352519|Heart disease and stroke statistics--2014 update: a report f…|Europe PMC|2013-12-18|-|4036| \n|PMID 30879355|2019 ACC/AHA Guideline on the Primary Prevention of Cardiova…|Europe PMC|2019-03-17|-|3993| \n|PMID 23239837|Heart disease and stroke statistics--2013 update: a report f…|Europe PMC|2012-12-12|-|3703| \n|PMID 22179539|Heart disease and stroke statistics--2012 update: a report f…|Europe PMC|2011-12-15|-|3594| \n|PMID 21160056|Heart disease and stroke statistics--2011 update: a report f…|Europe PMC|2010-12-15|-|3584| \n \n \n \nNewest indexed: 2023-01-25 (1380 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 32738937\n  biomcp search article -k \"statin use dementia meta-analysis observational\" --year-min 2007 --year-max 2023 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

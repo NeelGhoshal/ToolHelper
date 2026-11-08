@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "disease": [
+      "non-small cell lung cancer"
+    ],
+    "entity": "article",
+    "gene": "EGFR",
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "c562b4f5a1e008d4b74a0feafd8b2bc6a7faeb36a384881b92a14dd884966b84",
+  "recorded_at": "2026-11-03T05:39:40.942336+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4710.823500005063,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, disease=non-small cell lung cancer, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene EGFR --disease \"non-small cell lung cancer\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 32029601|The biology, function, and biomedical applications of exosom…|Europe PMC|2020-02-01|-|8962| \n|PMID 15118073|Activating mutations in the epidermal growth factor receptor…|Europe PMC|2004-04-29|-|8565| \n|PMID 27718847|Pembrolizumab versus Chemotherapy for PD-L1-Positive Non-Sma…|Europe PMC|2016-10-08|-|8158| \n|PMID 26412456|Nivolumab versus Docetaxel in Advanced Nonsquamous Non-Small…|Europe PMC|2015-09-27|-|7733| \n|PMID 15118125|EGFR mutations in lung cancer: correlation with clinical res…|Europe PMC|2004-04-29|-|7336| \n|PMID 27899662|KEGG: new perspectives on genomes, pathways, diseases and dr…|Europe PMC|2016-11-28|-|6809| \n|PMID 42971367|Reversal of acquired osimertinib resistance by YAP inhibitio…|PubMed|2026-11-02|-|none| \n|PMID 42971390|β-elemene suppressed EMT via IGF1R inhibition in osimertini…|PubMed|2026-11-02|-|none| \n|PMID 42965610|Machine learning-assisted Ti(3)C(2)T(x) MXene/Au@Fe(3)O(4) c…|PubMed|2026-10-31|-|0| \n|PMID 42965979|Transcription activator-like effector base editing delivered…|PubMed|2026-10-29|-|0| \n|PMID 42966193|Stage I Lung Adenocarcinoma in Young Patients (Aged ≤…|PubMed|2026-10-07|-|0| \n|PMID 42964983|Overcoming EGFR Resistance by Monovalent and Bident Inhibito…|PubMed|2026-09-29|-|0| \n|PMID 38163979|EGFR|PubTator3|2024-01-02|-|none| \n|PMID 36172732|EGFR|PubTator3|2022-09-20|-|none| \n|PMID 34739062|Association of Clinicopathologic and Molecular Tumor Feature…|PubTator3|2021-11-01|-|none| \n \n \n \nNewest indexed: 2026-11-02 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 32029601\n  biomcp search article -g EGFR -d \"non-small cell lung cancer\" --year-min 2004 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

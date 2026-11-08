@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "get drug DB00331 --json",
+    "json": true
+  },
+  "args_key": "06d918e42e6ffe5c7cc770efe88905724a2489e28be884268fd99b1064253ca4",
+  "recorded_at": "2026-11-04T05:49:31.325978+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 2000.8633999386802,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: drug 'DB00331' not found.\n\nNo drug card matches \"DB00331\" by name, brand, or synonym. The MyChem text search matched other drugs: metformin. Try searching: biomcp search drug -q \"DB00331\""
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "BRAF V600E"
+    ],
+    "limit": 5,
+    "status": "recruiting"
+  },
+  "args_key": "8a6069efc4074ee1ee106b297eda6240821d6ae6f4aea047eabf3d6d32c309c1",
+  "recorded_at": "2026-11-03T13:54:25.975650+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 220.3956000157632,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 5 of 24 \n \nQuery: condition=BRAF V600E, status=recruiting \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT06653517|Clinical Study of Neoadju…|RECRUITING|2|Ameloblastoma, BRAF V600E Mutation Positive| \n|NCT03042221|Early Rebiopsy to Identif…|RECRUITING|-|Non-Small Cell Carcinoma of Lung, TNM Stage 4,… [abridged; 6 conditions total]| \n|NCT06763029|Irinotecan Liposomes Comb…|RECRUITING|2|Colorectal Cancer Metastatic| \n|NCT07617610|Primary and Acquired Resi…|RECRUITING|-|Metastatic Colorectal Cancer, BRAF V600E Mutation| \n|NCT05786924|Phase 1/2 Trial of S24165…|RECRUITING|1/2|Non-small Cell Lung Cancer, Histiocytic Neopl… [abridged; 32 conditions total]| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-5 of 24 results. Use --offset 5 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

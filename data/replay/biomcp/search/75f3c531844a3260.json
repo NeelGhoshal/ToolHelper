@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2024-01-01",
+    "entity": "article",
+    "gene": "BRAF",
+    "keyword": [
+      "V600E"
+    ],
+    "limit": 15,
+    "sort": "date"
+  },
+  "args_key": "75f3c531844a326036abcc9f12c0232affea11be9a6fab4460368e84f1595395",
+  "recorded_at": "2026-11-04T00:03:42.070063+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6729.918500059284,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=BRAF, keyword=V600E, date_from=2024-01-01, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene BRAF --keyword V600E --date-from 2024-01-01 --exclude-retracted --sort date --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42544547|Practical management of BRAF inhibitors in glioma: toxicity…|PubTator3, Europe PMC|2026-12-01|-|0| \n|PMID 41454575|Impact of stromal maturity and proportion on prognosis and i…|PubTator3|2026-12-01|-|none| \n|PMID 41534849|Mitogen-activated protein kinase kinase 4 (MKK4) as a promis…|PubTator3|2026-12-01|-|none| \n|PMID 41630477|A data-driven cartography of NSCLC vaccine research: Quantif…|PubTator3|2026-12-01|-|none| \n|PMID 41988746|Durable response of anaplastic thyroid cancer to pembrolizum…|PubTator3|2026-12-01|-|none| \n|PMID 42967654|[Construction and internal validation of a prognostic predic…|PubMed|2026-11-03|-|0| \n|PMID 42970403|The Modern Continuum of Care for Colorectal Liver Metastases…|PubMed|2026-11-02|-|0| \n|PMID 42878812|[Melanocytomas : Intermediate melanocytic neoplasms with dis…|PubTator3|2026-11-01|-|none| \n|PMID 42969502|Impact of bone metastases on outcomes in patients with metas…|PubMed|2026-10-29|-|0| \n|PMID 42973333|Clinical and Molecular Outcomes of Dabrafenib/Trametinib-Bas…|PubMed|2026-10-20|-|none| \n|PMID 42974534|Calvarial erosion secondary to epithelioid glioblastoma: A m…|PubMed|2026-10-16|-|none| \n|PMID 42830811|Real-world efficacy, safety, and treatment continuity of fru…|Europe PMC|2026-09-22|-|0| \n|PMID 42774706|Conjunctival myxoid stromal tumor: Case series of a rare neo…|Europe PMC|2026-09-14|-|0| \n|PMID 42733698|Diffuse leptomeningeal glioneuronal tumor mimicking chronic…|Europe PMC|2026-09-03|-|0| \n|PMID 42285341|Molecular Landscape and Advanced Diagnostic Technologies for…|Europe PMC|2026-06-12|-|0| \n \n \n \nNewest indexed: 2026-11-03 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42544547 \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n\nCache note: PubTator 3 data served from cache, 14 h old (older than the provider's freshness window).\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

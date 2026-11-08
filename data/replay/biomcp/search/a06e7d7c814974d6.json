@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "type 2 diabetes treatment",
+      "GLP-1",
+      "SGLT2 inhibitor"
+    ],
+    "limit": 8,
+    "sort": "date"
+  },
+  "args_key": "a06e7d7c814974d6bd9abd317c9f364f1ccc20c840dd39b091ef8f6519f8e905",
+  "recorded_at": "2026-11-04T01:23:51.890141+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 8917.95340005774,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=type 2 diabetes treatment GLP-1 SGLT2 inhibitor, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"type 2 diabetes treatment GLP-1 SGLT2 inhibitor\" --exclude-retracted --sort date --source semanticscholar --limit 8 --offset 0` \n \n \nFound 8 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41431379|Microbes and medicines: interrelationships between pharmaceu…|PubTator3|2026-12-31|-|none| \n|PMID 41454643|Gut-heart axis: emerging therapies targeting trimethylamine…|PubTator3|2026-12-31|-|none| \n|PMID 41622960|Association of SGLT2 inhibitors use with a lower risk of bil…|PubTator3|2026-12-01|-|none| \n|PMID 42967552|Association of GLP-1 receptor agonist and SGLT2 inhibitor us…|PubMed|2026-11-01|-|0| \n|PMID 42967597|Severe Infection Outcomes With SGLT2 Versus DPP-4 Inhibitors…|PubMed|2026-11-01|-|0| \n|PMID 42968811|Baseline monocyte GIP receptor mRNA expression is associated…|Europe PMC|2026-10-31|-|0| \n|PMID 42968831|Baseline monocyte SGLT2 mRNA expression and changes in the f…|Europe PMC|2026-10-31|-|0| \n|PMID 42927270|Metformin Use Is Associated With Reduced Rates of Primary Ne…|Europe PMC|2026-10-19|-|0| \n \n \n \nNewest indexed: 2026-11-03 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41431379\n  biomcp search article -k \"type 2 diabetes treatment GLP-1 SGLT2 inhibitor\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 8 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

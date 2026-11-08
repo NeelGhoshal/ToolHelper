@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR exon 19 deletion L858R T790M C797S mutation",
+      "EGFR tyrosine kinase inhibitor",
+      "EGFR-mutant NSCLC"
+    ],
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "018527ea8ac6ae04a9dfe90bdaae97503b2e3b6111545e6aa689012766a545a5",
+  "recorded_at": "2026-11-03T23:26:10.138965+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6069.226899999194,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR exon 19 deletion L858R T790M C797S mutation EGFR tyrosine kinase inhibitor EGFR-mutant NSCLC, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR exon 19 deletion L858R T790M C797S mutation EGFR tyrosine kinase inhibitor EGFR-mutant NSCLC\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 25939061|Acquired EGFR C797S mutation mediates resistance to AZD9291…|Europe PMC|2015-05-04|-|1294| \n|PMID 31564718|Resistance mechanisms to osimertinib in EGFR-mutated non-sma…|Europe PMC|2019-09-30|-|1196| \n|PMID 34054126|Small molecules in targeted cancer therapy: advances, challe…|Europe PMC|2021-05-31|-|1181| \n|PMID 27251290|Overcoming EGFR(T790M) and EGFR(C797S) resistance with mutan…|Europe PMC|2016-05-25|-|720| \n|PMID 30073261|Assessment of Resistance Mechanisms and Clinical Implication…|Europe PMC|2018-11-01|-|603| \n|PMID 34339292|Amivantamab in EGFR Exon 20 Insertion-Mutated Non-Small-Cell…|Europe PMC|2021-08-02|-|548| \n|PMID 27283993|Circulating tumour DNA profiling reveals heterogeneity of EG…|Europe PMC|2016-06-10|-|527| \n|PMID 31562956|Rare epidermal growth factor receptor (EGFR) mutations in no…|Europe PMC|2019-09-25|-|499| \n|PMID 25964297|The Allelic Context of the C797S Mutation Acquired upon Trea…|Europe PMC|2015-05-11|-|484| \n|PMID 31815659|Emerging insights of tumor heterogeneity and drug resistance…|Europe PMC|2019-12-09|-|477| \n|PMID 34206026|EGFR in Cancer: Signaling Mechanisms, Drugs, and Acquired Re…|Europe PMC|2021-06-01|-|460| \n|PMID 35534623|Third-generation EGFR and ALK inhibitors: mechanisms of resi…|Europe PMC|2022-05-09|-|446| \n|PMID 34526717|Structure-based classification predicts drug response in EGF…|Europe PMC|2021-09-15|-|437| \n|PMID 29686424|Mechanisms and clinical activity of an EGFR and HER2 exon 20…|Europe PMC|2018-04-23|-|396| \n|PMID 30257958|Landscape of Acquired Resistance to Osimertinib in EGFR-Muta…|Europe PMC|2018-09-26|-|395| \n \n \n \nNewest indexed: 2022-05-10 (1638 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 25939061\n  biomcp search article -k \"EGFR exon 19 deletion L858R T790M C797S mutation EGFR tyrosine kinase inhibitor EGFR-mutant NSCLC\" --year-min 2015 --year-max 2022 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

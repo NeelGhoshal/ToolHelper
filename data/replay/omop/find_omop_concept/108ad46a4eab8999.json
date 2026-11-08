@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "3094-0",
+    "max_results": 10,
+    "omop_field": "measurement_concept_id",
+    "omop_table": "measurement"
+  },
+  "args_key": "108ad46a4eab8999710e3a9b2df6603c6c65c5bf42ab2c9cf3872e6a840e18cf",
+  "recorded_at": "2026-11-03T10:18:25.028599+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 840.1307999738492,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 3013682,\n      \"code\": \"3094-0\",\n      \"name\": \"Urea nitrogen [Mass/volume] in Serum or Plasma\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3013682\"\n    },\n    {\n      \"concept_id\": 1093083,\n      \"code\": \"LP443094-0\",\n      \"name\": \"Tau protein.phosphorylated 217 | Serum or Plasma | Chemistry - non-challenge\",\n      \"class\": \"LOINC Hierarchy\",\n      \"concept\": \"C\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/1093083\"\n    },\n    {\n      \"concept_id\": 37486020,\n      \"code\": \"3094-09-5\",\n      \"name\": \"Doxifluridine\",\n      \"class\": \"Ingredient\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"CTD\",\n      \"url\": \"https://omophub.com/concepts/37486020\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"3094-0\",\n    \"omop_table\": \"measurement\",\n    \"omop_field\": \"measurement_concept_id\",\n    \"total_found\": 3,\n    \"candidates_returned\": 3,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

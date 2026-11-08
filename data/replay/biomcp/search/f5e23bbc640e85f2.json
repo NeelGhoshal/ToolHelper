@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "BRAF V600E"
+    ],
+    "entity": "trial",
+    "limit": 10
+  },
+  "args_key": "f5e23bbc640e85f25640d821f2907ff630f69f3f42a9fc481c67ab53b197692b",
+  "recorded_at": "2026-11-03T14:02:33.582236+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 174.2212999961339,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 137 \n \nQuery: condition=BRAF V600E \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT06653517|Clinical Study of Neoadju…|RECRUITING|2|Ameloblastoma, BRAF V600E Mutation Positive| \n|NCT07770074|A Real-World Study of Sec…|NOT_YET_RECRUITING|-|Radioiodine-refractory Differentiated Thyroid Cancer| \n|NCT01584648|A Study Comparing Trameti…|COMPLETED|3|Melanoma| \n|NCT01597908|Dabrafenib Plus Trametini…|COMPLETED|3|Melanoma| \n|NCT01767454|Study of Dabrafenib +/- T…|COMPLETED|1|Solid Tumours| \n|NCT04452877|A Study of Dabrafenib in…|COMPLETED|2|Carcinoma, Non-Small-Cell Lung| \n|NCT04462471|Vemurafenib Plus Copanlis…|COMPLETED|1|Thyroid Carcinoma, Thyroid Cancer, Thyroid Can… [abridged; 6 conditions total]| \n|NCT04965220|HLX208 (BRAF V600E Inhibi…|UNKNOWN|1|Solid Tumor| \n|NCT05641493|A Phase Ib/II Clinical Tr…|UNKNOWN|1/2|Non Small Cell Lung Cancer| \n|NCT02410863|Biopsy- and Biology-drive…|TERMINATED|2|Malignant Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-10 of 137 results. Use --offset 10 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

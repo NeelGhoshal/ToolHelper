@@ -57,6 +57,8 @@ bench_app = typer.Typer(no_args_is_help=True, help="Benchmark tasks.")
 app.add_typer(bench_app, name="bench")
 datasets_app = typer.Typer(no_args_is_help=True, help="Grounding datasets and the entity index.")
 app.add_typer(datasets_app, name="datasets")
+experiment_app = typer.Typer(no_args_is_help=True, help="Phase 10 experiments.")
+app.add_typer(experiment_app, name="experiment")
 console = Console()
 
 LLMOption = Annotated[str | None, typer.Option("--llm", help="LLM profile from configs/llm.yaml.")]
@@ -536,6 +538,9 @@ def bench_run(tasks: TasksOption = TASKS_FILE, llm: LLMOption = None, mode: Mode
               = "bench-baseline-record",
               retry_timeouts: Annotated[int, typer.Option(
                   help="Re-run tasks that ended in an LLM API timeout or connection error, up to N times.")] = 1,
+              fold: Annotated[str | None, typer.Option(
+                  help="Cross-fitting: run only this fold's tasks (A or B); strategies learn from the other fold.")]
+              = None,
               store: StoreOption = REPLAY_DIR, catalog_dir: CatalogDirOption = CATALOG_DIR,
               traces: TracesOption = TRACES_DIR, db: MonitorOption = MONITOR_DB) -> None:
     """Run the agent over benchmark tasks; every trace is scored, saved and ingested under one group."""
@@ -546,7 +551,17 @@ def bench_run(tasks: TasksOption = TASKS_FILE, llm: LLMOption = None, mode: Mode
     from toolhelper.monitoring.db import MonitorDB
     from toolhelper.monitoring.report import latest_tool_costs
 
-    selected = _select(load_tasks(tasks), only, limit)
+    all_tasks = load_tasks(tasks)
+    selected = _select(all_tasks, only, limit)
+    learn_tasks = None
+    if fold:
+        from toolhelper.experiments.experiment import folds, other_fold
+
+        fold_map = folds(all_tasks)
+        if fold not in fold_map:
+            raise typer.BadParameter("fold must be A or B")
+        selected = [t for t in selected if t.id in set(fold_map[fold])]
+        learn_tasks = set(fold_map[other_fold(fold)])
     _, profile = load_llm_config().get(llm)
     group = group or f"bench-{datetime.now(UTC):%Y%m%dT%H%M%S}-{mode}"
     monitor = MonitorDB(db, latest_tool_costs(catalog_dir))
@@ -565,7 +580,7 @@ def bench_run(tasks: TasksOption = TASKS_FILE, llm: LLMOption = None, mode: Mode
 
     async def go():
         async with make_hub(mode, None, store, catalog_dir, live_fallback=not strict_replay) as hub:
-            strategies = _strategies(strategy or [], hub, learn_from, monitor, store)
+            strategies = _strategies(strategy or [], hub, learn_from, monitor, store, learn_tasks)
             if strategies:
                 console.print("strategies: " + ", ".join(f"{s.name} {s.config()}" for s in strategies))
             agent = Agent(make_backend(profile), hub, strategies, config=AgentConfig(max_turns=max_turns),
@@ -590,9 +605,10 @@ def _trust_fn(context_db: Path = CONTEXT_DB):
     return lambda trace: trust(trace, policy, lookup)
 
 
-def _strategies(specs: list[str], hub: Hub, learn_from: str, monitor, store: Path) -> list:
-    """Strategies with inputs learned from `learn_from`'s traces, the hub's tools, the recordings,
-    the dataset index and omop_mcp's CDM field map."""
+def _strategies(specs: list[str], hub: Hub, learn_from: str, monitor, store: Path,
+                learn_tasks: set[str] | None = None) -> list:
+    """Strategies with inputs learned from `learn_from`'s traces (only `learn_tasks`' runs, when
+    cross-fitting), the hub's tools, the recordings, the dataset index and omop_mcp's CDM map."""
     if not specs:
         return []
     from toolhelper.agent.hooks import ToolDef
@@ -605,13 +621,16 @@ def _strategies(specs: list[str], hub: Hub, learn_from: str, monitor, store: Pat
 
     rows = monitor.rows("SELECT trace_path FROM runs WHERE group_id = ?", (learn_from,))
     learned = [Trace.load(r["trace_path"]) for r in rows if r["trace_path"] and Path(r["trace_path"]).exists()]
+    if learn_tasks is not None:
+        learned = [t for t in learned if t.task_id in learn_tasks]
     if not learned:
         raise typer.BadParameter(f"no traces in group {learn_from!r} to learn from")
     tools = [ToolDef(name=t.name, description=t.tool.description or "", input_schema=t.tool.input_schema,
                      server=t.server, tool=t.tool.name, schema_hash=tool_hash(t.tool)) for t in hub.tools]
     inputs = Inputs(traces=learned, tools=tools, recordings=list(RecordingStore(store)),
                     index=EntityIndex(INDEX_PATH) if INDEX_PATH.exists() else None, cdm_path=DEFAULT_CDM_FIELDS)
-    console.print(f"learning from {len(learned)} runs in {learn_from}")
+    console.print(f"learning from {len(learned)} runs in {learn_from}"
+                  + (f" ({len(learn_tasks)} other-fold tasks)" if learn_tasks is not None else ""))
     return build_strategies(specs, inputs)
 
 
@@ -762,3 +781,75 @@ def datasets_resolve(surface: str, type: Annotated[str | None, typer.Option(help
                       f"({m.method}, {m.score:g}; {m.rows} row{'s' if m.rows != 1 else ''})  {m.dataset} row {m.row_key}")
         if rows:
             console.print(f"    {json.dumps(m.row, ensure_ascii=False)[:400]}")
+
+
+@experiment_app.command("freeze")
+def experiment_freeze(tasks: TasksOption = TASKS_FILE, catalog_dir: CatalogDirOption = CATALOG_DIR,
+                      store: StoreOption = REPLAY_DIR, db: MonitorOption = MONITOR_DB,
+                      context_db: ContextOption = CONTEXT_DB) -> None:
+    """Freeze the experiment's inputs and folds as experiments/<name> in the context store."""
+    from toolhelper.datasets.base import INDEX_PATH
+    from toolhelper.datasets.index import EntityIndex
+    from toolhelper.experiments.experiment import folds, freeze_inputs, inputs_hash, load_experiment_config, write_experiment
+    from toolhelper.experiments.runner import load_tasks
+    from toolhelper.monitoring.db import MonitorDB
+
+    cfg = load_experiment_config()
+    _, profile = load_llm_config().get(cfg.llm)
+    runs = [r["run_id"] for r in MonitorDB(db).rows("SELECT run_id FROM runs WHERE group_id = ?", (cfg.learn_from,))]
+    inputs = freeze_inputs(catalog_hash=latest_snapshot(catalog_dir).catalog_hash, tasks_file=tasks,
+                           datasets=EntityIndex(INDEX_PATH).datasets(), llm_profile={"name": cfg.llm, **profile.model_dump()},
+                           store_dir=store, learn_from_runs=runs)
+    fold_map = folds(load_tasks(tasks))
+    thing = write_experiment(LocalStore(context_db), cfg, inputs, fold_map)
+    console.print(f"{thing.name}@v{thing.version}: inputs {inputs_hash(inputs)[:12]}, folds A={len(fold_map['A'])} "
+                  f"B={len(fold_map['B'])}, {inputs['replay_set_at_start']['recordings']} recordings, "
+                  f"learning from {len(runs)} runs of {cfg.learn_from}")
+
+
+@experiment_app.command("auto")
+def experiment_auto(tasks: TasksOption = TASKS_FILE, db: MonitorOption = MONITOR_DB,
+                    context_db: ContextOption = CONTEXT_DB) -> None:
+    """Run the whole trimmed Phase 10 plan unattended (resumable; see configs/experiments.yaml)."""
+    from toolhelper.datasets.base import INDEX_PATH
+    from toolhelper.datasets.index import EntityIndex
+    from toolhelper.experiments.experiment import load_experiment_config
+    from toolhelper.experiments.orchestrate import Orchestrator, main_loop
+    from toolhelper.experiments.runner import load_tasks
+    from toolhelper.monitoring.db import MonitorDB
+
+    cfg = load_experiment_config()
+    orch = Orchestrator(cfg, load_tasks(tasks), MonitorDB(db), ROOT / "data" / "experiments" / cfg.experiment,
+                        log=lambda m: console.print(m, markup=False))
+    main_loop(orch, EntityIndex(INDEX_PATH), LocalStore(context_db))
+
+
+@experiment_app.command("status")
+def experiment_status(db: MonitorOption = MONITOR_DB) -> None:
+    """Progress of each experiment group: tasks done, passes, transient failures."""
+    from toolhelper.experiments.experiment import load_experiment_config
+
+    cfg = load_experiment_config()
+    rows = _monitor_rows(db, "SELECT group_id, COUNT(DISTINCT task_id) AS tasks, SUM(success) AS passed, "
+                              "SUM(error LIKE 'APITimeout%') AS timeouts FROM runs WHERE group_id LIKE ? "
+                              "GROUP BY group_id ORDER BY MIN(started_at)", (f"{cfg.experiment}-%",))
+    table = Table("group", "tasks", "passed", "timeouts")
+    for r in rows:
+        table.add_row(r["group_id"], str(r["tasks"]), str(r["passed"]), str(r["timeouts"]))
+    console.print(table)
+
+
+def _monitor_rows(db: Path, sql: str, params: tuple) -> list[dict]:
+    from toolhelper.monitoring.db import MonitorDB
+
+    return MonitorDB(db).rows(sql, params)
+
+
+@app.command("curate")
+def curate_cmd(name: Annotated[str, typer.Argument(help="Decision to approve, e.g. decisions/p10.")],
+               by: Annotated[str, typer.Option(help="Who approves it.")],
+               context_db: ContextOption = CONTEXT_DB) -> None:
+    """Approve a proposed Decision (Phase 10)."""
+    from toolhelper.experiments.decision import curate
+
+    console.print(curate(LocalStore(context_db), name, by))

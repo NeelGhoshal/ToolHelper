@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "acetylsalicylic acid",
+    "max_results": 20,
+    "omop_table": "drug_exposure",
+    "omop_field": "drug_concept_id"
+  },
+  "args_key": "19bb8695abd46afd9a749d9817c1bccc5134ff3a8c2510f84db1dbc2f68c2077",
+  "recorded_at": "2026-11-03T13:39:58.797293+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1123.5022000037134,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 40220812,\n      \"code\": \"1803004\",\n      \"name\": \"5-bromo-2-acetylsalicylic acid\",\n      \"class\": \"Ingredient\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40220812\"\n    },\n    {\n      \"concept_id\": 36261747,\n      \"code\": \"OMOP3112622\",\n      \"name\": \"Aspirin 100 MG [Acetylsalicylic Acid Krka]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/36261747\"\n    },\n    {\n      \"concept_id\": 4100488,\n      \"code\": \"27621006\",\n      \"name\": \"Acetylsalicylic acid measurement, qualitative\",\n      \"class\": \"Procedure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4100488\"\n    },\n    {\n      \"concept_id\": 4233222,\n      \"code\": \"89798000\",\n      \"name\": \"Acetylsalicylic acid measurement, quantitative\",\n      \"class\": \"Procedure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4233222\"\n    },\n    {\n      \"concept_id\": 44057941,\n      \"code\": \"OMOP1052572\",\n      \"name\": \"Aspirin Oral Tablet [Acetylsalicylic Acid Stomach Protection]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/44057941\"\n    },\n    {\n      \"concept_id\": 36259494,\n      \"code\": \"OMOP3110369\",\n      \"name\": \"Aspirin Delayed Release Oral Capsule [Acetylsalicylic Acid Krka]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/36259494\"\n    },\n    {\n      \"concept_id\": 36786475,\n      \"code\": \"OMOP4774746\",\n      \"name\": \"Aspirin Extended Release Oral Tablet [Acetylsalicylic Acid Krka]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/36786475\"\n    },\n    {\n      \"concept_id\": 36276179,\n      \"code\": \"OMOP3127054\",\n      \"name\": \"Aspirin 100 MG Delayed Release Oral Capsule [Acetylsalicylic Acid Krka]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/36276179\"\n    },\n    {\n      \"concept_id\": 36786468,\n      \"code\": \"OMOP4774739\",\n      \"name\": \"Aspirin 100 MG Extended Release Oral Tablet [Acetylsalicylic Acid Krka]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/36786468\"\n    },\n    {\n      \"concept_id\": 44083721,\n      \"code\": \"OMOP1078352\",\n      \"name\": \"Aspirin Oral Tablet [Acetylsalicylic Acid Extra Strength Stomach Protection]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/44083721\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"acetylsalicylic acid\",\n    \"omop_table\": \"drug_exposure\",\n    \"omop_field\": \"drug_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

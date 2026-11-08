@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "mutation": [
+      "BRAF V600"
+    ],
+    "offset": 25
+  },
+  "args_key": "6e95ff3bef493f47d3a191f5cb53cff218b9a6af5e06d18cbf3aacd1c3866a7a",
+  "recorded_at": "2026-11-05T04:32:12.116666+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 9581.660499999998,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 25 trial(s) \n \nQuery: condition=melanoma, mutation=BRAF V600, offset=25 \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT04511013|A Study to Compare the Ad…|RECRUITING|2|Acral Lentiginous Melanoma, Clinical Stage IV… [abridged; 7 conditions total]| \n|NCT05768178|DETERMINE Trial Treatment…|RECRUITING|2/3|Haematological Malignancy, Melanoma, Thyroid… [abridged; 12 conditions total]| \n|NCT01989585|Testing the Addition of N…|ACTIVE_NOT_RECRUITING|1/2|Clinical Stage III Cutaneous Melanoma AJCC v8,… [abridged; 5 conditions total]| \n|NCT02721459|XL888 + Vemurafenib + Cob…|ACTIVE_NOT_RECRUITING|1|Melanoma, Skin Cancer| \n|NCT05155254|IO102-IO103 in Combinatio…|ACTIVE_NOT_RECRUITING|3|Metastatic Melanoma, Unresectable Melanoma| \n|NCT05355701|A Study to Learn About th…|ACTIVE_NOT_RECRUITING|1|Melanoma, Non-Small-Cell Lung Cancer, Thyroid… [abridged; 5 conditions total]| \n|NCT07288203|A Study of Lifileucel (Tu…|ACTIVE_NOT_RECRUITING|2|Melanoma (Skin Cancer), Unresectable Melanoma, Metastatic Melanoma| \n|NCT07700121|PICSTAT Pilot Study for C…|NOT_YET_RECRUITING|EARLY_PHASE1|Unresectable or Metastatic Melanoma| \n|NCT01673854|Phase II Safety Study of…|COMPLETED|2|Melanoma| \n|NCT02083354|Study to Investigate the…|COMPLETED|2|Cancer, Melanoma| \n|NCT02631447|Sequential Combo Immuno a…|COMPLETED|2|Metastatic Melanoma| \n|NCT03178851|Cobimetinib (Targeted The…|COMPLETED|1|Malignant Melanoma| \n|NCT03655756|pDNA Intralesional Cancer…|COMPLETED|EARLY_PHASE1|Cutaneous Melanoma, Stage III, Cutaneous Melanoma, Stage IV| \n|NCT04121676|Anti-CD137 and Anti-CTLA-…|COMPLETED|1|Advanced Cancer| \n|NCT04889118|Safety and Efficacy Study…|COMPLETED|3|Malignant Melanoma| \n|NCT05419388|A Study of Multiple Doses…|COMPLETED|2|Melanoma| \n|NCT05810740|Bioequivalence Binimetini…|COMPLETED|1|Melanoma, BRAF V600 Mutation, Unresectable Melanoma, Metastatic Melanoma| \n|NCT03132675|Tavo and Pembrolizumab in…|UNKNOWN|2|Stage III/IV Melanoma| \n|NCT06566391|Ipilimumab and Nivolumab…|UNKNOWN|2|Melanoma| \n|NCT04759846|Hepatic Impairment Study…|WITHDRAWN|1|BRAF V600 Mutation, Unresectable Melanoma, Met… [abridged; 4 conditions total]| \n|NCT01519427|Selumetinib and Akt Inhib…|TERMINATED|2|Recurrent Melanoma, Stage IIIA Melanoma, Stage… [abridged; 5 conditions total]| \n|NCT01611675|Leflunomide+Vemurafenib i…|TERMINATED|1|Melanoma| \n|NCT03301636|A Study of Indoximod or P…|TERMINATED|2|Melanoma| \n|NCT03430947|Vemurafenib Plus Cobimeti…|TERMINATED|2|Malignant Melanoma Stage IV, BRAF V600 Mutation, Brain Metastases| \n|NCT04489433|Compassionate Use Program…|NO_LONGER_AVAILABLE|-|Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 25 results (total unknown). Use --offset 50 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

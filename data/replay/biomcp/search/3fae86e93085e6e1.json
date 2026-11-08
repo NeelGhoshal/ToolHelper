@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "TP53",
+    "json": true,
+    "keyword": [
+      "Li-Fraumeni syndrome",
+      "cancer predisposition",
+      "TP53 mutation"
+    ],
+    "limit": 10
+  },
+  "args_key": "3fae86e93085e6e187b74055f6f614eec86e2342bbc00214a14a18af0f4d3ed6",
+  "recorded_at": "2026-11-03T23:56:43.674619+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6586.267699953169,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=TP53, keyword=Li-Fraumeni syndrome cancer predisposition TP53 mutation, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"sort\": \"relevance\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"ranking_policy\": \"hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"35954327\",\n      \"pmcid\": \"PMC9367397\",\n      \"title\": \"Li-Fraumeni Syndrome: Mutation of TP53 Is a Biomarker of Hereditary Predisposition to Tumor: New Insights and Advances in the Treatment\",\n      \"journal\": \"Cancers (Basel)\",\n      \"date\": \"2022-07-27\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42928139\",\n      \"title\": \"Characterisation of a novel p53 mutation (p53(N263Tfs*7)) associated with li-fraumeni syndrome.\",\n      \"journal\": \"BMC cancer\",\n      \"date\": \"2026-07-29\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"36128143\",\n      \"pmcid\": \"PMC9479555\",\n      \"title\": \"Choroid plexus carcinoma in two siblings, with a novel genetic mutation in TP53 - A case report and review of literature\",\n      \"journal\": \"Surg Neurol Int\",\n      \"date\": \"2022-08-26\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42607671\",\n      \"doi\": \"10.1016/j.ajhg.2026.07.011\",\n      \"title\": \"Shared inheritance reveals landscape of somatic and germline cancer risk in TP53.\",\n      \"journal\": \"Am J Hum Genet\",\n      \"date\": \"2026-08-17\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42741779\",\n      \"pmcid\": \"PMC13574328\",\n      \"doi\": \"10.7759/cureus.114575\",\n      \"title\": \"Li-Fraumeni Syndrome: Current Perspectives on Molecular Pathogenesis, Surveillance Strategies, Clinical Management and Pediatric Considerations.\",\n      \"journal\": \"Cureus\",\n      \"date\": \"2026-08-15\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"39404911\",\n      \"pmcid\": \"PMC11480288\",\n      \"title\": \"Current insights and future directions of Li-Fraumeni syndrome\",\n      \"journal\": \"Discov Oncol\",\n      \"date\": \"2024-10-15\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"40289692\",\n      \"pmcid\": \"PMC12062525\",\n      \"title\": \"Li-Fraumeni Syndrome : Current Strategies and Future Perspectives\",\n      \"journal\": \"J Korean Neurosurg Soc\",\n      \"date\": \"2025-04-29\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42755391\",\n      \"pmcid\": \"PMC13586844\",\n      \"doi\": \"10.1002/cncr.70613\",\n      \"title\": \"Outcomes of adult patients with Li-Fraumeni syndrome and myeloid neoplasms.\",\n      \"journal\": \"Cancer\",\n      \"date\": \"2026-10-01\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42312930\",\n      \"title\": \"Clinicopathological and molecular features of uterine smooth muscle tumours in patients with Li-Fraumeni syndrome.\",\n      \"journal\": \"Histopathology\",\n      \"date\": \"2026-10-01\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42546295\",\n      \"doi\": \"10.1097/dad.0000000000003398\",\n      \"title\": \"Primary Cutaneous Anaplastic Large Cell Lymphoma in a Patient With Li Fraumeni Syndrome.\",\n      \"journal\": \"Am J Dermatopathol\",\n      \"date\": \"2026-08-03\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"partial_query_match\",\n        \"message\": \"The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search article --gene TP53 --keyword \\\"Li-Fraumeni syndrome cancer predisposition TP53 mutation\\\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0\",\n      \"biomcp get article 35954327\",\n      \"biomcp search article -g TP53 -k \\\"Li-Fraumeni syndrome cancer predisposition TP53 mutation\\\" --year-min 2022 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ],\n    \"notes\": [\n      \"PubTator 3 data served from cache, 18 h old (older than the provider's freshness window).\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

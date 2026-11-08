@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "metformin",
+      "acute coronary syndrome",
+      "myocardial infarction"
+    ],
+    "limit": 15,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "6e63eb8734f092fcee8d398664e0594d52e09aab1a03b319750665aef12c4e53",
+  "recorded_at": "2026-11-03T22:39:19.989330+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 551.9135999493301,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=metformin acute coronary syndrome myocardial infarction, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 15 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42901562|MetCool ACS: study protocol for a multicentre quasi-randomis…|PubMed|2026-10-20|-|none| \n|PMID 41914935|Pseudo-Ischemic ECG Changes in a Patient With Profound Mixed…|PubMed|2026-05-06|-|none| \n|PMID 39950294|Sars-Cov-2 Infection as Catecholamin Crisis in Pheocreomocit…|PubMed|2026-01-01|-|none| \n|PMID 38964551|Preadmission metformin use increased the incidence of hyperl…|PubMed|2024-10-01|-|none| \n|PMID 38196460|Metformin versus sodium glucose co-transporters inhibitors a…|PubMed|2024-01-01|-|none| \n|PMID 37517783|Associations of systemic oxidative stress with functional ou…|PubMed|2023-11-15|-|none| \n|PMID 37121788|Sulfonylureas as second line therapy for type 2 diabetes amo…|PubMed|2023-08-01|-|none| \n|PMID 36842075|[Use of metformin in patients with type 2 diabetes and acute…|PubMed|2023-02-25|-|none| \n|PMID 28542373|Comparative effectiveness of oral antidiabetic drugs in prev…|PubMed|2017-05-25|-|none| \n|PMID 27177784|Comparative risk of major cardiovascular events associated w…|PubMed|2016-09-01|-|none| \n|PMID 26514308|Metformin-Associated Lactic Acidosis Presenting as Acute ST-…|PubMed|2016-01-01|-|none| \n|PMID 26642102|AMERICAN ASSOCIATION OF CLINICAL ENDOCRINOLOGISTS, AMERICAN…|PubMed|2015-12-01|-|none| \n|PMID 25762117|Novel therapeutic targets of metformin: metabolic syndrome a…|PubMed|2015-07-01|-|none| \n|PMID 24024423|[Use of metformin in diabetic patients with cardiac disease:…|PubMed|2013-08-28|-|none| \n|PMID 23528671|Metformin revisited: a critical review of the benefit-risk b…|PubMed|2013-05-01|-|none| \n \n \n \nNewest indexed: 2026-10-20 (14 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42901562\n  biomcp search article -k \"metformin acute coronary syndrome myocardial infarction\" --source pubmed --year-min 2013 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-15 of 19 results. Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

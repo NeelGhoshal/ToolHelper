@@ -1,0 +1,40 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "disease": [
+      "lung cancer",
+      "non-small cell lung carcinoma"
+    ],
+    "entity": "article",
+    "gene": "EGFR",
+    "keyword": [
+      "mutation",
+      "EGFR",
+      "NSCLC"
+    ],
+    "limit": 15,
+    "sort": "relevance"
+  },
+  "args_key": "fa09ae7734b8d5105c202b282da137662715349981f59505b31e2345911fe81c",
+  "recorded_at": "2026-11-03T23:40:24.298415+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 14054.989099968225,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, disease=lung cancer non-small cell lung carcinoma, keyword=mutation EGFR NSCLC, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene EGFR --disease \"lung cancer non-small cell lung carcinoma\" --keyword \"mutation EGFR NSCLC\" --exclude-retracted --sort relevance --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 38632512|Effect of the STK11 mutation on therapeutic efficacy and pro…|Europe PMC|2024-04-17|hybrid 0.258 + title 1/4|13| \n|PMID 38321811|Recent advances and remaining challenges in lung cancer ther…|Europe PMC|2024-02-07|hybrid 0.25|33| \n|PMID 37483491|Detection of KRAS mutation using plasma samples in non-small…|Europe PMC|2023-07-06|hybrid 0.17 + title 1/4|3| \n|PMID 42958137|Tertiary lymphoid structures in the tumor immune microenviro…|PubMed|2026-08-01|hybrid 0.167 + title 2/4|0| \n|PMID 38163979|EGFR|PubTator3|2024-01-02|hybrid 0.158 + title 1/4|none| \n|PMID 42976000|Detection of RET fusion in late-line treatment of NSCLC foll…|PubMed|2026-01-01|hybrid 0.158 + title 1/4|none| \n|PMID 42958117|Real-world treatment pattern and clinical outcomes in Chines…|PubMed|2026-07-30|hybrid 0.15 + title 2/4|0| \n|PMID 25034590|EGFR|PubTator3|2014-07-20|hybrid 0.142 + title 1/4|none| \n|PMID 42975994|FLAURA2 - a step forward in first-line treatment of advanced…|PubMed|2026-01-01|hybrid 0.142 + title 1/4|none| \n|PMID 42972485|The TGF-β signaling activated by cancer-associated macropha…|PubMed|2026-08-04|hybrid 0.125 + title 1/4|0| \n|PMID 41008825|Transforming the Management of Oligometastatic Non-Small Cel…|Europe PMC|2025-09-12|hybrid 0.123|1| \n|PMID 36172732|EGFR|PubTator3|2022-09-20|hybrid 0.108 + title 1/4|none| \n|PMID 31451147|EGFR|PubTator3|2019-08-20|hybrid 0.092 + title 1/4|none| \n|PMID 29061221|EGFR-TKIs  ::|PubTator3|2017-10-20|hybrid 0.075 + title 1/4|none| \n|PMID 38988445|Combination of microwave ablation and systemic treatments ac…|Europe PMC|2024-06-28|hybrid 0.067|0| \n \n \n \nNewest indexed: 2026-11-03 (0 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 38632512\n  biomcp search article -g EGFR -d \"lung cancer non-small cell lung carcinoma\" -k \"mutation EGFR NSCLC\" --year-min 2014 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n\nCache note: PubTator 3 data served from cache, 9 h old (older than the provider's freshness window).\nCache note: PubTator 3 data served from cache, 9 h old (older than the provider's freshness window).\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

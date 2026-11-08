@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "40199829",
+    "json": true
+  },
+  "args_key": "273fb27bbbfa153656aa3add6105fc2ddc25789072920d1c476db1e80ad33c1a",
+  "recorded_at": "2026-11-05T04:11:03.393605+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1847.5171999998565,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/40199829/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 40199829 tldr\",\n      \"biomcp article entities 40199829\",\n      \"biomcp search gene -q \\\"apolipoprotein E-4\\\"\",\n      \"biomcp search disease --query dementia\",\n      \"biomcp article references 40199829 --limit 3\",\n      \"biomcp article citations 40199829 --limit 3\",\n      \"biomcp article recommendations 40199829 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"annotations\",\n        \"label\": \"PubTator Annotations\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ],\n    \"workflow\": \"article-follow-up\",\n    \"workflow_playbook\": \"biomcp skill article-follow-up\",\n    \"workflow_rationale\": \"Use article annotations first, then citation and recommendation graph pivots for efficient literature expansion.\"\n  },\n  \"abstract_text\": \"Clarify the relationship between the use of statins and the risk of dementia, and further guide the clinical application of statins. This paper uses computer search Chinese and foreign language databases Pubmed, Medline, Cochrane, Embase, Web of Science, Weipu, CBM, Wanfang, CNKI, etc., to include the literature that meets the standards from the establishment of the library to December 2020, and uses Revman 5.1 software and Stata15.0 software for meta-analysis. Of the 34 included observational studies, stratified subgroup analyses were performed based on the type of clinical trial, sex of participants, presence or absence of apolipoprotein E-4 (ApoEepsilon4) allele, and duration of use. The conclusions showed that (1) the use of statins can significantly reduce the risk of dementia; (2) There is no significant sex difference in reducing the risk of dementia; (3) Continuous use of statins for >= 1 year can significantly reduce the risk of dementia compared with the time of taking the drug for < 1 year; (4) Compared with subjects with negative ApoEepsilon4 allele, the use of statins has a more significant effect on reducing the risk of dementia in subjects carrying the ApoEepsilon4 allele.\",\n  \"annotations\": {\n    \"diseases\": [\n      {\n        \"count\": 6,\n        \"identifier\": \"MESH:D003704\",\n        \"name\": \"Dementia\",\n        \"namespace\": \"MESH\",\n        \"text\": \"dementia\"\n      }\n    ],\n    \"genes\": [\n      {\n        \"count\": 1,\n        \"identifier\": \"348\",\n        \"namespace\": \"NCBIGene\",\n        \"text\": \"apolipoprotein E-4\"\n      }\n    ]\n  },\n  \"author_completeness\": \"complete\",\n  \"author_count\": 5,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Li X\",\n    \"Liu Y\",\n    \"Song T\",\n    \"Wu X\",\n    \"Xing Y\"\n  ],\n  \"citation_count\": 2,\n  \"date\": \"2025-04-09\",\n  \"doi\": \"10.1007/s13760-025-02758-3\",\n  \"journal\": \"Acta Neurol Belg\",\n  \"open_access\": false,\n  \"pmid\": \"40199829\",\n  \"publication_type\": \"Meta-Analysis\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"Statins and the risk of dementia: a meta-analysis.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

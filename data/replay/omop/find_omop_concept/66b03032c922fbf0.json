@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "sertraline 20 MG/ML Oral Solution",
+    "max_results": 5,
+    "omop_field": "drug_concept_id",
+    "omop_table": "drug_exposure"
+  },
+  "args_key": "66b03032c922fbf075c2338e50af01b3372c5a302e9350587413f98302027af9",
+  "recorded_at": "2026-11-03T10:50:32.548708+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1247.6977999904193,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 40165282,\n      \"code\": \"861064\",\n      \"name\": \"sertraline 20 MG/ML Oral Solution\",\n      \"class\": \"Clinical Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40165282\"\n    },\n    {\n      \"concept_id\": 35777656,\n      \"code\": \"OMOP2779117\",\n      \"name\": \"1 ML Sertraline 20 MG/ML Oral Solution\",\n      \"class\": \"Quant Clinical Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/35777656\"\n    },\n    {\n      \"concept_id\": 36280824,\n      \"code\": \"OMOP3131699\",\n      \"name\": \"60 ML Sertraline 20 MG/ML Oral Solution\",\n      \"class\": \"Quant Clinical Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/36280824\"\n    },\n    {\n      \"concept_id\": 35786959,\n      \"code\": \"OMOP2788420\",\n      \"name\": \"100 ML Sertraline 20 MG/ML Oral Solution\",\n      \"class\": \"Quant Clinical Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/35786959\"\n    },\n    {\n      \"concept_id\": 839585,\n      \"code\": \"OMOP5562376\",\n      \"name\": \"150 ML sertraline 20 MG/ML Oral Solution\",\n      \"class\": \"Quant Clinical Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/839585\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"sertraline 20 MG/ML Oral Solution\",\n    \"omop_table\": \"drug_exposure\",\n    \"omop_field\": \"drug_concept_id\",\n    \"total_found\": 5,\n    \"candidates_returned\": 5,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR mutation",
+      "lung cancer"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "634fe85e1174086bc5ae32952e6ed2dc6fe020d2d5d84ef294abddda764a7620",
+  "recorded_at": "2026-11-03T08:16:12.894212+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 8638.579300022684,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR mutation lung cancer, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nEurope PMC source status: degraded (Europe PMC search unavailable) \nRetry: `biomcp search article --keyword \"EGFR mutation lung cancer\" --exclude-retracted --sort citations --source europepmc --limit 10 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR mutation lung cancer\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42967630|[PD-L1 expression in brain metastatic lung adenocarcinoma: c…|PubMed|2026-11-08|-|none| \n|PMID 42968496|Integrated Whole-Genome and RNA Sequencing Analysis of FFPE…|PubMed|2026-11-01|-|none| \n|PMID 42965610|Machine learning-assisted Ti(3)C(2)T(x) MXene/Au@Fe(3)O(4) c…|PubMed|2026-10-31|-|0| \n|PMID 42965979|Transcription activator-like effector base editing delivered…|PubMed|2026-10-29|-|0| \n|PMID 42958288|MRI-based intratumoral and peritumoral heterogeneity for pre…|PubMed|2026-10-17|-|0| \n|PMID 42959092|Simultaneous occurrence of HER2 mutation and PD-L1 high expr…|PubMed|2026-10-15|-|0| \n|PMID 42966193|Stage I Lung Adenocarcinoma in Young Patients (Aged ≤…|PubMed|2026-10-07|-|0| \n|PMID 42964983|Overcoming EGFR Resistance by Monovalent and Bident Inhibito…|PubMed|2026-09-29|-|0| \n|PMID 42963764|PD-L1 expression across molecular driver subsets in non-smal…|PubMed|2026-07-30|-|0| \n|PMID 42964815|High PD-L1 Expression and Clinical Outcomes of First-Line Os…|PubMed|2026-07-24|-|0| \n \n \n \nNewest indexed: 2026-11-02 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42967630\n  biomcp search article -k \"EGFR mutation lung cancer\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

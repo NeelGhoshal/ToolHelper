@@ -66,7 +66,7 @@ class OpenAICompatBackend(LLMBackend):
                  base_url: str | None = None, api_key: str | None = None,
                  api_key_env: str | None = None, client: Any = None,
                  requests_per_minute: float | None = None, max_retries: int | None = None,
-                 timeout_s: float | None = None,
+                 timeout_s: float | None = None, max_wait_s: float | None = None,
                  clock: Callable[[], float] = time.monotonic, sleep: Callable[[float], None] = time.sleep) -> None:
         super().__init__(model, defaults)
         if client is None:
@@ -84,6 +84,9 @@ class OpenAICompatBackend(LLMBackend):
         self.client = client
         # Hosted free tiers limit requests per minute; space request starts to stay under it.
         self.min_interval = 60 / requests_per_minute if requests_per_minute else 0.0
+        # Keep retrying a request that timed out, lost its connection, was rate limited or hit a
+        # 5xx, for up to max_wait_s in total, rather than failing the turn (and with it the task).
+        self.max_wait_s = max_wait_s
         self._clock, self._sleep, self._last_start = clock, sleep, None
 
     def _throttle(self) -> None:
@@ -92,6 +95,24 @@ class OpenAICompatBackend(LLMBackend):
             if wait > 0:
                 self._sleep(wait)
         self._last_start = self._clock()
+
+    def _create(self, request: dict[str, Any]) -> tuple[Any, int, float]:
+        import openai
+
+        transient = (openai.APITimeoutError, openai.APIConnectionError, openai.RateLimitError,
+                     openai.InternalServerError)
+        start, retries = self._clock(), 0
+        while True:
+            self._throttle()
+            try:
+                resp = self.client.chat.completions.create(**request)
+            except transient:
+                if self.max_wait_s is None or self._clock() - start >= self.max_wait_s:
+                    raise
+                self._sleep(min(60.0, 5.0 * 2 ** retries))  # 5, 10, 20, 40, then every 60 s
+                retries += 1
+                continue
+            return resp, retries, (self._clock() - start) if retries else 0.0
 
     def _chat(self, messages: list[Message], tools: list[ToolSpec], opts: ChatOptions) -> ChatResult:
         applied: dict[str, Any] = {}
@@ -110,8 +131,7 @@ class OpenAICompatBackend(LLMBackend):
         if tools:
             request["tools"] = [to_openai_tool(t) for t in tools]
 
-        self._throttle()
-        resp = self.client.chat.completions.create(**request)
+        resp, retries, waited = self._create(request)
         choice = resp.choices[0]
         msg = choice.message
         calls = []
@@ -142,4 +162,5 @@ class OpenAICompatBackend(LLMBackend):
             message=message, tool_calls=calls, usage=usage, latency_ms=0,
             raw=resp.model_dump(mode="json"), backend=self.kind, model=self.model,
             stop_reason=choice.finish_reason, applied_options=applied, ignored_options=ignored,
+            retries=retries, waited_s=waited,
         )

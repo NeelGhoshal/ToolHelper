@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "variant_normalize_car",
+  "arguments": {
+    "inputs": [
+      "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)"
+    ]
+  },
+  "args_key": "3fdddc29724f934506bb6d0c020a3cab2f7c6d99f9abed04dba7c52b3fefea09",
+  "recorded_at": "2026-11-04T06:56:18.427068+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "1b49b0f8fdb7a784be91785cd3296145464a1e0e4050244929422c2a7086dc1c",
+  "latency_ms": 2.3972000926733017,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: Invalid argument: unsupported_notation: CAR requires versioned RefSeq NM_:c. or NC_:g. HGVS input"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

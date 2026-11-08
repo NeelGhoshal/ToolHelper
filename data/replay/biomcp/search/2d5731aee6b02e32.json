@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "BRAF V600E"
+    ],
+    "limit": 8,
+    "status": "recruiting"
+  },
+  "args_key": "2d5731aee6b02e3222ebc225f0fc7c421b4ccf851e23b562b5e4f54cf721125a",
+  "recorded_at": "2026-11-05T04:38:09.844072+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 195.77799999751733,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 8 of 24 \n \nQuery: condition=BRAF V600E, status=recruiting \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT06207656|Study to Evaluate the Eff…|RECRUITING|2|Colorectal Cancer| \n|NCT06603376|Irinotecan Hydrochloride…|RECRUITING|2|Colorectal Carcinoma| \n|NCT05639413|A Clinical-biological Pro…|RECRUITING|NA|Metastatic Colorectal Cancer, BRAF V600E Mutation Positive| \n|NCT06902376|XL092 and Cemiplimab in B…|RECRUITING|1|Anaplastic Thyroid Cancer, Thyroid Cancer, BRAF Mutation-Related Tumors| \n|NCT05786924|Phase 1/2 Trial of S24165…|RECRUITING|1/2|Non-small Cell Lung Cancer, Histiocytic Neopl… [abridged; 32 conditions total]| \n|NCT06411600|Combination Therapy for B…|RECRUITING|2|Metastatic Colorectal Cancer| \n|NCT06763029|Irinotecan Liposomes Comb…|RECRUITING|2|Colorectal Cancer Metastatic| \n|NCT05503797|A Study to Assess the Eff…|RECRUITING|2|Cancer Harboring BRAF Alterations, HGG, LGG, Solid Tumors| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-8 of 24 results. Use --offset 8 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

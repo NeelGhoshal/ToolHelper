@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "Cas9",
+      "gene editing therapy"
+    ],
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "0dd38928eaac9b0e4d27a6ed47a4b0d3867dbca3009c01dab440b9e050208885",
+  "recorded_at": "2026-11-03T10:42:33.563039+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4275.849000026938,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR Cas9 gene editing therapy, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CRISPR Cas9 gene editing therapy\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 23287722|RNA-guided human genome engineering via Cas9.|Europe PMC|2013-01-03|-|7344| \n|PMID 33277608|Engineering precision nanoparticles for drug delivery.|Europe PMC|2020-12-04|-|4994| \n|PMID 38326288|Minimal information for studies of extracellular vesicles (M…|Europe PMC|2024-02-01|-|4104| \n|PMID 24906146|Development and applications of CRISPR-Cas9 for genome engin…|Europe PMC|2014-06-01|-|4075| \n|PMID 34394960|Lipid nanoparticles for mRNA delivery.|Europe PMC|2021-08-10|-|3206| \n|PMID 29195078|A Next Generation Connectivity Map: L1000 Platform and the F…|Europe PMC|2017-11-01|-|3014| \n|PMID 42971290|Breast cancer cellular and gene-based therapies: current app…|PubMed|2026-11-02|-|none| \n|PMID 42957916|Research progress of gene correction for genetic diseases vi…|PubMed|2026-10-30|-|0| \n|PMID 42949002|A targeting delivery platform for the mapping of responses t…|PubMed|2026-10-28|-|0| \n|PMID 42973349|CRISPR/Cas9-based Genome Editing in Inherited Diseases: Mech…|PubMed|2026-10-21|-|none| \n|PMID 42959355|Targeted insertion of partial CFTR cDNA replicates native CF…|PubMed|2026-10-01|-|0| \n|PMID 42957818|T cell engineering by targeted small extracellular vesicles…|PubMed|2026-08-03|-|0| \n|PMID 41476860|Therapeutic applications of CRISPR-Cas9 gene editing.|PubTator3|2025-12-16|-|none| \n|PMID 38716549|CRISPR/Cas9 Gene Editing: A Novel Approach Towards Alzheimer…|PubTator3|2024-04-22|-|none| \n|PMID 36036597|CRISPR/Cas9 Gene Editing of Hematopoietic Stem and Progenito…|PubTator3|2022-08-09|-|none| \n \n \n \nNewest indexed: 2026-11-03 (0 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 23287722\n  biomcp search article -k \"CRISPR Cas9 gene editing therapy\" --year-min 2013 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

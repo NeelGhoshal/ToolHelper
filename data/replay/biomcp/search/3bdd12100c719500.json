@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "gene": "CYP2C19",
+    "limit": 15
+  },
+  "args_key": "3bdd12100c7195006bab45c7286e3ad6ba4a44f18560bdc7c0b0e7824ef459ab",
+  "recorded_at": "2026-11-03T23:45:19.266110+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 815.6902999617159,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Variant Search Results \n \nFound: 15 variant(s) \nQuery: gene=CYP2C19 \n \n \n## Filter evaluation \n \ngene: evaluated \n \n \n \n| ID | Build | Gene | Transcript | Coding | Protein | Legacy Name | Significance | ClinVar Stars | gnomAD AF | REVEL | GERP | \n|---|---|---|---|---|---|---|---|---|---|---|---| \n| chr10:g.96522517A>C | GRCh37 | CYP2C19 | NM_000769.4 | c.55A>C | p.Ile19Leu | CYP2C19 I19L | Benign | 4 | 0.00176318 | 0.091 | -4.03 | \n| chr10:g.96522580G>A | GRCh37 | CYP2C19 | NM_000769.2 | c.118G>A | p.Gly40Arg | CYP2C19 G40R | - | none | 0.00000397909 | 0.424 | 4.15 | \n| chr10:g.96534867T>C | GRCh37 | CYP2C19 | NM_000769.2 | c.221T>C | p.Met74Thr | CYP2C19 M74T | - | none | 0.0000516956 | 0.062 | -0.0129 | \n| chr10:g.96535185C>G | GRCh37 | CYP2C19 | NM_000769.2 | c.370C>G | p.Arg124Gly | CYP2C19 R124G | - | none | 0.0000755521 | 0.346 | -5.66 | \n| chr10:g.96535189G>A | GRCh37 | CYP2C19 | NM_000769.2 | c.374G>A | p.Arg125His | CYP2C19 R125H | - | none | 0.000361858 | 0.185 | 3.9 | \n| chr10:g.96535209C>T | GRCh37 | CYP2C19 | NM_000769.2 | c.394C>T | p.Arg132Trp | CYP2C19 R132W | - | none | 0.000489128 | 0.222 | -3.64 | \n| chr10:g.96535222T>C | GRCh37 | CYP2C19 | NM_000769.2 | c.407T>C | p.Met136Thr | CYP2C19 M136T | - | none | 0.00000397659 | 0.307 | 2.69 | \n| chr10:g.96540294C>G | GRCh37 | CYP2C19 | NM_000769.2 | c.520C>G | p.Pro174Ala | CYP2C19 P174A | - | none | 0.0000039776 | 0.311 | 2.07 | \n| chr10:g.96540295C>A | GRCh37 | CYP2C19 | NM_000769.2 | c.521C>A | p.Pro174His | CYP2C19 P174H | - | none | 0.00000397753 | 0.371 | 3.21 | \n| chr10:g.96540352A>G | GRCh37 | CYP2C19 | NM_000769.2 | c.578A>G | p.Gln193Arg | CYP2C19 Q193R | - | none | 0.00000397842 | 0.028 | -0.165 | \n| chr10:g.96541591T>A | GRCh37 | CYP2C19 | NM_000769.2 | c.656T>A | p.Phe219Tyr | CYP2C19 F219Y | - | none | 0.00000636205 | 0.148 | 1.65 | \n| chr10:g.96541699T>A | GRCh37 | CYP2C19 | NM_000769.2 | c.764T>A | p.Met255Lys | CYP2C19 M255K | - | none | 0.00000577547 | 0.254 | 4.02 | \n| chr10:g.96580263A>T | GRCh37 | CYP2C19 | NM_000769.2 | c.830A>T | p.Asn277Ile | CYP2C19 N277I | - | none | 0.00000397719 | 0.164 | 3.95 | \n| chr10:g.96580270G>T | GRCh37 | CYP2C19 | NM_000769.2 | c.837G>T | p.Gln279His | CYP2C19 Q279H | - | none | 0.0000676052 | 0.008 | -0.5 | \n| chr10:g.96580347C>T | GRCh37 | CYP2C19 | NM_000769.2 | c.914C>T | p.Thr305Ile | CYP2C19 T305I | - | none | 0.0000039763 | 0.657 | 3.95 | \n \n \nUse `get variant <id>` for details. \nSignificance is the most severe ClinVar RCV classification in MyVariant.info's cached copy; run `get variant <id> clinvar` for the current NCBI ClinVar record-level classification. \nFilters: -g <gene>, --hgvsp <protein>, --significance <value>, --max-frequency <0-1>, --min-cadd <score>, --consequence <term>, --review-status <stars>, --population <pop>, --revel-min <score>, --gerp-min <score>, --tumor-site <site>, --condition <name>, --impact <level>, --lof, --has <field>, --missing <field>, --therapy <name> \n \n \nSee also:\n  biomcp get variant \"chr10:g.96522517A>C\"\n  biomcp get gene CYP2C19 \n \n \n \nShowing 1-15 of 3551 results. Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2024-01-01",
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E colorectal cancer encorafenib cetuximab"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "7278e0d168e9ae1b7b861228692b229f775a917261398a93375096edf9582fc7",
+  "recorded_at": "2026-11-05T05:26:46.013557+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5113.167400006205,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E colorectal cancer encorafenib cetuximab, date_from=2024-01-01, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed search unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E colorectal cancer encorafenib cetuximab\" --date-from 2024-01-01 --exclude-retracted --sort date --source pubmed --limit 10 --offset 0` \nEurope PMC source status: degraded (Europe PMC search unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E colorectal cancer encorafenib cetuximab\" --date-from 2024-01-01 --exclude-retracted --sort date --source europepmc --limit 10 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E colorectal cancer encorafenib cetuximab\" --date-from 2024-01-01 --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42744133|Biomarker-guided treatment selection in metastatic colorecta…|PubTator3|2026-09-15|-|none| \n|PMID 42693801|Eruptive Melanocytic Nevi Associated With Encorafenib and Ce…|PubTator3|2026-09-04|-|none| \n|PMID 42671662|BRAF V600E-Mutated Metastatic Colorectal Cancer: Practical M…|PubTator3|2026-08-31|-|none| \n|PMID 42638785|Cost-effectiveness analysis of triplet therapy of encorafeni…|PubTator3|2026-08-10|-|none| \n|PMID 42592061|CDK9 inhibition sensitizes intrinsically resistant BRAF V600…|PubTator3|2026-08-01|-|none| \n|PMID 42507229|Recent progress in clinical and molecular biological researc…|PubTator3|2026-07-27|-|none| \n|PMID 42423856|Treatment Selection Beyond Second Line in Metastatic Colorec…|PubTator3|2026-07-09|-|none| \n|PMID 42242284|Successful Management of BRAF V600E-Mutated Metastatic Color…|PubTator3|2026-06-04|-|none| \n|PMID 42219860|A randomised study of encorafenib, cetuximab, and FOLFIRI ve…|PubTator3|2026-05-31|-|none| \n|PMID 42185244|Cost-effectiveness analysis of encorafenib in untreated BRAF…|PubTator3|2026-05-25|-|none| \n \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42744133 \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

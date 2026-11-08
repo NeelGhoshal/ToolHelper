@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "EGFR",
+      "NSCLC",
+      "resistance"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "8fc090bd26465c34ce168488acb869f801c1f283867f78b9b5e25826cc5244c2",
+  "recorded_at": "2026-11-03T23:49:03.348819+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 7091.106500010937,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=EGFR NSCLC resistance, exclude_retracted=true, sort=date\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"41866709\",\n      \"pmcid\": \"PMC13011097\",\n      \"title\": \"Extracellular payload release from non-internalizing antibody-drug conjugates: mechanisms and linker technologies\",\n      \"journal\": \"Drug Deliv\",\n      \"date\": \"2026-12-31\",\n      \"citation_count\": 5,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41459935\",\n      \"pmcid\": \"PMC12758329\",\n      \"title\": \"A dual diacylglycerol kinase (DGK) alpha/zeta inhibitor augments the activity of human tumor infiltrating lymphocytes in in vivo and ex vivo models\",\n      \"journal\": \"Oncoimmunology\",\n      \"date\": \"2026-12-31\",\n      \"citation_count\": 0,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41634558\",\n      \"pmcid\": \"PMC12885432\",\n      \"title\": \"The double face of IL-1beta in lung cancer\",\n      \"journal\": \"Oncoimmunology\",\n      \"date\": \"2026-12-31\",\n      \"citation_count\": 0,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41987491\",\n      \"title\": \"Therapeutic strategies of metabolic reprogramming in non-small cell lung carcinoma.\",\n      \"journal\": \"Ann Med\",\n      \"date\": \"2026-12-01\",\n      \"citation_count\": 3,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42971367\",\n      \"title\": \"Reversal of acquired osimertinib resistance by YAP inhibition in lung cancer is associated with lipid metabolic reprogramming.\",\n      \"journal\": \"Toxicology and applied pharmacology\",\n      \"date\": \"2026-11-02\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42973333\",\n      \"title\": \"Clinical and Molecular Outcomes of Dabrafenib/Trametinib-Based Combination Therapy in Acquired BRAF V600E-Mutant NSCLC Following Tyrosine Kinase Inhibitor Resistance: A Preliminary Single-Center Retrospective Study.\",\n      \"journal\": \"Combinatorial chemistry & high throughput screening\",\n      \"date\": \"2026-10-20\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42959682\",\n      \"pmcid\": \"PMC13717425\",\n      \"doi\": \"10.3892/ol.2026.15906\",\n      \"title\": \"Optimal timing of thoracic radiotherapy with osimertinib in unresectable EGFR-mutant non-small cell lung cancer.\",\n      \"journal\": \"Oncol Lett\",\n      \"date\": \"2026-10-13\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42972485\",\n      \"title\": \"The TGF-β signaling activated by cancer-associated macrophages promotes cancer stemness and Gefitinib resistance in EGFR-mutant non-small-cell lung cancer.\",\n      \"journal\": \"Stem cell research & therapy\",\n      \"date\": \"2026-08-04\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42761382\",\n      \"pmcid\": \"PMC13586515\",\n      \"doi\": \"10.1016/j.gendis.2026.102230\",\n      \"title\": \"Influence of oncogenic drivers and signaling pathways on immune checkpoint inhibitor efficacy in NSCLC.\",\n      \"journal\": \"Genes Dis\",\n      \"date\": \"2026-05-12\",\n      \"citation_count\": 1,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42898456\",\n      \"pmcid\": \"PMC13677775\",\n      \"doi\": \"10.1016/j.gendis.2026.102148\",\n      \"title\": \"Echinocystic acid inhibits the growth of human bladder cancer cells by suppressing AKT1/GSKβ/β-Catenin signaling and synergizes with gemcitabine.\",\n      \"journal\": \"Genes Dis\",\n      \"date\": \"2026-03-19\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"EGFR NSCLC resistance\\\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0\",\n      \"biomcp get article 41866709\",\n      \"biomcp search article -k \\\"EGFR NSCLC resistance\\\" --year-min 2026 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

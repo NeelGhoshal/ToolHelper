@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "KIT",
+    "json": true,
+    "sections": [
+      "overview",
+      "diseases",
+      "druggability",
+      "constraint"
+    ]
+  },
+  "args_key": "fd565190e64521a8833e13a85d29cc8152901a568804ee349df4c5fc6d38e542",
+  "recorded_at": "2026-11-03T23:05:47.581030+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 0.8311999263241887,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: overview"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

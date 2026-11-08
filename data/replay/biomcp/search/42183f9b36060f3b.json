@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "metformin"
+    ],
+    "entity": "article",
+    "keyword": [
+      "cardiovascular outcomes",
+      "major adverse cardiovascular events"
+    ],
+    "limit": 15,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "42183f9b36060f3bfe8414423e1d604d6016d8a901fdc372f5626ce7da72a797",
+  "recorded_at": "2026-11-03T22:39:19.431309+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1115.5926999635994,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=metformin, keyword=cardiovascular outcomes major adverse cardiovascular events, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 15 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42570748|The effects of Metformin on myocardial ischemia and reperfus…|PubMed|2026-12-01|-|none| \n|PMID 42957066|GLP-1 Receptor Agonists Decrease the Rate of Rupture, Cardia…|PubMed|2026-10-29|-|none| \n|PMID 42815506|Cardiovascular safety of orforglipron versus insulin glargin…|PubMed|2026-10-17|-|none| \n|PMID 42857939|Preconception incretin therapy reduces pregnancy and cardiom…|PubMed|2026-10-10|-|none| \n|PMID 42383806|Long-Term Outcomes of Glucagon-Like Peptide-1 Receptor Agoni…|PubMed|2026-10-06|-|none| \n|PMID 41940793|Estimating the True MACE Benefits From Tirzepatide in SURPAS…|PubMed|2026-10-01|-|none| \n|PMID 42802896|Effectiveness and Safety of Fixed-Dose Combination Metformin…|PubMed|2026-10-01|-|none| \n|PMID 42585629|Preoperative Glucagon-like Peptide-1 Receptor Agonists and P…|PubMed|2026-09-25|-|none| \n|PMID 42786528|Comparative analysis of serious adverse effects of antidiabe…|PubMed|2026-09-17|-|none| \n|PMID 42250263|Metformin for COVID-19: An Updated Systematic Review and Met…|PubMed|2026-07-01|-|none| \n|PMID 42340212|Repurposed Drugs and Cardiovascular Morbidity: A Cost-Effect…|PubMed|2026-07-01|-|none| \n|PMID 41984016|Comparative Cardiovascular Effectiveness of Glucagon-Like Pe…|PubMed|2026-06-02|-|none| \n|PMID 42249941|PERsonalised Medicine for Intensification of Treatment (PERM…|PubMed|2026-06-01|-|none| \n|PMID 42132163|Comparative Effectiveness of Individual Sodium Glucose Trans…|PubMed|2026-05-19|-|none| \n|PMID 41859682|Joint TOS/OMA/OAC expert guidance statement on the pharmacol…|PubMed|2026-03-05|-|none| \n \n \n \nNewest indexed: 2026-10-29 (5 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42570748\n  biomcp search article --drug metformin -k \"cardiovascular outcomes major adverse cardiovascular events\" --source pubmed --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-15 of 193 results. Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

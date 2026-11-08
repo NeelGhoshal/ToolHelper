@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "aspirin 325 MG",
+    "max_results": 10,
+    "omop_field": "drug_concept_id",
+    "omop_table": "drug_exposure"
+  },
+  "args_key": "31f3ab724057897dab1aeb919c37bd3ac7777b983c9bfe5ed628168a2ce9be07",
+  "recorded_at": "2026-11-03T22:23:28.532734+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 436.16990000009537,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 19082433,\n      \"code\": \"317300\",\n      \"name\": \"aspirin 325 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19082433\"\n    },\n    {\n      \"concept_id\": 35873167,\n      \"code\": \"OMOP5029566\",\n      \"name\": \"aspirin 325 MG [Axile]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/35873167\"\n    },\n    {\n      \"concept_id\": 19120622,\n      \"code\": \"574309\",\n      \"name\": \"aspirin 325 MG [Buffex]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19120622\"\n    },\n    {\n      \"concept_id\": 44025339,\n      \"code\": \"OMOP1019970\",\n      \"name\": \"Aspirin 325 MG [Asadol]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/44025339\"\n    },\n    {\n      \"concept_id\": 44107144,\n      \"code\": \"OMOP1101775\",\n      \"name\": \"Aspirin 325 MG [Asatab]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/44107144\"\n    },\n    {\n      \"concept_id\": 19042982,\n      \"code\": \"572393\",\n      \"name\": \"aspirin 325 MG [Ecotrin]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19042982\"\n    },\n    {\n      \"concept_id\": 40224187,\n      \"code\": \"1001474\",\n      \"name\": \"aspirin 325 MG [Ecpirin]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40224187\"\n    },\n    {\n      \"concept_id\": 19120023,\n      \"code\": \"572206\",\n      \"name\": \"aspirin 325 MG [Empirin]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19120023\"\n    },\n    {\n      \"concept_id\": 19120026,\n      \"code\": \"572209\",\n      \"name\": \"aspirin 325 MG [Genprin]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19120026\"\n    },\n    {\n      \"concept_id\": 44107145,\n      \"code\": \"OMOP1101776\",\n      \"name\": \"Aspirin 325 MG [Apo Asa]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/44107145\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"aspirin 325 MG\",\n    \"omop_table\": \"drug_exposure\",\n    \"omop_field\": \"drug_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

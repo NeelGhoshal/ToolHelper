@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "disease": [
+      "Li-Fraumeni syndrome",
+      "cancer",
+      "breast cancer",
+      "sarcoma",
+      "adrenocortical carcinoma"
+    ],
+    "json": true,
+    "limit": 10,
+    "query": "TP53 disease associations"
+  },
+  "args_key": "10e515b7f3085f098b2fb88484ef7bc0502e11d87ae13bf7840a1de91c684fb3",
+  "recorded_at": "2026-11-04T22:43:24.537574+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 0.8188000010704855,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "unknown gene search field: disease"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "ERBB2",
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "c5eabbf61f6a614c42b4fd2fec4d3371f3cb2f0ce1c33494e4aea000393e0ad3",
+  "recorded_at": "2026-11-03T12:00:28.965671+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5315.6410999945365,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=ERBB2, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene ERBB2 --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41530924|Multi-platform analysis of the tumor immune microenvironment…|PubTator3|2026-12-31|-|none| \n|PMID 41837409|The role of copper and cuproptosis in digestive system cance…|PubTator3|2026-12-31|-|none| \n|PMID 41866709|Extracellular payload release from non-internalizing antibod…|PubTator3|2026-12-31|-|none| \n|PMID 42337391|Efficacy and safety profiles of CDK4/6 inhibitor in patients…|PubTator3|2026-12-31|-|none| \n|PMID 42969075|Agreement Between Medical Laboratory Technologists and Patho…|PubMed|2026-11-02|-|0| \n|PMID 42969719|Preliminary Evaluation of Synthetic Amanitin Analogs as Nove…|PubMed|2026-11-02|-|0| \n|PMID 42970860|Genomic landscape of ERBB3 alterations in metastatic solid t…|PubMed|2026-11-02|-|none| \n|PMID 42969552|Preparation and comprehensive physicochemical characterizati…|PubMed|2026-10-01|-|0| \n|PMID 39749966|PMDA Perspective on Use of Real-World Data and Real-World Ev…|Europe PMC|2025-01-03|-|7| \n|PMID 37466981|Will Targeted Axillary Surgery Suffice for Adjuvant Treatmen…|Europe PMC|2023-10-01|-|0| \n \n \n \nNewest indexed: 2026-11-02 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41530924\n  biomcp search article -g ERBB2 --year-min 2023 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

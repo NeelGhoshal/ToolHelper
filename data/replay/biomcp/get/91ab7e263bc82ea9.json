@@ -1,0 +1,43 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "sertraline",
+    "json": true,
+    "sections": [
+      "label",
+      "indications",
+      "approvals",
+      "safety",
+      "shortage",
+      "targets",
+      "druggability",
+      "guidance",
+      "regulatory",
+      "xrefs",
+      "all"
+    ]
+  },
+  "args_key": "91ab7e263bc82ea9ca119cbde1b2b52e4be5205034fc7693dc5f05593d92cbb0",
+  "recorded_at": "2026-11-03T19:58:36.061332+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.0139000369235873,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid drug section: druggability"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

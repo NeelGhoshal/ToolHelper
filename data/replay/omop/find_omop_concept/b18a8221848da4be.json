@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "I10 essential primary hypertension",
+    "max_results": 10,
+    "omop_field": "condition_concept_id",
+    "omop_table": "condition_occurrence"
+  },
+  "args_key": "b18a8221848da4bedb40edefac2c13497dd7fdd6f543cabfc4c02a03bf3bf4d8",
+  "recorded_at": "2026-11-03T13:33:40.639811+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 851.9710000255145,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 42488326,\n      \"code\": \"I10\",\n      \"name\": \"Essential(primary) hypertension\",\n      \"class\": \"KCD7 code\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"KCD7\",\n      \"url\": \"https://omophub.com/concepts/42488326\"\n    },\n    {\n      \"concept_id\": 1413708,\n      \"code\": \"I10\",\n      \"name\": \"Essential (primary) hypertension\",\n      \"class\": \"ICD10 Hierarchy\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"ICD10CN\",\n      \"url\": \"https://omophub.com/concepts/1413708\"\n    },\n    {\n      \"concept_id\": 35207668,\n      \"code\": \"I10\",\n      \"name\": \"Essential (primary) hypertension\",\n      \"class\": \"3-char billing code\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"ICD10CM\",\n      \"url\": \"https://omophub.com/concepts/35207668\"\n    },\n    {\n      \"concept_id\": 37084419,\n      \"code\": \"I10\",\n      \"name\": \"Essential (primary) hypertension\",\n      \"class\": \"ICD10 Hierarchy\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"ICD10GM\",\n      \"url\": \"https://omophub.com/concepts/37084419\"\n    },\n    {\n      \"concept_id\": 37609626,\n      \"code\": \"I10\",\n      \"name\": \"Essential (primary) hypertension\",\n      \"class\": \"ICD10 Hierarchy\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"CIM10\",\n      \"url\": \"https://omophub.com/concepts/37609626\"\n    },\n    {\n      \"concept_id\": 45591453,\n      \"code\": \"I10\",\n      \"name\": \"Essential (primary) hypertension\",\n      \"class\": \"ICD10 Hierarchy\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"ICD10\",\n      \"url\": \"https://omophub.com/concepts/45591453\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"I10 essential primary hypertension\",\n    \"omop_table\": \"condition_occurrence\",\n    \"omop_field\": \"condition_concept_id\",\n    \"total_found\": 6,\n    \"candidates_returned\": 6,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

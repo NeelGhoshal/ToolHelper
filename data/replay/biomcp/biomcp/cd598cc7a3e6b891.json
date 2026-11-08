@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp list pathway",
+    "json": false
+  },
+  "args_key": "cd598cc7a3e6b8916af318c6c7ee4ad1dcbb2cd46ca5f11794f9ef088663e286",
+  "recorded_at": "2026-11-03T15:09:51.130138+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 4.139200027566403,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# pathway\n\n## Commands\n\n- `search pathway <query>` - positional pathway search (Reactome + KEGG)\n- `search pathway -q <query>` - pathway search (Reactome + KEGG)\n- `search pathway -q <query> --type pathway`\n- `search pathway --top-level`\n- `search pathway -q <query> --limit <N> --offset <N>`\n- `get pathway <id>` - base pathway card\n- `get pathway <id> genes` - pathway participant genes\n- `get pathway <id> events` - contained events (Reactome only)\n- `get pathway <id> enrichment` - g:Profiler enrichment from pathway genes (Reactome only)\n- `get pathway <id> all` - include all sections supported by that pathway source\n\n## Search filters\n\n- `search pathway <query>`\n- `search pathway -q <query>`\n- `--type pathway`\n- `--top-level`\n- `--limit <N> --offset <N>`\n\n## Helpers\n\n- `pathway drugs <id>`\n- `pathway articles <id>`\n- `pathway trials <id>`\n\n## Workflow examples\n\n- To find pathways for an altered gene, run `biomcp search pathway \"<gene or process>\" --limit 5`.\n- To inspect pathway composition, run `biomcp get pathway <id> genes`.\n- For Reactome pathways, events are also available: `biomcp get pathway R-HSA-5673001 events`.\n- To pivot to clinical context, run `biomcp pathway trials <id>` and `biomcp pathway articles <id>`.\n\n## JSON Output\n\n- Non-empty `search pathway --json` responses include `_meta.next_commands`.\n- The first follow-up drills the top result with `biomcp get pathway <id>`.\n- `biomcp list pathway` is always included so agents can inspect the full filter surface.\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

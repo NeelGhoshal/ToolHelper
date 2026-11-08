@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "trial",
+    "id": "NCT05940311",
+    "sections": [
+      "eligibility",
+      "arms"
+    ]
+  },
+  "args_key": "2f042aec08c2d50ed6e33056097e92c9dc310868315bb5348b348d46d2c6be32",
+  "recorded_at": "2026-11-03T09:30:22.758768+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 224.35929998755455,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# NCT05940311 - eligibility, arms \n## Eligibility (ClinicalTrials.gov) \n \nSex: All\nEligible Ages: 18 Years to Any age\nHealthy Subjects: No\nInclusion Criteria:\n\n* age: ≥ 18\n* PFS≤2\n* Patients willing to sign an informed consent;\n* Confirmed (cytologically or histologically) cutaneous melanoma diagnosis\n* Confirmed BRAF p. V600E tumor status\n* Eligible for BRAFi/MEKi treatment or Immune checkpoint blockade in either the adjuvant or advanced settings (the latter typically stages III/IV, high risk).\n\nExclusion Criteria:\n\n* Life expectancy \\<8 weeks\n* Other clinical conditions preventing blood drawing compliance, as per physician's choice. \nMore:\n  biomcp get trial NCT05940311 contacts   - central and site contact details\n  biomcp get trial NCT05940311 locations   - site list and contact details\n  biomcp get trial NCT05940311 outcomes   - endpoint measures and time frames\nAll:\n  biomcp get trial NCT05940311 all \nSee also:\n  biomcp search disease --query \"Liquid Biopsy\"\n  biomcp search article -d \"Liquid Biopsy\"\n  biomcp search trial -c \"Liquid Biopsy\"\n  biomcp search drug -q \"Blood sampling in addition to the blood normally required for their clinical management\"\n  biomcp drug trials \"Blood sampling in addition to the blood normally required for their clinical management\" \n\n[ClinicalTrials.gov](https://clinicaltrials.gov/study/NCT05940311)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

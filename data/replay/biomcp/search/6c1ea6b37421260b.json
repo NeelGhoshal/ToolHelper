@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CYP2C19",
+      "clopidogrel",
+      "CPIC"
+    ],
+    "limit": 10
+  },
+  "args_key": "6c1ea6b37421260bbf33c5010a6373ca12072bc85752f81d40d3a5c5811984ba",
+  "recorded_at": "2026-11-03T09:55:55.291777+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4638.934999995399,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CYP2C19 clopidogrel CPIC, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CYP2C19 clopidogrel CPIC\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42533475|CYP2C19 Genotyping to Guide Clopidogrel Prescribing for Neur…|Europe PMC|2026-07-30|hybrid 0.467 + title 2/3|1| \n|PMID 35034351|Clinical Pharmacogenetics Implementation Consortium Guidelin…|PubTator3, PubMed|2022-11-01|hybrid 0.233 + title 2/3|396| \n|PMID 39822142|CYP2C19  Genotype-Guided Antiplatelet Therapy and Clinical O…|PubTator3|2025-01-01|hybrid 0.189 + title 1/3|none| \n|PMID 37963685|Role of genetic polymorphisms in clopidogrel response variab…|PubTator3|2023-11-01|hybrid 0.178 + title 1/3|none| \n|PMID 42807560|Routine CYP2C19 Genotyping, Antiplatelet Prescription Change…|Europe PMC|2026-09-28|hybrid 0.178 + title 1/3|0| \n|PMID 36082121|Evaluation of race and ethnicity disparities in outcome stud…|PubTator3|2022-08-23|hybrid 0.167 + title 1/3|none| \n|PMID 33568995|Pharmacogenetics Guidelines: Overview and Comparison of the…|PubMed|2021-01-25|hybrid 0.1 + title 1/3|158| \n|PMID 42938391|From Frequencies to Priorities: Interethnic Distribution of…|Europe PMC|2026-10-14|hybrid 0.089|0| \n|PMID 41518218|Self-Reported Pharmacogenetic Medication Use in the Our Futu…|PubMed|2026-01-01|hybrid 0.078|2| \n|PMID 37473671|Rates of 30-Day and 90-Day Readmission Between Genotype-Opti…|PubMed|2023-09-01|hybrid 0.056|2| \n \n \n \nNewest indexed: 2026-10-28 (6 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42533475\n  biomcp search article -k \"CYP2C19 clopidogrel CPIC\" --year-min 2021 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

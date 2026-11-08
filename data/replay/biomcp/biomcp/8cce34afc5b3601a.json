@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp search trial --condition melanoma --mutation \"BRAF V600E\" --status RECRUITING --limit 25 --json --source nci",
+    "json": true
+  },
+  "args_key": "8cce34afc5b3601aabb0f651645d655e64182e98d45db267d02f9c63939f973b",
+  "recorded_at": "2026-11-03T23:41:08.447351+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 3.49799997638911,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: API key required: nci_cts requires NCI_API_KEY environment variable.\n\nTo set:\n  export NCI_API_KEY=your-key\n\nMore info: https://clinicaltrialsapi.cancer.gov/"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

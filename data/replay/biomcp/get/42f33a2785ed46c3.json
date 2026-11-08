@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "CYP2C19",
+    "json": true,
+    "sections": [
+      "pgx",
+      "druggability",
+      "diseases",
+      "clinvar"
+    ]
+  },
+  "args_key": "42f33a2785ed46c39df13a7f82eed4a1a831ea6378817b2ae54f8a84d692cbd3",
+  "recorded_at": "2026-11-03T22:04:25.995929+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.2423000298440456,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: pgx"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

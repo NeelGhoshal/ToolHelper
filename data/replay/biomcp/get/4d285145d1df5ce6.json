@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "MYH7",
+    "json": true,
+    "sections": [
+      "clingen"
+    ]
+  },
+  "args_key": "4d285145d1df5ce6f7514714ae6e4cdde81364a2bc172e9dad73859c97b7d426",
+  "recorded_at": "2026-11-03T06:10:16.482883+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 8014.003499993123,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"NCBI Gene\",\n        \"url\": \"https://www.ncbi.nlm.nih.gov/gene/4625\"\n      },\n      {\n        \"label\": \"UniProt\",\n        \"url\": \"https://www.uniprot.org/uniprot/P12883\"\n      },\n      {\n        \"label\": \"Ensembl\",\n        \"url\": \"https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000092054\"\n      },\n      {\n        \"label\": \"OMIM\",\n        \"url\": \"https://www.omim.org/entry/160760\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get gene MYH7 clingen\",\n      \"biomcp get gene MYH7 pathways\",\n      \"biomcp get gene MYH7 ontology\",\n      \"biomcp get gene MYH7 diseases\",\n      \"biomcp get gene MYH7 diagnostics\",\n      \"biomcp search diagnostic --gene MYH7\",\n      \"biomcp search pgx -g MYH7\",\n      \"biomcp search variant -g MYH7\",\n      \"biomcp search article -g MYH7\",\n      \"biomcp search drug --target MYH7\",\n      \"biomcp gene trials MYH7\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"identity\",\n        \"label\": \"Identity\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"NCBI Gene / MyGene.info\"\n        ]\n      },\n      {\n        \"key\": \"summary\",\n        \"label\": \"Summary\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"NCBI Gene\"\n        ]\n      },\n      {\n        \"key\": \"aliases\",\n        \"label\": \"Aliases\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"NCBI Gene / MyGene.info\"\n        ]\n      },\n      {\n        \"key\": \"clingen\",\n        \"label\": \"ClinGen\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ],\n    \"suggestions\": [\n      \"biomcp search diagnostic --gene MYH7\",\n      \"biomcp search pgx -g MYH7\",\n      \"biomcp search variant -g MYH7\",\n      \"biomcp search article -g MYH7\",\n      \"biomcp search drug --target MYH7\",\n      \"biomcp gene trials MYH7\"\n    ],\n    \"workflow\": \"mechanism-pathway\",\n    \"workflow_playbook\": \"biomcp skill mechanism-pathway\",\n    \"workflow_rationale\": \"Orient from a mechanism-relevant drug to target and pathway context, then confirm the disease mechanism in review literature.\"\n  },\n  \"aliases\": [\n    \"CMD1S\",\n    \"CMH1\",\n    \"CMYO7A\",\n    \"CMYO7B\",\n    \"CMYP7A\"\n  ],\n  \"clingen\": {\n    \"dosage_status\": {\n      \"message\": \"ClinGen gene-dosage download timed out.\",\n      \"op\": \"gene_dosage_download\",\n      \"status\": \"timed_out\"\n    },\n    \"validity_status\": {\n      \"message\": \"ClinGen gene-validity download timed out.\",\n      \"op\": \"gene_validity_download\",\n      \"status\": \"timed_out\"\n    }\n  },\n  \"clinical_diseases\": [\n    \"hypertrophic cardiomyopathy\",\n    \"congenital myopathy 7A, myosin storage, autosomal dominant\",\n    \"left ventricular noncompaction\",\n    \"MYH7-related skeletal myopathy\",\n    \"cardiomyopathy\"\n  ],\n  \"clinical_drugs\": [\n    \"DANICAMTIV\",\n    \"OMECAMTIV MECARBIL\",\n    \"MAVACAMTEN\"\n  ],\n  \"ensembl_id\": \"ENSG00000092054\",\n  \"entrez_id\": \"4625\",\n  \"gene_type\": \"protein-coding\",\n  \"genomic_coordinates\": {\n    \"coordinate\": \"14:23412732-23436137 (strand: -1)\",\n    \"genome_build\": \"GRCh38\",\n    \"provenance\": \"MyGene.info provider default\",\n    \"source\": \"MyGene.info\"\n  },\n  \"location\": \"14\",\n  \"name\": \"myosin heavy chain 7\",\n  \"omim_id\": \"160760\",\n  \"section_outcomes\": {\n    \"civic\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"clingen\": {\n      \"message\": \"ClinGen gene evidence is incomplete; no ClinGen absence can be concluded.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    },\n    \"constraint\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"diagnostics\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"diseases\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"disgenet\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"druggability\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"expression\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"funding\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"gencc\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"go\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"hpa\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"interactions\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"ontology\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"pathways\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"protein\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    }\n  },\n  \"summary\": \"Muscle myosin is a hexameric protein containing 2 heavy chain subunits, 2 alkali light chain subunits, and 2 regulatory light chain subunits. This gene encodes the beta (or slow) heavy chain subunit of cardiac myosin.\",\n  \"symbol\": \"MYH7\",\n  \"uniprot_id\": \"P12883\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

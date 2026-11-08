@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR",
+      "lung cancer",
+      "mutation"
+    ],
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "916aa9c077af2fcd0d597591e7470f6cec24aca3b507e526402209a62ee911a5",
+  "recorded_at": "2026-11-05T04:39:09.183510+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 8577.83809999819,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR lung cancer mutation, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubMed source status: degraded (PubMed search unavailable) \nRetry: `biomcp search article --keyword \"EGFR lung cancer mutation\" --exclude-retracted --sort citations --source pubmed --limit 15 --offset 0` \nEurope PMC source status: degraded (Europe PMC search unavailable) \nRetry: `biomcp search article --keyword \"EGFR lung cancer mutation\" --exclude-retracted --sort citations --source europepmc --limit 15 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR lung cancer mutation\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 39430833|Strategies and influencing factors for the treatment of adva…|PubTator3|2024-09-30|-|none| \n|PMID 38851874|Impact of smoking on resected lung cancer depends on epiderm…|PubTator3|2024-06-08|-|none| \n|PMID 37791062|Systematic evaluation of clinical efficacy of CYP1B1 gene po…|PubTator3|2023-09-30|-|none| \n|PMID 37579253|Germline EGFR mutations and familial lung cancer.|PubTator3|2023-08-14|-|none| \n|PMID 37274482|Germline EGFR mutations in lung cancer (Review)|PubTator3|2023-05-16|-|none| \n|PMID 37362735|Residual neural network with mixed loss based on batch train…|PubTator3|2023-03-17|-|none| \n|PMID 35702826|Prognostic features and comprehensive genomic analysis of  N…|PubTator3|2023-01-01|-|none| \n|PMID 36313724|High rate of epidermal growth factor receptor-mutated primar…|PubTator3|2022-10-13|-|none| \n|PMID 36300191|Using stacked deep learning models based on PET/CT images an…|PubTator3|2022-10-10|-|none| \n|PMID 35740676|The High Proportion of Discordant EGFR Mutations among Multi…|PubTator3|2022-06-18|-|none| \n|PMID 34877318|High-resolution computed tomography findings independently p…|PubTator3|2021-11-16|-|none| \n|PMID 34202566|Drug Tolerance to EGFR Tyrosine Kinase Inhibitors in Lung Ca…|PubTator3|2021-06-24|-|none| \n|PMID 33961689|Population-based incidence rates and increased risk of EGFR…|PubTator3|2021-05-07|-|none| \n|PMID 33956842|Profiling non-small cell lung cancer reveals that PD-L1 is a…|PubTator3|2021-05-06|-|none| \n|PMID 33060857|The next tier of EGFR resistance mutations in lung cancer.|PubTator3|2021-01-01|-|none| \n \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 39430833\n  biomcp search article -k \"EGFR lung cancer mutation\" --year-min 2021 --year-max 2024 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

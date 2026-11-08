@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "hgvsp": "NP_004324.2:p.Val600Glu",
+    "limit": 10
+  },
+  "args_key": "80157e7f951a17bea116d48524e97d0d3764d3c54c491f4ac0c7e251699e3086",
+  "recorded_at": "2026-11-04T20:45:20.319904+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2718.2350000000497,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Requested variant: unknown variant\n\nVariant identity: ambiguous\n\n# Variant Search Results \n \nFound: 10 variant(s) \nQuery: hgvsp=V600E \n \n \n## Filter evaluation \n \nhgvsp: evaluated \n \n \n \n| ID | Build | Gene | Transcript | Coding | Protein | Legacy Name | Significance | ClinVar Stars | gnomAD AF | REVEL | GERP | \n|---|---|---|---|---|---|---|---|---|---|---|---| \n| chr10:g.68040313A>T | GRCh37 | CTNNA3 | NM_013266.4 | c.1799T>A | p.Val600Glu | CTNNA3 V600E | Uncertain significance | 1 | 0.0000040171 | 0.054 | 1.35 | \n| chr7:g.140453136A>T | GRCh37 | BRAF | NM_004333.6 | c.1799T>A | p.Val600Glu | BRAF V600E | Pathogenic | 2 | 0.00000397994 | 0.931 | 5.65 | \n| chr10:g.99133376A>T | GRCh37 | RRP12 | NM_015179.3 | c.1982T>A | p.Val661Glu | RRP12 V661E | - | none | 0.00000399687 | 0.822 | 4.71 | \n| chr15:g.75586737T>A | GRCh37 | GOLGA6D | NM_001145224.1 | c.2003T>A | p.Val668Glu | GOLGA6D V668E | - | none | 0.0000121536 | 0.019 | -2.75 | \n| chr2:g.173349642T>A | GRCh37 | ITGA6 | NM_001079818.2 | c.1682T>A | p.Val561Glu | ITGA6 V561E | - | none | 0.00000397947 | 0.058 | -7.19 | \n| chr5:g.175740815T>A | GRCh37 | SIMC1 | NM_001308195.1 | c.1856T>A | p.Val619Glu | SIMC1 V619E | - | none | 0.00000398715 | 0.405 | 5.49 | \n| chr10:g.101464424T>A | GRCh37 | ENTPD7 | NM_020354.3 | c.1799T>A | p.Val600Glu | ENTPD7 V600E | - | none | - | 0.028 | 0.796 | \n| chr10:g.101643830A>T | GRCh37 | DNMBP | NM_015221.3 | c.3935T>A | p.Val1312Glu | DNMBP V1312E | - | none | - | 0.852 | 5.94 | \n| chr10:g.101954209A>T | GRCh37 | CHUK | NM_001278.4 | c.1799T>A | p.Val600Glu | CHUK V600E | - | none | - | 0.34 | 5.69 | \n| chr10:g.115389483A>T | GRCh37 | NRAP | NM_001261463.1 | c.1904T>A | p.Val635Glu | NRAP V635E | - | none | - | 0.47 | 5.19 | \n \n \n## Transcript match explanations\n\n- `chr10:g.99133376A>T`: matched `NM_001145114.1 | c.1799T>A | p.Val600Glu` from a different source-provided transcript annotation; displayed `NM_015179.3 | c.1982T>A | p.Val661Glu`.\n- `chr5:g.175740815T>A`: matched `NM_001308196.1 | c.1799T>A | p.Val600Glu` from a different source-provided transcript annotation; displayed `NM_001308195.1 | c.1856T>A | p.Val619Glu`.\n- `chr10:g.101643830A>T`: matched `NM_001318327.1 | c.1799T>A | p.Val600Glu` from a different source-provided transcript annotation; displayed `NM_015221.3 | c.3935T>A | p.Val1312Glu`.\n- `chr10:g.115389483A>T`: matched `NM_006175.4 | c.1799T>A | p.Val600Glu` from a different source-provided transcript annotation; displayed `NM_001261463.1 | c.1904T>A | p.Val635Glu`.\n\nUse `get variant <id>` for details. \nSignificance is the most severe ClinVar RCV classification in MyVariant.info's cached copy; run `get variant <id> clinvar` for the current NCBI ClinVar record-level classification. \nFilters: -g <gene>, --hgvsp <protein>, --significance <value>, --max-frequency <0-1>, --min-cadd <score>, --consequence <term>, --review-status <stars>, --population <pop>, --revel-min <score>, --gerp-min <score>, --tumor-site <site>, --condition <name>, --impact <level>, --lof, --has <field>, --missing <field>, --therapy <name> \n \n \nSee also:\n  biomcp get variant \"chr10:g.68040313A>T\" \n \n \n \nShowing 1-10 of 351 results. Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

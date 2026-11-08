@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "BRAF V600E mutation",
+    "max_results": 20,
+    "omop_field": "condition_concept_id",
+    "omop_table": "condition"
+  },
+  "args_key": "815e95e3b4be80befd88c45d86951e773303dc113c3ac2746e5ff1e3947248e9",
+  "recorded_at": "2026-11-03T20:17:11.133057+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 910.8195999870077,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 3654351,\n      \"code\": \"830150003\",\n      \"name\": \"Malignant melanoma with BRAF V600E mutation\",\n      \"class\": \"Disorder\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/3654351\"\n    },\n    {\n      \"concept_id\": 3661427,\n      \"code\": \"830195005\",\n      \"name\": \"Malignant melanoma with BRAF V600E mutation\",\n      \"class\": \"Morph Abnormality\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/3661427\"\n    },\n    {\n      \"concept_id\": 1133876,\n      \"code\": \"M1412\",\n      \"name\": \"Patients with metastatic nsclc with epidermal growth factor receptor (egfr) mutations, alk genomic tumor aberrations, or other targetable genomic abnormalities with approved first-line targeted therapy, such as nsclc with ros1 rearrangement, braf v600e...\",\n      \"class\": \"HCPCS\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"HCPCS\",\n      \"url\": \"https://omophub.com/concepts/1133876\"\n    },\n    {\n      \"concept_id\": 35661580,\n      \"code\": \"colon_rectum@3940@1\",\n      \"name\": \"Abnormal (mutated)/detected: BRAF V600E (c.1799T>A) mutation\",\n      \"class\": \"NAACCR Value\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Meas Value\",\n      \"vocab\": \"NAACCR\",\n      \"url\": \"https://omophub.com/concepts/35661580\"\n    },\n    {\n      \"concept_id\": 35661581,\n      \"code\": \"colon_rectum@3940@2\",\n      \"name\": \"Abnormal (mutated)/detected, but not BRAF V600E (c.1799T>A) mutation\",\n      \"class\": \"NAACCR Value\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Meas Value\",\n      \"vocab\": \"NAACCR\",\n      \"url\": \"https://omophub.com/concepts/35661581\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"BRAF V600E mutation\",\n    \"omop_table\": \"condition\",\n    \"omop_field\": \"condition_concept_id\",\n    \"total_found\": 5,\n    \"candidates_returned\": 5,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

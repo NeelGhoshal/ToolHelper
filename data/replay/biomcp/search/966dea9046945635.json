@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "metformin",
+      "cardiovascular",
+      "MACE"
+    ],
+    "limit": 20,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "966dea9046945635988425962f863b9b5ee3ffec108b0aa98b7cd042c380c4cf",
+  "recorded_at": "2026-11-03T09:03:30.983121+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3805.6488999864087,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=metformin cardiovascular MACE, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 20 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42957066|GLP-1 Receptor Agonists Decrease the Rate of Rupture, Cardia…|PubMed|2026-10-29|-|none| \n|PMID 42815506|Cardiovascular safety of orforglipron versus insulin glargin…|PubMed|2026-10-17|-|none| \n|PMID 42857939|Preconception incretin therapy reduces pregnancy and cardiom…|PubMed|2026-10-10|-|none| \n|PMID 41940793|Estimating the True MACE Benefits From Tirzepatide in SURPAS…|PubMed|2026-10-01|-|none| \n|PMID 42530338|Effect of Medications for Type 2 Diabetes on Cardiovascular…|PubMed|2026-10-01|-|none| \n|PMID 42387302|Potential Mediators of Efpeglenatide's Cardiovascular Benefi…|PubMed|2026-09-01|-|none| \n|PMID 42340212|Repurposed Drugs and Cardiovascular Morbidity: A Cost-Effect…|PubMed|2026-07-01|-|none| \n|PMID 41984016|Comparative Cardiovascular Effectiveness of Glucagon-Like Pe…|PubMed|2026-06-02|-|none| \n|PMID 42132163|Comparative Effectiveness of Individual Sodium Glucose Trans…|PubMed|2026-05-19|-|none| \n|PMID 42147056|Impact of hypoglycemic regimens on cardiac recovery and qual…|PubMed|2026-04-30|-|none| \n|PMID 41492191|Outcomes of oral antidiabetic drugs in metabolic dysfunction…|PubMed|2026-04-01|-|none| \n|PMID 41548682|Safety of metformin in chronic kidney disease and type 2 dia…|PubMed|2026-02-15|-|none| \n|PMID 41311237|SGLT2 inhibitor or metformin as standard treatment in early-…|PubMed|2026-02-01|-|none| \n|PMID 41082229|Liraglutide vs Semaglutide vs Dulaglutide in Veterans With T…|PubMed|2025-10-01|-|none| \n|PMID 40582069|Heterogeneity of treatment effects of glucose-lowering drug…|PubMed|2025-09-01|-|none| \n|PMID 40836299|Comparative cardiovascular outcomes and safety of hypoglycem…|PubMed|2025-08-20|-|none| \n|PMID 40705329|Cardiovascular Events in Individuals Treated With Sulfonylur…|PubMed|2025-07-01|-|none| \n|PMID 40033492|Metformin: Its salutary effects beyond diabetes mellitus.|PubMed|2025-06-01|-|none| \n|PMID 40122179|Comparison of the metabolic profiles and their cardiovascula…|PubMed|2025-04-01|-|none| \n|PMID 39790202|Influence of sodium-glucose cotransporter 2 inhibitors on th…|PubMed|2024-12-31|-|none| \n \n \n \nNewest indexed: 2026-10-29 (5 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42957066\n  biomcp search article -k \"metformin cardiovascular MACE\" --source pubmed --year-min 2024 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-20 of 121 results. Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

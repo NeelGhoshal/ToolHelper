@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "get drug \"Zoloft\" label --region us",
+    "json": true
+  },
+  "args_key": "07170efbfb927e840b17a55e77d045a06f9ccf0b667d29383fa95fc139d39e4b",
+  "recorded_at": "2026-11-04T23:46:11.334825+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 4.832200000237208,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: Invalid argument: --region can only be used with regulatory, safety, shortage, or all."
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

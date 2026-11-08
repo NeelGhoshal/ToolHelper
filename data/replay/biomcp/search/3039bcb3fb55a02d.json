@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "FLAURA trial osimertinib first-line EGFR-mutated advanced NSCLC NEJM Soria Ramalingam"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "3039bcb3fb55a02dd4385ffa9b853ec9c2b4ef3daaa7b05e183242ec702f9ee2",
+  "recorded_at": "2026-11-03T15:32:55.770420+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5480.978000035975,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=FLAURA trial osimertinib first-line EGFR-mutated advanced NSCLC NEJM Soria Ramalingam, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"FLAURA trial osimertinib first-line EGFR-mutated advanced NSCLC NEJM Soria Ramalingam\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 3 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 29151359|Osimertinib in Untreated EGFR-Mutated Advanced Non-Small-Cel…|Europe PMC, PubMed|2017-11-18|-|4492| \n|PMID 31751012|Overall Survival with Osimertinib in Untreated, EGFR-Mutated…|Europe PMC, PubMed|2019-11-21|-|2495| \n|PMID 38947223|A Visual Analysis of the Research Dynamics in Resistance to…|PubTator3, Europe PMC|2024-06-26|-|2| \n \n \n \nNewest indexed: 2019-11-22 (2538 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 29151359\n  biomcp search article -k \"FLAURA trial osimertinib first-line EGFR-mutated advanced NSCLC NEJM Soria Ramalingam\" --year-min 2017 --year-max 2024 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 3 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

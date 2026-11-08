@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 15
+  },
+  "args_key": "dc3225029995302261f107e6d04d427a44efd1cbbdbfcd3867d1d04ac7326910",
+  "recorded_at": "2026-11-03T06:54:10.445059+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 200.27819997631013,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 15 of 3781 \n \nQuery: condition=melanoma \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT01586403|Transfer of Genetically E…|ACTIVE_NOT_RECRUITING|1|Melanoma| \n|NCT00025012|Isotretinoin in Preventin…|COMPLETED|NA|Melanoma (Skin), Non-melanomatous Skin Cancer| \n|NCT01505153|Phase I Intratumoral Pbi-…|COMPLETED|1|Advanced Cancer, Metastatic Cancer, Solid Tumors| \n|NCT01618136|An Open-Label, Multicente…|COMPLETED|1/2|Malignant Solid Tumour, Ovarian Cancer, Triple… [abridged; 5 conditions total]| \n|NCT02301611|Phase IIB TL + YCWP + DC…|COMPLETED|2|Melanoma| \n|NCT02416336|Evaluation of Intraoperat…|COMPLETED|NA|Melanoma, Head and Neck Cancer, Breast Cancer| \n|NCT02434107|Complete Lymph Node Disse…|COMPLETED|NA|Melanoma| \n|NCT02663232|Study to Analyze Mutation…|COMPLETED|-|Metastatic Cancers| \n|NCT03850691|Radiation and Combination…|COMPLETED|2|Metastatic Melanoma| \n|NCT04911998|A Prospective Observation…|COMPLETED|-|Melanoma (Skin), Metastatic Melanoma, BRAF V600 Mutation| \n|NCT00811200|Treatment Of Radiation Re…|UNKNOWN|2/3|Uveal Melanoma| \n|NCT06236360|Metastatic Melanoma Patie…|UNKNOWN|NA|Melanoma Stage Iv, Metastatic Melanoma| \n|NCT02263898|Intermittent LGX818 and M…|WITHDRAWN|2|Recurrent Melanoma, Stage IV Melanoma| \n|NCT01783431|Study of Vaccination With…|TERMINATED|1|Melanoma| \n|NCT02297529|Expanded Access Study of…|NO_LONGER_AVAILABLE|-|Unresected Stage IIIB to IVM1c Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-15 of 3781 results. Use --offset 15 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

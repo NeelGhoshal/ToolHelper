@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2023-06-01",
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "HER2",
+      "targeted therapy"
+    ],
+    "limit": 10,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "fc79a84daf0506f5f3079331b30a093af16d9b22a6c0cdd52e82660c9fad17cd",
+  "recorded_at": "2026-11-05T05:14:47.112742+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3579.025900002307,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: API response from PubMed could not be decoded. Retry the remote source."
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

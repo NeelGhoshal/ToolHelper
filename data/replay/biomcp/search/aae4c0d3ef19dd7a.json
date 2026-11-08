@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "BRAF V600E solid tumor"
+    ],
+    "limit": 10
+  },
+  "args_key": "aae4c0d3ef19dd7a50513f910e3d4dd72bbc2f3b6170105325dc9effe598a7b9",
+  "recorded_at": "2026-11-03T15:49:09.630711+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 233.06240001693368,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 16 \n \nQuery: condition=BRAF V600E solid tumor \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT05503797|A Study to Assess the Eff…|RECRUITING|2|Cancer Harboring BRAF Alterations, HGG, LGG, Solid Tumors| \n|NCT05786924|Phase 1/2 Trial of S24165…|RECRUITING|1/2|Non-small Cell Lung Cancer, Histiocytic Neopl… [abridged; 32 conditions total]| \n|NCT06262919|Special Drug Use-results…|RECRUITING|-|BRAF V600E Mutation-positive Unresectable Advanced or Recurrent Solid Tumor| \n|NCT03839342|Binimetinib and Encorafen…|ACTIVE_NOT_RECRUITING|2|Solid Tumor| \n|NCT06400225|Testing BVD-523FB (Ulixer…|ACTIVE_NOT_RECRUITING|2|Advanced Lymphoma, Advanced Malignant Solid Ne… [abridged; 5 conditions total]| \n|NCT01767454|Study of Dabrafenib +/- T…|COMPLETED|1|Solid Tumours| \n|NCT01928940|Japan PhI/II of GSK211843…|COMPLETED|2|Solid Tumours| \n|NCT04965220|HLX208 (BRAF V600E Inhibi…|UNKNOWN|1|Solid Tumor| \n|NCT05528406|A Phase II Clinical Trial…|UNKNOWN|2|Solid Tumor| \n|NCT05876806|Dabrafenib Plus Trametini…|UNKNOWN|2|Cancer| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-10 of 16 results. Use --offset 10 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

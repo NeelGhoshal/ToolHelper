@@ -1,0 +1,46 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "BRAF",
+    "json": true,
+    "sections": [
+      "pathways",
+      "diseases",
+      "druggability",
+      "clingen",
+      "constraint",
+      "expression",
+      "civic",
+      "disgenet",
+      "go",
+      "protein",
+      "interactions",
+      "ontology",
+      "hpa",
+      "annotations"
+    ]
+  },
+  "args_key": "be59c0e6b8a15648611bf4b639694527686c656a83c6d62f7230fae76fbaede6",
+  "recorded_at": "2026-11-05T04:37:45.105591+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.2172000024293084,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: annotations"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

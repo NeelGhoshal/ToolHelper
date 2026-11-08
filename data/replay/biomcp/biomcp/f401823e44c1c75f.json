@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp search trial --condition melanoma --mutation \"BRAF V600\" --status RECRUITING --limit 25 --offset 25 --json",
+    "json": true
+  },
+  "args_key": "f401823e44c1c75fc7849261f4661c69a2906a772b68be6d564f49f4e2780c61",
+  "recorded_at": "2026-11-03T23:40:27.549475+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 4062.5738999806345,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 25,\n    \"limit\": 25,\n    \"returned\": 2,\n    \"total\": 27,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 2,\n  \"results\": [\n    {\n      \"nct_id\": \"NCT04903119\",\n      \"title\": \"Nilotinib Plus Dabrafenib/Trametinib or Encorafenib/Binimetinib in Metastatic Melanoma\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE1\",\n      \"conditions\": [\n        \"Metastatic Melanoma\",\n        \"BRAF Gene Mutation\"\n      ],\n      \"sponsor\": \"Rina Plattner\"\n    },\n    {\n      \"nct_id\": \"NCT06264180\",\n      \"title\": \"VO and Nivolumab vs Physician's Choice in Advanced Melanoma That Progressed on Anti-PD-1 & Anti-CTLA-4 Drugs [IGNYTE-3]\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE3\",\n      \"conditions\": [\n        \"Advanced Melanoma\"\n      ],\n      \"sponsor\": \"Replimune, Inc.\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get trial NCT04903119\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

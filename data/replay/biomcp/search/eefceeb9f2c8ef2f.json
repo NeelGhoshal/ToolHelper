@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "type 2 diabetes mellitus"
+    ],
+    "entity": "trial",
+    "limit": 8
+  },
+  "args_key": "eefceeb9f2c8ef2f0fdf5fbab71c1d91896fffa03bc8db40358edaded04c6b4e",
+  "recorded_at": "2026-11-04T01:23:42.968582+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 620.2131999889389,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 8 of 12012 \n \nQuery: condition=type 2 diabetes mellitus \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT07098520|Biomarkers of Steatohepat…|ACTIVE_NOT_RECRUITING|-|Diabetes, Steatosis of Liver| \n|NCT00354237|DARE: Diabetes in cArdiac…|COMPLETED|NA|Type 2 Diabetes Mellitus, Coronary Artery Disease| \n|NCT00994266|Diamel in the Treatment o…|COMPLETED|3|Type 2 Diabetes| \n|NCT01182701|Cognitive Behavioral Inte…|COMPLETED|NA|Type 2 Diabetes| \n|NCT02008682|The Efficacy and Safety o…|COMPLETED|4|Diabetes, Diabetes Mellitus, Type 2| \n|NCT04931030|Low Carbohydrate Diet in…|COMPLETED|NA|Type 2 Diabetes Mellitus, Diabetic Kidney Disease, Obesity| \n|NCT07661160|The Impact of Laser Acupu…|COMPLETED|NA|Type 2 Diabetes, ObesityType 2 Diabetes Mellitus| \n|NCT00543751|Placebo Controlled Metfor…|TERMINATED|3|Diabetes Mellitus, Type 2| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-8 of 12012 results. Use --offset 8 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

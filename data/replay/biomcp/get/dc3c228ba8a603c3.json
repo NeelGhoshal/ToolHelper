@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "pembrolizumab",
+    "sections": [
+      "regulatory",
+      "approvals"
+    ]
+  },
+  "args_key": "dc3c228ba8a603c36d7fcbe89ce573b3606ec892acde3377ec340822eb21a012",
+  "recorded_at": "2026-11-03T06:23:06.869115+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 4567.77849997161,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# pembrolizumab - regulatory, approvals \n## Regulatory (US - Drugs@FDA)\n\nNo approvals found in Drugs@FDA for this query.\n\n### FDA orphan designations\n\nFDA orphan-designation data is temporarily unavailable.\n\nRetry: `biomcp get drug pembrolizumab regulatory --region us`\n\n \n## Drugs@FDA Approvals\n\nNo approvals found in Drugs@FDA for this query.\n \nMore:\n  biomcp get drug pembrolizumab label   - approved-indication and FDA label detail beyond the base card\n  biomcp get drug pembrolizumab safety --region us   - regulatory safety detail; use `biomcp drug adverse-events <name>` first when you want post-marketing signal\n  biomcp get drug pembrolizumab shortage --region us   - current US, EU, or WHO shortage information\n\nAll:\n  biomcp get drug pembrolizumab all --region us \nSee also:\n  biomcp search article --drug pembrolizumab --type review --limit 5   - supplement sparse structured data with review literature for indication context\n  biomcp drug trials pembrolizumab\n  biomcp drug adverse-events pembrolizumab   - inspect safety reports and adverse-event signal\n  biomcp search pgx -d pembrolizumab   - pharmacogenomics interactions\n  biomcp get gene PDCD1 \n\n[DrugBank](https://go.drugbank.com/drugs/DB09037) | [ChEMBL](https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL3137343)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2024-01-01",
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "HER2-targeted therapy"
+    ],
+    "limit": 10,
+    "sort": "date",
+    "source": "semanticscholar"
+  },
+  "args_key": "1b33f7263647dcb5d86d792cbc9db6cbb2423c8ae925abbdb1590efbe8cb16ea",
+  "recorded_at": "2026-11-05T05:23:37.779369+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 931.1444999984815,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=HER2-targeted therapy, date_from=2024-01-01, exclude_retracted=true, sort=date, source=semanticscholar\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": []\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 0,\n    \"total\": null,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"error\": {\n    \"code\": \"source_unavailable\",\n    \"message\": \"no article rows were returned while some sources were unavailable: Semantic Scholar\"\n  },\n  \"count\": 0,\n  \"results\": [],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"HER2-targeted therapy\\\" --date-from 2024-01-01 --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0\",\n      \"biomcp get drug \\\"HER2-targeted Therapy\\\"\",\n      \"biomcp list article\"\n    ],\n    \"suggestions\": [\n      {\n        \"command\": \"biomcp get drug \\\"HER2-targeted Therapy\\\"\",\n        \"reason\": \"Exact drug vocabulary match for article keyword \\\"HER2-targeted therapy\\\".\",\n        \"sections\": [\n          \"label\",\n          \"targets\",\n          \"indications\"\n        ]\n      }\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

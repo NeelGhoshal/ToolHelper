@@ -1,0 +1,44 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "BRAF",
+    "json": true,
+    "sections": [
+      "pathways",
+      "ontology",
+      "diseases",
+      "protein",
+      "go",
+      "interactions",
+      "expression",
+      "druggability",
+      "clingen",
+      "constraint",
+      "disgenet",
+      "xrefs"
+    ]
+  },
+  "args_key": "48aff3251ec85819f0ad94bae0bb751f88c63eff1e002e0982f2b499ef87577f",
+  "recorded_at": "2026-11-04T06:49:53.316211+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.3923000078648329,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: xrefs"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

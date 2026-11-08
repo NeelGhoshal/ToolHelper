@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "BRAF V600 mutation",
+      "BRAF V600E mutation",
+      "BRAF gene mutation"
+    ],
+    "entity": "trial",
+    "json": true,
+    "limit": 25,
+    "status": "recruiting"
+  },
+  "args_key": "280a2b97eb68144081b1ad088f2f586cf4c280b11dbfa4567ef09949a1120442",
+  "recorded_at": "2026-11-03T23:21:04.635982+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 154.95260001625866,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 25,\n    \"returned\": 2,\n    \"total\": 2,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 2,\n  \"results\": [\n    {\n      \"nct_id\": \"NCT05786924\",\n      \"title\": \"Phase 1/2 Trial of S241656 in Selected RAS/MAPK Mutation- Positive Malignancies\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE1/PHASE2\",\n      \"conditions\": [\n        \"Non-small Cell Lung Cancer\",\n        \"Histiocytic Neoplasm\",\n        \"Histiocytosis\",\n        \"BRAF Gene Mutation\",\n        \"BRAF V600E\",\n        \"BRAF V600 Mutation\",\n        \"BRAF Mutation-Related Tumors\",\n        \"BRAF\",\n        \"Metastatic Lung Non-Small Cell Carcinoma\",\n        \"Metastatic Lung Cancer\",\n        \"Recurrent Lung Cancer\",\n        \"Recurrent Lung Non-Small Cell Carcinoma\",\n        \"NSCLC\",\n        \"Solid Tumor\",\n        \"Solid Carcinoma\",\n        \"KRAS G12D\",\n        \"KRAS G12V\",\n        \"KRAS Mutation-Related Tumors\",\n        \"NRAS Gene Mutation\",\n        \"Thyroid Cancer\",\n        \"Thyroid Carcinoma\",\n        \"Colorectal Cancer\",\n        \"Colorectal Carcinoma\",\n        \"Recurrent Histiocytic and Dendritic Cell Neoplasm\",\n        \"Brain Metastases\",\n        \"Recurrent NSCLC\",\n        \"KRAS G13C\",\n        \"Acquired Resistance to KRAS G12C Inhibitor\",\n        \"KRAS G12A\",\n        \"KRAS G12F\",\n        \"KRAS G12R\",\n        \"KRAS G13D\"\n      ],\n      \"sponsor\": \"Institut de Recherches Internationales Servier\"\n    },\n    {\n      \"nct_id\": \"NCT07870265\",\n      \"title\": \"Detection of the BRAF V600E Mutation in Liquid Biopsy Using the CRISPR/Cas12a System\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"NA\",\n      \"conditions\": [\n        \"Unresectable Metastatic Melanoma\"\n      ],\n      \"sponsor\": \"Masaryk Memorial Cancer Institute\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get trial NCT05786924\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

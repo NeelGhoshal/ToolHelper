@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp get article 42957066 abstract --json",
+    "json": true
+  },
+  "args_key": "85d03094b575bf792909f9091d766bb8bc48a8a516c6817d82ad86e00a39755b",
+  "recorded_at": "2026-11-03T14:28:30.437988+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 3.1567999976687133,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: Invalid argument: Unknown section \"abstract\" for article. Available: annotations, fulltext, tldr, indexing, assets, asset, all"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

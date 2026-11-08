@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "EGFR",
+    "sections": [
+      "pathways",
+      "interactions",
+      "druggability"
+    ]
+  },
+  "args_key": "f0647719f96be23c4cdf28161e5bc5e332e2f832bd0730f6b0264b85bbc3a4fc",
+  "recorded_at": "2026-11-05T05:37:01.351378+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 762.2317999994266,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# EGFR - pathways, interactions, druggability \n## Pathways \n \n| Source | ID | Name | \n|---|---|---| \n| KEGG | hsa04010 | MAPK signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04012 | ErbB signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04014 | Ras signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04015 | Rap1 signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04020 | Calcium signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04066 | HIF-1 signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04068 | FoxO signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04072 | Phospholipase D signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04144 | Endocytosis - Homo sapiens (human) | \n| KEGG | hsa04151 | PI3K-Akt signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04510 | Focal adhesion - Homo sapiens (human) | \n| KEGG | hsa04520 | Adherens junction - Homo sapiens (human) | \n| KEGG | hsa04540 | Gap junction - Homo sapiens (human) | \n| KEGG | hsa04630 | JAK-STAT signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04810 | Regulation of actin cytoskeleton - Homo sapiens (human) | \n| KEGG | hsa04912 | GnRH signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04915 | Estrogen signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04921 | Oxytocin signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04926 | Relaxin signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04928 | Parathyroid hormone synthesis, secretion and action - Homo sapiens (human) | \n| Reactome | R-HSA-9611160 | EGFR | \n| Reactome | R-HSA-179837 | EGFR | \n| Reactome | R-HSA-1228025 | EGFR E746_S752delinsV | \n| Reactome | R-HSA-1228034 | EGFR L747_A750delinsP | \n| Reactome | R-HSA-1996322 | EGFR D770_N771insNPG | \n| Reactome | R-HSA-1177531 | EGFR G719C | \n| Reactome | R-HSA-1177532 | EGFR G719A | \n| Reactome | R-HSA-1169418 | EGFR G719S | \n| Reactome | R-HSA-1173212 | EGFR L858R | \n| Reactome | R-HSA-1228031 | EGFR E746_T751delinsA | \n| Reactome | P00533-4 | EGFR | \n| Reactome | R-HSA-177929 | Signaling by EGFR | \n## Interactions (STRING) \nCBL: 0.999 \nPIK3CA: 0.991 \nGAB1: 0.974 \nPIK3R2: 0.905 \nNCK2: 0.902 \nPIK3R3: 0.889 \nCDH1: 0.775 \nKRAS: 0.698 \nPLCG1: 0.572 \nCSK: 0.507 \nTRAF2: 0.503 \nEREG: 0.468 \nHBEGF: 0.421 \nSOS2: 0.408 \nSTUB1: 0.401 \n## Druggability (DGIdb / Open Targets) \n \nCategories: Cell Surface, Clinically Actionable, Drug Resistance, Druggable Genome, Kinase, Tyrosine Kinase \n### OpenTargets tractability \n \n| Modality | Tractable | Evidence | \n|---|---|---| \n| small molecule | yes | Approved Drug, Structure with Ligand, High-Quality Ligand, High-Quality Pocket, Druggable Family | \n| antibody | yes | Approved Drug, UniProt loc high conf, GO CC high conf, UniProt loc med conf, UniProt SigP or TMHMM, Human Protein Atlas loc | \n| PROTAC | yes | Literature, UniProt Ubiquitination, Database Ubiquitination, Half-life Data, Small Molecule Binder | \n| other modality | yes | Advanced Clinical | \n### OpenTargets safety liabilities \n \n| Event | Datasource | Effect | Biosample | \n|---|---|---|---| \n| ALT increase | Brennan et al. (2024) | Inhibition/Decrease/Downregulation | liver | \n| AST increase | Brennan et al. (2024) | Inhibition/Decrease/Downregulation | liver | \n| Diarrhea | ClinPGx | - | - | \n| Hepatotoxicity | Brennan et al. (2024) | Activation/Increase/Upregulation | liver | \n| Skin rash | Brennan et al. (2024) | Inhibition/Decrease/Downregulation | skin | \n| alopecia | Brennan et al. (2024) | Inhibition/Decrease/Downregulation | - | \n| cardiomyopathy | Brennan et al. (2024) | Inhibition/Decrease/Downregulation | CV | \n| conjunctival hemorrhage | ClinPGx | - | - | \n| Drug | Interaction Types | Score | Approved | Sources | \n|---|---|---|---|---| \n| AMIVANTAMAB | antibody, inhibitor | 1.139 | yes | 5 | \n| MOBOCERTINIB | inhibitor | 1.139 | yes | 7 | \n| NECITUMUMAB | antibody, inhibitor | 0.854 | yes | 6 | \n| NAQUOTINIB | inhibitor | 0.712 | no | 5 | \n| RINDOPEPIMUT | vaccine | 0.712 | no | 5 | \n| AUMOLERTINIB | inhibitor | 0.569 | yes | 4 | \n| AFATINIB | inhibitor | 0.476 | yes | 17 | \n| BEFOTERTINIB | inhibitor | 0.427 | no | 2 | \n| DATOPOTAMAB DERUXTECAN | - | 0.427 | yes | 2 | \n| FIRMONERTINIB | inhibitor | 0.427 | no | 4 | \n| ICOTINIB | inhibitor | 0.427 | yes | 8 | \n| PD 174265 | inhibitor | 0.427 | no | 2 | \n| CETUXIMAB | antibody, inhibitor | 0.364 | yes | 13 | \n| SUNVOZERTINIB | inhibitor | 0.356 | yes | 4 | \n| ANTI-PD1 MONOCLONAL ANTIBODY | - | 0.285 | no | 1 | \nMore:\n  biomcp get gene EGFR ontology   - GO-style functional enrichment\n  biomcp get gene EGFR diseases   - disease associations\n  biomcp get gene EGFR diagnostics   - diagnostic tests for this gene from GTR\n  biomcp get gene EGFR funding   - NIH Reporter grant support\nAll:\n  biomcp get gene EGFR all \nSee also:\n  biomcp get gene EGFR protein   - deepen into protein function and localization\n  biomcp search diagnostic --gene EGFR   - diagnostic tests for this gene\n  biomcp search pgx -g EGFR   - pharmacogenomics interactions\n  biomcp search variant -g EGFR\n  biomcp search article -g EGFR\n  biomcp search drug --target EGFR\n  biomcp gene trials EGFR \n\n[NCBI Gene](https://www.ncbi.nlm.nih.gov/gene/1956) | [UniProt](https://www.uniprot.org/uniprot/P00533) | [Ensembl](https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000146648) | [OMIM](https://www.omim.org/entry/131550)\n\n\n## Sources\n- Identity: NCBI Gene / MyGene.info\n- Summary: NCBI Gene\n- Aliases: NCBI Gene / MyGene.info\n- Pathways: KEGG, Reactome\n- Interactions: STRING\n- Druggability: DGIdb, Open Targets\n\n## Next commands\n- `biomcp get gene EGFR ontology`\n- `biomcp get gene EGFR diseases`\n- `biomcp get gene EGFR diagnostics`\n- `biomcp get gene EGFR funding`\n- `biomcp get gene EGFR protein`\n- `biomcp search diagnostic --gene EGFR`\n- `biomcp search pgx -g EGFR`\n- `biomcp search variant -g EGFR`\n- `biomcp search article -g EGFR`\n- `biomcp search drug --target EGFR`\n- `biomcp gene trials EGFR`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

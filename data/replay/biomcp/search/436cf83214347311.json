@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "HER2",
+      "targeted therapy"
+    ],
+    "limit": 10,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "436cf83214347311bc0417538eccf593cb8292a6416fb59a5946c4ef682c3b74",
+  "recorded_at": "2026-11-04T00:17:23.161346+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1125.832400051877,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=HER2 targeted therapy, exclude_retracted=true, sort=date, source=pubmed\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": false,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubmed\"\n    ],\n    \"enrichment_sources\": []\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": 18389,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"42974371\",\n      \"title\": \"Affibody-based approaches as potential therapeutics for breast cancer: mechanisms, applications, and future perspectives.\",\n      \"journal\": \"Cell investigation\",\n      \"date\": \"2026-12-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42967914\",\n      \"title\": \"Neoadjuvant concurrent or sequential anthracycline-containing chemotherapy and HER2-targeted agents for HER2-positive breast cancer: a randomized phase 2 study (METIS).\",\n      \"journal\": \"Signal transduction and targeted therapy\",\n      \"date\": \"2026-11-02\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42970013\",\n      \"title\": \"Super-enhancers: regulatory mechanisms, biological functions, diseases, and therapeutic targets.\",\n      \"journal\": \"Molecular biomedicine\",\n      \"date\": \"2026-11-02\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42970014\",\n      \"title\": \"Glycoprotein nonmetastatic melanoma protein B overexpression-a marker of resistance to cyclin-dependent kinase 4 and 6 inhibitors.\",\n      \"journal\": \"Journal of the National Cancer Institute\",\n      \"date\": \"2026-11-02\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42971167\",\n      \"title\": \"A Nationwide Study of Interobserver Agreement and Accuracy in HER2 Immunohistochemistry and the Impact of Artificial Intelligence on HER2 Interpretation.\",\n      \"journal\": \"Cancer research and treatment\",\n      \"date\": \"2026-11-02\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42971495\",\n      \"title\": \"Biogenic gold nanoparticles in breast cancer nanomedicine: sustainable synthesis, multifunctional engineering, and the road to clinical translation.\",\n      \"journal\": \"International journal of pharmaceutics\",\n      \"date\": \"2026-11-02\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42971546\",\n      \"title\": \"Androgen Receptor-Targeted Therapy for Salivary Gland Carcinoma: Systematic Review and Meta-Analysis.\",\n      \"journal\": \"The Laryngoscope\",\n      \"date\": \"2026-11-02\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42973310\",\n      \"title\": \"Quinoline-derived Anticancer Agents for Breast Cancer Therapy: Molecular Targets, Structure-activity Relationships, and Clinical Perspectives.\",\n      \"journal\": \"Mini reviews in medicinal chemistry\",\n      \"date\": \"2026-10-22\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42973798\",\n      \"title\": \"The neuro-metabolic-immune axis in breast cancer: emerging mechanisms and subtype-specific therapeutic opportunities.\",\n      \"journal\": \"Frontiers in immunology\",\n      \"date\": \"2026-10-19\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42974198\",\n      \"title\": \"Evidence and clinical implications of target antigen changes and reassessment after ADC therapy in solid tumors.\",\n      \"journal\": \"Frontiers in oncology\",\n      \"date\": \"2026-10-19\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42974371\",\n      \"biomcp search article -k \\\"HER2 targeted therapy\\\" --source pubmed --year-min 2026 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

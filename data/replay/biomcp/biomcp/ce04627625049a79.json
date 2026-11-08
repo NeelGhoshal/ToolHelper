@@ -1,0 +1,28 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search gene -q melanoma"
+  },
+  "args_key": "ce04627625049a7952cc392189a9a9a082273c6d178b54b1c38b7c6aedb13c95",
+  "recorded_at": "2026-11-03T13:25:34.048381+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 21.24450000701472,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: melanoma \n \nFound 10 genes \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| BAGE | B melanoma antigen | 574 | - | - | Q13072 | 605167 | \n| RMEL3 | enriched in melanoma 3 |  | 5:57395060-57534504 | GRCh38 | none | none | \n| AIM2 | absent in melanoma 2 | 9447 | 1:159056129-159188222 | GRCh38 | O14862 | 604578 | \n| MCAM | melanoma cell adhesion molecule | 4162 | 11:119307972-119321521 | GRCh38 | P43121 | 155735 | \n| MEAT6 | melanoma-associated transcript 6 | 105378111 | - | - | none | none | \n| CMM4 | Melanoma, cutaneous malignant, 4 | 474388 | - | - | none | 608035 | \n| RMEL3 | enriched in melanoma 3 | 102724122 | - | - | none | none | \n| LOC124908139 | B melanoma antigen 3-like | 124908139 | - | - | none | none | \n| CMM | cutaneous malignant melanoma/dysplastic nevus | 1243 | - | - | none | 155600 | \n| LOC124908467 | B melanoma antigen 3-like | 124908467 | - | - | none | none | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1-10 of 444 results. Use --offset 10 for more. \n \n\n\n## Next commands\n- `biomcp get gene BAGE`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

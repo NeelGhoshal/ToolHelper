@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "dabrafenib",
+      "trametinib"
+    ],
+    "json": true,
+    "limit": 25,
+    "status": "recruiting"
+  },
+  "args_key": "ded8888c2092a2cabb081e22d7eb61c80dea255a4118d9d16971b7d3e8177bc1",
+  "recorded_at": "2026-11-03T23:21:05.945092+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 418.5734000056982,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 25,\n    \"returned\": 4,\n    \"total\": 4,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 4,\n  \"results\": [\n    {\n      \"nct_id\": \"NCT03563729\",\n      \"title\": \"Melanoma Metastasized to the Brain and Steroids\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE2\",\n      \"conditions\": [\n        \"Malignant Melanoma\"\n      ],\n      \"sponsor\": \"Inge Marie Svane\"\n    },\n    {\n      \"nct_id\": \"NCT03340506\",\n      \"title\": \"Dabrafenib and/or Trametinib Rollover Study\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE4\",\n      \"conditions\": [\n        \"Melanoma\",\n        \"Non Small Cell Lung Cancer\",\n        \"Solid Tumor\",\n        \"Rare Cancers\",\n        \"High Grade Glioma\"\n      ],\n      \"sponsor\": \"Novartis Pharmaceuticals\"\n    },\n    {\n      \"nct_id\": \"NCT07092670\",\n      \"title\": \"MELAFERT: Impact of Adjuvant Therapy on FERTility in Patients With Resected MELAnoma at High Risk of Relapse.\",\n      \"status\": \"RECRUITING\",\n      \"conditions\": [\n        \"Melanoma\",\n        \"Fertility\"\n      ],\n      \"sponsor\": \"Intergruppo Melanoma Italiano\"\n    },\n    {\n      \"nct_id\": \"NCT04903119\",\n      \"title\": \"Nilotinib Plus Dabrafenib/Trametinib or Encorafenib/Binimetinib in Metastatic Melanoma\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE1\",\n      \"conditions\": [\n        \"Metastatic Melanoma\",\n        \"BRAF Gene Mutation\"\n      ],\n      \"sponsor\": \"Rina Plattner\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get trial NCT03563729\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

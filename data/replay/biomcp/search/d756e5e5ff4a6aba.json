@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "metformin"
+    ],
+    "entity": "article",
+    "keyword": [
+      "cardiovascular",
+      "MACE",
+      "mortality"
+    ],
+    "limit": 15,
+    "sort": "date"
+  },
+  "args_key": "d756e5e5ff4a6abaa39d521e7a9e3666d3891f9d0caf71059f876ad358962aa2",
+  "recorded_at": "2026-11-03T05:09:34.611020+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5677.860199997667,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=metformin, keyword=cardiovascular MACE mortality, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --drug metformin --keyword \"cardiovascular MACE mortality\" --exclude-retracted --sort date --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42898635|Clonal hematopoiesis is associated with adverse events in pa…|Europe PMC|2026-10-01|-|0| \n|PMID 41940793|Estimating the True MACE Benefits From Tirzepatide in SURPAS…|PubMed|2026-10-01|-|8| \n|PMID 42615833|Microbial metabolite-driven mechanisms linking the gut micro…|Europe PMC|2026-08-19|-|1| \n|PMID 42585629|Preoperative Glucagon-Like Peptide-1 Receptor Agonists and P…|PubTator3|2026-08-12|-|none| \n|PMID 42530338|Effect of Medications for Type 2 Diabetes on Cardiovascular…|PubTator3, PubMed|2026-07-30|-|1| \n|PMID 42340212|Repurposed Drugs and Cardiovascular Morbidity: A Cost-Effect…|PubMed|2026-07-01|-|1| \n|PMID 42296178|Cardiovascular-kidney-metabolic syndrome through the lens of…|Europe PMC|2026-06-15|-|3| \n|PMID 42729919|Obesity and Cardiovascular Disease: An Obesity Medicine Asso…|Europe PMC|2026-06-05|-|2| \n|PMID 42167310|Bibliometric analysis of SGLT2 inhibitor treatment for diabe…|Europe PMC|2026-05-21|-|0| \n|PMID 42132163|Comparative Effectiveness of Individual Sodium Glucose Trans…|PubTator3, PubMed|2026-05-19|-|0| \n|PMID 41999297|GLP-1 receptor agonists in stroke prevention: a narrative re…|Europe PMC|2026-04-18|-|1| \n|PMID 41492191|Outcomes of oral antidiabetic drugs in metabolic dysfunction…|PubMed|2026-04-01|-|1| \n|PMID 41892332|Calcific Aortic Valve Disease: Mechanism and Future Therapeu…|PubTator3|2026-03-18|-|none| \n|PMID 41831086|Pharmacologic Treatment of Metabolic Dysfunction-Associated…|PubTator3|2026-03-14|-|none| \n|PMID 41874055|Effectiveness of SGLT2 Inhibitors in Type 2 Diabetes: A Syst…|PubTator3|2026-03-12|-|none| \n \n \n \nNewest indexed: 2026-10-21 (13 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42898635\n  biomcp search article --drug metformin -k \"cardiovascular MACE mortality\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

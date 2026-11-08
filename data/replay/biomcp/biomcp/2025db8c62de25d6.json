@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search pathway --query \"ERBB2 signaling\" --limit 10 --json",
+    "json": true
+  },
+  "args_key": "2025db8c62de25d6aff76cbb748a8622b056fba4207b582666204da76b7820f7",
+  "recorded_at": "2026-11-03T10:58:28.282768+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 1320.4048000043258,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 4,\n    \"total\": 4,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 4,\n  \"results\": [\n    {\n      \"source\": \"Reactome\",\n      \"id\": \"R-HSA-8863795\",\n      \"name\": \"Downregulation of ERBB2 signaling\"\n    },\n    {\n      \"source\": \"Reactome\",\n      \"id\": \"R-HSA-1251932\",\n      \"name\": \"PLCG1 events in ERBB2 signaling\"\n    },\n    {\n      \"source\": \"Reactome\",\n      \"id\": \"R-HSA-1963642\",\n      \"name\": \"PI3K events in ERBB2 signaling\"\n    },\n    {\n      \"source\": \"Reactome\",\n      \"id\": \"R-HSA-1306955\",\n      \"name\": \"GRB7 events in ERBB2 signaling\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get pathway R-HSA-8863795\",\n      \"biomcp list pathway\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

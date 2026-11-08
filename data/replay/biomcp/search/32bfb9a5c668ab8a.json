@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR exon 20 insertion",
+      "NSCLC"
+    ],
+    "limit": 15,
+    "sort": "relevance"
+  },
+  "args_key": "32bfb9a5c668ab8afca0c225e49fd3f7b061155a20df6f20f9bd49412643e287",
+  "recorded_at": "2026-11-03T13:59:06.638841+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4110.463400022127,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR exon 20 insertion NSCLC, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR exon 20 insertion NSCLC\" --exclude-retracted --sort relevance --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 31122566|Paraneoplastic Hypomyopathic Dermatomyositis Associated With…|Europe PMC|2019-06-01|hybrid 0.43 + title 3/5|4| \n|PMID 36738930|Distribution and Detectability of EGFR Exon 20 Insertion Var…|PubTator3|2023-02-03|hybrid 0.39 + title 5/5|none| \n|PMID 42239888|Paired ctDNA analysis reveals diverse resistance mechanisms…|Europe PMC|2026-05-19|hybrid 0.39 + title 5/5|0| \n|PMID 42238296|Sunvozertinib in EGFR Exon 20 Insertion NSCLC: Approved but…|Europe PMC|2026-05-28|hybrid 0.38 + title 5/5|0| \n|PMID 42212913|First-Line Sunvozertinib in NSCLC with EGFR Exon 20 Insertio…|PubTator3|2026-05-29|hybrid 0.37 + title 5/5|none| \n|PMID 41732005|Sunvozertinib A Next-Generation EGFR Exon 20 Insertion Inhib…|PubTator3|2026-02-24|hybrid 0.35 + title 5/5|none| \n|PMID 34381206|Amivantamab is effective in NSCLC harbouring EGFR exon 20 in…|PubTator3|2021-10-01|hybrid 0.32 + title 4/5|none| \n|PMID 35882108|Optimizing diagnosis and treatment of EGFR exon 20 insertion…|PubTator3|2022-09-01|hybrid 0.3 + title 4/5|none| \n|PMID 37870976|Amivantamab plus Chemotherapy in NSCLC with EGFR Exon 20 Ins…|PubTator3|2023-10-21|hybrid 0.28 + title 4/5|none| \n|PMID 42756698|Correction: Case Report: Exceptional survival with immunothe…|Europe PMC|2026-09-03|hybrid 0.28 + title 4/5|0| \n|PMID 42789311|Structure-based rational design and biological evaluation of…|Europe PMC, PubMed|2026-09-25|hybrid 0.28 + title 4/5|0| \n|PMID 42735369|P-Loop/αC-Helix Compressing Mutations and Exon 20 Insertion…|PubMed|2026-09-14|hybrid 0.26 + title 4/5|0| \n|PMID 42762608|Beyond Exons 19 and 21: mapping the clinical and molecular d…|PubMed|2026-09-19|hybrid 0.16 + title 2/5|0| \n|PMID 42776017|FIN-EGFR: real-world treatment outcomes by EGFR mutational s…|Europe PMC|2026-09-23|hybrid 0.14 + title 2/5|0| \n|PMID 42842004|Contemporary Chemotherapy Benchmarks for Molecularly Defined…|PubMed|2026-10-07|hybrid 0.12 + title 1/5|0| \n \n \n \nNewest indexed: 2026-10-07 (27 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 31122566\n  biomcp search article -k \"EGFR exon 20 insertion NSCLC\" --year-min 2019 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

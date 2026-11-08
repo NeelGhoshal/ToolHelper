@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "limit": 5,
+    "keyword": [
+      "2025 AHA/ACC Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults"
+    ]
+  },
+  "args_key": "93af4c764324c3375297582dea5c11b51ce57e7bfac9394f1edb71b253adefaa",
+  "recorded_at": "2026-11-04T20:33:23.777587+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2395.9376999998767,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=2025 AHA/ACC Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42265997|2026 AHA/ACC/ADA/ASN Guideline for the Prevention, Detection…|PubMed|2026-06-09|hybrid 0.484 + title+abstract 13/16|110| \n|PMID 40811519|Implementing the PREVENT Risk Equation in the 2025 Guideline…|Semantic Scholar|2025|hybrid 0.468 + title 15/16|19| \n|PMID 40811494|A trans-Atlantic perspective on the 2025 AHA/ACC Guidelines…|Semantic Scholar|2025|hybrid 0.437 + title 15/16|5| \n|PMID 42263157|2026 AHA/ACC/ADA/ASN Guideline for the Prevention, Detection…|PubMed|2026-07-28|hybrid 0.414 + title+abstract 13/16|33| \n|PMID 42907045|KDOQI Commentary on the 2025 AHA/ACC Guideline for the Preve…|PubTator3, Europe PMC, PubMed|2026-11-01|hybrid 0.403 + title 16/16|1| \n \n \n \nNewest indexed: 2026-06-10 (147 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42265997\n  biomcp search article -k \"2025 AHA/ACC Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults\" --year-min 2025 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

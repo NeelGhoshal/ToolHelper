@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "I10",
+    "max_results": 5,
+    "omop_field": "condition_concept_id",
+    "omop_table": "condition_occurrence"
+  },
+  "args_key": "ae1e196d9618b9dd9d29b0ce63c357c4f23e55ae49f2d8b1a9e40018b3b4f9fa",
+  "recorded_at": "2026-11-05T04:59:24.969880+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 481.9798999997147,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 4158044,\n      \"code\": \"272955001\",\n      \"name\": \"KI10\",\n      \"class\": \"Body Structure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Spec Anatomic Site\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4158044\"\n    },\n    {\n      \"concept_id\": 4155669,\n      \"code\": \"272767008\",\n      \"name\": \"LI10\",\n      \"class\": \"Body Structure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Spec Anatomic Site\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4155669\"\n    },\n    {\n      \"concept_id\": 4165962,\n      \"code\": \"272867003\",\n      \"name\": \"SI10\",\n      \"class\": \"Body Structure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Spec Anatomic Site\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4165962\"\n    },\n    {\n      \"concept_id\": 35810700,\n      \"code\": \"5699\",\n      \"name\": \"FI10 : arithmetic sequence recognition\",\n      \"class\": \"Question\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"UK Biobank\",\n      \"url\": \"https://omophub.com/concepts/35810700\"\n    },\n    {\n      \"concept_id\": 35811061,\n      \"code\": \"20183\",\n      \"name\": \"FI10 : arithmetic sequence recognition\",\n      \"class\": \"Question\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"UK Biobank\",\n      \"url\": \"https://omophub.com/concepts/35811061\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"I10\",\n    \"omop_table\": \"condition_occurrence\",\n    \"omop_field\": \"condition_concept_id\",\n    \"total_found\": 5,\n    \"candidates_returned\": 5,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

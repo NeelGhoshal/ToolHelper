@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "BRAF V600E mutant melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25
+  },
+  "args_key": "02b0372a62df6306623124d9c0379622f3b9ed2b10f2fa57e6c9bf423f8f936b",
+  "recorded_at": "2026-11-03T05:33:27.985629+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 247.29139998089522,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 12 of 12 \n \nQuery: condition=BRAF V600E mutant melanoma \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT06887088|Encorafenib and biNimetin…|RECRUITING|2|Melanoma BRAF V600E/K Mutated, Melanoma and Brain Metastases| \n|NCT02196181|Testing Two Different Tre…|ACTIVE_NOT_RECRUITING|2|Stage III Cutaneous Melanoma AJCC v7, Stage IV… [abridged; 3 conditions total]| \n|NCT01245062|GSK1120212 vs Chemotherap…|COMPLETED|3|Melanoma| \n|NCT01584648|A Study Comparing Trameti…|COMPLETED|3|Melanoma| \n|NCT01689519|A Study Comparing Vemuraf…|COMPLETED|3|Malignant Melanoma| \n|NCT01909453|Study Comparing Combinati…|COMPLETED|3|Melanoma| \n|NCT05003622|Phase 1 Safety Study of E…|COMPLETED|1|BRAF V600E Unresectable or Metastatic Melanoma… [abridged; 3 conditions total]| \n|NCT06208124|A Study of IMM-6-415 in R…|COMPLETED|1/2|Advanced Solid Tumor (Phase 1), Pancreas Adeno… [abridged; 4 conditions total]| \n|NCT02427893|Trial of Vemurafenib and…|WITHDRAWN|3|Melanoma| \n|NCT01940809|Ipilimumab With or Withou…|TERMINATED|1|BRAF V600E Mutation Present, BRAF V600K Mutati… [abridged; 8 conditions total]| \n|NCT02097225|Onalespib, Dabrafenib, an…|TERMINATED|1|BRAF V600E Mutation Present, BRAF V600K Mutat… [abridged; 10 conditions total]| \n|NCT03878719|Study of the Combination…|TERMINATED|1|Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-12 of 12 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

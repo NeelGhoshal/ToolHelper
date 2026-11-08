@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "mutation": [
+      "BRAF V600"
+    ],
+    "offset": 75
+  },
+  "args_key": "1e331b885eed6d7094d9cf3293535718b6dbb5861c669644c813820c30c82a2b",
+  "recorded_at": "2026-11-05T04:34:02.500720+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 14980.650800000149,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 25 trial(s) \n \nQuery: condition=melanoma, mutation=BRAF V600, offset=75 \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT04903119|Nilotinib Plus Dabrafenib…|RECRUITING|1|Metastatic Melanoma, BRAF Gene Mutation| \n|NCT06425926|Safety and Tolerability S…|RECRUITING|1/2|Melanoma Stage IV, Solid Tumor| \n|NCT07870265|Detection of the BRAF V60…|RECRUITING|NA|Unresectable Metastatic Melanoma| \n|NCT02231775|Dabrafenib and Trametinib…|ACTIVE_NOT_RECRUITING|2|Stage IIIB Cutaneous Melanoma AJCC v7, Stage IIIC Cutaneous Melanoma AJCC v7| \n|NCT04074096|Binimetinib Encorafenib P…|ACTIVE_NOT_RECRUITING|2|Malignant Melanoma, BRAF V600 Mutation, Brain Metastases| \n|NCT07022457|UK ENcorafenib and BInime…|ACTIVE_NOT_RECRUITING|-|Metastatic Melanoma, BRAF V600 Mutation Positive| \n|NCT05275374|XP-102 and XP-102 in Comb…|NOT_YET_RECRUITING|1/2|Cancer, BRAF V600 Mutation, Melanoma, Colorect… [abridged; 6 conditions total]| \n|NCT01378975|A Study of Vemurafenib in…|COMPLETED|2|Malignant Melanoma| \n|NCT01765569|A Pharmacokinetics Study…|COMPLETED|1|Malignant Melanoma, Neoplasms| \n|NCT01902173|Uprosertib, Dabrafenib, a…|COMPLETED|1/2|Hematopoietic and Lymphoid Cell Neoplasm, Loca… [abridged; 9 conditions total]| \n|NCT01909453|Study Comparing Combinati…|COMPLETED|3|Melanoma| \n|NCT02308553|Efficacy and Safety of Ni…|COMPLETED|1/2|Cutaneous Malignant Melanoma| \n|NCT03139513|A Study of Adult Particip…|COMPLETED|-|Melanoma| \n|NCT03820986|Safety and Efficacy Study…|COMPLETED|3|Malignant Melanoma| \n|NCT05479812|Dose Escalation and Expan…|COMPLETED|1|Metastatic Solid Tumor, Advanced Solid Tumor| \n|NCT05668585|A Study to Characterize t…|COMPLETED|1|Solid Tumors, Melanoma, NSCLC, CRC, ATC| \n|NCT06151847|Lifileucel With Reduced D…|COMPLETED|2|Clinical Stage IV Cutaneous Melanoma AJCC v8,… [abridged; 4 conditions total]| \n|NCT01614301|Phase I and Consecutive P…|UNKNOWN|1/2|Advanced Melanoma| \n|NCT02036086|Study of Neo-adjuvant Use…|UNKNOWN|2|Melanoma| \n|NCT04125719|PVSRIPO in Combination Wi…|WITHDRAWN|1|Melanoma| \n|NCT02723006|Study to Evaluate the Saf…|TERMINATED|1|Melanoma| \n|NCT03480152|Messenger RNA (mRNA)-Base…|TERMINATED|1/2|Melanoma, Colon Cancer, Gastrointestinal Cance… [abridged; 5 conditions total]| \n|NCT04375527|Binimetinib and Nivolumab…|TERMINATED|2|Clinical Stage III Cutaneous Melanoma AJCC V8… [abridged; 11 conditions total]| \n|NCT04543188|A FIH Study of PF-0728489…|TERMINATED|1|Malignant Melanoma, Carcinoma, Non-Small-Cell… [abridged; 5 conditions total]| \n|NCT05764395|Rigosertib Plus Pembroliz…|TERMINATED|2|Clinical Stage III Cutaneous Melanoma AJCC v8,… [abridged; 5 conditions total]| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 25 results (total unknown). Use --offset 100 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

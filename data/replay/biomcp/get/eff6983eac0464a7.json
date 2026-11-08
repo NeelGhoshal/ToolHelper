@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "PDGFRA",
+    "json": true
+  },
+  "args_key": "eff6983eac0464a79c49aea914116b7df92f651783f725b12e4aaa92de3380df",
+  "recorded_at": "2026-11-03T19:51:13.718309+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 490.4736999887973,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"NCBI Gene\",\n        \"url\": \"https://www.ncbi.nlm.nih.gov/gene/5156\"\n      },\n      {\n        \"label\": \"UniProt\",\n        \"url\": \"https://www.uniprot.org/uniprot/P16234\"\n      },\n      {\n        \"label\": \"Ensembl\",\n        \"url\": \"https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000134853\"\n      },\n      {\n        \"label\": \"OMIM\",\n        \"url\": \"https://www.omim.org/entry/173490\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get gene PDGFRA pathways\",\n      \"biomcp get gene PDGFRA ontology\",\n      \"biomcp get gene PDGFRA diseases\",\n      \"biomcp get gene PDGFRA diagnostics\",\n      \"biomcp search diagnostic --gene PDGFRA\",\n      \"biomcp search pgx -g PDGFRA\",\n      \"biomcp search variant -g PDGFRA\",\n      \"biomcp search article -g PDGFRA\",\n      \"biomcp search drug --target PDGFRA\",\n      \"biomcp gene trials PDGFRA\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"identity\",\n        \"label\": \"Identity\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"NCBI Gene / MyGene.info\"\n        ]\n      },\n      {\n        \"key\": \"summary\",\n        \"label\": \"Summary\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"NCBI Gene\"\n        ]\n      },\n      {\n        \"key\": \"aliases\",\n        \"label\": \"Aliases\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"NCBI Gene / MyGene.info\"\n        ]\n      }\n    ],\n    \"suggestions\": [\n      \"biomcp search diagnostic --gene PDGFRA\",\n      \"biomcp search pgx -g PDGFRA\",\n      \"biomcp search variant -g PDGFRA\",\n      \"biomcp search article -g PDGFRA\",\n      \"biomcp search drug --target PDGFRA\",\n      \"biomcp gene trials PDGFRA\"\n    ],\n    \"workflow\": \"mechanism-pathway\",\n    \"workflow_playbook\": \"biomcp skill mechanism-pathway\",\n    \"workflow_rationale\": \"Orient from a mechanism-relevant drug to target and pathway context, then confirm the disease mechanism in review literature.\"\n  },\n  \"aliases\": [\n    \"CD140A\",\n    \"PDGFR2\"\n  ],\n  \"clinical_diseases\": [\n    \"gastrointestinal stromal tumor\",\n    \"GIST-plus syndrome\",\n    \"neoplasm\",\n    \"acute myeloid leukemia\",\n    \"cancer\"\n  ],\n  \"clinical_drugs\": [\n    \"SU-014813\",\n    \"FAMITINIB\",\n    \"TAK-593\",\n    \"CEDIRANIB\",\n    \"OLARATUMAB\"\n  ],\n  \"ensembl_id\": \"ENSG00000134853\",\n  \"entrez_id\": \"5156\",\n  \"gene_type\": \"protein-coding\",\n  \"genomic_coordinates\": {\n    \"coordinate\": \"4:54229130-54298246 (strand: 1)\",\n    \"genome_build\": \"GRCh38\",\n    \"provenance\": \"MyGene.info provider default\",\n    \"source\": \"MyGene.info\"\n  },\n  \"location\": \"4\",\n  \"name\": \"platelet derived growth factor receptor alpha\",\n  \"omim_id\": \"173490\",\n  \"section_outcomes\": {\n    \"civic\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"clingen\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"constraint\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"diagnostics\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"diseases\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"disgenet\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"druggability\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"expression\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"funding\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"gencc\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"go\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"hpa\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"interactions\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"ontology\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"pathways\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"protein\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    }\n  },\n  \"summary\": \"This gene encodes a cell surface tyrosine kinase receptor for members of the platelet-derived growth factor family. These growth factors are mitogens for cells of mesenchymal origin.\",\n  \"symbol\": \"PDGFRA\",\n  \"uniprot_id\": \"P16234\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

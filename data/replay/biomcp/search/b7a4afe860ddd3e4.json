@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "research-article",
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "incident dementia",
+      "hazard ratio"
+    ],
+    "limit": 15,
+    "sort": "citations",
+    "source": "pubmed"
+  },
+  "args_key": "b7a4afe860ddd3e431f6b46bfd828883fb016bda3dad8de5d376db5b3a07267d",
+  "recorded_at": "2026-11-03T07:38:48.272511+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3975.270399998408,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin incident dementia hazard ratio, type=research-article, exclude_retracted=true, sort=citations, source=pubmed \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 15 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42971235|Efficacy and safety of statin discontinuation in patients 65…|PubMed|2027-09-21|-|none| \n|PMID 42670961|Atorvastatin, Cardiovascular Events, and Disability-free Sur…|PubMed|2026-10-01|-|none| \n|PMID 42546862|Neurocognitive outcomes and survival with high- vs low-inten…|PubMed|2026-09-01|-|none| \n|PMID 42522377|Dementia Risk With Combined Statin and Antihypertensive Drug…|PubMed|2026-08-01|-|none| \n|PMID 41243816|Statin Use Is Not Associated With Reduced Cardio- and Cerebr…|PubMed|2026-02-01|-|none| \n|PMID 41583365|Association between statin use and risk of incident cancer i…|PubMed|2026-01-12|-|none| \n|PMID 40577672|Statin Initiation and Dementia Incidence in a Large Health C…|PubMed|2025-07-22|-|none| \n|PMID 39688136|Risk of long-term post-stroke dementia using a linked datase…|PubMed|2025-06-01|-|none| \n|PMID 40317408|Uncertainty in the estimated effects of statin initiation on…|PubMed|2025-04-01|-|none| \n|PMID 40156267|Sociodemographic modifiers of effects of statin initiation o…|PubMed|2025-03-01|-|none| \n|PMID 39963242|The role of statins in dementia or Alzheimer's disease incid…|PubMed|2025-02-03|-|none| \n|PMID 39863334|Association of statins use and genetic susceptibility with i…|PubMed|2025-02-01|-|none| \n|PMID 39364911|Relationships Between APOE, Type 2 Diabetes, and Cardiovascu…|PubMed|2025-01-16|-|none| \n|PMID 39068948|Association of remnant cholesterol with risk of dementia: a…|PubMed|2024-08-01|-|none| \n|PMID 38471056|Statin Therapy for Secondary Prevention in Ischemic Stroke P…|PubMed|2024-04-09|-|none| \n \n \n \nNewest indexed: 2026-11-02 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42971235\n  biomcp search article -k \"statin incident dementia hazard ratio\" --type research-article --source pubmed --year-min 2024 --year-max 2027 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-15 of 78 results. Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

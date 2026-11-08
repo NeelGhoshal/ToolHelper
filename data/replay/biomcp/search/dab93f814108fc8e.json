@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "Combined dabrafenib and trametinib versus vemurafenib BRAF-mutant melanoma Long"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "dab93f814108fc8e0f06f3628a7365a9500b5759eade98a892fad421458d596a",
+  "recorded_at": "2026-11-03T23:56:15.872259+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 12221.13870002795,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=Combined dabrafenib and trametinib versus vemurafenib BRAF-mutant melanoma Long, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubTator3 source status: degraded (PubTator3 timed out after 12s) \nRetry: `biomcp search article --keyword \"Combined dabrafenib and trametinib versus vemurafenib BRAF-mutant melanoma Long\" --exclude-retracted --sort citations --source pubtator --limit 5 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"Combined dabrafenib and trametinib versus vemurafenib BRAF-mutant melanoma Long\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 26027431|Combined Nivolumab and Ipilimumab or Monotherapy in Untreate…|Europe PMC|2015-05-31|-|6157| \n|PMID 28889792|Overall Survival with Combined Nivolumab and Ipilimumab in A…|Europe PMC|2017-09-11|-|2911| \n|PMID 26091043|Genomic Classification of Cutaneous Melanoma.|Europe PMC|2015-06-01|-|2588| \n|PMID 23020132|Combined BRAF and MEK inhibition in melanoma with BRAF V600…|Europe PMC|2012-09-29|-|2141| \n|PMID 25323927|Drugging the undruggable RAS: Mission possible?|Europe PMC|2014-10-17|-|1659| \n \n \n \nNewest indexed: 2017-09-11 (3340 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 26027431\n  biomcp search article -k \"Combined dabrafenib and trametinib versus vemurafenib BRAF-mutant melanoma Long\" --year-min 2012 --year-max 2017 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

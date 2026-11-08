@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "melanoma"
+    ],
+    "intervention": [
+      "vemurafenib",
+      "dabrafenib"
+    ],
+    "json": true,
+    "limit": 10
+  },
+  "args_key": "e76f53a8900de7f36f747a66fb20440286a867184476b36c1af0db61b2583f6a",
+  "recorded_at": "2026-11-04T06:48:35.264719+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1335.2109999395907,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 1,\n    \"total\": 1,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 1,\n  \"results\": [\n    {\n      \"nct_id\": \"NCT01519427\",\n      \"title\": \"Selumetinib and Akt Inhibitor MK2206 in Treating Patients With Stage III or Stage IV Melanoma Who Failed Prior Therapy With Vemurafenib or Dabrafenib\",\n      \"status\": \"TERMINATED\",\n      \"phase\": \"PHASE2\",\n      \"conditions\": [\n        \"Recurrent Melanoma\",\n        \"Stage IIIA Melanoma\",\n        \"Stage IIIB Melanoma\",\n        \"Stage IIIC Melanoma\",\n        \"Stage IV Melanoma\"\n      ],\n      \"sponsor\": \"National Cancer Institute (NCI)\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get trial NCT01519427\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

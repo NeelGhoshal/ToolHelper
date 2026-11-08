@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "trial",
+    "id": "NCT07130032",
+    "sections": [
+      "arms"
+    ]
+  },
+  "args_key": "524983e853f34e35e91654e25f158756444b6f16565bb2fa0fc4dd3c19766b3d",
+  "recorded_at": "2026-11-03T13:48:24.850241+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 137.08610000321642,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# NCT07130032 - arms \n## Arms (ClinicalTrials.gov) \n \n| Arm | Type | Interventions | Description | \n|---|---|---|---| \n| NSCLC (n=60) | EXPERIMENTAL | reICB regimen (NSCLC) | The cohort of individuals with metastatic NSCLC will be trea… | \n| melanoma (n=30) | EXPERIMENTAL | reICB regimen (melanoma) | The cohort of individuals with metastatic cutaneous melanoma… | \nMore:\n  biomcp get trial NCT07130032 eligibility   - inclusion and exclusion criteria\n  biomcp get trial NCT07130032 contacts   - central and site contact details\n  biomcp get trial NCT07130032 locations   - site list and contact details\nAll:\n  biomcp get trial NCT07130032 all \nSee also:\n  biomcp search disease --query \"Metastatic Non-small Cell Lung Cancer (NSCLC)\"\n  biomcp search article -d \"Metastatic Non-small Cell Lung Cancer (NSCLC)\"\n  biomcp search trial -c \"Metastatic Non-small Cell Lung Cancer (NSCLC)\"\n  biomcp search drug -q \"reICB regimen (NSCLC)\"\n  biomcp drug trials \"reICB regimen (NSCLC)\" \n\n[ClinicalTrials.gov](https://clinicaltrials.gov/study/NCT07130032)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

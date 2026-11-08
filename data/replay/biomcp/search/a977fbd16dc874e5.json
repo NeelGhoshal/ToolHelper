@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "DESTINY-Breast09",
+      "first-line HER2-positive metastatic breast cancer"
+    ],
+    "limit": 5,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "a977fbd16dc874e57d1e6d782df890415f1f8f9a225056962162fddcc2be26a3",
+  "recorded_at": "2026-11-03T10:57:59.586422+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 469.8377000167966,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=DESTINY-Breast09 first-line HER2-positive metastatic breast cancer, exclude_retracted=true, sort=date, source=pubmed\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": false,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubmed\"\n    ],\n    \"enrichment_sources\": []\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": 9,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 5,\n  \"results\": [\n    {\n      \"pmid\": \"42596749\",\n      \"title\": \"Antibody-drug conjugates in breast cancer: the first-line and curative setting.\",\n      \"journal\": \"Current opinion in oncology\",\n      \"date\": \"2026-11-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42957090\",\n      \"title\": \"[Anti-HER2 tyrosine kinase inhibitors in the management of brain metastases from HER2-positive breast cancer: the role of the community pharmacist].\",\n      \"journal\": \"Annales pharmaceutiques francaises\",\n      \"date\": \"2026-10-29\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42810229\",\n      \"title\": \"Tucatinib, trastuzumab, and capecitabine as second- or third-line therapy after trastuzumab deruxtecan in HER2-positive metastatic breast cancer: A multicenter retrospective study in France.\",\n      \"journal\": \"Breast (Edinburgh, Scotland)\",\n      \"date\": \"2026-09-29\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42724828\",\n      \"title\": \"Trastuzumab deruxtecan plus pertuzumab in first-line HER2-positive advanced/metastatic breast cancer.\",\n      \"journal\": \"Translational cancer research\",\n      \"date\": \"2026-08-31\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42677694\",\n      \"title\": \"Trastuzumab deruxtecan plus pertuzumab as a substantial advancement in previously untreated patients with HER2-positive metastatic breast cancer.\",\n      \"journal\": \"European review for medical and pharmacological sciences\",\n      \"date\": \"2026-08-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42596749\",\n      \"biomcp search article -k \\\"DESTINY-Breast09 first-line HER2-positive metastatic breast cancer\\\" --source pubmed --year-min 2026 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

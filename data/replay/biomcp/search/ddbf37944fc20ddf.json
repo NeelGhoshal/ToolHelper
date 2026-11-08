@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E",
+      "resistance",
+      "2024"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "ddbf37944fc20ddf870fadd0819f4067619371abce8c94be5becd6ecd0fd318e",
+  "recorded_at": "2026-11-04T00:02:04.886533+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6200.478099985048,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E resistance 2024, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E resistance 2024\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41560593|Killing cancer takes guts: lessons learned from the manipula…|PubTator3, Europe PMC|2026-12-31|-|2| \n|PMID 41534849|Mitogen-activated protein kinase kinase 4 (MKK4) as a promis…|PubTator3, Europe PMC|2026-12-01|-|0| \n|PMID 41630477|A data-driven cartography of NSCLC vaccine research: Quantif…|PubTator3, Europe PMC|2026-12-01|-|0| \n|PMID 42502958|Targeting molecular and genetic pathways driving tumorigenes…|Europe PMC|2026-07-26|-|0| \n|PMID 42959434|Targeting minimal residual disease (MRD) in colorectal cance…|Europe PMC|2026-07-23|-|0| \n|PMID 42298353|Gut microbial markers of immunotherapy response in melanoma:…|Europe PMC|2026-06-15|-|0| \n|PMID 42127111|ICMT supports BRAF(V600E)-driven tumor growth by membrane ta…|PubMed|2026-05-19|-|0| \n|PMID 42202477|Osimertinib plus selumetinib in patients with EGFR-mutated a…|PubTator3, PubMed|2026-05-18|-|0| \n|PMID 42761382|Influence of oncogenic drivers and signaling pathways on imm…|Europe PMC|2026-05-12|-|0| \n|PMID 41677963|Safety and Efficacy of Triple Therapy Containing Encorafenib…|PubMed|2026-02-12|-|0| \n \n \n \nNewest indexed: 2026-10-31 (4 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41560593\n  biomcp search article -k \"BRAF V600E resistance 2024\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

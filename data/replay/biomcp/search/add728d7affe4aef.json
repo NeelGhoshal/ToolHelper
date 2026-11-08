@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "HER2-targeted therapy",
+      "breast cancer"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "add728d7affe4aef3cb0cfc9bcbad62e2f95c999905384999437cb0261b92a60",
+  "recorded_at": "2026-11-03T23:57:22.517740+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6161.5422000177205,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=HER2-targeted therapy breast cancer, exclude_retracted=true, sort=date\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"41427517\",\n      \"pmcid\": \"PMC12724104\",\n      \"title\": \"Polymersome-based nanomedicine for combined cancer therapy\",\n      \"journal\": \"Drug Deliv\",\n      \"date\": \"2026-12-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41530924\",\n      \"pmcid\": \"PMC12818823\",\n      \"title\": \"Multi-platform analysis of the tumor immune microenvironment associated with breast cancer subtypes\",\n      \"journal\": \"Oncoimmunology\",\n      \"date\": \"2026-12-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41837409\",\n      \"pmcid\": \"PMC12998029\",\n      \"title\": \"The role of copper and cuproptosis in digestive system cancers: novel therapeutic strategies and mechanistic insights\",\n      \"journal\": \"Cancer Biol Ther\",\n      \"date\": \"2026-12-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41866709\",\n      \"pmcid\": \"PMC13011097\",\n      \"title\": \"Extracellular payload release from non-internalizing antibody-drug conjugates: mechanisms and linker technologies\",\n      \"journal\": \"Drug Deliv\",\n      \"date\": \"2026-12-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42974371\",\n      \"title\": \"Affibody-based approaches as potential therapeutics for breast cancer: mechanisms, applications, and future perspectives.\",\n      \"journal\": \"Cell investigation\",\n      \"date\": \"2026-12-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42970013\",\n      \"title\": \"Super-enhancers: regulatory mechanisms, biological functions, diseases, and therapeutic targets.\",\n      \"journal\": \"Molecular biomedicine\",\n      \"date\": \"2026-11-02\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42971167\",\n      \"title\": \"A Nationwide Study of Interobserver Agreement and Accuracy in HER2 Immunohistochemistry and the Impact of Artificial Intelligence on HER2 Interpretation.\",\n      \"journal\": \"Cancer research and treatment\",\n      \"date\": \"2026-11-02\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42973798\",\n      \"title\": \"The neuro-metabolic-immune axis in breast cancer: emerging mechanisms and subtype-specific therapeutic opportunities.\",\n      \"journal\": \"Frontiers in immunology\",\n      \"date\": \"2026-10-19\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42921130\",\n      \"pmcid\": \"PMC13693332\",\n      \"doi\": \"10.1016/j.ctro.2026.101324\",\n      \"title\": \"The value of breast brachytherapy boost in the current era: a narrative literature review from the GEC-ESTRO breast cancer working group.\",\n      \"journal\": \"Clin Transl Radiat Oncol\",\n      \"date\": \"2026-10-11\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42927325\",\n      \"pmcid\": \"PMC13695302\",\n      \"doi\": \"10.1016/j.ctro.2026.101310\",\n      \"title\": \"Timing of cranial radiotherapy in HER2-positive breast Cancer brain metastases treated with Pyrotinib: a multicentre real-world cohort study.\",\n      \"journal\": \"Clin Transl Radiat Oncol\",\n      \"date\": \"2026-10-07\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"HER2-targeted therapy breast cancer\\\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0\",\n      \"biomcp get article 41427517\",\n      \"biomcp search article -k \\\"HER2-targeted therapy breast cancer\\\" --year-min 2026 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

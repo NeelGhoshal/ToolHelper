@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "gene": "EGFR",
+    "hgvsp": "p.Thr790Met",
+    "limit": 5
+  },
+  "args_key": "3806921835d76443625276949cd2d534a8d77221bf8f867bdb45ba296f93f836",
+  "recorded_at": "2026-11-03T20:27:12.850965+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 249.1437999997288,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Requested variant: EGFR p.Thr790Met\n\nVariant identity: resolved\n\n# Variant Search Results \n \nFound: 1 variant(s) \nQuery: gene=EGFR, hgvsp=T790M \n \n \n## Filter evaluation \n \ngene: evaluated \n \nhgvsp: evaluated \n \n \n \n| ID | Build | Gene | Transcript | Coding | Protein | Legacy Name | Significance | ClinVar Stars | gnomAD AF | REVEL | GERP | \n|---|---|---|---|---|---|---|---|---|---|---|---| \n| chr7:g.55249071C>T | GRCh37 | EGFR | NM_005228.5 | c.2369C>T | p.Thr790Met | EGFR T790M | Pathogenic | 3 | 0.000027837 | 0.529 | 5.92 | \n \n \nUse `get variant <id>` for details. \nSignificance is the most severe ClinVar RCV classification in MyVariant.info's cached copy; run `get variant <id> clinvar` for the current NCBI ClinVar record-level classification. \nFilters: -g <gene>, --hgvsp <protein>, --significance <value>, --max-frequency <0-1>, --min-cadd <score>, --consequence <term>, --review-status <stars>, --population <pop>, --revel-min <score>, --gerp-min <score>, --tumor-site <site>, --condition <name>, --impact <level>, --lof, --has <field>, --missing <field>, --therapy <name> \n \n \nSee also:\n  biomcp get variant \"chr7:g.55249071C>T\"\n  biomcp get gene EGFR \n \n \n \nShowing 1 of 1 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

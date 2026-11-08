@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 10,
+    "query": "TP53 tumor suppressor cancer syndrome Li-Fraumeni"
+  },
+  "args_key": "394f60e729ddb47b568e7c34d62c875010bfc0219d6b9456743d3a92bcb074e2",
+  "recorded_at": "2026-11-04T20:49:13.418503+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1310.1116000000275,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: TP53 tumor suppressor cancer syndrome Li-Fraumeni \n \nFound 2 genes \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| TP53 | tumor protein p53 | 7157 | 17:7661779-7687546 | GRCh38 | P04637 | 191170 | \n| CHEK2 | checkpoint kinase 2 | 11200 | 22:28687738-28742422 | GRCh38 | O96017 | 604373 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1-2 of 2 results. \n \n\n\n## Next commands\n- `biomcp get gene TP53`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "BRAF V600E",
+    "max_results": 20,
+    "omop_field": "measurement_concept_id",
+    "omop_table": "measurement"
+  },
+  "args_key": "6ed7054081f2677fac132ca852c80f34bc9d7bf69a57650f71dc43324291ab60",
+  "recorded_at": "2026-11-03T20:17:10.214288+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 907.5570999993943,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 19596981,\n      \"code\": \"OMOP5509842\",\n      \"name\": \"BRAF protein: Substitution in position 600 of V replaced by E measurement\",\n      \"class\": \"Gene Protein Variant\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"OMOP Genomic\",\n      \"url\": \"https://omophub.com/concepts/19596981\"\n    },\n    {\n      \"concept_id\": 1133876,\n      \"code\": \"M1412\",\n      \"name\": \"Patients with metastatic nsclc with epidermal growth factor receptor (egfr) mutations, alk genomic tumor aberrations, or other targetable genomic abnormalities with approved first-line targeted therapy, such as nsclc with ros1 rearrangement, braf v600e...\",\n      \"class\": \"HCPCS\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"HCPCS\",\n      \"url\": \"https://omophub.com/concepts/1133876\"\n    },\n    {\n      \"concept_id\": 3654351,\n      \"code\": \"830150003\",\n      \"name\": \"Malignant melanoma with BRAF V600E mutation\",\n      \"class\": \"Disorder\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/3654351\"\n    },\n    {\n      \"concept_id\": 36204443,\n      \"code\": \"85299-6\",\n      \"name\": \"BRAF V600E mutant protein Ag [Presence] in Cancer specimen by Immune stain\",\n      \"class\": \"Lab Test\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/36204443\"\n    },\n    {\n      \"concept_id\": 1346630,\n      \"code\": \"85299-6|LA11882-0\",\n      \"name\": \"BRAF V600E mutant protein Ag [Presence] in Cancer specimen by Immune stain: Detected\",\n      \"class\": \"Precoordinated pair\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/1346630\"\n    },\n    {\n      \"concept_id\": 1346631,\n      \"code\": \"85299-6|LA11883-8\",\n      \"name\": \"BRAF V600E mutant protein Ag [Presence] in Cancer specimen by Immune stain: Not detected\",\n      \"class\": \"Precoordinated pair\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/1346631\"\n    },\n    {\n      \"concept_id\": 3661427,\n      \"code\": \"830195005\",\n      \"name\": \"Malignant melanoma with BRAF V600E mutation\",\n      \"class\": \"Morph Abnormality\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/3661427\"\n    },\n    {\n      \"concept_id\": 35661580,\n      \"code\": \"colon_rectum@3940@1\",\n      \"name\": \"Abnormal (mutated)/detected: BRAF V600E (c.1799T>A) mutation\",\n      \"class\": \"NAACCR Value\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Meas Value\",\n      \"vocab\": \"NAACCR\",\n      \"url\": \"https://omophub.com/concepts/35661580\"\n    },\n    {\n      \"concept_id\": 35661581,\n      \"code\": \"colon_rectum@3940@2\",\n      \"name\": \"Abnormal (mutated)/detected, but not BRAF V600E (c.1799T>A) mutation\",\n      \"class\": \"NAACCR Value\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Meas Value\",\n      \"vocab\": \"NAACCR\",\n      \"url\": \"https://omophub.com/concepts/35661581\"\n    },\n    {\n      \"concept_id\": 37078957,\n      \"code\": \"LP248009-5\",\n      \"name\": \"BRAF V600E mutant protein\",\n      \"class\": \"LOINC Component\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/37078957\"\n    },\n    {\n      \"concept_id\": 19504074,\n      \"code\": \"OMOP5414161\",\n      \"name\": \"BRAF protein: Frameshift substitution in position 600 of V replaced by E followed by a new reading frame extending for 11 amino acids measurement\",\n      \"class\": \"Gene Protein Variant\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"OMOP Genomic\",\n      \"url\": \"https://omophub.com/concepts/19504074\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"BRAF V600E\",\n    \"omop_table\": \"measurement\",\n    \"omop_field\": \"measurement_concept_id\",\n    \"total_found\": 11,\n    \"candidates_returned\": 11,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

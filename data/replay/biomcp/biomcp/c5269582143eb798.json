@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "get drug metformin --json",
+    "json": true
+  },
+  "args_key": "c5269582143eb7988128a64718aa9ccab0b8e37b913ac203a9cf66356c8c0767",
+  "recorded_at": "2026-11-04T05:49:33.175920+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 715.0351000018418,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"DrugBank\",\n        \"url\": \"https://go.drugbank.com/drugs/DB00331\"\n      },\n      {\n        \"label\": \"ChEMBL\",\n        \"url\": \"https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL1431\"\n      },\n      {\n        \"label\": \"OpenFDA FAERS\",\n        \"url\": \"https://api.fda.gov/drug/event.json?search=%28patient.drug.openfda.generic_name%3A%22metformin+er%22+OR+patient.drug.openfda.brand_name%3A%22metformin+er%22+OR+patient.drug.medicinalproduct%3A%22metformin+er%22%29+AND+patient.drug.drugcharacterization%3A1&count=patient.reaction.reactionmeddrapt.exact&limit=50\"\n      },\n      {\n        \"label\": \"DailyMed\",\n        \"url\": \"https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05999192-ebc6-4198-bd1e-f46abbfb4f8a\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get drug \\\"metformin er\\\" approvals\",\n      \"biomcp get drug \\\"metformin er\\\" label\",\n      \"biomcp get drug \\\"metformin er\\\" regulatory --region us\",\n      \"biomcp get drug \\\"metformin er\\\" all --region us\",\n      \"biomcp search article --drug \\\"metformin er\\\" --type review --limit 5\",\n      \"biomcp drug trials \\\"metformin er\\\"\",\n      \"biomcp drug adverse-events \\\"metformin er\\\"\",\n      \"biomcp search pgx -d \\\"metformin er\\\"\",\n      \"biomcp get gene MT-ND6\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"overview\",\n        \"label\": \"Overview\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"MyChem.info\"\n        ]\n      },\n      {\n        \"key\": \"fda_approved\",\n        \"label\": \"FDA Approved\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"DrugCentral\"\n        ]\n      },\n      {\n        \"key\": \"brand_names\",\n        \"label\": \"Brand Names\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"DrugBank\"\n        ]\n      },\n      {\n        \"key\": \"mechanisms\",\n        \"label\": \"Mechanisms\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"MyChem.info\",\n          \"ChEMBL\"\n        ]\n      },\n      {\n        \"key\": \"targets\",\n        \"label\": \"Targets\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"Open Targets\"\n        ]\n      }\n    ],\n    \"workflow\": \"pharmacogene-cumulative\",\n    \"workflow_playbook\": \"biomcp skill pharmacogene-cumulative\",\n    \"workflow_rationale\": \"Use the PGx search and detail surfaces before collecting literature for multi-gene drug-response evidence.\"\n  },\n  \"approval_date\": \"1995-03-03\",\n  \"approval_date_display\": \"March 3, 1995\",\n  \"approval_date_raw\": \"1995-03-03\",\n  \"approval_summary\": \"FDA approved on March 3, 1995\",\n  \"brand_names\": [\n    \"Metformin\"\n  ],\n  \"chembl_id\": \"CHEMBL1431\",\n  \"drug_type\": \"small-molecule\",\n  \"drugbank_id\": \"DB00331\",\n  \"indications\": [\n    \"Controlled ovarian stimulation\",\n    \"Diabetes mellitus type 2\",\n    \"Induction of ovulation in polycystic ovarian syndrome\",\n    \"Treatment Refractory Type 2 Diabetes Mellitus\"\n  ],\n  \"mechanism\": \"Sodium-Glucose Transporter 2 Inhibitors\",\n  \"mechanisms\": [\n    \"Sodium-Glucose Transporter 2 Inhibitors\"\n  ],\n  \"name\": \"metformin er\",\n  \"pharm_classes\": [\n    \"Sodium-Glucose Transporter 2 Inhibitors\",\n    \"Peroxisome Proliferator-activated Receptor alpha Agonists\",\n    \"Peroxisome Proliferator-activated Receptor gamma Agonists\",\n    \"Dipeptidyl Peptidase 4 Inhibitors\",\n    \"P-Glycoprotein Inhibitors\"\n  ],\n  \"route\": \"oral\",\n  \"section_outcomes\": {\n    \"approvals\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"cell_lines\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"civic\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indications\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"interactions\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"label\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"safety\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"targets\": {\n      \"outcome\": \"data\",\n      \"sources\": [\n        \"Open Targets\"\n      ]\n    }\n  },\n  \"targets\": [\n    \"MT-ND6\",\n    \"NDUFA10\",\n    \"NDUFS8\",\n    \"MT-ND4L\",\n    \"NDUFA6\",\n    \"MT-ND1\",\n    \"NDUFB6\",\n    \"COXFA4\",\n    \"NDUFA11\",\n    \"NDUFB7\",\n    \"MT-ND2\",\n    \"NDUFS2\"\n  ],\n  \"top_adverse_events\": [\n    \"NAUSEA\",\n    \"DIARRHOEA\",\n    \"BLOOD GLUCOSE INCREASED\"\n  ],\n  \"unii\": \"9100L32L2N\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

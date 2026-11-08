@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "TP53",
+    "json": true,
+    "limit": 10
+  },
+  "args_key": "3aef3ffa7ceb4a2728fee8bcfbab3eb3802de3c96d8545828a69055caa4ad423",
+  "recorded_at": "2026-11-03T20:02:51.803683+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 8190.481600002386,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=TP53, exclude_retracted=true, sort=relevance, ranking_mode=lexical, ranking_policy=calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position)\",\n  \"sort\": \"relevance\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"ranking_policy\": \"calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position)\",\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"42806154\",\n      \"doi\": \"10.1038/s44319-026-00941-y\",\n      \"title\": \"UHRF1 overexpression generates distinct senescent states with different Tp53 dependencies.\",\n      \"journal\": \"EMBO Rep\",\n      \"date\": \"2026-09-28\",\n      \"citation_count\": 2,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"36167255\",\n      \"title\": \"Irradiation potentiates p53 phosphorylation and p53 binding to the promoter and coding region of the TP53 gene.\",\n      \"journal\": \"Biochimie\",\n      \"date\": \"2023-01-01\",\n      \"citation_count\": 2,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"36197410\",\n      \"title\": \"TP53 or Not TP53: That Is the Question.\",\n      \"journal\": \"Clin Cancer Res\",\n      \"date\": \"2022-12-15\",\n      \"citation_count\": 1,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41407463\",\n      \"pmcid\": \"PMC12708943\",\n      \"title\": \"TP53\",\n      \"journal\": \"Zhonghua Xue Ye Xue Za Zhi\",\n      \"date\": \"2025-11-14\",\n      \"citation_count\": 0,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42432818\",\n      \"title\": \"p53 Immunohistochemistry Is a Reliable Method for Assessing TP53 Allelic and Functional Status in TP53-Mutated Cases.\",\n      \"journal\": \"Am J Hematol\",\n      \"date\": \"2026-07-10\",\n      \"citation_count\": 0,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42495799\",\n      \"pmcid\": \"PMC13725332\",\n      \"doi\": \"10.1158/1940-6207.capr-26-0112\",\n      \"title\": \"TP53-Mutated Preneoplastic Colonies, Adaptive Immune Response, and Risk for Lung Cancer and COPD.\",\n      \"journal\": \"Cancer Prev Res (Phila)\",\n      \"date\": \"2026-11-01\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42258702\",\n      \"doi\": \"10.1158/2159-8290.cd-25-0964\",\n      \"title\": \"A Pan-Cancer Single-Cell Analysis of Intratumoral Copy-Number Diversity and Evolution.\",\n      \"journal\": \"Cancer Discov\",\n      \"date\": \"2026-11-01\",\n      \"citation_count\": 1,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42832683\",\n      \"doi\": \"10.1073/pnas.2604393123\",\n      \"title\": \"Chronic cigarette smoke exposure induces distinct stem cell states driving genetic driver-specific non-small cell lung cancer subtypes.\",\n      \"journal\": \"Proc Natl Acad Sci U S A\",\n      \"date\": \"2026-10-05\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42975239\",\n      \"title\": \"Complement-driven NETosis mediates immunotherapy resistance in STK11-mutant lung adenocarcinoma.\",\n      \"journal\": \"Clinical cancer research : an official journal of the American Association for Cancer Research\",\n      \"date\": \"2026-11-03\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42974225\",\n      \"title\": \"Diffuse brainstem gliomas across the pediatric, adolescent, and adult age spectrum: Clinical and radiological features, molecular profile, and determinants of survival in a multicenter retrospective cohort of 42 patients.\",\n      \"journal\": \"Surgical neurology international\",\n      \"date\": \"2026-10-02\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --gene TP53 --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0\",\n      \"biomcp get article 42806154\",\n      \"biomcp search article -g TP53 --year-min 2022 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ],\n    \"notes\": [\n      \"PubTator 3 data served from cache, 14 h old (older than the provider's freshness window).\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

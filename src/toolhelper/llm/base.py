@@ -97,6 +97,10 @@ class ChatResult(BaseModel):
     # Options actually sent to the backend, and those the backend cannot honour.
     applied_options: dict[str, Any] = Field(default_factory=dict)
     ignored_options: list[str] = Field(default_factory=list)
+    # Transient API failures retried before this reply arrived, and the wall time from the
+    # first attempt to the reply when there were any (hosted backends only).
+    retries: int = 0
+    waited_s: float = 0.0
 
 
 def estimate_tokens(text: str) -> int:

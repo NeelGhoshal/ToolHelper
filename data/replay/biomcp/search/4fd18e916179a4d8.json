@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "dementia risk",
+      "cognitive"
+    ],
+    "limit": 20,
+    "sort": "date"
+  },
+  "args_key": "4fd18e916179a4d84257bbc6ac5a508694283d5e0673af7f1348d1dc7b787e19",
+  "recorded_at": "2026-11-03T09:16:18.466208+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 8119.774499966297,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin dementia risk cognitive, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"statin dementia risk cognitive\" --exclude-retracted --sort date --source semanticscholar --limit 20 --offset 0` \n \n \nFound 20 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41674015|Association between ultrafiltration variability and clinical…|PubTator3, Europe PMC|2026-12-01|-|1| \n|PMID 42903333|Association of statin use with reduced risk of Alzheimer's d…|PubMed|2026-10-06|-|0| \n|PMID 42854446|Allostatic load measurement and cognitive function among mid…|Europe PMC|2026-09-27|-|0| \n|PMID 42812463|Statin use and all-cause mortality in critically ill ischemi…|PubTator3, PubMed|2026-09-15|-|0| \n|PMID 42605781|Medication safety in older adults in India: an integrative P…|Europe PMC|2026-08-17|-|0| \n|PMID 42546862|Neurocognitive Outcomes and Survival with High- vs Low-Inten…|PubTator3, PubMed|2026-08-03|-|0| \n|PMID 42522377|Dementia Risk With Combined Statin and Antihypertensive Drug…|PubTator3, PubMed|2026-08-01|-|0| \n|PMID 42642765|Blood-brain barrier water permeability is elevated in type 2…|PubTator3, PubMed|2026-07-22|-|0| \n|PMID 42417034|The PREVENT Equations: Implications for Stroke Prevention|PubTator3|2026-07-08|-|none| \n|PMID 42332816|PCSK9 inhibitors do not increase cognitive risk.|PubTator3, PubMed|2026-06-22|-|0| \n|PMID 42261249|Clinical associations during the year before Parkinson's dis…|Europe PMC|2026-06-09|-|0| \n|PMID 42282203|Association of cognitive impairment with statin use in coron…|PubTator3|2026-06-04|-|none| \n|PMID 42252551|The Use of Statins in Parkinson's and Alzheimer's Disease: A…|PubMed|2026-06-01|-|2| \n|PMID 41870419|Effects of Exercise and Intensive Vascular Risk Reduction on…|PubMed|2026-05-01|-|4| \n|PMID 42046408|Diabetic cerebral microvascular disorder: from key pathologi…|Europe PMC|2026-04-27|-|2| \n|PMID 41761642|Alzheimer's disease in patients prescribed statins: A real-w…|PubMed|2026-04-01|-|2| \n|PMID 41864237|Biomarkers for advancing diagnosis and prognosis in stroke.|PubMed|2026-04-01|-|15| \n|PMID 41652155|Biopsychosocial frailty and the incident risk of cardio- and…|Europe PMC|2026-02-06|-|1| \n|PMID 41637029|Explainable AI reveals temporal risk pathways in fall predic…|Europe PMC|2026-02-04|-|1| \n|PMID 41748529|The heterogeneous treatment effects of statins on dementia:…|PubMed|2026-02-01|-|0| \n \n \n \nNewest indexed: 2026-10-22 (12 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41674015\n  biomcp search article -k \"statin dementia risk cognitive\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 20 results (total unknown). Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

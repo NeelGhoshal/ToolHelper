@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "trial",
+    "id": "NCT06774989",
+    "json": true,
+    "sections": [
+      "eligibility",
+      "arms"
+    ]
+  },
+  "args_key": "30a3b28d5b783fa8f461209a1af4fbfb9ba9489b14908fd26fa068c022fc20ca",
+  "recorded_at": "2026-11-03T23:21:06.253542+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 130.9461999917403,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"ClinicalTrials.gov\",\n        \"url\": \"https://clinicaltrials.gov/study/NCT06774989\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search disease --query \\\"Melanoma (Skin)\\\"\",\n      \"biomcp search article -d \\\"Melanoma (Skin)\\\"\",\n      \"biomcp search trial -c \\\"Melanoma (Skin)\\\"\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"overview\",\n        \"label\": \"Overview\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"ClinicalTrials.gov\"\n        ]\n      },\n      {\n        \"key\": \"conditions\",\n        \"label\": \"Conditions\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"ClinicalTrials.gov\"\n        ]\n      },\n      {\n        \"key\": \"summary\",\n        \"label\": \"Summary\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"ClinicalTrials.gov\"\n        ]\n      },\n      {\n        \"key\": \"eligibility\",\n        \"label\": \"Eligibility\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"ClinicalTrials.gov\"\n        ]\n      }\n    ]\n  },\n  \"completion_date\": \"2028-01\",\n  \"conditions\": [\n    \"Melanoma (Skin)\"\n  ],\n  \"eligibility\": {\n    \"age_range\": {\n      \"maximum\": null,\n      \"minimum\": {\n        \"bound\": \"minimum\",\n        \"kind\": \"limited\",\n        \"source\": \"18 Years\",\n        \"source_quantity\": \"18\",\n        \"source_unit\": \"years\"\n      }\n    },\n    \"criteria\": null,\n    \"includes_healthy_subjects\": null,\n    \"registry_text\": \"Inclusion Criteria:\\n\\nAdults ≥ 18 years of age\\n\\n* Histologically confirmed advanced melanoma, stage III/stage IV inoperable (primary cutaneous, mucosal or unknown)\\n* Treatment with encorafenib and/or binimetinib, whatever the line of treatment, for curative purposes.\\n* Affiliated to a social security scheme or beneficiary of such a scheme\\n* informed and non-opposition collected.\\n\\nExclusion Criteria:\\n\\n\\\\-\",\n    \"sexes\": [\n      {\n        \"authority\": \"clinicaltrials.gov\",\n        \"code\": \"ALL\",\n        \"display\": null,\n        \"recognized_meaning\": null,\n        \"vocabulary_version\": null\n      }\n    ]\n  },\n  \"eligibility_provenance\": {\n    \"posted_documents_available\": false,\n    \"source\": \"ClinicalTrials.gov registry\",\n    \"source_kind\": \"registry\"\n  },\n  \"enrollment\": 66,\n  \"interventions\": [],\n  \"nct_id\": \"NCT06774989\",\n  \"source\": \"ClinicalTrials.gov\",\n  \"sponsor\": \"Assistance Publique - Hôpitaux de Paris\",\n  \"start_date\": \"2025-01-02\",\n  \"status\": \"RECRUITING\",\n  \"study_type\": \"OBSERVATIONAL\",\n  \"summary\": \"In recent years, the prognosis for BRAFV600E-mutant metastatic melanoma has been transformed with targeted therapies combining BRAF and MEK inhibitors (dabrafenib-trametinib and encorafenib-cobimetinib), which have improved progression-free survival and overall survival. However, adverse events are very frequent, and a significant proportion of patients progress secondarily. Several clinical studies have shown that inter-individual variability in plasma exposure to BRAF inhibitors (dabrafenib, vemurafenib) or MEK inhibitors (trametinib) may contribute in part to the occurrence of severe toxicities, and on the efficiency of the treatment. To our knowledge, no data are currently available on the exposure/toxicity relationship for encorafenib and binimetinib.\\n\\nThe aim of this study is to assess the association between plasma exposure of encorafenib and binimetinib and the occurrence of dose-limiting toxicity during the first 3 months of treatment.\\n\\nOur secondary objectives are the identification of factors of variability in plasma exposure to encorafenib and binimetinib, the assessment of the exposure-response relationship to treatment (PFS, OS), the evaluation of the influence of the residual plasma concentration of checkpoint inhibiting antibodies (nivolumab, pembrolizumab, ipilimumab) in the first month on the occurrence of dose-limiting toxicity during treatment with encorafenib/binimetinib. Also, the investigators will study the relationship between the kinetics of circulating tumour DNA levels and plasma exposure to encorafenib and binimetinib. Finally, the investigators will assess compliance with treatment.\\n\\nAll patients over the age of 18 receiving encorafenib-binimetib for BRAF-mutated metastatic or locally advanced non-operable melanoma, regardless of line, in our 5 centres, will be included.\\n\\nAfter the patient has been informed and informed that he or she does not wish to be included in the study, an additional blood test will be taken during follow-up visits to the HDJ or specific follow-up consultation for his or her metastatic melanoma, where blood sampling is already planned as part of the treatment, during 1 year.\\n\\nThe tubes will be sent to the laboratories for analysis in the usual way as part of routine care. A self-questionnaire will be given to the patient at different follow-up visits.\\n\\nResearch data, including clinical, biological and self-questionnaire data, will be collected in the study via a web interface (e-CRF).\\n\\nFollow-up of the population will follow the rhythm of visits scheduled as part of the usual care of patients with melanoma undergoing targeted therapy. the investigators plan a 1-year sampling period, and a 2-year clinical follow-up period for each patient from the time of inclusion. Finally, the investigators plan a period of 1 year to analyze the data and write the article.\\n\\nStatistical analysis will be carried out by the investigating team (R software).\",\n  \"title\": \"Real-life Pharmacological Monitoring of Encorafenib-Binimetinib in the Treatment of Metastatic Melanoma\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

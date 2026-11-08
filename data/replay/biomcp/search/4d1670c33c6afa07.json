@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "clopidogrel"
+    ],
+    "entity": "pgx",
+    "gene": "CYP2C19",
+    "limit": 25,
+    "offset": 1
+  },
+  "args_key": "4d1670c33c6afa079c86cc3a27d1ff0bfc1ea65aab9ec018614ef77539bc117a",
+  "recorded_at": "2026-11-03T23:46:58.402057+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 263.9241999713704,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# PGx Search: gene=CYP2C19, drug=clopidogrel, offset=1 \n \nFound 1 interaction \n \n| Gene | Drug | CPIC Level | PGx Testing | Guideline | \n|---|---|---|---|---| \n| CYP2C19 | clopidogrel | A | Actionable PGx | CYP2C19 and Clopidogrel | \n \n \nShowing 2-2 of 27 results. Use --offset 26 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

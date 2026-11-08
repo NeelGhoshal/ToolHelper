@@ -1,0 +1,42 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "disease": [
+      "lung cancer",
+      "non-small cell lung cancer"
+    ],
+    "entity": "article",
+    "gene": "EGFR",
+    "keyword": [
+      "EGFR mutation",
+      "EGFR-mutant lung cancer",
+      "osimertinib",
+      "erlotinib",
+      "gefitinib"
+    ],
+    "limit": 15,
+    "sort": "relevance"
+  },
+  "args_key": "8354756d46cf62a807df74d77018c7de2b27e6d52f780460de5725d112763285",
+  "recorded_at": "2026-11-04T22:39:12.757295+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1.2611000001925277,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "keyword must contain 1-3 values"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "cognitive decline",
+      "randomized trial"
+    ],
+    "limit": 10,
+    "sort": "citations",
+    "source": "pubmed"
+  },
+  "args_key": "e6f6c55225ad7e4661a3413dbbf1cfa95e5eee4ea7b4efb3a66e10fdfacbe30b",
+  "recorded_at": "2026-11-03T07:38:49.337157+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1060.0389000028372,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin cognitive decline randomized trial, exclude_retracted=true, sort=citations, source=pubmed \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 10 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42546862|Neurocognitive outcomes and survival with high- vs low-inten…|PubMed|2026-09-01|-|none| \n|PMID 42711208|Safety of lipid-lowering therapies: it is time for a \"DOCebo…|PubMed|2026-08-18|-|none| \n|PMID 42010230|Brain, benefit, or burden? Revisiting statins and cognitive…|PubMed|2026-06-01|-|none| \n|PMID 42242022|Safety of very low LDL-cholesterol: Ten common concerns, mis…|PubMed|2026-06-01|-|none| \n|PMID 42252551|The Use of Statins in Parkinson's and Alzheimer's Disease: A…|PubMed|2026-06-01|-|none| \n|PMID 41870419|Effects of Exercise and Intensive Vascular Risk Reduction on…|PubMed|2026-05-01|-|none| \n|PMID 40875725|Polypill and Riskometer to Prevent Stroke and Cognitive Impa…|PubMed|2026-01-01|-|none| \n|PMID 41430321|Statin therapy on dementia in elderly type 2 diabetes patien…|PubMed|2025-12-22|-|none| \n|PMID 41400788|Lipid-Lowering Therapies and Cognition in Older Adults: A Na…|PubMed|2025-12-16|-|none| \n|PMID 41089840|Pre-ICU statin therapy reduces 28-day mortality in sepsis-as…|PubMed|2025-09-30|-|none| \n \n \n \nNewest indexed: 2026-09-08 (56 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42546862\n  biomcp search article -k \"statin cognitive decline randomized trial\" --source pubmed --year-min 2025 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-10 of 114 results. Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "BRAF V600E"
+    ],
+    "intervention": [
+      "vemurafenib"
+    ],
+    "limit": 5
+  },
+  "args_key": "f1fa22fc8e5fc64f55dac539bfe39a2109c34f13e4f331b16be8a3dbf919e184",
+  "recorded_at": "2026-11-03T15:46:29.070801+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 444.8126999777742,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 5 trial(s) \n \nQuery: condition=BRAF V600E, intervention=vemurafenib \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT01006980|A Study of Vemurafenib (R…|COMPLETED|3|Malignant Melanoma|Vemurafenibum| \n|NCT01597908|Dabrafenib Plus Trametini…|COMPLETED|3|Melanoma|vemurafenib| \n|NCT01689519|A Study Comparing Vemuraf…|COMPLETED|3|Malignant Melanoma|Vemurafenibum| \n|NCT04462471|Vemurafenib Plus Copanlis…|COMPLETED|1|Thyroid Carcinoma, Thyroid Cancer, Thyroid Can… [abridged; 6 conditions total]|vemurafenib| \n|NCT04790448|Efficacy of VIC Regimen i…|COMPLETED|1/2|Colorectal Cancer Metastatic|Vemurafenibum| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

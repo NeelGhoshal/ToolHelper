@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "variant_articles",
+  "arguments": {
+    "items": [
+      {
+        "genomic": "NC_000007.14:g.140753336A>T",
+        "protein": "p.V600E",
+        "request_id": "braf_v600e",
+        "transcript": "NM_004333.6"
+      }
+    ],
+    "limit": 10,
+    "strategy": "union",
+    "verify_identity": true
+  },
+  "args_key": "b55fe97f6e124bc0958affaf442795b2224ebc07c3be5d020114165ee210ae1b",
+  "recorded_at": "2026-11-03T16:22:53.901143+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "70147d049a9e3bd31190ae3b87d93f1485386242eee6a9cc9a986c130f8b3d8f",
+  "latency_ms": 2.777300018351525,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"items\": [\n    {\n      \"request_id\": \"braf_v600e\",\n      \"requested_variant\": {\n        \"protein_change\": \"p.V600E\",\n        \"transcript\": \"NM_004333.6\",\n        \"genomic_accession\": \"NC_000007.14\",\n        \"position\": 140753336,\n        \"reference\": \"A\",\n        \"alternate\": \"T\"\n      },\n      \"resolution\": null,\n      \"complete\": false,\n      \"truncated\": false,\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 0,\n        \"total\": null,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"source_status\": [],\n      \"error\": {\n        \"code\": \"invalid_argument\",\n        \"message\": \"variant article item versioned RefSeq identity requires an explicit GRCh37 or GRCh38 build\"\n      },\n      \"results\": []\n    }\n  ],\n  \"complete\": false,\n  \"truncated\": false,\n  \"_meta\": {\n    \"next_commands\": []\n  }\n}"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}
