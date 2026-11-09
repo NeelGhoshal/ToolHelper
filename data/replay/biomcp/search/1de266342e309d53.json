@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "author": [
+      "Gillmore"
+    ],
+    "limit": 10
+  },
+  "args_key": "1de266342e309d53657413d27e874ac68ae3a55e4a07eadfdfe1f34523b3f9c0",
+  "recorded_at": "2026-11-09T05:37:46.463054+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 533.9688999956707,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: author=Gillmore, exclude_retracted=true, sort=relevance, ranking_mode=lexical, ranking_policy=calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \nSemantic Scholar: disabled \n \nRanking: calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42217207|Baseline characteristics of patients with transthyretin amyl…|Europe PMC|2026-10-01|-|4| \n|PMID 41771146|Impact of acoramidis on clinical stability in transthyretin…|Europe PMC|2026-10-01|-|3| \n|PMID 42584913|Vutrisiran Treatment and Changes in Cardiac Parameters and A…|Europe PMC|2026-10-01|-|1| \n|PMID 42616515|Left Atrial Structure and Function, Clinical Outcomes, and E…|Europe PMC|2026-10-01|-|0| \n|PMID 42926109|Adjuvant chemotherapy with cisplatin and gemcitabine compare…|Europe PMC|2026-10-24|-|0| \n|PMID 42669031|Long-term effects of acoramidis on mortality in variant tran…|Europe PMC|2026-10-01|-|0| \n|PMID 42663425|From Static Staging to Dynamic Risk Prediction in Transthyre…|Europe PMC|2026-10-01|-|0| \n|PMID 42861998|Childhood onset, indolent progression, and risk of hepatic r…|Europe PMC|2026-10-12|-|0| \n|PMID 42898854|Pembrolizumab plus gemcitabine and cisplatin for advanced bi…|Europe PMC|2026-10-12|-|0| \n|PMID 42799727|Native T1 for Diagnosis and Risk Prediction in Amyloid Trans…|Europe PMC|2026-09-24|-|0| \n \n \n \nNewest indexed: 2026-10-26 (14 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42217207\n  biomcp search article -a Gillmore --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

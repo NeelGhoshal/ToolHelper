@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "38878270",
+    "json": true
+  },
+  "args_key": "5786f070c19175c9a7bc3475afe10d8afd20d3076e895dbab31356574854442e",
+  "recorded_at": "2026-11-08T07:39:45.172855+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1824.3464999995922,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/38878270/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 38878270 tldr\",\n      \"biomcp article entities 38878270\",\n      \"biomcp search gene -q PCSK9\",\n      \"biomcp search drug -q VERVE-101\",\n      \"biomcp article references 38878270 --limit 3\",\n      \"biomcp article citations 38878270 --limit 3\",\n      \"biomcp article recommendations 38878270 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"annotations\",\n        \"label\": \"PubTator Annotations\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ],\n    \"workflow\": \"article-follow-up\",\n    \"workflow_playbook\": \"biomcp skill article-follow-up\",\n    \"workflow_rationale\": \"Use article annotations first, then citation and recommendation graph pivots for efficient literature expansion.\"\n  },\n  \"annotations\": {\n    \"chemicals\": [\n      {\n        \"count\": 1,\n        \"text\": \"VERVE-101\"\n      }\n    ],\n    \"genes\": [\n      {\n        \"count\": 1,\n        \"identifier\": \"255738\",\n        \"namespace\": \"NCBIGene\",\n        \"text\": \"PCSK9\"\n      }\n    ]\n  },\n  \"author_completeness\": \"complete\",\n  \"author_count\": 3,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Hooper AJ\",\n    \"Tang XL\",\n    \"Burnett JR\"\n  ],\n  \"citation_count\": 38,\n  \"date\": \"2024-06-21\",\n  \"doi\": \"10.1080/13543784.2024.2369747\",\n  \"journal\": \"Expert Opin Investig Drugs\",\n  \"open_access\": false,\n  \"pmid\": \"38878270\",\n  \"publication_type\": \"editorial\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"VERVE-101, a CRISPR base-editing therapy designed to permanently inactivate hepatic PCSK9 and reduce LDL-cholesterol.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

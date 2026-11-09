@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2024-01-01",
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "HER2-targeted therapy",
+      "trastuzumab deruxtecan",
+      "HER2 breast cancer treatment"
+    ],
+    "limit": 10,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "a7a5ffab43832420f4bc32d2f00a812e456173c5ca3e3d8db388833aee6cd093",
+  "recorded_at": "2026-11-09T07:59:04.598494+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1030.9090000082506,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=HER2-targeted therapy trastuzumab deruxtecan HER2 breast cancer treatment, date_from=2024-01-01, exclude_retracted=true, sort=date, source=pubmed\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": false,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubmed\"\n    ],\n    \"enrichment_sources\": []\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": 181,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"42924615\",\n      \"title\": \"Advances in resistance mechanisms and counterstrategies for antibody‑drug conjugates in HER2‑low and HER2‑ultralow breast cancer (Review).\",\n      \"journal\": \"Oncology reports\",\n      \"date\": \"2026-12-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42854349\",\n      \"title\": \"Advancing therapies for HER2-positive metastatic breast cancer: Navigating a wealth of treatment options.\",\n      \"journal\": \"Cancer treatment reviews\",\n      \"date\": \"2026-11-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42850399\",\n      \"title\": \"Right-sizing treatment for HER2-positive breast cancer: evolving algorithms across the disease continuum.\",\n      \"journal\": \"Nature reviews. Clinical oncology\",\n      \"date\": \"2026-10-08\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42994133\",\n      \"title\": \"2026 Key European Guideline Changes for Metastatic Breast Cancer and Their Impact on Practice-Commentary Based on a Virtual Focus Group.\",\n      \"journal\": \"Clinical breast cancer\",\n      \"date\": \"2026-10-07\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42562949\",\n      \"title\": \"AKAP13 regulates GLI1/ULK1 axis and drive tumor resistance to next-generation HER2-targeted therapies.\",\n      \"journal\": \"Oncogene\",\n      \"date\": \"2026-10-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42830854\",\n      \"title\": \"HER2-Targeted Antibody-Drug Conjugates in Advanced HER2-Low Breast Cancer: Mechanisms, Clinical Efficacy, and Resistance Strategies.\",\n      \"journal\": \"Cancer management and research\",\n      \"date\": \"2026-09-30\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42880094\",\n      \"title\": \"Chemotherapy outcomes in human epidermal growth factor receptor 2-low, hormone receptor-positive metastatic breast cancer: Insights from the French multicenter ESME database.\",\n      \"journal\": \"Breast (Edinburgh, Scotland)\",\n      \"date\": \"2026-09-27\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42591577\",\n      \"title\": \"Emerging role of human epidermal growth factor 2-low status in the prognosis and management of triple-negative breast cancer: a narrative review.\",\n      \"journal\": \"Translational cancer research\",\n      \"date\": \"2026-07-31\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42871456\",\n      \"title\": \"Metastatic HER2-positive breast cancer in a 19-year-old woman following a 4-year diagnostic delay: a case report.\",\n      \"journal\": \"AME case reports\",\n      \"date\": \"2026-07-30\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42582067\",\n      \"title\": \"Prolonged survival in a HER2 positive metastatic breast cancer patient with brain metastases treated with TDM1 after failure of next generation HER2 targeted therapies: case report.\",\n      \"journal\": \"Frontiers in oncology\",\n      \"date\": \"2026-07-28\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42924615\",\n      \"biomcp list article\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

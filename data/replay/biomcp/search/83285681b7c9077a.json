@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 20
+  },
+  "args_key": "83285681b7c9077a151860ef09004edce6861b599ed17541e9b5f8d898262afb",
+  "recorded_at": "2026-11-09T07:33:11.793441+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 175.87770000682212,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 20 of 3782 \n \nQuery: condition=melanoma \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT02775461|Pancreas Registry and Hig…|RECRUITING|-|Pancreas Cancer, Pancreatitis, Chronic Pancrea… [abridged; 6 conditions total]| \n|NCT07203391|Tebentafusp and Roginolis…|RECRUITING|1|Uveal Melanoma, Metastatic| \n|NCT06112808|A Clinical Study of the P…|ACTIVE_NOT_RECRUITING|1|Advanced Melanoma| \n|NCT06359860|A Study of ST-1898 for Un…|ACTIVE_NOT_RECRUITING|1/2|Unresectable or Metastatic Melanoma| \n|NCT06961786|TNFα and IL-2 Coding Onc…|ACTIVE_NOT_RECRUITING|1|Metastatic Melanoma| \n|NCT07252661|Study of ACC-1898 in Adul…|NOT_YET_RECRUITING|1|Hepatocellular Carcinoma, Renal Cell Carcinoma… [abridged; 9 conditions total]| \n|NCT00324727|Hepatic Arterial Infusion…|COMPLETED|3|Intraocular Melanoma, Melanoma (Skin), Metastatic Cancer| \n|NCT00453050|Imiquimod and Laser Thera…|COMPLETED|1|Melanoma (Skin), Metastatic Cancer| \n|NCT00586040|Photochemical Tissue Bond…|COMPLETED|2|Basal Cell Carcinoma, Squamous Cell Carcinoma, Atypical Nevus| \n|NCT01636882|CAVATAK in Patients With…|COMPLETED|2|Melanoma| \n|NCT01662713|Optical Frequency Domain…|COMPLETED|NA|Non-Melanoma Skin Cancer (NMSC)| \n|NCT02122861|Phase 1 Study of Intrader…|COMPLETED|1|Melanoma - Currently Enrolling, Non-small Cell… [abridged; 3 conditions total]| \n|NCT04225390|Preconditioning of Tumor,…|COMPLETED|2|Immunotherapy| \n|NCT04335890|IKKb-matured, RNA-loaded…|COMPLETED|1|Melanoma, Uveal Metastatic| \n|NCT05126173|DERM US and EU Validation…|COMPLETED|-|Malignant Skin Melanoma T0, Basal Cell Carcinoma, Squamous Cell Carcinoma| \n|NCT04017897|The Combination of Anti-P…|UNKNOWN|2|Melanoma| \n|NCT06321640|Study for the Multidimens…|UNKNOWN|-|Breast Cancer, Lung Cancer, Melanoma, Head and… [abridged; 8 conditions total]| \n|NCT04007588|A Phase II Trial of Neoad…|WITHDRAWN|2|Melanoma Stage III, Melanoma Stage IV| \n|NCT02608268|Phase I-Ib/II Study of MB…|TERMINATED|1/2|Advanced Malignancies| \n|NCT03729596|MGC018 With or Without MG…|TERMINATED|1/2|Squamous Cell Carcinoma of Head and Neck, Trip… [abridged; 6 conditions total]| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-20 of 3782 results. Use --offset 20 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp get drug DB01104 --json",
+    "json": true
+  },
+  "args_key": "5887dc7e819ac89c69a5576490d7fae70d93906107db3f8a6f24d02850a702e3",
+  "recorded_at": "2026-11-08T08:16:41.799820+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 2762.59459999892,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: drug 'DB01104' not found.\n\nNo drug card matches \"DB01104\" by name, brand, or synonym. The MyChem text search matched other drugs: sertraline. Try searching: biomcp search drug -q \"DB01104\""
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

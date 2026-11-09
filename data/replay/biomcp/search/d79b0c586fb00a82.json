@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "in vivo base editing",
+      "PCSK9",
+      "VERVE-102"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "d79b0c586fb00a8246ea1a8ffc8229f00b05122bedaac4939cc74703cff14dd2",
+  "recorded_at": "2026-11-08T06:03:57.052269+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2164.3309999999474,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=in vivo base editing PCSK9 VERVE-102, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"in vivo base editing PCSK9 VERVE-102\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 35021064|Engineered virus-like particles for efficient in vivo deliv…|Europe PMC|2022-01-11|-|562| \n|PMID 36691401|Passive, active and endogenous organ-targeted lipid and poly…|Europe PMC|2023-01-19|-|528| \n|PMID 39179112|Enhancing RNA-lipid nanoparticle delivery: Organ- and cell-s…|Europe PMC|2024-09-18|-|91| \n|PMID 39256822|Current landscape of mRNA technologies and delivery systems…|Europe PMC|2024-09-10|-|87| \n|PMID 41062796|Cholesterol metabolism: molecular mechanisms, biological fun…|Europe PMC|2025-10-09|-|81| \n|PMID 36230934|PCSK9 Inhibition: From Current Advances to Evolving Future.|Europe PMC|2022-09-23|-|80| \n|PMID 39707395|From bench to bedside: cutting-edge applications of base edi…|PubTator3, Europe PMC|2024-12-20|-|61| \n|PMID 38003266|CRISPR/Cas9 Landscape: Current State and Future Perspectives…|Europe PMC|2023-11-08|-|61| \n|PMID 35214130|Lipid Nanoparticle Delivery Systems to Enable mRNA-Based The…|Europe PMC|2022-02-11|-|58| \n|PMID 39991472|Advanced delivery systems for gene editing: A comprehensive…|Europe PMC|2025-01-17|-|52| \n \n \n \nNewest indexed: 2025-10-09 (395 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 35021064\n  biomcp search article -k \"in vivo base editing PCSK9 VERVE-102\" --year-min 2022 --year-max 2025 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

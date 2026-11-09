@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "melanoma"
+    ],
+    "intervention": [
+      "vemurafenib"
+    ],
+    "limit": 5
+  },
+  "args_key": "0a72cc635d4e70da5f116f5707b9ecc31dde6e020ead775ff2ee157f4dd9a143",
+  "recorded_at": "2026-11-08T06:12:22.694262+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1061.6805999998178,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 5 trial(s) \n \nQuery: condition=melanoma, intervention=vemurafenib \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT01673854|Phase II Safety Study of…|COMPLETED|2|Melanoma|vemurafenib| \n|NCT01765543|A Pharmacokinetics (PK) S…|COMPLETED|1|Malignant Melanoma, Neoplasms|Vemurafenibum| \n|NCT02354690|Vemurafenib and TIL Thera…|COMPLETED|1/2|Metastatic Melanoma|Vemurafenibum| \n|NCT02537600|Vemurafenib and Cobimetin…|COMPLETED|2|Malignant Melanoma|vemurafenib| \n|NCT03176485|Evaluation of Pathway Mod…|COMPLETED|NA|Metastatic Cancer, Melanoma, Colon Cancer, Dif… [abridged; 9 conditions total]|vemurafenib| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "gene_type": "protein-coding",
+    "limit": 25,
+    "query": "melanoma"
+  },
+  "args_key": "b0e8a1fc5985e0740d7bc91591e930282a9a354fecfc72391f6ba8e1192a8856",
+  "recorded_at": "2026-11-08T08:10:44.337001+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 601.8676999992749,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: melanoma, type=protein-coding \n \nFound 25 genes \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| LOC124908139 | B melanoma antigen 3-like | 124908139 | - | - | none | none | \n| LOC124908467 | B melanoma antigen 3-like | 124908467 | - | - | none | none | \n| MAGEB6B | MAGE family member B6B | 392433 | X:26160601-26162410 | GRCh38 | A0A0J9YX57 | none | \n| LOC100533997 | MAGEA10-MAGEA5 readthrough | 100533997 | X:152114994-152138556 | GRCh38 | none | none | \n| BAGE5 | BAGE family member 5 | 85316 | - | - | Q86Y27 | none | \n| BAGE3 | BAGE family member 3 | 85318 | - | - | Q86Y29 | 617777 | \n| MAGEB10 | MAGE family member B10 | 139422 | X:27807990-27823014 | GRCh38 | Q96LZ2 | 300761 | \n| MAGEE2 | MAGE family member E2 | 139599 | X:75782987-75785254 | GRCh38 | Q8TD90 | 300760 | \n| MAGEB17 | MAGE family member B17 | 645864 | X:16167481-16171464 | GRCh38 | A8MXT2 | 300763 | \n| CSPG4 | chondroitin sulfate proteoglycan 4 | 1464 | 15:75674322-75712856 | GRCh38 | Q6UVK1 | 601172 | \n| BAGE4 | BAGE family member 4 | 85317 | - | - | Q86Y28 | none | \n| MAGEB18 | MAGE family member B18 | 286514 | X:26138343-26140736 | GRCh38 | Q96M61 | 301064 | \n| MAGEB5 | MAGE family member B5 | 347541 | X:26216169-26218270 | GRCh38 | Q9BZ81 | 300466 | \n| MAGEB16 | MAGE family member B16 | 139604 | X:35798342-35803772 | GRCh38 | A2A368 | 300762 | \n| MAGEH1 | MAGE family member H1 | 28986 | X:55452127-55453566 | GRCh38 | Q9H213 | 300548 | \n| MAGEA1 | MAGE family member A1 | 4100 | X:153179284-153183880 | GRCh38 | P43355 | 300016 | \n| MAGEF1 | MAGE family member F1 | 64110 | 3:184708749-184712073 | GRCh38 | Q9HAY2 | 609267 | \n| MAGEB3 | MAGE family member B3 | 4114 | X:30230657-30237495 | GRCh38 | O15480 | 300152 | \n| MAGEC1 | MAGE family member C1 | 9947 | X:141903863-141917770 | GRCh38 | O60732 | 300223 | \n| MAGEC2 | MAGE family member C2 | 51438 | X:142202342-142205290 | GRCh38 | Q9UBF1 | 300468 | \n| BAGE | B melanoma antigen | 574 | - | - | Q13072 | 605167 | \n| MAGEE1 | MAGE family member E1 | 57692 | X:76427710-76431342 | GRCh38 | Q9HCI5 | 300759 | \n| MIA | MIA SH3 domain containing | 8190 | 19:40768997-40777490 | GRCh38 | Q16674 | 601340 | \n| MAGEA12 | MAGE family member A12 | 4111 | X:152733757-152737679 | GRCh38 | P43365 | 300177 | \n| MAGEB6 | MAGE family member B6 | 158809 | X:26192440-26195646 | GRCh38 | Q8N7X4 | 300467 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1-25 of 116 results. Use --offset 25 for more. \n \n\n\n## Next commands\n- `biomcp get gene LOC124908139`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -8,7 +8,7 @@ servers:
     command: node
     args: ['${USERPROFILE}\src\medical-mcp\node_modules\medical-mcp\build\index.js']
     timeout_s: 90
-    min_interval_s: 0.34       # PubMed E-utilities: 3 requests/s without a key
+    min_interval_s: 2.0        # across all processes; PubMed E-utilities allows 3 requests/s without a key and one tool call can make several back to back (p10 logged 298 HTTP 429s; 1.0 s still let 3 through)
 
   biomcp:
     package: biomcp-cli
@@ -24,4 +24,4 @@ servers:
     args: [--directory, '${USERPROFILE}\src\omop_mcp', run, omop_mcp]
     env_vars: [OMOPHUB_API_KEY]
     timeout_s: 60
-    min_interval_s: 0.5        # OMOPHub free tier: 2 requests/s
+    min_interval_s: 0.5        # OMOPHub free tier: 2 requests/s, across all processes

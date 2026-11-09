@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR activating mutations predict gefitinib sensitivity NSCLC"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "933368f9ad064340b07dd65d9e840fa8c9c2f04b38fc7b4551191dcf76114a03",
+  "recorded_at": "2026-11-09T04:41:58.137692+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3220.9792000066955,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR activating mutations predict gefitinib sensitivity NSCLC, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR activating mutations predict gefitinib sensitivity NSCLC\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 20602996|Cell signaling by receptor tyrosine kinases.|Europe PMC|2010-06-01|-|3772| \n|PMID 21252716|International association for the study of lung cancer/ameri…|Europe PMC|2011-02-01|-|3664| \n|PMID 15737014|Acquired resistance of lung adenocarcinomas to gefitinib or…|Europe PMC|2005-02-22|-|2640| \n|PMID 28890946|OncoKB: A Precision Oncology Knowledge Base.|Europe PMC|2017-05-16|-|2131| \n|PMID 39471218|Biochemical analysis of EGFR exon20 insertion variants insAS…|PubTator3|2024-11-05|-|none| \n|PMID 39279671|Are 19del and L858R really different disease entities?|PubTator3|2024-09-16|-|none| \n|PMID 36281696|Picropodophyllotoxin Inhibits Cell Growth and Induces Apopto…|PubMed|2023-03-01|-|3| \n|PMID 34969754|A Rare Presentation of a Non-Asian Female With Metastatic No…|PubMed|2022-01-01|-|4| \n|PMID 34058054|TIP30 overcomes gefitinib resistance by regulating cytoplasm…|PubTator3|2021-10-01|-|none| \n|PMID 34057242|MiR-133a-3p attenuates resistance of non-small cell lung can…|PubMed|2021-07-01|-|19| \n \n \n \nNewest indexed: 2022-10-25 (1476 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 20602996\n  biomcp search article -k \"EGFR activating mutations predict gefitinib sensitivity NSCLC\" --year-min 2005 --year-max 2024 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

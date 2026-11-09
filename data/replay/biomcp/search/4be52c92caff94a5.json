@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "in vivo",
+      "CRISPR",
+      "amyloidosis"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "4be52c92caff94a51c68d2df4066dff0ae0a72087dbd27227477410883560389",
+  "recorded_at": "2026-11-09T05:38:50.643630+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3912.2738000005484,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=in vivo CRISPR amyloidosis, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"in vivo CRISPR amyloidosis\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 33277608|Engineering precision nanoparticles for drug delivery.|Europe PMC|2020-12-04|-|4994| \n|PMID 24906146|Development and applications of CRISPR-Cas9 for genome engin…|Europe PMC|2014-06-01|-|4075| \n|PMID 34394960|Lipid nanoparticles for mRNA delivery.|Europe PMC|2021-08-10|-|3206| \n|PMID 35461318|Microbiota in health and diseases.|Europe PMC|2022-04-23|-|2368| \n|PMID 34215024|CRISPR-Cas9 In Vivo Gene Editing for Transthyretin Amyloidos…|PubTator3, Europe PMC|2021-08-05|-|1382| \n|PMID 42782748|Beyond Precision: A Multidimensional Framework for Selecting…|PubMed|2026-09-11|-|0| \n|PMID 42787623|Clinical translation of CRISPR-Cas9 therapeutics in cancer a…|PubMed|2026-09-10|-|0| \n|PMID 42780917|Cas12a chRDNA-mediated in vivo genome editing for high speci…|PubMed|2026-09-02|-|0| \n|PMID 42474011|Gene/Genome Editing in Cardiovascular Biology and Disease.|PubMed|2026-07-17|-|0| \n|PMID 34706179|CRISPR-Cas9 In Vivo Gene Editing for Transthyretin Amyloidos…|PubTator3|2021-10-28|-|none| \n \n \n \nNewest indexed: 2026-09-25 (45 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 33277608\n  biomcp search article -k \"in vivo CRISPR amyloidosis\" --year-min 2014 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

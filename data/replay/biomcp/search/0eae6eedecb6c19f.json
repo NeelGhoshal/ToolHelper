@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "PROSPER",
+      "pravastatin",
+      "cognition"
+    ],
+    "limit": 10
+  },
+  "args_key": "0eae6eedecb6c19f733fdd7313e64e78cfb03e601185ece67a03f9c389fec642",
+  "recorded_at": "2026-11-08T15:14:15.705630+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2503.5320999959367,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=PROSPER pravastatin cognition, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"PROSPER pravastatin cognition\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 33058961|Interplay of circulating leptin and obesity in cognition and…|PubTator3, PubMed|2021-01-01|hybrid 0.519 + title+abstract 3/3|11| \n|PMID 34995287|Association of cognitive function with increased risk of can…|PubMed|2022-01-07|hybrid 0.454 + abstract 2/3|17| \n|PMID 39436550|Increased 1H-NMR metabolomics-based health score associates…|PubTator3, Europe PMC, PubMed|2024-10-22|hybrid 0.433 + abstract 2/3|16| \n|PMID 32138689|The association of kidney function and cognitive decline in…|PubMed|2020-03-05|hybrid 0.4 + abstract 2/3|21| \n|PMID 32456512|Association of High-Density Lipoprotein Cholesterol With Cog…|PubMed|2020-10-01|hybrid 0.382 + title+abstract 2/3|9| \n|PMID 32225080|Ventricular Repolarization is Associated with Cognitive Func…|PubMed|2020-03-26|hybrid 0.372 + abstract 2/3|10| \n|PMID 39520593|Do Statins Affect Cognitive Health? A Narrative Review and C…|Europe PMC|2024-11-09|hybrid 0.32 + abstract 1/3|17| \n|PMID 40207842|Managing Hypercholesterolemia in Adults Older Than 75 years…|PubTator3, Europe PMC|2025-04-10|hybrid 0.283 + abstract 1/3|12| \n|PMID 38235315|What have clinical trials taught us about brain health?|PubTator3|2023-12-28|hybrid 0.187|4| \n|PMID 42100682|Lipid-lowering therapy for primary prevention of cardiovascu…|Europe PMC|2026-04-28|hybrid 0.183 + abstract 1/3|0| \n \n \n \nNewest indexed: 2026-05-13 (179 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 33058961\n  biomcp search article -k \"PROSPER pravastatin cognition\" --year-min 2020 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

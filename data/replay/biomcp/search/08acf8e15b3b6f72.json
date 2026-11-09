@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "nivolumab"
+    ],
+    "limit": 25,
+    "mutation": [
+      "BRAF V600E"
+    ],
+    "status": "recruiting"
+  },
+  "args_key": "08acf8e15b3b6f72c3108037ed8b69dac8a54b2df09d554a0f91d24a724a59c8",
+  "recorded_at": "2026-11-08T08:57:26.809423+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 684.8405000000639,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 1 of 1 \n \nQuery: condition=melanoma, intervention=nivolumab, status=recruiting, mutation=BRAF V600E \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT05076760|MEM-288 Oncolytic Virus A…|RECRUITING|1|Solid Tumor, Advanced Cancer, Metastatic Canc… [abridged; 10 conditions total]|nivolumab| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1 of 1 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

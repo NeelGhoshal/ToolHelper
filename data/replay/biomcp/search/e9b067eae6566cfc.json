@@ -1,0 +1,40 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "metformin"
+    ],
+    "entity": "article",
+    "keyword": [
+      "cardiovascular outcomes",
+      "mortality",
+      "myocardial infarction"
+    ],
+    "limit": 25,
+    "offset": 25,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "e9b067eae6566cfc9e688c0b8af4699054fc9b027394b74d6c66bf926863c6d7",
+  "recorded_at": "2026-11-08T07:26:15.239889+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1026.3919999997597,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=metformin, keyword=cardiovascular outcomes mortality myocardial infarction, exclude_retracted=true, sort=date, source=pubmed, offset=25 \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \nPubMed source status: degraded (PubMed search degraded: API request to PubMed failed. Retry the remote source.) \nRetry: `biomcp search article --drug metformin --keyword \"cardiovascular outcomes mortality myocardial infarction\" --exclude-retracted --sort date --source pubmed --limit 25 --offset 25` \n \n \nFound 8 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 36261824|Systematic review and meta-analysis of head-to-head trials c…|PubMed|2022-10-19|-|none| \n|PMID 34390570|Cardiovascular effects of non-insulin glucose-lowering agent…|PubMed|2022-07-27|-|none| \n|PMID 35605236|Cardiovascular Outcomes in Patients Initiating First-Line Tr…|PubMed|2022-07-01|-|none| \n|PMID 35322592|Cardiovascular outcomes associated with treatment of type 2…|PubMed|2022-06-01|-|none| \n|PMID 34953749|Cardiovascular effectiveness of glucagon-like peptide 1 rece…|PubMed|2022-02-01|-|none| \n|PMID 35118026|Correction to: \"Cardiovascular Outcomes Comparison of Dipept…|PubMed|2022-01-01|-|none| \n|PMID 34903733|Cardiovascular outcomes of type 2 diabetic patients treated…|PubMed|2021-12-13|-|none| \n|PMID 34693515|Dipeptidyl peptidase-4 inhibitors, glucagon-like peptide 1 r…|PubMed|2021-10-25|-|none| \n \n \n \nNewest indexed: 2022-10-19 (1481 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 36261824\n  biomcp search article --drug metformin -k \"cardiovascular outcomes mortality myocardial infarction\" --source pubmed --year-min 2021 --year-max 2022 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 26-33 of 139 results. Use --offset 50 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

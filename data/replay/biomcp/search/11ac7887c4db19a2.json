@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "type 2 diabetes treatment",
+      "GLP-1 receptor agonist",
+      "SGLT2 inhibitor"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "11ac7887c4db19a27d85de0a6d85e4139f9139db2d15c0c92318677d44c746c1",
+  "recorded_at": "2026-11-09T05:39:37.868804+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2941.846399990027,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=type 2 diabetes treatment GLP-1 receptor agonist SGLT2 inhibitor, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"type 2 diabetes treatment GLP-1 receptor agonist SGLT2 inhibitor\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 27295427|Liraglutide and Cardiovascular Outcomes in Type 2 Diabetes.|Europe PMC|2016-06-13|-|5652| \n|PMID 27222591|2016 European Guidelines on cardiovascular disease preventio…|Europe PMC|2016-05-23|-|4362| \n|PMID 36695182|Heart Disease and Stroke Statistics-2023 Update: A Report Fr…|Europe PMC|2023-01-25|-|4105| \n|PMID 22517736|Management of hyperglycemia in type 2 diabetes: a patient-ce…|Europe PMC|2012-04-19|-|2467| \n|PMID 37532422|GLP-1 Receptor Agonist Therapy With and Without SGLT2 Inhibi…|PubTator3|2023-08-08|-|63| \n|PMID 32034729|GLP-1 Receptor Agonists and SGLT2 Inhibitors for the Treatme…|PubTator3|2021-01-01|-|38| \n|PMID 38388753|Phenotype-based targeted treatment of SGLT2 inhibitors and G…|PubTator3|2024-02-22|-|35| \n|PMID 42470502|Combination cardiometabolic therapy in type 2 diabetes: opti…|PubTator3|2026-07-18|-|1| \n|PMID 42993255|Clinical pharmacology of antidiabetic drugs: an update.|PubMed|2026-11-06|-|0| \n|PMID 42991154|Mechanism-based therapeutic strategies in cardiovascular-kid…|PubMed|2026-10-22|-|0| \n \n \n \nNewest indexed: 2026-11-06 (3 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 27295427\n  biomcp search article -k \"type 2 diabetes treatment GLP-1 receptor agonist SGLT2 inhibitor\" --year-min 2012 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

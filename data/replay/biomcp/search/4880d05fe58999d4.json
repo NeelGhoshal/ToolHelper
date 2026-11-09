@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "disease": [
+      "dementia",
+      "Alzheimer disease"
+    ],
+    "drug": [
+      "statin",
+      "atorvastatin",
+      "simvastatin"
+    ],
+    "entity": "article",
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "4880d05fe58999d45c65578f12dc512b6722cee1271af83769a45064af49c2b1",
+  "recorded_at": "2026-11-08T06:08:29.715030+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 11886.968199999501,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: disease=dementia Alzheimer disease, drug=statin atorvastatin simvastatin, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --disease \"dementia Alzheimer disease\" --drug \"statin atorvastatin simvastatin\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 27942728|Sex and Race Differences in the Association Between Statin U…|PubMed|2017-02-01|-|163| \n|PMID 36291224|Statins Use in Alzheimer Disease: Bane or Boon from Frantic…|PubTator3|2022-09-24|-|76| \n|PMID 21224519|Simvastatin is the statin that most efficiently protects aga…|PubMed|2011-01-01|-|71| \n|PMID 38115091|Statins and cognitive decline in patients with Alzheimer's a…|PubTator3, PubMed|2023-12-20|-|65| \n|PMID 32130251|Association of combination statin and antihypertensive thera…|PubMed|2020-03-04|-|50| \n|PMID 24520388|Effects of statins on incident dementia in patients with typ…|PubMed|2014-02-10|-|40| \n|PMID 25004278|Statins for the treatment of dementia.|PubMed|2014-07-08|-|37| \n|PMID 24075740|Long-term use of statins reduces the risk of hospitalization…|PubMed|2013-10-01|-|36| \n|PMID 37251243|The neuroprotective effect of statin in traumatic brain inju…|PubTator3|2023-05-13|-|32| \n|PMID 31330953|Simvastatin Efficiently Reduces Levels of Alzheimer's Amyloi…|PubMed|2019-07-19|-|30| \n|PMID 35118196|Host Directed Therapies for Tuberculous Meningitis|PubTator3|2021-07-01|-|24| \n|PMID 37431946|The Effects of Statins on Cognitive Performance Are Mediated…|PubTator3|2023-07-11|-|23| \n|PMID 29385012|Mortality and Associated Morbidities Following Traumatic Bra…|PubMed|2018-11-01|-|23| \n|PMID 34830387|Neuroprotective Effect of Statins in a Rat Model of Chronic…|PubTator3|2021-11-19|-|21| \n|PMID 30260016|In silico evidence of direct interaction between statins and…|PubMed|2019-03-01|-|19| \n \n \n \nNewest indexed: 2020-03-05 (2439 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 27942728\n  biomcp search article -d \"dementia Alzheimer disease\" --drug \"statin atorvastatin simvastatin\" --year-min 2011 --year-max 2023 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

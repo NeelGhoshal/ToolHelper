@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "Creatinine [Mass/volume] in Serum or Plasma",
+    "max_results": 10,
+    "omop_field": "measurement_name",
+    "omop_table": "measurement"
+  },
+  "args_key": "51c72e8812cd4d88e20bddedf7b83fa7498b167a4aab081149eb89a81858d73a",
+  "recorded_at": "2026-11-09T04:47:14.492341+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1354.0508000005502,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 3016723,\n      \"code\": \"2160-0\",\n      \"name\": \"Creatinine [Mass/volume] in Serum or Plasma\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3016723\"\n    },\n    {\n      \"concept_id\": 3041716,\n      \"code\": \"40248-7\",\n      \"name\": \"Creatinine [Mass/volume] in Serum or Plasma --baseline\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3041716\"\n    },\n    {\n      \"concept_id\": 43055236,\n      \"code\": \"72271-0\",\n      \"name\": \"Creatinine [Mass/volume] in Serum or Plasma --pre contrast\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/43055236\"\n    },\n    {\n      \"concept_id\": 3022243,\n      \"code\": \"11042-9\",\n      \"name\": \"Creatinine [Mass/volume] in Serum or Plasma --pre dialysis\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3022243\"\n    },\n    {\n      \"concept_id\": 3018968,\n      \"code\": \"11041-1\",\n      \"name\": \"Creatinine [Mass/volume] in Serum or Plasma --post dialysis\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3018968\"\n    },\n    {\n      \"concept_id\": 3019397,\n      \"code\": \"16188-5\",\n      \"name\": \"Creatinine [Mass/volume] in Serum or Plasma --2 hour specimen\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3019397\"\n    },\n    {\n      \"concept_id\": 3035090,\n      \"code\": \"16189-3\",\n      \"name\": \"Creatinine [Mass/volume] in Serum or Plasma --4 hour specimen\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3035090\"\n    },\n    {\n      \"concept_id\": 3039840,\n      \"code\": \"39955-0\",\n      \"name\": \"Creatinine [Mass/volume] in Serum or Plasma --pre XXX challenge\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3039840\"\n    },\n    {\n      \"concept_id\": 3041587,\n      \"code\": \"40258-6\",\n      \"name\": \"Creatinine [Mass/volume] in Serum or Plasma --1 day post XXX challenge\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3041587\"\n    },\n    {\n      \"concept_id\": 3038670,\n      \"code\": \"39957-6\",\n      \"name\": \"Creatinine [Mass/volume] in Serum or Plasma --1 hour pre XXX challenge\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3038670\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"Creatinine [Mass/volume] in Serum or Plasma\",\n    \"omop_table\": \"measurement\",\n    \"omop_field\": \"measurement_name\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

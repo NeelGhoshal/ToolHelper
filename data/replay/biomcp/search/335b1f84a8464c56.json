@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "base editing",
+      "PCSK9",
+      "VERVE-101"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "335b1f84a8464c56fffdcd73cef99ad298c440c2c7ca6d7d6a3a2fe96d892448",
+  "recorded_at": "2026-11-08T07:38:40.685636+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3346.5616000012233,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=base editing PCSK9 VERVE-101, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"base editing PCSK9 VERVE-101\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 35021064|Engineered virus-like particles for efficient in vivo deliv…|Europe PMC|2022-01-11|-|562| \n|PMID 36691401|Passive, active and endogenous organ-targeted lipid and poly…|Europe PMC|2023-01-19|-|528| \n|PMID 36634672|15 years of GWAS discovery: Realizing the promise.|Europe PMC|2023-01-11|-|506| \n|PMID 36314243|Efficacy and Safety of an Investigational Single-Course CRIS…|PubTator3, Europe PMC, PubMed|2023-01-17|-|167| \n|PMID 38507678|Nucleic Acid Therapeutics: Successes, Milestones, and Upcomi…|Europe PMC|2024-03-20|-|113| \n|PMID 41062796|Cholesterol metabolism: molecular mechanisms, biological fun…|PubMed|2025-10-09|-|104| \n|PMID 38142221|VERVE-101: a promising CRISPR-based gene editing therapy tha…|PubTator3, PubMed|2023-12-23|-|82| \n|PMID 38878270|VERVE-101, a CRISPR base-editing therapy designed to permane…|PubTator3, PubMed|2024-06-21|-|61| \n|PMID 39804565|CRISPR-Cas9 Targeting PCSK9: A Promising Therapeutic Approac…|PubMed|2025-04-01|-|11| \n|PMID 40288084|Treatment of Homozygous Familial Hypercholesterolemia|PubTator3|2025-04-26|-|4| \n \n \n \nNewest indexed: 2025-10-08 (396 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 35021064\n  biomcp search article -k \"base editing PCSK9 VERVE-101\" --year-min 2022 --year-max 2025 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

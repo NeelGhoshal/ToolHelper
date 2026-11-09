@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "Casgevy",
+      "exagamglogene"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "9180a2fa315abc308cbd4c62e6b266a0f70c7accfe0804d72f032923306a1575",
+  "recorded_at": "2026-11-08T14:37:28.535343+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5227.349399996456,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR Casgevy exagamglogene, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CRISPR Casgevy exagamglogene\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42977761|Genotoxic safety and long-term engraftment dynamics of effic…|PubMed|2026-11-03|-|0| \n|PMID 42400217|Efficacy, Safety, and Treatment-Delivery Feasibility of Auto…|PubMed|2026-11-01|-|0| \n|PMID 42925849|When prevention constrains cure: Institutional lock-in and g…|PubTator3, Europe PMC, PubMed|2026-10-23|-|0| \n|PMID 42859304|Recent trends and innovative strategies in the curative appr…|PubTator3, Europe PMC, PubMed|2026-10-10|-|0| \n|PMID 42761173|Gene therapy for hereditary hematological disorders: From cl…|Europe PMC|2026-08-27|-|0| \n|PMID 42668627|Advanced therapy medicinal products in Saudi Arabia: Regulat…|Europe PMC|2026-08-24|-|0| \n|PMID 42699102|Targeted Nanoparticle Delivery CRISPR/Cas9: overcoming biolo…|Europe PMC|2026-08-19|-|0| \n|PMID 42617141|Translating CRISPR to Practice in the Clinic: Transformative…|PubMed|2026-08-19|-|0| \n|PMID 42608275|On-target and off-target activities of CRISPR therapeutics a…|PubMed|2026-08-17|-|0| \n|PMID 42512120|Sickle Cell Disease: From Ancient Origins to Modern Breakthr…|PubTator3, PubMed|2026-07-22|-|0| \n \n \n \nNewest indexed: 2026-11-03 (5 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42977761\n  biomcp search article -k \"CRISPR Casgevy exagamglogene\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

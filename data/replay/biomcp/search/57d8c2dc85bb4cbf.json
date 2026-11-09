@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "base editing",
+      "PCSK9",
+      "clinical trial"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "57d8c2dc85bb4cbf8a8eeb050e21c6c74c43ffaf626d06dda5a2475ff25d1b0f",
+  "recorded_at": "2026-11-09T05:38:55.928657+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5281.352000005427,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=base editing PCSK9 clinical trial, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"base editing PCSK9 clinical trial\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 29846171|The MR-Base platform supports systematic causal inference ac…|Europe PMC|2018-05-30|-|7021| \n|PMID 32760811|Guidelines for performing Mendelian randomization investigat…|Europe PMC|2019-01-01|-|1828| \n|PMID 32782413|Advances in oligonucleotide drug delivery.|Europe PMC|2020-08-11|-|1581| \n|PMID 34145432|Noncoding RNA therapeutics - challenges and potential soluti…|Europe PMC|2021-06-18|-|1313| \n|PMID 42187087|In Vivo Base Editing of PCSK9 with VERVE-102 for Hypercholes…|PubMed|2026-08-13|-|13| \n|PMID 42241517|New and Emerging Therapeutic Targets for ApoB-Containing Par…|PubMed|2026-06-05|-|3| \n|PMID 42052993|LDL-Cholesterol Lowering Therapies: An Update.|PubMed|2026-04-23|-|0| \n|PMID 41776075|In vivo base editing gene therapy for heterozygous familial…|PubMed|2026-03-01|-|30| \n|PMID 41343574|Genetic determinants of lipid metabolism in cardioprotection…|PubTator3|2025-12-04|-|none| \n|PMID 36206078|New algorithms for treating homozygous familial hypercholest…|PubTator3|2022-12-01|-|none| \n \n \n \nNewest indexed: 2026-06-04 (158 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 29846171\n  biomcp search article -k \"base editing PCSK9 clinical trial\" --year-min 2018 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

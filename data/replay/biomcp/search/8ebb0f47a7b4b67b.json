@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "melanoma"
+    ],
+    "intervention": [
+      "BRAF inhibitor"
+    ],
+    "limit": 10
+  },
+  "args_key": "8ebb0f47a7b4b67bbd35cfde19187b40b01902c79314d8010881ad8805e9da48",
+  "recorded_at": "2026-11-08T07:35:57.031603+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2651.7178999984026,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 57 \n \nQuery: condition=melanoma, intervention=BRAF inhibitor \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT01072175|Investigate Safety, Pharm…|COMPLETED|2|Cancer| \n|NCT01266967|A Study of GSK2118436 in…|COMPLETED|2|Melanoma and Brain Metastases| \n|NCT02310451|Study of Molecular Mechan…|COMPLETED|NA|Metastatic Melanoma| \n|NCT02354690|Vemurafenib and TIL Thera…|COMPLETED|1/2|Metastatic Melanoma| \n|NCT07431489|Retinal Structural and Fu…|COMPLETED|NA|Malignant Melanoma, MEK Inhibitor-Associated Retinopathy| \n|NCT04720768|Encorafenib, Binimetinib…|UNKNOWN|1/2|Melanoma, Metastasis| \n|NCT01820364|LGX818 in Combination Wit…|TERMINATED|2|Melanoma| \n|NCT01835184|Cabozantinib-S-Malate and…|TERMINATED|1|Recurrent Melanoma, Stage IIIA Melanoma, Stage… [abridged; 6 conditions total]| \n|NCT01940809|Ipilimumab With or Withou…|TERMINATED|1|BRAF V600E Mutation Present, BRAF V600K Mutati… [abridged; 8 conditions total]| \n|NCT01978236|Dabrafenib/Trametinib, BR…|TERMINATED|2|Melanoma and Brain Metastases| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-10 of 57 results. Use --offset 10 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

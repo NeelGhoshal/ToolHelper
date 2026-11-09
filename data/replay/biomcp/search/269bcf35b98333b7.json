@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "mutation": [
+      "BRAF"
+    ],
+    "offset": 25,
+    "status": "recruiting"
+  },
+  "args_key": "269bcf35b98333b7fc02f8fbddd45b4200ce61ac3e879449c9a51cf1f9e8e90e",
+  "recorded_at": "2026-11-08T07:46:18.566326+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 10325.253100001646,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 25 trial(s) \n \nQuery: condition=melanoma, status=recruiting, mutation=BRAF, offset=25 \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT07224425|A Study of BI 3810944 in…|RECRUITING|1|Solid Tumours, Melanoma| \n|NCT06743126|SUPRAME-ACTengine® IMA20…|RECRUITING|3|Melanoma, Cutaneous Malignant, Mucosal Melanoma| \n|NCT03842943|Neoadjuvant Combination I…|RECRUITING|2|Cutaneous Melanoma| \n|NCT06326411|A Study to Investigate th…|RECRUITING|1|Oncology, MEK Mutation, RAF Gene Mutation, Ras… [abridged; 9 conditions total]| \n|NCT06697301|Safety and Efficacy of EI…|RECRUITING|2/3|Advanced Melanoma| \n|NCT06398418|R-5780-01 In Combination…|RECRUITING|1|Solid Tumor, Adult, Solid Tumor, Melanoma, Bas… [abridged; 6 conditions total]| \n|NCT06172478|A Study of HER3-DXd in Su…|RECRUITING|2|Advanced Solid Tumor, Melanoma, Head and Neck… [abridged; 14 conditions total]| \n|NCT07148245|Symptoms of Immune Checkp…|RECRUITING|-|Cutaneous Melanoma, Cutaneous Melanoma, Stage… [abridged; 4 conditions total]| \n|NCT05026983|Binimetinib and Encorafen…|RECRUITING|2|Clinical Stage IV Cutaneous Melanoma AJCC v8,… [abridged; 3 conditions total]| \n|NCT06712927|Trial of Relatlimab, Nivo…|RECRUITING|2|Melanoma, Brain Metastases| \n|NCT02828202|Follow-up of a National C…|RECRUITING|-|Malignant Melanoma| \n|NCT06330064|A Study to Evaluate the E…|RECRUITING|1/2|Recurrent or Metastatic Solid Tumors| \n|NCT04119024|Gene Modified Immune Cell…|RECRUITING|1|Metastatic Malignant Solid Neoplasm, Metastat… [abridged; 17 conditions total]| \n|NCT04913285|A Study to Evaluate KIN-2…|RECRUITING|1|Solid Tumor, Adult, Non-small Cell Lung Cancer, Melanoma| \n|NCT06961006|A Clinical Study of Intis…|RECRUITING|2|Malignant Melanoma| \n|NCT04045691|Binimetinib Plus Encorafe…|RECRUITING|-|Melanoma Stage IV, Melanoma Stage III| \n|NCT07310784|A Phase II Trial of LM103…|RECRUITING|2|Advanced Melanoma| \n|NCT05076760|MEM-288 Oncolytic Virus A…|RECRUITING|1|Solid Tumor, Advanced Cancer, Metastatic Canc… [abridged; 10 conditions total]| \n|NCT04511013|A Study to Compare the Ad…|RECRUITING|2|Acral Lentiginous Melanoma, Clinical Stage IV… [abridged; 7 conditions total]| \n|NCT06150664|A Phase 1 of CTX-8371 in…|RECRUITING|1|Non Small Cell Lung Cancer, Triple Negative Br… [abridged; 5 conditions total]| \n|NCT05098210|Personalized Neo-Antigen…|RECRUITING|1|Anatomic Stage IV Breast Cancer AJCC v8, Clin… [abridged; 25 conditions total]| \n|NCT03340129|Anti-PD 1 Brain Collabora…|RECRUITING|2|Melanoma Stage Iv| \n|NCT07751042|Phase 1/2 Study of Intrav…|RECRUITING|1/2|Advanced Solid Tumor| \n|NCT06246916|A Study With Combinations…|RECRUITING|3|Melanoma| \n|NCT05877430|Safety, Tolerability, and…|RECRUITING|1/2|NSCLC, HNSCC, Melanoma, Metastatic Cancer, Advanced Solid Tumor, Advanced Cancer| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 25 results (total unknown). Use --offset 50 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

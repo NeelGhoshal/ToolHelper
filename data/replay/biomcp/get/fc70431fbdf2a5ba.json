@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "imatinib",
+    "sections": [
+      "targets"
+    ]
+  },
+  "args_key": "fc70431fbdf2a5ba6550f9c1e620ea3873c7ed84208ac6ed8cab6d452d521275",
+  "recorded_at": "2026-11-09T04:44:28.380535+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 594.6948000055272,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# imatinib mesylate - targets \n## Targets (ChEMBL / Open Targets) \nABL1, DDR1, DDR2, PDGFRB, KIT, BCR \nVariant Targets (CIViC): BCR::ABL1 Fusion AND ABL1 V299L, BCR::ABL1 Fusion AND ABL1 Y253H, BCR::ABL1 Fusion AND ABL1 G250E, BCR::ABL1 Fusion AND ABL1 E255K, BCR::ABL1 Fusion AND ABL1 F359C, BCR::ABL1 Fusion AND ABL1 F359V, BCR::ABL1 Fusion AND ABL1 E255V, BCR::ABL1 Fusion AND ABL1 F317L \nMore:\n  biomcp get drug \"imatinib mesylate\" approvals   - Drugs@FDA approval history\n  biomcp get drug \"imatinib mesylate\" label   - approved-indication and FDA label detail beyond the base card\n  biomcp get drug \"imatinib mesylate\" regulatory --region us   - approval and supplement history; use only if the base card lacks approval context\n\nAll:\n  biomcp get drug \"imatinib mesylate\" all --region us \nSee also:\n  biomcp search article --drug \"imatinib mesylate\" --type review --limit 5   - supplement sparse structured data with review literature for indication context\n  biomcp drug trials \"imatinib mesylate\"\n  biomcp drug adverse-events \"imatinib mesylate\"   - inspect safety reports and adverse-event signal\n  biomcp search pgx -d \"imatinib mesylate\"   - pharmacogenomics interactions\n  biomcp get gene ABL1 \n\n[DrugBank](https://go.drugbank.com/drugs/DB00619) | [ChEMBL](https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL941)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

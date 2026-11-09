@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "42879043",
+    "json": true,
+    "sections": [
+      "tldr"
+    ]
+  },
+  "args_key": "063473955b9d5164c034056ea4f1fe675623d250301717ec85acbe92500eeaa7",
+  "recorded_at": "2026-11-09T08:10:12.943436+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1291.316300004837,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42879043/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42879043 tldr\",\n      \"biomcp article references 42879043 --limit 3\",\n      \"biomcp article citations 42879043 --limit 3\",\n      \"biomcp article recommendations 42879043 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ]\n  },\n  \"abstract_text\": \"Immune checkpoint inhibitors (ICIs) have transformed microsatellite instability-high or mismatch repair-deficient metastatic colorectal cancer, but clinically relevant progression still occurs and treatment after progression remains undefined. We performed a clinically oriented narrative review, updated August 8, 2026, and separated direct prospective evidence, retrospective post-ICI evidence, extrapolation from general metastatic colorectal cancer trials, case-level evidence, and biological rationale. In the absence of prospective post-dual-ICI sequencing studies, we propose an evidence-informed conceptual framework. Apparent early progression should prompt confirmation of MSI/MMR status and exclusion of pseudoprogression before classification as early global progression, late systemic progression, or oligoprogression. BRAF V600E is common in MSI-H/dMMR metastatic colorectal cancer and is not an absolute predictor of ICI failure, but it is a major treatment-defining branch after progression. Repeat tissue biopsy or circulating tumor DNA profiling should be selective, used when findings can alter management and without delaying urgent therapy. ctDNA-based molecular residual disease is prognostic after curative-intent colorectal cancer resection, including metastasectomy, but is not validated to direct treatment of radiographically evident post-ICI progression. Oligoprogression warrants multidisciplinary consideration of local therapy, while ICI rechallenge remains investigational. Most recommendations are retrospective or extrapolated; transparent evidence boundaries and prospective post-dual-ICI studies are essential.\",\n  \"author_completeness\": \"complete\",\n  \"author_count\": 4,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Sagawa T\",\n    \"Hirakawa M\",\n    \"Nagashima H\",\n    \"Fujikawa K\"\n  ],\n  \"citation_count\": 0,\n  \"date\": \"2026-10-15\",\n  \"doi\": \"10.1007/s12029-026-01611-x\",\n  \"journal\": \"J Gastrointest Cancer\",\n  \"open_access\": false,\n  \"pmid\": \"42879043\",\n  \"publication_type\": \"Review\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"Resistance Phenotypes and Treatment Sequencing After Immune Checkpoint Blockade in MSI-H/dMMR Metastatic Colorectal Cancer: A Review.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

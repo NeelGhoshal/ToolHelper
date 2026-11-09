@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "Cas9",
+      "BCL11A"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "040598fffd78957441a4f4dad2c81d6ae5d61d3aa0cc6ef755d94e7ba29d8aae",
+  "recorded_at": "2026-11-08T15:00:20.255751+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3128.6456000016187,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR Cas9 BCL11A, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"CRISPR Cas9 BCL11A\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 34145432|Noncoding RNA therapeutics - challenges and potential soluti…|Europe PMC|2021-06-18|-|1313| \n|PMID 28333914|Genome-scale CRISPR-Cas9 knockout and transcriptional activa…|Europe PMC|2017-03-23|-|1204| \n|PMID 31147612|The next generation of CRISPR-Cas technologies and applicati…|Europe PMC|2019-08-01|-|1064| \n|PMID 25654603|Therapeutic genome editing: prospects and challenges.|Europe PMC|2015-02-01|-|941| \n|PMID 35922667|CRISPR-Cas9-mediated gene editing of the BCL11A enhancer for…|PubTator3|2022-08-01|-|156| \n|PMID 39118728|Revolutionary breakthrough: FDA approves CASGEVY, the first…|PubTator3|2024-05-15|-|82| \n|PMID 35093321|CRISPR/Cas9-based multiplex genome editing of BCL11A and HBG…|PubTator3|2022-03-05|-|19| \n|PMID 38022811|CRISPR/Cas9 Ablated BCL11A Unveils the Genes with Possible R…|PubTator3|2023-11-01|-|5| \n|PMID 42977761|Genotoxic safety and long-term engraftment dynamics of effic…|PubMed|2026-11-03|-|0| \n|PMID 42876272|Precision Medicine in Sickle Cell Disease: From Molecular Pa…|PubMed|2026-10-15|-|0| \n \n \n \nNewest indexed: 2026-11-03 (5 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 34145432\n  biomcp search article -k \"CRISPR Cas9 BCL11A\" --year-min 2015 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

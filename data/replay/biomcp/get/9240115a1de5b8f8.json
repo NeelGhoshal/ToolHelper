@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "42977761",
+    "json": true,
+    "sections": [
+      "tldr"
+    ]
+  },
+  "args_key": "9240115a1de5b8f875a614e340b679fc22bd36beb09cd5b2d4fcf3e12fb0d81a",
+  "recorded_at": "2026-11-08T14:55:06.021894+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1167.783299999428,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42977761/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42977761 tldr\",\n      \"biomcp article references 42977761 --limit 3\",\n      \"biomcp article citations 42977761 --limit 3\",\n      \"biomcp article recommendations 42977761 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ]\n  },\n  \"abstract_text\": \"BACKGROUND: CRISPR/Cas9-mediated gene editing targeting the BCL11A erythroid enhancer has transformed therapeutic approaches for transfusion-dependent beta-thalassemia (beta-thal) and sickle cell disease (SCD). Even though clinical efficacy is well demonstrated, translating these therapies to global patient populations requires a strong evidence-based framework to address critical concerns regarding long-term genotoxic safety and long-lasting engraftment dynamics. METHODS: Following the 2020 PRISMA guidelines, we conducted a systematic review of 21 key clinical and preclinical studies (published during 2014-2026) to evaluate CRISPR/Cas9-mediated gene editing in beta-thal and SCD. The inclusion criteria focused on studies reporting foetal haemoglobin (HbF) induction, transfusion independence (TI) and safety outcomes. RESULTS: Clinical data indicate high efficacy, with exagamglogene autotemcel (exa-cel) achieving TI in 91% of beta-thal patients and a vaso-occlusive crisis (VOC)-free status in 97% of SCD patients. Safety profiling confirmed that severe adverse events, including febrile neutropenia and stomatitis, are primarily associated with busulfan-based myeloablation rather than gene editing. Gene-editing safety and conditioning toxicity are interlinked because conditioning is part of the process, and edited clones might interact with stress pathways during long-term repopulation. Preclinical benchmarks substantiate molecular reliability, with negligible off-target activity reported in most validated platforms. However, rare instances of complex structural rearrangements and intergenic off-target indels highlight the necessity for in-depth, unbiased long-term genomic surveillance. CONCLUSION: CRISPR/Cas9 therapeutics for beta-thal and SCD treatment constitute a treatment option within current clinical frameworks. These therapies need continuous surveillance. Rather than establishing a perfect plan, this systematic review highlights that while current platforms are thought to have short-term molecular precision, the use of Multilayer Safety Risks Screening and Surveillance for pretransplant conditioning is critical. This approach helps address long-term genotoxic concerns and ensures the safety and scalability of gene-editing therapies for global beta-thal and SCD patient care.\",\n  \"author_completeness\": \"complete\",\n  \"author_count\": 2,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Al-Subaie AM\",\n    \"Borgio JF\"\n  ],\n  \"citation_count\": 0,\n  \"date\": \"2026-11-03\",\n  \"doi\": \"10.1038/s41434-026-00656-8\",\n  \"journal\": \"Gene Ther\",\n  \"open_access\": false,\n  \"pmid\": \"42977761\",\n  \"publication_type\": \"Review\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"Genotoxic safety and long-term engraftment dynamics of efficient translational CRISPR/Cas9 therapeutics for beta-haemoglobinopathies from bench to clinical trials.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

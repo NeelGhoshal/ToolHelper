@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "disease": [
+      "lung cancer"
+    ],
+    "gene": "EGFR",
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "954501824072c10fcb766da2c02bd97c11efae9804a4014efcd429f3e23be1ab",
+  "recorded_at": "2026-11-08T08:24:20.905680+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 29522.55200000036,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, disease=lung cancer, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --gene EGFR --disease \"lung cancer\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 32029601|The biology, function, and biomedical applications of exosom…|Europe PMC|2020-02-01|-|8962| \n|PMID 20303878|Immunity, inflammation, and cancer.|Europe PMC|2010-03-01|-|8587| \n|PMID 15118073|Activating mutations in the epidermal growth factor receptor…|Europe PMC|2004-04-29|-|8565| \n|PMID 27718847|Pembrolizumab versus Chemotherapy for PD-L1-Positive Non-Sma…|Europe PMC|2016-10-08|-|8158| \n|PMID 26412456|Nivolumab versus Docetaxel in Advanced Nonsquamous Non-Small…|Europe PMC|2015-09-27|-|7752| \n|PMID 15118125|EGFR mutations in lung cancer: correlation with clinical res…|Europe PMC|2004-04-29|-|7336| \n|PMID 21430781|FAS and NF-kappaB signalling modulate dependence of lung can…|PubTator3|2011-03-24|-|418| \n|PMID 31634646|Association between EGFR mutation and ageing, history of pne…|PubTator3|2019-11-01|-|19| \n|PMID 38569279|Familial rare EGFR-mutant lung cancer syndrome: Review of li…|PubTator3|2024-03-30|-|7| \n|PMID 38052760|Combination therapy with EGFR tyrosine kinase inhibitors and…|PubTator3|2023-12-06|-|6| \n|PMID 33495907|Humoral immune response to epidermal growth factor receptor…|PubTator3|2021-02-01|-|5| \n|PMID 42998399|Novel 4-Anilinopyrimidine-N-Acylhydrazone derivatives as dua…|PubMed|2026-11-05|-|none| \n|PMID 42998029|Efficacy and Safety of Datopotamab Deruxtecan From a Single-…|PubMed|2026-11-01|-|none| \n|PMID 42998249|Empagliflozin Modulates Apoptosis and Autophagy Pathways in…|PubMed|2026-11-01|-|none| \n|PMID 42996595|Trastuzumab rezetecan (SHR-A1811) for the treatment of HER2-…|PubMed|2026-10-30|-|none| \n \n \n \nNewest indexed: 2026-11-07 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 32029601\n  biomcp search article -g EGFR -d \"lung cancer\" --year-min 2004 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

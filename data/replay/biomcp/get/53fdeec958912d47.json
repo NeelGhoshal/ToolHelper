@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "208161",
+    "json": true,
+    "sections": [
+      "label",
+      "indications",
+      "approvals",
+      "safety"
+    ]
+  },
+  "args_key": "53fdeec958912d47901f919ae6050da1a64a2960ad4359878079c591029148e6",
+  "recorded_at": "2026-11-08T05:56:54.141729+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 2634.5564000002923,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"error\": {\n    \"code\": \"not_found\",\n    \"message\": \"No exact drug match for '208161'.\"\n  },\n  \"_meta\": {\n    \"not_found\": true,\n    \"alias_resolution\": {\n      \"kind\": \"ambiguous\",\n      \"requested_entity\": \"drug\",\n      \"query\": \"208161\",\n      \"candidates\": [\n        {\n          \"label\": \"Eutyperemophilane Q\",\n          \"primary_type\": \"drug\",\n          \"primary_id\": \"CHEBI:208161\",\n          \"confidence\": \"CanonicalId\",\n          \"match_tier\": \"Weak\"\n        }\n      ]\n    },\n    \"next_commands\": [\n      \"biomcp discover 208161\",\n      \"biomcp search drug -q 208161\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

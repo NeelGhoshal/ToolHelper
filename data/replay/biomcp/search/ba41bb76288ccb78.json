@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 25,
+    "query": "melanoma susceptibility driver BRAF NRAS KIT CDKN2A PTEN NF1"
+  },
+  "args_key": "ba41bb76288ccb78a90cc28ba0ffb80c73f560c36470cd1b7a1d4d1c1f8498b3",
+  "recorded_at": "2026-11-09T06:44:09.689855+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 665.8317999972496,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: melanoma susceptibility driver BRAF NRAS KIT CDKN2A PTEN NF1 \n \nFound 6 genes \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| CDKN2A | cyclin dependent kinase inhibitor 2A | 1029 | 9:21966924-21995301 | GRCh38 | P42771 | 600160 | \n| KIT | KIT proto-oncogene, receptor tyrosine kinase | 3815 | 4:54657267-54740783 | GRCh38 | P10721 | 164920 | \n| NRAS | NRAS proto-oncogene, GTPase | 4893 | 1:114704468-114716775 | GRCh38 | P01111 | 164790 | \n| BRAF | B-Raf proto-oncogene, serine/threonine kinase | 673 | 7:140719327-140925199 | GRCh38 | P15056 | 164757 | \n| PTEN | phosphatase and tensin homolog | 5728 | 10:87862638-87971930 | GRCh38 | P60484 | 601728 | \n| NF1 | neurofibromin 1 | 4763 | 17:31094883-31382116 | GRCh38 | P21359 | 613113 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1-6 of 6 results. \n \n\n\n## Next commands\n- `biomcp get gene CDKN2A`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

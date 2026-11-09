@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "clopidogrel"
+    ],
+    "entity": "article",
+    "limit": 10,
+    "keyword": [
+      "CYP2C19 genotype clopidogrel CPIC 2022 update guideline recommendations"
+    ]
+  },
+  "args_key": "ba706f365939c15b1f08459141d1a3f7b7eaaa75a4b2d02edb1930fc5be319d5",
+  "recorded_at": "2026-11-08T07:10:41.614396+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 10630.855900000824,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=clopidogrel, keyword=CYP2C19 genotype clopidogrel CPIC 2022 update guideline recommendations, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --drug clopidogrel --keyword \"CYP2C19 genotype clopidogrel CPIC 2022 update guideline recommendations\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41338248|CYP2C19 genotype testing for clopidogrel: A guideline develo…|PubTator3, Europe PMC|2025-12-03|hybrid 0.373 + title 4/8|18| \n|PMID 35034351|Clinical Pharmacogenetics Implementation Consortium Guidelin…|PubTator3, PubMed|2022-11-01|hybrid 0.31 + title 6/8|396| \n|PMID 38652504|Recommendations for pharmacogenetic testing in clinical prac…|Europe PMC|2024-08-01|hybrid 0.238 + title 1/8|24| \n|PMID 42533475|CYP2C19 Genotyping to Guide Clopidogrel Prescribing for Neur…|Europe PMC|2026-07-30|hybrid 0.208 + title 2/8|1| \n|PMID 36082121|Evaluation of race and ethnicity disparities in outcome stud…|PubTator3|2022-08-23|hybrid 0.165 + title 2/8|none| \n|PMID 39960348|Implementing Pharmacogenomics Clinical Decision Support: A C…|Europe PMC|2025-02-17|hybrid 0.147|8| \n|PMID 35647265|Ticagrelor is more effective than clopidogrel in carrier of…|PubTator3|2022-01-01|hybrid 0.135 + title 2/8|none| \n|PMID 42115787|Limited Visibility and Perception of the Clinical Relevance…|Europe PMC|2026-05-01|hybrid 0.118 + title 1/8|0| \n|PMID 35814245|Variability Between Clinical Pharmacogenetics Implementation…|PubTator3|2022-06-24|hybrid 0.115 + title 2/8|none| \n|PMID 39822142|CYP2C19  Genotype-Guided Antiplatelet Therapy and Clinical O…|PubTator3|2025-01-01|hybrid 0.095 + title 2/8|none| \n \n \n \nNewest indexed: 2026-07-31 (100 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41338248\n  biomcp search article --drug clopidogrel -k \"CYP2C19 genotype clopidogrel CPIC 2022 update guideline recommendations\" --year-min 2022 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

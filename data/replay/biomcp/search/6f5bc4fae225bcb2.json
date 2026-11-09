@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2023",
+    "entity": "article",
+    "json": true,
+    "limit": 10,
+    "sort": "date",
+    "source": "pubmed",
+    "keyword": [
+      "HER2-targeted therapy"
+    ]
+  },
+  "args_key": "6f5bc4fae225bcb249afe59fb86fb43c6030b8d212e349c59f5b4111ddfd0e9c",
+  "recorded_at": "2026-11-08T08:42:57.679268+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5818.888499999957,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=HER2-targeted therapy, date_from=2023, exclude_retracted=true, sort=date, source=pubmed\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": false,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubmed\"\n    ],\n    \"enrichment_sources\": []\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": 2938,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"42998683\",\n      \"title\": \"Real-World HER2 Testing Practices and Performance of HER2 immunohistochemistry in Non-Breast, Non-Gastroesophageal Solid Tumors: Experience at a Large U.S. Academic Institution.\",\n      \"journal\": \"Human pathology\",\n      \"date\": \"2026-11-07\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42995001\",\n      \"title\": \"Zanidatamab in the treatment of esophagogastric adenocarcinoma.\",\n      \"journal\": \"Future oncology (London, England)\",\n      \"date\": \"2026-11-06\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42988055\",\n      \"title\": \"Fatty acid-derived dicarboxylic acid modification mitigates human epidermal growth factor receptor 2-targeted antibody-drug conjugate-induced interstitial lung disease.\",\n      \"journal\": \"Journal of controlled release : official journal of the Controlled Release Society\",\n      \"date\": \"2026-11-05\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42976854\",\n      \"title\": \"An integrated breast cancer transcriptomic atlas defines clinical subtypes and informs cellular origin.\",\n      \"journal\": \"Cell reports. Medicine\",\n      \"date\": \"2026-11-03\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42985430\",\n      \"title\": \"Tumor Microenvironment-Mediated Resistance in HER2-Positive Breast Cancer: Recent Advances and Therapeutic Challenges.\",\n      \"journal\": \"Oncology research\",\n      \"date\": \"2026-10-28\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42978924\",\n      \"title\": \"Research progress on the key cuproptosis regulator FDX1 and its relevance to triple-negative breast cancer.\",\n      \"journal\": \"Frontiers in molecular biosciences\",\n      \"date\": \"2026-10-20\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42985471\",\n      \"title\": \"A Clinician's Guide to Cancer Therapy-Related Cardiovascular Toxicity.\",\n      \"journal\": \"Reviews in cardiovascular medicine\",\n      \"date\": \"2026-10-16\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42994133\",\n      \"title\": \"2026 Key European Guideline Changes for Metastatic Breast Cancer and Their Impact on Practice-Commentary Based on a Virtual Focus Group.\",\n      \"journal\": \"Clinical breast cancer\",\n      \"date\": \"2026-10-07\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42977653\",\n      \"title\": \"DV-Based Kidney-Sparing Therapy for High-Risk Upper Tract Urothelial Carcinoma: An Exploratory Single-Center Real-World Study.\",\n      \"journal\": \"Clinical genitourinary cancer\",\n      \"date\": \"2026-09-24\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42989275\",\n      \"title\": \"A deep learning model utilizing H&E-stained images for predicting HER2-low expression in breast cancer.\",\n      \"journal\": \"Diagnostic pathology\",\n      \"date\": \"2026-08-11\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42998683\",\n      \"biomcp get drug \\\"HER2-targeted Therapy\\\"\",\n      \"biomcp list article\"\n    ],\n    \"suggestions\": [\n      {\n        \"command\": \"biomcp get drug \\\"HER2-targeted Therapy\\\"\",\n        \"reason\": \"Exact drug vocabulary match for article keyword \\\"HER2-targeted therapy\\\".\",\n        \"sections\": [\n          \"label\",\n          \"targets\",\n          \"indications\"\n        ]\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

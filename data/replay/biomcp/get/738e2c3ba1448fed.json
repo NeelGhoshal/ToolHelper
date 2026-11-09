@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "imatinib",
+    "sections": [
+      "targets",
+      "druggability",
+      "chembl",
+      "drug_response"
+    ]
+  },
+  "args_key": "738e2c3ba1448fed372176cd6e083fc7327d82f5b2e2326df1926491b7c973cd",
+  "recorded_at": "2026-11-09T07:13:53.918771+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 0.8315000013681129,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid drug section: druggability"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

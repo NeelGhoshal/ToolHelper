@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "patient-specific in vivo gene editing",
+      "rare genetic disease",
+      "Musunuru"
+    ],
+    "limit": 8,
+    "sort": "citations"
+  },
+  "args_key": "af3642460e1ffa1ddd3724b7d8a334c9b1ab93656c4117584f806b260a27558b",
+  "recorded_at": "2026-11-08T06:04:08.085140+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2889.0055000001666,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=patient-specific in vivo gene editing rare genetic disease Musunuru, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"patient-specific in vivo gene editing rare genetic disease Musunuru\" --exclude-retracted --sort citations --source semanticscholar --limit 8 --offset 0` \n \n \nFound 8 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 24906146|Development and applications of CRISPR-Cas9 for genome engin…|Europe PMC|2014-06-01|-|4075| \n|PMID 30323312|Base editing: precision chemistry on the genome and transcri…|Europe PMC|2018-12-01|-|1375| \n|PMID 29801422|Delivering CRISPR: a review of the challenges and approaches…|Europe PMC|2018-11-01|-|811| \n|PMID 26493500|Modelling kidney disease with CRISPR-mutant kidney organoids…|Europe PMC|2015-10-23|-|641| \n|PMID 35021064|Engineered virus-like particles for efficient in vivo deliv…|Europe PMC|2022-01-11|-|562| \n|PMID 35798006|Therapeutic in vivo delivery of gene editing agents.|Europe PMC|2022-07-06|-|459| \n|PMID 40373211|Patient-Specific In Vivo Gene Editing to Treat a Rare Geneti…|Europe PMC, PubMed|2025-05-15|-|343| \n|PMID 29474918|Dissecting the Causal Mechanism of X-Linked Dystonia-Parkins…|Europe PMC|2018-02-01|-|207| \n \n \n \nNewest indexed: 2025-05-21 (536 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 24906146\n  biomcp search article -k \"patient-specific in vivo gene editing rare genetic disease Musunuru\" --year-min 2014 --year-max 2025 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 8 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "trial",
+    "id": "NCT06599619",
+    "sections": [
+      "arms",
+      "eligibility"
+    ]
+  },
+  "args_key": "f2d659e73cc5eb6783804665dd4b4a00e92a3dd79753a5d355f4ae6b5c32b2ae",
+  "recorded_at": "2026-11-09T05:59:59.743802+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 113.28450001019519,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# NCT06599619 - arms, eligibility \n## Eligibility (ClinicalTrials.gov) \n \nSex: All\nEligible Ages: 18 Years to Any age\nHealthy Subjects: No\nInclusion Criteria:\n\n1. Subjects must have at least two atypical nevi of ≥ 4 mm diameter.\n2. Subjects must have a current documented history of melanoma.\n3. Subject must be ≥ 18 years and if female of childbearing potential, must agree to practice effective contraception per institutional SOC if sexually active.\n4. Subjects will have been deemed candidates for adjuvant therapy with single agent anti-PD1 therapy.\n5. Subjects must give written informed consent to participate in this study with consent signed and dated prior to entry into trial.\n\nExclusion Criteria:\n\n1. Patients with non-malignant diseases or indications that would preclude the administration of anti-PD1 therapy such as significant immune suppression or active autoimmune disease requiring disease modifying, immunosuppressive therapy, will be ineligible.\n2. Patients who have previously received anti-PD1 therapy\n3. Patients with history of other active, non-melanoma cancers\n4. Patients who are receiving other anti-neoplastic therapy. \n## Arms (ClinicalTrials.gov) \n \n| Arm | Type | Interventions | Description | \n|---|---|---|---| \n| Patients Treated with single agent, adjuvant anti-PD1 therapy | - | Single agent, adjuvant anti-PD1 therapy | Patients receiving single agent, adjuvant anti-PD1 therapy (… | \nMore:\n  biomcp get trial NCT06599619 contacts   - central and site contact details\n  biomcp get trial NCT06599619 locations   - site list and contact details\n  biomcp get trial NCT06599619 outcomes   - endpoint measures and time frames\nAll:\n  biomcp get trial NCT06599619 all \nSee also:\n  biomcp search disease --query Melanoma\n  biomcp search article -d Melanoma\n  biomcp search trial -c Melanoma\n  biomcp search drug -q \"OPDIVO®\" \n\n[ClinicalTrials.gov](https://clinicaltrials.gov/study/NCT06599619)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

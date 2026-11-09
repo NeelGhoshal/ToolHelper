@@ -1,0 +1,46 @@
+# Phase 10, second iteration (2026-11-08): a fractional factorial over strategy variants aimed at
+# the cost centres p10's own runs measured. Pre-registered here before any p10b run.
+#
+# Why p10 found nothing (from its 162 baseline runs, nim-mistral, replay):
+#   - tokens per run: tool results carried across turns 51%, tool definitions re-sent each turn 44%;
+#   - the variants it tested barely touched them: E2 light saved exactly 635 of 4,804 measured
+#     definition tokens per turn (~6% of a run); E6 projection cut unused fields of three tools;
+#     E8 after_use hid facts still needed (-11.7 points); E1 top-8 dropped needed BioMCP tools;
+#   - noise: per-task run-to-run spread 0.29 in log tokens, so one run per arm detects only
+#     changes >= ~14% (80% power, 54 tasks), three runs ~8.5%; the greedy rule compared single passes.
+#
+# Fixed-behaviour savings on those baseline runs (same trajectories, measured-calibrated tokens):
+#   E6 budget 2000: -26.7% of tokens (77/162 runs touched; no passed run would lose the only copy
+#   of its expected answer string); E2 minimal: ~-25% of definition tokens (cl100k), ~-11% of a run;
+#   max_turns 6 + E9: -6.9% (38 runs touched). Server routing through the ToolCard index was
+#   rejected offline: keeping every needed server takes 2.35 of 3 servers on average (margin 0.5).
+design: factorial
+experiment: p10b
+llm: nim-mistral
+mode: replay            # recordings first; misses fall through to live and are recorded
+max_turns: 8
+parallel: 4             # passes at once (latency-bound free tier); each pass and its servers take ~0.6-1 GB RAM; OneDrive is shut down for the run
+# Learned strategies (E4, E6) learn only from the other fold's runs of these groups (cross-fitting).
+learn_from: [bench-baseline-record, p10-baseline-r1, p10-baseline-r2, p10-baseline-r3]
+
+factors:
+  A:
+    specs: ["E2:level=minimal"]
+    note: tool definitions (44% of tokens); drops string lengths, minItems, uniqueItems, format
+  B:
+    specs: ["E6:mode=budget,budget=2000"]
+    note: carried results (51%); results over 2,000 tokens cut to leading whole units, rest via expand_result
+  C:
+    specs: ["E9"]
+    max_turns: 6
+    note: turn loops; six tool turns, then one answer from what was gathered (README E9 limit variant)
+  D:
+    specs: ["E4:mode=repair"]
+    note: error turns (16% of BioMCP-heavy calls failed); also catches bounds that A no longer shows
+generators: {D: ABC}    # resolution IV half fraction of 2^4: 8 cells, main effects clear of 2-factor interactions
+
+confirm_repeats: 3      # chosen config vs baseline, paired repeats each (the factorial cells count as repeat 1)
+live_fold: A            # README step 10: live confirmation on one fold
+order_seed: 7           # pass order is shuffled with this seed
+gate: {max_success_drop: 0.02, min_trust: 0.9}
+bootstrap: {samples: 2000, seed: 7}

@@ -5,10 +5,15 @@
   first sentence (<= 100 chars).
 - `aggressive`: as light, but property descriptions go entirely and the tool description
   keeps one sentence (<= 100 chars).
+- `minimal`: as light, and also drops the bounds that only reject values without telling the
+  model what to send: string lengths, `minItems`, `uniqueItems` and `format`. Most of BioMCP's
+  schema tokens are these (an array of strings repeats them per property), which is why
+  `light` saved only 635 of 4,804 measured tool-definition tokens per turn in Phase 10.
 
-Types, enums, required, bounds, patterns and combinators are never touched, so any call
-valid under the original schema is valid under the compressed one (E4 validates against
-the originals either way). Evidence per tool: the original schema hash, with the
+Types, enums, required, numeric bounds, `maxItems`, patterns and combinators are never
+touched, and nothing is added, so any call valid under the original schema is valid under the
+compressed one (E4 validates against the originals either way; under `minimal` the server and
+E4 still enforce the dropped bounds). Evidence per tool: the original schema hash, with the
 compressed hash in its detail. `arg_error_rate(traces)` gives the later error rate.
 """
 
@@ -22,8 +27,9 @@ from toolhelper.context.model import EvidenceRef
 from toolhelper.mcp.canonical import sha256_hex
 from toolhelper.monitoring.tokens import spec_view
 
-Level = Literal["light", "aggressive"]
+Level = Literal["light", "aggressive", "minimal"]
 DROP = {"title", "default", "$schema", "examples", "$comment"}
+BOUNDS_ONLY = {"minLength", "maxLength", "minItems", "uniqueItems", "format"}  # dropped by `minimal`
 SENTENCE = re.compile(r"(?<=[.!?])\s")
 
 
@@ -41,7 +47,7 @@ def compress_schema(schema: Any, level: Level, *, in_properties: bool = False) -
         return schema
     out = {}
     for key, value in schema.items():
-        if key in DROP and not in_properties:
+        if (key in DROP or (level == "minimal" and key in BOUNDS_ONLY)) and not in_properties:
             continue
         if key == "description" and not in_properties and isinstance(value, str):
             if level == "aggressive":

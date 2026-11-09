@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "GLP-1 receptor agonists",
+      "abdominal aortic aneurysm",
+      "rupture"
+    ],
+    "limit": 10
+  },
+  "args_key": "e38b6b64aaf0fe1afda885b6c23c138841c739ac72910022a05fdfac5ce9ddcd",
+  "recorded_at": "2026-11-09T06:29:40.621658+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3590.984299997217,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=GLP-1 receptor agonists abdominal aortic aneurysm rupture, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41276093|Glucagon-Like Peptide-1 Receptor Agonists are Associated wit…|PubTator3, PubMed, Semantic Scholar|2025-11-21|hybrid 0.516 + title+abstract 6/7|8| \n|PMID 41764584|Metformin and beyond: glucose-lowering therapy as a potentia…|Europe PMC, PubMed|2026-03-01|hybrid 0.391 + title+abstract 7/7|1| \n|PMID 42957066|GLP-1 Receptor Agonists Decrease the Rate of Rupture, Cardia…|PubTator3, Europe PMC, PubMed, Semantic Scholar|2026-10-29|hybrid 0.389 + title+abstract 7/7|0| \n|PMID 42940178|The Diabetes Paradox in Aortic Aneurysms: An Unexpected Inve…|PubTator3, Europe PMC, PubMed|2026-10-17|hybrid 0.37 + title+abstract 7/7|0| \n|PMID 42288888|Perivascular adipokine signaling in abdominal aortic aneurys…|Europe PMC|2026-06-13|hybrid 0.365 + title+abstract 6/7|1| \n|PMID 42072473|Semaglutide Prevents Aortic Rupture and Dissection in the An…|PubTator3, Europe PMC, PubMed, Semantic Scholar|2026-04-20|hybrid 0.31 + title+abstract 6/7|0| \n|DOI 10.1016/j.jvs.2025.03.281|Glucagon-like Peptide-1 Receptor Agonists are Associated Wit…|Semantic Scholar|2025|hybrid 0.3 + title 5/7|1| \n|PMID 42221150|GLP-1 Receptor Agonists Reduce Aortic Dissection and Hyperte…|Europe PMC, Semantic Scholar|2026-05-23|hybrid 0.296 + title+abstract 6/7|0| \n|PMID 42346868|Cardiometabolic and RAAS-Targeted Therapy in Thoracic Aortic…|Europe PMC|2026-06-18|hybrid 0.27 + title+abstract 5/7|0| \n|PMID 41671787|GLP-1 receptor agonists and aneurysm rupture risk in type 2…|Semantic Scholar|2026|hybrid 0.248 + title+abstract 5/7|0| \n \n \n \nNewest indexed: 2026-06-26 (136 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41276093\n  biomcp search article -k \"GLP-1 receptor agonists abdominal aortic aneurysm rupture\" --year-min 2025 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

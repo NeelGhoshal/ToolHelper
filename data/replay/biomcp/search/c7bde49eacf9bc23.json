@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "type 2 diabetes mellitus"
+    ],
+    "entity": "trial",
+    "limit": 10,
+    "status": "recruiting"
+  },
+  "args_key": "c7bde49eacf9bc235d82a3aa1d4b171de878529d660e9af7d59c7804debec0f7",
+  "recorded_at": "2026-11-08T06:04:56.071364+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 238.29070000010688,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 879 \n \nQuery: condition=type 2 diabetes mellitus, status=recruiting \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT07847294|The Effectiveness of an O…|RECRUITING|NA|Diabete Type 2, Diabetes in Adults| \n|NCT03455868|Bone Health After Bariatr…|RECRUITING|-|Bariatric Surgery, Bone Health, Obesity, Morbid, Diabetes Mellitus, Type 2| \n|NCT07149610|Connected Care for Type 2…|RECRUITING|NA|Diabetes Type 2| \n|NCT07773779|APP-MNT: App-Enhanced Med…|RECRUITING|NA|Diabetes (Insulin-requiring, Type 1 or Type 2)| \n|NCT05933161|A Study of Glycemic Contr…|RECRUITING|-|Type 2 Diabetes Mellitus, Hyperglycemia, Hypoglycemia| \n|NCT05970237|A Study to Evaluate the E…|RECRUITING|-|Diabetes Mellitus, Hypertension| \n|NCT07866066|Maridebart Cafraglutide V…|RECRUITING|3|Diabetes Mellitus, Type 2| \n|NCT07554469|An Observational Study, C…|RECRUITING|-|Chronic Kidney Disease, Type 2 Diabetes Mellitus| \n|NCT02973412|Chronotype of Patients Wi…|RECRUITING|-|Diabetes Mellitus, Type 1, Diabetes Mellitus, Type 2| \n|NCT06647745|A Randomized, Double-blin…|RECRUITING|3|Type 2 Diabetes, Hypertension| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-10 of 879 results. Use --offset 10 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

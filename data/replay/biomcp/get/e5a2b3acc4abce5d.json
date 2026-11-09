@@ -1,0 +1,47 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "BRAF",
+    "json": true,
+    "sections": [
+      "ontology",
+      "diseases",
+      "pathways",
+      "druggability",
+      "constraint",
+      "expression",
+      "clingen",
+      "gencc",
+      "interactions",
+      "drug_response",
+      "prevalence",
+      "clinical_features",
+      "xrefs",
+      "go",
+      "protein"
+    ]
+  },
+  "args_key": "e5a2b3acc4abce5d33df851bd3da45d8e0ca7afbfdc3ac66616e108a05f53cdb",
+  "recorded_at": "2026-11-08T07:36:30.243757+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.607099999091588,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: drug_response"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

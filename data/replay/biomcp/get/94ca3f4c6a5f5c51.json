@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "variant",
+    "id": "chr7:g.140453136A>T",
+    "json": true,
+    "sections": [
+      "clinvar",
+      "population",
+      "annotations",
+      "civic",
+      "cosmic",
+      "gwas",
+      "druggability"
+    ]
+  },
+  "args_key": "94ca3f4c6a5f5c5104fd46b0eddd6444373415ec9bf197d9cb185c585ed52f78",
+  "recorded_at": "2026-11-08T11:04:54.480063+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.291000000492204,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid variant section: annotations"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

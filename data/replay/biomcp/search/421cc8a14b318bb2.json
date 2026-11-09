@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 25,
+    "query": "melanoma associated antigen MITF TERT RAC1 PPP6C"
+  },
+  "args_key": "421cc8a14b318bb2e8b7a93d7d0dbc01712dd31ddad729903a359f7a45806945",
+  "recorded_at": "2026-11-08T08:12:53.126608+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 640.0564000014128,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: melanoma associated antigen MITF TERT RAC1 PPP6C \n \nFound 4 genes \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| PPP6C | protein phosphatase 6 catalytic subunit | 5537 | 9:125145008-125189939 | GRCh38 | O00743 | 612725 | \n| MITF | melanocyte inducing transcription factor | 4286 | 3:69738536-69968336 | GRCh38 | O75030 | 156845 | \n| RAC1 | Rac family small GTPase 1 | 5879 | 7:6374098-6404016 | GRCh38 | P63000 | 602048 | \n| TERT | telomerase reverse transcriptase | 7015 | 5:1253147-1295086 | GRCh38 | O14746 | 187270 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1-4 of 4 results. \n \n\n\n## Next commands\n- `biomcp get gene PPP6C`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

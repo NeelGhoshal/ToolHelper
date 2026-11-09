@@ -1,0 +1,43 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "TP53",
+    "json": true,
+    "sections": [
+      "diseases",
+      "ontology",
+      "clingen",
+      "gencc",
+      "disgenet",
+      "phenotypes",
+      "druggability",
+      "constraint",
+      "pathways",
+      "interactions",
+      "expression"
+    ]
+  },
+  "args_key": "ae0e33a35b6dae10620c03e52aac4e0003a8c9c4225c12b43d5d681172c70e15",
+  "recorded_at": "2026-11-09T06:31:37.835982+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.1159999994561076,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: phenotypes"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

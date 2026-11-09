@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "variant",
+    "id": "BRAF V600E",
+    "json": true,
+    "sections": [
+      "clinvar",
+      "annotations",
+      "diseases",
+      "druggability",
+      "civic",
+      "population",
+      "all"
+    ]
+  },
+  "args_key": "4079adfb9eb837c304869cafba52f0858e0bff4f289b6f1d0e788d3d4fa881b9",
+  "recorded_at": "2026-11-08T08:30:40.566060+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.1314000003039837,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid variant section: annotations"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

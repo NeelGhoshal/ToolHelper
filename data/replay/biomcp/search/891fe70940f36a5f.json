@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "article_type": "review",
+    "keyword": [
+      "BRAF V600E melanoma targeted therapy vemurafenib"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "891fe70940f36a5f134dd6fbcbd6e0f189c4c8b0b43877d136a4a4dddb9cf85c",
+  "recorded_at": "2026-11-08T07:41:49.061826+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 735.4838999999629,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E melanoma targeted therapy vemurafenib, type=review, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 5 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 26462967|2015 American Thyroid Association Management Guidelines for…|Europe PMC|2016-01-01|-|10412| \n|PMID 28751651|Targeting autophagy in cancer.|Europe PMC|2017-07-28|-|2123| \n|PMID 27993330|Standards and Guidelines for the Interpretation and Reportin…|Europe PMC|2017-01-01|-|1708| \n|PMID 28666118|RAS Proteins and Their Regulators in Human Disease.|Europe PMC|2017-06-01|-|1661| \n|PMID 25056707|Non-small-cell lung cancers: a heterogeneous set of diseases…|Europe PMC|2014-08-01|-|1593| \n \n \n \nNewest indexed: 2017-07-31 (3387 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 26462967\n  biomcp search article -k \"BRAF V600E melanoma targeted therapy vemurafenib\" --type review --year-min 2014 --year-max 2017 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

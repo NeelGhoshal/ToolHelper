@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "CYP2C19",
+    "sections": [
+      "druggability",
+      "pathways"
+    ]
+  },
+  "args_key": "2fedc1a026390945ddbb7afbb3765d9bf551167b8f255b7589a9375eaa8a2019",
+  "recorded_at": "2026-11-08T07:10:30.975420+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 8014.3595000008645,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# CYP2C19 - druggability, pathways \n## Pathways \n \n| Source | ID | Name | \n|---|---|---| \n| KEGG | hsa00590 | Arachidonic acid metabolism - Homo sapiens (human) | \n| KEGG | hsa00591 | Linoleic acid metabolism - Homo sapiens (human) | \n| KEGG | hsa00982 | Drug metabolism - cytochrome P450 - Homo sapiens (human) | \n| KEGG | hsa04726 | Serotonergic synapse - Homo sapiens (human) | \n| KEGG | hsa05204 | Chemical carcinogenesis - Homo sapiens (human) | \n| Reactome | R-HSA-211055 | CYP2C19 | \n| Reactome | R-HSA-211929 | CYP2C19 5-hydroxylates omeprazole | \n| Reactome | R-HSA-2161899 | Arachidonate is epoxidated to 8,9-EET by CYP(5) | \n| Reactome | R-HSA-9915997 | Arachidonate is epoxidated to 14,15-EET by CYP(5) | \n| Reactome | R-HSA-9915971 | Arachidonate is epoxidated to 11,12-EET by CYP(5) | \n| Reactome | R-HSA-2161814 | Arachidonate is hydroxylated to 19-HETE by CYP(2) | \n| Reactome | R-HSA-3222363 | Cytochrome P450 (CYP2C19 based) | \n## Druggability (DGIdb / Open Targets) \n \n**Druggability status (DGIdb / Open Targets):** degraded (partial/incomplete) — Gene druggability is incomplete because one provider is unavailable.\nRetry: `biomcp get gene CYP2C19 druggability` \n### OpenTargets tractability \n \n| Modality | Tractable | Evidence | \n|---|---|---| \n| small molecule | yes | Structure with Ligand, High-Quality Ligand, Druggable Family | \n| antibody | yes | GO CC high conf, UniProt loc med conf | \n| PROTAC | yes | Small Molecule Binder | \n| other modality | no | - | \n### OpenTargets safety liabilities \n \n| Event | Datasource | Effect | Biosample | \n|---|---|---|---| \n| adverse cardiac and cerebrovascular events | ClinPGx | - | - | \n| agitation and dysphoria | ClinPGx | - | - | \n| becoming overweight | ClinPGx | - | - | \n| bleeding | ClinPGx | - | - | \n| bleeding events | ClinPGx | - | - | \n| drug reaction with eosinophilia and systemic symptoms (DRESS) | ClinPGx | - | - | \n| drug toxicity | ClinPGx | - | - | \n| hemorrhage | ClinPGx | - | - | \nNo DGIdb interactions returned for this gene query. \nMore:\n  biomcp get gene CYP2C19 ontology   - GO-style functional enrichment\n  biomcp get gene CYP2C19 diseases   - disease associations\n  biomcp get gene CYP2C19 diagnostics   - diagnostic tests for this gene from GTR\n  biomcp get gene CYP2C19 funding   - NIH Reporter grant support\nAll:\n  biomcp get gene CYP2C19 all \nSee also:\n  biomcp search diagnostic --gene CYP2C19   - diagnostic tests for this gene\n  biomcp search pgx -g CYP2C19   - pharmacogenomics interactions\n  biomcp search variant -g CYP2C19\n  biomcp search article -g CYP2C19\n  biomcp search drug --target CYP2C19\n  biomcp gene trials CYP2C19 \n\n[NCBI Gene](https://www.ncbi.nlm.nih.gov/gene/1557) | [UniProt](https://www.uniprot.org/uniprot/P33261) | [Ensembl](https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000165841) | [OMIM](https://www.omim.org/entry/124020)\n\n\n## Sources\n- Identity: NCBI Gene / MyGene.info\n- Summary: NCBI Gene\n- Aliases: NCBI Gene / MyGene.info\n- Pathways: KEGG, Reactome\n- Druggability: Open Targets\n\n## Next commands\n- `biomcp get gene CYP2C19 druggability`\n- `biomcp get gene CYP2C19 ontology`\n- `biomcp get gene CYP2C19 diseases`\n- `biomcp get gene CYP2C19 diagnostics`\n- `biomcp get gene CYP2C19 funding`\n- `biomcp search diagnostic --gene CYP2C19`\n- `biomcp search pgx -g CYP2C19`\n- `biomcp search variant -g CYP2C19`\n- `biomcp search article -g CYP2C19`\n- `biomcp search drug --target CYP2C19`\n- `biomcp gene trials CYP2C19`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

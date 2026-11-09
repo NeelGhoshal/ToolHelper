@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search disease -q \"TP53-related\" --limit 25",
+    "json": true
+  },
+  "args_key": "e980ccee71aec6789442676078210dc16c2cd52f5e5d2898bc9260c585285750",
+  "recorded_at": "2026-11-08T07:09:34.189712+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 175.19390000052226,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 25,\n    \"returned\": 1,\n    \"total\": 1,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 1,\n  \"results\": [\n    {\n      \"id\": \"MONDO:0018875\",\n      \"name\": \"Li-Fraumeni syndrome 1\",\n      \"synonyms_preview\": \"LFS, Li Fraumeni syndrome (and 8 more)\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get disease MONDO:0018875\",\n      \"biomcp list disease\"\n    ],\n    \"workflow\": \"mutation-catalog\",\n    \"workflow_rationale\": \"Start from the gene, enumerate variants, narrow to a mutation class, then confirm disease literature.\",\n    \"workflow_playbook\": \"biomcp skill mutation-catalog\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

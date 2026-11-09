@@ -108,8 +108,8 @@ async def test_protocol_errors_are_recorded_and_replayed(server_configs, catalog
 async def test_live_calls_are_throttled(server_configs, catalog, store, tmp_path):
     rec = next(r for r in store if r.tool == "find_omop_concept")
     configs = {"omop": server_configs["omop"].model_copy(update={"min_interval_s": 0.3})}
-    async with Hub(configs, mode="record", store=RecordingStore(tmp_path),
-                   live_targets=fake_live(catalog, store)) as hub:
+    async with Hub(configs, mode="record", store=RecordingStore(tmp_path / "rec"),
+                   live_targets=fake_live(catalog, store), throttle_dir=tmp_path) as hub:
         start = time.monotonic()
         await hub.call("omop__find_omop_concept", rec.arguments)
         await hub.call("omop__find_omop_concept", rec.arguments)

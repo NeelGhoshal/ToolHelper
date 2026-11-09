@@ -36,6 +36,7 @@ class Pass(BaseModel):
     tasks: list[str]
     mode: str = "replay"
     cross_fit: bool = False
+    max_turns: int | None = None  # overrides the experiment's limit (E9's limit variant)
 
 
 def needs_cross_fit(specs: list[str]) -> bool:
@@ -43,8 +44,9 @@ def needs_cross_fit(specs: list[str]) -> bool:
 
 
 def command(cfg: ExperimentConfig, p: Pass, tasks: list[str], fold: str | None) -> list[str]:
+    learn = cfg.learn_from if isinstance(cfg.learn_from, str) else ",".join(cfg.learn_from)
     cmd = ["uv", "run", "toolhelper", "bench", "run", "--llm", cfg.llm, "--mode", p.mode, "--group", p.group,
-           "--retry-timeouts", "2", "--max-turns", str(cfg.max_turns), "--learn-from", cfg.learn_from,
+           "--retry-timeouts", "2", "--max-turns", str(p.max_turns or cfg.max_turns), "--learn-from", learn,
            "--only", ",".join(tasks)]
     for s in p.specs:
         cmd += ["--strategy", s]

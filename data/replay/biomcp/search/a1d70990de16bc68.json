@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 25,
+    "query": "melanoma tumor suppressor TP53 RB1"
+  },
+  "args_key": "a1d70990de16bc684f33461b49f393c69d9b97db92a50da5c3c8efe3b85e9940",
+  "recorded_at": "2026-11-08T08:12:53.328754+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 198.38919999892823,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: melanoma tumor suppressor TP53 RB1 \n \nFound 2 genes \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| TP53 | tumor protein p53 | 7157 | 17:7661779-7687546 | GRCh38 | P04637 | 191170 | \n| RB1 | RB transcriptional corepressor 1 | 5925 | 13:48303710-48599436 | GRCh38 | P06400 | 614041 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1-2 of 2 results. \n \n\n\n## Next commands\n- `biomcp get gene TP53`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

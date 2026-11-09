@@ -95,7 +95,9 @@ def _e6(p, inp):
     from toolhelper.efficiency.shaping import ResultShaper, learn_policies
 
     cdm = CdmFields.load(inp.cdm_path) if inp.cdm_path and inp.cdm_path.exists() else None
-    return ResultShaper(p.get("mode", "projection"), learn_policies(inp.traces), top_n=p.get("top_n", 5), cdm=cdm)
+    mode, budget = p.get("mode", "projection"), p.get("budget", 2000)
+    policies = learn_policies(inp.traces, budgets=[budget] if mode == "budget" else [])
+    return ResultShaper(mode, policies, top_n=p.get("top_n", 5), budget=budget, cdm=cdm)
 
 
 def _e7(p, inp):

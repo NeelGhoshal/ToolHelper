@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "limit": 5,
+    "intervention": [
+      "pembrolizumab",
+      "Keytruda"
+    ]
+  },
+  "args_key": "f5288fff53a1ff02cbd02fad5f6757cf4ac8e70a780b3e27424178226a563212",
+  "recorded_at": "2026-11-08T07:00:09.318560+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2587.487799999508,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 5 of 112 \n \nQuery: intervention=pembrolizumab Keytruda \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT04198766|Study of INBRX-106 and IN…|RECRUITING|1/2|Solid Tumor, Non-Small Cell Lung Cancer, Head… [abridged; 8 conditions total]| \n|NCT07188246|Neoadjuvant, SBRT With In…|RECRUITING|2|Breast Cancer, Breast Cancer Stage II, Breast… [abridged; 5 conditions total]| \n|NCT03881488|Study of CTX-471 as a Mon…|TERMINATED|1|Locally Advanced Solid Tumor, Metastatic Cance… [abridged; 7 conditions total]| \n|NCT04609579|Study of SNX281 in Subjec…|TERMINATED|1|Advanced Solid Tumor, Advanced Lymphoma| \n|NCT05207371|Clinical Trial of GAIA-10…|TERMINATED|1/2|Cell Therapy, NSCLC| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-5 of 112 results. Use --offset 5 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

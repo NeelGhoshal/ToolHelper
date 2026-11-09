@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "erlotinib"
+    ],
+    "entity": "article",
+    "limit": 5
+  },
+  "args_key": "cc8075ae81ae31a5ca988a9196e7b564d03811b5c54f9428c6d13d40677aef2f",
+  "recorded_at": "2026-11-09T05:09:56.330838+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2447.8377000050386,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=erlotinib, exclude_retracted=true, sort=relevance, ranking_mode=lexical, ranking_policy=calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --drug erlotinib --exclude-retracted --sort relevance --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \nRanking: calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42970557|Erlotinib in a once-daily high-dose oral regimen could mitig…|Europe PMC|2026-11-02|title 1/1|0| \n|PMID 42920059|The Predictive Value of Gastrin for the Absorption of Erloti…|Europe PMC|2026-10-23|title 1/1|0| \n|PMID 36139554|NCAPG2 Maintains Cancer Stemness and Promotes Erlotinib Resi…|PubTator3|2022-09-09|title 1/1|none| \n|PMID 37873519|A Drug-Drug Interaction Study to Evaluate the Impact of Simv…|PubTator3|2023-10-18|title 1/1|none| \n|PMID 42998399|Novel 4-Anilinopyrimidine-N-Acylhydrazone derivatives as dua…|PubMed|2026-11-05|-|0| \n \n \n \nNewest indexed: 2026-11-07 (2 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42970557\n  biomcp search article --drug erlotinib --year-min 2022 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

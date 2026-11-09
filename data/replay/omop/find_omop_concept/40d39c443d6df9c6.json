@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "aspirin",
+    "max_results": 10,
+    "omop_field": "concept_name",
+    "omop_table": "concept"
+  },
+  "args_key": "40d39c443d6df9c636365c775bd0f20c0819ba31a3b3d1afe179013077255170",
+  "recorded_at": "2026-11-09T04:46:35.334159+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1039.4622000021627,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 1112807,\n      \"code\": \"1191\",\n      \"name\": \"aspirin\",\n      \"class\": \"Ingredient\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/1112807\"\n    },\n    {\n      \"concept_id\": 37002741,\n      \"code\": \"2394057\",\n      \"name\": \"aspirin 6 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/37002741\"\n    },\n    {\n      \"concept_id\": 1113350,\n      \"code\": \"329295\",\n      \"name\": \"aspirin 25 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/1113350\"\n    },\n    {\n      \"concept_id\": 19108858,\n      \"code\": \"437675\",\n      \"name\": \"aspirin 30 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19108858\"\n    },\n    {\n      \"concept_id\": 19108870,\n      \"code\": \"437699\",\n      \"name\": \"aspirin 50 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19108870\"\n    },\n    {\n      \"concept_id\": 1113303,\n      \"code\": \"315425\",\n      \"name\": \"aspirin 60 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/1113303\"\n    },\n    {\n      \"concept_id\": 1113305,\n      \"code\": \"315427\",\n      \"name\": \"aspirin 65 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/1113305\"\n    },\n    {\n      \"concept_id\": 1113307,\n      \"code\": \"315429\",\n      \"name\": \"aspirin 75 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/1113307\"\n    },\n    {\n      \"concept_id\": 1113347,\n      \"code\": \"329291\",\n      \"name\": \"aspirin 80 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/1113347\"\n    },\n    {\n      \"concept_id\": 1113309,\n      \"code\": \"315431\",\n      \"name\": \"aspirin 81 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/1113309\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"aspirin\",\n    \"omop_table\": \"concept\",\n    \"omop_field\": \"concept_name\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 3,
+    "query": "PDGFRB platelet derived growth factor receptor beta"
+  },
+  "args_key": "f9a1d071765865cc09b0c7b62b6a8855ed82dc7bc47fc9e28f5926240b5f2085",
+  "recorded_at": "2026-11-09T06:58:41.390326+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 510.80249999358784,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: PDGFRB platelet derived growth factor receptor beta \n \nFound 3 genes \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| PDGFRB | platelet derived growth factor receptor beta | 5159 | 5:150113839-150186363 | GRCh38 | P09619 | 173410 | \n| SPECC1 | sperm antigen with calponin homology and coiled-coil domains 1 | 92521 | 17:20008865-20319026 | GRCh38 | Q5M775 | 608793 | \n| KANK1 | KN motif and ankyrin repeat domains 1 | 23189 | 9:470289-746105 | GRCh38 | Q14678 | 607704 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1-3 of 3 results. \n \n\n\n## Next commands\n- `biomcp get gene PDGFRB`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E mutation",
+      "melanoma",
+      "vemurafenib"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "c9bfe5979e342347bfaea9046c61d83813c845cc4e0a7367eb44aca98d334015",
+  "recorded_at": "2026-11-08T07:02:30.431864+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 23958.608700000696,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E mutation melanoma vemurafenib, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E mutation melanoma vemurafenib\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 26462967|2015 American Thyroid Association Management Guidelines for…|Europe PMC|2016-01-01|-|10412| \n|PMID 21639808|Improved survival with vemurafenib in melanoma with BRAF V60…|Europe PMC|2011-06-05|-|5808| \n|PMID 24336571|Genome-scale CRISPR-Cas9 knockout screening in human cells.|Europe PMC|2013-12-12|-|4502| \n|PMID 26780180|Optimized sgRNA design to maximize activity and minimize off…|Europe PMC|2016-01-18|-|4269| \n|PMID 33747149|BRAF, MEK and EGFR inhibition as treatment strategies in BRA…|PubTator3|2021-02-22|-|64| \n|PMID 33719631|Current Advancements and Novel Strategies in the Treatment o…|PubTator3|2021-01-01|-|50| \n|PMID 36752115|The Role of Ketogenic Diet in the Treatment of Neuroblastoma|PubTator3|2023-01-01|-|11| \n|PMID 41807883|BRAF inhibitor resistance in melanoma: from resistance mecha…|PubTator3|2026-03-11|-|9| \n|PMID 42770269|A context-dependent modulatory role for eIF6 in acquired res…|PubMed|2026-09-22|-|0| \n|PMID 42727358|Combined multi-parameter filtering and prioritization of a c…|PubMed|2026-09-08|-|0| \n \n \n \nNewest indexed: 2026-09-22 (47 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 26462967\n  biomcp search article -k \"BRAF V600E mutation melanoma vemurafenib\" --year-min 2011 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

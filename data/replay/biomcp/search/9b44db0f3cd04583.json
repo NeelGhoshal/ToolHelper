@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "metformin cardiovascular protection",
+      "heart failure",
+      "myocardial infarction"
+    ],
+    "limit": 15,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "9b44db0f3cd04583b93792dcd1bd0cdd86436775f73f5ee96056af695de333b1",
+  "recorded_at": "2026-11-08T08:25:28.417990+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 647.0926000001782,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=metformin cardiovascular protection heart failure myocardial infarction, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 15 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42957066|GLP-1 Receptor Agonists Decrease the Rate of Rupture, Cardia…|PubMed|2026-10-29|-|none| \n|PMID 42629210|Cardiovascular and renal protection of SGLT2i in early-stage…|PubMed|2026-07-29|-|none| \n|PMID 41942012|Cardiorenal protective effects of anti-diabetic drugs in ear…|PubMed|2026-06-01|-|none| \n|PMID 42328113|Genetic Evidence for the Benefits and Risks of Glucose-Lower…|PubMed|2026-05-11|-|none| \n|PMID 41862429|Predictors of Discontinuation of Angiotensin Converting Enzy…|PubMed|2026-04-01|-|none| \n|PMID 39402124|Clinical implications and pharmacological considerations of…|PubMed|2024-10-14|-|none| \n|PMID 37403390|Novel Approaches to the Management of Diabetes Mellitus in P…|PubMed|2023-01-01|-|none| \n|PMID 34390570|Cardiovascular effects of non-insulin glucose-lowering agent…|PubMed|2022-07-27|-|none| \n|PMID 35304269|Co-administration of hydrogen and metformin exerts cardiopro…|PubMed|2022-04-01|-|none| \n|PMID 35401934|Traditional Chinese Medicine Ginseng Dingzhi Decoction Ameli…|PubMed|2022-03-31|-|none| \n|PMID 34384564|Metformin suppresses phenylephrine-induced hypertrophic resp…|PubMed|2021-10-01|-|none| \n|PMID 32034729|GLP-1 Receptor Agonists and SGLT2 Inhibitors for the Treatme…|PubMed|2021-01-01|-|none| \n|PMID 32470468|Metformin protects against ischaemic myocardial injury by al…|PubMed|2020-08-01|-|none| \n|PMID 31269877|Changes in the Prescription of Glucose-Lowering Medications…|PubMed|2019-07-16|-|none| \n|PMID 30767126|Cardiovascular Protection with Anti-hyperglycemic Agents.|PubMed|2019-06-01|-|none| \n \n \n \nNewest indexed: 2026-10-29 (10 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42957066\n  biomcp search article -k \"metformin cardiovascular protection heart failure myocardial infarction\" --source pubmed --year-min 2019 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-15 of 34 results. Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

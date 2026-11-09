@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "2017 ACC/AHA high blood pressure guideline",
+      "hypertension clinical practice guideline"
+    ],
+    "limit": 5
+  },
+  "args_key": "2996481a7555bd0d51b263766c9d65a56174c048846bf0bb130e64e4d5143a6a",
+  "recorded_at": "2026-11-08T07:37:45.060067+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 7219.580599999972,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=2017 ACC/AHA high blood pressure guideline hypertension clinical practice guideline, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"2017 ACC/AHA high blood pressure guideline hypertension clinical practice guideline\" --exclude-retracted --sort relevance --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41843050|Updates in the 2025 AHA/ACC Hypertension Guideline.|PubMed|2026-03-17|hybrid 0.5 + title+abstract 8/9|10| \n|PMID 35656989|Potential Impact of 2017 American College of Cardiology/Amer…|PubTator3|2022-06-07|hybrid 0.482 + title+abstract 9/9|3| \n|PMID 35792106|Comparison of the association of masked hypertension defined…|PubTator3|2022-08-01|hybrid 0.382 + title+abstract 7/9|3| \n|PMID 42756877|2025 AHA/ACC blood pressure guideline and HEARTS 2.0: implic…|Europe PMC|2026-09-17|hybrid 0.258 + title+abstract 5/9|1| \n|PMID 42688995|Implications of the 2025 AHA/ACC hypertension guideline on h…|Europe PMC|2026-09-01|hybrid 0.2 + title+abstract 4/9|0| \n \n \n \nNewest indexed: 2026-09-19 (50 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41843050\n  biomcp search article -k \"2017 ACC/AHA high blood pressure guideline hypertension clinical practice guideline\" --year-min 2022 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

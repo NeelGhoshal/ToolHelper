@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "nivolumab"
+    ],
+    "limit": 25,
+    "status": "recruiting"
+  },
+  "args_key": "0d160f954a722021982bdd8eba3e2a70dc790d15ad9f9d1081786565baae7787",
+  "recorded_at": "2026-11-08T08:19:58.643040+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1046.948600000178,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 25 trial(s) \n \nQuery: condition=melanoma, intervention=nivolumab, status=recruiting \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT07422779|Immunotherapy Efficacy an…|RECRUITING|NA|Metastatic Melanoma, Skin Cancer|nivolumab| \n|NCT07518043|A Study of HLX18 vs. OPDI…|RECRUITING|1|Esophageal and/or Cardia Cancer, Melanoma, Urothelial Carcinoma (UC)|nivolumab| \n|NCT03685890|Evaluating the Effect of…|RECRUITING|1/2|Melanoma, In-Transit Metastasis|nivolumab| \n|NCT05779423|Cryoablation+Ipilimumab+N…|RECRUITING|2|Metastatic Melanoma, Skin Cancer|nivolumab| \n|NCT05649683|Immunological Functionnal…|RECRUITING|NA|Melanoma (Skin)|nivolumab| \n|NCT06295159|Neoadjuvant and Adjuvant…|RECRUITING|2|Melanoma Stage III, Melanoma Stage IV, Advanced Melanoma, Melanoma|nivolumab| \n|NCT06624644|A Trial of LNS8801 With o…|RECRUITING|2/3|Melanoma (Skin Cancer), Melanoma Stage IIIB-IV… [abridged; 4 conditions total]|nivolumab| \n|NCT06794775|SWE-NEO: Swedish NeoAdjuv…|RECRUITING|3|Malignant Melanoma Stage III|nivolumab| \n|NCT06754904|Omitting Therapeutic Lymp…|RECRUITING|NA|Melanoma, Skin|nivolumab| \n|NCT05704647|Phase II Study of Nivolum…|RECRUITING|2|Melanoma (Skin)|nivolumab| \n|NCT05896839|Immunotherapy in Combinat…|RECRUITING|1/2|Clinical Stage III Cutaneous Melanoma AJCC v8… [abridged; 13 conditions total]|nivolumab| \n|NCT06675643|Digital Remote Monitoring…|RECRUITING|-|Malignant Skin Neoplasm, Melanoma|nivolumab| \n|NCT05652673|Safe Stop Ipilimumab-nivo…|RECRUITING|NA|Melanoma Stage IV, Melanoma Stage III, Immunotherapy, Toxicity, Drug|nivolumab| \n|NCT07092670|MELAFERT: Impact of Adjuv…|RECRUITING|-|Melanoma, Fertility|nivolumab| \n|NCT05655312|MC1R-targeted Alpha-parti…|RECRUITING|1/2|Recurrent Melanoma (Skin), Metastatic Melanoma… [abridged; 4 conditions total]|nivolumab| \n|NCT07718243|Investigating the Combina…|RECRUITING|1/2|Melanoma (Skin Cancer), Non Small Cell Lung Ca… [abridged; 3 conditions total]|nivolumab| \n|NCT05498792|Study of CBL0137 in Combi…|RECRUITING|EARLY_PHASE1|Locally Advanced or Metastatic Melanoma|nivolumab| \n|NCT06743126|SUPRAME-ACTengine® IMA20…|RECRUITING|3|Melanoma, Cutaneous Malignant, Mucosal Melanoma|nivolumab| \n|NCT06519266|PHP in Combination With I…|RECRUITING|3|Uveal Melanoma, Liver Metastases|nivolumab| \n|NCT04895709|A Study of BMS-986340 as…|RECRUITING|1/2|Cervical Cancer, Gastric/Gastroesophageal Jun… [abridged; 11 conditions total]|nivolumab| \n|NCT07501117|Neoadjuvant Immunotherapy…|RECRUITING|1|Uveal Melanoma|nivolumab| \n|NCT06240143|Intradermal Ipilimumab an…|RECRUITING|1/2|Melanoma|nivolumab| \n|NCT04697576|Intralesional Influenza V…|RECRUITING|1|Clinical Stage I Cutaneous Melanoma AJCC v8, C… [abridged; 9 conditions total]|nivolumab| \n|NCT06265285|Comparison of In-Home Ver…|RECRUITING|2|Advanced Esophageal Squamous Cell Carcinoma,… [abridged; 31 conditions total]|nivolumab| \n|NCT06784778|Observational Study of Pa…|RECRUITING|-|Melanoma Metastatic, Melanoma, Skin, Melanoma Stage III or IV, Melanoma Advanced|nivolumab| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 25 results (total unknown). Use --offset 25 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

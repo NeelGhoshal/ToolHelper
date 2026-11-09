@@ -1,0 +1,47 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "BRAF",
+    "json": true,
+    "sections": [
+      "ontology",
+      "diseases",
+      "pathways",
+      "druggability",
+      "clingen",
+      "constraint",
+      "expression",
+      "interactions",
+      "population",
+      "conservation",
+      "cosmic",
+      "gwas",
+      "annotations",
+      "xrefs",
+      "go"
+    ]
+  },
+  "args_key": "3355500369de59ed4f749a8d9242a51ee931a0a5d85998b42763b11d46fb5c03",
+  "recorded_at": "2026-11-09T04:37:22.164938+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.0996000055456534,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: population"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

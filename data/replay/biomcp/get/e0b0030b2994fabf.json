@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "variant",
+    "id": "chr7:g.140453136A>T",
+    "json": true,
+    "sections": [
+      "clinvar",
+      "frequencies",
+      "drug_response",
+      "civic",
+      "cosmic",
+      "gwas"
+    ]
+  },
+  "args_key": "e0b0030b2994fabf24d7ab673bdf4cfc9b0a334da6a7622dd094b8ceb2b805b7",
+  "recorded_at": "2026-11-09T06:02:27.909683+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.3081999932182953,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid variant section: frequencies"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

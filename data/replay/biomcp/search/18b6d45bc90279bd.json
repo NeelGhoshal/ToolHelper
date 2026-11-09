@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CRISPR-Cas9",
+      "transthyretin",
+      "amyloidosis"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "18b6d45bc90279bd32891585f52bf91c3b7f5ce395ba78c099295c95f1b8bb53",
+  "recorded_at": "2026-11-08T07:38:34.833438+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2602.3316999999224,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR-Cas9 transthyretin amyloidosis, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 33277608|Engineering precision nanoparticles for drug delivery.|Europe PMC|2020-12-04|-|4994| \n|PMID 24906146|Development and applications of CRISPR-Cas9 for genome engin…|Europe PMC|2014-06-01|-|4075| \n|PMID 34394960|Lipid nanoparticles for mRNA delivery.|Europe PMC|2021-08-10|-|3206| \n|PMID 32251383|Selective organ targeting (SORT) nanoparticles for tissue-sp…|Europe PMC|2020-04-06|-|1967| \n|PMID 34215024|CRISPR-Cas9 In Vivo Gene Editing for Transthyretin Amyloidos…|PubTator3, Europe PMC, Semantic Scholar|2021-08-05|-|1269| \n|PMID 39555828|CRISPR-Cas9 Gene Editing with Nexiguran Ziclumeran for ATTR…|Semantic Scholar|2024|-|103| \n|PMID 34706179|CRISPR-Cas9 In Vivo Gene Editing for Transthyretin Amyloidos…|PubTator3|2021-10-28|-|84| \n|PMID 34706180|CRISPR-Cas9 In Vivo Gene Editing for Transthyretin Amyloidos…|PubTator3, Semantic Scholar|2021-10-28|-|84| \n|DOI 10.1016/s0168-8278(22)00520-7|In vivo CRISPR/Cas9 editing of the TTR gene with NTLA-2001 i…|Semantic Scholar|2022|-|3| \n|PMID 38058090|CRISPR-Cas9 for the Treatment of Transthyretin Cardiac Amylo…|PubTator3, Semantic Scholar|2023-12-06|-|2| \n \n \n \nNewest indexed: 2021-08-18 (1908 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 33277608\n  biomcp search article -k \"CRISPR-Cas9 transthyretin amyloidosis\" --year-min 2014 --year-max 2024 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

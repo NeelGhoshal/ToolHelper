@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "4549-2",
+    "max_results": 5,
+    "omop_field": "measurement_concept_id",
+    "omop_table": "measurement"
+  },
+  "args_key": "9e0846c1187182b4ef1575de9433160f8896ebde1f263ee3c8e18012390b5a76",
+  "recorded_at": "2026-11-08T06:29:18.566298+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 570.1263999999355,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 3003309,\n      \"code\": \"4549-2\",\n      \"name\": \"Hemoglobin A1c/Hemoglobin.total in Blood by Electrophoresis\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3003309\"\n    },\n    {\n      \"concept_id\": 707534,\n      \"code\": \"e64b9f30-a539-4549-9406-2fad867900f9\",\n      \"name\": \"ciclopirox 80mg/mL TOPICAL SOLUTION\",\n      \"class\": \"Prescription Drug\",\n      \"concept\": \"C\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"SPL\",\n      \"url\": \"https://omophub.com/concepts/707534\"\n    },\n    {\n      \"concept_id\": 37135303,\n      \"code\": \"0d25e4f7-07b8-4549-8e21-2a993bbc8f6b\",\n      \"name\": \"polyvinyl alcohol, povidone .5g/100mL / .6g/100mL INTRAOCULAR SOLUTION/ DROPS [good neighbor pharmacy artifical tears lubricant eye drops]\",\n      \"class\": \"OTC Drug\",\n      \"concept\": \"C\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"SPL\",\n      \"url\": \"https://omophub.com/concepts/37135303\"\n    },\n    {\n      \"concept_id\": 37032511,\n      \"code\": \"LP394549-2\",\n      \"name\": \"Ferret epithelium Ab.IgE.RAST class | Serum | Allergy\",\n      \"class\": \"LOINC Hierarchy\",\n      \"concept\": \"C\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/37032511\"\n    },\n    {\n      \"concept_id\": 1470173,\n      \"code\": \"LP444549-2\",\n      \"name\": \"Staphylococcus species methicillin resistant | Isolate or Specimen | Microbiology\",\n      \"class\": \"LOINC Hierarchy\",\n      \"concept\": \"C\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/1470173\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"4549-2\",\n    \"omop_table\": \"measurement\",\n    \"omop_field\": \"measurement_concept_id\",\n    \"total_found\": 5,\n    \"candidates_returned\": 5,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

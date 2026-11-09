@@ -38,12 +38,22 @@ def test_validation_keywords_survive(catalog, level):
         assert keywords(compress_schema(schema, level)) == keywords(schema), name
 
 
-def test_recorded_valid_calls_stay_valid(catalog, store):
+def test_minimal_drops_only_bounds_that_do_not_guide_arguments(catalog):
+    guiding = {"type", "enum", "required", "minimum", "maximum", "maxItems", "pattern", "additionalProperties"}
+    for name, schema in schemas(catalog).items():
+        compressed = compress_schema(schema, "minimal")
+        assert [k for k in keywords(compressed) if k[0] in guiding] ==             [k for k in keywords(schema) if k[0] in guiding], name
+        assert not {"maxLength", "minLength", "minItems"} & {k for k, _ in keywords(compressed)}, name
+        assert "uniqueItems" not in str(compressed) and "'format'" not in str(compressed), name
+
+
+@pytest.mark.parametrize("level", ["aggressive", "minimal"])
+def test_recorded_valid_calls_stay_valid(catalog, store, level):
     by_name = schemas(catalog)
     for rec in store:
         schema = by_name[f"{rec.server}__{rec.tool}"]
         if rec.result and not rec.result.get("isError") and not list(validators.validator_for(schema)(schema).iter_errors(rec.arguments)):
-            compressed = compress_schema(schema, "aggressive")
+            compressed = compress_schema(schema, level)
             assert not list(validators.validator_for(compressed)(compressed).iter_errors(rec.arguments)), rec.tool
 
 
@@ -51,7 +61,7 @@ async def test_tool_definitions_shrink_with_evidence(replay_hub, store):
     task = Task(id="t", prompt="test")
     heart = recorded(store, "find_omop_concept", keyword="heart attack", omop_table="condition_occurrence")
     results = {}
-    for level in ("light", "aggressive"):
+    for level in ("light", "aggressive", "minimal"):
         async with replay_hub:
             trace = await Agent(ScriptedBackend([tool_call("omop__find_omop_concept", heart), final("4329847")]),
                                 replay_hub, [SchemaCompression(level)], counter=estimate_tokens).run(task)
@@ -63,4 +73,5 @@ async def test_tool_definitions_shrink_with_evidence(replay_hub, store):
         base = await Agent(ScriptedBackend([final("x")]), replay_hub, [], counter=estimate_tokens).run(task)
     tool_defs = {k: v.llm_calls[0].est_breakdown["tool_defs"] for k, v in results.items()}
     assert tool_defs["aggressive"] < tool_defs["light"] < base.llm_calls[0].est_breakdown["tool_defs"]
-    assert arg_error_rate(results.values()) == {"calls": 2, "errors": 0, "rate": 0.0}
+    assert tool_defs["minimal"] < tool_defs["light"]  # BioMCP's schemas are mostly string and array bounds
+    assert arg_error_rate(results.values()) == {"calls": 3, "errors": 0, "rate": 0.0}

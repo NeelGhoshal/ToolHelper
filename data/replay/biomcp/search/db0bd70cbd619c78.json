@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "meta-analysis",
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "dementia",
+      "Alzheimer"
+    ],
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "db0bd70cbd619c78a62a09d4837c076a02419caa4b9a9c032cb4cd9197801655",
+  "recorded_at": "2026-11-09T05:54:07.179026+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 23234.55740000645,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin dementia Alzheimer, type=meta-analysis, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \nEurope PMC source status: degraded (Europe PMC timed out after 12s) \nRetry: `biomcp search article --keyword \"statin dementia Alzheimer\" --type meta-analysis --exclude-retracted --sort citations --source europepmc --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41083880|The role of APOE ε4 in modulating the relationship between…|PubMed|2025-10-13|-|7| \n|PMID 39312316|Effect of long-term pharmacological treatments on Alzheimer…|PubMed|2024-09-20|-|2| \n|PMID 35851147|A large-scale genome-wide cross-trait analysis reveals share…|PubMed|2022-07-18|-|77| \n|PMID 34871380|Statin use and risk of dementia or Alzheimer's disease: a sy…|PubMed|2022-05-05|-|167| \n|PMID 35104501|The calcium-free form of atorvastatin inhibits amyloid-β(1-…|PubMed|2022-03-01|-|11| \n|PMID 32918868|Effect of statins on amyloidosis in the rodent models of Alz…|PubMed|2020-12-15|-|5| \n|PMID 31930449|The efficacy of statins in the treatment of Alzheimer's dise…|PubMed|2020-06-01|-|37| \n|PMID 32039479|Benefits and Harms of Statins in People with Dementia: A Sys…|PubMed|2020-03-01|-|20| \n|PMID 31574510|Association between Use of Statin and Risk of Dementia: A Me…|PubMed|2020-01-01|-|88| \n|PMID 31714636|Lipid lowering and Alzheimer disease risk: A mendelian rando…|PubMed|2020-01-01|-|95| \n|PMID 30045255|Statins use and risk of dementia: A dose-response meta analy…|PubMed|2018-07-01|-|67| \n|PMID 29502274|The treatment of cognitive dysfunction in dementia: a multip…|PubMed|2018-05-01|-|47| \n|PMID 29643479|Use of statins and the risk of dementia and mild cognitive i…|PubMed|2018-04-11|-|138| \n|PMID 29914039|Does Treating Vascular Risk Factors Prevent Dementia and Alz…|PubMed|2018-01-01|-|71| \n|PMID 28363508|Risk factors associated with the onset and progression of Al…|PubMed|2017-07-01|-|265| \n \n \n \nNewest indexed: 2025-10-14 (391 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41083880\n  biomcp search article -k \"statin dementia Alzheimer\" --type meta-analysis --year-min 2017 --year-max 2025 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-15 of 29 results. Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "TP53",
+    "keyword": [
+      "disease",
+      "cancer",
+      "syndrome"
+    ],
+    "limit": 10
+  },
+  "args_key": "05b449b93cd66faa2682b0644f63b70f3ea35618292c72ae5f2257205ef20859",
+  "recorded_at": "2026-11-09T06:23:58.753051+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3194.207499996992,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=TP53, keyword=disease cancer syndrome, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene TP53 --keyword \"disease cancer syndrome\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 35954327|Li-Fraumeni Syndrome: Mutation of TP53 Is a Biomarker of Her…|PubTator3|2022-07-27|hybrid 0.225 + title 2/4|none| \n|PMID 42964156|A nutrition-inflammation index weighted toward disease burde…|PubMed|2026-10-16|hybrid 0.225 + title 2/4|0| \n|PMID 42930168|Targeted Hotspot Mutation Analysis of KRAS, TP53, and PTEN i…|Europe PMC|2026-10-06|hybrid 0.2 + title 2/4|0| \n|PMID 35625568|TP53 Pathogenic Variants in Early-Onset Breast Cancer Patien…|PubTator3|2022-04-27|hybrid 0.175 + title 2/4|none| \n|PMID 42607671|Shared inheritance reveals landscape of somatic and germline…|Europe PMC|2026-08-17|hybrid 0.175 + title 2/4|0| \n|PMID 42755391|Outcomes of adult patients with Li-Fraumeni syndrome and mye…|Europe PMC|2026-10-01|hybrid 0.15 + title 1/4|0| \n|PMID 42782902|Breast-Ovarian Hereditary Cancer Syndrome: Beyond BRCA1 and…|Europe PMC|2026-09-14|hybrid 0.15 + title 2/4|0| \n|PMID 42962921|Brief report: Clinical and Functional Characterization of Ra…|PubMed|2026-10-30|hybrid 0.125 + title 1/4|0| \n|PMID 33987182|Zebrafish Cancer Predisposition Models|PubTator3|2021-04-27|hybrid 0.075 + title 1/4|none| \n|PMID 42933936|Hereditary Pancreatic Cancer.|PubMed|2026-12-01|hybrid 0.075 + title 1/4|0| \n \n \n \nNewest indexed: 2026-10-31 (9 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 35954327\n  biomcp search article -g TP53 -k \"disease cancer syndrome\" --year-min 2021 --year-max 2026 --limit 5   - refine this search to the visible publication-year range\n  biomcp discover \"disease cancer syndrome\" \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

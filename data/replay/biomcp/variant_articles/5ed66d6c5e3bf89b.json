@@ -1,0 +1,41 @@
+{
+  "server": "biomcp",
+  "tool": "variant_articles",
+  "arguments": {
+    "items": [
+      {
+        "gene": "BRAF",
+        "protein": "p.Val600Glu",
+        "alt": "E",
+        "ref": "V",
+        "position": 600,
+        "coding": "c.1799T>A",
+        "request_id": "braf_v600e"
+      }
+    ],
+    "limit": 10,
+    "strategy": "union",
+    "verify_identity": true
+  },
+  "args_key": "5ed66d6c5e3bf89b19298794a70da65120776ef01e25488bd29545383994eaaf",
+  "recorded_at": "2026-11-09T04:43:01.820405+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "70147d049a9e3bd31190ae3b87d93f1485386242eee6a9cc9a986c130f8b3d8f",
+  "latency_ms": 1.6462999919895083,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"items\": [\n    {\n      \"request_id\": \"braf_v600e\",\n      \"requested_variant\": {\n        \"gene\": \"BRAF\",\n        \"protein_change\": \"p.Val600Glu\",\n        \"coding_change\": \"c.1799T>A\",\n        \"position\": 600,\n        \"reference\": \"V\",\n        \"alternate\": \"E\"\n      },\n      \"resolution\": null,\n      \"complete\": false,\n      \"truncated\": false,\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 0,\n        \"total\": null,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"source_status\": [],\n      \"error\": {\n        \"code\": \"invalid_argument\",\n        \"message\": \"genomic identity requires a complete genomic HGVS or accession, position, ref, and alt\"\n      },\n      \"results\": []\n    }\n  ],\n  \"complete\": false,\n  \"truncated\": false,\n  \"_meta\": {\n    \"next_commands\": []\n  }\n}"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

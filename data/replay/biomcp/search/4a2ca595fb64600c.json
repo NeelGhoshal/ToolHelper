@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "metformin"
+    ],
+    "entity": "article",
+    "keyword": [
+      "cardiovascular benefit",
+      "cardioprotection",
+      "heart disease"
+    ],
+    "limit": 20,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "4a2ca595fb64600cd88427ac63782b8eebc54390d55a468390580751014d1064",
+  "recorded_at": "2026-11-08T07:25:38.793489+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 663.3490000003803,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=metformin, keyword=cardiovascular benefit cardioprotection heart disease, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 20 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42906793|Mitochondrial pharmacology of cardiovascular and antidiabeti…|PubMed|2026-10-21|-|none| \n|PMID 41862429|Predictors of Discontinuation of Angiotensin Converting Enzy…|PubMed|2026-04-01|-|none| \n|PMID 41733203|Combination of cardioprotective glucose-lowering drugs and s…|PubMed|2026-02-24|-|none| \n|PMID 41175191|The beneficial effects of empagliflozin-metformin combinatio…|PubMed|2026-02-01|-|none| \n|PMID 41197815|Metformin-mediated modulation of gut microbiota-derived trim…|PubMed|2026-01-01|-|none| \n|PMID 41146812|Mechanistic Insights Into the Cardioprotective Effects of Mo…|PubMed|2025-09-26|-|none| \n|PMID 40430489|Exploring the Protective Effects of Traditional Antidiabetic…|PubMed|2025-05-01|-|none| \n|PMID 40364115|Risk Factors and Prevention of Cancer and CVDs: A Chicken an…|PubMed|2025-04-29|-|none| \n|PMID 39639832|Interactions between antidiabetes medications and heart-brai…|PubMed|2025-02-01|-|none| \n|PMID 39161152|Unveiling the Protective Role of Metformin against Chemother…|PubMed|2025-01-01|-|none| \n|PMID 37298222|Exercise Training Attenuates Acute β-Adrenergic Receptor Ac…|PubMed|2023-05-25|-|none| \n|PMID 36821026|GLP-1 RAs in Spain: A Short Narrative Review of Their Use i…|PubMed|2023-04-01|-|none| \n|PMID 35143848|Metformin and the heart: Update on mechanisms of cardiovascu…|PubMed|2022-05-01|-|none| \n|PMID 34299301|Metformin Affects Cardiac Arachidonic Acid Metabolism and Ca…|PubMed|2021-07-19|-|none| \n|PMID 33271428|Metformin: still the sweet spot for CV protection in diabete…|PubMed|2020-10-01|-|none| \n|PMID 32389830|Metformin therapy confers cardioprotection against the remod…|PubMed|2020-08-01|-|none| \n|PMID 32404204|Autophagy-dependent and -independent modulation of oxidative…|PubMed|2020-05-13|-|none| \n|PMID 32942881|[The position of SGLT2 inhibitors in current medicine].|PubMed|2020-04-01|-|none| \n|PMID 31902326|Sex Differences in Cardiovascular Effectiveness of Newer Glu…|PubMed|2020-01-07|-|none| \n|PMID 31766918|Glucose-lowering therapies in patients with type 2 diabetes…|PubMed|2019-12-01|-|none| \n \n \n \nNewest indexed: 2026-10-22 (17 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42906793\n  biomcp search article --drug metformin -k \"cardiovascular benefit cardioprotection heart disease\" --source pubmed --year-min 2019 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-20 of 33 results. Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

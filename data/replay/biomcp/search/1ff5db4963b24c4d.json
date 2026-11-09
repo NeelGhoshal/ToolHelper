@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "journal": [
+      "Circulation"
+    ],
+    "limit": 10,
+    "keyword": [
+      "2017 ACC/AHA guideline high blood pressure adults clinical practice guideline"
+    ]
+  },
+  "args_key": "1ff5db4963b24c4da5f406fe033d9e689f45fed9f8f7d2b4a48bf53814867438",
+  "recorded_at": "2026-11-08T08:10:13.595796+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 45572.480599999835,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=2017 ACC/AHA guideline high blood pressure adults clinical practice guideline, journal=Circulation, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubTator3 source status: degraded (PubTator3 timed out after 12s) \nRetry: `biomcp search article --keyword \"2017 ACC/AHA guideline high blood pressure adults clinical practice guideline\" --journal Circulation --exclude-retracted --sort relevance --source pubtator --limit 10 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"2017 ACC/AHA guideline high blood pressure adults clinical practice guideline\" --journal Circulation --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 40811497|2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/S…|Europe PMC, PubMed|2025-08-14|hybrid 0.453 + title 7/9|152| \n|PMID 38033089|2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Manage…|Europe PMC|2023-11-30|hybrid 0.373 + title 4/9|2342| \n|PMID 38743805|2024 ACC/AHA/AACVPR/APMA/ABC/SCAI/SVM/SVN/SVS/SIR/VESS Guide…|Europe PMC|2024-05-14|hybrid 0.367 + title 4/9|584| \n|PMID 30354656|Systematic Review for the 2017 ACC/AHA/AAPA/ABC/ACPM/AGS/APh…|PubMed|2018-10-23|hybrid 0.35 + title 9/9|92| \n|PMID 30354655|2017 ACC/AHA/AAPA/ABC/ACPM/AGS/APhA/ASH/ASPC/NMA/PCNA Guidel…|PubMed|2018-10-23|hybrid 0.34 + title 9/9|945| \n|PMID 30354654|2017 ACC/AHA/AAPA/ABC/ACPM/AGS/APhA/ASH/ASPC/NMA/PCNA Guidel…|PubMed|2018-10-23|hybrid 0.33 + title 9/9|484| \n|PMID 31707797|Incorporation of Biomarkers Into Risk Assessment for Allocat…|PubMed|2019-12-17|hybrid 0.28 + title 6/9|68| \n|PMID 40811494|A Trans-Atlantic Perspective on the 2025 AHA/ACC Guidelines…|Europe PMC|2025-08-14|hybrid 0.249 + title 4/9|3| \n|PMID 39866113|2025 Heart Disease and Stroke Statistics: A Report of US and…|Europe PMC|2025-01-27|hybrid 0.231|1147| \n|PMID 29133599|Potential US Population Impact of the 2017 ACC/AHA High Bloo…|PubMed|2018-01-09|hybrid 0.22 + title 6/9|578| \n \n \n \nNewest indexed: 2025-08-21 (444 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 40811497\n  biomcp search article -k \"2017 ACC/AHA guideline high blood pressure adults clinical practice guideline\" --journal Circulation --year-min 2018 --year-max 2025 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

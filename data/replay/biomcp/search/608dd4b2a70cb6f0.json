@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "gene": "BRAF",
+    "limit": 10,
+    "significance": "pathogenic",
+    "offset": 10
+  },
+  "args_key": "608dd4b2a70cb6f0066892df171b49b9373524aea771eb1e29cc0e435dd1c6f9",
+  "recorded_at": "2026-11-09T07:06:03.509992+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 812.0407000096748,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Variant Search Results \n \nFound: 10 variant(s) \nQuery: gene=BRAF, significance=pathogenic, offset=10 \n \n \n## Filter evaluation \n \ngene: evaluated \n \nsignificance: evaluated \n \n \n \n| ID | Build | Gene | Transcript | Coding | Protein | Legacy Name | Significance | ClinVar Stars | gnomAD AF | REVEL | GERP | \n|---|---|---|---|---|---|---|---|---|---|---|---| \n| chr7:g.140481402C>G | GRCh37 | BRAF | NM_004333.6 | c.1406G>C | p.Gly469Ala | BRAF G469A | Pathogenic | 1 | 0.00000397741 | 0.9 | 5.62 | \n| chr7:g.140453134T>G | GRCh37 | BRAF | NM_004333.6 | c.1801A>C | p.Lys601Gln | BRAF K601Q | Pathogenic | 2 | - | 0.92 | 5.65 | \n| chr7:g.140453150A>C | GRCh37 | BRAF | NM_004333.6 | c.1785T>G | p.Phe595Leu | BRAF F595L | Pathogenic | 3 | - | 0.908 | 4.51 | \n| chr7:g.140453150A>T | GRCh37 | BRAF | NM_004333.6 | c.1785T>A | p.Phe595Leu | BRAF F595L | Pathogenic | 1 | - | 0.908 | 4.51 | \n| chr7:g.140476832A>T | GRCh37 | BRAF | NM_004333.6 | c.1574T>A | p.Leu525Gln | BRAF L525Q | Pathogenic | 2 | - | 0.939 | 5.68 | \n| chr7:g.140477806T>C | GRCh37 | BRAF | NM_004333.6 | c.1502A>G | p.Glu501Gly | BRAF E501G | Pathogenic | 2 | - | 0.992 | 4.96 | \n| chr7:g.140477807C>T | GRCh37 | BRAF | NM_004333.6 | c.1501G>A | p.Glu501Lys | BRAF E501K | Pathogenic | 2 | - | 0.974 | 4.96 | \n| chr7:g.140477848A>C | GRCh37 | BRAF | NM_004333.6 | c.1460T>G | p.Val487Gly | BRAF V487G | Pathogenic | 2 | - | 0.87 | 4.96 | \n| chr7:g.140501337T>G | GRCh37 | BRAF | NM_004333.6 | c.735A>C | p.Leu245Phe | BRAF L245F | Pathogenic | 3 | - | 0.834 | 4.28 | \n| chr7:g.140501350G>T | GRCh37 | BRAF | NM_004333.6 | c.722C>A | p.Thr241Lys | BRAF T241K | Pathogenic | 3 | - | 0.946 | 5.17 | \n \n \nUse `get variant <id>` for details. \nSignificance is the most severe ClinVar RCV classification in MyVariant.info's cached copy; run `get variant <id> clinvar` for the current NCBI ClinVar record-level classification. \nFilters: -g <gene>, --hgvsp <protein>, --significance <value>, --max-frequency <0-1>, --min-cadd <score>, --consequence <term>, --review-status <stars>, --population <pop>, --revel-min <score>, --gerp-min <score>, --tumor-site <site>, --condition <name>, --impact <level>, --lof, --has <field>, --missing <field>, --therapy <name> \n \n \nSee also:\n  biomcp get variant \"chr7:g.140481402C>G\"\n  biomcp get gene BRAF \n \n \n \nShowing 11-20 of 135 results. Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

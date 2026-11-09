@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "gene therapy",
+      "clinical"
+    ],
+    "limit": 15,
+    "sort": "date"
+  },
+  "args_key": "9dd8804d24687a135184bf9dfd590e5e24ba40716b31f1a932f639a38d690976",
+  "recorded_at": "2026-11-08T08:45:45.038443+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 44301.10129999957,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR gene therapy clinical, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"CRISPR gene therapy clinical\" --exclude-retracted --sort date --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42950788|Ultrasound-triggered bio-scaffold integrating engineered ste…|PubTator3|2027-02-01|-|0| \n|PMID 42771304|CRISPR/Cas Systems: Biological Basis and Genome Editing Appl…|PubTator3|2027-01-01|-|0| \n|PMID 42771308|An Overview of Programmable Epigenetic Editing Based on CRIS…|PubTator3, Europe PMC|2027-01-01|-|0| \n|PMID 42771309|Overview of Delivery Methods for Gene Editing.|PubTator3, Europe PMC|2027-01-01|-|0| \n|PMID 42926261|Generation of Functional Gene Knockout Melanoma Cell Lines b…|PubTator3|2027-01-01|-|0| \n|PMID 42955689|RNA-RNA Interaction Prediction in Therapeutics and Drug Disc…|PubTator3|2027-01-01|-|0| \n|PMID 42992560|Gene therapy for epilepsy: From SCN1A to broadened therapeut…|PubMed|2027-01-01|-|0| \n|PMID 42994960|Society for Immunotherapy of Cancer (SITC) clinical practice…|PubMed|2026-11-06|-|0| \n|PMID 42987985|AI-enhanced CRISPR-Cas9 therapeutics: Advances in precision,…|PubMed|2026-11-05|-|0| \n|PMID 42988947|PRKAG2 Cardiac Syndrome: A Comprehensive Review of Clinical…|PubMed|2026-11-05|-|0| \n|PMID 42964622|Breaking the degenerative triad: Microenvironment reprogramm…|Europe PMC|2026-10-23|-|0| \n|PMID 42959301|Coacervate protocells-mediated mitochondrial transplantation…|Europe PMC|2026-10-22|-|0| \n|PMID 42992139|Emerging cell therapies for gastrointestinal cancers: Advanc…|PubMed|2026-10-07|-|0| \n|PMID 42997239|FAM45A-Mediated Persistent Memory-Like Fibroblast Reprogramm…|PubMed|2026-10-02|-|none| \n|PMID 42831006|Advances and perspectives in genetically encoded biosensors…|Europe PMC|2026-09-23|-|0| \n \n \n \nNewest indexed: 2026-11-07 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42950788\n  biomcp search article -k \"CRISPR gene therapy clinical\" --year-min 2026 --year-max 2027 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

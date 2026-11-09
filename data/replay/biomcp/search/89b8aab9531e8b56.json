@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "disease": [
+      "lung cancer"
+    ],
+    "entity": "article",
+    "gene": "EGFR",
+    "keyword": [
+      "T790M resistance osimertinib"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "89b8aab9531e8b56485512c30c4e5402d9f16a1cbdab943f4dc5bef6f2d6372f",
+  "recorded_at": "2026-11-08T09:01:17.430517+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4049.444600001152,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, disease=lung cancer, keyword=T790M resistance osimertinib, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --gene EGFR --disease \"lung cancer\" --keyword \"T790M resistance osimertinib\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 29151359|Osimertinib in Untreated EGFR-Mutated Advanced Non-Small-Cel…|Europe PMC|2017-11-18|-|4492| \n|PMID 27959700|Osimertinib or Platinum-Pemetrexed in EGFR T790M-Positive Lu…|Europe PMC|2016-12-06|-|2847| \n|PMID 31751012|Overall Survival with Osimertinib in Untreated, EGFR-Mutated…|Europe PMC|2019-11-21|-|2495| \n|PMID 31723286|A view on drug resistance in cancer.|Europe PMC|2019-11-13|-|2196| \n|PMID 28416483|SFK/FAK Signaling Attenuates Osimertinib Efficacy in Both Dr…|PubTator3|2017-06-01|-|125| \n|PMID 28138027|MET Copy Number Gain Is Associated with Gefitinib Resistance…|PubTator3|2017-03-01|-|66| \n|PMID 34202566|Drug Tolerance to EGFR Tyrosine Kinase Inhibitors in Lung Ca…|PubTator3|2021-06-24|-|28| \n|PMID 36612121|EGFR-Tyrosine Kinase Inhibitors Induced Activation of the Au…|PubTator3|2022-12-25|-|12| \n|PMID 42804885|Real-world progression-free survival with erlotinib versus o…|PubMed|2026-11-01|-|0| \n|PMID 42835192|Comparative profiling of osimertinib and fourth-generation E…|PubMed|2026-09-21|-|0| \n \n \n \nNewest indexed: 2026-10-06 (33 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 29151359\n  biomcp search article -g EGFR -d \"lung cancer\" -k \"T790M resistance osimertinib\" --year-min 2016 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

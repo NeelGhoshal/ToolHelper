@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "hairy cell leukemia BRAF"
+    ],
+    "limit": 5
+  },
+  "args_key": "cca28cdb48a89ebd2ff5fd277399e30b30b7722bda1a3f51e91ed7ae1f43b01c",
+  "recorded_at": "2026-11-08T07:48:42.927912+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 192.92099999984202,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 5 of 6 \n \nQuery: condition=hairy cell leukemia BRAF \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT04322383|Binimetinib for People Wi…|RECRUITING|2|Hairy Cell Leukemia| \n|NCT04324112|Encorafenib Plus Binimeti…|ACTIVE_NOT_RECRUITING|2|Hairy Cell Leukemia| \n|NCT01711632|BRAF Inhibitor, Vemurafen…|COMPLETED|2|Hairy Cell Leukemia| \n|NCT02034110|Efficacy and Safety of th…|COMPLETED|2|Cancer| \n|NCT03501615|An Early Access Programme…|APPROVED_FOR_MARKETING|-|Relapsed/Refractory Hairy Cell Leukemia| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-5 of 6 results. Use --offset 5 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

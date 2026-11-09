@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "limit": 8,
+    "sort": "citations",
+    "keyword": [
+      "BRAF V600E oncogenic mutation MAPK pathway cancer"
+    ]
+  },
+  "args_key": "7231f83b61a0bad16d416bd4ac1df26cfa68150ae3fdef9790b996e04d4a500d",
+  "recorded_at": "2026-11-08T08:00:20.235610+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 47678.492999999435,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E oncogenic mutation MAPK pathway cancer, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nEurope PMC source status: degraded (Europe PMC timed out after 12s) \nRetry: `biomcp search article --keyword \"BRAF V600E oncogenic mutation MAPK pathway cancer\" --exclude-retracted --sort citations --source europepmc --limit 8 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E oncogenic mutation MAPK pathway cancer\" --exclude-retracted --sort citations --source semanticscholar --limit 8 --offset 0` \n \n \nFound 8 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42957845|Post-transplant BRAF/MEK inhibitor maintenance sustains comp…|PubMed|2026-10-28|-|0| \n|PMID 42919430|Cytotoxic activity of selinexor in BRAF(V600E)-driven pediat…|PubMed|2026-10-22|-|0| \n|PMID 42921908|RAS-Pathway Mutation Profiles and Clinical Outcomes Among Pa…|PubMed|2026-10-01|-|0| \n|PMID 42720827|Langerhans cell histiocytosis: molecular mechanisms underlyi…|PubTator3, PubMed|2026-09-10|-|0| \n|PMID 42692535|BRAF V600E-mutated marginal zone lymphoma may exhibit featur…|PubMed|2026-09-03|-|0| \n|PMID 42777179|Efficacy Study of Vemurafenib in Children With Recurrent or…|PubMed|2026-09-01|-|0| \n|PMID 42671662|BRAF V600E-Mutated Metastatic Colorectal Cancer: Practical M…|PubMed|2026-08-31|-|0| \n|PMID 42989302|Triple-gated domino nanobomb for mutation-selective ferropto…|PubMed|2026-08-07|-|0| \n \n \n \nNewest indexed: 2026-11-05 (3 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42957845\n  biomcp search article -k \"BRAF V600E oncogenic mutation MAPK pathway cancer\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 8 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

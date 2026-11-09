@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "EGFR-mutated non-small cell lung cancer"
+    ],
+    "limit": 10
+  },
+  "args_key": "459cba0999a239d65ee070bccf24e3903b7abf814e7e3f49ca445b3ce956cceb",
+  "recorded_at": "2026-11-08T08:24:21.117482+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 206.8542000015441,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 693 \n \nQuery: condition=EGFR-mutated non-small cell lung cancer \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT04951635|A Phase III Study to Asse…|RECRUITING|3|Non-small Cell Lung Cancer| \n|NCT06956001|Firmonertinib Versus Plat…|RECRUITING|3|EGFR, NSCLC (Advanced Non-small Cell Lung Cancer)| \n|NCT05503888|Phase Ib/II Study of Almo…|NOT_YET_RECRUITING|1/2|Relapsed or Advanced Non-small Cell Lung Cancer| \n|NCT02620657|Evaluate EGFR Mutation St…|COMPLETED|-|Non-Small Cell Lung Cancer| \n|NCT03790397|Osimertinib in Subjects W…|COMPLETED|-|Non Small Cell Lung Cancer| \n|NCT04609319|Real World Utilization an…|COMPLETED|-|Lung Cancer| \n|NCT05258279|Lenvatinib in Combination…|COMPLETED|2|Non-squamous Non-small-cell Lung Cancer, EGFR Activating Mutation| \n|NCT03457337|S-1 Plus Gefitinib Versus…|UNKNOWN|2|Advanced NSCLC With EGFR Mutation| \n|NCT02353741|Concurrent EGFR-TKIs and…|TERMINATED|2|Non Small Cell Lung Cancer| \n|NCT05241873|(Concerto) Study of BLU-4…|TERMINATED|1|Lung Neoplasm Malignant, Carcinoma, Non-Small… [abridged; 20 conditions total]| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-10 of 693 results. Use --offset 10 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

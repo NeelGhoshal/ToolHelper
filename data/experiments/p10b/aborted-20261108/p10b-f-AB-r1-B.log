@@ -1,0 +1,50 @@
+learning from 108 runs in 
+bench-baseline-record,p10-baseline-r1,p10-baseline-r2,p10-baseline-r3 (27 
+other-fold tasks)
+strategies: E2_compression {'level': 'minimal'}, E6_shaping {'mode': 'budget', 
+'top_n': 5, 'tools': ['biomcp__biomcp', 'biomcp__get', 'biomcp__search', 
+'biomcp__variant_articles', 'biomcp__variant_erepo', 
+'medical__get-article-details', 'medical__get-drug-details', 
+'medical__search-clinical-guidelines', 'medical__search-drug-nomenclature', 
+'medical__search-drugs', 'medical__search-google-scholar', 
+'medical__search-medical-databases', 'medical__search-medical-journals', 
+'medical__search-medical-literature', 'omop__find_omop_concept'], 'cdm': 
+'omop_mcp:data/omop_concept_id_fields.json@sha256:c04a7c7c71ade72d', 'budget': 
+2000, 'budget_tools': ['biomcp__biomcp', 'biomcp__get', 'biomcp__search', 
+'medical__get-article-details', 'medical__get-drug-details', 
+'medical__search-drug-nomenclature', 'medical__search-google-scholar', 
+'medical__search-medical-databases', 'medical__search-medical-journals', 
+'medical__search-medical-literature']}
+🚨 MEDICAL MCP SERVER - SAFETY NOTICE:
+This server provides medical information for educational purposes only.
+NEVER use this information as the sole basis for clinical decisions.
+Always consult qualified healthcare professionals for patient care.
+
+📊 DYNAMIC DATA SOURCE NOTICE:
+This system queries live medical databases (FDA, WHO, PubMed, RxNorm)
+NO hardcoded medical data is used - all information is retrieved dynamically
+Data freshness depends on source database updates and API availability
+Network connectivity required for all medical information retrieval
+Failed to parse JSONRPC message from server
+Traceback (most recent call last):
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\mcp\client\stdio.py", line 222, in _parse_line
+    message = types.jsonrpc_message_adapter.validate_json(line, by_name=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\neelg\OneDrive\Desktop\ToolHelper\.venv\Lib\site-packages\pydantic\type_adapter.py", line 466, in validate_json
+    return self.validator.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for union[JSONRPCRequest,JSONRPCNotification,JSONRPCResponse,JSONRPCError]
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='✅ Medical MCP Server running on stdio', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/json_invalid
+fail med-002   turns=8 calls=17 trust=0.85 live=6 prompt=47007 grounding=- 
+failed=['must_call_any', 'answer_includes_any']
+pass med-003   turns=2 calls=1 trust=1.00 live=0 prompt=8662 grounding=- 
+Error fetching WHO indicators: Error: socket hang up
+    at TLSSocket.socketOnEnd (node:_http_client:790:25)
+    at TLSSocket.emit (node:events:526:24)
+    at endReadableNT (node:internal/streams/readable:1764:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'ECONNRESET',
+  response: undefined
+}
+pass med-006   turns=8 calls=21 trust=0.67 live=5 prompt=62402 grounding=0.20 

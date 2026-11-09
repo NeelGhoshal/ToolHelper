@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "UKPDS",
+      "metformin",
+      "myocardial infarction"
+    ],
+    "limit": 10,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "92eeef865cc8995ad0826fa80fcc5a46c5d9bb1d673c5a94a3413b7cb571ab2e",
+  "recorded_at": "2026-11-09T05:24:34.631626+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 509.65829999768175,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=UKPDS metformin myocardial infarction, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 10 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42729196|Cost-utility analysis of loxenatide versus DPP-4 inhibitors…|PubMed|2026-08-28|-|none| \n|PMID 38772405|Post-trial monitoring of a randomised controlled trial of in…|PubMed|2024-07-13|-|none| \n|PMID 28770324|Impact of metformin on cardiovascular disease: a meta-analys…|PubMed|2017-09-01|-|none| \n|PMID 27579542|METFORMIN: NONGLYCEMIC EFFECTS AND POTENTIAL NOVEL INDICATIO…|PubMed|2016-08-01|-|none| \n|PMID 25344660|Refitting of the UKPDS 68 risk equations to contemporary rou…|PubMed|2015-02-01|-|none| \n|PMID 22650223|Cardiovascular disease and oral agent glucose-lowering thera…|PubMed|2012-06-01|-|none| \n|PMID 20807681|Intensive glucose control and cardiovascular outcomes in typ…|PubMed|2011-10-01|-|none| \n|PMID 19485923|The cardiovascular effects of metformin: further reasons to…|PubMed|2010-05-01|-|none| \n|PMID 19009971|[United Kingdom Prospective Diabetes Study (UKPDS): 10 years…|PubMed|2008-10-01|-|none| \n|PMID 19099084|The role of surrogate endpoints in the evaluation of efficac…|PubMed|2008-10-01|-|none| \n \n \n \nNewest indexed: 2026-09-12 (58 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42729196\n  biomcp search article -k \"UKPDS metformin myocardial infarction\" --source pubmed --year-min 2008 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-10 of 20 results. Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "Li-Fraumeni syndrome"
+    ],
+    "entity": "trial",
+    "limit": 5
+  },
+  "args_key": "127dae040be79eb7f1548496ec3e41333ed832e889d9896c7f35291bb9f74816",
+  "recorded_at": "2026-11-08T06:20:05.837052+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 204.72410000002128,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 5 of 26 \n \nQuery: condition=Li-Fraumeni syndrome \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT06712095|Video Capsule Examination…|RECRUITING|NA|Lynch Syndrome, Li Fraumeni Syndrome, PTEN Ha… [abridged; 10 conditions total]| \n|NCT02950987|Screening With Whole Body…|ACTIVE_NOT_RECRUITING|NA|Li-Fraumeni Syndrome| \n|NCT00406445|Role of p53 Gene in Metab…|COMPLETED|-|Mitochondrial Disorders, Li-Fraumeni Syndrome, Carriers of p53 Mutation| \n|NCT01981525|A Pilot Study of Metformi…|COMPLETED|1|Li-Fraumeni Syndrome| \n|NCT02289326|Biomarker Monitoring in T…|COMPLETED|-|Li-Fraumeni Syndrome, Hereditary Cancer Syndro… [abridged; 3 conditions total]| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-5 of 26 results. Use --offset 5 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

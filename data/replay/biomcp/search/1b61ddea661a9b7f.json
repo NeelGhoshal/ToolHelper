@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "gene": "BRAF",
+    "limit": 25,
+    "query": "V600E"
+  },
+  "args_key": "1b61ddea661a9b7f125c22e0e11bebec7a8f9aeeb87def4bf8731bace967ac29",
+  "recorded_at": "2026-11-08T06:13:17.111666+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 246.91729999995005,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Requested variant: BRAF V600E\n\nVariant identity: resolved\n\n# Variant Search Results \n \nFound: 1 variant(s) \nQuery: gene=BRAF, hgvsp=V600E \n \n \n## Filter evaluation \n \ngene: evaluated \n \nhgvsp: evaluated \n \n \n \n| ID | Build | Gene | Transcript | Coding | Protein | Legacy Name | Significance | ClinVar Stars | gnomAD AF | REVEL | GERP | \n|---|---|---|---|---|---|---|---|---|---|---|---| \n| chr7:g.140453136A>T | GRCh37 | BRAF | NM_004333.6 | c.1799T>A | p.Val600Glu | BRAF V600E | Pathogenic | 2 | 0.00000397994 | 0.931 | 5.65 | \n \n \nUse `get variant <id>` for details. \nSignificance is the most severe ClinVar RCV classification in MyVariant.info's cached copy; run `get variant <id> clinvar` for the current NCBI ClinVar record-level classification. \nFilters: -g <gene>, --hgvsp <protein>, --significance <value>, --max-frequency <0-1>, --min-cadd <score>, --consequence <term>, --review-status <stars>, --population <pop>, --revel-min <score>, --gerp-min <score>, --tumor-site <site>, --condition <name>, --impact <level>, --lof, --has <field>, --missing <field>, --therapy <name> \n \n \nSee also:\n  biomcp get variant \"chr7:g.140453136A>T\"\n  biomcp get gene BRAF \n \n \n \nShowing 1 of 1 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "gene": "TP53",
+    "limit": 10,
+    "significance": "pathogenic"
+  },
+  "args_key": "03c4e4fa7442f4b17c8cd69aac71d02cabadb690277710a6ac429d353a329b9d",
+  "recorded_at": "2026-11-09T06:23:59.446908+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 688.7475999974413,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Variant Search Results \n \nFound: 10 variant(s) \nQuery: gene=TP53, significance=pathogenic \n \n \n## Filter evaluation \n \ngene: evaluated \n \nsignificance: evaluated \n \n \n \n| ID | Build | Gene | Transcript | Coding | Protein | Legacy Name | Significance | ClinVar Stars | gnomAD AF | REVEL | GERP | \n|---|---|---|---|---|---|---|---|---|---|---|---| \n| chr17:g.7577548C>T | GRCh37 | TP53 | NM_000546.6 | c.733G>A | p.Gly245Ser | TP53 G245S | Pathogenic | 3 | 0.0 | 0.947 | 4.62 | \n| chr17:g.7578406C>T | GRCh37 | TP53 | NM_000546.6 | c.524G>A | p.Arg175His | TP53 R175H | Pathogenic | 3 | 0.00000397969 | 0.922 | 5.41 | \n| chr17:g.7578212G>A | GRCh37 | TP53 | NM_000546.6 | c.637C>T | p.Arg213Ter | TP53 R213stop | Pathogenic | 2 | 0.0 | none | 3.25 | \n| chr17:g.7578263G>A | GRCh37 | TP53 | NM_000546.6 | c.586C>T | p.Arg196Ter | TP53 R196stop | Pathogenic | 2 | 0.00000397655 | none | 4.44 | \n| chr17:g.7577551C>T | GRCh37 | TP53 | NM_000546.6 | c.730G>A | p.Gly244Ser | TP53 G244S | Pathogenic | 2 | - | 0.936 | 4.62 | \n| chr17:g.7577046C>A | GRCh37 | TP53 | NM_000546.6 | c.892G>T | p.Glu298* | TP53 E298stop | Pathogenic | 3 | - | none | -4.03 | \n| chr17:g.7578437G>A | GRCh37 | TP53 | NM_000546.6 | c.493C>T | p.Gln165* | TP53 Q165stop | Pathogenic | 2 | - | none | 4.52 | \n| chr17:g.7579528C>T | GRCh37 | TP53 | NM_000546.6 | c.159G>A | p.Trp53* | TP53 W53stop | Pathogenic | 2 | - | none | 0.597 | \n| chr17:g.7579529C>T | GRCh37 | TP53 | NM_000546.6 | c.158G>A | p.Trp53* | TP53 W53stop | Pathogenic | 2 | - | none | 1.81 | \n| chr17:g.7578291T>G | GRCh37 | TP53 | NM_000546.6 | c.560-2A>C | - | - | Pathogenic | 2 | - | none | 3.68 | \n \n \nUse `get variant <id>` for details. \nSignificance is the most severe ClinVar RCV classification in MyVariant.info's cached copy; run `get variant <id> clinvar` for the current NCBI ClinVar record-level classification. \nFilters: -g <gene>, --hgvsp <protein>, --significance <value>, --max-frequency <0-1>, --min-cadd <score>, --consequence <term>, --review-status <stars>, --population <pop>, --revel-min <score>, --gerp-min <score>, --tumor-site <site>, --condition <name>, --impact <level>, --lof, --has <field>, --missing <field>, --therapy <name> \n \n \nSee also:\n  biomcp get variant \"chr17:g.7577548C>T\"\n  biomcp get gene TP53 \n \n \n \nShowing 1-10 of 563 results. Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

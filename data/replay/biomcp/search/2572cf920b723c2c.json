@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E thyroid colorectal lung cancer review"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "2572cf920b723c2c2319b57bc3ed0ec0faba7772224c83b1f8d80a2400657894",
+  "recorded_at": "2026-11-08T08:07:23.054998+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3071.302000000287,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E thyroid colorectal lung cancer review, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E thyroid colorectal lung cancer review\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 26462967|2015 American Thyroid Association Management Guidelines for…|Europe PMC|2016-01-01|-|10412| \n|PMID 24553385|Detection of circulating tumor DNA in early- and late-stage…|Europe PMC|2014-02-01|-|3920| \n|PMID 21252716|International association for the study of lung cancer/ameri…|Europe PMC|2011-02-01|-|3664| \n|PMID 28481359|Mutational landscape of metastatic cancer revealed from pros…|Europe PMC|2017-05-08|-|2840| \n|PMID 36842301|Precision oncology for BRAF-mutant cancers with BRAF and MEK…|PubTator3|2023-04-01|-|100| \n|PMID 39529955|Expert consensus on the diagnosis and treatment of solid tum…|PubMed|2024-10-18|-|22| \n|PMID 38539548|Mutations in the Serine/Threonine Kinase BRAF: Oncogenic Dri…|PubTator3, PubMed|2024-03-20|-|19| \n|PMID 40141317|Small Molecule B-RAF Inhibitors as Anti-Cancer Therapeutics:…|PubMed|2025-03-16|-|12| \n|PMID 38476918|Comparative efficiency of differential diagnostic methods fo…|PubTator3, PubMed|2024-02-20|-|7| \n|PMID 41383110|Assessing patient risk, benefit, and outcomes in drug develo…|PubMed|2025-12-01|-|3| \n \n \n \nNewest indexed: 2025-12-12 (331 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 26462967\n  biomcp search article -k \"BRAF V600E thyroid colorectal lung cancer review\" --year-min 2011 --year-max 2025 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

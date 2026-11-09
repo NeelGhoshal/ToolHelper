@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "42854678",
+    "json": true
+  },
+  "args_key": "cae6de9cc60354f44fb89ae80f0b272c21ea9385146c38805f00da31c12ebb69",
+  "recorded_at": "2026-11-08T07:38:19.627959+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 10518.019700000877,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42854678/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42854678 tldr\",\n      \"biomcp article entities 42854678\",\n      \"biomcp search gene -q bradykinin\",\n      \"biomcp search gene -q KLKB1\",\n      \"biomcp search disease --query \\\"hereditary angioedema\\\"\",\n      \"biomcp search disease --query \\\"genetic disorder\\\"\",\n      \"biomcp search drug -q lonvoguran\",\n      \"biomcp search drug -q ziclumeran\",\n      \"biomcp article references 42854678 --limit 3\",\n      \"biomcp article citations 42854678 --limit 3\",\n      \"biomcp article recommendations 42854678 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"annotations\",\n        \"label\": \"PubTator Annotations\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ],\n    \"workflow\": \"article-follow-up\",\n    \"workflow_playbook\": \"biomcp skill article-follow-up\",\n    \"workflow_rationale\": \"Use article annotations first, then citation and recommendation graph pivots for efficient literature expansion.\"\n  },\n  \"abstract_text\": \"Hereditary angioedema is a bradykinin-mediated genetic disorder increasingly controlled with effective long-term prophylaxis. In a phase 3 trial, a single dose of lonvoguran ziclumeran, an in vivo CRISPR-Cas9 therapy targeting KLKB1, significantly reduced attack rates. This approach represents a highly promising therapeutic strategy for HAE. However, it also raises important questions that require further investigation.\",\n  \"annotations\": {\n    \"chemicals\": [\n      {\n        \"count\": 1,\n        \"text\": \"lonvoguran\"\n      },\n      {\n        \"count\": 1,\n        \"text\": \"ziclumeran\"\n      }\n    ],\n    \"diseases\": [\n      {\n        \"count\": 2,\n        \"identifier\": \"MESH:D054179\",\n        \"name\": \"Angioedemas Hereditary\",\n        \"namespace\": \"MESH\",\n        \"text\": \"hereditary angioedema\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"MESH:D030342\",\n        \"name\": \"Genetic Diseases Inborn\",\n        \"namespace\": \"MESH\",\n        \"text\": \"genetic disorder\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"MESH:D056828\",\n        \"name\": \"Hereditary Angioedema Type III\",\n        \"namespace\": \"MESH\",\n        \"text\": \"HAE\"\n      }\n    ],\n    \"genes\": [\n      {\n        \"count\": 1,\n        \"identifier\": \"3827\",\n        \"namespace\": \"NCBIGene\",\n        \"text\": \"bradykinin\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"3818\",\n        \"namespace\": \"NCBIGene\",\n        \"text\": \"KLKB1\"\n      }\n    ]\n  },\n  \"author_completeness\": \"complete\",\n  \"author_count\": 2,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Cancian M\",\n    \"Margaglione M\"\n  ],\n  \"citation_count\": 0,\n  \"date\": \"2026-10-09\",\n  \"doi\": \"10.1016/j.medj.2026.101324\",\n  \"journal\": \"Med\",\n  \"open_access\": false,\n  \"pmid\": \"42854678\",\n  \"publication_type\": \"Research Article\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"Genome editing for hereditary angioedema: A landmark trial and important unanswered questions.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

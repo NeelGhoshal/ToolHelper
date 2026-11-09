@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "metformin"
+    ],
+    "entity": "article",
+    "keyword": [
+      "cardiovascular outcomes",
+      "heart failure",
+      "all-cause mortality"
+    ],
+    "limit": 20,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "a66d9cf1922d3035f1235e2b74037e5b29f22e0bf007c78e85adbdb998b4f71c",
+  "recorded_at": "2026-11-08T07:24:22.176744+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 899.0333000001556,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=metformin, keyword=cardiovascular outcomes heart failure all-cause mortality, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 20 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42998247|Initial Diabetes Therapy After Coronary Artery Bypass Grafti…|PubMed|2026-11-07|-|none| \n|PMID 42957066|GLP-1 Receptor Agonists Decrease the Rate of Rupture, Cardia…|PubMed|2026-10-29|-|none| \n|PMID 41940793|Estimating the True MACE Benefits From Tirzepatide in SURPAS…|PubMed|2026-10-01|-|none| \n|PMID 42767411|GLP-1 Analogues and Long-Term Outcomes in Adults With Obesit…|PubMed|2026-09-21|-|none| \n|PMID 40358690|Impact of glp-1 receptor agonists on hospitalization for hea…|PubMed|2026-09-01|-|none| \n|PMID 42432224|Semaglutide cardiovascular outcomes align more closely with…|PubMed|2026-07-10|-|none| \n|PMID 42340212|Repurposed Drugs and Cardiovascular Morbidity: A Cost-Effect…|PubMed|2026-07-01|-|none| \n|PMID 41925662|SGLT2 Inhibitors and Mortality in Endometriosis With Type 2…|PubMed|2026-06-01|-|none| \n|PMID 41942012|Cardiorenal protective effects of anti-diabetic drugs in ear…|PubMed|2026-06-01|-|none| \n|PMID 42249941|PERsonalised Medicine for Intensification of Treatment (PERM…|PubMed|2026-06-01|-|none| \n|PMID 42132163|Comparative Effectiveness of Individual Sodium Glucose Trans…|PubMed|2026-05-19|-|none| \n|PMID 41241275|Real-World Evidence for Metformin Use in Solid Organ Transpl…|PubMed|2026-03-01|-|none| \n|PMID 40804684|Pharmacological treatment patterns and outcomes according to…|PubMed|2026-01-06|-|none| \n|PMID 41082229|Liraglutide vs Semaglutide vs Dulaglutide in Veterans With T…|PubMed|2025-10-01|-|none| \n|PMID 40019856|Efficacy and Safety of Finerenone in Type 2 Diabetes: A Pool…|PubMed|2025-05-01|-|none| \n|PMID 40242080|Impact of Acute Kidney Injury, Co-Existing with and without…|PubMed|2025-04-12|-|none| \n|PMID 39277567|Clinical outcomes in type 2 diabetes patients with chronic h…|PubMed|2025-02-01|-|none| \n|PMID 39660840|The Effects of Metformin on Weight Loss, Cardiovascular Heal…|PubMed|2024-12-11|-|none| \n|PMID 38949295|The synergistic impact of type 2 diabetes and MASLD on cardi…|PubMed|2024-10-01|-|none| \n|PMID 39153984|Impact of canagliflozin combined with metformin therapy on r…|PubMed|2024-08-17|-|none| \n \n \n \nNewest indexed: 2026-11-07 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42998247\n  biomcp search article --drug metformin -k \"cardiovascular outcomes heart failure all-cause mortality\" --source pubmed --year-min 2024 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-20 of 88 results. Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

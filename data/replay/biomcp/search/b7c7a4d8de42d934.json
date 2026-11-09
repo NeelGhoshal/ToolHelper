@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "gene editing",
+      "hemoglobinopathy"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "b7c7a4d8de42d9344b8982f3ce2ed18884b3fe70550b8040a4b5272d67bd0a8b",
+  "recorded_at": "2026-11-08T14:50:36.552313+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3288.782800002082,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR gene editing hemoglobinopathy, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"CRISPR gene editing hemoglobinopathy\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 27820943|CRISPR/Cas9 β-globin gene targeting in human haematopoietic…|Europe PMC|2016-11-07|-|771| \n|PMID 30911135|Highly efficient therapeutic gene editing of human hematopoi…|Europe PMC|2019-03-25|-|433| \n|PMID 33283990|Post-Transcriptional Genetic Silencing of BCL11A to Treat Si…|Europe PMC|2020-12-05|-|339| \n|PMID 35928543|2021 Thalassaemia International Federation Guidelines for th…|Europe PMC|2022-07-29|-|206| \n|PMID 38454604|Autologous gene therapy for hemoglobinopathies: From bench t…|PubTator3|2024-03-06|-|37| \n|PMID 33750221|CRISPR/Cas-Dependent and Nuclease-Free In Vivo Therapeutic G…|PubTator3|2021-03-01|-|34| \n|PMID 33525591|Genome Editing for beta-Hemoglobinopathies: Advances and Cha…|PubTator3|2021-01-28|-|21| \n|PMID 35741383|Gene Editing-Based Technologies for Beta-hemoglobinopathies…|PubTator3|2022-06-04|-|8| \n|PMID 42977761|Genotoxic safety and long-term engraftment dynamics of effic…|PubMed|2026-11-03|-|0| \n|PMID 42940449|Inherited Anemia: A Contemporary Clinical and Lab Review.|PubMed|2026-10-12|-|0| \n \n \n \nNewest indexed: 2026-11-03 (5 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 27820943\n  biomcp search article -k \"CRISPR gene editing hemoglobinopathy\" --year-min 2016 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

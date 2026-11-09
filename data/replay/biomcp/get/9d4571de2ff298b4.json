@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "42890282",
+    "json": true,
+    "sections": [
+      "tldr"
+    ]
+  },
+  "args_key": "9d4571de2ff298b4d974ff7f329a5e6cc774269579db3cb857a56147fdd0f64c",
+  "recorded_at": "2026-11-08T14:55:07.881021+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1852.976199996192,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42890282/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42890282 tldr\",\n      \"biomcp article references 42890282 --limit 3\",\n      \"biomcp article citations 42890282 --limit 3\",\n      \"biomcp article recommendations 42890282 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ]\n  },\n  \"abstract_text\": \"Introduction In February 2025, a single infant with carbamoyl phosphate synthetase 1 deficiency received a customized base-editing therapy, and individualized gene editing has since been discussed as an emerging category of care. No one has yet counted whether this category exists in the registered study record. Methods We conducted a cross-sectional census of interventional studies of human gene-editing agents registered on ClinicalTrials.gov. Records were retrieved through the ClinicalTrials.gov application programming interface, version 2, with a verbatim, intervention-scoped query and a fixed census date of 17 September 2026. Eligibility was verified from each record's own fields, and every exclusion is supported by the field value that justifies it. Two independent screening passes classified each eligible record as single-participant or n-of-1, multi-variant umbrella or platform-designated, or conventional cohort. Agreement was quantified with Cohen's kappa and a 95% confidence interval (CI). Records in the individualized and platform classes were re-verified against their complete registry entries and version histories. We also searched public US Food and Drug Administration (FDA) records for the regulatory route of each census record. Reporting follows the Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) statement. Results Of 212 retrieved records, 64 were excluded, and 148 were eligible. Four eligible records were single-participant or n-of-1 designs, and three were multi-variant umbrella or platform-designated designs, giving a census of seven studies. Of the remainder, 140 were conventional cohorts, and one was an editing arm inside a non-editing platform trial. Version histories confirmed the four single-participant designs; one of them reached an enrolment of one through a revision made before enrolment began. The same histories showed that three other records had an enrolment of one or two only because of termination or under-enrolment. Only two of the 148 eligible records describe a construct designed for the individual participant. No publicly verifiable platform technology designation was located for any census record, and the census query returned no expanded-access record. Of 23 studies completed more than 12 months before the census, five had posted results (21.7%, Wilson 95% CI: 9.7%-41.9%); because this interval is wide, the figure is reported as context only. Agreement on design class was moderate (kappa, 0.540; 95% CI, 0.264-0.815). Conclusions Nineteen months after the first individualized CRISPR treatment, the registry contains seven individualized or platform-designated gene-editing studies, and only two records describe an individualized construct. The regulatory pathway used by the index case was not retrievable from the registry, and no regulatory route could be verified from public records; this is an absence of public evidence, not evidence that no route existed. These counts describe the ClinicalTrials.gov record, not the prevalence of individualized gene editing, and the design-class counts are provisional given moderate agreement.\",\n  \"author_completeness\": \"complete\",\n  \"author_count\": 2,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Li OM\",\n    \"Li Y\"\n  ],\n  \"citation_count\": 0,\n  \"date\": \"2026-10-15\",\n  \"doi\": \"10.7759/cureus.117975\",\n  \"journal\": \"Cureus\",\n  \"open_access\": false,\n  \"pmid\": \"42890282\",\n  \"publication_type\": \"Research Article\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"Individualized and Platform-Designated Gene-Editing Studies in the Registered Clinical Record: A Case-by-Case Census Against 148 Eligible Studies.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

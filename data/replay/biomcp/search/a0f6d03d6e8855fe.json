@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "disease": [
+      "lung cancer",
+      "non-small cell lung carcinoma"
+    ],
+    "entity": "article",
+    "gene": "EGFR",
+    "keyword": [
+      "review",
+      "EGFR tyrosine kinase inhibitor"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "a0f6d03d6e8855fe5e6f1504dd0936298a41286a7e4d99c5727f3206cc445e59",
+  "recorded_at": "2026-11-08T06:13:31.413708+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5079.586200000449,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, disease=lung cancer non-small cell lung carcinoma, keyword=review EGFR tyrosine kinase inhibitor, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene EGFR --disease \"lung cancer non-small cell lung carcinoma\" --keyword \"review EGFR tyrosine kinase inhibitor\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 18709663|Expression and mutational analysis of MET in human solid can…|Europe PMC|2008-12-01|-|243| \n|PMID 39334768|Oxidative Stress and Age-Related Tumors.|Europe PMC|2024-09-13|-|51| \n|PMID 38321811|Recent advances and remaining challenges in lung cancer ther…|Europe PMC|2024-02-07|-|33| \n|PMID 35399571|The oncogenic landscape of the idiopathic pulmonary fibrosis…|Europe PMC|2022-03-01|-|22| \n|PMID 42933457|Ruzaltatug rezetecan versus chemotherapy for EGFR-mutated ad…|PubMed|2026-11-07|-|0| \n|PMID 42994820|Successful rechallenge with almonertinib and corticosteroids…|PubMed|2026-11-06|-|0| \n|PMID 42926199|Clinical and molecular prognostic factors associated with ou…|PubMed|2026-09-11|-|0| \n|PMID 42975994|FLAURA2 - a step forward in first-line treatment of advanced…|PubMed|2026-01-01|-|0| \n|PMID 36720507|Examination of the effectiveness of local therapy for oligo-…|PubTator3|2023-03-01|-|none| \n|PMID 35599009|EGFR   20      NSCLC|PubTator3|2022-05-20|-|none| \n \n \n \nNewest indexed: 2026-11-06 (2 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 18709663\n  biomcp search article -g EGFR -d \"lung cancer non-small cell lung carcinoma\" -k \"review EGFR tyrosine kinase inhibitor\" --year-min 2008 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

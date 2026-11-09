@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "metformin",
+      "acute coronary syndrome",
+      "infarct size"
+    ],
+    "limit": 15,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "30039db7676410d406836988885df8eddad29583f102b80bb3e901ecb14e2a8c",
+  "recorded_at": "2026-11-08T06:43:44.808302+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 438.1102999996074,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=metformin acute coronary syndrome infarct size, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 2 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 37517783|Associations of systemic oxidative stress with functional ou…|PubMed|2023-11-15|-|none| \n|PMID 26642102|AMERICAN ASSOCIATION OF CLINICAL ENDOCRINOLOGISTS, AMERICAN…|PubMed|2015-12-01|-|none| \n \n \n \nNewest indexed: 2023-07-30 (1197 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 37517783\n  biomcp search article -k \"metformin acute coronary syndrome infarct size\" --source pubmed --year-min 2015 --year-max 2023 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-2 of 2 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

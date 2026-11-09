@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "hereditary angioedema",
+      "KLKB1"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "9ee2ecb924cb557b5e2858085be07c8d4a7c03a20914fd72e251e1f8d68da5c8",
+  "recorded_at": "2026-11-08T07:39:15.460702+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 34771.02500000001,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR hereditary angioedema KLKB1, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"CRISPR hereditary angioedema KLKB1\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42902430|Abstracts of the 14th C1-inhibitor Deficiency and Angioedema…|Europe PMC|2026-10-20|-|0| \n|PMID 42854678|Genome editing for hereditary angioedema: A landmark trial a…|PubTator3, Europe PMC, PubMed|2026-10-09|-|0| \n|PMID 42940043|Gene-Editing in Respiratory Disease: From Pre-Clinical Human…|Europe PMC|2026-10-03|-|0| \n|PMID 42781958|CRISPR-Cas9 and precision editing technologies linking funct…|Europe PMC|2026-09-01|-|0| \n|PMID 42677161|Overcoming hepatic tropism: Precision engineering of lipid n…|Europe PMC|2026-08-18|-|2| \n|PMID 42504735|LONVOGURAN ZICLUMERAN: a CRISPR-CAS9-BASED GENE THERAPY FOR…|PubTator3, PubMed|2026-07-29|-|0| \n|PMID 41535643|The mRNA-Based Innovative Strategy: Progress and Challenges|PubTator3|2026-01-15|-|16| \n|PMID 41484981|Abstracts of the 14th C1-inhibitor Deficiency and Angioedema…|PubTator3|2026-01-03|-|1| \n|PMID 39445704|CRISPR-Based Therapy for Hereditary Angioedema.|PubMed|2025-01-30|-|54| \n|PMID 38142864|Clinical Progress in Hepatic Targeting for Novel Prophylacti…|PubMed|2024-04-01|-|18| \n \n \n \nNewest indexed: 2026-10-28 (11 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42902430\n  biomcp search article -k \"CRISPR hereditary angioedema KLKB1\" --year-min 2024 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

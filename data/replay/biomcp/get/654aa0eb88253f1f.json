@@ -1,0 +1,45 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "BRAF",
+    "json": true,
+    "sections": [
+      "pathways",
+      "diseases",
+      "druggability",
+      "constraint",
+      "expression",
+      "clingen",
+      "gwas",
+      "annotations",
+      "ontology",
+      "go",
+      "interactions",
+      "protein",
+      "population"
+    ]
+  },
+  "args_key": "654aa0eb88253f1f8c22ba339c3d71dfaa9b3dfd657dc9147c93f67a348ed2ee",
+  "recorded_at": "2026-11-08T07:48:15.236335+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.2194999999337597,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: gwas"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

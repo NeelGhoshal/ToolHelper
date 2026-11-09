@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "article_type": "review",
+    "keyword": [
+      "EGFR",
+      "lung cancer",
+      "osimertinib"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "0a32d043ff7df88b423dc6f30419915ef9c3e04811872f307b2a37ce848d4d09",
+  "recorded_at": "2026-11-08T06:19:58.669702+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 57350.7682999998,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR lung cancer osimertinib, type=review, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42977173|Pharmacological targeting of ANO1/TMEM16A in cancer: from ch…|PubMed|2026-11-03|-|0| \n|PMID 42906730|Antibody-drug conjugates after EGFR-TKI resistance in EGFR-m…|PubMed|2026-10-21|-|0| \n|PMID 42973948|Epigenetic regulation of cancer stem cell plasticity and rel…|PubMed|2026-10-19|-|0| \n|PMID 42840625|The methylation pattern of osimertinib resistance: prospects…|PubMed|2026-09-22|-|0| \n|PMID 42827960|Oral mucositis risk with EGFR tyrosine kinase inhibitor mono…|PubMed|2026-09-18|-|0| \n|PMID 42794929|Multiple Options, One Objective: Clearer Decisions in Resect…|PubMed|2026-09-14|-|0| \n|PMID 42926199|Clinical and molecular prognostic factors associated with ou…|PubMed|2026-09-11|-|0| \n|PMID 42782882|Long-Term Cutaneous Hyperpigmentation During Adjuvant Osimer…|PubMed|2026-09-03|-|0| \n|PMID 42775053|Health-Related Quality of Life and Cost-Effectiveness of Fir…|PubMed|2026-08-23|-|0| \n|PMID 42662466|Delivering the blueprint: Advances and challenges in mRNA th…|Europe PMC|2026-08-16|-|0| \n \n \n \nNewest indexed: 2026-11-03 (5 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42977173\n  biomcp search article -k \"EGFR lung cancer osimertinib\" --type review --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -69,6 +69,15 @@ def llm_call_warnings(trace: Trace) -> list[list[str]]:
     return out
 
 
+def tool_defs_anchor(costs: dict[str, Any] | None, trace: Trace, call: Any) -> int | None:
+    """Measured definition cost of a call's offered tools, unless a strategy rewrote any of their
+    schemas (E2): the measurement is of the catalog's own schemas, so it would overstate them."""
+    rewritten = {t.target for t in trace.transformations if t.hook == "transform_schemas"}
+    if not call.measured or rewritten & set(call.tools_offered):
+        return None
+    return measured_tool_defs(costs, trace.model, trace.catalog_version, call.tools_offered)
+
+
 class MonitorDB:
     def __init__(self, path: Path | str = ":memory:", tool_costs: dict[str, Any] | None = None) -> None:
         """`tool_costs` is a `toolhelper tokens tools` measurement; when it matches a run's model
@@ -94,8 +103,7 @@ class MonitorDB:
         components: dict[str, int] = {}
         calibrated_rows = []
         for call in trace.llm_calls:
-            tool_defs = measured_tool_defs(self.tool_costs, trace.model, trace.catalog_version,
-                                           call.tools_offered) if call.measured else None
+            tool_defs = tool_defs_anchor(self.tool_costs, trace, call)
             anchored = {"tool_defs": tool_defs} if tool_defs is not None else None
             parts = calibrate(call.est_breakdown, call.prompt_tokens if call.measured else None, anchored)
             basis = "estimated" if not call.measured else (

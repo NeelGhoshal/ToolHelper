@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "author": [
+      "Frangoul"
+    ],
+    "limit": 10
+  },
+  "args_key": "08ff7de610d6c280253565c1b2be37b3362c4689c83a9516767f0bbcac948836",
+  "recorded_at": "2026-11-09T05:37:45.923937+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1404.2406000080518,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: author=Frangoul, exclude_retracted=true, sort=relevance, ranking_mode=lexical, ranking_policy=calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \nSemantic Scholar: disabled \n \nRanking: calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41931046|Base Editing of HBG1 and HBG2 Promoters for Sickle Cell Dise…|Europe PMC|2026-04-01|-|16| \n|PMID 41931047|CRISPR-Cas12a Gene Editing of HBG1 and HBG2 Promoters to Tre…|Europe PMC|2026-04-01|-|11| \n|PMID 41931048|CRISPR-Cas12a Gene Editing of HBG1 and HBG2 Promoters to Tre…|Europe PMC|2026-04-01|-|7| \n|PMID 40857358|Improvements in health-related quality of life in patients w…|Europe PMC|2025-12-01|-|7| \n|PMID 42274009|Exa-cel in Children with Transfusion-Dependent β-Thalassemi…|Europe PMC|2026-06-11|-|2| \n|PMID 42252696|Correction of Ineffective Erythropoiesis and Normalization o…|Europe PMC|2026-06-07|-|1| \n|PMID 42721982|Mitapivat for transfusion-dependent α-thalassaemia and β-t…|Europe PMC|2026-09-01|-|0| \n|PMID 42603589|Incidence of Human Leukocyte Antigen Class I Antibodies and…|Europe PMC|2026-08-15|-|0| \n|PMID 42489104|Risks and benefits of gene therapy and transplantation in si…|Europe PMC|2026-07-23|-|0| \n|PMID 42096248|Is gene therapy a cure for β-thalassemia?|Europe PMC|2026-05-01|-|0| \n \n \n \nNewest indexed: 2026-09-11 (59 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41931046\n  biomcp search article -a Frangoul --year-min 2025 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

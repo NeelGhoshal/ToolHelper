@@ -1,0 +1,40 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "sertraline hydrochloride",
+    "json": true,
+    "sections": [
+      "label",
+      "safety",
+      "indications",
+      "approvals",
+      "targets",
+      "pgx",
+      "guidance",
+      "regulatory"
+    ]
+  },
+  "args_key": "113c22d7900f36c501381336bb8aac3096163f53d88738d007fc47db58762c87",
+  "recorded_at": "2026-11-08T05:57:02.075322+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.2672999991991674,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid drug section: pgx"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

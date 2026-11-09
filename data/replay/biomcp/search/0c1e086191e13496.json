@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "malignant melanoma"
+    ],
+    "entity": "trial",
+    "limit": 15,
+    "status": "recruiting"
+  },
+  "args_key": "0c1e086191e1349658b7663b0c62724a8296a46812858306b69b1dd0d5b0a8d1",
+  "recorded_at": "2026-11-09T08:16:23.992946+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 253.24970000656322,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 15 of 478 \n \nQuery: condition=malignant melanoma, status=recruiting \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT02775461|Pancreas Registry and Hig…|RECRUITING|-|Pancreas Cancer, Pancreatitis, Chronic Pancrea… [abridged; 6 conditions total]| \n|NCT07203391|Tebentafusp and Roginolis…|RECRUITING|1|Uveal Melanoma, Metastatic| \n|NCT05334069|Collecting Blood Samples…|RECRUITING|-|Acute Lymphoblastic Leukemia, Acute Myeloid L… [abridged; 60 conditions total]| \n|NCT07804186|Study of Adjuvant Darovas…|RECRUITING|3|Uveal Melanoma| \n|NCT04198766|Study of INBRX-106 and IN…|RECRUITING|1/2|Solid Tumor, Non-Small Cell Lung Cancer, Head… [abridged; 8 conditions total]| \n|NCT05546827|Preoperative Radiotherapy…|RECRUITING|2|Sinonasal Melanoma, Anorectal Melanoma| \n|NCT04576429|Immune Profiles Evolution…|RECRUITING|NA|Melanoma| \n|NCT07440290|DETERMINE Trial Treatment…|RECRUITING|2/3|Haematological Malignancy, Malignant Neoplasm… [abridged; 20 conditions total]| \n|NCT05859074|A Study of MQ710 With and…|RECRUITING|1|Cutaneous Squamous Cell Carcinoma, SCC - Squa… [abridged; 19 conditions total]| \n|NCT06081920|A Study of IBI363 in Subj…|RECRUITING|2|Melanoma| \n|NCT05955924|Nicotinamide Chemoprevent…|RECRUITING|3|Non-melanoma Skin Cancer, Carcinoma, Squamous… [abridged; 4 conditions total]| \n|NCT05868707|OH2 Injection in Melanoma|RECRUITING|3|Melanoma| \n|NCT06070012|Tebentafusp in HLA-A*0201…|RECRUITING|2|Uveal Melanoma| \n|NCT04793737|Precision Radiation of Im…|RECRUITING|NA|Metastatic Melanoma| \n|NCT07661966|Bright Light Therapy in P…|RECRUITING|NA|Melanoma (Skin Cancer), NSCLC (Non-small Cell Lung Cancer)| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-15 of 478 results. Use --offset 15 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

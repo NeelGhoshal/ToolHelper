@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "type 2 diabetes mellitus"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "semaglutide"
+    ],
+    "limit": 8
+  },
+  "args_key": "07ef42f8e76b13367b5d302e5e35218b6d68367c351c95d1d42d4ebf711c6a7b",
+  "recorded_at": "2026-11-08T06:58:28.423138+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 915.3605999999854,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 8 trial(s) \n \nQuery: condition=type 2 diabetes mellitus, intervention=semaglutide \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT07195994|A Clinical Trial to Exami…|RECRUITING|NA|Prediabetes / Type 2 Diabetes|Sémaglutide| \n|NCT07415954|A Research Study Comparin…|RECRUITING|2|Diabetes Mellitus, Type 2|semaglutide| \n|NCT07502508|Phase 2 Trial of Icovamen…|RECRUITING|2|Type 2 Diabetes|Sémaglutide| \n|NCT07581145|Effect of Semaglutide on…|RECRUITING|3|Foot Ulcer Due to Type 2 Diabetes Mellitus|Sémaglutide| \n|NCT07866066|Maridebart Cafraglutide V…|RECRUITING|3|Diabetes Mellitus, Type 2|semaglutide| \n|NCT07456774|A Two-armed Real-world St…|ENROLLING_BY_INVITATION|-|Type 2 Diabetes|Sémaglutide| \n|NCT02305381|Efficacy and Safety of Se…|COMPLETED|3|Diabetes, Diabetes Mellitus, Type 2|semaglutide| \n|NCT03819153|A Research Study to See H…|COMPLETED|3|Diabetes Mellitus, Type 2|semaglutide| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 8 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

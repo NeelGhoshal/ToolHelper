@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "type 2 diabetes mellitus"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "empagliflozin"
+    ],
+    "limit": 8
+  },
+  "args_key": "c094baf5c20192c2f25e81498f41827c7b68bea06e7dda1a149c319b5977d439",
+  "recorded_at": "2026-11-08T06:58:29.183158+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 756.5536000001885,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 8 trial(s) \n \nQuery: condition=type 2 diabetes mellitus, intervention=empagliflozin \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT02401880|Effects of Linagliptin in…|COMPLETED|4|Type 2 Diabetes Mellitus|empagliflozin| \n|NCT03473262|Empagliflozin-based Quadr…|COMPLETED|-|Diabetes Mellitus, Type 2|empagliflozin| \n|NCT04233801|A Study to Test How Well…|COMPLETED|3|Diabetes Mellitus, Type 2|empagliflozin| \n|NCT04639414|Combined Active Treatment…|COMPLETED|4|Type 2 Diabetes, Non-alcoholic Steatohepatitis… [abridged; 3 conditions total]|empagliflozin| \n|NCT04735042|SGLT-2 and DPP-4 Inhibiti…|COMPLETED|-|Type 2 Diabetes, Urinary Tract Infections|empagliflozin| \n|NCT07591077|SGLT2 Adjunct in T1D|COMPLETED|2/3|Type 1 Diabetes, Nephropathy, Diabetic|empagliflozin| \n|NCT04018365|A Study of Empagliflozin…|UNKNOWN|3|Insulin Resistance - Type A, Insulin Resistanc… [abridged; 4 conditions total]|empagliflozin| \n|NCT04027023|Evaluation of the Impact…|UNKNOWN|4|Diabetes Mellitus, Type 2|empagliflozin| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 8 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

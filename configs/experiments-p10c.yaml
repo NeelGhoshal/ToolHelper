@@ -1,0 +1,52 @@
+# Phase 10, third iteration (p10c, 2026-11-09): E3 dataset grounding on top of the accepted p10b
+# config (decisions/p10b@v2: E2 minimal + E6 budget 2000 + E9 with max_turns 6). Pre-registered
+# here before any p10c run.
+#
+# Why test E3 again:
+#   - E3 is the only strategy built on the Phase 7 datasets, and ABC uses none of them.
+#   - p10's E3 dataset x mode grid (one run per cell) cannot pick a mode: its best cell,
+#     ndc + rewrite (+14.6 points, -27% tokens/success), had 0 E3 actions in 16 runs, because
+#     rewrite only has targets for genes, countries and OMOP terms (NDC drug_product, RxNorm and
+#     ClinVar entities have none). Every grid difference is within the run-to-run noise p10b measured.
+#   - p10 dropped E3 in the greedy step (tokens only; one pass per step). p10b never tested it.
+#   - The WHO GHO API is back (since 2026-11-05), so country rewrites (ISO3) can now pay off.
+#
+# Design: full 2^3 factorial over E3's three modes, all six datasets, every cell on top of ABC.
+# Cell `none` is ABC alone (the baseline of this experiment). Modes of one cell merge into a
+# single spec (H + T -> E3:modes=hints+tool). All 54 tasks run (E3 would be on for every task;
+# `tool` adds a definition to each); effects are also reported on the `grounded` subset, the
+# 39 tasks whose prompt names a dataset entity (ndc 16, rxnorm 17, hgnc 16, countries 3,
+# clinvar 5, omop_eunomia 10; biomcp 13, medical 10, omop 8, cross 8). The choice uses all 54.
+# Choice rule, confirmation (3 paired repeats vs ABC), Decision and live check on fold A are
+# p10b's, unchanged.
+design: factorial
+experiment: p10c
+llm: nim-mistral
+mode: replay            # recordings first; misses fall through to live and are recorded
+max_turns: 8            # overridden by the base's limit (6) in every cell
+parallel: 4             # each pass and its servers take ~0.6-1 GB RAM; OneDrive is shut down for the run
+# Same learning groups as p10b, so E6 learns the same budget policies and ABC behaves as it did there.
+learn_from: [bench-baseline-record, p10-baseline-r1, p10-baseline-r2, p10-baseline-r3]
+
+base:
+  specs: ["E2:level=minimal", "E6:mode=budget,budget=2000", "E9"]
+  max_turns: 6
+  note: decisions/p10b@v2 (accepted 2026-11-09)
+
+factors:
+  H:
+    specs: ["E3:modes=hints"]
+    note: 'one context item per entity in the prompt, e.g. "HER2": gene ERBB2 [HGNC:3430]'
+  T:
+    specs: ["E3:modes=tool"]
+    note: local resolve_entity(text, type?) tool over the same index (adds one tool definition)
+  R:
+    specs: ["E3:modes=rewrite"]
+    note: replaces a resolved surface in arguments (gene symbols, WHO ISO3 country codes, OMOP keywords)
+
+report_subsets: [grounded]
+confirm_repeats: 3      # chosen config vs ABC, paired repeats each (the factorial cells count as repeat 1)
+live_fold: A
+order_seed: 11          # pass order is shuffled with this seed
+gate: {max_success_drop: 0.02, min_trust: 0.9}
+bootstrap: {samples: 2000, seed: 7}

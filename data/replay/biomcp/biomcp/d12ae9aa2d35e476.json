@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search drug sertraline --json",
+    "json": true
+  },
+  "args_key": "d12ae9aa2d35e476d1859250f4e3abf742dc8bdbcf1d7bbbab0fa628aecbc449",
+  "recorded_at": "2026-11-08T10:48:41.607558+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 21464.961599998787,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"region\": \"all\",\n  \"regions\": {\n    \"us\": {\n      \"region\": \"us\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 10,\n        \"total\": 10,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"count\": 10,\n      \"results\": [\n        {\n          \"name\": \"sertraline\",\n          \"drugbank_id\": \"DB01104\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Serotonin Uptake Inhibitors\",\n          \"target\": \"SLC6A4\",\n          \"match_kind\": \"active_substance\"\n        },\n        {\n          \"name\": \"sertraline hydrochloride\",\n          \"mechanism\": \"Serotonin Uptake Inhibitors\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"sertraline hcl\",\n          \"mechanism\": \"Serotonin Uptake Inhibitors\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"sertraline carbamoyl-o-glucuronide\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"sertraline ketone, (r)-\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"sertraline, (1r,4s)-\",\n          \"drug_type\": \"small-molecule\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"sertraline(1+)\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"sertraline hydrochloride, cis-(-)-\",\n          \"drug_type\": \"small-molecule\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"sertraline, cis-(-)-\",\n          \"drug_type\": \"small-molecule\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"sertraline ketone\",\n          \"match_kind\": \"broad_text\"\n        }\n      ]\n    },\n    \"eu\": {\n      \"region\": \"eu\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 0,\n        \"total\": 0,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"count\": 0,\n      \"results\": []\n    },\n    \"who\": {\n      \"region\": \"who\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 0,\n        \"total\": 0,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"count\": 0,\n      \"results\": []\n    }\n  },\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get drug sertraline\",\n      \"biomcp list drug\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

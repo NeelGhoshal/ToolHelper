@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "article_type": "review",
+    "gene": "EGFR",
+    "keyword": [
+      "EGFR mutant lung adenocarcinoma treatment"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "8dc64c7b6771fba080e2de9e612e2197e056e52cc83acf73c33b228637416099",
+  "recorded_at": "2026-11-09T04:41:59.123243+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 981.6087000072002,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, keyword=EGFR mutant lung adenocarcinoma treatment, type=review, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 17237348|Nitric oxide and peroxynitrite in health and disease.|Europe PMC|2007-01-01|-|4381| \n|PMID 22000009|Tumor metastasis: molecular insights and evolving paradigms.|Europe PMC|2011-10-01|-|3126| \n|PMID 20029421|Integrins in cancer: biological implications and therapeutic…|Europe PMC|2010-01-01|-|2841| \n|PMID 33634751|Guidelines for the use and interpretation of assays for moni…|Europe PMC|2021-01-01|-|2511| \n|PMID 28187288|Emerging Biological Principles of Metastasis.|Europe PMC|2017-02-01|-|2499| \n|PMID 18452692|Non-small cell lung cancer: epidemiology, risk factors, trea…|Europe PMC|2008-05-01|-|2326| \n|PMID 32273439|Metabolic reprogramming and cancer progression.|Europe PMC|2020-04-01|-|2302| \n|PMID 28802037|The PI3K Pathway in Human Disease.|Europe PMC|2017-08-01|-|2285| \n|PMID 21620466|Pancreatic cancer.|Europe PMC|2011-05-26|-|2191| \n|PMID 30849371|VEGF in Signaling and Disease: Beyond Discovery and Developm…|Europe PMC|2019-03-01|-|2174| \n \n \n \nNewest indexed: 2021-02-27 (2081 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 17237348\n  biomcp search article -g EGFR -k \"EGFR mutant lung adenocarcinoma treatment\" --type review --year-min 2007 --year-max 2021 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

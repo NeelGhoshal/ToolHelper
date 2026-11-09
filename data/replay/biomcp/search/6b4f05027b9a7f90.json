@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "type 2 diabetes"
+    ],
+    "entity": "trial",
+    "limit": 10
+  },
+  "args_key": "6b4f05027b9a7f9057598accd8ef1d8708c5d20017000457f961434975482894",
+  "recorded_at": "2026-11-08T07:32:56.522131+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 246.95410000094853,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 12059 \n \nQuery: condition=type 2 diabetes \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT07847294|The Effectiveness of an O…|RECRUITING|NA|Diabete Type 2, Diabetes in Adults| \n|NCT06315361|DIAbetes and NAFLD|ACTIVE_NOT_RECRUITING|-|NAFLD, Diabetes, NASH, Fibrosis, Liver, Cirrhosis, Liver, Liver Cancer| \n|NCT00362518|Vitamins C and Vitamin E…|COMPLETED|3|Diabetes| \n|NCT01492218|Observational Study With…|COMPLETED|-|Diabetes, Diabetes Mellitus, Type 1, Diabetes Mellitus, Type 2| \n|NCT01690169|Investigation on Safety,…|COMPLETED|1|Diabetes, Diabetes Mellitus, Type 2, Healthy| \n|NCT02401880|Effects of Linagliptin in…|COMPLETED|4|Type 2 Diabetes Mellitus| \n|NCT03473262|Empagliflozin-based Quadr…|COMPLETED|-|Diabetes Mellitus, Type 2| \n|NCT04660305|AT278 and NovoRapid® in…|COMPLETED|1|Diabetes Mellitus, Type 1| \n|NCT02161094|Diabetes Incentive Perfor…|UNKNOWN|NA|Type 2 Diabetes| \n|NCT05108350|A Study to Assess the Bio…|UNKNOWN|1|Type II Diabetes| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-10 of 12059 results. Use --offset 10 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

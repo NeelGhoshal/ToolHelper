@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "Glycated hemoglobin",
+    "max_results": 10,
+    "omop_field": "measurement_concept_id",
+    "omop_table": "measurement"
+  },
+  "args_key": "7b6467a5af591ddfda6a31b71fe6c5164b87118dacd2105bbde2eb361c0556fc",
+  "recorded_at": "2026-11-08T06:29:10.119190+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 589.6140999993804,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 4036846,\n      \"code\": \"117346004\",\n      \"name\": \"Glucose measurement estimated from glycated hemoglobin\",\n      \"class\": \"Procedure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4036846\"\n    },\n    {\n      \"concept_id\": 3005131,\n      \"code\": \"27353-2\",\n      \"name\": \"Glucose mean value [Mass/volume] in Blood Estimated from glycated hemoglobin\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3005131\"\n    },\n    {\n      \"concept_id\": 3039720,\n      \"code\": \"53553-4\",\n      \"name\": \"Glucose mean value [Moles/volume] in Blood Estimated from glycated hemoglobin\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3039720\"\n    },\n    {\n      \"concept_id\": 45765893,\n      \"code\": \"702945004\",\n      \"name\": \"Estimation from glycated hemoglobin technique\",\n      \"class\": \"Qualifier Value\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/45765893\"\n    },\n    {\n      \"concept_id\": 40654761,\n      \"code\": \"LG48562-9\",\n      \"name\": \"Estimated average glucose|Moment in time|Blood|Estimated from glycated hemoglobin\",\n      \"class\": \"LOINC Group\",\n      \"concept\": \"C\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/40654761\"\n    },\n    {\n      \"concept_id\": 37118746,\n      \"code\": \"733829007\",\n      \"name\": \"Glycated hemoglobin\",\n      \"class\": \"Substance\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/37118746\"\n    },\n    {\n      \"concept_id\": 45619069,\n      \"code\": \"D006442\",\n      \"name\": \"Glycated Hemoglobin\",\n      \"class\": \"Main Heading\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"MeSH\",\n      \"url\": \"https://omophub.com/concepts/45619069\"\n    },\n    {\n      \"concept_id\": 37532705,\n      \"code\": \"C64849-HBA1C\",\n      \"name\": \"Hemoglobin A1C\",\n      \"class\": \"Procedure\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"CDISC\",\n      \"url\": \"https://omophub.com/concepts/37532705\"\n    },\n    {\n      \"concept_id\": 37116827,\n      \"code\": \"733830002\",\n      \"name\": \"Glycated hemoglobin-A1c\",\n      \"class\": \"Substance\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/37116827\"\n    },\n    {\n      \"concept_id\": 19241034,\n      \"code\": \"C024240\",\n      \"name\": \"glycated hemoglobin C\",\n      \"class\": \"Suppl Concept\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"MeSH\",\n      \"url\": \"https://omophub.com/concepts/19241034\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"Glycated hemoglobin\",\n    \"omop_table\": \"measurement\",\n    \"omop_field\": \"measurement_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

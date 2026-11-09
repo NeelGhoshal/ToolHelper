@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "TP53"
+    ],
+    "limit": 10,
+    "disease": [
+      "Li-Fraumeni syndrome",
+      "cancer"
+    ]
+  },
+  "args_key": "be20f3fe47298cac9f4927d7d8c2becaf5485f82480d0e6a7dea3367c16f3d6e",
+  "recorded_at": "2026-11-08T07:09:22.569347+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2938.5629999997036,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: disease=Li-Fraumeni syndrome cancer, keyword=TP53, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --disease \"Li-Fraumeni syndrome cancer\" --keyword TP53 --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 38348940|Health-related quality of life and fear of progression in in…|Europe PMC|2024-02-13|hybrid 0.25|7| \n|PMID 35033608|Characteristics of TP53 germline variants and their correlat…|PubTator3|2022-07-01|hybrid 0.2 + title 1/2|none| \n|PMID 34670578|Unusual course of disease and genetic profile in Li-Fraumeni…|Europe PMC|2021-10-20|hybrid 0.18|4| \n|PMID 39017822|Case series of Li-Fraumeni syndrome: carcinogenic mechanisms…|PubTator3|2024-07-17|hybrid 0.175 + title 1/2|none| \n|PMID 35027859|Overview of the Clinical Features of Li-Fraumeni Syndrome an…|Europe PMC|2021-10-25|hybrid 0.172|5| \n|PMID 36219266|A novel germline mutation of TP53 with breast cancer diagnos…|PubTator3|2022-10-11|hybrid 0.15 + title 1/2|none| \n|PMID 40958859|A profile of lung cancer in the young population with a high…|Europe PMC|2025-09-01|hybrid 0.142|1| \n|PMID 33880204|Multiple meningiomas arising within the same hemisphere asso…|PubTator3|2021-03-17|hybrid 0.075|none| \n|PMID 42960272|Li-Fraumeni syndrome presenting with early-onset eyelid seba…|PubMed|2026-10-16|hybrid 0.075|0| \n|PMID 42928139|Characterisation of a novel p53 mutation (p53(N263Tfs*7)) as…|PubMed|2026-07-29|hybrid 0.05|0| \n \n \n \nNewest indexed: 2026-10-30 (9 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 38348940\n  biomcp search article -d \"Li-Fraumeni syndrome cancer\" -k TP53 --year-min 2021 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

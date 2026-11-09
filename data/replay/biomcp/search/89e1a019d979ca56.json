@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "EGFR-mutant non-small cell lung cancer"
+    ],
+    "intervention": [
+      "osimertinib"
+    ],
+    "limit": 10
+  },
+  "args_key": "89e1a019d979ca5689415b72f545b072a24a7424962b7e13b3449a1ef5301957",
+  "recorded_at": "2026-11-08T06:17:03.790225+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6273.038700000143,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 10 trial(s) \n \nQuery: condition=EGFR-mutant non-small cell lung cancer, intervention=osimertinib \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT04324164|Survival Outcome of EGFR-…|RECRUITING|-|Non-small Cell Lung Cancer|osimertinib| \n|NCT04486833|Quaratusugene Ozeplasmid…|RECRUITING|1/2|Carcinoma, Non-Small Cell Lung|osimertinib| \n|NCT07837739|Adjuvant EGFR-TKI Therapy…|RECRUITING|-|Non-Small Cell Lung Cancer|osimertinib| \n|NCT03909334|Study of Osimertinib With…|ACTIVE_NOT_RECRUITING|2|Non Small Cell Lung Cancer, EGFR Gene Mutation… [abridged; 4 conditions total]|osimertinib| \n|NCT07491211|Osimertinib Combined With…|ACTIVE_NOT_RECRUITING|-|NSCLC (Advanced Non-small Cell Lung Cancer), B… [abridged; 4 conditions total]|osimertinib| \n|NCT06557096|CSF CTC-Capture-Guided EG…|NOT_YET_RECRUITING|EARLY_PHASE1|Non Small Cell Lung Cancer, Circulating Tumor… [abridged; 3 conditions total]|osimertinib| \n|NCT03450330|Assessing an Oral Janus K…|COMPLETED|1/2|Nonsmall Cell Lung Cancer|osimertinib| \n|NCT07267247|Cancer Therapy-Related Ca…|COMPLETED|-|Non-Small Cell Lung Cancer (MeSH Term: Carcino… [abridged; 4 conditions total]|osimertinib| \n|NCT04148898|Osimertinib With or Witho…|UNKNOWN|2|Leptomeningeal Metastasis, Non-small Cell Lung Cancer, EGFR Activating Mutation|osimertinib| \n|NCT04829019|Neurocognition in NSCLC P…|UNKNOWN|2|Neurocognitive|osimertinib| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

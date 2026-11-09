@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "gene": "EGFR",
+    "limit": 10
+  },
+  "args_key": "cbda21d969c0d96cd7e80127f9259a295fa86ac3e75357f80df566657ebbc8f2",
+  "recorded_at": "2026-11-08T06:15:20.275036+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 806.647399999747,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Variant Search Results \n \nFound: 10 variant(s) \nQuery: gene=EGFR \n \n \n## Filter evaluation \n \ngene: evaluated \n \n \n \n| ID | Build | Gene | Transcript | Coding | Protein | Legacy Name | Significance | ClinVar Stars | gnomAD AF | REVEL | GERP | \n|---|---|---|---|---|---|---|---|---|---|---|---| \n| chr7:g.55223568G>C | GRCh37 | EGFR | NM_005228.3 | c.935G>C | p.Gly312Ala | EGFR G312A | - | none | 0.00000397886 | 0.258 | 4.65 | \n| chr7:g.55238187C>T | GRCh37 | EGFR | NM_201284.1 | c.2068C>T | p.His690Tyr | EGFR H690Y | - | none | 0.00000397858 | 0.16 | -3.26 | \n| chr7:g.55240719C>G | GRCh37 | EGFR | NM_005228.3 | c.1963C>G | p.Leu655Val | EGFR L655V | - | none | 0.00000798002 | 0.235 | 1.35 | \n| chr7:g.55240813G>A | GRCh37 | EGFR | NM_005228.3 | c.2057G>A | p.Arg686Lys | EGFR R686K | - | none | 0.0000040663 | 0.242 | 5.96 | \n| chr7:g.55242473G>A | GRCh37 | EGFR | NM_005228.3 | c.2243G>A | p.Arg748Lys | EGFR R748K | - | none | 0.00000397627 | 0.43 | 5.45 | \n| chr7:g.55266460A>T | GRCh37 | EGFR | NM_005228.3 | c.2752A>T | p.Ile918Phe | EGFR I918F | - | none | 0.0000119292 | 0.632 | 5.13 | \n| chr7:g.55087014T>G | GRCh37 | EGFR | NM_005228.3 | c.44T>G | p.Leu15Arg | EGFR L15R | - | none | - | 0.628 | 4.34 | \n| chr7:g.55087025T>C | GRCh37 | EGFR | NM_005228.3 | c.55T>C | p.Cys19Arg | EGFR C19R | - | none | - | 0.139 | -0.245 | \n| chr7:g.55087036T>A | GRCh37 | EGFR | NM_005228.3 | c.66T>A | p.Ser22Arg | EGFR S22R | - | none | - | 0.256 | -3.05 | \n| chr7:g.55087056A>T | GRCh37 | EGFR | NM_005228.3 | c.86A>T | p.Lys29Ile | EGFR K29I | - | none | - | 0.351 | 0.567 | \n \n \nUse `get variant <id>` for details. \nSignificance is the most severe ClinVar RCV classification in MyVariant.info's cached copy; run `get variant <id> clinvar` for the current NCBI ClinVar record-level classification. \nFilters: -g <gene>, --hgvsp <protein>, --significance <value>, --max-frequency <0-1>, --min-cadd <score>, --consequence <term>, --review-status <stars>, --population <pop>, --revel-min <score>, --gerp-min <score>, --tumor-site <site>, --condition <name>, --impact <level>, --lof, --has <field>, --missing <field>, --therapy <name> \n \n \nSee also:\n  biomcp get variant \"chr7:g.55223568G>C\"\n  biomcp get gene EGFR \n \n \n \nShowing 1-10 of 9757 results. Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

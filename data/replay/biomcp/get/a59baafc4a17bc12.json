@@ -1,0 +1,44 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "TP53",
+    "json": true,
+    "sections": [
+      "diseases",
+      "ontology",
+      "clingen",
+      "gencc",
+      "disgenet",
+      "gwas",
+      "phenotypes",
+      "druggability",
+      "constraint",
+      "pathways",
+      "interactions",
+      "expression"
+    ]
+  },
+  "args_key": "a59baafc4a17bc1232e709022210e624ec88f0352c1dca465deb3214f1e294ef",
+  "recorded_at": "2026-11-09T06:31:16.019491+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.1572000075830147,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: gwas"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

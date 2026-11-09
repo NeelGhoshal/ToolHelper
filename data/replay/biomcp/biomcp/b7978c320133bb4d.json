@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "rxnorm search metformin --json 2>/dev/null || rxnorm metformin --json 2>/dev/null || biomcp list rxnorm 2>/dev/null || help rxnorm 2>/dev/null || rxnorm --help 2>/dev/null",
+    "json": true
+  },
+  "args_key": "b7978c320133bb4dc9bf7b7ebcf60661a698f11787ab6a21b8a99dde9814e643",
+  "recorded_at": "2026-11-08T05:31:05.060009+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 10.581699999875127,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: BioMCP allows read-only commands only. Allowed families are search/get/helpers/list/version/health/batch/enrich/discover/skill plus MCP-safe study commands (`study list`, `study download --list`, `study top-mutated`, `study query`, `study filter`, `study cohort`, `study survival`, `study compare`, `study co-occurrence`)."
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

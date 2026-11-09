@@ -150,3 +150,57 @@ def curate(store: ContextStore, name: str, approved_by: str) -> str:
     store.apply(f"approve {name}", [Revise(name=thing.name, data=data, expected_version=thing.version)])
     new = store.get(name)
     return f"{new.name}@v{new.version} accepted by {approved_by}"
+
+
+def write_factorial_decision(store: ContextStore, orch) -> str:
+    """The Decision for a fractional factorial (p10b): each factor's effect with its CIs and
+    mediators, the aliased interactions, the confirmation against the baseline, and RunSummary
+    pins for every cell and confirmation group as evidence."""
+    from toolhelper.experiments.factorial import describe
+
+    cfg, st = orch.cfg, orch.state
+    experiment = store.get(f"experiments/{cfg.experiment}")
+    exp_wref = f"{experiment.name}@v{experiment.version}"
+    chosen = st.get("chosen", {})
+    groups = {orch.group(c.name): f"cell {c.name}" for c in orch.cells}
+    for arm, names in st.get("confirm", {}).get("arms", {}).items():
+        groups.update({g: arm for g in names})
+    pins = write_summaries(store, exp_wref, orch, {g: a for g, a in groups.items() if orch.arm([g])[0]})
+
+    def label(f: str) -> str:
+        factor = cfg.factors[f]
+        return f"{f} ({' + '.join(factor.specs)}{f', max_turns {factor.max_turns}' if factor.max_turns else ''})"
+
+    decisions, rejected = [], []
+    for f, e in st.get("effects", {}).items():
+        on = f in chosen.get("factors", [])
+        decisions.append(f"{label(f)} {'on' if on else 'off'}: {describe(e)}")
+        if not on:
+            rejected.append({"config": f, "why": chosen.get("reasons", {}).get(f, ""), "numbers": describe(e)})
+    interactions = [f"{g}: {describe(e, mediators=False)}" for g, e in st.get("interactions", {}).items()]
+    per_server = {k: [f"{f}: {describe(e, mediators=False)}" for f, e in effs.items()]
+                  for k, effs in st.get("effects_by_kind", {}).items()}
+    per_subset = {k: [f"{f}: {describe(e, mediators=False)}" for f, e in effs.items()]
+                  for k, effs in st.get("effects_by_subset", {}).items()}
+    base = (" + ".join(cfg.base.specs) + (f", max_turns {cfg.base.max_turns}" if cfg.base.max_turns else "")) or None
+    confirm = st.get("confirm", {})
+    design = "fractional factorial" if cfg.generators else "factorial"
+    data = {"title": f"Phase 10 {cfg.experiment}: chosen efficiency config ({design}"
+                     f"{' on top of ' + base if base else ''})",
+            "objective": "minimize tokens per successful task, subject to success >= baseline - 2 points and trust >= 0.9",
+            "chosen_config_json": canonical_json({
+                "factors": chosen.get("factors", []), "specs": chosen.get("specs", []),
+                "max_turns": chosen.get("max_turns"), "confirmation": confirm.get("vs_baseline"),
+                "confirmation_summary": confirm.get("summary"), "gate": confirm.get("gate"),
+                "decisions": decisions, "interactions": interactions, "per_server": per_server,
+                **({"per_subset": per_subset} if per_subset else {})}),
+            "constraints_json": canonical_json({**cfg.gate, "design": {"factors": {f: label(f) for f in cfg.factors},
+                                                                       "generators": cfg.generators,
+                                                                       **({"base": base} if base else {})},
+                                                "choice": "on when the tokens-per-success CI lies below 0, success "
+                                                          "holds within the gate and trust >= min_trust",
+                                                "folds": "two-fold cross-fitting for learned strategies"}),
+            "evidence": sorted(pins.values()), "rejected_json": canonical_json(rejected), "status": "proposed"}
+    name = f"decisions/{cfg.experiment}"
+    store.apply(f"decision {cfg.experiment}", [_upsert(store, name, "Decision", data)])
+    return f"{name}@v{store.get(name).version}"

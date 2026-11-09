@@ -15,6 +15,7 @@ from __future__ import annotations
 import time
 from contextlib import AsyncExitStack
 from datetime import UTC, datetime
+from pathlib import Path
 from typing import Any, Literal
 
 import anyio
@@ -28,6 +29,7 @@ from toolhelper.llm.base import ToolSpec
 from toolhelper.mcp.canonical import namespaced, tool_hash
 from toolhelper.mcp.recorder import Recording, RecordingStore, args_key
 from toolhelper.mcp.replay_server import REPLAY_META, REPLAY_MISS, build_replay_server
+from toolhelper.mcp.throttle import SharedThrottle
 
 Mode = Literal["live", "record", "replay"]
 
@@ -82,9 +84,11 @@ def content_text(block: dict[str, Any]) -> str:
 class Hub:
     def __init__(self, servers: dict[str, ServerConfig], *, mode: Mode = "live",
                  store: RecordingStore | None = None, catalog: Any = None,
-                 live_fallback: bool = True, live_targets: dict[str, Any] | None = None) -> None:
+                 live_fallback: bool = True, live_targets: dict[str, Any] | None = None,
+                 throttle_dir: Path | None = None) -> None:
         """`catalog` is a CatalogSnapshot (required for replay). `live_targets` overrides
-        what a server's live connection points at (tests use in-process servers)."""
+        what a server's live connection points at (tests use in-process servers).
+        `throttle_dir` holds the shared throttle files (default: the temp directory)."""
         if mode in ("record", "replay") and store is None:
             raise ValueError(f"mode {mode!r} needs a recording store")
         if mode == "replay" and catalog is None:
@@ -102,8 +106,9 @@ class Hub:
         self._live: dict[str, Client] = {}
         self._live_info: dict[str, dict[str, Any]] = {}
         self._live_lock = anyio.Lock()
-        self._rate: dict[str, tuple[anyio.Lock, list[float]]] = {
-            name: (anyio.Lock(), [0.0]) for name in servers}
+        # Live calls per server are spaced by min_interval_s across all processes (parallel passes).
+        self._rate: dict[str, tuple[anyio.Lock, SharedThrottle]] = {
+            name: (anyio.Lock(), SharedThrottle(name, cfg.min_interval_s, throttle_dir)) for name, cfg in servers.items()}
         self._stack: AsyncExitStack | None = None
         self._closing = anyio.Event()
 
@@ -228,15 +233,11 @@ class Hub:
         )
 
     async def _throttle(self, server: str) -> None:
-        interval = self.servers[server].min_interval_s
-        if interval <= 0:
+        if self.servers[server].min_interval_s <= 0:
             return
-        lock, last = self._rate[server]
-        async with lock:
-            wait = last[0] + interval - time.monotonic()
-            if wait > 0:
-                await anyio.sleep(wait)
-            last[0] = time.monotonic()
+        lock, shared = self._rate[server]
+        async with lock:  # one waiter per process; the shared throttle orders the processes
+            await anyio.to_thread.run_sync(shared.wait)
 
     def _save(self, tool: HubTool, result: ToolResult) -> None:
         cfg = self.servers[tool.server]

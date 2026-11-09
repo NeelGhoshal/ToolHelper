@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2024",
+    "entity": "article",
+    "json": true,
+    "limit": 10,
+    "sort": "date",
+    "source": "pubmed",
+    "keyword": [
+      "HER2-low breast cancer trastuzumab deruxtecan DESTINY-Breast04 DESTINY-Breast06 overall survival"
+    ]
+  },
+  "args_key": "d7d6a313c5715f71e511f21d9f0a8fb63dbb957f045229480899ec5ecf8531e8",
+  "recorded_at": "2026-11-08T08:43:42.816384+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 462.79620000132127,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=HER2-low breast cancer trastuzumab deruxtecan DESTINY-Breast04 DESTINY-Breast06 overall survival, date_from=2024, exclude_retracted=true, sort=date, source=pubmed\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": false,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubmed\"\n    ],\n    \"enrichment_sources\": []\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 5,\n    \"total\": 7,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 5,\n  \"results\": [\n    {\n      \"pmid\": \"42830854\",\n      \"title\": \"HER2-Targeted Antibody-Drug Conjugates in Advanced HER2-Low Breast Cancer: Mechanisms, Clinical Efficacy, and Resistance Strategies.\",\n      \"journal\": \"Cancer management and research\",\n      \"date\": \"2026-09-30\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42204863\",\n      \"title\": \"Difference in Cost-Effectiveness of Trastuzumab Deruxtecan in First-Line Versus Later-Line Settings for HER2-Low Metastatic Breast Cancer.\",\n      \"journal\": \"The Annals of pharmacotherapy\",\n      \"date\": \"2026-05-27\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41595172\",\n      \"title\": \"Prevalence and Outcomes of HER2-Low Versus HER2-0 Status in Patients with Metastatic Breast Cancer.\",\n      \"journal\": \"Cancers\",\n      \"date\": \"2026-01-14\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41630133\",\n      \"title\": \"Antibody-Drug Conjugates (ADCs) for Breast Cancer Therapeutic Landscape: Concept and Mechanisms of Action.\",\n      \"journal\": \"Hematology/oncology and stem cell therapy\",\n      \"date\": \"2025-10-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"40756959\",\n      \"title\": \"Trastuzumab deruxtecan in patients with bone metastases from HR+/HER2-low breast cancer: efficacy enhanced by denosumab.\",\n      \"journal\": \"Translational breast cancer research : a journal focusing on translational research in breast cancer\",\n      \"date\": \"2025-05-06\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42830854\",\n      \"biomcp list article\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

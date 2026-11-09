@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CYP2C19 clopidogrel CPIC 2022 guideline recommendation prasugrel ticagrelor poor metabolizer"
+    ],
+    "limit": 10
+  },
+  "args_key": "7d759f4b18a1f2fb5a1afb437cce55f7c307f7f9e98c768b9a23cc9d6dd2b081",
+  "recorded_at": "2026-11-09T04:45:17.470632+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3370.0889000028837,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CYP2C19 clopidogrel CPIC 2022 guideline recommendation prasugrel ticagrelor poor metabolizer, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CYP2C19 clopidogrel CPIC 2022 guideline recommendation prasugrel ticagrelor poor metabolizer\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41338248|CYP2C19 genotype testing for clopidogrel: A guideline develo…|PubTator3, Europe PMC|2025-12-03|hybrid 0.35 + title 3/10|18| \n|PMID 40612749|CYP2C19 variability and clinical outcomes of clopidogrel, pr…|Europe PMC|2025-06-19|hybrid 0.221 + title 2/10|7| \n|PMID 39822142|CYP2C19  Genotype-Guided Antiplatelet Therapy and Clinical O…|PubTator3, Europe PMC|2025-01-01|hybrid 0.191 + title 1/10|7| \n|PMID 35647265|Ticagrelor is more effective than clopidogrel in carrier of…|PubTator3|2022-01-01|hybrid 0.17 + title 3/10|none| \n|PMID 41390953|Prognostic Implication of CYP2C19 Genotype According to Clin…|Europe PMC|2025-12-14|hybrid 0.154 + title 1/10|3| \n|PMID 28520346|Clopidogrel Therapy and CYP2C19 Genotype|PubTator3, PubMed|2022-12-01|hybrid 0.15 + title 2/10|0| \n|PMID 39360670|Real-world evaluation of CYP2C19 guided antiplatelet therapy…|Europe PMC|2024-10-03|hybrid 0.139 + title 1/10|4| \n|PMID 41660507|Addressing genetic diversity and health inequities: RELIVAF'…|Europe PMC|2026-01-22|hybrid 0.125|2| \n|PMID 42115787|Limited Visibility and Perception of the Clinical Relevance…|Europe PMC|2026-05-01|hybrid 0.12 + title 1/10|0| \n|PMID 42807560|Routine CYP2C19 Genotyping, Antiplatelet Prescription Change…|Europe PMC|2026-09-28|hybrid 0.11 + title 1/10|0| \n \n \n \nNewest indexed: 2026-09-30 (40 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41338248\n  biomcp search article -k \"CYP2C19 clopidogrel CPIC 2022 guideline recommendation prasugrel ticagrelor poor metabolizer\" --year-min 2022 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

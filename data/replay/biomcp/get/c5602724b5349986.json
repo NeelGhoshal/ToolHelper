@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "42994815",
+    "json": true
+  },
+  "args_key": "c5602724b5349986ffcef74684b4a34b3ad7bf664d09d165ad48a6ad2b6d1601",
+  "recorded_at": "2026-11-08T07:38:09.104778+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 869.1317000011622,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42994815/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42994815 tldr\",\n      \"biomcp article references 42994815 --limit 3\",\n      \"biomcp article citations 42994815 --limit 3\",\n      \"biomcp article recommendations 42994815 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ]\n  },\n  \"author_completeness\": \"source_limited\",\n  \"author_count\": 39,\n  \"author_source\": \"europepmc\",\n  \"authors\": [\n    \"Mizoguchi T\",\n    \"DeNizio JE\",\n    \"Chadwick AC\",\n    \"Mazzola AM\",\n    \"Brown MP\",\n    \"Mishra S\",\n    \"Damle M\",\n    \"Matsumoto Y\",\n    \"Neang V\",\n    \"Garrity R\",\n    \"Mantri M\",\n    \"Olorife JO\",\n    \"Hsu HT\",\n    \"Peshdary V\",\n    \"Shabani E\",\n    \"Ganey JD\",\n    \"Santos R\",\n    \"Federico A\",\n    \"Garcia SP\",\n    \"Hao P\",\n    \"Wu Y\",\n    \"Glass Z\",\n    \"Kasiewicz LN\",\n    \"Summers C\",\n    \"Sanjeev A\",\n    \"Wang K\",\n    \"Briscoe SD\",\n    \"Rosenson RS\",\n    \"Cheng CJ\",\n    \"Rohde E\",\n    \"Biedenkapp J\",\n    \"Farutin V\",\n    \"Bellinger AM\",\n    \"Musunuru K\",\n    \"Kathiresan S\",\n    \"Lister T\",\n    \"Rajeev KG\",\n    \"Lee RG\",\n    \"Khera AV.\"\n  ],\n  \"citation_count\": 0,\n  \"date\": \"2026-11-06\",\n  \"doi\": \"10.1038/s41586-026-11233-9\",\n  \"journal\": \"Nature\",\n  \"open_access\": false,\n  \"pmid\": \"42994815\",\n  \"publication_type\": \"im\",\n  \"pubtator_fallback\": true,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"In Vivo CRISPR Base Editing of ANGPTL3 for Durable Lipid Lowering.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

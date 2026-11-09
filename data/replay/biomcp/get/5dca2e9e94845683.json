@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "EGFR",
+    "sections": [
+      "diseases",
+      "clinvar",
+      "druggability",
+      "pathways"
+    ]
+  },
+  "args_key": "5dca2e9e94845683bbbcf1f9e643e50ebf51d76b69628f1b3dc9c790f36166f0",
+  "recorded_at": "2026-11-08T15:32:45.433589+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 0.9300999954575673,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: clinvar"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

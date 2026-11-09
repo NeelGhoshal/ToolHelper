@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "pembrolizumab"
+    ],
+    "limit": 25,
+    "status": "recruiting"
+  },
+  "args_key": "3231197c8d124d9eb1e2637cf0aacb9b344780bd1ba1f24de4e2973b3520eea2",
+  "recorded_at": "2026-11-08T08:19:57.591313+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 569.2536999995355,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 25 trial(s) \n \nQuery: condition=melanoma, intervention=pembrolizumab, status=recruiting \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT04198766|Study of INBRX-106 and IN…|RECRUITING|1/2|Solid Tumor, Non-Small Cell Lung Cancer, Head… [abridged; 8 conditions total]|pembrolizumab| \n|NCT05859074|A Study of MQ710 With and…|RECRUITING|1|Cutaneous Squamous Cell Carcinoma, SCC - Squa… [abridged; 19 conditions total]|pembrolizumab| \n|NCT07422779|Immunotherapy Efficacy an…|RECRUITING|NA|Metastatic Melanoma, Skin Cancer|pembrolizumab| \n|NCT05970497|A Study Assessing KB707 f…|RECRUITING|1/2|Cancer, Melanoma Stage III, Melanoma Stage IV, Cutaneous Melanoma|pembrolizumab| \n|NCT06624644|A Trial of LNS8801 With o…|RECRUITING|2/3|Melanoma (Skin Cancer), Melanoma Stage IIIB-IV… [abridged; 4 conditions total]|pembrolizumab| \n|NCT04513028|Beta Glucan's Effect on P…|RECRUITING|NA|Melanoma Stage III, Melanoma Stage IV|pembrolizumab| \n|NCT04855435|Safety and Preliminary Ef…|RECRUITING|1|Advanced Solid Tumor, Uveal Melanoma, Metastatic, Cutaneous Melanoma|pembrolizumab| \n|NCT04787042|Phase 1a and Phase 2 Stud…|RECRUITING|1/2|Cancer, Solid Tumor, Melanoma, Renal Cell Carc… [abridged; 9 conditions total]|pembrolizumab| \n|NCT07349303|Neoadjuvant Pembrolizumab…|RECRUITING|2|Melanoma (Skin Cancer)|pembrolizumab| \n|NCT05824975|A Study to Evaluate the S…|RECRUITING|1/2|Advanced Solid Tumor, Metastatic Solid Tumor,… [abridged; 9 conditions total]|pembrolizumab| \n|NCT07092670|MELAFERT: Impact of Adjuv…|RECRUITING|-|Melanoma, Fertility|pembrolizumab| \n|NCT05155033|Phase II Trial of Combina…|RECRUITING|2|Metastatic Melanoma, Advanced Locoregional Mel… [abridged; 4 conditions total]|pembrolizumab| \n|NCT03829254|A Safety, Pharmacokinetic…|RECRUITING|1/2|Advanced Cancer, Lymphoma, Solid Tumor, Melanoma|pembrolizumab| \n|NCT06265025|GM103 Intratumoral Inject…|RECRUITING|1/2|Head and Neck Cancer, Malignant Melanoma, Colo… [abridged; 6 conditions total]|pembrolizumab| \n|NCT06242470|A Study of MGC026 in Part…|RECRUITING|1|Advanced Solid Tumor, Advanced Cancer, Metast… [abridged; 22 conditions total]|pembrolizumab| \n|NCT06743126|SUPRAME-ACTengine® IMA20…|RECRUITING|3|Melanoma, Cutaneous Malignant, Mucosal Melanoma|pembrolizumab| \n|NCT07410676|EBNK-001 Allogeneic NK Ce…|RECRUITING|1/2|Cancer, Sarcoma, Leukaemia, Breast Cancer (Lo… [abridged; 15 conditions total]|pembrolizumab| \n|NCT03842943|Neoadjuvant Combination I…|RECRUITING|2|Cutaneous Melanoma|pembrolizumab| \n|NCT06697301|Safety and Efficacy of EI…|RECRUITING|2/3|Advanced Melanoma|pembrolizumab| \n|NCT02896335|Palbociclib and Pembroliz…|RECRUITING|2|Metastatic Malignant Neoplasm to Brain, Recurr… [abridged; 3 conditions total]|pembrolizumab| \n|NCT04697576|Intralesional Influenza V…|RECRUITING|1|Clinical Stage I Cutaneous Melanoma AJCC v8, C… [abridged; 9 conditions total]|pembrolizumab| \n|NCT05727904|Study to Investigate Lifi…|RECRUITING|3|Metastatic Melanoma, Unresectable Melanoma, Melanoma|pembrolizumab| \n|NCT06784778|Observational Study of Pa…|RECRUITING|-|Melanoma Metastatic, Melanoma, Skin, Melanoma Stage III or IV, Melanoma Advanced|pembrolizumab| \n|NCT04114136|Anti-PD-1 mAb Plus Metabo…|RECRUITING|2|Melanoma, NSCLC, Hepatocellular Carcinoma, Uro… [abridged; 8 conditions total]|pembrolizumab| \n|NCT06047379|Safety and Efficacy of NE…|RECRUITING|1/2|Diffuse Astrocytoma, IDH-Mutant, Glioblastoma… [abridged; 21 conditions total]|pembrolizumab| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 25 results (total unknown). Use --offset 25 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

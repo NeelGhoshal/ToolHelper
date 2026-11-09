@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "limit": 10,
+    "sort": "citations",
+    "keyword": [
+      "BRAF V600E melanoma targeted therapy"
+    ]
+  },
+  "args_key": "14986878e1914efc52534bda00bd3cb96b6643a2f48e45e41bb2e484eafdeb1c",
+  "recorded_at": "2026-11-08T08:05:00.750596+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2528.3443000007537,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E melanoma targeted therapy, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 26462967|2015 American Thyroid Association Management Guidelines for…|Europe PMC|2016-01-01|-|10412| \n|PMID 23539594|Cancer genome landscapes.|Europe PMC|2013-03-01|-|6000| \n|PMID 25079317|Comprehensive molecular characterization of gastric adenocar…|Europe PMC|2014-07-23|-|5139| \n|PMID 24120142|The somatic genomic landscape of glioblastoma.|Europe PMC|2013-10-01|-|4264| \n|PMID 40037361|Realigned transsulfuration drives BRAF-V600E-targeted therap…|Semantic Scholar|2025|-|26| \n|PMID 38136350|The Targeted Degradation of BRAF V600E Reveals the Mechanism…|PubTator3|2023-12-12|-|13| \n|PMID 36299811|BRAF V600E Immunohistochemistry Predicts Prognosis of Patien…|PubTator3|2022-10-24|-|5| \n|PMID 35813697|A Case of Pulmonary Sarcoidosis during First-Line Targeted T…|Semantic Scholar|2022|-|5| \n|PMID 34703985|BRAF V600 Mutation Detection in Plasma Cell-Free DNA: NCCTG…|PubTator3|2021-10-13|-|5| \n|PMID 40024937|EGFR influences the resistance to targeted therapy in BRAF V…|Semantic Scholar|2025|-|4| \n \n \n \nNewest indexed: 2015-10-15 (4042 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 26462967\n  biomcp search article -k \"BRAF V600E melanoma targeted therapy\" --year-min 2013 --year-max 2025 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n\nCache note: Semantic Scholar data served from cache, 985 s old (older than the provider's freshness window).\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

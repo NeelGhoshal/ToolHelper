@@ -436,11 +436,11 @@ The first benchmark run uses record mode, experiments use replay, and the final 
 | ID | Strategy | Mechanism | Variants to test | Records |
 |---|---|---|---|---|
 | E1 | Tool retrieval | offer only relevant tools via hybrid search over ToolCards (reuse the Paper Librarian search) | top-k 3/5/8; static vs `find_tools` meta-tool; server-first routing | scores, recall@k vs tools actually needed |
-| E2 | Schema compression | shorter descriptions, drop titles/defaults, keep types, enums, required | light vs aggressive | original vs compressed hash, later arg-error rate |
+| E2 | Schema compression | shorter descriptions, drop titles/defaults, keep types, enums, required | light vs aggressive vs minimal (also drops bounds that only reject values: string lengths, `minItems`, `uniqueItems`, `format`) | original vs compressed hash, later arg-error rate |
 | E3 | Dataset grounding | resolve task entities to canonical IDs before calls | inject hints vs `resolve_entity` tool vs silent arg rewrite, crossed with dataset subsets | dataset version and row per hint, *uptake* (hinted value used in args) |
 | E4 | Argument guard | validate against schema and domain rules (CDM pairs, BioMCP enums and sections, ISO3, NDC format) before calling; return a one-line fix | reject-with-hint vs deterministic auto-repair | rule fired, original vs repaired args |
 | E5 | Recipes | reuse the shortest frequent successful path for similar tasks | plan injection vs recipe tool | evidence runs, success rate, pinned schema versions |
-| E6 | Result shaping | keep fields traces show get used; park the rest behind `expand_result(handle)`; OMOP: Standard + Valid + preferred vocabulary, top 3–5; BioMCP: minimal `sections` | projection vs top-N vs summary | dropped fields and counts, expand rate |
+| E6 | Result shaping | keep fields traces show get used; park the rest behind `expand_result(handle)`; OMOP: Standard + Valid + preferred vocabulary, top 3–5; BioMCP: minimal `sections` | projection vs top-N vs summary vs token budget (results over N tokens cut to leading whole items or sections) | dropped fields and counts, expand rate |
 | E7 | Cache | reuse identical canonical calls within TTL | TTL per source | hit rate, age of served result |
 | E8 | History compaction | replace consumed results in later turns with a summary plus handle | after one turn vs after use is detected | carried tokens saved, re-expansions |
 | E9 | Final answer at turn limit | when `max_turns` is reached, make one last LLM call with no tools asking for an answer from what was gathered | on vs off; limit 6/8/12 | turns used, answers produced at the limit |
@@ -482,6 +482,14 @@ The first benchmark run uses record mode, experiments use replay, and the final 
 
    It stays `proposed` until you approve it with `toolhelper curate`.
 10. **Live confirmation:** rerun the baseline and the chosen config once in live mode on the test split. Report any gap between replay and live results; a large gap means the recordings are stale and should be refreshed.
+
+**Second iteration, when the first finds no significant effect** (p10 did not, 2026-11-05; `configs/experiments-p10b.yaml`):
+
+1. **Diagnose from the runs.** Split each run's measured tokens by component. Compute each candidate variant's saving at fixed behaviour on the baseline traces (turn-1 prompts are deterministic, so definition savings are exact). Compare it with the smallest change the planned repeats can detect, which follows from the per-task run-to-run spread in log tokens. A variant whose mechanism cannot reach that size is not worth an arm.
+2. **Pick variants that can reach it,** aimed at the measured cost centres: tool definitions re-sent every turn, large results carried across turns, turn loops and error turns.
+3. **Run a two-level fractional factorial** instead of steps 3 and 6. Every cell runs every task once, in a seeded random order. Each factor's effect compares half of the runs with the other half, paired by task, with bootstrap CIs; two-factor interactions come from the same runs; per-server effects are reported too.
+4. **Fix the choice rule before running.** A factor is on when the CI of its change in tokens per success lies below zero, success holds within the gate and trust stays ≥ 0.9. Confirm the chosen config against the baseline with 3 paired repeats each, then follow steps 9 and 10.
+5. **Keep the replay set honest.** Live fallbacks from parallel passes share a cross-process throttle. Recordings of transient failures (an API outage, rate-limit errors reported as empty results) move to `data/replay-archive/` with a manifest, so the real server re-records them (`scripts/archive_recordings.py`).
 
 ### Phase 11: Swap the LLM and rerun
 

@@ -534,7 +534,7 @@ def bench_run(tasks: TasksOption = TASKS_FILE, llm: LLMOption = None, mode: Mode
               max_turns: Annotated[int, typer.Option(help="Maximum LLM turns.")] = 8,
               strategy: Annotated[list[str] | None, typer.Option(
                   "--strategy", help="Efficiency strategy spec, repeatable: E4:mode=repair, E1:top_k=8, E9.")] = None,
-              learn_from: Annotated[str, typer.Option(help="Group whose traces strategies learn from.")]
+              learn_from: Annotated[str, typer.Option(help="Groups whose traces strategies learn from, comma-separated.")]
               = "bench-baseline-record",
               retry_timeouts: Annotated[int, typer.Option(
                   help="Re-run tasks that ended in an LLM API timeout or connection error, up to N times.")] = 1,
@@ -607,8 +607,9 @@ def _trust_fn(context_db: Path = CONTEXT_DB):
 
 def _strategies(specs: list[str], hub: Hub, learn_from: str, monitor, store: Path,
                 learn_tasks: set[str] | None = None) -> list:
-    """Strategies with inputs learned from `learn_from`'s traces (only `learn_tasks`' runs, when
-    cross-fitting), the hub's tools, the recordings, the dataset index and omop_mcp's CDM map."""
+    """Strategies with inputs learned from the traces of `learn_from` (comma-separated groups; only
+    `learn_tasks`' runs when cross-fitting), the hub's tools, the recordings, the dataset index and
+    omop_mcp's CDM map."""
     if not specs:
         return []
     from toolhelper.agent.hooks import ToolDef
@@ -619,7 +620,8 @@ def _strategies(specs: list[str], hub: Hub, learn_from: str, monitor, store: Pat
     from toolhelper.mcp.canonical import tool_hash
     from toolhelper.monitoring.tracer import Trace
 
-    rows = monitor.rows("SELECT trace_path FROM runs WHERE group_id = ?", (learn_from,))
+    groups = [g.strip() for g in learn_from.split(",") if g.strip()]
+    rows = [r for g in groups for r in monitor.rows("SELECT trace_path FROM runs WHERE group_id = ?", (g,))]
     learned = [Trace.load(r["trace_path"]) for r in rows if r["trace_path"] and Path(r["trace_path"]).exists()]
     if learn_tasks is not None:
         learned = [t for t in learned if t.task_id in learn_tasks]
@@ -783,20 +785,37 @@ def datasets_resolve(surface: str, type: Annotated[str | None, typer.Option(help
             console.print(f"    {json.dumps(m.row, ensure_ascii=False)[:400]}")
 
 
+ExperimentConfigOption = Annotated[Path, typer.Option("--config", help="Experiment plan (configs/experiments*.yaml).")]
+
+
+def _experiment_config(path: Path):
+    """The p10 plan or, for `design: factorial`, the fractional factorial (p10b)."""
+    import yaml
+
+    from toolhelper.experiments.experiment import load_experiment_config
+    from toolhelper.experiments.factorial import load_config
+
+    path = path if path.is_absolute() else ROOT / path
+    raw = yaml.safe_load(path.read_text(encoding="utf-8"))
+    return load_config(path) if raw.get("design") == "factorial" else load_experiment_config(path)
+
+
 @experiment_app.command("freeze")
 def experiment_freeze(tasks: TasksOption = TASKS_FILE, catalog_dir: CatalogDirOption = CATALOG_DIR,
                       store: StoreOption = REPLAY_DIR, db: MonitorOption = MONITOR_DB,
-                      context_db: ContextOption = CONTEXT_DB) -> None:
+                      context_db: ContextOption = CONTEXT_DB,
+                      config: ExperimentConfigOption = Path("configs/experiments.yaml")) -> None:
     """Freeze the experiment's inputs and folds as experiments/<name> in the context store."""
     from toolhelper.datasets.base import INDEX_PATH
     from toolhelper.datasets.index import EntityIndex
-    from toolhelper.experiments.experiment import folds, freeze_inputs, inputs_hash, load_experiment_config, write_experiment
+    from toolhelper.experiments.experiment import folds, freeze_inputs, inputs_hash, write_experiment
     from toolhelper.experiments.runner import load_tasks
     from toolhelper.monitoring.db import MonitorDB
 
-    cfg = load_experiment_config()
+    cfg = _experiment_config(config)
     _, profile = load_llm_config().get(cfg.llm)
-    runs = [r["run_id"] for r in MonitorDB(db).rows("SELECT run_id FROM runs WHERE group_id = ?", (cfg.learn_from,))]
+    groups = [cfg.learn_from] if isinstance(cfg.learn_from, str) else cfg.learn_from
+    runs = [r["run_id"] for g in groups for r in MonitorDB(db).rows("SELECT run_id FROM runs WHERE group_id = ?", (g,))]
     inputs = freeze_inputs(catalog_hash=latest_snapshot(catalog_dir).catalog_hash, tasks_file=tasks,
                            datasets=EntityIndex(INDEX_PATH).datasets(), llm_profile={"name": cfg.llm, **profile.model_dump()},
                            store_dir=store, learn_from_runs=runs)
@@ -804,32 +823,45 @@ def experiment_freeze(tasks: TasksOption = TASKS_FILE, catalog_dir: CatalogDirOp
     thing = write_experiment(LocalStore(context_db), cfg, inputs, fold_map)
     console.print(f"{thing.name}@v{thing.version}: inputs {inputs_hash(inputs)[:12]}, folds A={len(fold_map['A'])} "
                   f"B={len(fold_map['B'])}, {inputs['replay_set_at_start']['recordings']} recordings, "
-                  f"learning from {len(runs)} runs of {cfg.learn_from}")
+                  f"learning from {len(runs)} runs of {', '.join(groups)}")
 
 
 @experiment_app.command("auto")
 def experiment_auto(tasks: TasksOption = TASKS_FILE, db: MonitorOption = MONITOR_DB,
-                    context_db: ContextOption = CONTEXT_DB) -> None:
-    """Run the whole trimmed Phase 10 plan unattended (resumable; see configs/experiments.yaml)."""
-    from toolhelper.datasets.base import INDEX_PATH
-    from toolhelper.datasets.index import EntityIndex
-    from toolhelper.experiments.experiment import load_experiment_config
-    from toolhelper.experiments.orchestrate import Orchestrator, main_loop
+                    context_db: ContextOption = CONTEXT_DB,
+                    config: ExperimentConfigOption = Path("configs/experiments.yaml")) -> None:
+    """Run a whole Phase 10 plan unattended (resumable): the trimmed p10 plan, or the fractional
+    factorial for a `design: factorial` config (configs/experiments-p10b.yaml)."""
     from toolhelper.experiments.runner import load_tasks
     from toolhelper.monitoring.db import MonitorDB
 
-    cfg = load_experiment_config()
-    orch = Orchestrator(cfg, load_tasks(tasks), MonitorDB(db), ROOT / "data" / "experiments" / cfg.experiment,
-                        log=lambda m: console.print(m, markup=False))
+    cfg = _experiment_config(config)
+    workdir, log = ROOT / "data" / "experiments" / cfg.experiment, (lambda m: console.print(m, markup=False))
+    if getattr(cfg, "design", None) == "factorial":
+        from toolhelper.experiments.factorial import FactorialOrchestrator, factorial_loop, grounded_tasks
+
+        task_list, subsets = load_tasks(tasks), {}
+        if "grounded" in cfg.report_subsets:
+            from toolhelper.datasets.base import INDEX_PATH
+            from toolhelper.datasets.index import EntityIndex
+
+            subsets["grounded"] = grounded_tasks(task_list, EntityIndex(INDEX_PATH))
+        factorial_loop(FactorialOrchestrator(cfg, task_list, MonitorDB(db), workdir, log=log, subsets=subsets),
+                       LocalStore(context_db))
+        return
+    from toolhelper.datasets.base import INDEX_PATH
+    from toolhelper.datasets.index import EntityIndex
+    from toolhelper.experiments.orchestrate import Orchestrator, main_loop
+
+    orch = Orchestrator(cfg, load_tasks(tasks), MonitorDB(db), workdir, log=log)
     main_loop(orch, EntityIndex(INDEX_PATH), LocalStore(context_db))
 
 
 @experiment_app.command("status")
-def experiment_status(db: MonitorOption = MONITOR_DB) -> None:
+def experiment_status(db: MonitorOption = MONITOR_DB,
+                      config: ExperimentConfigOption = Path("configs/experiments.yaml")) -> None:
     """Progress of each experiment group: tasks done, passes, transient failures."""
-    from toolhelper.experiments.experiment import load_experiment_config
-
-    cfg = load_experiment_config()
+    cfg = _experiment_config(config)
     rows = _monitor_rows(db, "SELECT group_id, COUNT(DISTINCT task_id) AS tasks, SUM(success) AS passed, "
                               "SUM(error LIKE 'APITimeout%') AS timeouts FROM runs WHERE group_id LIKE ? "
                               "GROUP BY group_id ORDER BY MIN(started_at)", (f"{cfg.experiment}-%",))

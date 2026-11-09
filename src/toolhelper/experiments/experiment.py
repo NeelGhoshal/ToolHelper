@@ -98,9 +98,10 @@ def freeze_inputs(*, catalog_hash: str, tasks_file: Path, datasets: list[dict[st
     }
 
 
-def write_experiment(store: ContextStore, cfg: ExperimentConfig, inputs: dict[str, Any], fold_map: dict[str, list[str]]):
+def write_experiment(store: ContextStore, cfg: Any, inputs: dict[str, Any], fold_map: dict[str, list[str]]):
     name = f"experiments/{cfg.experiment}"
-    data = {"title": f"Phase 10 {cfg.experiment}: trimmed plan", "inputs_json": canonical_json(inputs),
+    design = "fractional factorial" if getattr(cfg, "design", None) == "factorial" else "trimmed plan"
+    data = {"title": f"Phase 10 {cfg.experiment}: {design}", "inputs_json": canonical_json(inputs),
             "plan_json": canonical_json(cfg.model_dump()), "folds_json": canonical_json(fold_map), "status": "proposed"}
     store.apply(f"experiment {cfg.experiment}", [_upsert(store, name, "Experiment", data)])
     return store.get(name)

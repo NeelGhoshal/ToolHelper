@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "sertraline"
+    ],
+    "entity": "pgx",
+    "limit": 10
+  },
+  "args_key": "6fcad722958f945a0b5daae7362c93400966eb6f07582c41b9a8d2cefec2f539",
+  "recorded_at": "2026-11-08T05:57:02.898922+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 820.4029000007722,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# PGx Search: drug=sertraline \n \nFound 6 interactions \n \n| Gene | Drug | CPIC Level | PGx Testing | Guideline | \n|---|---|---|---|---| \n| CYP2C19 | sertraline | A | - | CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants | \n| CYP2B6 | sertraline | B | - | CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants | \n| CYP2D6 | sertraline | C | - | CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants | \n| GRIK4 | sertraline | C | - | - | \n| HTR2A | sertraline | C | - | CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants | \n| SLC6A4 | sertraline | C | - | CYP2D6, CYP2C19, CYP2B6, SLC6A4, HTR2A and Serotonin Reuptake Inhibitor Antidepressants | \n \n \nShowing 1-6 of 6 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

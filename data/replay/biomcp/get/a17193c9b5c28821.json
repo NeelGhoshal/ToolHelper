@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "trial",
+    "id": "NCT04913285",
+    "sections": [
+      "arms",
+      "eligibility"
+    ]
+  },
+  "args_key": "a17193c9b5c28821cbf4043a1f68a55949eb63fd062777bce3e289cb905cc193",
+  "recorded_at": "2026-11-09T05:59:59.610754+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 136.31729999906383,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# NCT04913285 - arms, eligibility \n## Eligibility (ClinicalTrials.gov) \n \nSex: All\nEligible Ages: 18 Years to Any age\nHealthy Subjects: No\nInclusion Criteria:\n\n* Provide written informed consent prior to initiation of any study-specific procedures.\n* Metastatic or advanced stage solid tumor\n* Known BRAF Class I, Class II, or Class III alteration or melanoma with an NRAS mutation as confirmed by previous genomic analysis of tumor tissue or ctDNA.\n* Measurable (Part A and B) or evaluable (Part A only) disease by RECIST v1.1.\n* ECOG performance status 0-1\n* Adequate organ function, as measured by laboratory values (criteria listed in protocol).\n* Able to swallow, retain, and absorb oral medications.\n\nExclusion Criteria:\n\n* Known participants who have received local therapy with either surgery and/or radiation therapy (participants with asymptomatic untreated brain metastasis may be eligible if met with certain criteria)\n* In Part B Dose Expansion, previous treatment with any approved or in-development small molecule BRAF-, MEK-, or MAPK-directed inhibitor therapy.\n* GI tract disease causing an inability to take oral medication, malabsorption syndrome, requirement for intravenous alimentation, or uncontrolled inflammatory GI disease.\n* Active, uncontrolled bacterial, fungal, or viral infection.\n* Participant with a positive test result for SARS-CoV2 infection, is known to have asymptomatic infection or is suspected of having SARS-CoV2, is excluded\n* Women who are lactating or breastfeeding, or pregnant.\n* Participants with any other active treated malignancy within 3 years prior to enrollment\n\nComplete inclusion and exclusion criteria are listed in the clinical study protocol. \n## Arms (ClinicalTrials.gov) \n \n| Arm | Type | Interventions | Description | \n|---|---|---|---| \n| Dose Escalation Monotherapy (Part A1) | EXPERIMENTAL | KIN-2787 | Dose escalation of KIN-2787 | \n| Dose Escalation Combination therapy (Part A2) | EXPERIMENTAL | KIN-2787 and binimetinib | Dose escalation of KIN-2787 and binimetinib | \n| Dose Expansion Monotherapy (Part B1) | EXPERIMENTAL | KIN-2787 | Dose expansion evaluating the recommended phase 2 dose (RP2D… | \n| Dose Escalation Combination therapy (Part B2) | EXPERIMENTAL | KIN-2787 and binimetinib | Dose expansion evaluating the recommended phase 2 dose (RP2D… | \nMore:\n  biomcp get trial NCT04913285 contacts   - central and site contact details\n  biomcp get trial NCT04913285 locations   - site list and contact details\n  biomcp get trial NCT04913285 outcomes   - endpoint measures and time frames\nAll:\n  biomcp get trial NCT04913285 all \nSee also:\n  biomcp search disease --query \"Solid Tumor, Adult\"\n  biomcp search article -d \"Solid Tumor, Adult\"\n  biomcp search trial -c \"Solid Tumor, Adult\"\n  biomcp search drug -q \"exarafenib\" \n\n[ClinicalTrials.gov](https://clinicaltrials.gov/study/NCT04913285)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

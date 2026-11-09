@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2025",
+    "entity": "article",
+    "json": true,
+    "limit": 10,
+    "sort": "date",
+    "source": "pubmed",
+    "keyword": [
+      "HER2-targeted therapy resistance mechanisms tumor microenvironment review breast cancer 2025"
+    ]
+  },
+  "args_key": "b7d4cdb8b57461bc7429000817046fae848ae6a3f3163276ec21988332390015",
+  "recorded_at": "2026-11-08T08:44:27.292933+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2658.639100000073,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=HER2-targeted therapy resistance mechanisms tumor microenvironment review breast cancer 2025, date_from=2025, exclude_retracted=true, sort=date, source=pubmed\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": false,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubmed\"\n    ],\n    \"enrichment_sources\": []\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 9,\n    \"total\": 9,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 9,\n  \"results\": [\n    {\n      \"pmid\": \"42830854\",\n      \"title\": \"HER2-Targeted Antibody-Drug Conjugates in Advanced HER2-Low Breast Cancer: Mechanisms, Clinical Efficacy, and Resistance Strategies.\",\n      \"journal\": \"Cancer management and research\",\n      \"date\": \"2026-09-30\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41236673\",\n      \"title\": \"Decoding breast cancer: insights into molecular pathways & therapeutic approaches.\",\n      \"journal\": \"Discover oncology\",\n      \"date\": \"2025-11-14\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41113985\",\n      \"title\": \"Therapeutic challenges in HER2-targeted antibody therapies: trastuzumab and its ADC derivatives in breast cancer.\",\n      \"journal\": \"American journal of cancer research\",\n      \"date\": \"2025-09-15\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"40325486\",\n      \"title\": \"The association between tumor-stromal collagen features and the clinical outcomes of patients with breast cancer: a systematic review.\",\n      \"journal\": \"Breast cancer research : BCR\",\n      \"date\": \"2025-05-05\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"40371160\",\n      \"title\": \"Immune evasion and resistance in breast cancer.\",\n      \"journal\": \"American journal of cancer research\",\n      \"date\": \"2025-04-15\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"39826885\",\n      \"title\": \"Challenges and prospects in HER2-positive breast cancer-targeted therapy.\",\n      \"journal\": \"Critical reviews in oncology/hematology\",\n      \"date\": \"2025-03-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"40814444\",\n      \"title\": \"Silver Jubilee of HER2 targeting: a clinical success in breast cancer.\",\n      \"journal\": \"Journal of the National Cancer Center\",\n      \"date\": \"2025-02-12\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"39845328\",\n      \"title\": \"Endocrine treatment mechanisms in triple-positive breast cancer: from targeted therapies to advances in precision medicine.\",\n      \"journal\": \"Frontiers in oncology\",\n      \"date\": \"2025-01-07\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"39821040\",\n      \"title\": \"HER2-Positive Breast Cancer Treatment and Resistance.\",\n      \"journal\": \"Advances in experimental medicine and biology\",\n      \"date\": \"2025-01-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42830854\",\n      \"biomcp list article\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

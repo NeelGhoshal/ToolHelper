@@ -164,6 +164,23 @@ def test_calibrate_anchors_measured_tool_defs():
     assert calibrate(parts, 2000, {"tool_defs": 2674}) == calibrate(parts, 2000)  # inconsistent: ignored
 
 
+def test_tool_defs_are_not_anchored_to_schemas_a_strategy_rewrote():
+    from types import SimpleNamespace
+
+    from toolhelper.monitoring.db import tool_defs_anchor
+
+    costs = {"model": "m", "catalog_version": "c", "tools": {"a": {"alone": 40, "marginal": 30},
+                                                             "b": {"alone": 60, "marginal": 50}}}
+    call = SimpleNamespace(measured=True, tools_offered=["a", "b"])
+    trace = SimpleNamespace(model="m", catalog_version="c", transformations=[])
+    assert tool_defs_anchor(costs, trace, call) == 90
+    trace.transformations = [SimpleNamespace(hook="transform_schemas", target="b")]  # E2 compressed b
+    assert tool_defs_anchor(costs, trace, call) is None
+    trace.transformations = [SimpleNamespace(hook="after_result", target="b")]
+    assert tool_defs_anchor(costs, trace, call) == 90
+    assert tool_defs_anchor(costs, trace, SimpleNamespace(measured=False, tools_offered=["a"])) is None
+
+
 def test_measured_tool_defs():
     from toolhelper.monitoring.tokens import measured_tool_defs
 

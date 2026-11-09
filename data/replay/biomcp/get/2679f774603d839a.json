@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "6809",
+    "json": true,
+    "sections": [
+      "all"
+    ]
+  },
+  "args_key": "2679f774603d839aa24ad813e8fb138452e2b519bea70661e87540c9ae053150",
+  "recorded_at": "2026-11-09T06:33:25.777557+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 2461.3447999872733,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: drug '6809' not found.\n\nNo drug card matches \"6809\" by name, brand, or synonym. The MyChem text search matched other drugs: phthalimide, metamfetamine. Try searching: biomcp search drug -q \"6809\""
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

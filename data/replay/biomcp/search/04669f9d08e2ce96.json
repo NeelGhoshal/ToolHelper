@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR",
+      "lung cancer",
+      "mutation"
+    ],
+    "limit": 15,
+    "sort": "relevance",
+    "source": "pubmed"
+  },
+  "args_key": "04669f9d08e2ce96a7b15a179f1b65cccb2760a21797522e2dc9ced684cb4e83",
+  "recorded_at": "2026-11-08T08:23:13.469295+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1121.1986999987857,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR lung cancer mutation, exclude_retracted=true, sort=relevance, source=pubmed, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 15 articles \n \n \nSemantic Scholar: disabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42997983|(18)F-FDG PET/CT Habitat Radiomics for Predicting Epidermal…|PubMed|2026-01-01|hybrid 0.318 + title 3/4|none| \n|PMID 42993168|Impact of Dosage Modifications on Efficacy: Insights from Se…|PubMed|2026-11-06|hybrid 0.305 + title 3/4|none| \n|PMID 42989226|Noninvasive prediction of classic EGFR-activating mutations…|PubMed|2026-08-11|hybrid 0.265 + title 3/4|none| \n|PMID 42979327|Concurrent loss of RB1 facilitates EGFR-TKI resistance in EG…|PubMed|2026-11-01|hybrid 0.232 + title 3/4|none| \n|PMID 42991293|Case Report: Lenvatinib plus osimertinib treated a metastati…|PubMed|2026-10-22|hybrid 0.217 + title 2/4|none| \n|PMID 42991272|Acute myeloid leukemia following icotinib therapy for non-sm…|PubMed|2026-10-22|hybrid 0.21 + title 2/4|none| \n|PMID 42990959|MRAS, SHOC2, PP1C and YAP1 mRNA level variations at 72 hours…|PubMed|2026-10-30|hybrid 0.197 + title 2/4|none| \n|PMID 42983529|Clinicopathologic and prognostic value of HER2 alterations i…|PubMed|2026-08-10|hybrid 0.17 + title 2/4|none| \n|PMID 42979409|A Narrative Review of the Cases of Co-altered EGFR and ALK i…|PubMed|2026-10-04|hybrid 0.163 + title 2/4|none| \n|PMID 42994820|Successful rechallenge with almonertinib and corticosteroids…|PubMed|2026-11-06|hybrid 0.162 + title 1/4|none| \n|PMID 42978067|PROTAC-induced protein degradation in lung cancer.|PubMed|2026-11-03|hybrid 0.15 + title 2/4|none| \n|PMID 42990969|Il ruolo di osimertinib nel percorso terapeutico del NSCLC E…|PubMed|2026-11-04|hybrid 0.128 + title 1/4|none| \n|PMID 42985096|Optimizing first-line therapy for advanced EGFR-mutated NSCL…|PubMed|2026-10-21|hybrid 0.108 + title 1/4|none| \n|PMID 42984671|Genomic co-alteration patterns are associated with different…|PubMed|2026-10-21|hybrid 0.102 + title 1/4|none| \n|PMID 42991776|Expert Consensus Recommendations on NSCLC Management: Eviden…|PubMed|2026-11-01|hybrid 0.073|none| \n \n \n \nNewest indexed: 2026-11-07 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42997983\n  biomcp search article -k \"EGFR lung cancer mutation\" --source pubmed --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-15 of 21390 results. Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

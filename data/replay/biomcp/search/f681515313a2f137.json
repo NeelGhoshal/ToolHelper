@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "cognitive",
+      "randomized controlled trial"
+    ],
+    "limit": 10
+  },
+  "args_key": "f681515313a2f137b773ad50d8c0ec6f0e11ea7f8491ee3ae8ae25b3dd9c7919",
+  "recorded_at": "2026-11-08T15:26:47.436741+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3651.056000002427,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin cognitive randomized controlled trial, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"statin cognitive randomized controlled trial\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42010230|Brain, benefit, or burden? Revisiting statins and cognitive…|PubTator3, Europe PMC, PubMed|2026-04-20|hybrid 0.307 + title 1/5|1| \n|PMID 41118164|Preserved Cognitive Function After Statin Administration Dur…|PubMed|2025-10-01|hybrid 0.24 + title 4/5|0| \n|PMID 41870419|Effects of Exercise and Intensive Vascular Risk Reduction on…|PubMed|2026-05-01|hybrid 0.24 + title 3/5|4| \n|PMID 42940097|Statin Use and the Risks of Delirium and Short-Term Mortalit…|Europe PMC|2026-10-09|hybrid 0.14 + title 1/5|0| \n|PMID 41655587|Assessment of adverse effects attributed to statin therapy i…|PubMed|2026-02-14|hybrid 0.14 + title 2/5|35| \n|PMID 42863385|Pharmacological interventions for reducing the risk of cogni…|Europe PMC|2026-10-12|hybrid 0.12 + title 1/5|0| \n|PMID 40207842|Managing Hypercholesterolemia in Adults Older Than 75 years…|PubTator3|2025-04-10|hybrid 0.08|none| \n|PMID 34649702|Investigating Lipid-Modulating Agents for Prevention or Trea…|PubTator3|2021-10-19|hybrid 0.06|none| \n|PMID 42825089|Association between timing of statin treatment after diabete…|Europe PMC|2026-08-27|hybrid 0.06 + title 1/5|0| \n|PMID 38235315|What have clinical trials taught us about brain health?|PubTator3|2023-12-28|hybrid 0.04|none| \n \n \n \nNewest indexed: 2026-10-28 (11 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42010230\n  biomcp search article -k \"statin cognitive randomized controlled trial\" --year-min 2021 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

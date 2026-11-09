@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "melanoma"
+    ],
+    "intervention": [
+      "dabrafenib",
+      "trametinib"
+    ],
+    "limit": 3
+  },
+  "args_key": "b16003889b9187ce411441bdf3e5d33b6705f480c01d04688f7992aed34ab04a",
+  "recorded_at": "2026-11-08T15:31:50.082295+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1680.4259999989881,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 3 of 53 \n \nQuery: condition=melanoma, intervention=dabrafenib trametinib \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT01940809|Ipilimumab With or Withou…|TERMINATED|1|BRAF V600E Mutation Present, BRAF V600K Mutati… [abridged; 8 conditions total]| \n|NCT01978236|Dabrafenib/Trametinib, BR…|TERMINATED|2|Melanoma and Brain Metastases| \n|NCT03391050|A Study of APR-246 in Com…|TERMINATED|1/2|Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-3 of 53 results. Use --offset 3 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

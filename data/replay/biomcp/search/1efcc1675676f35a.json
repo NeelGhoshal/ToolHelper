@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "meta-analysis",
+    "drug": [
+      "metformin"
+    ],
+    "entity": "article",
+    "keyword": [
+      "cardiovascular",
+      "mortality"
+    ],
+    "limit": 15,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "1efcc1675676f35a5a0a9b8995498465645e42fe8b4cc809651136bbcb4310b1",
+  "recorded_at": "2026-11-08T07:38:11.354794+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2915.501800000129,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=metformin, keyword=cardiovascular mortality, type=meta-analysis, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 15 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42530338|Effect of Medications for Type 2 Diabetes on Cardiovascular…|PubMed|2026-10-01|-|none| \n|PMID 42250263|Metformin for COVID-19: An Updated Systematic Review and Met…|PubMed|2026-07-01|-|none| \n|PMID 41548682|Safety of metformin in chronic kidney disease and type 2 dia…|PubMed|2026-02-15|-|none| \n|PMID 39277567|Clinical outcomes in type 2 diabetes patients with chronic h…|PubMed|2025-02-01|-|none| \n|PMID 38477839|Clinical outcomes with metformin use in diabetic patients wi…|PubMed|2024-05-01|-|none| \n|PMID 38589722|Evaluation of the Lifetime Benefits of Metformin and SGLT2 I…|PubMed|2024-05-01|-|none| \n|PMID 38239055|Association of metformin use with abdominal aortic aneurysm:…|PubMed|2024-03-01|-|none| \n|PMID 37249579|Effects of DPP-4 inhibitors, GLP-1 receptor agonists, SGLT-2…|PubMed|2023-08-01|-|none| \n|PMID 37039787|Diagnosis and Management of Prediabetes: A Review.|PubMed|2023-04-11|-|none| \n|PMID 36205446|Effects of glucose-lowering agents on cardiovascular and ren…|PubMed|2023-02-01|-|none| \n|PMID 36261824|Systematic review and meta-analysis of head-to-head trials c…|PubMed|2022-10-19|-|none| \n|PMID 35441801|Impact of diabetes on COVID-19 mortality and hospital outcom…|PubMed|2022-05-01|-|none| \n|PMID 34962662|Comparative effectiveness of cardiovascular, renal and safet…|PubMed|2022-03-01|-|none| \n|PMID 34953749|Cardiovascular effectiveness of glucagon-like peptide 1 rece…|PubMed|2022-02-01|-|none| \n|PMID 35032305|Association of Metformin with the Mortality and Incidence of…|PubMed|2022-02-01|-|none| \n \n \n \nNewest indexed: 2026-07-30 (101 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42530338\n  biomcp search article --drug metformin -k \"cardiovascular mortality\" --type meta-analysis --source pubmed --year-min 2022 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-15 of 66 results. Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

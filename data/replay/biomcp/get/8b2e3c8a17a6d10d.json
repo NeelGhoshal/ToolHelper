@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "DB00619",
+    "json": true,
+    "sections": [
+      "targets",
+      "indications",
+      "approvals",
+      "label"
+    ]
+  },
+  "args_key": "8b2e3c8a17a6d10d7e036f8f1c09e8fb84f70e5798431783d42b5ee132b40108",
+  "recorded_at": "2026-11-08T07:13:06.491680+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 2068.41329999952,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: drug 'DB00619' not found.\n\nNo drug card matches \"DB00619\" by name, brand, or synonym. The MyChem text search matched other drugs: imatinib. Try searching: biomcp search drug -q \"DB00619\""
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

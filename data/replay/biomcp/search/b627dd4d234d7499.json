@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "ANGPTL3",
+      "CRISPR-Cas9",
+      "phase 1"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "b627dd4d234d7499237662ee4087794f1b7131b7004205e08c4c0efb62fcd0c9",
+  "recorded_at": "2026-11-08T06:04:01.278414+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4220.776699999988,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=ANGPTL3 CRISPR-Cas9 phase 1, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"ANGPTL3 CRISPR-Cas9 phase 1\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 34145432|Noncoding RNA therapeutics - challenges and potential soluti…|Europe PMC|2021-06-18|-|1313| \n|PMID 28655327|Advances in the delivery of RNA therapeutics: from concept t…|Europe PMC|2017-06-27|-|509| \n|PMID 34903741|An ionizable lipid toolbox for RNA delivery.|Europe PMC|2021-12-13|-|507| \n|PMID 28286336|Genetics of coronary artery disease: discovery, biology and…|Europe PMC|2017-03-13|-|505| \n|PMID 36646687|CRISPR/Cas9 therapeutics: progress and prospects.|Europe PMC|2023-01-16|-|480| \n|PMID 35798006|Therapeutic in vivo delivery of gene editing agents.|Europe PMC|2022-07-06|-|459| \n|PMID 36864020|Epigenetic regulation in metabolic diseases: mechanisms and…|Europe PMC|2023-03-02|-|367| \n|PMID 33649229|Lipid nanoparticle-mediated codelivery of Cas9 mRNA and sing…|Europe PMC|2021-03-01|-|330| \n|PMID 35594500|Lipid-Nanoparticle-Based Delivery of CRISPR/Cas9 Genome-Edit…|Europe PMC|2022-05-20|-|241| \n|PMID 30901547|Genomic Medicine-Progress, Pitfalls, and Promise.|Europe PMC|2019-03-01|-|170| \n \n \n \nNewest indexed: 2023-03-03 (1346 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 34145432\n  biomcp search article -k \"ANGPTL3 CRISPR-Cas9 phase 1\" --year-min 2017 --year-max 2023 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

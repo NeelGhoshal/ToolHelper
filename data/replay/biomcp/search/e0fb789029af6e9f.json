@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2024",
+    "entity": "article",
+    "json": true,
+    "limit": 10,
+    "sort": "date",
+    "source": "pubmed",
+    "keyword": [
+      "trastuzumab deruxtecan DESTINY-Breast03 second-line HER2-positive metastatic breast cancer overall survival update"
+    ]
+  },
+  "args_key": "e0fb789029af6e9fdbd9c35d1e9d75020a9f3e21ec8d3d76500a160d976849df",
+  "recorded_at": "2026-11-08T08:44:13.796914+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 677.4809999988065,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=trastuzumab deruxtecan DESTINY-Breast03 second-line HER2-positive metastatic breast cancer overall survival update, date_from=2024, exclude_retracted=true, sort=date, source=pubmed\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": false,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubmed\"\n    ],\n    \"enrichment_sources\": []\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 0,\n    \"total\": 1,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 0,\n  \"results\": [],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

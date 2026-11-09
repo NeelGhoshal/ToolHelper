@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "type 2 diabetes"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "tirzepatide",
+      "semaglutide"
+    ],
+    "limit": 8
+  },
+  "args_key": "da3c497d2a9f82a924238fc3e0de3fc2bd093e461002e8205937d8806343354a",
+  "recorded_at": "2026-11-08T15:29:32.434397+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1634.880700003123,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 0 trial(s) \n \nQuery: condition=type 2 diabetes, intervention=tirzepatide semaglutide \n \n \nNo trials found matching the filters. \nTry broadening the filtered search: \n- if a protein-change query is too narrow, use a looser `--mutation` term or omit it \n- add or widen `--distance` only after confirming geography is intended \n- try a broader `--status` set only if recruitment status is the likely blocker \n- try `--biomarker <gene>` for a phrase search across keyword, intervention, and condition when `--mutation` is too specific \n\nShowing 0 of 0 results.\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

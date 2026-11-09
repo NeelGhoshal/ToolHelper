@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 3,
+    "query": "DDR1 discoidin domain receptor 1"
+  },
+  "args_key": "c8bc2f59a5f330511147565377a276ba213d00e328097fd5ecb660b4ff027041",
+  "recorded_at": "2026-11-09T04:52:02.040224+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 621.0829999909038,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: DDR1 discoidin domain receptor 1 \n \nFound 1 gene \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| DDR1 | discoidin domain receptor tyrosine kinase 1 | 780 | 6:30876421-30900978 | GRCh38 | Q08345 | 600408 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1 of 1 results. \n \n\n\n## Next commands\n- `biomcp get gene DDR1`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

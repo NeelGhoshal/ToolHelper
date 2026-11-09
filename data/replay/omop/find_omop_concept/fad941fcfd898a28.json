@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "hypertension NOS",
+    "max_results": 5,
+    "omop_field": "condition_concept_id",
+    "omop_table": "condition_occurrence"
+  },
+  "args_key": "fad941fcfd898a2846e5573ff32f2857d91d6910962c096f709ad3e52ebcdcf0",
+  "recorded_at": "2026-11-08T06:27:50.474765+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 763.0529999996725,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 45493466,\n      \"code\": \"G20z.11\",\n      \"name\": \"Hypertension NOS\",\n      \"class\": \"Read\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"Read\",\n      \"url\": \"https://omophub.com/concepts/45493466\"\n    },\n    {\n      \"concept_id\": 44821949,\n      \"code\": \"401.9\",\n      \"name\": \"Unspecified essential hypertension\",\n      \"class\": \"4-dig billing code\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"ICD9CM\",\n      \"url\": \"https://omophub.com/concepts/44821949\"\n    },\n    {\n      \"concept_id\": 45420352,\n      \"code\": \"G20z.00\",\n      \"name\": \"Essential hypertension NOS\",\n      \"class\": \"Read\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"Read\",\n      \"url\": \"https://omophub.com/concepts/45420352\"\n    },\n    {\n      \"concept_id\": 45480261,\n      \"code\": \"G24z.00\",\n      \"name\": \"Secondary hypertension NOS\",\n      \"class\": \"Read\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"Read\",\n      \"url\": \"https://omophub.com/concepts/45480261\"\n    },\n    {\n      \"concept_id\": 45496741,\n      \"code\": \"G24zz00\",\n      \"name\": \"Secondary hypertension NOS\",\n      \"class\": \"Read\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"Read\",\n      \"url\": \"https://omophub.com/concepts/45496741\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"hypertension NOS\",\n    \"omop_table\": \"condition_occurrence\",\n    \"omop_field\": \"condition_concept_id\",\n    \"total_found\": 5,\n    \"candidates_returned\": 5,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

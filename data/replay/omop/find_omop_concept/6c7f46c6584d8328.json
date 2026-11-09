@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "E11",
+    "max_results": 10,
+    "omop_field": "condition_concept_id",
+    "omop_table": "condition_occurrence"
+  },
+  "args_key": "6c7f46c6584d832864b70beca07da0c32cbed7ccc02e532c4b8f9dfdfd0af644",
+  "recorded_at": "2026-11-09T04:41:53.076907+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 950.1766999892425,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 35951009,\n      \"code\": \"8773\",\n      \"name\": \"PDE11A (phosphodiesterase 11A) gene variant measurement\",\n      \"class\": \"Gene Variant\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"OMOP Genomic\",\n      \"url\": \"https://omophub.com/concepts/35951009\"\n    },\n    {\n      \"concept_id\": 19491126,\n      \"code\": \"OMOP5400779\",\n      \"name\": \"MRE11 protein: Substitution in position 26 of M replaced by T measurement\",\n      \"class\": \"Gene Protein Variant\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"OMOP Genomic\",\n      \"url\": \"https://omophub.com/concepts/19491126\"\n    },\n    {\n      \"concept_id\": 19637541,\n      \"code\": \"OMOP5551352\",\n      \"name\": \"MRE11 protein: Substitution in position 77 of E replaced by K measurement\",\n      \"class\": \"Gene Protein Variant\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"OMOP Genomic\",\n      \"url\": \"https://omophub.com/concepts/19637541\"\n    },\n    {\n      \"concept_id\": 19504341,\n      \"code\": \"OMOP5414434\",\n      \"name\": \"MRE11 protein: Substitution in position 209 of S replaced by F measurement\",\n      \"class\": \"Gene Protein Variant\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"OMOP Genomic\",\n      \"url\": \"https://omophub.com/concepts/19504341\"\n    },\n    {\n      \"concept_id\": 19490613,\n      \"code\": \"OMOP5400251\",\n      \"name\": \"MRE11 protein: Substitution in position 255 of K replaced by E measurement\",\n      \"class\": \"Gene Protein Variant\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"OMOP Genomic\",\n      \"url\": \"https://omophub.com/concepts/19490613\"\n    },\n    {\n      \"concept_id\": 19499928,\n      \"code\": \"OMOP5409869\",\n      \"name\": \"MRE11 protein: Substitution in position 273 of S replaced by F measurement\",\n      \"class\": \"Gene Protein Variant\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"OMOP Genomic\",\n      \"url\": \"https://omophub.com/concepts/19499928\"\n    },\n    {\n      \"concept_id\": 19503011,\n      \"code\": \"OMOP5413055\",\n      \"name\": \"MRE11 protein: Substitution in position 288 of R replaced by H measurement\",\n      \"class\": \"Gene Protein Variant\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"OMOP Genomic\",\n      \"url\": \"https://omophub.com/concepts/19503011\"\n    },\n    {\n      \"concept_id\": 19568894,\n      \"code\": \"OMOP5480856\",\n      \"name\": \"MRE11 protein: Substitution in position 305 of R replaced by W measurement\",\n      \"class\": \"Gene Protein Variant\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"OMOP Genomic\",\n      \"url\": \"https://omophub.com/concepts/19568894\"\n    },\n    {\n      \"concept_id\": 19516782,\n      \"code\": \"OMOP5427264\",\n      \"name\": \"MRE11 protein: Substitution in position 440 of A replaced by T measurement\",\n      \"class\": \"Gene Protein Variant\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"OMOP Genomic\",\n      \"url\": \"https://omophub.com/concepts/19516782\"\n    },\n    {\n      \"concept_id\": 19632331,\n      \"code\": \"OMOP5546048\",\n      \"name\": \"MRE11 protein: Substitution in position 498 of D replaced by N measurement\",\n      \"class\": \"Gene Protein Variant\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"OMOP Genomic\",\n      \"url\": \"https://omophub.com/concepts/19632331\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"E11\",\n    \"omop_table\": \"condition_occurrence\",\n    \"omop_field\": \"condition_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

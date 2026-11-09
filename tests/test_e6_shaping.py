@@ -9,7 +9,7 @@ from conftest import final, recorded, tool_call
 from toolhelper.agent.hooks import Task
 from toolhelper.agent.loop import Agent
 from toolhelper.efficiency.arg_guard import DEFAULT_CDM_FIELDS, CdmFields
-from toolhelper.efficiency.shaping import EXPAND, ResultShaper, learn_policies, parse
+from toolhelper.efficiency.shaping import EXPAND, ResultShaper, cut_to_budget, learn_policies, parse
 from toolhelper.llm.base import estimate_tokens
 from toolhelper.llm.scripted import ScriptedBackend
 
@@ -71,7 +71,12 @@ async def test_shaping_is_evidenced_and_reversible(replay_hub, heart, cdm):
     trace = await run(replay_hub, [shaper], tool_call("omop__find_omop_concept", heart),
                       tool_call(EXPAND, {"handle": "r1"}), answer=ANSWER)
     shaped, expanded = trace.tool_calls
-    assert shaped.shaped_result_tokens < shaped.raw_result_tokens
+    assert shaped.shaped_result_tokens <= 0.9 * shaped.raw_result_tokens  # handle note included
+
+    # A cut that does not pay for its handle note is not made.
+    strict = await run(replay_hub, [ResultShaper("projection", policies, cdm=cdm, min_reduction=0.95)],
+                       tool_call("omop__find_omop_concept", heart), answer=ANSWER)
+    assert strict.transformations == [] and strict.tool_calls[0].shaped_text == strict.tool_calls[0].raw_text
     data = json.loads(shaped.shaped_text.split("\n\n[shaped:")[0])
     assert [c["concept_id"] for c in data["candidates"]] == [4329847, 4085056]  # Condition domain only
     assert "class" not in data["candidates"][0] and "concept_id" in data["candidates"][0]
@@ -105,3 +110,70 @@ async def test_top_n_and_summary_need_rank_evidence(replay_hub, store, cdm):
 async def test_unknown_handle_is_an_error(replay_hub):
     trace = await run(replay_hub, [ResultShaper()], tool_call(EXPAND, {"handle": "nope"}))
     assert trace.tool_calls[0].is_error and "no result with handle" in trace.tool_calls[0].shaped_text
+
+
+# --- budget mode: oversized results cut to whole leading units, the rest behind a handle -------
+
+BUDGET = 600  # estimate_tokens (4 characters per token) in these tests
+
+
+def recorded_text(store, tool, **kw):
+    rec = next(r for r in store if r.tool == tool and all(r.arguments.get(k) == v for k, v in kw.items()))
+    return "\n".join(b["text"] for b in rec.result["content"])
+
+
+def test_budget_cut_keeps_whole_units_of_each_format(store):
+    rxnorm = recorded_text(store, "search-drug-nomenclature", query="metformin")  # 134 products
+    cut = cut_to_budget("medical__search-drug-nomenclature", rxnorm, BUDGET, estimate_tokens)
+    kept, full = parse("medical__search-drug-nomenclature", cut.text), parse("medical__search-drug-nomenclature", rxnorm)
+    assert estimate_tokens(cut.text) <= BUDGET and 1 <= len(kept.items) < len(full.items) == 134
+    assert [i.parts for i in kept.items] == [i.parts for i in full.items[:len(kept.items)]]  # whole items only
+    assert cut.note == f"kept items 1-{len(kept.items)} of 134"
+
+    clinvar = recorded_text(store, "get", id="chr7:g.140453136A>T", sections=["clinvar"])  # one 49k-character section
+    cut = cut_to_budget("biomcp__get", clinvar, BUDGET, estimate_tokens)
+    assert estimate_tokens(cut.text) <= BUDGET and clinvar.startswith(cut.text.rstrip("\n"))
+    assert "of section ClinVar" in cut.note
+
+    articles = recorded_text(store, "variant_articles")  # JSON
+    cut = cut_to_budget("biomcp__variant_articles", articles, 1000, estimate_tokens)
+    data = json.loads(cut.text)  # still JSON: long lists keep their first items
+    assert estimate_tokens(cut.text) <= 1000 and "more items]" in cut.text and data["items"][0]["request_id"] == "item-1"
+    tight = cut_to_budget("biomcp__variant_articles", articles, BUDGET, estimate_tokens)  # too many keys to fit
+    assert estimate_tokens(tight.text) <= BUDGET and tight.text.startswith('{\n  "items": [')
+    assert tight.note.startswith("kept the first items of long lists") and "then the first" in tight.note
+
+    assert cut_to_budget("biomcp__get", clinvar, 10**6, estimate_tokens) is None  # under budget: untouched
+
+
+async def test_budget_evidence_is_runs_that_kept_what_they_used(replay_hub, store):
+    rxnorm = recorded(store, "search-drug-nomenclature", query="metformin")
+    first = await history(replay_hub, 2, tool_call("medical__search-drug-nomenclature", rxnorm),
+                          answer="Kombiglyze, RxCUI 1043567.")  # the first product
+    last = await history(replay_hub, 1, tool_call("medical__search-drug-nomenclature", rxnorm),
+                         answer="metformin / pioglitazone, RxCUI 861822.")  # the 134th
+    policy = learn_policies(first + last, budgets=[BUDGET], counter=estimate_tokens)["medical__search-drug-nomenclature"]
+    assert policy.budget_runs[BUDGET] == sorted(t.run_id for t in first)
+    assert policy.over_budget_runs[BUDGET] == sorted(t.run_id for t in first + last)
+
+
+async def test_budget_shaping_is_evidenced_and_reversible(replay_hub, store):
+    rxnorm = recorded(store, "search-drug-nomenclature", query="metformin")
+    traces = await history(replay_hub, 2, tool_call("medical__search-drug-nomenclature", rxnorm),
+                           answer="Kombiglyze, RxCUI 1043567.")
+    policies = learn_policies(traces, budgets=[BUDGET], counter=estimate_tokens)
+    trace = await run(replay_hub, [ResultShaper("budget", policies, budget=BUDGET)],
+                      tool_call("medical__search-drug-nomenclature", rxnorm), tool_call(EXPAND, {"handle": "r1"}),
+                      answer="RxCUI 1043567.")
+    shaped, expanded = trace.tool_calls
+    assert shaped.shaped_result_tokens < BUDGET + 60 < shaped.raw_result_tokens
+    assert f'{EXPAND}(handle="r1")' in shaped.shaped_text and "of 134" in shaped.shaped_text
+    [t] = trace.transformations
+    assert {e.kind for e in t.evidence} == {"run"} and {e.ref for e in t.evidence} == {x.run_id for x in traces}
+    assert trace.provenance_coverage == 1.0 and trace.problems() == []
+    assert expanded.shaped_text == shaped.raw_text  # nothing is lost
+
+    # Without runs that kept what they used, nothing is cut.
+    bare = await run(replay_hub, [ResultShaper("budget", {}, budget=BUDGET)],
+                     tool_call("medical__search-drug-nomenclature", rxnorm))
+    assert bare.transformations == [] and bare.tool_calls[0].shaped_text == bare.tool_calls[0].raw_text
