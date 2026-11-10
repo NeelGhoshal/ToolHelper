@@ -23,6 +23,7 @@ from toolhelper.experiments.factorial import (
     cells,
     choose,
     factor_effects,
+    factorial_loop,
     grounded_tasks,
     load_config,
 )
@@ -169,13 +170,11 @@ PLAN_TASKS = [Task(id=f"omop-{i:03d}", servers=["omop"], category="condition_map
               for i in range(1, 7)]
 
 
-@pytest.mark.parametrize("with_base", [False, True])
-def test_factorial_plan_end_to_end(server_configs, catalog, store, tmp_path, with_base):
+def scripted_launcher(server_configs, catalog, store, db, tmp_path, launched):
+    """A `launch` that runs each pass in-process: the scripted backend on a recorded real call."""
     from toolhelper.mcp.hub import Hub
 
     heart = recorded(store, "find_omop_concept", keyword="heart attack", omop_table="condition_occurrence")
-    db = MonitorDB(tmp_path / "m.sqlite")
-    launched = []
 
     def launch(cmd, log):
         group = cmd[cmd.index("--group") + 1]
@@ -199,6 +198,13 @@ def test_factorial_plan_end_to_end(server_configs, catalog, store, tmp_path, wit
         anyio.run(go)
         return Done()
 
+    return launch
+
+
+@pytest.mark.parametrize("with_base", [False, True])
+def test_factorial_plan_end_to_end(server_configs, catalog, store, tmp_path, with_base):
+    db, launched = MonitorDB(tmp_path / "m.sqlite"), []
+    launch = scripted_launcher(server_configs, catalog, store, db, tmp_path, launched)
     base = Factor(specs=["E7"], max_turns=5) if with_base else Factor()
     cfg = config({"A": Factor(specs=["E2:level=aggressive"]), "B": Factor(specs=["E9"], max_turns=4)},
                  learn_from=["learn", "learn2"], base=base)
@@ -247,3 +253,30 @@ def test_factorial_plan_end_to_end(server_configs, catalog, store, tmp_path, wit
     live_base = next(x for x in live if x[0] == "t10b-live-baseline")
     assert live_base[1:3] == (tuple(base.specs), off_limit)  # the live baseline is the base config
     assert set(orch.state["live"]["live"]) == {"t10b-live-baseline", "t10b-live-chosen"}
+
+
+@pytest.mark.parametrize("factor, saves", [("A", True), ("B", False)])
+def test_confirm_only_plan_tests_a_preregistered_lead_on_fresh_runs(server_configs, catalog, store, tmp_path,
+                                                                    factor, saves):
+    db, launched = MonitorDB(tmp_path / "m.sqlite"), []
+    launch = scripted_launcher(server_configs, catalog, store, db, tmp_path, launched)
+    cfg = config({"A": Factor(specs=["E2:level=aggressive"]), "B": Factor(specs=["E9"], max_turns=4)},
+                 learn_from=["learn", "learn2"], confirm_only=[factor], require_saving=True)
+    ctx = LocalStore()
+    write_experiment(ctx, cfg, {"catalog_hash": "x"}, {"A": [], "B": []})
+    orch = FactorialOrchestrator(cfg, PLAN_TASKS, db, tmp_path / "work", launch=launch, poll_s=0, log=lambda m: None)
+
+    factorial_loop(orch, ctx)
+    replay = sorted(g for g, _, _, mode, _ in launched if mode != "live")
+    assert replay == [f"t10b-f-{factor}-r1", f"t10b-f-{factor}-r2", "t10b-f-none-r1", "t10b-f-none-r2"]  # no factorial
+    gate = orch.state["confirm"]["gate"]
+    assert gate["passed"] is saves
+    assert orch.state["chosen"]["factors"] == ([factor] if saves else [])
+    if not saves:  # E9 changes nothing in runs that finish: tokens/success CI includes 0
+        assert any("tokens/success" in r for r in gate["reasons"])
+    live = sorted(g for g, _, _, mode, _ in launched if mode == "live")
+    assert live == (["t10b-live-baseline", "t10b-live-chosen"] if saves else ["t10b-live-baseline"])
+    assert ctx.get("decisions/t10b").data["status"] == "proposed"
+    with pytest.raises(ValueError, match="confirm_only"):
+        FactorialOrchestrator(config({"A": Factor(specs=["E2"])}, confirm_only=["Z"]), PLAN_TASKS, db,
+                              tmp_path / "w2", launch=launch, poll_s=0, log=lambda m: None)

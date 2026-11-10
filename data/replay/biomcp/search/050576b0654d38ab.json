@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CPIC",
+      "CYP2C19",
+      "clopidogrel"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "050576b0654d38ab2453c304092ca9b3862b97d01c1956a5b8beed459df39cf3",
+  "recorded_at": "2026-11-09T19:36:25.480694+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 7828.820800001267,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CPIC CYP2C19 clopidogrel, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"CPIC CYP2C19 clopidogrel\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42966874|Defining Core Functions and Forms for the Implementation of…|Europe PMC|2026-11-01|-|0| \n|PMID 42938391|From Frequencies to Priorities: Interethnic Distribution of…|Europe PMC|2026-10-14|-|0| \n|PMID 42820662|Implementation of Rapid CYP2C19 Genotyping to Guide Antiplat…|Europe PMC|2026-10-01|-|0| \n|PMID 42828471|From Genomics to Precision Cardiology: A Comprehensive Revie…|Europe PMC|2026-10-01|-|0| \n|PMID 42115787|Limited Visibility and Perception of the Clinical Relevance…|PubMed|2026-05-01|-|0| \n|PMID 41893359|Pharmacometabolomics Detects Unreported Clopidogrel Metaboli…|PubTator3|2026-03-21|-|2| \n|PMID 41723510|Optimizing pharmacogenomic clinical decision support: a usab…|PubTator3|2026-02-21|-|0| \n|PMID 41593048|Use of medications with pharmacogenomic guidelines and adver…|PubTator3|2026-01-28|-|1| \n|PMID 41549095|Pharmacokinetic recall study of Estonian Biobank participant…|PubTator3|2026-01-18|-|3| \n|PMID 41017291|Use of Drugs With Actionable Pharmacogenetic Biomarkers and…|PubMed|2025-12-01|-|2| \n \n \n \nNewest indexed: 2026-11-01 (8 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42966874\n  biomcp search article -k \"CPIC CYP2C19 clopidogrel\" --year-min 2025 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

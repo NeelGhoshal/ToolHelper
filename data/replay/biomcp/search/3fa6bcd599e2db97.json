@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "disease": [
+      "melanoma"
+    ],
+    "gene": "BRAF",
+    "json": true,
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "3fa6bcd599e2db970f42fd16ffe7ef7e467d122aecd8c8254253b2fef58f0d12",
+  "recorded_at": "2026-11-10T04:00:22.748943+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 14292.436199990334,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=BRAF, disease=melanoma, exclude_retracted=true, sort=date\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"42926260\",\n      \"doi\": \"10.1007/978-1-0716-5619-8_1\",\n      \"title\": \"Model Systems for the Study of Malignant Melanoma.\",\n      \"journal\": \"Methods Mol Biol\",\n      \"date\": \"2027-01-01\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42926279\",\n      \"doi\": \"10.1007/978-1-0716-5619-8_20\",\n      \"title\": \"Radiopharmaceuticals for Melanoma Theranostics.\",\n      \"journal\": \"Methods Mol Biol\",\n      \"date\": \"2027-01-01\",\n      \"citation_count\": 0,\n      \"source\": \"pubtator\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"41913413\",\n      \"pmcid\": \"PMC13048569\",\n      \"title\": \"Integrating tumor and immune cell transcriptomics to predict immune checkpoint inhibitor primary resistance in metastatic melanoma\",\n      \"journal\": \"Oncoimmunology\",\n      \"date\": \"2026-12-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41630477\",\n      \"pmcid\": \"PMC12885418\",\n      \"title\": \"A data-driven cartography of NSCLC vaccine research: Quantifying the paradigm shift toward immuno-oncology combination therapies\",\n      \"journal\": \"Hum Vaccin Immunother\",\n      \"date\": \"2026-12-01\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41933926\",\n      \"pmcid\": \"PMC13051589\",\n      \"title\": \"Multi-omics analysis identified SPRR2D as a potential biomarker for tumor prognosis and immune microenvironment infiltration: a pan-cancer perspective\",\n      \"journal\": \"Future Sci OA\",\n      \"date\": \"2026-12-01\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42993853\",\n      \"title\": \"Age reshapes selection on melanoma driver mutations.\",\n      \"journal\": \"Science advances\",\n      \"date\": \"2026-11-06\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"43000928\",\n      \"title\": \"Nanopore Sequencing Identifies a Distinct Tyr::CreER(T2) Allele Circulating in Existing Mouse Stocks.\",\n      \"journal\": \"Pigment cell & melanoma research\",\n      \"date\": \"2026-11-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42991401\",\n      \"title\": \"Beyond BRAF V600: emerging MAPK-targeted therapeutic strategies.\",\n      \"journal\": \"Annals of translational medicine\",\n      \"date\": \"2026-10-30\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42991423\",\n      \"title\": \"Intralesional and intratumoral therapies in melanoma: current evidence and future perspectives-a narrative review.\",\n      \"journal\": \"Annals of translational medicine\",\n      \"date\": \"2026-10-30\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42710135\",\n      \"doi\": \"10.1016/j.talanta.2026.130508\",\n      \"title\": \"A thiosemicarbazone derivative as a potential multi-target inhibitor: Molecular docking, DFT, QTAIM, and NLO investigation of thione and thiol tautomers.\",\n      \"journal\": \"Talanta\",\n      \"date\": \"2026-08-25\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search article --gene BRAF --disease melanoma --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0\",\n      \"biomcp get article 42926260\",\n      \"biomcp search article -g BRAF -d melanoma --year-min 2026 --year-max 2027 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

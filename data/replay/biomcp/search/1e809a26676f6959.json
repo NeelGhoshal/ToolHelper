@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E melanoma mutation discovery Davies"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "1e809a26676f6959e893cce01d0cabeb229331a1fb91896a107f863b308bba55",
+  "recorded_at": "2026-11-09T20:34:42.945923+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2484.2680000001565,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E melanoma mutation discovery Davies, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E melanoma mutation discovery Davies\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 22817889|A landscape of driver mutations in melanoma.|Europe PMC|2012-07-01|-|2118| \n|PMID 26645196|Loss of PTEN Promotes Resistance to T Cell-Mediated Immunoth…|Europe PMC|2015-12-08|-|1310| \n|PMID 31710489|Discovery of a Potent and Selective Oral Inhibitor of ERK1/2…|PubMed|2019-12-26|-|59| \n|PMID 27655717|Targeting Notch enhances the efficacy of ERK inhibitors in B…|PubMed|2016-11-01|-|21| \n|PMID 38539548|Mutations in the Serine/Threonine Kinase BRAF: Oncogenic Dri…|PubTator3|2024-03-20|-|19| \n \n \n \nNewest indexed: 2019-11-12 (2554 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 22817889\n  biomcp search article -k \"BRAF V600E melanoma mutation discovery Davies\" --year-min 2012 --year-max 2024 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

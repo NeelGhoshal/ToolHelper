@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "PDGFRB",
+    "sections": [
+      "druggability",
+      "pathways",
+      "diseases"
+    ]
+  },
+  "args_key": "f869ac96e71d87eb9f2c99bb4b59c3e448617ff786025aa2387f22661d80340d",
+  "recorded_at": "2026-11-09T21:58:41.342726+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1005.7801999791991,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# PDGFRB - druggability, pathways, diseases \n## Pathways \n \n| Source | ID | Name | \n|---|---|---| \n| KEGG | hsa04010 | MAPK signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04014 | Ras signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04015 | Rap1 signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04020 | Calcium signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04072 | Phospholipase D signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04151 | PI3K-Akt signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04510 | Focal adhesion - Homo sapiens (human) | \n| KEGG | hsa04540 | Gap junction - Homo sapiens (human) | \n| KEGG | hsa04630 | JAK-STAT signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04810 | Regulation of actin cytoskeleton - Homo sapiens (human) | \n| KEGG | hsa05165 | Human papillomavirus infection - Homo sapiens (human) | \n| KEGG | hsa05200 | Pathways in cancer - Homo sapiens (human) | \n| KEGG | hsa05206 | MicroRNAs in cancer - Homo sapiens (human) | \n| KEGG | hsa05214 | Glioma - Homo sapiens (human) | \n| KEGG | hsa05215 | Prostate cancer - Homo sapiens (human) | \n| KEGG | hsa05218 | Melanoma - Homo sapiens (human) | \n| KEGG | hsa05230 | Central carbon metabolism in cancer - Homo sapiens (human) | \n| KEGG | hsa05231 | Choline metabolism in cancer - Homo sapiens (human) | \n| Reactome | R-HSA-186767 | PDGFRB | \n| Reactome | R-HSA-8864039 | p-11Y-PDGFRB | \n| Reactome | R-HSA-186803 | p-12Y-PDGFRB | \n| Reactome | R-HSA-9673617 | WDR48(1-323)-PDGFRB(559-1106) fusion | \n| Reactome | R-HSA-9673590 | GOLGA4(1-411)-PDGFRB(527-1106) fusion | \n| Reactome | R-HSA-9673593 | KANK1(1-899)-PDGFRB(415-1106) fusion | \n| Reactome | R-HSA-9673893 | ETV6(1-154)-PDGFRB(527-1106) fusion | \n| Reactome | R-HSA-9673645 | p-12Y-WDR48(1-323)-PDGFRB(559-1106) fusion | \n| Reactome | R-HSA-9673586 | BIN2(1-253)insRVSLGSILSVSS-PDGFRB(572-1106) fusion | \n| Reactome | R-HSA-9673642 | p-12Y-GOLGA4(1-411)-PDGFRB(527-1106) fusion | \n| Reactome | R-HSA-186792 | PDGFRA, PDGFRB | \n| Reactome | R-HSA-8864037 | p-PDGFRB homo and heterodimers | \n## Diseases (Enrichr) \n \n| Term | P-value | Library | \n|---|---|---| \n| Fahr's syndrome (disorder) | 3.50e-4 | DisGeNET | \n| Uncoordinated limb movement | 3.50e-4 | DisGeNET | \n| Limb dysmetria | 3.50e-4 | DisGeNET | \n| Infantile myofibromatosis | 3.50e-4 | DisGeNET | \n| Myofibromatosis | 4.00e-4 | DisGeNET | \n| leukemia | 0.0039 | OMIM_Disease | \n## Druggability (DGIdb / Open Targets) \n \nCategories: Cell Surface, Clinically Actionable, Druggable Genome, Kinase, Tyrosine Kinase \n### OpenTargets tractability \n \n| Modality | Tractable | Evidence | \n|---|---|---| \n| small molecule | yes | Approved Drug, High-Quality Ligand, Druggable Family | \n| antibody | yes | Advanced Clinical, GO CC high conf, UniProt loc med conf, UniProt SigP or TMHMM | \n| PROTAC | yes | UniProt Ubiquitination, Database Ubiquitination, Half-life Data, Small Molecule Binder | \n| other modality | yes | Approved Drug | \n### OpenTargets safety liabilities \n \n| Event | Datasource | Effect | Biosample | \n|---|---|---|---| \n| heart disease | Force et al. (2011) | - | cardiovascular system | \n| Drug | Interaction Types | Score | Approved | Sources | \n|---|---|---|---|---| \n| PETROSIOL A | - | 0.732 | no | 1 | \n| BECAPLERMIN | agonist | 0.488 | yes | 4 | \n| CDP-860 | inhibitor | 0.366 | no | 1 | \n| PDGF RECEPTOR TYROSINE KINASE INHIBITOR III | inhibitor | 0.366 | no | 1 | \n| PDGF RECEPTOR TYROSINE KINASE INHIBITOR IV | inhibitor | 0.366 | no | 1 | \n| PDGF RTK INHIBITOR | inhibitor | 0.366 | no | 1 | \n| RINUCUMAB | inhibitor | 0.366 | no | 1 | \n| TELATINIB | inhibitor | 0.314 | no | 6 | \n| JI-101 | inhibitor | 0.244 | no | 2 | \n| X-82 | inhibitor | 0.219 | no | 3 | \n| AGL 2043 | inhibitor | 0.183 | no | 1 | \n| DOVITINIB LACTATE | - | 0.183 | no | 1 | \n| FLT-3 INHIBITOR II | inhibitor | 0.183 | no | 1 | \n| IACS-9439 | inhibitor | 0.183 | no | 1 | \n| KI-20227 | inhibitor | 0.183 | no | 2 | \nMore:\n  biomcp get gene PDGFRB ontology   - GO-style functional enrichment\n  biomcp get gene PDGFRB diagnostics   - diagnostic tests for this gene from GTR\n  biomcp get gene PDGFRB funding   - NIH Reporter grant support\n  biomcp get gene PDGFRB protein   - UniProt function and localization detail\nAll:\n  biomcp get gene PDGFRB all \nSee also:\n  biomcp search diagnostic --gene PDGFRB   - diagnostic tests for this gene\n  biomcp search pgx -g PDGFRB   - pharmacogenomics interactions\n  biomcp search variant -g PDGFRB\n  biomcp search article -g PDGFRB\n  biomcp search drug --target PDGFRB\n  biomcp gene trials PDGFRB \n\n[NCBI Gene](https://www.ncbi.nlm.nih.gov/gene/5159) | [UniProt](https://www.uniprot.org/uniprot/P09619) | [Ensembl](https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000113721) | [OMIM](https://www.omim.org/entry/173410)\n\n\n## Sources\n- Identity: NCBI Gene / MyGene.info\n- Summary: NCBI Gene\n- Aliases: NCBI Gene / MyGene.info\n- Pathways: KEGG, Reactome\n- Diseases: Enrichr\n- Druggability: DGIdb, Open Targets\n\n## Next commands\n- `biomcp get gene PDGFRB ontology`\n- `biomcp get gene PDGFRB diagnostics`\n- `biomcp get gene PDGFRB funding`\n- `biomcp get gene PDGFRB protein`\n- `biomcp search diagnostic --gene PDGFRB`\n- `biomcp search pgx -g PDGFRB`\n- `biomcp search variant -g PDGFRB`\n- `biomcp search article -g PDGFRB`\n- `biomcp search drug --target PDGFRB`\n- `biomcp gene trials PDGFRB`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

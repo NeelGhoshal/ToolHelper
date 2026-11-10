@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "EGFR",
+    "keyword": [
+      "mutation",
+      "NSCLC",
+      "osimertinib"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "d18e6acd1567ea6a002cf3487b5fb368e172412150b6f15c133e2225a3261f63",
+  "recorded_at": "2026-11-10T09:13:41.860895+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 10736.433800018858,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, keyword=mutation NSCLC osimertinib, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --gene EGFR --keyword \"mutation NSCLC osimertinib\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 29151359|Osimertinib in Untreated EGFR-Mutated Advanced Non-Small-Cel…|Europe PMC|2017-11-18|-|4492| \n|PMID 27959700|Osimertinib or Platinum-Pemetrexed in EGFR T790M-Positive Lu…|Europe PMC|2016-12-06|-|2847| \n|PMID 31751012|Overall Survival with Osimertinib in Untreated, EGFR-Mutated…|Europe PMC|2019-11-21|-|2495| \n|PMID 35403841|Neoadjuvant Nivolumab plus Chemotherapy in Resectable Lung C…|Europe PMC|2022-04-11|-|2339| \n|PMID 34330231|Efficacy of osimertinib for preventing leptomeningeal metast…|PubTator3|2021-07-30|-|15| \n|PMID 34166400|Real-world outcomes of first- and second-generation tyrosine…|PubTator3|2021-06-24|-|5| \n|PMID 39703183|Observational study of the efficacy and safety of first-line…|PubTator3|2024-12-20|-|4| \n|PMID 39018064|PIKing up and AKTing on resistance mutations in osimertinib-…|PubTator3|2024-07-17|-|1| \n|PMID 42993168|Impact of Dosage Modifications on Efficacy: Insights from Se…|PubMed|2026-11-06|-|0| \n|PMID 42990969|Il ruolo di osimertinib nel percorso terapeutico del NSCLC E…|PubMed|2026-11-04|-|0| \n \n \n \nNewest indexed: 2026-11-06 (4 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 29151359\n  biomcp search article -g EGFR -k \"mutation NSCLC osimertinib\" --year-min 2016 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

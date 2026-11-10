@@ -1,0 +1,40 @@
+{
+  "server": "biomcp",
+  "tool": "variant_articles",
+  "arguments": {
+    "items": [
+      {
+        "gene": "BRAF",
+        "protein": "p.V600E",
+        "rsid": "rs113488022",
+        "ref": "A",
+        "alt": "T",
+        "genomic": "NC_000007.10:g.140453136A>T",
+        "request_id": "braf_v600e"
+      }
+    ],
+    "limit": 10,
+    "strategy": "union"
+  },
+  "args_key": "909a6e443170b5c1456866438694833f6f823a5d74818c0acd144be6a9d41378",
+  "recorded_at": "2026-11-10T09:21:22.293365+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "70147d049a9e3bd31190ae3b87d93f1485386242eee6a9cc9a986c130f8b3d8f",
+  "latency_ms": 1.5130999963730574,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"items\": [\n    {\n      \"request_id\": \"braf_v600e\",\n      \"requested_variant\": {\n        \"gene\": \"BRAF\",\n        \"protein_change\": \"p.V600E\",\n        \"genomic_accession\": \"NC_000007.10\",\n        \"position\": 140453136,\n        \"reference\": \"A\",\n        \"alternate\": \"T\",\n        \"rsid\": \"rs113488022\"\n      },\n      \"resolution\": null,\n      \"complete\": false,\n      \"truncated\": false,\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 0,\n        \"total\": null,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"source_status\": [],\n      \"error\": {\n        \"code\": \"invalid_argument\",\n        \"message\": \"variant article item cannot combine genomic with accession, position, ref, or alt\"\n      },\n      \"results\": []\n    }\n  ],\n  \"complete\": false,\n  \"truncated\": false,\n  \"_meta\": {\n    \"next_commands\": []\n  }\n}"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

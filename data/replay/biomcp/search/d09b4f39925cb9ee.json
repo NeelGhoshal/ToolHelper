@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "BRAF",
+    "json": true,
+    "keyword": [
+      "V600E",
+      "colorectal",
+      "thyroid"
+    ],
+    "limit": 8,
+    "sort": "citations"
+  },
+  "args_key": "d09b4f39925cb9eee0529c314f946b3d4243e8477ab0f41ec6d332e39f4334ab",
+  "recorded_at": "2026-11-09T21:55:02.724819+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6144.181400013622,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=BRAF, keyword=V600E colorectal thyroid, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 8,\n    \"returned\": 8,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 8,\n  \"results\": [\n    {\n      \"pmid\": \"26462967\",\n      \"pmcid\": \"PMC4739132\",\n      \"doi\": \"10.1089/thy.2015.0020\",\n      \"title\": \"2015 American Thyroid Association Management Guidelines for Adult Patients with Thyroid Nodules and Differentiated Thyroid Cancer: The American Thyroid Association Guidelines Task Force on Thyroid Nodules and Differentiated Thyroid Cancer.\",\n      \"journal\": \"Thyroid\",\n      \"date\": \"2016-01-01\",\n      \"citation_count\": 10412,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"24138928\",\n      \"pmcid\": \"PMC4015143\",\n      \"doi\": \"10.1186/gb-2013-14-10-r115\",\n      \"title\": \"DNA methylation age of human tissues and cell types.\",\n      \"journal\": \"Genome Biol\",\n      \"date\": \"2013-01-01\",\n      \"citation_count\": 5694,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"24553385\",\n      \"pmcid\": \"PMC4017867\",\n      \"doi\": \"10.1126/scitranslmed.3007094\",\n      \"title\": \"Detection of circulating tumor DNA in early- and late-stage human malignancies.\",\n      \"journal\": \"Sci Transl Med\",\n      \"date\": \"2014-02-01\",\n      \"citation_count\": 3920,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"37489176\",\n      \"pmcid\": \"PMC10363389\",\n      \"title\": \"Dendritic Cell-Derived Exosomes Driven Drug Co-Delivery Biomimetic Nanosystem for Effective Combination of Malignant Melanoma Immunotherapy and Gene Therapy\",\n      \"journal\": \"Drug Des Devel Ther\",\n      \"date\": \"2023-07-19\",\n      \"citation_count\": 20,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"35936102\",\n      \"pmcid\": \"PMC9354042\",\n      \"title\": \"Discovery of BRAF/HDAC Dual Inhibitors Suppressing Proliferation of Human Colorectal Cancer Cells\",\n      \"journal\": \"Front Chem\",\n      \"date\": \"2022-07-22\",\n      \"citation_count\": 14,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"38476918\",\n      \"pmcid\": \"PMC10928970\",\n      \"title\": \"Comparative efficiency of differential diagnostic methods for the identification of BRAF V600E gene mutation in papillary thyroid cancer (Review)\",\n      \"journal\": \"Exp Ther Med\",\n      \"date\": \"2024-02-20\",\n      \"citation_count\": 7,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42285341\",\n      \"title\": \"Molecular Landscape and Advanced Diagnostic Technologies for BRAF Mutations in Cancer: From Quantitative PCR and ddPCR to CRISPR-Based Platforms.\",\n      \"journal\": \"Clinica chimica acta; international journal of clinical chemistry\",\n      \"date\": \"2027-01-01\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42487519\",\n      \"title\": \"New Treatment Strategy and Future Research Direction for BRAF-Mutated Cancer.\",\n      \"journal\": \"Cancer science\",\n      \"date\": \"2026-11-01\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --gene BRAF --keyword \\\"V600E colorectal thyroid\\\" --exclude-retracted --sort citations --source semanticscholar --limit 8 --offset 0\",\n      \"biomcp get article 26462967\",\n      \"biomcp search article -g BRAF -k \\\"V600E colorectal thyroid\\\" --year-min 2013 --year-max 2027 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

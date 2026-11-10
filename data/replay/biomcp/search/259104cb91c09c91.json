@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "melanoma"
+    ],
+    "intervention": [
+      "encorafenib",
+      "binimetinib"
+    ],
+    "limit": 5
+  },
+  "args_key": "259104cb91c09c91194d4130ade5129a14b50c208beb0275153e6089093a79b4",
+  "recorded_at": "2026-11-09T20:07:16.819512+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 245.99130000569858,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 5 of 30 \n \nQuery: condition=melanoma, intervention=encorafenib binimetinib \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT04741997|Adjuvant Therapy Based on…|RECRUITING|EARLY_PHASE1|Melanoma Stage III, Melanoma Stage IV, BRAF V600 Mutation| \n|NCT04657991|A Clinical Trial of Three…|ACTIVE_NOT_RECRUITING|3|Melanoma| \n|NCT03864042|Pharmacokinetic Drug-drug…|COMPLETED|1|Advanced Solid Tumors, Metastatic Melanoma| \n|NCT05260684|Comparative Effectiveness…|COMPLETED|-|Melanoma| \n|NCT05954546|A Study to Compare How Ef…|COMPLETED|-|Metastatic Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-5 of 30 results. Use --offset 5 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

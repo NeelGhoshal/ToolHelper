@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "disease": [
+      "sickle cell disease",
+      "beta thalassemia"
+    ],
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "gene editing"
+    ],
+    "limit": 15,
+    "sort": "date"
+  },
+  "args_key": "3b839b9deebea5178080c2fd9b66742ca9412fb2e1fb0b855772ace124ed47ab",
+  "recorded_at": "2026-11-10T08:47:49.879890+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 8481.192699982785,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: disease=sickle cell disease beta thalassemia, keyword=CRISPR gene editing, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --disease \"sickle cell disease beta thalassemia\" --keyword \"CRISPR gene editing\" --exclude-retracted --sort date --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42977761|Genotoxic safety and long-term engraftment dynamics of effic…|PubTator3, PubMed|2026-11-03|-|0| \n|PMID 42838069|The expanding therapeutic landscape of β-thalassaemia.|PubMed|2026-11-01|-|2| \n|PMID 42973349|CRISPR/Cas9-based Genome Editing in Inherited Diseases: Mech…|PubTator3, PubMed|2026-10-21|-|0| \n|PMID 42940449|Inherited Anemia: A Contemporary Clinical and Lab Review.|PubTator3, PubMed|2026-10-12|-|0| \n|PMID 42755327|CRISPR-Based Mediated Reactivation of Fetal Hemoglobin as a…|PubTator3, PubMed|2026-09-18|-|0| \n|PMID 42758354|CRISPR-Cas9 genome editing: technological advances, delivery…|PubTator3, PubMed|2026-09-18|-|0| \n|PMID 42787623|Clinical translation of CRISPR-Cas9 therapeutics in cancer a…|PubMed|2026-09-10|-|0| \n|PMID 42486091|Base editing for precision therapeutics.|PubMed|2026-09-09|-|1| \n|PMID 42617141|Translating CRISPR to Practice in the Clinic: Transformative…|PubTator3, PubMed|2026-08-19|-|0| \n|PMID 42603691|Gene therapy: The current trajectory of clinical and commerc…|Europe PMC|2026-08-15|-|0| \n|PMID 42426018|Thalassaemia.|PubMed|2026-07-09|-|5| \n|PMID 42510769|Oligonucleotide Synthesis Errors Are a Source of Untoward Va…|PubMed|2026-06-24|-|1| \n|PMID 41211267|Clustered Regularly Interspaced Short Palindromic Repeats (C…|Europe PMC|2025-11-01|-|1| \n|PMID 40463393|CAR-T cell therapy clinical trials: global progress, challen…|Europe PMC|2025-05-20|-|25| \n|PMID 40373211|Patient-Specific In Vivo Gene Editing to Treat a Rare Geneti…|Europe PMC|2025-05-15|-|343| \n \n \n \nNewest indexed: 2026-10-06 (35 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42977761\n  biomcp search article -d \"sickle cell disease beta thalassemia\" -k \"CRISPR gene editing\" --year-min 2025 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "Mendelian randomization",
+      "Alzheimer",
+      "LDL"
+    ],
+    "limit": 10
+  },
+  "args_key": "ddc4d5face0a32e2acfc7d5a795c071645eb693101c0820406857452de7e8f24",
+  "recorded_at": "2026-11-10T08:52:26.202315+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 18325.305799982743,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=Mendelian randomization Alzheimer LDL, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nEurope PMC source status: degraded (Europe PMC timed out after 12s) \nRetry: `biomcp search article --keyword \"Mendelian randomization Alzheimer LDL\" --exclude-retracted --sort relevance --source europepmc --limit 10 --offset 0` \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"Mendelian randomization Alzheimer LDL\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 38402277|Mendelian randomization reveals apolipoprotein B shortens he…|PubTator3|2024-02-24|hybrid 0.574 + title+abstract 4/4|22| \n|PMID 37488110|Associations of cardiovascular risk factors and lifestyle be…|PubTator3|2023-07-24|hybrid 0.517 + title+abstract 4/4|23| \n|PMID 37898443|The evolving role of cholesteryl ester transfer protein inhi…|PubTator3|2023-10-28|hybrid 0.504 + title+abstract 4/4|26| \n|PMID 35087849|Genetic Predisposition to Low-Density Lipoprotein Cholestero…|PubTator3|2022-01-11|hybrid 0.5 + title+abstract 4/4|29| \n|PMID 40257621|The causal association between circulating metabolites and A…|PubTator3|2025-04-21|hybrid 0.442 + title+abstract 4/4|3| \n|PMID 39855965|Assessing the causal role of lipid metabolites in Alzheimer'…|PubTator3|2025-01-23|hybrid 0.435 + title+abstract 4/4|2| \n|PMID 41075965|Investigating Shared Cardiovascular Factors and Genetic Over…|PubTator3|2025-10-09|hybrid 0.405 + title+abstract 4/4|2| \n|PMID 42938334|Associations of Blood Lipid Traits with Cognitive-Related Ou…|PubMed|2026-09-30|hybrid 0.39 + title+abstract 4/4|0| \n|PMID 42353761|Molecular Basis of Synergistic Causal Effect of Dual GLP-1R…|PubMed|2026-05-25|hybrid 0.381 + title+abstract 4/4|1| \n|PMID 42926614|Sex differences in genetic liability to modifiable Alzheimer…|PubMed|2026-10-06|hybrid 0.38 + title+abstract 4/4|0| \n \n \n \nNewest indexed: 2026-10-27 (14 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 38402277\n  biomcp search article -k \"Mendelian randomization Alzheimer LDL\" --year-min 2022 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

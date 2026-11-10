@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search drug pembrolizumab --json",
+    "json": true
+  },
+  "args_key": "fa8be654592e729eea01d32f991f072c709278b0370d5c090717580dfbc2c3bf",
+  "recorded_at": "2026-11-09T19:38:41.569871+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 22092.187900008867,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"region\": \"all\",\n  \"regions\": {\n    \"us\": {\n      \"region\": \"us\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 2,\n        \"total\": 2,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"count\": 2,\n      \"results\": [\n        {\n          \"name\": \"pembrolizumab\",\n          \"target\": \"PDCD1\",\n          \"match_kind\": \"active_substance\"\n        },\n        {\n          \"name\": \"pembrolizumab and berahyaluronidase alfa-pmph\",\n          \"mechanism\": \"Programmed Death Receptor-1-directed Antibody Interactions\",\n          \"match_kind\": \"broad_text\"\n        }\n      ]\n    },\n    \"eu\": {\n      \"region\": \"eu\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 3,\n        \"total\": 3,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"count\": 3,\n      \"results\": [\n        {\n          \"name\": \"Keytruda\",\n          \"active_substance\": \"pembrolizumab\",\n          \"ema_product_number\": \"EMEA/H/C/003820\",\n          \"status\": \"Authorised\",\n          \"match_kind\": \"active_substance\",\n          \"matched_term\": \"pembrolizumab\",\n          \"source\": \"query\"\n        },\n        {\n          \"name\": \"Padcev\",\n          \"active_substance\": \"Enfortumab vedotin\",\n          \"ema_product_number\": \"EMEA/H/C/005392\",\n          \"status\": \"Authorised\",\n          \"match_kind\": \"broad_text\",\n          \"matched_term\": \"pembrolizumab\",\n          \"source\": \"query\"\n        },\n        {\n          \"name\": \"Kisplyx\",\n          \"active_substance\": \"lenvatinib mesilate\",\n          \"ema_product_number\": \"EMEA/H/C/004224\",\n          \"status\": \"Authorised\",\n          \"match_kind\": \"broad_text\",\n          \"matched_term\": \"pembrolizumab\",\n          \"source\": \"query\"\n        }\n      ]\n    },\n    \"who\": {\n      \"region\": \"who\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 0,\n        \"total\": 0,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"count\": 0,\n      \"results\": []\n    }\n  },\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get drug pembrolizumab\",\n      \"biomcp list drug\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

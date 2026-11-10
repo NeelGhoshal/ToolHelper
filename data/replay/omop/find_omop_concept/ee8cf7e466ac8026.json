@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "creatinine serum or plasma",
+    "max_results": 10,
+    "omop_field": "concept_name",
+    "omop_table": "measurement"
+  },
+  "args_key": "ee8cf7e466ac80261c8546ac36cff4788efc2da3c901d7553807b00a4face96d",
+  "recorded_at": "2026-11-10T07:04:59.945879+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1204.0442999859806,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 646994,\n      \"code\": \"110658-2\",\n      \"name\": \"Creatinine [Measurement] in Serum or Plasma\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/646994\"\n    },\n    {\n      \"concept_id\": 3016723,\n      \"code\": \"2160-0\",\n      \"name\": \"Creatinine [Mass/volume] in Serum or Plasma\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3016723\"\n    },\n    {\n      \"concept_id\": 3020564,\n      \"code\": \"14682-9\",\n      \"name\": \"Creatinine [Moles/volume] in Serum or Plasma\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3020564\"\n    },\n    {\n      \"concept_id\": 40762895,\n      \"code\": \"59834-2\",\n      \"name\": \"Creatinine reduction ratio in Serum or Plasma\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/40762895\"\n    },\n    {\n      \"concept_id\": 3043954,\n      \"code\": \"39802-4\",\n      \"name\": \"Creatinine in dialysis fluid/Creatinine in serum or plasma\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3043954\"\n    },\n    {\n      \"concept_id\": 46235076,\n      \"code\": \"77140-2\",\n      \"name\": \"Creatinine [Moles/volume] in Serum, Plasma or Blood\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/46235076\"\n    },\n    {\n      \"concept_id\": 3041716,\n      \"code\": \"40248-7\",\n      \"name\": \"Creatinine [Mass/volume] in Serum or Plasma --baseline\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3041716\"\n    },\n    {\n      \"concept_id\": 3041735,\n      \"code\": \"40264-4\",\n      \"name\": \"Creatinine [Moles/volume] in Serum or Plasma --baseline\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3041735\"\n    },\n    {\n      \"concept_id\": 1260102,\n      \"code\": \"103616-9\",\n      \"name\": \"Creatinine [Moles/volume] in Serum or Plasma by LC/MS/MS\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/1260102\"\n    },\n    {\n      \"concept_id\": 1092102,\n      \"code\": \"104537-6\",\n      \"name\": \"Creatine, guanidinoacetate and creatinine panel - Serum or Plasma\",\n      \"class\": \"Lab Test\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/1092102\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"creatinine serum or plasma\",\n    \"omop_table\": \"measurement\",\n    \"omop_field\": \"concept_name\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

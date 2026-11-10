@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "TP53",
+    "json": true,
+    "keyword": [
+      "disease",
+      "association",
+      "cancer"
+    ],
+    "limit": 5
+  },
+  "args_key": "a2a1b67dc7b63ec92b31bb80af257e6745309171eebab0f1056cd2c249819c15",
+  "recorded_at": "2026-11-10T09:25:25.158857+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5818.857800011756,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=TP53, keyword=disease association cancer, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"sort\": \"relevance\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"ranking_policy\": \"hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 5,\n  \"results\": [\n    {\n      \"pmid\": \"42909660\",\n      \"pmcid\": \"PMC13694483\",\n      \"doi\": \"10.1007/s10585-026-10444-8\",\n      \"title\": \"Molecular, histopathological, and clinical risk factors for overall metastatic disease and brain metastases in surgically resected stage I-III lung cancer.\",\n      \"journal\": \"Clin Exp Metastasis\",\n      \"date\": \"2026-10-23\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42495799\",\n      \"pmcid\": \"PMC13725332\",\n      \"doi\": \"10.1158/1940-6207.capr-26-0112\",\n      \"title\": \"TP53-Mutated Preneoplastic Colonies, Adaptive Immune Response, and Risk for Lung Cancer and COPD.\",\n      \"journal\": \"Cancer Prev Res (Phila)\",\n      \"date\": \"2026-11-01\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"34188985\",\n      \"pmcid\": \"PMC8232974\",\n      \"title\": \"Mutant Phenotype p53 Immunohistochemical Expression Is Associated With Poor Prognostic Parameters and Disease-Free Survival in Triple-Negative Metaplastic Breast Carcinoma\",\n      \"journal\": \"Cureus\",\n      \"date\": \"2021-05-25\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"40984040\",\n      \"pmcid\": \"PMC12454170\",\n      \"title\": \"Outcomes of Wild Type and TP53-Mutated B Cell Malignancy Patients Receiving CAR-T Cell Therapy: A Systematic Review and Meta-Analysis\",\n      \"journal\": \"J Cell Mol Med\",\n      \"date\": \"2025-09-01\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"43001251\",\n      \"title\": \"From \\\"undruggable\\\" to tractable: Therapeutic advances targeting Kristen rat sarcoma viral homolog glycine to cysteine mutation at codon 12 (KRAS G12C)-mutant cancers and emerging resistance mechanisms.\",\n      \"journal\": \"Cancer pathogenesis and therapy\",\n      \"date\": \"2026-02-10\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"partial_query_match\",\n        \"message\": \"The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search article --gene TP53 --keyword \\\"disease association cancer\\\" --exclude-retracted --sort relevance --source semanticscholar --limit 5 --offset 0\",\n      \"biomcp get article 42909660\",\n      \"biomcp search article -g TP53 -k \\\"disease association cancer\\\" --year-min 2021 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

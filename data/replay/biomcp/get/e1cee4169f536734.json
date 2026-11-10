@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "ERBB2",
+    "sections": [
+      "protein",
+      "ontology"
+    ]
+  },
+  "args_key": "e1cee4169f53673424b84bf8886012f1853fd506ee3fcce9c4fb34fa6e750b3d",
+  "recorded_at": "2026-11-09T21:46:06.204891+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1189.7828000073787,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# ERBB2 - protein, ontology \n## Ontology (Enrichr) \n \nNote: single-gene Enrichr p-values are exploratory and should be interpreted cautiously. \n \n| Term | P-value | Library | \n|---|---|---| \n| ERBB2-EGFR Signaling Pathway (GO:0038134) | 2.50e-4 | GO_Biological_Process_2025 | \n| ERBB2 Signaling Pathway (GO:0038128) | 6.50e-4 | GO_Biological_Process_2025 | \n| Positive Regulation of Protein Targeting to M… | 1.00e-3 | GO_Biological_Process_2025 | \n| Regulation of Protein Targeting to Membrane (… | 0.0012 | GO_Biological_Process_2025 | \n| Positive Regulation of Rho Protein Signal Tra… | 0.0013 | GO_Biological_Process_2025 | \n| RNA Polymerase Core Enzyme Binding (GO:004317… | 0.0016 | GO_Molecular_Function_2025 | \n| Transmembrane Receptor Protein Kinase Activit… | 0.0018 | GO_Molecular_Function_2025 | \n| Transmembrane Receptor Protein Tyrosine Kinas… | 0.0025 | GO_Molecular_Function_2025 | \n| Receptor Tyrosine Kinase Binding (GO:0030971) | 0.0031 | GO_Molecular_Function_2025 | \n| Protein Tyrosine Kinase Binding (GO:1990782) | 0.0041 | GO_Molecular_Function_2025 | \n## Protein (UniProt) \n \n- Accession: P04626 \n- Name: Receptor tyrosine-protein kinase erbB-2 \n- Also known as: MLN 19, Metastatic lymph node gene 19 protein, Proto-oncogene Neu, Proto-oncogene c-ErbB-2, Tyrosine kinase-type cell surface receptor HER2, p185erbB2 \n- Length: 1255 aa \n- Isoforms (6): ERBB2 (1255 aa), CTF-611, CTF-687, 4, 5, B \n- Function: Protein tyrosine kinase that is part of several cell surface receptor complexes, but that apparently needs a coreceptor for ligand binding. Essential component of a neuregulin-receptor complex, although neuregulins do not interact with it alone. GP30 is a potential ligand for this receptor. Regulates outgrowth and stabilization of peripheral microtubules (MTs). Upon ERBB2 activation, the MEMO1-RHOA-DIAPH1 signaling pathway elicits the phosphorylation and thus the inhibition of GSK3B at cell membrane. This prevents the phosphorylation of APC and CLASP2, allowing its association with the cell membrane. In turn, membrane-bound APC allows the localization of MACF1 to the cell membrane, which is required for microtubule capture and stabilization \nMore:\n  biomcp get gene ERBB2 pathways   - Reactome/KEGG pathway context\n  biomcp get gene ERBB2 diseases   - disease associations\n  biomcp get gene ERBB2 diagnostics   - diagnostic tests for this gene from GTR\n  biomcp get gene ERBB2 funding   - NIH Reporter grant support\nAll:\n  biomcp get gene ERBB2 all \nSee also:\n  biomcp get gene ERBB2 protein   - deepen into protein function and localization\n  biomcp search diagnostic --gene ERBB2   - diagnostic tests for this gene\n  biomcp search pgx -g ERBB2   - pharmacogenomics interactions\n  biomcp search variant -g ERBB2\n  biomcp search article -g ERBB2\n  biomcp search drug --target ERBB2\n  biomcp gene trials ERBB2 \n\n[NCBI Gene](https://www.ncbi.nlm.nih.gov/gene/2064) | [UniProt](https://www.uniprot.org/uniprot/P04626) | [Ensembl](https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000141736) | [OMIM](https://www.omim.org/entry/164870)\n\n\n## Sources\n- Identity: NCBI Gene / MyGene.info\n- Summary: NCBI Gene\n- Aliases: NCBI Gene / MyGene.info\n- Ontology: Enrichr\n- Protein: UniProt\n\n## Next commands\n- `biomcp get gene ERBB2 pathways`\n- `biomcp get gene ERBB2 diseases`\n- `biomcp get gene ERBB2 diagnostics`\n- `biomcp get gene ERBB2 funding`\n- `biomcp get gene ERBB2 protein`\n- `biomcp search diagnostic --gene ERBB2`\n- `biomcp search pgx -g ERBB2`\n- `biomcp search variant -g ERBB2`\n- `biomcp search article -g ERBB2`\n- `biomcp search drug --target ERBB2`\n- `biomcp gene trials ERBB2`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

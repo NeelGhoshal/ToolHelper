@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search drug --target ABL1 --json",
+    "json": true
+  },
+  "args_key": "1be4368215b49fbafb5f88f40580a0012c97aebcc69e90f7bf5e0806f9edc6de",
+  "recorded_at": "2026-11-09T21:59:44.158781+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 39.60459999507293,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"region\": \"us\",\n  \"regions\": {\n    \"us\": {\n      \"region\": \"us\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 8,\n        \"total\": 8,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"count\": 8,\n      \"results\": [\n        {\n          \"name\": \"hqp1351\",\n          \"drugbank_id\": \"DB16185\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Inhibitor of Bcr/Abl fusion protein\",\n          \"target\": \"ABL1\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"asciminib\",\n          \"drugbank_id\": \"DB12597\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Inhibitor of Tyrosine-protein kinase ABL1\",\n          \"target\": \"ABL1\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"imatinib\",\n          \"drugbank_id\": \"DB00619\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Bcr-Abl Tyrosine Kinase Inhibitors\",\n          \"target\": \"ABL1\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"nilotinib\",\n          \"drugbank_id\": \"DB04868\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Bcr-Abl Tyrosine Kinase Inhibitors\",\n          \"target\": \"ABL1\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"flumatinib\",\n          \"drugbank_id\": \"DB11904\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Inhibitor of Tyrosine-protein kinase ABL1\",\n          \"target\": \"ABL1\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"dasatinib\",\n          \"drugbank_id\": \"DB01254\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Inhibitor of Tyrosine-protein kinase ABL1\",\n          \"target\": \"ABL1\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"ponatinib\",\n          \"drugbank_id\": \"DB08901\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Protein Kinase Inhibitors\",\n          \"target\": \"ABL1\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"bosutinib\",\n          \"drugbank_id\": \"DB06616\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Inhibitor of Tyrosine-protein kinase ABL1\",\n          \"target\": \"ABL1\",\n          \"match_kind\": \"broad_text\"\n        }\n      ]\n    }\n  },\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get drug hqp1351\",\n      \"biomcp list drug\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "BRAF",
+    "json": true,
+    "keyword": [
+      "RAS",
+      "MAPK",
+      "signaling"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "962c7b079c2db5a402d4f90629aa315b58ceb684170db8e35f25ce500b48e54f",
+  "recorded_at": "2026-11-09T21:54:43.147446+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3199.8433000117075,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=BRAF, keyword=RAS MAPK signaling, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"23539594\",\n      \"pmcid\": \"PMC3749880\",\n      \"doi\": \"10.1126/science.1235122\",\n      \"title\": \"Cancer genome landscapes.\",\n      \"journal\": \"Science\",\n      \"date\": \"2013-03-01\",\n      \"citation_count\": 6000,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"26771115\",\n      \"pmcid\": \"PMC4715268\",\n      \"doi\": \"10.1016/j.cmet.2015.12.006\",\n      \"title\": \"The Emerging Hallmarks of Cancer Metabolism.\",\n      \"journal\": \"Cell Metab\",\n      \"date\": \"2016-01-01\",\n      \"citation_count\": 4700,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"24120142\",\n      \"pmcid\": \"PMC3910500\",\n      \"doi\": \"10.1016/j.cell.2013.09.034\",\n      \"title\": \"The somatic genomic landscape of glioblastoma.\",\n      \"journal\": \"Cell\",\n      \"date\": \"2013-10-01\",\n      \"citation_count\": 4264,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"26457759\",\n      \"pmcid\": \"PMC4636487\",\n      \"doi\": \"10.1038/nm.3967\",\n      \"title\": \"The consensus molecular subtypes of colorectal cancer.\",\n      \"journal\": \"Nat Med\",\n      \"date\": \"2015-10-12\",\n      \"citation_count\": 4236,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"35158933\",\n      \"pmcid\": \"PMC8833570\",\n      \"title\": \"KRAS and RAS-MAPK Pathway Deregulation in Mature B Cell Lymphoproliferative Disorders\",\n      \"journal\": \"Cancers (Basel)\",\n      \"date\": \"2022-01-28\",\n      \"citation_count\": 32,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"33750116\",\n      \"pmcid\": \"PMC8041278\",\n      \"title\": \"Selective CRAF Inhibition Elicits Transactivation\",\n      \"journal\": \"J Am Chem Soc\",\n      \"date\": \"2021-03-31\",\n      \"citation_count\": 20,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"33937235\",\n      \"pmcid\": \"PMC8085600\",\n      \"title\": \"The Role of PDE8 in T Cell Recruitment and Function in Inflammation\",\n      \"journal\": \"Front Cell Dev Biol\",\n      \"date\": \"2021-04-16\",\n      \"citation_count\": 15,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"34222333\",\n      \"pmcid\": \"PMC8244928\",\n      \"title\": \"Blocking K-Ras Interaction With the Plasma Membrane Is a Tractable Therapeutic Approach to Inhibit Oncogenic K-Ras Activity\",\n      \"journal\": \"Front Mol Biosci\",\n      \"date\": \"2021-06-16\",\n      \"citation_count\": 11,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42991401\",\n      \"title\": \"Beyond BRAF V600: emerging MAPK-targeted therapeutic strategies.\",\n      \"journal\": \"Annals of translational medicine\",\n      \"date\": \"2026-10-30\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42937015\",\n      \"title\": \"Kinetic signatures of RAS-BRAF engagement reveal isoform selectivity, oncogenic amplification, and mutation-dependent inhibitor resistance.\",\n      \"journal\": \"The FEBS journal\",\n      \"date\": \"2026-10-27\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --gene BRAF --keyword \\\"RAS MAPK signaling\\\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0\",\n      \"biomcp get article 23539594\",\n      \"biomcp search article -g BRAF -k \\\"RAS MAPK signaling\\\" --year-min 2013 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

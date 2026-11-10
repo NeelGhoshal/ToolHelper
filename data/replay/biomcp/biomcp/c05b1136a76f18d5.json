@@ -1,0 +1,28 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "drug search metformin --json 2>/dev/null | head -100"
+  },
+  "args_key": "c05b1136a76f18d581c72124364e74867fa4c77380934f48df8015162b5ae5b0",
+  "recorded_at": "2026-11-10T06:19:10.596614+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 5.119899986311793,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: reversed search syntax; use `biomcp search drug`; the supplied search arguments were not accepted"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

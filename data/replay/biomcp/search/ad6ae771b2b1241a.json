@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "BRAF gene serine threonine kinase RAS-RAF-MEK-ERK MAPK pathway proto-oncogene chromosome 7"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "ad6ae771b2b1241a80ca621d0f2ea4aa531ce1f910f9dd534d65a406043bb520",
+  "recorded_at": "2026-11-10T04:02:32.644710+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4443.260000000009,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=BRAF gene serine threonine kinase RAS-RAF-MEK-ERK MAPK pathway proto-oncogene chromosome 7, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 5,\n  \"results\": [\n    {\n      \"pmid\": \"24120142\",\n      \"pmcid\": \"PMC3910500\",\n      \"doi\": \"10.1016/j.cell.2013.09.034\",\n      \"title\": \"The somatic genomic landscape of glioblastoma.\",\n      \"journal\": \"Cell\",\n      \"date\": \"2013-10-01\",\n      \"citation_count\": 4264,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"37597078\",\n      \"pmcid\": \"PMC10475008\",\n      \"doi\": \"10.1007/s00204-023-03562-9\",\n      \"title\": \"Reactive oxygen species, toxicity, oxidative stress, and antioxidants: chronic diseases and aging.\",\n      \"journal\": \"Arch Toxicol\",\n      \"date\": \"2023-08-19\",\n      \"citation_count\": 1749,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"32296018\",\n      \"pmcid\": \"PMC7082344\",\n      \"doi\": \"10.1038/s41392-020-0116-z\",\n      \"title\": \"Comprehensive review of targeted therapy for colorectal cancer.\",\n      \"journal\": \"Signal Transduct Target Ther\",\n      \"date\": \"2020-03-20\",\n      \"citation_count\": 1248,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"30782187\",\n      \"pmcid\": \"PMC6379961\",\n      \"doi\": \"10.1186/s12943-019-0954-x\",\n      \"title\": \"Targeting PI3K in cancer: mechanisms and advances in clinical trials.\",\n      \"journal\": \"Mol Cancer\",\n      \"date\": \"2019-02-19\",\n      \"citation_count\": 1192,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"34054126\",\n      \"pmcid\": \"PMC8165101\",\n      \"doi\": \"10.1038/s41392-021-00572-w\",\n      \"title\": \"Small molecules in targeted cancer therapy: advances, challenges, and future perspectives.\",\n      \"journal\": \"Signal Transduct Target Ther\",\n      \"date\": \"2021-05-31\",\n      \"citation_count\": 1181,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"BRAF gene serine threonine kinase RAS-RAF-MEK-ERK MAPK pathway proto-oncogene chromosome 7\\\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0\",\n      \"biomcp get article 24120142\",\n      \"biomcp search article -k \\\"BRAF gene serine threonine kinase RAS-RAF-MEK-ERK MAPK pathway proto-oncogene chromosome 7\\\" --year-min 2013 --year-max 2023 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

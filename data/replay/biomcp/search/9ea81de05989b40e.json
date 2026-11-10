@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "melanoma"
+    ],
+    "intervention": [
+      "vemurafenib"
+    ],
+    "json": true,
+    "limit": 5
+  },
+  "args_key": "9ea81de05989b40e2cfae524e3ab2a868363bac76496cad96bc0c79cd15dfcab",
+  "recorded_at": "2026-11-09T20:33:23.172079+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 923.8350999949034,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": null,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 5,\n  \"results\": [\n    {\n      \"nct_id\": \"NCT01596140\",\n      \"title\": \"Vemurafenib in Combination With Everolimus or Temsirolimus With Advanced Cancer\",\n      \"status\": \"COMPLETED\",\n      \"phase\": \"PHASE1\",\n      \"conditions\": [\n        \"Advanced Cancer\",\n        \"Solid Tumor\"\n      ],\n      \"sponsor\": \"M.D. Anderson Cancer Center\",\n      \"matched_intervention_label\": \"Vemurafenibum\"\n    },\n    {\n      \"nct_id\": \"NCT01849666\",\n      \"title\": \"A Study of the Effect of Vemurafenib on the Pharmacokinetics of Phenprocoumon in Patients With BRAFV600 Mutation-Positive Metastatic Malignancy\",\n      \"status\": \"COMPLETED\",\n      \"phase\": \"PHASE1\",\n      \"conditions\": [\n        \"Malignant Melanoma, Neoplasms\"\n      ],\n      \"sponsor\": \"Hoffmann-La Roche\",\n      \"matched_intervention_label\": \"vemurafenib\"\n    },\n    {\n      \"nct_id\": \"NCT02354690\",\n      \"title\": \"Vemurafenib and TIL Therapy for Metastatic Melanoma\",\n      \"status\": \"COMPLETED\",\n      \"phase\": \"PHASE1/PHASE2\",\n      \"conditions\": [\n        \"Metastatic Melanoma\"\n      ],\n      \"sponsor\": \"Inge Marie Svane\",\n      \"matched_intervention_label\": \"vemurafenib\"\n    },\n    {\n      \"nct_id\": \"NCT03101254\",\n      \"title\": \"LY3022855 With BRAF/MEK Inhibition in Patients With Melanoma\",\n      \"status\": \"COMPLETED\",\n      \"phase\": \"PHASE1/PHASE2\",\n      \"conditions\": [\n        \"Melanoma\"\n      ],\n      \"sponsor\": \"Dana-Farber Cancer Institute\",\n      \"matched_intervention_label\": \"Vemurafenibum\"\n    },\n    {\n      \"nct_id\": \"NCT01826448\",\n      \"title\": \"A Phase 1b Open Label, Dose Escalation Study of PLX3397 in Combination With Vemurafenib in V600-mutated BRAF Melanoma\",\n      \"status\": \"TERMINATED\",\n      \"phase\": \"PHASE1\",\n      \"conditions\": [\n        \"V600-mutated BRAF Unresectable Melanoma\",\n        \"V600-mutated BRAF Metastatic Melanoma\",\n        \"Stage III or Stage IV Metastatic Melanoma That Has Not Been Previously Treated With a Selective BRAF Inhibitor\"\n      ],\n      \"sponsor\": \"Daiichi Sankyo\",\n      \"matched_intervention_label\": \"vemurafenib\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get trial NCT01596140\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

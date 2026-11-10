@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "colorectal cancer"
+    ],
+    "intervention": [
+      "encorafenib"
+    ],
+    "limit": 10
+  },
+  "args_key": "68c73c7964899f3bbb1b6a12ec723dc54ca7808725f016d6075ae75c95a5b472",
+  "recorded_at": "2026-11-10T06:36:54.756904+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 167.63869998976588,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 36 \n \nQuery: condition=colorectal cancer, intervention=encorafenib \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT04673955|BRAF Inhibitor Encorafeni…|RECRUITING|-|Metastatic Colorectal Carcinoma| \n|NCT07789210|A Single-Arm, Phase II, M…|RECRUITING|2|Colorectal Cancer, BRAF V600E Mutation Positive, Encorafenib, Cetuximab N01| \n|NCT04017650|Encorafenib, Cetuximab, a…|ACTIVE_NOT_RECRUITING|1/2|BRAF NP_004324.2:p.V600E, Metastatic Colon Ad… [abridged; 16 conditions total]| \n|NCT05710406|Testing the Use of BRAF-T…|ACTIVE_NOT_RECRUITING|2/3|Colon Adenocarcinoma, Microsatellite Stable Co… [abridged; 5 conditions total]| \n|NCT07714447|Efficacy and Safety of Tu…|NOT_YET_RECRUITING|2|CRC (Colorectal Cancer), BRAF| \n|NCT01436656|A Phase I Study of Oral L…|COMPLETED|1|Melanoma and Metastatic Colorectal Cancer| \n|NCT01719380|Study of LGX818 and Cetux…|COMPLETED|2|Colorectal Cancer| \n|NCT05004350|A Study Evaluating the Co…|COMPLETED|2|BRAF V600E, Metastatic Colorectal Cancer| \n|NCT06640166|Encorafenib + Cetuximab B…|UNKNOWN|2|Colorectal Carcinoma, Colorectal Neoplasms, C… [abridged; 10 conditions total]| \n|NCT05576896|Hydroxychloroquine in Com…|TERMINATED|2|Stage IV Colorectal Cancer Positive for BRAF V… [abridged; 3 conditions total]| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-10 of 36 results. Use --offset 10 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

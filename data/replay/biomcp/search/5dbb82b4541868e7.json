@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "melanoma"
+    ],
+    "intervention": [
+      "BRAF inhibitor"
+    ],
+    "json": true,
+    "limit": 5
+  },
+  "args_key": "5dbb82b4541868e70f7627437c041bab6d712b98615876c36558739ccff049b5",
+  "recorded_at": "2026-11-10T04:17:56.850761+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 13142.348199995467,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": 57,\n    \"has_more\": true,\n    \"next_page_token\": \"ZVNj7o2Elu8o3lpyBYqp6rLumpOQJJxsZ_Wt2fwW\"\n  },\n  \"count\": 5,\n  \"results\": [\n    {\n      \"nct_id\": \"NCT01596140\",\n      \"title\": \"Vemurafenib in Combination With Everolimus or Temsirolimus With Advanced Cancer\",\n      \"status\": \"COMPLETED\",\n      \"phase\": \"PHASE1\",\n      \"conditions\": [\n        \"Advanced Cancer\",\n        \"Solid Tumor\"\n      ],\n      \"sponsor\": \"M.D. Anderson Cancer Center\"\n    },\n    {\n      \"nct_id\": \"NCT01894672\",\n      \"title\": \"BRAF Inhibitor, LGX818, Utilizing a Pulsatile Schedule in Patients With Stage IV or Unresectable Stage III Melanoma Characterized by a BRAFV600 Mutation\",\n      \"status\": \"COMPLETED\",\n      \"phase\": \"PHASE2\",\n      \"conditions\": [\n        \"Melanoma\"\n      ],\n      \"sponsor\": \"Memorial Sloan Kettering Cancer Center\"\n    },\n    {\n      \"nct_id\": \"NCT02354690\",\n      \"title\": \"Vemurafenib and TIL Therapy for Metastatic Melanoma\",\n      \"status\": \"COMPLETED\",\n      \"phase\": \"PHASE1/PHASE2\",\n      \"conditions\": [\n        \"Metastatic Melanoma\"\n      ],\n      \"sponsor\": \"Inge Marie Svane\"\n    },\n    {\n      \"nct_id\": \"NCT01835184\",\n      \"title\": \"Cabozantinib-S-Malate and Vemurafenib in Treating Patients With Solid Tumors or Melanoma That is Metastatic or That Cannot Be Removed By Surgery\",\n      \"status\": \"TERMINATED\",\n      \"phase\": \"PHASE1\",\n      \"conditions\": [\n        \"Recurrent Melanoma\",\n        \"Stage IIIA Melanoma\",\n        \"Stage IIIB Melanoma\",\n        \"Stage IIIC Melanoma\",\n        \"Stage IV Melanoma\",\n        \"Unspecified Adult Solid Tumor, Protocol Specific\"\n      ],\n      \"sponsor\": \"National Cancer Institute (NCI)\"\n    },\n    {\n      \"nct_id\": \"NCT02410863\",\n      \"title\": \"Biopsy- and Biology-driven Optimization of Targeted Therapy in Subjects With Advanced Melanoma\",\n      \"status\": \"TERMINATED\",\n      \"phase\": \"PHASE2\",\n      \"conditions\": [\n        \"Malignant Melanoma\"\n      ],\n      \"sponsor\": \"Prof. Dr. med. Dirk Schadendorf\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get trial NCT01596140\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

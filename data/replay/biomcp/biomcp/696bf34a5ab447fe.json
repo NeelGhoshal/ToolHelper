@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "get drug DB00316 --json",
+    "json": true
+  },
+  "args_key": "696bf34a5ab447fe6275e73783d791eefa9c31721618b973eb7f45993703a433",
+  "recorded_at": "2026-11-09T21:35:17.456798+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 2214.774899999611,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: drug 'DB00316' not found.\n\nNo drug card matches \"DB00316\" by name, brand, or synonym. The MyChem text search matched other drugs: acetaminophen. Try searching: biomcp search drug -q \"DB00316\""
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

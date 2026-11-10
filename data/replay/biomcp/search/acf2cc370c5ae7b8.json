@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "disease": [
+      "non-small cell lung cancer"
+    ],
+    "drug": [
+      "osimertinib"
+    ],
+    "entity": "article",
+    "gene": "EGFR",
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "acf2cc370c5ae7b875ae4022319b955f32153b8371f9d0fe1a07bc1d329cdaf5",
+  "recorded_at": "2026-11-10T03:55:49.448836+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 26271.966000000248,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, disease=non-small cell lung cancer, drug=osimertinib, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nEurope PMC source status: degraded (Europe PMC timed out after 12s) \nRetry: `biomcp search article --gene EGFR --disease \"non-small cell lung cancer\" --drug osimertinib --exclude-retracted --sort citations --source europepmc --limit 10 --offset 0` \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --gene EGFR --disease \"non-small cell lung cancer\" --drug osimertinib --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 31953310|ONO-7475, a Novel AXL Inhibitor, Suppresses the Adaptive Res…|PubTator3|2020-05-01|-|91| \n|PMID 34808485|A phase I/II study of osimertinib in EGFR exon 20 insertion…|PubTator3|2021-12-01|-|48| \n|PMID 34087353|Dihydroartemisinin overcomes the resistance to osimertinib i…|PubTator3|2021-08-01|-|37| \n|PMID 34635799|Induction of SREBP1 degradation coupled with suppression of…|PubTator3|2021-12-01|-|34| \n|PMID 34471361|Osimertinib in EGFR-Mutated Lung Cancer: A Review of the Exi…|PubTator3|2021-08-26|-|30| \n|PMID 37610516|Clinical Efficacy and Safety of First- or Second-Generation…|PubTator3|2023-08-23|-|11| \n|PMID 37534792|Efficacy of Osimertinib Continuation plus Metronomic Oral Vi…|PubTator3|2023-08-03|-|3| \n|PMID 38089081|PD-L1 blockade by immune checkpoint inhibitors impairs sensi…|PubTator3|2022-12-07|-|2| \n|PMID 42993168|Impact of Dosage Modifications on Efficacy: Insights from Se…|PubMed|2026-11-06|-|0| \n|PMID 42988853|ENPP1 inhibits the cGAS-STING pathway to mediate immune evas…|PubMed|2026-11-05|-|0| \n \n \n \nNewest indexed: 2026-11-06 (4 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 31953310\n  biomcp search article -g EGFR -d \"non-small cell lung cancer\" --drug osimertinib --year-min 2020 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

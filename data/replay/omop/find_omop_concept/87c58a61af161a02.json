@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "Tylenol",
+    "max_results": 10,
+    "omop_field": "drug_concept_id",
+    "omop_table": "drug_exposure"
+  },
+  "args_key": "87c58a61af161a02f1a6b06999f04a39ac0290708bb75da5fe49272e67afb0cd",
+  "recorded_at": "2026-11-09T21:35:18.413723+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 934.8570000147447,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 19123261,\n      \"code\": \"608663\",\n      \"name\": \"acetaminophen 80 MG [Tylenol]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19123261\"\n    },\n    {\n      \"concept_id\": 19123271,\n      \"code\": \"608680\",\n      \"name\": \"acetaminophen 160 MG [Tylenol]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19123271\"\n    },\n    {\n      \"concept_id\": 19042337,\n      \"code\": \"569998\",\n      \"name\": \"acetaminophen 325 MG [Tylenol]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19042337\"\n    },\n    {\n      \"concept_id\": 19118900,\n      \"code\": \"570070\",\n      \"name\": \"acetaminophen 500 MG [Tylenol]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19118900\"\n    },\n    {\n      \"concept_id\": 19042362,\n      \"code\": \"646457\",\n      \"name\": \"acetaminophen 650 MG [Tylenol]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19042362\"\n    },\n    {\n      \"concept_id\": 40984124,\n      \"code\": \"OMOP2182086\",\n      \"name\": \"Acetaminophen 100 MG [Tylenol]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/40984124\"\n    },\n    {\n      \"concept_id\": 41140644,\n      \"code\": \"OMOP2338606\",\n      \"name\": \"Acetaminophen 200 MG [Tylenol]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/41140644\"\n    },\n    {\n      \"concept_id\": 41140642,\n      \"code\": \"OMOP2338604\",\n      \"name\": \"Acetaminophen 350 MG [Tylenol]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/41140642\"\n    },\n    {\n      \"concept_id\": 19042364,\n      \"code\": \"828553\",\n      \"name\": \"acetaminophen 32 MG/ML [Tylenol]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19042364\"\n    },\n    {\n      \"concept_id\": 44055638,\n      \"code\": \"OMOP1050269\",\n      \"name\": \"Acetaminophen 80 MG/ML [Tylenol]\",\n      \"class\": \"Branded Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/44055638\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"Tylenol\",\n    \"omop_table\": \"drug_exposure\",\n    \"omop_field\": \"drug_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

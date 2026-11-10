@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search drug --target PDGFRB --limit 10",
+    "json": true
+  },
+  "args_key": "f2732fb08b78988ed578bc945060f9698ee787dabd2976be382033696de175d2",
+  "recorded_at": "2026-11-10T07:13:50.220961+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 712.3740999959409,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"region\": \"us\",\n  \"regions\": {\n    \"us\": {\n      \"region\": \"us\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 7,\n        \"total\": 7,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"count\": 7,\n      \"results\": [\n        {\n          \"name\": \"flumatinib\",\n          \"drugbank_id\": \"DB11904\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Inhibitor of Tyrosine-protein kinase ABL1\",\n          \"target\": \"PDGFRB\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"famitinib\",\n          \"drugbank_id\": \"DB11741\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Inhibitor of Mast/stem cell growth factor receptor Kit\",\n          \"target\": \"PDGFRB\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"quizartinib\",\n          \"drugbank_id\": \"DB12874\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Inhibitor of Macrophage colony-stimulating factor 1 receptor\",\n          \"target\": \"PDGFRB\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"sorafenib\",\n          \"drugbank_id\": \"DB00398\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Protein Kinase Inhibitors\",\n          \"target\": \"PDGFRB\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"pazopanib\",\n          \"drugbank_id\": \"DB06589\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Protein Kinase Inhibitors\",\n          \"target\": \"PDGFRB\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"sunitinib\",\n          \"drugbank_id\": \"DB01268\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Inhibitor of Macrophage colony-stimulating factor 1 receptor\",\n          \"target\": \"PDGFRB\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"nintedanib\",\n          \"drugbank_id\": \"DB09079\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Protein Kinase Inhibitors\",\n          \"target\": \"PDGFRB\",\n          \"match_kind\": \"broad_text\"\n        }\n      ]\n    }\n  },\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get drug flumatinib\",\n      \"biomcp list drug\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

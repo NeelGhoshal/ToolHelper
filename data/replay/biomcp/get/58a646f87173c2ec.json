@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "42957912",
+    "json": true,
+    "sections": [
+      "tldr"
+    ]
+  },
+  "args_key": "58a646f87173c2ec3e42447ee5bea05a263ad2aa506aad0c759010b8a23e85e9",
+  "recorded_at": "2026-11-09T19:33:49.206560+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 999.0936999965925,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42957912/\"\n      },\n      {\n        \"label\": \"PMC\",\n        \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC13719939/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42957912 tldr\",\n      \"biomcp article references 42957912 --limit 3\",\n      \"biomcp article citations 42957912 --limit 3\",\n      \"biomcp article recommendations 42957912 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ]\n  },\n  \"abstract_text\": \"PURPOSE: Epidermal growth factor receptor-tyrosine kinase inhibitors (EGFR-TKIs) serve as the standard first-line therapy for advanced EGFR-mutant non-small-cell lung cancer (NSCLC). However, resistance inevitably restricts their efficacy. Although well-documented acquired resistance mechanisms have been extensively characterized, approximately 30% of patients with EGFR-TKI resistance still present with unknown resistance (UR) mechanisms, and the driving factors behind primary resistance remain inadequately understood. METHODS: In this study, we conducted a large-scale, retrospective cohort study, performing target-capture deep sequencing (>400 genes) on 928 samples from 745 EGFR-TKI-resistant and 183 TKI-naive EGFR-mutant NSCLC patients. RESULTS: The molecular landscape of EGFR-TKI resistance was systematically characterized. In the resistance cohort, 68.72% (512/745) harbored known resistance (KR) mechanisms, while 31.28% (233/745) were classified as UR. The landscape of KR was significantly influenced by EGFR-TKI generation. First-line third-generation TKI resistance demonstrated fewer EGFR-dependent events compared to first-generation TKIs (p < 0.01) and more RTK and PI3K-AKT-mTOR (PAM) pathway alterations (p < 0.05). In the UR cohort, pathway analysis revealed unique enrichment of atypical pathways, most notably ATP-dependent chromatin remodeling pathways. Differential gene analysis identified significant enrichment of MYC, BRCA1, EPHB, and PTPRD in the UR subgroup. To investigate primary resistance, we found that baseline IKZF1 amplification was significantly enriched in patients with short time-to-treatment-failure (TTF) and correlated with significantly poorer outcomes (HR = 3.02, 95% CI 1.32-6.90; log-rank p = 0.004). CONCLUSIONS: This study provides a comprehensive real-world landscape of EGFR-TKI resistance, demonstrating distinct mechanisms influenced by TKI generation. ATP-dependent chromatin remodeling was identified as a distinctive pathway feature of unknown resistance, and baseline IKZF1 amplification emerged as a candidate biomarker of EGFR-TKI primary resistance. These findings suggest that epigenetic dysregulation may be a critical driver of both unknown and primary resistance to EGFR-TKIs.\",\n  \"author_completeness\": \"complete\",\n  \"author_count\": 5,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Zhao S\",\n    \"Zhou F\",\n    \"Chen W\",\n    \"Wang S\",\n    \"Zhou C\"\n  ],\n  \"citation_count\": 0,\n  \"date\": \"2026-08-04\",\n  \"doi\": \"10.1007/s13402-026-01253-y\",\n  \"journal\": \"Cell Oncol (Dordr)\",\n  \"open_access\": true,\n  \"pmcid\": \"PMC13719939\",\n  \"pmid\": \"42957912\",\n  \"publication_type\": \"Research Article\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"Genomic landscape of EGFR-TKI resistance: from known mechanisms to unknown resistance.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

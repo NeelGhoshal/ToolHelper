@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "TP53",
+    "sections": [
+      "disgenet",
+      "gencc",
+      "clingen",
+      "civic"
+    ]
+  },
+  "args_key": "68d87df426703aa000440bbbb399f81089dc9fc32c426830b677ed27c8a9424f",
+  "recorded_at": "2026-11-09T21:35:33.694303+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 2121.5044999844395,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# TP53 - disgenet, gencc, clingen, civic \n## CIViC \n \n- Evidence Items: 196 \n- Assertions: 0 \n| Evidence | Level | Disease | Therapies | \n|---|---|---|---| \n| EID1507 | A | Chronic Lymphocytic Leukemia | - | \n| EID1452 | B | Chronic Lymphocytic Leukemia | - | \n| EID1485 | B | Chronic Lymphocytic Leukemia | - | \n| EID2999 | B | Lung Non-small Cell Carcinoma | - | \n| EID8347 | B | Medulloblastoma SHH Activated | - | \n| EID519 | B | Esophagus Squamous Cell Carcinoma | - | \n| EID520 | B | B-lymphoblastic Leukemia/lymphoma | - | \n| EID521 | B | Myelodysplastic Syndrome | - | \n| EID522 | B | Myeloid Neoplasm | - | \n| EID523 | B | Head And Neck Squamous Cell Carcinoma | - | \n## ClinGen \n \n### Gene-Disease Validity Status \n \n- Status: `data` \n- Operation: `gene_validity_download` \n### Dosage-Sensitivity Status \n \n- Status: `data` \n- Operation: `gene_dosage_download` \n### Gene-Disease Validity \n \n| Disease | Classification | Review Date | MOI | \n|---|---|---|---| \n| Li-Fraumeni syndrome | Definitive | 2024-03-22 | AD | \n### Dosage Sensitivity \n \n- Haploinsufficiency: Sufficient Evidence for Haploinsufficiency \n- Triplosensitivity: No Evidence for Triplosensitivity \n## GenCC gene-disease validity \n \n**GenCC gene-disease validity status (GenCC):** unavailable; no conclusion can be drawn — GenCC data is unavailable; no GenCC absence can be concluded.\nRetry: `biomcp get gene TP53 gencc` \n## DisGeNET \n \n**DisGeNET status (DisGeNET):** unavailable; no conclusion can be drawn — DisGeNET gene associations are unavailable.\nRetry: `biomcp get gene TP53 disgenet` \nMore:\n  biomcp get gene TP53 pathways   - Reactome/KEGG pathway context\n  biomcp get gene TP53 ontology   - GO-style functional enrichment\n  biomcp get gene TP53 diseases   - disease associations\n  biomcp get gene TP53 diagnostics   - diagnostic tests for this gene from GTR\nAll:\n  biomcp get gene TP53 all \nSee also:\n  biomcp search trial -c \"Li-Fraumeni syndrome\" -s recruiting   - recruiting trials for the top ClinGen disease on this gene card\n  biomcp search diagnostic --gene TP53   - diagnostic tests for this gene\n  biomcp search pgx -g TP53   - pharmacogenomics interactions\n  biomcp search variant -g TP53\n  biomcp search article -g TP53\n  biomcp search drug --target TP53\n  biomcp gene trials TP53 \n\n[NCBI Gene](https://www.ncbi.nlm.nih.gov/gene/7157) | [UniProt](https://www.uniprot.org/uniprot/P04637) | [Ensembl](https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000141510) | [OMIM](https://www.omim.org/entry/191170)\n\n\n## Sources\n- Identity: NCBI Gene / MyGene.info\n- Summary: NCBI Gene\n- Aliases: NCBI Gene / MyGene.info\n- CIViC: CIViC\n- ClinGen: ClinGen\n\n## Next commands\n- `biomcp get gene TP53 gencc`\n- `biomcp get gene TP53 disgenet`\n- `biomcp get gene TP53 pathways`\n- `biomcp get gene TP53 ontology`\n- `biomcp get gene TP53 diseases`\n- `biomcp get gene TP53 diagnostics`\n- `biomcp search trial -c \"Li-Fraumeni syndrome\" -s recruiting`\n- `biomcp search diagnostic --gene TP53`\n- `biomcp search pgx -g TP53`\n- `biomcp search variant -g TP53`\n- `biomcp search article -g TP53`\n- `biomcp search drug --target TP53`\n- `biomcp gene trials TP53`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

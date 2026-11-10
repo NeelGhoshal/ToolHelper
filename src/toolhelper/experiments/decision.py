@@ -184,7 +184,8 @@ def write_factorial_decision(store: ContextStore, orch) -> str:
                   for k, effs in st.get("effects_by_subset", {}).items()}
     base = (" + ".join(cfg.base.specs) + (f", max_turns {cfg.base.max_turns}" if cfg.base.max_turns else "")) or None
     confirm = st.get("confirm", {})
-    design = "fractional factorial" if cfg.generators else "factorial"
+    design = ("confirmation of " + "".join(cfg.confirm_only) if cfg.confirm_only else
+              "fractional factorial" if cfg.generators else "factorial")
     data = {"title": f"Phase 10 {cfg.experiment}: chosen efficiency config ({design}"
                      f"{' on top of ' + base if base else ''})",
             "objective": "minimize tokens per successful task, subject to success >= baseline - 2 points and trust >= 0.9",
@@ -196,9 +197,14 @@ def write_factorial_decision(store: ContextStore, orch) -> str:
                 **({"per_subset": per_subset} if per_subset else {})}),
             "constraints_json": canonical_json({**cfg.gate, "design": {"factors": {f: label(f) for f in cfg.factors},
                                                                        "generators": cfg.generators,
-                                                                       **({"base": base} if base else {})},
-                                                "choice": "on when the tokens-per-success CI lies below 0, success "
-                                                          "holds within the gate and trust >= min_trust",
+                                                                       **({"base": base} if base else {}),
+                                                                       **({"confirm_only": cfg.confirm_only}
+                                                                          if cfg.confirm_only else {})},
+                                                "choice": ("adopted when the confirmation passes the gate"
+                                                           f"{' with its tokens-per-success CI below 0' if cfg.require_saving else ''}"
+                                                           if cfg.confirm_only else
+                                                           "on when the tokens-per-success CI lies below 0, success "
+                                                           "holds within the gate and trust >= min_trust"),
                                                 "folds": "two-fold cross-fitting for learned strategies"}),
             "evidence": sorted(pins.values()), "rejected_json": canonical_json(rejected), "status": "proposed"}
     name = f"decisions/{cfg.experiment}"

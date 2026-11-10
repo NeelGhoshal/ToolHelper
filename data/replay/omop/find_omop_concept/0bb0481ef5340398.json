@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "Body weight Measured",
+    "max_results": 10,
+    "omop_field": "measurement_concept_id",
+    "omop_table": "measurement"
+  },
+  "args_key": "0bb0481ef53403982d2f49697b633a45c64cf6237cd7b5d4e292f8eaf995cd42",
+  "recorded_at": "2026-11-10T04:16:17.109092+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 810.656099987682,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 3013762,\n      \"code\": \"3141-9\",\n      \"name\": \"Body weight Measured\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3013762\"\n    },\n    {\n      \"concept_id\": 3027492,\n      \"code\": \"8341-0\",\n      \"name\": \"Dry body weight Measured\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3027492\"\n    },\n    {\n      \"concept_id\": 3013853,\n      \"code\": \"8338-6\",\n      \"name\": \"Body weight Measured --ante partum\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3013853\"\n    },\n    {\n      \"concept_id\": 3010147,\n      \"code\": \"8345-1\",\n      \"name\": \"Body weight Measured --post partum\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3010147\"\n    },\n    {\n      \"concept_id\": 3019336,\n      \"code\": \"8347-7\",\n      \"name\": \"Body weight Measured --pre dialysis\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3019336\"\n    },\n    {\n      \"concept_id\": 3005422,\n      \"code\": \"8349-3\",\n      \"name\": \"Body weight Measured --preoperative\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3005422\"\n    },\n    {\n      \"concept_id\": 3010220,\n      \"code\": \"8350-1\",\n      \"name\": \"Body weight Measured --with clothes\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3010220\"\n    },\n    {\n      \"concept_id\": 3009617,\n      \"code\": \"8344-4\",\n      \"name\": \"Body weight Measured --post dialysis\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3009617\"\n    },\n    {\n      \"concept_id\": 3015644,\n      \"code\": \"8346-9\",\n      \"name\": \"Body weight Measured --postoperative\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3015644\"\n    },\n    {\n      \"concept_id\": 3022281,\n      \"code\": \"8348-5\",\n      \"name\": \"Body weight Measured --pre pregnancy\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3022281\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"Body weight Measured\",\n    \"omop_table\": \"measurement\",\n    \"omop_field\": \"measurement_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

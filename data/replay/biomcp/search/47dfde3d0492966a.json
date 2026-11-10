@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR T790M resistance osimertinib AURA3"
+    ],
+    "limit": 10,
+    "sort": "relevance"
+  },
+  "args_key": "47dfde3d0492966a7a5ba7b34411941e17d7a678448623104a2e525f30af322b",
+  "recorded_at": "2026-11-10T07:53:09.000730+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2524.9536000192165,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR T790M resistance osimertinib AURA3, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"EGFR T790M resistance osimertinib AURA3\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 36849516|Analysis of acquired resistance mechanisms to osimertinib in…|PubTator3, PubMed|2023-02-27|hybrid 0.575 + title+abstract 5/5|191| \n|PMID 33741979|Clinical impact of subclonal EGFR T790M mutations in advance…|PubTator3, PubMed|2021-03-19|hybrid 0.508 + title+abstract 5/5|63| \n|PMID 40637621|Population Pharmacokinetics and Exposure-Response Analysis o…|PubMed|2025-11-01|hybrid 0.469 + title+abstract 5/5|7| \n|PMID 31265163|Osimertinib for Japanese patients with T790M-positive advanc…|PubMed|2019-09-01|hybrid 0.434 + title+abstract 5/5|25| \n|PMID 29862229|Making progress in epidermal growth factor receptor (EGFR)-m…|PubMed|2018-04-01|hybrid 0.4 + title+abstract 5/5|13| \n|PMID 34471361|Osimertinib in EGFR-Mutated Lung Cancer: A Review of the Exi…|PubTator3|2021-08-26|hybrid 0.391 + title+abstract 3/5|30| \n|PMID 42440354|Osimertinib plus Gefitinib in Patients with EGFR-Mutated Adv…|Europe PMC|2026-10-01|hybrid 0.356 + title+abstract 4/5|1| \n|PMID 32420080|Analysis of lung adenocarcinoma with bone metastasis: a case…|PubMed|2020-04-01|hybrid 0.351 + abstract 4/5|10| \n|PMID 42201025|Impact of Variant Allele Frequency (VAF) Levels on Clinical…|Europe PMC|2026-05-01|hybrid 0.346 + title+abstract 4/5|1| \n|PMID 34295669|Has programmed cell death ligand-1 MET an accomplice in non-…|PubTator3|2021-06-01|hybrid 0.25 + abstract 1/5|13| \n \n \n \nNewest indexed: 2026-07-13 (120 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 36849516\n  biomcp search article -k \"EGFR T790M resistance osimertinib AURA3\" --year-min 2018 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

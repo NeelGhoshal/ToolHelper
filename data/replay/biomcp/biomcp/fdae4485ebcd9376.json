@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "get drug pembrolizumab",
+    "json": true
+  },
+  "args_key": "fdae4485ebcd93764479f2266d72b12928806e11307a43c4ab0322ce5d7651fb",
+  "recorded_at": "2026-11-10T06:45:05.919161+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 16559.289299999364,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"DrugBank\",\n        \"url\": \"https://go.drugbank.com/drugs/DB09037\"\n      },\n      {\n        \"label\": \"ChEMBL\",\n        \"url\": \"https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL3137343\"\n      },\n      {\n        \"label\": \"OpenFDA FAERS\",\n        \"url\": \"https://api.fda.gov/drug/event.json?search=%28patient.drug.openfda.generic_name%3A%22pembrolizumab%22+OR+patient.drug.openfda.brand_name%3A%22pembrolizumab%22+OR+patient.drug.medicinalproduct%3A%22pembrolizumab%22%29+AND+patient.drug.drugcharacterization%3A1&count=patient.reaction.reactionmeddrapt.exact&limit=50\"\n      },\n      {\n        \"label\": \"DailyMed\",\n        \"url\": \"https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9333c79b-d487-4538-a9f0-71b91a02b287\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get drug pembrolizumab approvals\",\n      \"biomcp get drug pembrolizumab label\",\n      \"biomcp get drug pembrolizumab regulatory --region us\",\n      \"biomcp get drug pembrolizumab all --region us\",\n      \"biomcp search article --drug pembrolizumab --type review --limit 5\",\n      \"biomcp drug trials pembrolizumab\",\n      \"biomcp drug adverse-events pembrolizumab\",\n      \"biomcp search pgx -d pembrolizumab\",\n      \"biomcp get gene PDCD1\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"overview\",\n        \"label\": \"Overview\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"MyChem.info\"\n        ]\n      },\n      {\n        \"key\": \"fda_approved\",\n        \"label\": \"FDA Approved\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"DrugCentral\"\n        ]\n      },\n      {\n        \"key\": \"brand_names\",\n        \"label\": \"Brand Names\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"DrugBank\"\n        ]\n      },\n      {\n        \"key\": \"mechanisms\",\n        \"label\": \"Mechanisms\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"MyChem.info\",\n          \"ChEMBL\"\n        ]\n      },\n      {\n        \"key\": \"targets\",\n        \"label\": \"Targets\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"Guide to PHARMACOLOGY\",\n          \"Open Targets\"\n        ]\n      }\n    ],\n    \"workflow\": \"pharmacogene-cumulative\",\n    \"workflow_playbook\": \"biomcp skill pharmacogene-cumulative\",\n    \"workflow_rationale\": \"Use the PGx search and detail surfaces before collecting literature for multi-gene drug-response evidence.\"\n  },\n  \"approval_date\": \"2014-09-04\",\n  \"approval_date_display\": \"September 4, 2014\",\n  \"approval_date_raw\": \"2014-09-04\",\n  \"approval_summary\": \"FDA approved on September 4, 2014\",\n  \"brand_names\": [\n    \"KEYTRUDA\"\n  ],\n  \"chembl_id\": \"CHEMBL3137343\",\n  \"drug_type\": \"biologic\",\n  \"drugbank_id\": \"DB09037\",\n  \"indications\": [\n    \"Advanced or recurrent cervical cancer\",\n    \"Classical Hodgkin lymphoma\",\n    \"Endometrial carcinoma progressing after chemotherapy\",\n    \"HER2-negative breast cancer\",\n    \"Malignant tumor of head and/or neck\",\n    \"Metastatic malignant melanoma\"\n  ],\n  \"mechanism\": \"Inhibitor of Programmed cell death protein 1\",\n  \"mechanisms\": [\n    \"Inhibitor of Programmed cell death protein 1\"\n  ],\n  \"name\": \"pembrolizumab\",\n  \"pharm_classes\": [\n    \"Programmed Death Receptor-1-directed Antibody Interactions\"\n  ],\n  \"route\": \"IV, subcutaneous\",\n  \"section_outcomes\": {\n    \"approvals\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"cell_lines\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"civic\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indications\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"interactions\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"label\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"safety\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"targets\": {\n      \"outcome\": \"data\",\n      \"sources\": [\n        \"Guide to PHARMACOLOGY\",\n        \"Open Targets\"\n      ]\n    }\n  },\n  \"targets\": [\n    \"PDCD1\"\n  ],\n  \"top_adverse_events\": [\n    \"MALIGNANT NEOPLASM PROGRESSION\",\n    \"OFF LABEL USE\",\n    \"DIARRHOEA\"\n  ],\n  \"unii\": \"DPT0O3T46P\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

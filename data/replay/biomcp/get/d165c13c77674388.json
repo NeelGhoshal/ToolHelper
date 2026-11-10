@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "42178602",
+    "json": true
+  },
+  "args_key": "d165c13c776743883aed37530b1265ca503ff1d7b6fd882ca9e5feeb64c32d90",
+  "recorded_at": "2026-11-10T08:06:38.642754+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1887.8171000105795,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42178602/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42178602 tldr\",\n      \"biomcp article entities 42178602\",\n      \"biomcp search gene -q BRAF\",\n      \"biomcp search gene -q p63\",\n      \"biomcp search disease --query \\\"Oncocytic Intraductal Carcinoma of the\\\"\",\n      \"biomcp search disease --query \\\"Oncocytic intraductal carcinoma\\\"\",\n      \"biomcp article references 42178602 --limit 3\",\n      \"biomcp article citations 42178602 --limit 3\",\n      \"biomcp article recommendations 42178602 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"annotations\",\n        \"label\": \"PubTator Annotations\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ],\n    \"workflow\": \"article-follow-up\",\n    \"workflow_playbook\": \"biomcp skill article-follow-up\",\n    \"workflow_rationale\": \"Use article annotations first, then citation and recommendation graph pivots for efficient literature expansion.\"\n  },\n  \"abstract_text\": \"Oncocytic intraductal carcinoma (IDC) is a rare subtype of salivary IDC characterized by an oncocytic cell proliferation surrounded by a p63-positive myoepithelial rim. We presented a case of oncocytic IDC: a 70s-year-old male with a swelling in the right parotid gland. Fine-needle aspiration cytology revealed complex papillary cell clusters with an abundant granular cytoplasm and a small number of myoepithelial cells. The cytologic features corresponded to the histological features of oncocytic IDC. The oncocytic cells were positive for S-100, mammaglobin, anti-mitochondrial antibody, and BRAF V600E. Sanger sequencing further confirmed BRAF p.V600E variant. Because a definite preoperative cytological diagnosis of oncocytic IDC is challenging, ancillary tests using cell blocks can aid in the diagnosis.\",\n  \"annotations\": {\n    \"diseases\": [\n      {\n        \"count\": 5,\n        \"identifier\": \"MESH:D002285\",\n        \"name\": \"Carcinoma Intraductal Noninfiltrating\",\n        \"namespace\": \"MESH\",\n        \"text\": \"IDC\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"MESH:D002285\",\n        \"name\": \"Carcinoma Intraductal Noninfiltrating\",\n        \"namespace\": \"MESH\",\n        \"text\": \"Oncocytic Intraductal Carcinoma of the\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"MESH:D002285\",\n        \"name\": \"Carcinoma Intraductal Noninfiltrating\",\n        \"namespace\": \"MESH\",\n        \"text\": \"Oncocytic intraductal carcinoma\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"MESH:D004487\",\n        \"name\": \"Edema\",\n        \"namespace\": \"MESH\",\n        \"text\": \"swelling\"\n      }\n    ],\n    \"genes\": [\n      {\n        \"count\": 3,\n        \"identifier\": \"673\",\n        \"namespace\": \"NCBIGene\",\n        \"text\": \"BRAF\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"8626\",\n        \"namespace\": \"NCBIGene\",\n        \"text\": \"p63\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"6271\",\n        \"namespace\": \"NCBIGene\",\n        \"text\": \"S-100\"\n      }\n    ],\n    \"mutations\": [\n      {\n        \"count\": 2,\n        \"identifier\": \"BRAF p.V600E\",\n        \"namespace\": \"HGVS\",\n        \"text\": \"p.V600E\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"BRAF p.V600E\",\n        \"namespace\": \"HGVS\",\n        \"text\": \"V600E\"\n      }\n    ]\n  },\n  \"author_completeness\": \"complete\",\n  \"author_count\": 5,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Hirata Y\",\n    \"Nakaguro M\",\n    \"Tsukamoto R\",\n    \"Jimbo N\",\n    \"Itoh T\"\n  ],\n  \"citation_count\": 0,\n  \"date\": \"2026-05-24\",\n  \"doi\": \"10.1111/cyt.70085\",\n  \"journal\": \"Cytopathology\",\n  \"open_access\": false,\n  \"pmid\": \"42178602\",\n  \"publication_type\": \"Research Article\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"Oncocytic Intraductal Carcinoma of the Parotid Gland With the BRAF p.V600E Variant.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

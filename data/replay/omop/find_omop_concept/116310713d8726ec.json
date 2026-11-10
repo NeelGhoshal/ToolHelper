@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "metformin 500 MG Oral Tablet",
+    "max_results": 10,
+    "omop_field": "drug_concept_id",
+    "omop_table": "drug_exposure"
+  },
+  "args_key": "116310713d8726ec27eec4ff50148ad09641d76f2e2ce4bc280077e82703c4ab",
+  "recorded_at": "2026-11-09T20:34:41.855156+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1224.1047999996226,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 21169686,\n      \"code\": \"OMOP351044\",\n      \"name\": \"Metformin 500 MG Oral Tablet by DE\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/21169686\"\n    },\n    {\n      \"concept_id\": 35866011,\n      \"code\": \"OMOP5021816\",\n      \"name\": \"metformin 500 MG Oral Tablet [Buke]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/35866011\"\n    },\n    {\n      \"concept_id\": 2921084,\n      \"code\": \"OMOP5137907\",\n      \"name\": \"metformin 500 MG Oral Tablet by APO\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/2921084\"\n    },\n    {\n      \"concept_id\": 44050074,\n      \"code\": \"OMOP1044705\",\n      \"name\": \"Metformin 500 MG Oral Tablet by Bdh\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/44050074\"\n    },\n    {\n      \"concept_id\": 35866034,\n      \"code\": \"OMOP5021839\",\n      \"name\": \"metformin 500 MG Oral Tablet [Qiji]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/35866034\"\n    },\n    {\n      \"concept_id\": 43261748,\n      \"code\": \"OMOP538079\",\n      \"name\": \"Metformin 500 MG Oral Tablet by Auro\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/43261748\"\n    },\n    {\n      \"concept_id\": 36938870,\n      \"code\": \"OMOP5194416\",\n      \"name\": \"metformin 500 MG Oral Tablet by Ipca\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/36938870\"\n    },\n    {\n      \"concept_id\": 21061583,\n      \"code\": \"OMOP351050\",\n      \"name\": \"Metformin 500 MG Oral Tablet by Ivax\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/21061583\"\n    },\n    {\n      \"concept_id\": 21090962,\n      \"code\": \"OMOP351036\",\n      \"name\": \"Metformin 500 MG Oral Tablet by Kent\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/21090962\"\n    },\n    {\n      \"concept_id\": 850735,\n      \"code\": \"OMOP5573585\",\n      \"name\": \"metformin 500 MG Oral Tablet by Manx\",\n      \"class\": \"Marketed Product\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/850735\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"metformin 500 MG Oral Tablet\",\n    \"omop_table\": \"drug_exposure\",\n    \"omop_field\": \"drug_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

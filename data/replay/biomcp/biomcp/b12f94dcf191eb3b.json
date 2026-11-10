@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search drug --target BRAF --json",
+    "json": true
+  },
+  "args_key": "b12f94dcf191eb3bab2d4b1e7a5a5e92d88ea1f38e056733214f9828e0d4f02e",
+  "recorded_at": "2026-11-10T07:52:04.875248+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 487.3370999994222,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"region\": \"us\",\n  \"regions\": {\n    \"us\": {\n      \"region\": \"us\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 5,\n        \"total\": 5,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"count\": 5,\n      \"results\": [\n        {\n          \"name\": \"tovorafenib\",\n          \"drugbank_id\": \"DB15266\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Inhibitor of RAF serine/threonine protein kinase\",\n          \"target\": \"BRAF\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"dabrafenib\",\n          \"drugbank_id\": \"DB08912\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Protein Kinase Inhibitors\",\n          \"target\": \"BRAF\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"vemurafenib\",\n          \"drugbank_id\": \"DB08881\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Inhibitor of Serine/threonine-protein kinase B-raf\",\n          \"target\": \"BRAF\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"regorafenib\",\n          \"drugbank_id\": \"DB08896\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Inhibitor of Tyrosine-protein kinase ABL1\",\n          \"target\": \"BRAF\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"sorafenib\",\n          \"drugbank_id\": \"DB00398\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Protein Kinase Inhibitors\",\n          \"target\": \"BRAF\",\n          \"match_kind\": \"broad_text\"\n        }\n      ]\n    }\n  },\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get drug tovorafenib\",\n      \"biomcp list drug\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

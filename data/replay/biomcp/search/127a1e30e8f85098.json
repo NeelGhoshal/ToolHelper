@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "gene editing",
+      "sickle cell"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "127a1e30e8f8509837ca5ffcf108aee786830104a9972f5fd38e141121e766cb",
+  "recorded_at": "2026-11-09T22:35:43.670329+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4219.576800009236,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR gene editing sickle cell, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"CRISPR gene editing sickle cell\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41543272|Non-Viral CRISPR carriers: transient delivery with lasting e…|PubTator3, Europe PMC|2026-12-31|-|15| \n|PMID 42961431|Affordable cure within reach for thalassemia.|PubMed|2026-11-10|-|0| \n|PMID 42997867|Single-episome delivery of BOSMK with miR-142-gated KLF4 str…|Europe PMC|2026-11-05|-|0| \n|PMID 42977761|Genotoxic safety and long-term engraftment dynamics of effic…|PubTator3, PubMed|2026-11-03|-|0| \n|PMID 42838069|The expanding therapeutic landscape of β-thalassaemia.|PubMed|2026-11-01|-|2| \n|PMID 42973349|CRISPR/Cas9-based Genome Editing in Inherited Diseases: Mech…|PubTator3, PubMed|2026-10-21|-|0| \n|PMID 42876272|Precision Medicine in Sickle Cell Disease: From Molecular Pa…|PubTator3, PubMed|2026-10-15|-|0| \n|PMID 42959597|Phase 1 evaluation of APN401, an autologous CBL-B-silenced P…|Europe PMC|2026-10-05|-|0| \n|PMID 42959861|Functional improvement of dystrophic muscle by utrophin gene…|Europe PMC|2026-10-01|-|0| \n|PMID 42953289|Reshaping the scissors: From directed evolution to AI-driven…|Europe PMC|2026-09-30|-|0| \n \n \n \nNewest indexed: 2026-11-08 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41543272\n  biomcp search article -k \"CRISPR gene editing sickle cell\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "BRAF",
+    "json": true,
+    "keyword": [
+      "colorectal",
+      "thyroid",
+      "hairy cell"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "f5d90bf052a08de1510cab24290c1203a52c5777dcb1cae0e079c15473dce8b8",
+  "recorded_at": "2026-11-09T20:36:02.186083+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2496.787200012477,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=BRAF, keyword=colorectal thyroid hairy cell, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 5,\n  \"results\": [\n    {\n      \"pmid\": \"32104259\",\n      \"pmcid\": \"PMC7027163\",\n      \"doi\": \"10.3892/etm.2020.8454\",\n      \"title\": \"ERK/MAPK signalling pathway and tumorigenesis.\",\n      \"journal\": \"Exp Ther Med\",\n      \"date\": \"2020-01-15\",\n      \"citation_count\": 1738,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"27993330\",\n      \"pmcid\": \"PMC5707196\",\n      \"doi\": \"10.1016/j.jmoldx.2016.10.002\",\n      \"title\": \"Standards and Guidelines for the Interpretation and Reporting of Sequence Variants in Cancer: A Joint Consensus Recommendation of the Association for Molecular Pathology, American Society of Clinical Oncology, and College of American Pathologists.\",\n      \"journal\": \"J Mol Diagn\",\n      \"date\": \"2017-01-01\",\n      \"citation_count\": 1708,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"39529955\",\n      \"title\": \"Expert consensus on the diagnosis and treatment of solid tumors with BRAF mutations.\",\n      \"journal\": \"Innovation (Camb)\",\n      \"date\": \"2024-10-18\",\n      \"citation_count\": 22,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"37489176\",\n      \"pmcid\": \"PMC10363389\",\n      \"title\": \"Dendritic Cell-Derived Exosomes Driven Drug Co-Delivery Biomimetic Nanosystem for Effective Combination of Malignant Melanoma Immunotherapy and Gene Therapy\",\n      \"journal\": \"Drug Des Devel Ther\",\n      \"date\": \"2023-07-19\",\n      \"citation_count\": 20,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"37182332\",\n      \"title\": \"A cyanine-based NIR fluorescent Vemurafenib analog to probe BRAF(V600E) in cancer cells.\",\n      \"journal\": \"European journal of medicinal chemistry\",\n      \"date\": \"2023-08-05\",\n      \"citation_count\": 7,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --gene BRAF --keyword \\\"colorectal thyroid hairy cell\\\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0\",\n      \"biomcp get article 32104259\",\n      \"biomcp search article -g BRAF -k \\\"colorectal thyroid hairy cell\\\" --year-min 2017 --year-max 2024 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

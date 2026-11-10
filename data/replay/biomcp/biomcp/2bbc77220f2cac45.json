@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "get drug \"imatinib mesylate\" label --region us",
+    "json": true
+  },
+  "args_key": "2bbc77220f2cac45cd10d080f60555fd904bc0a333c01a0b360e5230bdf53fb0",
+  "recorded_at": "2026-11-10T04:23:56.227680+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 3.4402000019326806,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: Invalid argument: --region can only be used with regulatory, safety, shortage, or all."
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

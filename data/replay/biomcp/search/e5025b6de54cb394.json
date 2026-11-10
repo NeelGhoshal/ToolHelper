@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "metformin"
+    ],
+    "entity": "article",
+    "keyword": [
+      "metformin",
+      "cardiovascular outcomes"
+    ],
+    "limit": 15,
+    "sort": "date"
+  },
+  "args_key": "e5025b6de54cb39468e2780bd15cb9536889b2b399640accbf3f5b6b3aebb31b",
+  "recorded_at": "2026-11-09T20:17:08.931264+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 32872.05239999457,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=metformin, keyword=metformin cardiovascular outcomes, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --drug metformin --keyword \"metformin cardiovascular outcomes\" --exclude-retracted --sort date --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41454643|Gut-heart axis: emerging therapies targeting trimethylamine…|PubTator3|2026-12-31|-|none| \n|PMID 41504275|The maternal microbiome influence on pregnancy success: bree…|PubTator3|2026-12-31|-|none| \n|PMID 41536226|Next-generation composite vesicular systems: an in-depth rev…|PubTator3|2026-12-31|-|none| \n|PMID 41668545|Mitochondrial dysfunction and applications of mitochondrial-…|PubTator3|2026-12-31|-|none| \n|PMID 41830551|Gut microbiota metabolic reprogramming drives the developmen…|PubTator3|2026-12-31|-|none| \n|PMID 41845564|Gut microbiome in type 2 diabetes: insights from metagenomic…|PubTator3|2026-12-31|-|none| \n|PMID 42998247|Initial Diabetes Therapy After Coronary Artery Bypass Grafti…|PubMed|2026-11-07|-|0| \n|PMID 42978208|Next-generation incretin therapeutics for polyendocrine meta…|PubMed|2026-11-03|-|0| \n|PMID 42968831|Baseline monocyte SGLT2 mRNA expression and changes in the f…|Europe PMC|2026-10-31|-|0| \n|PMID 42957066|GLP-1 Receptor Agonists Decrease the Rate of Rupture, Cardia…|PubMed|2026-10-29|-|0| \n|PMID 42983241|Beyond Insulin Therapy: Therapeutic Potential of Alpha-gluco…|PubMed|2026-10-28|-|0| \n|PMID 42965051|Sex- and age-specific trends in prescription medication use,…|Europe PMC|2026-10-23|-|0| \n|PMID 42927270|Metformin Use Is Associated With Reduced Rates of Primary Ne…|Europe PMC|2026-10-19|-|0| \n|PMID 42999564|The causal relationship between diabetes mellitus and mening…|Europe PMC|2026-10-17|-|0| \n|PMID 42953016|Associations of glucose- and lipid-lowering medications with…|PubMed|2026-10-14|-|0| \n \n \n \nNewest indexed: 2026-11-08 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41454643\n  biomcp search article --drug metformin -k \"metformin cardiovascular outcomes\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

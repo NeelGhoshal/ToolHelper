@@ -1,0 +1,28 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search trial -c melanoma --mutation \"BRAF V600E\" -s recruiting -l 25"
+  },
+  "args_key": "ded900e99b3d7aa2dc04625b64ca544447d0de33b873ced56cff0143f09bb96b",
+  "recorded_at": "2026-11-10T06:31:00.783022+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 1518.4629000141285,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 6 of 6 \n \nQuery: condition=melanoma, status=recruiting, mutation=BRAF V600E \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT06172478|A Study of HER3-DXd in Su…|RECRUITING|2|Advanced Solid Tumor, Melanoma, Head and Neck… [abridged; 14 conditions total]| \n|NCT06194929|Defactinib and Avutometin…|RECRUITING|1/2|Cutaneous Melanoma, Brain Metastases| \n|NCT05076760|MEM-288 Oncolytic Virus A…|RECRUITING|1|Solid Tumor, Advanced Cancer, Metastatic Canc… [abridged; 10 conditions total]| \n|NCT07751042|Phase 1/2 Study of Intrav…|RECRUITING|1/2|Advanced Solid Tumor| \n|NCT05914116|A Phase 1/2a Study of DB-…|RECRUITING|1/2|Advanced Solid Tumors| \n|NCT06249048|Phase 1/2 Study of Intrat…|RECRUITING|1/2|Advanced Solid Tumor| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-6 of 6 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "date_from": "2025-01-01",
+    "keyword": [
+      "BRAF V600E",
+      "resistance",
+      "melanoma"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "fc2b031df7befd108827edbcc528820367cb6907645ce682576717c0ee1f0e57",
+  "recorded_at": "2026-11-10T04:22:48.689375+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4112.257900007535,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E resistance melanoma, date_from=2025-01-01, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E resistance melanoma\" --date-from 2025-01-01 --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 40844370|2025 American Thyroid Association Management Guidelines for…|Europe PMC|2025-08-01|-|585| \n|PMID 40445120|Cancer treatment and survivorship statistics, 2025.|Europe PMC|2025-05-30|-|316| \n|PMID 40383803|Vascular endothelial growth factor signaling in health and d…|Europe PMC|2025-05-19|-|308| \n|PMID 40739089|Immune evasion in cancer: mechanisms and cutting-edge therap…|Europe PMC|2025-07-31|-|298| \n|PMID 40020669|FAK inhibition combined with the RAF-MEK clamp avutometinib…|PubTator3|2025-02-20|-|52| \n|PMID 40037361|Realigned transsulfuration drives BRAF-V600E-targeted therap…|PubTator3|2025-02-28|-|26| \n|PMID 41807883|BRAF inhibitor resistance in melanoma: from resistance mecha…|PubTator3|2026-03-11|-|9| \n|PMID 42856236|Tumor cell-intrinsic mtDNA instability drives cGAS-dependent…|PubMed|2026-09-30|-|0| \n|PMID 42770269|A context-dependent modulatory role for eIF6 in acquired res…|PubMed|2026-09-22|-|0| \n|PMID 42907443|p38α orchestrates BRAF(V600E)-melanoma progression and immu…|PubMed|2026-09-22|-|0| \n \n \n \nNewest indexed: 2026-10-22 (19 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 40844370 \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

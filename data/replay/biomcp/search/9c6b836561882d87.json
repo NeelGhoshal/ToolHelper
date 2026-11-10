@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "vemurafenib",
+      "cobimetinib"
+    ],
+    "limit": 25,
+    "status": "recruiting"
+  },
+  "args_key": "9c6b836561882d871ae1595123d1abbafb97e2603358543a76e8de8f66d6e75a",
+  "recorded_at": "2026-11-09T19:29:04.948295+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1761.934200010728,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 0 trial(s) \n \nQuery: condition=melanoma, intervention=vemurafenib cobimetinib, status=recruiting \n \n \nNo trials found matching the filters. \nTry broadening the filtered search: \n- if a protein-change query is too narrow, use a looser `--mutation` term or omit it \n- add or widen `--distance` only after confirming geography is intended \n- relax `--status` to include non-recruiting or not-yet-recruiting trials \n- try `--biomarker <gene>` for a phrase search across keyword, intervention, and condition when `--mutation` is too specific \n\nShowing 0 of 0 results.\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,28 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search trial -c melanoma -s recruiting -i \"trametinib\" -l 25"
+  },
+  "args_key": "7d8d3e26dd8101edb19caa889d2dda43928e589fdf6058e705c2d9df6033e41a",
+  "recorded_at": "2026-11-10T06:31:10.447458+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 436.50030001299456,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 5 of 5 \n \nQuery: condition=melanoma, intervention=trametinib, status=recruiting \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT07092670|MELAFERT: Impact of Adjuv…|RECRUITING|-|Melanoma, Fertility|trametinib| \n|NCT03340506|Dabrafenib and/or Trameti…|RECRUITING|4|Melanoma, Non Small Cell Lung Cancer, Solid Tu… [abridged; 5 conditions total]|trametinib| \n|NCT03563729|Melanoma Metastasized to…|RECRUITING|2|Malignant Melanoma|trametinib| \n|NCT07440290|DETERMINE Trial Treatment…|RECRUITING|2/3|Haematological Malignancy, Malignant Neoplasm… [abridged; 20 conditions total]|trametinib| \n|NCT04903119|Nilotinib Plus Dabrafenib…|RECRUITING|1|Metastatic Melanoma, BRAF Gene Mutation|trametinib| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-5 of 5 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

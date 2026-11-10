@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "dementia"
+    ],
+    "limit": 20,
+    "sort": "date"
+  },
+  "args_key": "7341bd5fca55e4c7193fbf6bcc6c9528f16b2d3130679aa3cc0b9a5fd47c0812",
+  "recorded_at": "2026-11-10T09:11:08.280594+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 16897.46589999413,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin dementia, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"statin dementia\" --exclude-retracted --sort date --source semanticscholar --limit 20 --offset 0` \n \n \nFound 20 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42971235|Efficacy and safety of statin discontinuation in patients 65…|PubTator3, Europe PMC, PubMed|2027-09-21|-|0| \n|PMID 41674015|Association between ultrafiltration variability and clinical…|PubTator3, Europe PMC|2026-12-01|-|1| \n|PMID 42664635|Lipid-lowering agent use and changes to sleep.|PubMed|2026-12-01|-|0| \n|PMID 42955217|Highlights of Cardiovascular Disease Prevention Studies Pres…|PubTator3, PubMed|2026-10-29|-|0| \n|PMID 42903333|Association of statin use with reduced risk of Alzheimer's d…|PubMed|2026-10-06|-|0| \n|PMID 42854446|Allostatic load measurement and cognitive function among mid…|Europe PMC|2026-09-27|-|0| \n|PMID 42782359|Not all mental disorders matter equally in peripheral arteri…|PubTator3, PubMed|2026-09-24|-|0| \n|PMID 42776590|Prevalence of Undertreated CKD among Hospital Inpatients: A…|PubTator3, PubMed|2026-09-23|-|0| \n|PMID 42881853|The Association of Fasting Glucose and Total Cholesterol wit…|PubMed|2026-09-23|-|0| \n|PMID 42760680|Explainable artificial intelligence for predicting mortality…|PubTator3, PubMed|2026-09-18|-|0| \n|PMID 42812463|Statin use and all-cause mortality in critically ill ischemi…|PubTator3, PubMed|2026-09-15|-|0| \n|PMID 42730947|Prevalence and factors influencing medication adherence afte…|Europe PMC|2026-09-12|-|0| \n|PMID 42735389|Cardiometabolic medication exposures and cognitive outcomes…|PubTator3, PubMed|2026-09-04|-|0| \n|PMID 42807723|Potential Role of Red Yeast Rice in the Prevention and Treat…|PubMed|2026-08-22|-|0| \n|PMID 42605781|Medication safety in older adults in India: an integrative P…|Europe PMC|2026-08-17|-|0| \n|PMID 42830798|Primary results of the VICTORION-NOVEL (LDL-C management Pro…|Europe PMC|2026-07-16|-|0| \n|PMID 42299131|Proteomic Mendelian randomization and machine learning revea…|Europe PMC|2026-06-16|-|0| \n|PMID 42261249|Clinical associations during the year before Parkinson's dis…|Europe PMC|2026-06-09|-|0| \n|PMID 42216420|The physiological effects of APOE genotype in healthy young/…|Europe PMC|2026-05-29|-|0| \n|PMID 42046408|Diabetic cerebral microvascular disorder: from key pathologi…|Europe PMC|2026-04-27|-|2| \n \n \n \nNewest indexed: 2026-10-22 (19 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42971235\n  biomcp search article -k \"statin dementia\" --year-min 2026 --year-max 2027 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 20 results (total unknown). Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E melanoma encorafenib binimetinib overall survival"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "20ddb47b5205458edac05c27dbe79037ff942ca58f45c4cb1b8125aa16d95d44",
+  "recorded_at": "2026-11-09T20:06:52.908963+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2825.758399994811,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E melanoma encorafenib binimetinib overall survival, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E melanoma encorafenib binimetinib overall survival\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 37596643|PI3K/AKT/mTOR signaling transduction pathway and targeted th…|Europe PMC|2023-08-18|-|1709| \n|PMID 32296018|Comprehensive review of targeted therapy for colorectal canc…|Europe PMC|2020-03-20|-|1248| \n|PMID 34054126|Small molecules in targeted cancer therapy: advances, challe…|Europe PMC|2021-05-31|-|1181| \n|PMID 32528145|RAS-targeted therapies: is the undruggable drugged?|Europe PMC|2020-06-11|-|939| \n|PMID 38723373|COLUMBUS 7-year update: A randomized, open-label, phase III…|PubTator3, PubMed|2024-06-01|-|80| \n|PMID 37270692|Phase II, Open-Label Study of Encorafenib Plus Binimetinib i…|PubTator3|2023-06-04|-|72| \n|PMID 41038185|First-line immunotherapy with or without chemotherapy versus…|PubMed|2025-10-01|-|19| \n|PMID 40449497|Combination of encorafenib and binimetinib followed by ipili…|PubMed|2025-06-01|-|6| \n|PMID 41537702|Exploratory Analysis of Biomarkers and Treatment Outcomes fr…|PubTator3, PubMed|2026-01-15|-|5| \n|PMID 39584754|Safe Integration of Encorafenib plus Binimetinib with Stereo…|PubMed|2024-11-01|-|2| \n \n \n \nNewest indexed: 2025-10-02 (403 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 37596643\n  biomcp search article -k \"BRAF V600E melanoma encorafenib binimetinib overall survival\" --year-min 2020 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

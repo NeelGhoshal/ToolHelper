@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "BRAF-mutant melanoma"
+    ],
+    "limit": 10
+  },
+  "args_key": "b0a9bcba371bd70cb0f1e29842a87aadd99b65d74d24b86f2f7349a83c1d5973",
+  "recorded_at": "2026-11-10T06:36:06.602278+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 236.01739999139681,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 68 \n \nQuery: condition=BRAF-mutant melanoma \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT04417621|Study of Efficacy and Saf…|ACTIVE_NOT_RECRUITING|2|Melanoma| \n|NCT01351103|A Study of LGK974 in Pati…|COMPLETED|1|Pancreatic Cancer, BRAF Mutant Colorectal Canc… [abridged; 8 conditions total]| \n|NCT01436656|A Phase I Study of Oral L…|COMPLETED|1|Melanoma and Metastatic Colorectal Cancer| \n|NCT02902029|Evaluating the Efficacy a…|COMPLETED|2|Malignant Melanoma| \n|NCT03864042|Pharmacokinetic Drug-drug…|COMPLETED|1|Advanced Solid Tumors, Metastatic Melanoma| \n|NCT04059224|TraMel-WT: A Trial of Tra…|COMPLETED|2|Stage IV Melanoma, Stage III Melanoma| \n|NCT05260684|Comparative Effectiveness…|COMPLETED|-|Melanoma| \n|NCT04720768|Encorafenib, Binimetinib…|UNKNOWN|1/2|Melanoma, Metastasis| \n|NCT01166126|Temsirolimus/AZD 6244 for…|TERMINATED|2|Mucosal Melanoma, Recurrent Melanoma, Stage IV Melanoma| \n|NCT03878719|Study of the Combination…|TERMINATED|1|Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-10 of 68 results. Use --offset 10 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

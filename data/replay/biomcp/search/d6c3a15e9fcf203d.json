@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "activating mutations epidermal growth factor receptor gefitinib responsiveness lung cancer"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "d6c3a15e9fcf203d18bf463095ef0221e957b285cadc974cc726f09af2fc1075",
+  "recorded_at": "2026-11-10T06:48:39.542563+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 24042.728100001113,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=activating mutations epidermal growth factor receptor gefitinib responsiveness lung cancer, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"activating mutations epidermal growth factor receptor gefitinib responsiveness lung cancer\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 15118073|Activating mutations in the epidermal growth factor receptor…|Europe PMC|2004-04-29|-|8565| \n|PMID 21252716|International association for the study of lung cancer/ameri…|Europe PMC|2011-02-01|-|3664| \n|PMID 15737014|Acquired resistance of lung adenocarcinomas to gefitinib or…|Europe PMC|2005-02-22|-|2640| \n|PMID 32649885|Oxidative Stress in Cancer.|Europe PMC|2020-07-09|-|2032| \n|PMID 42926325|Live-cell FRET imaging-based efficacy prediction of EGFR-TKI…|PubMed|2026-10-01|-|0| \n|PMID 42656148|Looking back on the history of epidermal growth factor recep…|PubMed|2026-08-27|-|0| \n|PMID 42972485|The TGF-β signaling activated by cancer-associated macropha…|PubMed|2026-08-04|-|0| \n|PMID 42087187|Unmasking the common enemy: drug resistance mechanisms acros…|PubMed|2026-05-06|-|0| \n|PMID 38494473|An epidermal growth factor receptor compound mutation of L85…|PubTator3|2024-03-18|-|none| \n|PMID 37705536|Case report: Concomitant EGFR mutation and ALK rearrangement…|PubTator3|2023-08-29|-|none| \n \n \n \nNewest indexed: 2026-11-02 (8 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 15118073\n  biomcp search article -k \"activating mutations epidermal growth factor receptor gefitinib responsiveness lung cancer\" --year-min 2004 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

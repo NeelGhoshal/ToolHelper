@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "review",
+    "entity": "article",
+    "keyword": [
+      "EGFR",
+      "lung cancer",
+      "tyrosine kinase inhibitor"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "0ad5da05a8ecfa824bbe57652cbdc1c535207e30a51c4c2f40a39b1eef51e12c",
+  "recorded_at": "2026-11-10T06:36:10.085117+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1364.616600010777,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR lung cancer tyrosine kinase inhibitor, type=review, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 32029601|The biology, function, and biomedical applications of exosom…|Europe PMC|2020-02-01|-|8962| \n|PMID 24202395|Microenvironmental regulation of tumor progression and metas…|Europe PMC|2013-11-01|-|6260| \n|PMID 23539594|Cancer genome landscapes.|Europe PMC|2013-03-01|-|6000| \n|PMID 33479224|Hepatocellular carcinoma.|Europe PMC|2021-01-21|-|5591| \n|PMID 17237348|Nitric oxide and peroxynitrite in health and disease.|Europe PMC|2007-01-01|-|4381| \n|PMID 36695182|Heart Disease and Stroke Statistics-2023 Update: A Report Fr…|Europe PMC|2023-01-25|-|4105| \n|PMID 21593862|Molecular mechanisms and clinical applications of angiogenes…|Europe PMC|2011-05-01|-|4105| \n|PMID 23294312|Role of nrf2 in oxidative stress and toxicity.|Europe PMC|2013-01-01|-|4048| \n|PMID 24999379|Lipid peroxidation: production, metabolism, and signaling me…|Europe PMC|2014-05-08|-|3941| \n|PMID 25058905|Cisplatin in cancer therapy: molecular mechanisms of action.|Europe PMC|2014-07-21|-|3907| \n \n \n \nNewest indexed: 2023-01-25 (1385 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 32029601\n  biomcp search article -k \"EGFR lung cancer tyrosine kinase inhibitor\" --type review --year-min 2007 --year-max 2023 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

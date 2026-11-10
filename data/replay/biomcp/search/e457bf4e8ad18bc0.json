@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "meta-analysis",
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "Alzheimer",
+      "cognition"
+    ],
+    "limit": 10
+  },
+  "args_key": "e457bf4e8ad18bc0aabd1fd422e233eb75e3d2d5c9e89257e2564e25e2e76b53",
+  "recorded_at": "2026-11-10T08:49:37.488955+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6666.643500007922,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin Alzheimer cognition, type=meta-analysis, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 34871380|Statin use and risk of dementia or Alzheimer's disease: a sy…|PubMed|2022-05-05|hybrid 0.27 + title 2/3|167| \n|PMID 40709486|A meta-analysis and systematic review of interventions to pr…|Europe PMC|2025-07-01|hybrid 0.243 + title 1/3|3| \n|PMID 31277107|The effect of anti-dementia drugs on Alzheimer disease-induc…|Europe PMC|2019-07-01|hybrid 0.243 + title 1/3|14| \n|PMID 38415688|Sporadic cerebral small vessel disease and cognitive decline…|Europe PMC|2024-02-28|hybrid 0.216|22| \n|PMID 41286463|Dissecting the genetic and proteomic risk factors for deliri…|Europe PMC|2025-11-24|hybrid 0.212|9| \n|PMID 35202496|Lipid levels and the risk of dementia: A dose-response meta-…|Europe PMC|2022-02-24|hybrid 0.21|43| \n|PMID 39239841|Poststroke Cognitive Impairment and the Risk of Recurrent St…|Europe PMC|2024-09-06|hybrid 0.204|26| \n|PMID 39312316|Effect of long-term pharmacological treatments on Alzheimer…|PubMed|2024-09-20|hybrid 0.19 + title 1/3|2| \n|PMID 41042837|Bridging the gap: Efficacy of combined therapies for cogniti…|Europe PMC|2025-10-03|hybrid 0.177 + title 1/3|1| \n|PMID 37072222|Short-term Trajectories of Poststroke Cognitive Function: A…|Europe PMC|2023-04-18|hybrid 0.176|18| \n \n \n \nNewest indexed: 2025-11-25 (350 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 34871380\n  biomcp search article -k \"statin Alzheimer cognition\" --type meta-analysis --year-min 2019 --year-max 2025 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

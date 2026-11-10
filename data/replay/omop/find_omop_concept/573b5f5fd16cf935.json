@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "1191",
+    "max_results": 10,
+    "omop_field": "concept_code",
+    "omop_table": "concept"
+  },
+  "args_key": "573b5f5fd16cf9354b4fc1caa40c31bc5b860dc4e1cba5b566371b67fa62ea72",
+  "recorded_at": "2026-11-09T21:18:30.841448+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 755.8366000012029,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 1112807,\n      \"code\": \"1191\",\n      \"name\": \"aspirin\",\n      \"class\": \"Ingredient\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/1112807\"\n    },\n    {\n      \"concept_id\": 35954742,\n      \"code\": \"1191\",\n      \"name\": \"EID1 (EP300 interacting inhibitor of differentiation 1) gene variant measurement\",\n      \"class\": \"Gene Variant\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"OMOP Genomic\",\n      \"url\": \"https://omophub.com/concepts/35954742\"\n    },\n    {\n      \"concept_id\": 36863238,\n      \"code\": \"OMOP5180855\",\n      \"name\": \"A-371191\",\n      \"class\": \"Ingredient\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/36863238\"\n    },\n    {\n      \"concept_id\": 36861765,\n      \"code\": \"OMOP5179382\",\n      \"name\": \"VA-111913\",\n      \"class\": \"Ingredient\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/36861765\"\n    },\n    {\n      \"concept_id\": 1328551,\n      \"code\": \"4044686\",\n      \"name\": \"BARRIER,OSTOMY,NEW IMAGE H#11911\",\n      \"class\": \"Device\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Device\",\n      \"vocab\": \"VANDF\",\n      \"url\": \"https://omophub.com/concepts/1328551\"\n    },\n    {\n      \"concept_id\": 1606886,\n      \"code\": \"4031368\",\n      \"name\": \"CATHETER FOLEY 14FR 10ML M#DYND11914\",\n      \"class\": \"Device\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Device\",\n      \"vocab\": \"VANDF\",\n      \"url\": \"https://omophub.com/concepts/1606886\"\n    },\n    {\n      \"concept_id\": 1606887,\n      \"code\": \"4031369\",\n      \"name\": \"CATHETER FOLEY 16FR 10ML M#DYND11916\",\n      \"class\": \"Device\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Device\",\n      \"vocab\": \"VANDF\",\n      \"url\": \"https://omophub.com/concepts/1606887\"\n    },\n    {\n      \"concept_id\": 1606885,\n      \"code\": \"4031367\",\n      \"name\": \"CATHETER FOLEY 18FR 10ML M#DYND11918\",\n      \"class\": \"Device\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Device\",\n      \"vocab\": \"VANDF\",\n      \"url\": \"https://omophub.com/concepts/1606885\"\n    },\n    {\n      \"concept_id\": 35957629,\n      \"code\": \"29209\",\n      \"name\": \"KIAA1191 (KIAA1191) gene variant measurement\",\n      \"class\": \"Gene Variant\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"OMOP Genomic\",\n      \"url\": \"https://omophub.com/concepts/35957629\"\n    },\n    {\n      \"concept_id\": 19616609,\n      \"code\": \"OMOP5529915\",\n      \"name\": \"NF2 transcript: Deletion in position 1191 measurement\",\n      \"class\": \"Gene RNA Variant\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"OMOP Genomic\",\n      \"url\": \"https://omophub.com/concepts/19616609\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"1191\",\n    \"omop_table\": \"concept\",\n    \"omop_field\": \"concept_code\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

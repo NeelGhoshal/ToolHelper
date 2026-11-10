@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "Systolic blood pressure",
+    "max_results": 10,
+    "omop_field": "measurement_concept_name",
+    "omop_table": "measurement"
+  },
+  "args_key": "17a2be1ba013b8ba662001464400d2c69a3b8cb63a0d42a1b9d732a02127eeed",
+  "recorded_at": "2026-11-10T04:34:07.576711+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 492.02239999431185,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 4152194,\n      \"code\": \"271649006\",\n      \"name\": \"Systolic blood pressure\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4152194\"\n    },\n    {\n      \"concept_id\": 3004249,\n      \"code\": \"8480-6\",\n      \"name\": \"Systolic blood pressure\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3004249\"\n    },\n    {\n      \"concept_id\": 36304291,\n      \"code\": \"86908-1\",\n      \"name\": \"Systolic blood pressure goal\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/36304291\"\n    },\n    {\n      \"concept_id\": 36032120,\n      \"code\": \"96608-5\",\n      \"name\": \"Systolic blood pressure mean\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/36032120\"\n    },\n    {\n      \"concept_id\": 4248525,\n      \"code\": \"407556006\",\n      \"name\": \"Lying systolic blood pressure\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4248525\"\n    },\n    {\n      \"concept_id\": 21490674,\n      \"code\": \"60984-2\",\n      \"name\": \"Aorta Systolic blood pressure\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/21490674\"\n    },\n    {\n      \"concept_id\": 4197167,\n      \"code\": \"314464000\",\n      \"name\": \"24 hour systolic blood pressure\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4197167\"\n    },\n    {\n      \"concept_id\": 4194467,\n      \"code\": \"314440001\",\n      \"name\": \"Average systolic blood pressure\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4194467\"\n    },\n    {\n      \"concept_id\": 4194466,\n      \"code\": \"314439003\",\n      \"name\": \"Maximum systolic blood pressure\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4194466\"\n    },\n    {\n      \"concept_id\": 4194465,\n      \"code\": \"314438006\",\n      \"name\": \"Minimum systolic blood pressure\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4194465\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"Systolic blood pressure\",\n    \"omop_table\": \"measurement\",\n    \"omop_field\": \"measurement_concept_name\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

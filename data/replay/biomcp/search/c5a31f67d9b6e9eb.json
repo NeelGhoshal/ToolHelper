@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 5,
+    "query": "PDGFRA platelet derived growth factor receptor alpha imatinib target"
+  },
+  "args_key": "c5a31f67d9b6e9eb46aa4a9b3caca139d6ffc765d954d94e00fd68f6c1c9d1cb",
+  "recorded_at": "2026-11-09T21:56:50.005380+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 301.6580999828875,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: PDGFRA platelet derived growth factor receptor alpha imatinib target \n \nFound 1 gene \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| PDGFRA | platelet derived growth factor receptor alpha | 5156 | 4:54229130-54298246 | GRCh38 | P16234 | 173490 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1 of 1 results. \n \n\n\n## Next commands\n- `biomcp get gene PDGFRA`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

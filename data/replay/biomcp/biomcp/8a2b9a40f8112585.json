@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search drug -q acetaminophen --json",
+    "json": true
+  },
+  "args_key": "8a2b9a40f8112585438f2518e68d46f572b06804bcfc10cfd1be08d48a172d7e",
+  "recorded_at": "2026-11-09T21:34:17.873103+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 26318.835500016576,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"region\": \"all\",\n  \"regions\": {\n    \"us\": {\n      \"region\": \"us\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 10,\n        \"total\": 311,\n        \"has_more\": true,\n        \"next_page_token\": null\n      },\n      \"count\": 10,\n      \"results\": [\n        {\n          \"name\": \"acetaminophen\",\n          \"drugbank_id\": \"DB00316\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Inhibitor of Cyclooxygenase\",\n          \"target\": \"TRPV4\",\n          \"match_kind\": \"active_substance\"\n        },\n        {\n          \"name\": \"phenylephrine\",\n          \"drugbank_id\": \"DB00388\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Adrenergic alpha1-Agonists\",\n          \"target\": \"ADRA1A\",\n          \"match_kind\": \"active_substance\"\n        },\n        {\n          \"name\": \"dextromethorphan\",\n          \"drugbank_id\": \"DB00514\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Uncompetitive NMDA Receptor Antagonists\",\n          \"target\": \"GRIN2C\",\n          \"match_kind\": \"active_substance\"\n        },\n        {\n          \"name\": \"guaifenesin\",\n          \"drugbank_id\": \"DB00874\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Uncompetitive NMDA Receptor Antagonists\",\n          \"match_kind\": \"active_substance\"\n        },\n        {\n          \"name\": \"doxylamine\",\n          \"drugbank_id\": \"DB00366\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Uncompetitive NMDA Receptor Antagonists\",\n          \"match_kind\": \"active_substance\"\n        },\n        {\n          \"name\": \"diphenhydramine\",\n          \"drugbank_id\": \"DB01075\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Histamine H1 Receptor Antagonists\",\n          \"target\": \"HRH1\",\n          \"match_kind\": \"active_substance\"\n        },\n        {\n          \"name\": \"ibuprofen\",\n          \"drugbank_id\": \"DB01050\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Inhibitor of Cyclooxygenase\",\n          \"target\": \"ASIC1\",\n          \"match_kind\": \"active_substance\"\n        },\n        {\n          \"name\": \"hydrocodone\",\n          \"drugbank_id\": \"DB00956\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Opioid Agonists\",\n          \"target\": \"OPRK1\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"caffeine\",\n          \"drugbank_id\": \"DB00201\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Antagonist of Adenosine receptor\",\n          \"target\": \"ADORA1\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"oxycodone\",\n          \"drugbank_id\": \"DB00497\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Agonist of Mu-type opioid receptor\",\n          \"target\": \"Mu-type opioid receptor\",\n          \"match_kind\": \"broad_text\"\n        }\n      ],\n      \"continuation_command\": \"biomcp search drug --query acetaminophen --region us --limit 10 --offset 10\"\n    },\n    \"eu\": {\n      \"region\": \"eu\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 3,\n        \"total\": 3,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"count\": 3,\n      \"results\": [\n        {\n          \"name\": \"Vlustozik (previously Ibuprofen Gen.Orph)\",\n          \"active_substance\": \"Ibuprofen\",\n          \"ema_product_number\": \"EMEA/H/C/006129\",\n          \"status\": \"Authorised\",\n          \"match_kind\": \"alias\",\n          \"matched_term\": \"Ibuprofen\",\n          \"source\": \"ndc.nonproprietaryname\"\n        },\n        {\n          \"name\": \"Pedea\",\n          \"active_substance\": \"Ibuprofen\",\n          \"ema_product_number\": \"EMEA/H/C/000549\",\n          \"status\": \"Authorised\",\n          \"match_kind\": \"alias\",\n          \"matched_term\": \"Ibuprofen\",\n          \"source\": \"ndc.nonproprietaryname\"\n        },\n        {\n          \"name\": \"Ibuprofen/Diphenhydramine Hydrochloride Wyeth\",\n          \"active_substance\": \"Ibuprofen\",\n          \"ema_product_number\": \"EMEA/H/C/001108\",\n          \"status\": \"Application withdrawn\",\n          \"match_kind\": \"alias\",\n          \"matched_term\": \"Ibuprofen\",\n          \"source\": \"ndc.nonproprietaryname\"\n        }\n      ]\n    },\n    \"who\": {\n      \"region\": \"who\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 0,\n        \"total\": 0,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"count\": 0,\n      \"results\": []\n    }\n  },\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get drug acetaminophen\",\n      \"biomcp list drug\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

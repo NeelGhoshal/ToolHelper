@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "pembrolizumab",
+    "json": true,
+    "maxItems": 50,
+    "sections": [
+      "indications",
+      "label",
+      "approvals",
+      "regulatory",
+      "targets"
+    ]
+  },
+  "args_key": "2a40108aed6731dfbb44438865e8c3d66f237e44300d26e786f845460a3d0e7a",
+  "recorded_at": "2026-11-10T08:01:08.076325+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.1996999965049326,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "unknown drug get field: maxItems"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

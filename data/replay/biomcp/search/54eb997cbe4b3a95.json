@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "TP53",
+    "json": true,
+    "keyword": [
+      "TP53 somatic mutations cancer spectrum sarcoma adrenocortical carcinoma brain tumors leukemia"
+    ],
+    "limit": 8
+  },
+  "args_key": "54eb997cbe4b3a953c1bb409cf5aa0bb58fc205c4d129b39ca6a96f767ab9a4c",
+  "recorded_at": "2026-11-09T22:09:07.818998+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2360.2083000005223,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=TP53, keyword=TP53 somatic mutations cancer spectrum sarcoma adrenocortical carcinoma brain tumors leukemia, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"sort\": \"relevance\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"ranking_policy\": \"hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 8,\n    \"returned\": 8,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 8,\n  \"results\": [\n    {\n      \"pmid\": \"40289692\",\n      \"pmcid\": \"PMC12062525\",\n      \"title\": \"Li-Fraumeni Syndrome : Current Strategies and Future Perspectives\",\n      \"journal\": \"J Korean Neurosurg Soc\",\n      \"date\": \"2025-04-29\",\n      \"citation_count\": 2,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"39404911\",\n      \"pmcid\": \"PMC11480288\",\n      \"title\": \"Current insights and future directions of Li-Fraumeni syndrome\",\n      \"journal\": \"Discov Oncol\",\n      \"date\": \"2024-10-15\",\n      \"citation_count\": 18,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"39100628\",\n      \"pmcid\": \"11294748\",\n      \"doi\": \"10.1016/j.aace.2024.03.007\",\n      \"semantic_scholar_id\": \"e210a56509b02b107673d5d80b8e855dea9a3883\",\n      \"title\": \"Papillary Thyroid Carcinoma, Cushing Disease, and Adrenocortical Carcinoma in a Patient with Li-Fraumeni Syndrome\",\n      \"journal\": \"AACE Clinical Case Reports\",\n      \"date\": \"2024\",\n      \"citation_count\": 4,\n      \"source\": \"semanticscholar\",\n      \"is_retracted\": null\n    },\n    {\n      \"doi\": \"10.1200/jco.2025.43.16_suppl.10609\",\n      \"semantic_scholar_id\": \"7af61ec5b1a3ee3f1618e5dddc00c2ea98ffba85\",\n      \"title\": \"Clinical characteristics and cancer spectrum among breast cancer patients with TP53 germline mutation from a single institution.\",\n      \"journal\": \"Journal of Clinical Oncology\",\n      \"date\": \"2025\",\n      \"citation_count\": 0,\n      \"source\": \"semanticscholar\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42741779\",\n      \"pmcid\": \"PMC13574328\",\n      \"doi\": \"10.7759/cureus.114575\",\n      \"title\": \"Li-Fraumeni Syndrome: Current Perspectives on Molecular Pathogenesis, Surveillance Strategies, Clinical Management and Pediatric Considerations.\",\n      \"journal\": \"Cureus\",\n      \"date\": \"2026-08-15\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"doi\": \"10.1158/1538-7445.am2025-7458\",\n      \"semantic_scholar_id\": \"708c522d804befcef16f979746a1ffeac38efabd\",\n      \"title\": \"Abstract 7458: Germline-p53-mutant adrenocortical carcinoma is a possible candidate for the novel use of arsenic trioxide as a first targeted anticancer therapy for Li-Fraumeni syndrome\",\n      \"journal\": \"Cancer Research\",\n      \"date\": \"2025\",\n      \"citation_count\": 0,\n      \"source\": \"semanticscholar\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42051917\",\n      \"pmcid\": \"PMC13112418\",\n      \"doi\": \"10.1155/crig/1809799\",\n      \"title\": \"Clinical Heterogeneity of a TP53 Variant in a Consanguineous Omani Family: A Case Report Featuring a Homozygous Pathogenic Variant.\",\n      \"journal\": \"Case Rep Genet\",\n      \"date\": \"2026-04-27\",\n      \"citation_count\": 1,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42737963\",\n      \"pmcid\": \"PMC13564831\",\n      \"doi\": \"10.3390/biology15171531\",\n      \"title\": \"Deconstructing the Alternative Lengthening of Telomeres: Integromics Prioritizes Five Master Hubs Dictating Clinical Survival and Therapeutic Vulnerabilities.\",\n      \"journal\": \"Biology (Basel)\",\n      \"date\": \"2026-09-03\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"partial_query_match\",\n        \"message\": \"The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 40289692\",\n      \"biomcp search article -g TP53 -k \\\"TP53 somatic mutations cancer spectrum sarcoma adrenocortical carcinoma brain tumors leukemia\\\" --year-min 2024 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"ok\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

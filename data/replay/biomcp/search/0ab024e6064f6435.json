@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "EGFR-mutant non-small cell lung cancer"
+    ],
+    "limit": 10
+  },
+  "args_key": "0ab024e6064f6435aa2d68eaedd1197a6e6b2648bf5b19bf2f8cc68203f5668f",
+  "recorded_at": "2026-11-10T07:48:23.362602+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 238.42410001088865,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 225 \n \nQuery: condition=EGFR-mutant non-small cell lung cancer \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT07348965|Pulsatile High-dose Furmo…|RECRUITING|NA|NSCLC (Advanced Non-small Cell Lung Cancer), L… [abridged; 4 conditions total]| \n|NCT07535437|A Study of Ivonescimab in…|RECRUITING|1/2|Non-Small Cell Lung Cancer| \n|NCT07738172|Osimertinib With or Witho…|RECRUITING|3|Lung Neoplasms, Non-Small Cell Lung Cancer| \n|NCT07911449|Osimertinib Plus Stereota…|RECRUITING|2|Non-Small Cell Lung Cancer, Brain Metastases F… [abridged; 3 conditions total]| \n|NCT01553942|Afatinib With CT and RT f…|ACTIVE_NOT_RECRUITING|2|Lung Cancer| \n|NCT02503774|MEDI9447 Alone and in Com…|COMPLETED|1|Solid Tumors| \n|NCT07857694|Thoracic Radiotherapy Plu…|COMPLETED|-|Lung Cancer Stage III, EGFR Activating Mutation| \n|NCT01955421|Erlotinib 100mg qd Versus…|UNKNOWN|2|Advanced Stage Non Small Cell Lung Cancer| \n|NCT04971187|Bintrafusp Alfa With Chem…|TERMINATED|2|Locally Advanced Lung Non-Squamous Non-Small… [abridged; 10 conditions total]| \n|NCT02470065|Neoadjuvant Afatinib in E…|SUSPENDED|2|Non Small Cell Lung Cancer| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-10 of 225 results. Use --offset 10 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

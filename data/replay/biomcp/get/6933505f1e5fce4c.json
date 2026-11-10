@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "TP53",
+    "sections": [
+      "civic",
+      "diagnostics",
+      "expression"
+    ]
+  },
+  "args_key": "6933505f1e5fce4cbe200c6c9896aa0d8e38debbb8687991e234e55536f34ad5",
+  "recorded_at": "2026-11-09T20:42:23.884340+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 3562.627399980556,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# TP53 - civic, diagnostics, expression \n## Diagnostics \n \n| Accession | Name | Type | Manufacturer / Lab | Source | Genes | Conditions | \n|---|---|---|---|---|---|---| \n| GTR000566345.1 | ACMG Secondary Findings (Medically Actionable Genes, Including Cardio and Cancer) NGS Panel | Clinical | Fulgent Genetics | NCBI Genetic Testing Registry | ACTC1, ACTA2, APOB, BRCA1, CACNA1S, +54 more | Arrhythmogenic right ventricular dysplasia 2, Congenital central hypoventilation, Generalized juvenile polyposis/juvenile polyposis coli, Lethal tight skin contracture syndrome, Bannayan-Riley-Ruvalcaba syndrome, +172 more | \n| GTR000592490.1 | Acute Myeloid Leukemia Mutation Panel by Next Generation Sequencing | Clinical | ARUP Laboratories, Molecular Oncology | NCBI Genetic Testing Registry | CEBPA, FLT3, GATA2, IDH2, IDH1, +12 more | Acute myeloid leukemia | \n| GTR000576791.1 | Adrenal cortical carcinoma, 202300, Autosomal recessive; ADCC (Adrenocortical carcinoma) (MLPA) | Clinical | Intergen Genetic Diagnosis and Research Centre | NCBI Genetic Testing Registry | TP53 | Adrenocortical carcinoma, hereditary | \n| GTR000576656.1 | Adrenal cortical carcinoma, 202300, Autosomal recessive; ADCC (Adrenocortical carcinoma) (TP53 gene) (Sequence Analysis-All Coding Exons) (Postnatal) | Clinical | Intergen Genetic Diagnosis and Research Centre | NCBI Genetic Testing Registry | TP53 | Adrenocortical carcinoma, hereditary | \n| GTR000527383.1 | Adrenocortical carcinoma | Clinical | Bioarray | NCBI Genetic Testing Registry | TP53 | Adrenal cortex carcinoma | \n| GTR000614893.2 | Adrenocortical Carcinoma (ACC) Panel | Clinical | PreventionGenetics, part of Exact Sciences | NCBI Genetic Testing Registry | MLH1, EPCAM, TP53, PMS2, MSH6, +3 more | Familial cancer of breast, Colorectal cancer, Hepatocellular carcinoma, Lynch syndrome 1, Multiple endocrine neoplasia, type 1, +24 more | \n| GTR000593796.1 | Adrenocortical carcinoma, pediatric. | Clinical | Bioarray | NCBI Genetic Testing Registry | TP53 | ADRENOCORTICAL CARCINOMA, PEDIATRIC | \n| GTR000615354.2 | AML, 11 Gene, NGS, V | Clinical | Mayo Clinic Laboratories | NCBI Genetic Testing Registry | CEBPA, FLT3, IDH2, IDH1, RUNX1, +6 more | Acute myeloid leukemia | \n| GTR000615355.2 | AML, 4 Gene, NGS, V | Clinical | Mayo Clinic Laboratories | NCBI Genetic Testing Registry | FLT3, IDH2, IDH1, TP53 | Acute myeloid leukemia | \n| GTR000575370.1 | B-Cell Gene Rearrangement, ATM and TP53 Mutation Analysis | Clinical | PathGroup | NCBI Genetic Testing Registry | IGH, TP53, ATM | Non-Hodgkin lymphoma, Solid tumor, Acute leukemia, Neoplasm, Lymphoma, +4 more | \n## CIViC \n \n- Evidence Items: 196 \n- Assertions: 0 \n| Evidence | Level | Disease | Therapies | \n|---|---|---|---| \n| EID1507 | A | Chronic Lymphocytic Leukemia | - | \n| EID1452 | B | Chronic Lymphocytic Leukemia | - | \n| EID1485 | B | Chronic Lymphocytic Leukemia | - | \n| EID2999 | B | Lung Non-small Cell Carcinoma | - | \n| EID8347 | B | Medulloblastoma SHH Activated | - | \n| EID519 | B | Esophagus Squamous Cell Carcinoma | - | \n| EID520 | B | B-lymphoblastic Leukemia/lymphoma | - | \n| EID521 | B | Myelodysplastic Syndrome | - | \n| EID522 | B | Myeloid Neoplasm | - | \n| EID523 | B | Head And Neck Squamous Cell Carcinoma | - | \n## Expression (GTEx) \n \n| Tissue | Median TPM | \n|---|---| \n| Cells EBV-transformed lymphocytes | 72.949 | \n| Skin Sun Exposed Lower leg | 36.961 | \n| Skin Not Sun Exposed Suprapubic | 35.160 | \n| Cells Cultured fibroblasts | 32.873 | \n| Ovary | 32.427 | \n| Cervix Endocervix | 29.501 | \n| Uterus | 29.500 | \n| Cervix Ectocervix | 28.481 | \n| Fallopian Tube | 28.162 | \n| Spleen | 26.593 | \n| Brain Cerebellar Hemisphere | 2.027 | \n| Brain Cerebellum | 2.447 | \n| Brain Hippocampus | 2.711 | \nMore:\n  biomcp get gene TP53 pathways   - Reactome/KEGG pathway context\n  biomcp get gene TP53 ontology   - GO-style functional enrichment\n  biomcp get gene TP53 diseases   - disease associations\n  biomcp get gene TP53 funding   - NIH Reporter grant support\nAll:\n  biomcp get gene TP53 all \nSee also:\n  biomcp search diagnostic --gene TP53   - diagnostic tests for this gene\n  biomcp search pgx -g TP53   - pharmacogenomics interactions\n  biomcp search variant -g TP53\n  biomcp search article -g TP53\n  biomcp search drug --target TP53\n  biomcp gene trials TP53 \n\n[NCBI Gene](https://www.ncbi.nlm.nih.gov/gene/7157) | [UniProt](https://www.uniprot.org/uniprot/P04637) | [Ensembl](https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000141510) | [OMIM](https://www.omim.org/entry/191170)\n\n\n## Sources\n- Identity: NCBI Gene / MyGene.info\n- Summary: NCBI Gene\n- Aliases: NCBI Gene / MyGene.info\n- Diagnostics: NCBI Genetic Testing Registry\n- CIViC: CIViC\n- Expression: GTEx\n\n## Next commands\n- `biomcp get gene TP53 pathways`\n- `biomcp get gene TP53 ontology`\n- `biomcp get gene TP53 diseases`\n- `biomcp get gene TP53 funding`\n- `biomcp search diagnostic --gene TP53`\n- `biomcp search pgx -g TP53`\n- `biomcp search variant -g TP53`\n- `biomcp search article -g TP53`\n- `biomcp search drug --target TP53`\n- `biomcp gene trials TP53`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

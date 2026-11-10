@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "161",
+    "json": true
+  },
+  "args_key": "668cf0596234a895811292a645febeb250d04a44da3314245e7788a467c4c158",
+  "recorded_at": "2026-11-09T21:33:07.496630+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 2900.3688000084367,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"error\": {\n    \"code\": \"not_found\",\n    \"message\": \"No exact drug match for '161'.\"\n  },\n  \"_meta\": {\n    \"not_found\": true,\n    \"alias_resolution\": {\n      \"kind\": \"ambiguous\",\n      \"requested_entity\": \"drug\",\n      \"query\": \"161\",\n      \"candidates\": [\n        {\n          \"label\": \"161\",\n          \"primary_type\": \"gene\",\n          \"primary_id\": \"161\",\n          \"confidence\": \"CanonicalId\",\n          \"match_tier\": \"Exact\"\n        },\n        {\n          \"label\": \"23S rRNA (adenine(1618)-N(6))-methyltransferase activity\",\n          \"primary_type\": \"pathway\",\n          \"primary_id\": \"GO:0052907\",\n          \"confidence\": \"CanonicalId\",\n          \"match_tier\": \"Contains\"\n        },\n        {\n          \"label\": \"lutein\",\n          \"primary_type\": \"drug\",\n          \"primary_id\": \"CHEBI:28838\",\n          \"confidence\": \"CanonicalId\",\n          \"match_tier\": \"Weak\"\n        }\n      ]\n    },\n    \"next_commands\": [\n      \"biomcp discover 161\",\n      \"biomcp search drug -q 161\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

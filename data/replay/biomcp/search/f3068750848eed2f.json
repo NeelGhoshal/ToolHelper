@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "meta-analysis",
+    "entity": "article",
+    "keyword": [
+      "metformin cardiovascular outcomes"
+    ],
+    "limit": 15,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "f3068750848eed2f9d01ed6f1ec80726d7d582dd646f42ee9cf02a85a666df81",
+  "recorded_at": "2026-11-09T19:21:36.080315+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1054.2084000189789,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=metformin cardiovascular outcomes, type=meta-analysis, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 15 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42614024|Dipeptidyl Peptidase-4 Inhibitors Associated Heart Failure E…|PubMed|2026-09-01|-|none| \n|PMID 42250263|Metformin for COVID-19: An Updated Systematic Review and Met…|PubMed|2026-07-01|-|none| \n|PMID 42328113|Genetic Evidence for the Benefits and Risks of Glucose-Lower…|PubMed|2026-05-11|-|none| \n|PMID 41044631|Efficacy and safety of variable-dose metformin as adjunctive…|PubMed|2025-10-03|-|none| \n|PMID 40390076|The role of diabetes mellitus on delirium onset: a systemati…|PubMed|2025-05-19|-|none| \n|PMID 40193122|Cardioprotective Glucose-Lowering Agents and Dementia Risk:…|PubMed|2025-05-01|-|none| \n|PMID 39277567|Clinical outcomes in type 2 diabetes patients with chronic h…|PubMed|2025-02-01|-|none| \n|PMID 39773332|Comparative efficacy of GLP-1 RAs/SGLT-2 inhibitors in reduc…|PubMed|2025-01-07|-|none| \n|PMID 39395229|Cardiometabolic outcomes in offspring of women treated with…|PubMed|2024-09-01|-|none| \n|PMID 39137064|Evaluation of glucose-lowering medications in older people:…|PubMed|2024-08-06|-|none| \n|PMID 38477839|Clinical outcomes with metformin use in diabetic patients wi…|PubMed|2024-05-01|-|none| \n|PMID 38589722|Evaluation of the Lifetime Benefits of Metformin and SGLT2 I…|PubMed|2024-05-01|-|none| \n|PMID 38491813|Cardiovascular/anti-inflammatory drugs repurposed for treati…|PubMed|2024-03-01|-|none| \n|PMID 37845186|Fetal and post-natal outcomes in offspring after intrauterin…|PubMed|2024-02-01|-|none| \n|PMID 37249579|Effects of DPP-4 inhibitors, GLP-1 receptor agonists, SGLT-2…|PubMed|2023-08-01|-|none| \n \n \n \nNewest indexed: 2026-08-19 (82 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42614024\n  biomcp search article -k \"metformin cardiovascular outcomes\" --type meta-analysis --source pubmed --year-min 2023 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-15 of 98 results. Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

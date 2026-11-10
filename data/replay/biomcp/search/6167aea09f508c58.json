@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "BRAF",
+    "json": true,
+    "keyword": [
+      "RAS",
+      "RAF",
+      "MEK"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "6167aea09f508c58e28e442cd039077cff9caa5217c0fb50fb21277a08c15bc6",
+  "recorded_at": "2026-11-09T20:36:49.212285+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2826.3560999766923,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=BRAF, keyword=RAS RAF MEK, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 5,\n  \"results\": [\n    {\n      \"pmid\": \"23000897\",\n      \"pmcid\": \"PMC3465532\",\n      \"doi\": \"10.1038/nature11412\",\n      \"title\": \"Comprehensive molecular portraits of human breast tumours.\",\n      \"journal\": \"Nature\",\n      \"date\": \"2012-09-23\",\n      \"citation_count\": 10271,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"12068308\",\n      \"doi\": \"10.1038/nature00766\",\n      \"title\": \"Mutations of the BRAF gene in human cancer.\",\n      \"journal\": \"Nature\",\n      \"date\": \"2002-06-09\",\n      \"citation_count\": 7722,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"36358725\",\n      \"pmcid\": \"PMC9653766\",\n      \"title\": \"The Predictive and Prognostic Role of RAS-RAF-MEK-ERK Pathway Alterations in Breast Cancer: Revision of the Literature and Comparison with the Analysis of Cancer Genomic Datasets\",\n      \"journal\": \"Cancers (Basel)\",\n      \"date\": \"2022-10-28\",\n      \"citation_count\": 61,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"34222333\",\n      \"pmcid\": \"PMC8244928\",\n      \"title\": \"Blocking K-Ras Interaction With the Plasma Membrane Is a Tractable Therapeutic Approach to Inhibit Oncogenic K-Ras Activity\",\n      \"journal\": \"Front Mol Biosci\",\n      \"date\": \"2021-06-16\",\n      \"citation_count\": 11,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42991401\",\n      \"title\": \"Beyond BRAF V600: emerging MAPK-targeted therapeutic strategies.\",\n      \"journal\": \"Annals of translational medicine\",\n      \"date\": \"2026-10-30\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --gene BRAF --keyword \\\"RAS RAF MEK\\\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0\",\n      \"biomcp get article 23000897\",\n      \"biomcp search article -g BRAF -k \\\"RAS RAF MEK\\\" --year-min 2002 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

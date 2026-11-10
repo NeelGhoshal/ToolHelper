@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2025-01-01",
+    "entity": "article",
+    "article_type": "review",
+    "json": true,
+    "keyword": [
+      "HER2-targeted therapy"
+    ],
+    "limit": 8,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "ce9aadc31ad312b879bf5c5df9ae423d061b5c555e4fd4855760036f5f99d1c9",
+  "recorded_at": "2026-11-09T21:24:16.370516+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1288.5219999880064,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=HER2-targeted therapy, type=review, date_from=2025-01-01, exclude_retracted=true, sort=date, source=pubmed\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": false,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubmed\"\n    ],\n    \"enrichment_sources\": []\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 8,\n    \"returned\": 8,\n    \"total\": 851,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 8,\n  \"results\": [\n    {\n      \"pmid\": \"42995001\",\n      \"title\": \"Zanidatamab in the treatment of esophagogastric adenocarcinoma.\",\n      \"journal\": \"Future oncology (London, England)\",\n      \"date\": \"2026-11-06\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42970013\",\n      \"title\": \"Super-enhancers: regulatory mechanisms, biological functions, diseases, and therapeutic targets.\",\n      \"journal\": \"Molecular biomedicine\",\n      \"date\": \"2026-11-02\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42985430\",\n      \"title\": \"Tumor Microenvironment-Mediated Resistance in HER2-Positive Breast Cancer: Recent Advances and Therapeutic Challenges.\",\n      \"journal\": \"Oncology research\",\n      \"date\": \"2026-10-28\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42978924\",\n      \"title\": \"Research progress on the key cuproptosis regulator FDX1 and its relevance to triple-negative breast cancer.\",\n      \"journal\": \"Frontiers in molecular biosciences\",\n      \"date\": \"2026-10-20\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42973798\",\n      \"title\": \"The neuro-metabolic-immune axis in breast cancer: emerging mechanisms and subtype-specific therapeutic opportunities.\",\n      \"journal\": \"Frontiers in immunology\",\n      \"date\": \"2026-10-19\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42985471\",\n      \"title\": \"A Clinician's Guide to Cancer Therapy-Related Cardiovascular Toxicity.\",\n      \"journal\": \"Reviews in cardiovascular medicine\",\n      \"date\": \"2026-10-16\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42952660\",\n      \"title\": \"Tumor lysis syndrome in breast cancer: a systematic review of the literature.\",\n      \"journal\": \"Frontiers in oncology\",\n      \"date\": \"2026-10-14\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42941399\",\n      \"title\": \"Early Cardiac Biomarkers for the Detection of Cancer Therapy-Related Cardiac Dysfunction in Breast Cancer: A Systematic Review and Meta-Analysis.\",\n      \"journal\": \"Journal of clinical medicine\",\n      \"date\": \"2026-10-13\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42995001\",\n      \"biomcp get drug \\\"HER2-targeted Therapy\\\"\",\n      \"biomcp list article\"\n    ],\n    \"suggestions\": [\n      {\n        \"command\": \"biomcp get drug \\\"HER2-targeted Therapy\\\"\",\n        \"reason\": \"Exact drug vocabulary match for article keyword \\\"HER2-targeted therapy\\\".\",\n        \"sections\": [\n          \"label\",\n          \"targets\",\n          \"indications\"\n        ]\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

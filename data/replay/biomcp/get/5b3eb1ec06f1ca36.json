@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "ERBB2",
+    "sections": [
+      "pathways",
+      "interactions",
+      "diseases"
+    ]
+  },
+  "args_key": "5b3eb1ec06f1ca363747946b785b98be4302293cfe174089695b73e69bd785e0",
+  "recorded_at": "2026-11-09T19:34:51.599942+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 855.665000010049,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# ERBB2 - pathways, interactions, diseases \n## Pathways \n \n| Source | ID | Name | \n|---|---|---| \n| KEGG | hsa04010 | MAPK signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04012 | ErbB signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04020 | Calcium signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04066 | HIF-1 signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04151 | PI3K-Akt signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04510 | Focal adhesion - Homo sapiens (human) | \n| KEGG | hsa04520 | Adherens junction - Homo sapiens (human) | \n| KEGG | hsa04530 | Tight junction - Homo sapiens (human) | \n| KEGG | hsa05200 | Pathways in cancer - Homo sapiens (human) | \n| KEGG | hsa05205 | Proteoglycans in cancer - Homo sapiens (human) | \n| KEGG | hsa05206 | MicroRNAs in cancer - Homo sapiens (human) | \n| KEGG | hsa05212 | Pancreatic cancer - Homo sapiens (human) | \n| KEGG | hsa05213 | Endometrial cancer - Homo sapiens (human) | \n| KEGG | hsa05215 | Prostate cancer - Homo sapiens (human) | \n| KEGG | hsa05219 | Bladder cancer - Homo sapiens (human) | \n| KEGG | hsa05223 | Non-small cell lung cancer - Homo sapiens (human) | \n| KEGG | hsa05224 | Breast cancer - Homo sapiens (human) | \n| KEGG | hsa05226 | Gastric cancer - Homo sapiens (human) | \n| KEGG | hsa05230 | Central carbon metabolism in cancer - Homo sapiens (human) | \n| Reactome | R-HSA-372889 | ERBB2 | \n| Reactome | R-HSA-9664463 | ERBB2 G776S | \n| Reactome | R-HSA-9665344 | ERBB2 S310Y | \n| Reactome | R-HSA-9665350 | ERBB2 S310F | \n| Reactome | R-HSA-9665342 | ERBB2 G309E | \n| Reactome | R-HSA-9665622 | ERBB2 Y772_A775dup | \n| Reactome | R-HSA-9649434 | ERBB2 T862A | \n| Reactome | R-HSA-9646828 | ERBB2 L869Q | \n| Reactome | R-HSA-9646765 | ERBB2 T733I | \n| Reactome | R-HSA-9646591 | ERBB2 V777M | \n| Reactome | R-HSA-9665139 | ERBB2 L755_T759del:gefitinib | \n| Reactome | R-HSA-1227936 | ERBB2 homodimer | \n## Diseases (Enrichr) \n \n| Term | P-value | Library | \n|---|---|---| \n| Epithelial tumor of ovary | 3.00e-4 | DisGeNET | \n| Papillary transitional cell carcinoma | 3.00e-4 | DisGeNET | \n| Intermediate Grade Ductal Breast Carcinoma In… | 3.00e-4 | DisGeNET | \n| GLIOMA SUSCEPTIBILITY 1 | 3.00e-4 | DisGeNET | \n| Small intestine carcinoma | 3.00e-4 | DisGeNET | \n| gastric cancer | 5.50e-4 | OMIM_Disease | \n| ovarian cancer | 6.50e-4 | OMIM_Disease | \n## Interactions (STRING) \nCD44: 0.999 \nEGFR: 0.999 \nERBB4: 0.999 \nGRB2: 0.999 \nGRB7: 0.999 \nHSP90AA1: 0.999 \nNRG1: 0.999 \nNRG2: 0.999 \nSHC1: 0.999 \nSRC: 0.999 \nPIK3R2: 0.814 \nPIK3CA: 0.544 \nEGF: 0.484 \nSTUB1: 0.475 \nERBB3: 0.426 \nMore:\n  biomcp get gene ERBB2 ontology   - GO-style functional enrichment\n  biomcp get gene ERBB2 diagnostics   - diagnostic tests for this gene from GTR\n  biomcp get gene ERBB2 funding   - NIH Reporter grant support\n  biomcp get gene ERBB2 protein   - UniProt function and localization detail\nAll:\n  biomcp get gene ERBB2 all \nSee also:\n  biomcp search diagnostic --gene ERBB2   - diagnostic tests for this gene\n  biomcp search pgx -g ERBB2   - pharmacogenomics interactions\n  biomcp search variant -g ERBB2\n  biomcp search article -g ERBB2\n  biomcp search drug --target ERBB2\n  biomcp gene trials ERBB2 \n\n[NCBI Gene](https://www.ncbi.nlm.nih.gov/gene/2064) | [UniProt](https://www.uniprot.org/uniprot/P04626) | [Ensembl](https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000141736) | [OMIM](https://www.omim.org/entry/164870)\n\n\n## Sources\n- Identity: NCBI Gene / MyGene.info\n- Summary: NCBI Gene\n- Aliases: NCBI Gene / MyGene.info\n- Pathways: KEGG, Reactome\n- Diseases: Enrichr\n- Interactions: STRING\n\n## Next commands\n- `biomcp get gene ERBB2 ontology`\n- `biomcp get gene ERBB2 diagnostics`\n- `biomcp get gene ERBB2 funding`\n- `biomcp get gene ERBB2 protein`\n- `biomcp search diagnostic --gene ERBB2`\n- `biomcp search pgx -g ERBB2`\n- `biomcp search variant -g ERBB2`\n- `biomcp search article -g ERBB2`\n- `biomcp search drug --target ERBB2`\n- `biomcp gene trials ERBB2`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

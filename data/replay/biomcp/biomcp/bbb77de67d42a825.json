@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search trial --condition \"melanoma\" -s RECRUITING --criteria \"BRAF V600E\" --limit 25",
+    "json": true
+  },
+  "args_key": "bbb77de67d42a825f9c036c37e8dcbf38600bc422b5c0c04486ae0165f61a266",
+  "recorded_at": "2026-11-10T07:48:45.370296+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 1350.4498999973293,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 25,\n    \"returned\": 6,\n    \"total\": 6,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 6,\n  \"results\": [\n    {\n      \"nct_id\": \"NCT06172478\",\n      \"title\": \"A Study of HER3-DXd in Subjects With Locally Advanced or Metastatic Solid Tumors\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE2\",\n      \"conditions\": [\n        \"Advanced Solid Tumor\",\n        \"Melanoma\",\n        \"Head and Neck Cancer\",\n        \"Gastric Cancer\",\n        \"Ovarian Carcinoma\",\n        \"Cervical Cancer\",\n        \"Endometrial Cancer\",\n        \"Bladder Cancer\",\n        \"Esophageal Cancer\",\n        \"Pancreatic Carcinoma\",\n        \"Prostate Cancer\",\n        \"Non-small Cell Lung Cancer (NSCLC)\",\n        \"Lung Cancer\",\n        \"Breast Cancer\"\n      ],\n      \"sponsor\": \"Daiichi Sankyo\"\n    },\n    {\n      \"nct_id\": \"NCT06194929\",\n      \"title\": \"Defactinib and Avutometinib, With or Without Encorafenib, for the Treatment of Patients With Brain Metastases From Cutaneous Melanoma\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE1/PHASE2\",\n      \"conditions\": [\n        \"Cutaneous Melanoma\",\n        \"Brain Metastases\"\n      ],\n      \"sponsor\": \"University of Utah\"\n    },\n    {\n      \"nct_id\": \"NCT05076760\",\n      \"title\": \"MEM-288 Oncolytic Virus Alone and in Combination With Standard of Care Therapy in Advanced Solid Tumors\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE1\",\n      \"conditions\": [\n        \"Solid Tumor\",\n        \"Advanced Cancer\",\n        \"Metastatic Cancer\",\n        \"Non Small Cell Lung Cancer\",\n        \"Cutaneous Squamous Cell Carcinoma\",\n        \"Merkel Cell Carcinoma\",\n        \"Melanoma\",\n        \"Pancreatic Cancer\",\n        \"Triple Negative Breast Cancer\",\n        \"Head and Neck Cancer\"\n      ],\n      \"sponsor\": \"Memgen, Inc.\"\n    },\n    {\n      \"nct_id\": \"NCT07751042\",\n      \"title\": \"Phase 1/2 Study of Intravenous Injection of STX-003 in Advanced Solid Tumors as Monotherapy or in Combination With Pembrolizumab\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE1/PHASE2\",\n      \"conditions\": [\n        \"Advanced Solid Tumor\"\n      ],\n      \"sponsor\": \"Strand Therapeutics Inc.\"\n    },\n    {\n      \"nct_id\": \"NCT05914116\",\n      \"title\": \"A Phase 1/2a Study of DB-1311/BNT324 in Advanced/Metastatic Solid Tumors\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE1/PHASE2\",\n      \"conditions\": [\n        \"Advanced Solid Tumors\"\n      ],\n      \"sponsor\": \"DualityBio Inc.\"\n    },\n    {\n      \"nct_id\": \"NCT06249048\",\n      \"title\": \"Phase 1/2 Study of Intratumoral Injection of STX-001 in Advanced Solid Tumors as Monotherapy or in Combination With Pembrolizumab\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE1/PHASE2\",\n      \"conditions\": [\n        \"Advanced Solid Tumor\"\n      ],\n      \"sponsor\": \"Strand Therapeutics Inc.\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get trial NCT06172478\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

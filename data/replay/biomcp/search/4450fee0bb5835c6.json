@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF",
+      "RAS-RAF-MEK-ERK",
+      "signaling"
+    ],
+    "limit": 6,
+    "sort": "citations"
+  },
+  "args_key": "4450fee0bb5835c6162e45d37e4ce01376c4be7effd1b7344fcb8c3928b1fcad",
+  "recorded_at": "2026-11-10T09:17:28.844169+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6641.300299990689,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF RAS-RAF-MEK-ERK signaling, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF RAS-RAF-MEK-ERK signaling\" --exclude-retracted --sort citations --source semanticscholar --limit 6 --offset 0` \n \n \nFound 6 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 12068308|Mutations of the BRAF gene in human cancer.|Europe PMC|2002-06-09|-|7722| \n|PMID 23539594|Cancer genome landscapes.|Europe PMC|2013-03-01|-|6000| \n|PMID 43003237|Dual drug delivery via integrin-targeted nanoparticles enhan…|PubMed|2026-11-09|-|none| \n|PMID 42937015|Kinetic signatures of RAS-BRAF engagement reveal isoform sel…|PubMed|2026-10-27|-|0| \n|PMID 37509254|Landscape of Genetic Mutations in Appendiceal Cancers|PubTator3|2023-07-12|-|none| \n|PMID 35582307|Drug resistance in targeted cancer therapies with RAF inhibi…|PubTator3|2021-06-17|-|none| \n \n \n \nNewest indexed: 2026-11-09 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 12068308\n  biomcp search article -k \"BRAF RAS-RAF-MEK-ERK signaling\" --year-min 2002 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 6 results (total unknown). Use --offset 6 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

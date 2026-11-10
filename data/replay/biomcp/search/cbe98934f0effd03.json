@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "dabrafenib",
+      "trametinib"
+    ],
+    "limit": 5
+  },
+  "args_key": "cbe98934f0effd0354f31e723788463d88145227f8b526942ad61ddf944d9170",
+  "recorded_at": "2026-11-10T03:45:09.827553+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1105.0706999958493,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 5 of 53 \n \nQuery: condition=melanoma, intervention=dabrafenib trametinib \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT07092670|MELAFERT: Impact of Adjuv…|RECRUITING|-|Melanoma, Fertility| \n|NCT02027961|Phase 1 Safety and Tolera…|COMPLETED|1|Melanoma| \n|NCT06557291|Relapse-Free Survival Wit…|COMPLETED|-|BRAF V600 Mutated-Stage III/IV Melanoma| \n|NCT02143050|Study of Dabrafenib, Tram…|WITHDRAWN|1/2|Melanoma| \n|NCT04527549|Testing Dabrafenib and Tr…|TERMINATED|2|Clinical Stage IV Cutaneous Melanoma AJCC v8,… [abridged; 5 conditions total]| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-5 of 53 results. Use --offset 5 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search drug --target PDGFRA --json",
+    "json": true
+  },
+  "args_key": "1cf5c17b001d1669996780cac91421c19c0aca7ba02ecc9e9d1b2e1dccd601be",
+  "recorded_at": "2026-11-10T10:18:12.685048+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 184.40559998271056,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"region\": \"us\",\n  \"regions\": {\n    \"us\": {\n      \"region\": \"us\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 4,\n        \"total\": 4,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"count\": 4,\n      \"results\": [\n        {\n          \"name\": \"olaratumab\",\n          \"target\": \"PDGFRA\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"vimseltinib\",\n          \"drugbank_id\": \"DB17520\",\n          \"drug_type\": \"small-molecule\",\n          \"target\": \"PDGFRA\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"quizartinib\",\n          \"drugbank_id\": \"DB12874\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Inhibitor of Macrophage colony-stimulating factor 1 receptor\",\n          \"target\": \"PDGFRA\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"nintedanib\",\n          \"drugbank_id\": \"DB09079\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Protein Kinase Inhibitors\",\n          \"target\": \"PDGFRA\",\n          \"match_kind\": \"broad_text\"\n        }\n      ]\n    }\n  },\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get drug olaratumab\",\n      \"biomcp list drug\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

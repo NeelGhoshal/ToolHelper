@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search drug -q metformin --limit 5 --json",
+    "json": true
+  },
+  "args_key": "902870bf5a641833785e99e3a55b410ea725fb31a8be9399b7ec8d32c7132b80",
+  "recorded_at": "2026-11-10T08:44:02.729877+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 18343.264700000873,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"region\": \"all\",\n  \"regions\": {\n    \"us\": {\n      \"region\": \"us\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 5,\n        \"returned\": 5,\n        \"total\": 33,\n        \"has_more\": true,\n        \"next_page_token\": null\n      },\n      \"count\": 5,\n      \"results\": [\n        {\n          \"name\": \"metformin\",\n          \"drugbank_id\": \"DB00331\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Sodium-Glucose Transporter 2 Inhibitors\",\n          \"match_kind\": \"active_substance\"\n        },\n        {\n          \"name\": \"glyburide\",\n          \"drugbank_id\": \"DB01016\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Blocker of Sulfonylurea receptor 1, Kir6.2\",\n          \"target\": \"KCNJ8\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"glipizide\",\n          \"drugbank_id\": \"DB01067\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Blocker of Sulfonylurea receptor 1, Kir6.2\",\n          \"target\": \"Sulfonylurea receptor 1, Kir6.2\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"pioglitazone\",\n          \"drugbank_id\": \"DB01132\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Peroxisome Proliferator-activated Receptor alpha Agonists\",\n          \"target\": \"TRPM3\",\n          \"match_kind\": \"broad_text\"\n        },\n        {\n          \"name\": \"empagliflozin\",\n          \"drugbank_id\": \"DB09038\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Inhibitor of Sodium/glucose cotransporter 2\",\n          \"target\": \"SLC5A1\",\n          \"match_kind\": \"broad_text\"\n        }\n      ],\n      \"continuation_command\": \"biomcp search drug --query metformin --region us --limit 5 --offset 5\"\n    },\n    \"eu\": {\n      \"region\": \"eu\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 5,\n        \"returned\": 5,\n        \"total\": 75,\n        \"has_more\": true,\n        \"next_page_token\": null\n      },\n      \"count\": 5,\n      \"results\": [\n        {\n          \"name\": \"Sitagliptin SUN\",\n          \"active_substance\": \"sitagliptin fumarate\",\n          \"ema_product_number\": \"EMEA/H/C/005741\",\n          \"status\": \"Authorised\",\n          \"match_kind\": \"broad_text\",\n          \"matched_term\": \"metformin\",\n          \"source\": \"query\"\n        },\n        {\n          \"name\": \"Vokanamet\",\n          \"active_substance\": \"canagliflozin;metformin hydrochloride\",\n          \"ema_product_number\": \"EMEA/H/C/002656\",\n          \"status\": \"Authorised\",\n          \"match_kind\": \"broad_text\",\n          \"matched_term\": \"metformin\",\n          \"source\": \"query\"\n        },\n        {\n          \"name\": \"Victoza\",\n          \"active_substance\": \"liraglutide\",\n          \"ema_product_number\": \"EMEA/H/C/001026\",\n          \"status\": \"Authorised\",\n          \"match_kind\": \"broad_text\",\n          \"matched_term\": \"metformin\",\n          \"source\": \"query\"\n        },\n        {\n          \"name\": \"Mounjaro\",\n          \"active_substance\": \"tirzepatide\",\n          \"ema_product_number\": \"EMEA/H/C/005620\",\n          \"status\": \"Authorised\",\n          \"match_kind\": \"broad_text\",\n          \"matched_term\": \"metformin\",\n          \"source\": \"query\"\n        },\n        {\n          \"name\": \"Byetta\",\n          \"active_substance\": \"exenatide\",\n          \"ema_product_number\": \"EMEA/H/C/000698\",\n          \"status\": \"Withdrawn\",\n          \"match_kind\": \"broad_text\",\n          \"matched_term\": \"metformin\",\n          \"source\": \"query\"\n        }\n      ],\n      \"continuation_command\": \"biomcp search drug --query metformin --region eu --limit 5 --offset 5\"\n    },\n    \"who\": {\n      \"region\": \"who\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 5,\n        \"returned\": 0,\n        \"total\": 0,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"count\": 0,\n      \"results\": []\n    }\n  },\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get drug metformin\",\n      \"biomcp list drug\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

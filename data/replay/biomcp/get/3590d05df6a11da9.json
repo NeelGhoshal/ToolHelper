@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "209459",
+    "sections": [
+      "label",
+      "indications",
+      "targets"
+    ]
+  },
+  "args_key": "3590d05df6a11da960cfc70bb913466361df9cc589b710d6ea6166962e9251b5",
+  "recorded_at": "2026-11-10T04:07:21.205899+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 2295.7783000019845,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"error\": {\n    \"code\": \"not_found\",\n    \"message\": \"No exact drug match for '209459'.\"\n  },\n  \"_meta\": {\n    \"not_found\": true,\n    \"alias_resolution\": {\n      \"kind\": \"ambiguous\",\n      \"requested_entity\": \"drug\",\n      \"query\": \"209459\",\n      \"candidates\": [\n        {\n          \"label\": \"Daldinolide B\",\n          \"primary_type\": \"drug\",\n          \"primary_id\": \"CHEBI:209459\",\n          \"confidence\": \"CanonicalId\",\n          \"match_tier\": \"Weak\"\n        }\n      ]\n    },\n    \"next_commands\": [\n      \"biomcp discover 209459\",\n      \"biomcp search drug -q 209459\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

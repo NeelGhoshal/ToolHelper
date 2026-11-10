@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "review",
+    "entity": "article",
+    "keyword": [
+      "EGFR mutation",
+      "lung adenocarcinoma",
+      "resistance"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "2fe50be89da0b7f69064ebb245700664e4f50935bfcc1ca988df56e0a67c8af1",
+  "recorded_at": "2026-11-10T06:47:11.131162+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 16985.075999982655,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR mutation lung adenocarcinoma resistance, type=review, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42913055|Biomarker-guided targeted therapy in lung adenocarcinoma: A…|PubMed|2026-12-01|-|0| \n|PMID 42885563|Pathogenicity and virulence of Neisseria gonorrhoeae.|Europe PMC|2026-10-29|-|0| \n|PMID 42919442|Oncogenic RAS as an adaptive signaling ecosystem: context-de…|PubMed|2026-10-22|-|0| \n|PMID 42900981|Ubiquitin-specific proteases and the immune microenvironment…|Europe PMC|2026-10-20|-|0| \n|PMID 42840361|KRAS Mutations in Cancers: From Undruggable Dilemma to Preci…|PubMed|2026-10-06|-|0| \n|PMID 42749289|Targeting EGFR-Mutant Non-Small Cell Lung Cancer in Asia: An…|PubMed|2026-10-01|-|0| \n|PMID 42806361|Daraxonrasib and the era of pan-RAS inhibition: mechanisms,…|PubMed|2026-09-28|-|0| \n|PMID 42761714|Lineage plasticity and immune invisibility in primary SCLC a…|PubMed|2026-09-04|-|0| \n|PMID 42615854|Progress and challenges in the design and development of sel…|PubMed|2026-09-01|-|0| \n|PMID 42657538|Dark matter matters: from noncoding RNA regulation to cancer…|Europe PMC|2026-08-27|-|0| \n \n \n \nNewest indexed: 2026-10-23 (18 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42913055\n  biomcp search article -k \"EGFR mutation lung adenocarcinoma resistance\" --type review --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

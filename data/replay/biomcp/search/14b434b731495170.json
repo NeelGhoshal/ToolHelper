@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR mutation",
+      "lung cancer"
+    ],
+    "limit": 20,
+    "sort": "citations"
+  },
+  "args_key": "14b434b731495170a5be151f306146762909bf2e90c2661b8041c0bd25ec5a89",
+  "recorded_at": "2026-11-09T20:44:27.799848+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 13732.082000002265,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR mutation lung cancer, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"EGFR mutation lung cancer\" --exclude-retracted --sort citations --source semanticscholar --limit 20 --offset 0` \n \n \nFound 20 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 23550210|Integrative analysis of complex cancer genomics and clinical…|Europe PMC|2013-04-02|-|12856| \n|PMID 23000897|Comprehensive molecular portraits of human breast tumours.|Europe PMC|2012-09-23|-|10271| \n|PMID 32029601|The biology, function, and biomedical applications of exosom…|Europe PMC|2020-02-01|-|8962| \n|PMID 20303878|Immunity, inflammation, and cancer.|Europe PMC|2010-03-01|-|8587| \n|PMID 15118073|Activating mutations in the epidermal growth factor receptor…|Europe PMC|2004-04-29|-|8565| \n|PMID 27718847|Pembrolizumab versus Chemotherapy for PD-L1-Positive Non-Sma…|Europe PMC|2016-10-08|-|8158| \n|PMID 26412456|Nivolumab versus Docetaxel in Advanced Nonsquamous Non-Small…|Europe PMC|2015-09-27|-|7752| \n|PMID 15118125|EGFR mutations in lung cancer: correlation with clinical res…|Europe PMC|2004-04-29|-|7336| \n|PMID 33060857|The next tier of EGFR resistance mutations in lung cancer.|PubTator3|2021-01-01|-|91| \n|PMID 37579253|Germline EGFR mutations and familial lung cancer.|PubTator3|2023-08-14|-|38| \n|PMID 34202566|Drug Tolerance to EGFR Tyrosine Kinase Inhibitors in Lung Ca…|PubTator3|2021-06-24|-|28| \n|PMID 33956842|Profiling non-small cell lung cancer reveals that PD-L1 is a…|PubTator3|2021-05-06|-|14| \n|PMID 35702826|Prognostic features and comprehensive genomic analysis of  N…|PubTator3|2023-01-01|-|9| \n|PMID 35740676|The High Proportion of Discordant EGFR Mutations among Multi…|PubTator3|2022-06-18|-|5| \n|PMID 34877318|High-resolution computed tomography findings independently p…|PubTator3|2021-11-16|-|4| \n|PMID 38851874|Impact of smoking on resected lung cancer depends on epiderm…|PubTator3|2024-06-08|-|2| \n|PMID 42999796|Molecular Profiling and Precision Oncology for Non-Small Cel…|PubMed|2026-11-05|-|0| \n|PMID 42999602|Real-world outcomes of neoadjuvant targeted therapy in resec…|PubMed|2026-10-30|-|0| \n|PMID 42999608|Perioperative treatment for resectable non-small cell lung c…|PubMed|2026-10-30|-|0| \n|PMID 42999634|Real-world treatment patterns in stage IB-IIIC non-small cel…|PubMed|2026-10-30|-|0| \n \n \n \nNewest indexed: 2026-11-08 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 23550210\n  biomcp search article -k \"EGFR mutation lung cancer\" --year-min 2004 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 20 results (total unknown). Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 10,
+    "query": "ABL1 BCR-ABL imatinib target"
+  },
+  "args_key": "97ba03f99ace707409eba09a7d56d7b23756c00af4b5cdf0008eeb95640770f7",
+  "recorded_at": "2026-11-10T08:22:05.114863+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 554.8624000221025,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: ABL1 BCR-ABL imatinib target \n \nFound 1 gene \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| ABL1 | ABL proto-oncogene 1, non-receptor tyrosine kinase | 25 | 9:130713043-130887675 | GRCh38 | P00519 | 189980 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1 of 1 results. \n \n\n\n## Next commands\n- `biomcp get gene ABL1`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

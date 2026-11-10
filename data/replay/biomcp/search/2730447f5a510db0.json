@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "BRAF fusion KIAA1549 pediatric low grade glioma"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "2730447f5a510db0b573d79c1803c3deae5c8b0f80b850d896026f5041d8aa8d",
+  "recorded_at": "2026-11-10T04:01:17.735106+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3115.342800010694,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=BRAF fusion KIAA1549 pediatric low grade glioma, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 5,\n  \"results\": [\n    {\n      \"pmid\": \"34185076\",\n      \"pmcid\": \"PMC8328013\",\n      \"doi\": \"10.1093/neuonc/noab106\",\n      \"title\": \"The 2021 WHO Classification of Tumors of the Central Nervous System: a summary.\",\n      \"journal\": \"Neuro Oncol\",\n      \"date\": \"2021-08-01\",\n      \"citation_count\": 8765,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"26824661\",\n      \"pmcid\": \"PMC4754110\",\n      \"doi\": \"10.1016/j.cell.2015.12.028\",\n      \"title\": \"Molecular Profiling Reveals Biologically Discrete Subsets and Pathways of Progression in Diffuse Glioma.\",\n      \"journal\": \"Cell\",\n      \"date\": \"2016-01-01\",\n      \"citation_count\": 1804,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42632204\",\n      \"title\": \"From genotype to outcome in optic pathway gliomas: Biology, biomarkers, targeted therapy, and future directions.\",\n      \"journal\": \"Cancer genetics\",\n      \"date\": \"2026-08-14\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42414678\",\n      \"title\": \"Incidence and predictors of hemorrhage in pediatric low-grade glioma.\",\n      \"journal\": \"Journal of neuro-oncology\",\n      \"date\": \"2026-07-07\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"40550805\",\n      \"pmcid\": \"PMC12185702\",\n      \"title\": \"Multi-omics dissection of MAPK-driven senescence unveils therapeutic vulnerabilities in KIAA1549::BRAF-fusion pediatric low-grade glioma models\",\n      \"journal\": \"Signal Transduct Target Ther\",\n      \"date\": \"2025-06-23\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"BRAF fusion KIAA1549 pediatric low grade glioma\\\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0\",\n      \"biomcp get article 34185076\",\n      \"biomcp search article -k \\\"BRAF fusion KIAA1549 pediatric low grade glioma\\\" --year-min 2016 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

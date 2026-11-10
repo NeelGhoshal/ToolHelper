@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "clopidogrel"
+    ],
+    "entity": "article",
+    "keyword": [
+      "CYP2C19",
+      "poor metabolizer"
+    ],
+    "limit": 10
+  },
+  "args_key": "289be758c73d05ade5affa271e2fad41f0436be9153423bc9723b04722917835",
+  "recorded_at": "2026-11-10T04:00:16.735681+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 14334.261000010883,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=clopidogrel, keyword=CYP2C19 poor metabolizer, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --drug clopidogrel --keyword \"CYP2C19 poor metabolizer\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 37279000|Association of CYP2C19 Loss-of-Function Metabolizer Status W…|PubTator3|2023-06-01|hybrid 0.543 + title+abstract 4/4|10| \n|PMID 36072879|CYP2C19 loss-of-function alleles predicts clinical outcomes…|PubTator3|2022-08-22|hybrid 0.51 + title+abstract 3/4|14| \n|PMID 35396752|High-Dose Clopidogrel versus Ticagrelor in CYP2C19 intermedi…|PubTator3|2022-08-01|hybrid 0.485 + title+abstract 3/4|15| \n|PMID 42980239|Prognostic Implication of CYP2C19 Genotype During Chronic Cl…|Europe PMC, PubMed|2026-11-01|hybrid 0.425 + title+abstract 4/4|1| \n|PMID 42807560|Routine CYP2C19 Genotyping, Antiplatelet Prescription Change…|Europe PMC, PubMed|2026-09-28|hybrid 0.37 + title+abstract 4/4|0| \n|PMID 38285330|Prevalence of CYP2C19*2 and CYP2C19*3 Allelic Variants and C…|PubTator3|2024-01-29|hybrid 0.359 + title+abstract 2/4|5| \n|PMID 42687502|Clinical outcomes stratified by CYP2C19 phenotypes in intrac…|PubMed|2026-08-31|hybrid 0.32 + title+abstract 4/4|0| \n|PMID 42535320|CYP2C19 c.681G>A Is not in Complete Linkage Disequilibrium W…|PubMed|2026-08-01|hybrid 0.31 + title+abstract 4/4|0| \n|PMID 42820662|Implementation of Rapid CYP2C19 Genotyping to Guide Antiplat…|Europe PMC, PubMed|2026-10-01|hybrid 0.29 + title+abstract 3/4|0| \n|PMID 42792712|Frequencies of CYP2C19 Polymorphisms in Mexican Mestizo Pati…|Europe PMC, PubMed|2026-09-01|hybrid 0.285 + title+abstract 3/4|0| \n \n \n \nNewest indexed: 2026-11-04 (6 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 37279000\n  biomcp search article --drug clopidogrel -k \"CYP2C19 poor metabolizer\" --year-min 2022 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

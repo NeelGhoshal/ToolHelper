@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "review",
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "BRAF V600E",
+      "targeted therapy",
+      "resistance"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "b3c009c889b506eeaea39ed52cb72f6e3f6249384d47882807f94f658863dc63",
+  "recorded_at": "2026-11-10T07:15:16.116988+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 24223.06639997987,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=BRAF V600E targeted therapy resistance, type=review, exclude_retracted=true, sort=date\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": false,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"europepmc\",\n      \"pubmed\"\n    ],\n    \"enrichment_sources\": [\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"note\": \"Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering.\",\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"42762133\",\n      \"title\": \"Precision medicine for pediatric gliomas.\",\n      \"journal\": \"Current opinion in oncology\",\n      \"date\": \"2026-11-01\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42892101\",\n      \"pmcid\": \"PMC13695161\",\n      \"doi\": \"10.1016/j.neo.2026.101382\",\n      \"title\": \"Recent advances in cancer-associated fibroblasts in colorectal cancer: functional subtypes, spatiotemporal dynamics and therapeutic targets.\",\n      \"journal\": \"Neoplasia\",\n      \"date\": \"2026-10-16\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42878587\",\n      \"title\": \"Molecular biomarkers for diagnosis, prognosis, precision therapy, and immunotherapy in cholangiocarcinoma, cHCC-CCA, and HCC.\",\n      \"journal\": \"Hepatology communications\",\n      \"date\": \"2026-10-14\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42829473\",\n      \"title\": \"Papillary thyroid carcinoma in children: prevalence, morphology, molecular and cytogenetic characteristics, and prognostic determinants.\",\n      \"journal\": \"Journal of pediatric endocrinology & metabolism : JPEM\",\n      \"date\": \"2026-10-05\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42550920\",\n      \"title\": \"Systemic therapy of biliary tract cancer: The road to personalised strategies.\",\n      \"journal\": \"Journal of hepatology\",\n      \"date\": \"2026-10-01\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42747511\",\n      \"title\": \"Unveiling BRAF Mutations in Non-small Cell Lung Cancer: State of the Art and Future Perspectives.\",\n      \"journal\": \"Lung\",\n      \"date\": \"2026-09-16\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42720827\",\n      \"title\": \"Langerhans cell histiocytosis: molecular mechanisms underlying pathogenesis and emerging targeted therapeutics.\",\n      \"journal\": \"Cancer metastasis reviews\",\n      \"date\": \"2026-09-10\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42562082\",\n      \"title\": \"A pathway-dependency framework for acquired resistance to targeted therapy in EGFR-mutant, KRAS G12C-mutant, and BRAF V600E-mutant NSCLC.\",\n      \"journal\": \"Pharmacological research\",\n      \"date\": \"2026-09-01\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42628758\",\n      \"title\": \"Targeting BRAF dimerization in cancer: structural insights and therapeutic strategies beyond monomer inhibition.\",\n      \"journal\": \"Biochemical pharmacology\",\n      \"date\": \"2026-08-21\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42632204\",\n      \"title\": \"From genotype to outcome in optic pathway gliomas: Biology, biomarkers, targeted therapy, and future directions.\",\n      \"journal\": \"Cancer genetics\",\n      \"date\": \"2026-08-14\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42762133\",\n      \"biomcp search article -k \\\"BRAF V600E targeted therapy resistance\\\" --type review --year-min 2026 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

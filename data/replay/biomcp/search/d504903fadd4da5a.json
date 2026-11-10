@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 10,
+    "query": "KIT PDGFRA PDGFRB CSF1R DDR1 imatinib target"
+  },
+  "args_key": "d504903fadd4da5a5d2c1d5399ef2b6991f4d64646a528184eb4c5d355920fae",
+  "recorded_at": "2026-11-10T04:22:36.323793+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 694.8131000099238,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: KIT PDGFRA PDGFRB CSF1R DDR1 imatinib target \n \nFound 5 genes \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| CSF1R | colony stimulating factor 1 receptor | 1436 | 5:150053291-150113372 | GRCh38 | P07333 | 164770 | \n| KIT | KIT proto-oncogene, receptor tyrosine kinase | 3815 | 4:54657267-54740783 | GRCh38 | P10721 | 164920 | \n| DDR1 | discoidin domain receptor tyrosine kinase 1 | 780 | 6:30876421-30900978 | GRCh38 | Q08345 | 600408 | \n| PDGFRB | platelet derived growth factor receptor beta | 5159 | 5:150113839-150186363 | GRCh38 | P09619 | 173410 | \n| PDGFRA | platelet derived growth factor receptor alpha | 5156 | 4:54229130-54298246 | GRCh38 | P16234 | 173490 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1-5 of 5 results. \n \n\n\n## Next commands\n- `biomcp get gene CSF1R`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

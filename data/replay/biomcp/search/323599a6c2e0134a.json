@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR exon 20 insertion",
+      "NSCLC",
+      "amivantamab"
+    ],
+    "limit": 10,
+    "sort": "relevance"
+  },
+  "args_key": "323599a6c2e0134a851f19ac334497dda05d27c6f3d420201fa0088f63a17451",
+  "recorded_at": "2026-11-10T09:15:06.132213+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6921.188700012863,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR exon 20 insertion NSCLC amivantamab, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR exon 20 insertion NSCLC amivantamab\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 34339292|Amivantamab in EGFR Exon 20 Insertion–Mutated Non–Small-…|Semantic Scholar|2021|hybrid 0.543 + title+abstract 6/6|562| \n|PMID 40450572|Zipalertinib in Patients With EGFR Exon 20 Insertion-Positiv…|Semantic Scholar|2025|hybrid 0.443 + title 6/6|14| \n|DOI 10.1016/j.annonc.2025.08.474|37eP Translational preclinical evaluation of zipalertinib in…|Semantic Scholar|2025|hybrid 0.371 + title 6/6|0| \n|PMID 38585010|Cost-effectiveness analysis of amivantamab plus chemotherapy…|PubTator3|2024-03-22|hybrid 0.336 + title 5/6|none| \n|DOI 10.1016/j.annonc.2024.10.668|635P Cross-over adjusted overall survival for amivantamab pl…|Semantic Scholar|2024|hybrid 0.329 + title 4/6|3| \n|PMID 42989004|Protocol of a Real-World Prospective Observational Study of…|Europe PMC, PubMed|2026-11-01|hybrid 0.329 + title 5/6|0| \n|PMID 34381206|Amivantamab is effective in NSCLC harbouring EGFR exon 20 in…|PubTator3|2021-10-01|hybrid 0.321 + title 5/6|none| \n|PMID 37870976|Amivantamab plus Chemotherapy in NSCLC with EGFR Exon 20 Ins…|PubTator3|2023-10-21|hybrid 0.307 + title 5/6|none| \n|PMID 34913823|Amivantamab for the treatment of EGFR exon 20 insertion muta…|PubTator3|2022-01-01|hybrid 0.293 + title 5/6|none| \n|PMID 42999608|Perioperative treatment for resectable non-small cell lung c…|Europe PMC, PubMed|2026-09-29|hybrid 0.279 + title 4/6|0| \n \n \n \nNewest indexed: 2026-11-08 (2 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 34339292\n  biomcp search article -k \"EGFR exon 20 insertion NSCLC amivantamab\" --year-min 2021 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "melanoma"
+    ],
+    "intervention": [
+      "dabrafenib"
+    ],
+    "limit": 10
+  },
+  "args_key": "81ff121a1c8f4928fa3755dcff8d57b0a74e169a83c042a46705387cb08724af",
+  "recorded_at": "2026-11-10T06:36:54.584762+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 205.9845000039786,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 104 \n \nQuery: condition=melanoma, intervention=dabrafenib \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT07092670|MELAFERT: Impact of Adjuv…|RECRUITING|-|Melanoma, Fertility| \n|NCT05585320|A Phase 1/2a Study of IMM…|ACTIVE_NOT_RECRUITING|1/2|Advanced Solid Tumor, Pancreatic Adenocarcinom… [abridged; 4 conditions total]| \n|NCT02027961|Phase 1 Safety and Tolera…|COMPLETED|1|Melanoma| \n|NCT03553329|Study of the Variations o…|COMPLETED|-|Unresecable Stage IIIc or IV Melanoma| \n|NCT03944356|BRAF-/MEK-Inhibition With…|COMPLETED|-|Melanoma| \n|NCT06557291|Relapse-Free Survival Wit…|COMPLETED|-|BRAF V600 Mutated-Stage III/IV Melanoma| \n|NCT05299580|\"Dabrafenib and Trametini…|WITHDRAWN|2|Melanoma| \n|NCT02052193|Evaluation of Photosensit…|TERMINATED|2|Metastatic Melanoma (Carrying BRAF V600 Mutation)| \n|NCT02410863|Biopsy- and Biology-drive…|TERMINATED|2|Malignant Melanoma| \n|NCT04418167|JSI-1187-01 Monotherapy a…|SUSPENDED|1|Solid Tumors| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-10 of 104 results. Use --offset 10 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

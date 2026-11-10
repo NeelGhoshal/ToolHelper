@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "Tylenol",
+    "json": true,
+    "sections": [
+      "targets",
+      "indications",
+      "label"
+    ]
+  },
+  "args_key": "d01636328af6356e72f40de2bd1c2ed9f58c1b0b5813e752eebfd3fe9c2c81f1",
+  "recorded_at": "2026-11-10T06:24:35.256056+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 2324.194199987687,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"DrugBank\",\n        \"url\": \"https://go.drugbank.com/drugs/DB00316\"\n      },\n      {\n        \"label\": \"ChEMBL\",\n        \"url\": \"https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL112\"\n      },\n      {\n        \"label\": \"DailyMed\",\n        \"url\": \"https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=997b9551-c222-4a9c-8ba1-09a5f97495fa\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get drug acetaminophen approvals\",\n      \"biomcp get drug acetaminophen regulatory --region us\",\n      \"biomcp get drug acetaminophen safety --region us\",\n      \"biomcp get drug acetaminophen all --region us\",\n      \"biomcp drug trials acetaminophen\",\n      \"biomcp drug adverse-events acetaminophen\",\n      \"biomcp search pgx -d acetaminophen\",\n      \"biomcp get gene PTGS1\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"overview\",\n        \"label\": \"Overview\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"MyChem.info\"\n        ]\n      },\n      {\n        \"key\": \"fda_approved\",\n        \"label\": \"FDA Approved\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"DrugCentral\"\n        ]\n      },\n      {\n        \"key\": \"brand_names\",\n        \"label\": \"Brand Names\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"DrugBank\"\n        ]\n      },\n      {\n        \"key\": \"mechanisms\",\n        \"label\": \"Mechanisms\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"MyChem.info\",\n          \"ChEMBL\"\n        ]\n      },\n      {\n        \"key\": \"label\",\n        \"label\": \"FDA Label\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"OpenFDA label\"\n        ]\n      },\n      {\n        \"key\": \"targets\",\n        \"label\": \"Targets\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"Guide to PHARMACOLOGY\",\n          \"Open Targets\"\n        ]\n      },\n      {\n        \"key\": \"indications\",\n        \"label\": \"Indications\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"DrugCentral\",\n          \"Open Targets\"\n        ]\n      }\n    ],\n    \"workflow\": \"pharmacogene-cumulative\",\n    \"workflow_playbook\": \"biomcp skill pharmacogene-cumulative\",\n    \"workflow_rationale\": \"Use the PGx search and detail surfaces before collecting literature for multi-gene drug-response evidence.\"\n  },\n  \"approval_date\": \"1968-11-07\",\n  \"approval_date_display\": \"November 7, 1968\",\n  \"approval_date_raw\": \"1968-11-07\",\n  \"approval_summary\": \"FDA approved on November 7, 1968\",\n  \"brand_names\": [\n    \"Infants TYLENOL\"\n  ],\n  \"chembl_id\": \"CHEMBL112\",\n  \"drug_type\": \"small-molecule\",\n  \"drugbank_id\": \"DB00316\",\n  \"indications\": [\n    \"Allergic rhinitis\",\n    \"Arthritic Pain\",\n    \"Backache\",\n    \"Common cold\",\n    \"Fever\",\n    \"Headache disorder\",\n    \"Alzheimer disease\",\n    \"Nasolacrimal duct obstruction\",\n    \"subarachnoid hemorrhage (Phase 3)\",\n    \"malaria (Phase 3)\",\n    \"Myalgia\",\n    \"stroke disorder\"\n  ],\n  \"label\": {\n    \"indications\": \"Uses temporarily: reduces fever relieves minor aches and pains due to: the common cold flu headache sore throat toothache\"\n  },\n  \"mechanism\": \"Inhibitor of Cyclooxygenase\",\n  \"mechanisms\": [\n    \"Inhibitor of Cyclooxygenase\",\n    \"Inhibitor of Fatty-acid amide hydrolase 1\",\n    \"Opener of Transient receptor potential cation channel subfamily V member 1\"\n  ],\n  \"name\": \"acetaminophen\",\n  \"pharm_classes\": [\n    \"Opioid Agonists\",\n    \"Cyclooxygenase Inhibitors\",\n    \"Histamine H1 Receptor Antagonists\",\n    \"Adrenergic alpha1-Agonists\",\n    \"Uncompetitive NMDA Receptor Antagonists\",\n    \"Sigma-1 Receptor Agonists\"\n  ],\n  \"route\": \"oral\",\n  \"section_outcomes\": {\n    \"approvals\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"cell_lines\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"civic\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indications\": {\n      \"outcome\": \"data\",\n      \"sources\": [\n        \"DrugCentral\",\n        \"Open Targets\"\n      ]\n    },\n    \"interactions\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"label\": {\n      \"outcome\": \"data\",\n      \"sources\": [\n        \"OpenFDA label\"\n      ]\n    },\n    \"safety\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"targets\": {\n      \"outcome\": \"data\",\n      \"sources\": [\n        \"Guide to PHARMACOLOGY\",\n        \"Open Targets\"\n      ]\n    }\n  },\n  \"targets\": [\n    \"PTGS1\",\n    \"PTGS2\",\n    \"TRPV4\",\n    \"FAAH\",\n    \"TRPV1\"\n  ],\n  \"unii\": \"362O9ITL9D\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

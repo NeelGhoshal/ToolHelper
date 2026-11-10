@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR",
+      "exon 20 insertion",
+      "lung cancer"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "f7f7b4b883893c117aeae9d7f7035aad9859f5565281da4d20d5f881d1979ac6",
+  "recorded_at": "2026-11-09T20:47:06.550801+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 18814.266000001226,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR exon 20 insertion lung cancer, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"EGFR exon 20 insertion lung cancer\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41542910|The making of multispecific immunoglobulins - a clinical per…|PubTator3|2026-12-01|-|20| \n|PMID 41601150|Synthetic strategies and therapeutic insights into FDA-appro…|PubTator3|2026-12-01|-|5| \n|PMID 41630477|A data-driven cartography of NSCLC vaccine research: Quantif…|PubTator3, Europe PMC|2026-12-01|-|1| \n|PMID 42789311|Structure-based rational design and biological evaluation of…|PubTator3, Europe PMC, PubMed|2026-12-01|-|0| \n|PMID 42989004|Protocol of a Real-World Prospective Observational Study of…|PubMed|2026-11-01|-|0| \n|PMID 42999608|Perioperative treatment for resectable non-small cell lung c…|PubMed|2026-10-30|-|0| \n|PMID 42999644|Rare epidermal growth factor receptor (EGFR) mutations in co…|PubMed|2026-10-30|-|0| \n|PMID 42684015|A phase II multi-institutional single arm trial evaluating T…|Europe PMC|2026-09-02|-|0| \n|PMID 42871688|Intracranial activity of amivantamab combined with carboplat…|PubMed|2026-08-05|-|0| \n|PMID 42474263|A comprehensive review of small molecule drugs approved by t…|Europe PMC|2026-07-20|-|2| \n \n \n \nNewest indexed: 2026-11-08 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41542910\n  biomcp search article -k \"EGFR exon 20 insertion lung cancer\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

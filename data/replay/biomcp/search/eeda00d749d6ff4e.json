@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2024-01-01",
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "trastuzumab deruxtecan",
+      "HER2"
+    ],
+    "limit": 8,
+    "sort": "citations",
+    "source": "pubmed"
+  },
+  "args_key": "eeda00d749d6ff4ec95f470dc02c079c4468ec132622d35218c3d3589aee6073",
+  "recorded_at": "2026-11-09T21:22:58.625896+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1002.4139000161085,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=trastuzumab deruxtecan HER2, date_from=2024-01-01, exclude_retracted=true, sort=citations, source=pubmed\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": false,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubmed\"\n    ],\n    \"enrichment_sources\": []\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 8,\n    \"returned\": 8,\n    \"total\": 1450,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 8,\n  \"results\": [\n    {\n      \"pmid\": \"42998683\",\n      \"title\": \"Real-World HER2 Testing Practices and Performance of HER2 immunohistochemistry in Non-Breast, Non-Gastroesophageal Solid Tumors: Experience at a Large U.S. Academic Institution.\",\n      \"journal\": \"Human pathology\",\n      \"date\": \"2026-11-07\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42997584\",\n      \"title\": \"ERBB2 Exon 20 Mutation-Guided Trastuzumab Deruxtecan Therapy in Metastatic Lung Adenocarcinoma with Low HER2 Expression: A Case Report.\",\n      \"journal\": \"OncoTargets and therapy\",\n      \"date\": \"2026-11-02\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42998029\",\n      \"title\": \"Efficacy and Safety of Datopotamab Deruxtecan From a Single-Institution Experience in Hormone Receptor-Positive, HER2-Negative Metastatic Breast Cancer After Multiple Prior Therapies Including Antibody-Drug Conjugates.\",\n      \"journal\": \"Cancer medicine\",\n      \"date\": \"2026-11-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42994328\",\n      \"title\": \"State-of-the-art treatment of Oesophagogastric junction adenocarcinoma: a systematic review and meta-analysis of randomized clinical trials.\",\n      \"journal\": \"Cancer treatment reviews\",\n      \"date\": \"2026-10-31\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42999616\",\n      \"title\": \"Antibody-drug conjugates in the perioperative treatment of resectable non-small cell lung cancer: a narrative review of research advances and prospects.\",\n      \"journal\": \"Translational lung cancer research\",\n      \"date\": \"2026-10-30\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"43000877\",\n      \"title\": \"HER2-low breast cancer: a new diagnostic challenge for pathologists - insights from a single-center retrospective cohort.\",\n      \"journal\": \"Polish journal of pathology : official journal of the Polish Society of Pathologists\",\n      \"date\": \"2026-10-28\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42996102\",\n      \"title\": \"Adjuvant Trastuzumab Deruxtecan Versus Trastuzumab Emtansine by Residual Cancer Burden in HER2-Positive Early Breast Cancer: A Decision Analysis.\",\n      \"journal\": \"medRxiv : the preprint server for health sciences\",\n      \"date\": \"2026-10-22\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42994133\",\n      \"title\": \"2026 Key European Guideline Changes for Metastatic Breast Cancer and Their Impact on Practice-Commentary Based on a Virtual Focus Group.\",\n      \"journal\": \"Clinical breast cancer\",\n      \"date\": \"2026-10-07\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get article 42998683\",\n      \"biomcp list article\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

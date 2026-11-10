@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "metformin",
+      "cardiovascular events",
+      "randomized controlled trial"
+    ],
+    "limit": 20,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "49a7c07c005ee6970d38f9c62f17ceeccb924048c15fac64c9d1064cbf832ffd",
+  "recorded_at": "2026-11-09T21:09:15.252576+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1357.7105000149459,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=metformin cardiovascular events randomized controlled trial, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \nPubMed source status: degraded (PubMed search degraded: API request to PubMed failed. Retry the remote source.) \nRetry: `biomcp search article --keyword \"metformin cardiovascular events randomized controlled trial\" --exclude-retracted --sort date --source pubmed --limit 20 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42980248|Targeting Accelerated Aging in COPD: The AMICO (A Trial of M…|PubMed|2026-12-01|-|none| \n|PMID 42815506|Cardiovascular safety of orforglipron versus insulin glargin…|PubMed|2026-10-17|-|none| \n|PMID 42869597|Can metformin prolong pregnancy in preterm pre-eclampsia? St…|PubMed|2026-10-13|-|none| \n|PMID 42614024|Dipeptidyl Peptidase-4 Inhibitors Associated Heart Failure E…|PubMed|2026-09-01|-|none| \n|PMID 42573030|Glucagon-like peptide-1 receptor agonist-based regimens comp…|PubMed|2026-08-10|-|none| \n \n \n \nNewest indexed: 2026-11-04 (5 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42980248\n  biomcp search article -k \"metformin cardiovascular events randomized controlled trial\" --source pubmed --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-5 of 250 results. Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

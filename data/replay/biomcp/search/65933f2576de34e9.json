@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "gene": "BRAF",
+    "limit": 15
+  },
+  "args_key": "65933f2576de34e96db06628615de78ddf40b8889687e72cac0f9ac1d0669a18",
+  "recorded_at": "2026-11-10T06:52:07.709151+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 33.548900013556704,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Variant Search Results \n \nFound: 15 variant(s) \nQuery: gene=BRAF \n \n \n## Filter evaluation \n \ngene: evaluated \n \n \n \n| ID | Build | Gene | Transcript | Coding | Protein | Legacy Name | Significance | ClinVar Stars | gnomAD AF | REVEL | GERP | \n|---|---|---|---|---|---|---|---|---|---|---|---| \n| chr7:g.140439664A>G | GRCh37 | BRAF | NM_004333.6 | c.2075T>C | p.Leu692Ser | BRAF L692S | Uncertain significance | 1 | 0.0000039782 | 0.93 | 4.95 | \n| chr7:g.140507849T>C | GRCh37 | BRAF | NM_004333.6 | c.622A>G | p.Ile208Val | BRAF I208V | Uncertain significance | 3 | 0.0000119443 | 0.318 | 5.58 | \n| chr7:g.140434422C>T | GRCh37 | BRAF | NM_004333.6 | c.2276G>A | p.Gly759Glu | BRAF G759E | Likely pathogenic | 1 | - | 0.382 | 5.82 | \n| chr7:g.140449139T>C | GRCh37 | BRAF | NM_004333.6 | c.1940A>G | p.Tyr647Cys | BRAF Y647C | Uncertain significance | 1 | - | 0.894 | 5.02 | \n| chr7:g.140449164C>T | GRCh37 | BRAF | NM_004333.6 | c.1915G>A | p.Val639Ile | BRAF V639I | Uncertain significance | 1 | - | 0.581 | 5.02 | \n| chr7:g.140454002C>A | GRCh37 | BRAF | NM_004333.6 | c.1726G>T | p.Asp576Tyr | BRAF D576Y | Uncertain significance | 1 | - | 0.984 | 5.26 | \n| chr7:g.140481378T>G | GRCh37 | BRAF | NM_004333.6 | c.1430A>C | p.His477Pro | BRAF H477P | Uncertain significance | 0 | - | 0.802 | 5.62 | \n| chr7:g.140494197C>G | GRCh37 | BRAF | NM_004333.6 | c.1051G>C | p.Glu351Gln | BRAF E351Q | Uncertain significance | 1 | - | 0.33 | 5.85 | \n| chr7:g.140501331A>T | GRCh37 | BRAF | NM_004333.6 | c.741T>A | p.Phe247Leu | BRAF F247L | Pathogenic | 0 | - | 0.816 | 3.08 | \n| chr7:g.140508782C>T | GRCh37 | BRAF | NM_004333.6 | c.518G>A | p.Cys173Tyr | BRAF C173Y | Uncertain significance | 1 | - | 0.344 | 5.82 | \n| chr7:g.140534454T>A | GRCh37 | BRAF | NM_004333.6 | c.459A>T | p.Gln153His | BRAF Q153H | Uncertain significance | 0 | - | 0.311 | -2.67 | \n| chr7:g.140534545G>A | GRCh37 | BRAF | NM_004333.6 | c.368C>T | p.Ser123Phe | BRAF S123F | Uncertain significance | 1 | - | 0.302 | 5.56 | \n| chr7:g.140534641G>C | GRCh37 | BRAF | NM_004333.6 | c.272C>G | p.Ala91Gly | BRAF A91G | Uncertain significance | 1 | - | 0.319 | 5.56 | \n| chr7:g.140549945C>G | GRCh37 | BRAF | NM_004333.6 | c.206G>C | p.Gly69Ala | BRAF G69A | Uncertain significance | 1 | - | 0.403 | 4.89 | \n| chr7:g.140624397G>C | GRCh37 | BRAF | NM_004333.6 | c.107C>G | p.Ser36Cys | BRAF S36C | Uncertain significance | 1 | - | 0.213 | 2.98 | \n \n \nUse `get variant <id>` for details. \nSignificance is the most severe ClinVar RCV classification in MyVariant.info's cached copy; run `get variant <id> clinvar` for the current NCBI ClinVar record-level classification. \nFilters: -g <gene>, --hgvsp <protein>, --significance <value>, --max-frequency <0-1>, --min-cadd <score>, --consequence <term>, --review-status <stars>, --population <pop>, --revel-min <score>, --gerp-min <score>, --tumor-site <site>, --condition <name>, --impact <level>, --lof, --has <field>, --missing <field>, --therapy <name> \n \n \nSee also:\n  biomcp get variant \"chr7:g.140439664A>G\"\n  biomcp get gene BRAF \n \n \n \nShowing 1-15 of 5889 results. Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

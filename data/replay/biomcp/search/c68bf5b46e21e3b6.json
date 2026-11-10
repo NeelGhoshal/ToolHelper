@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "query": "CYP2C19 cytochrome P450 2C19 pharmacogenomics clopidogrel loss of function alleles"
+  },
+  "args_key": "c68bf5b46e21e3b60c097d8c459d715f519763605b37a16218a304665e531e4f",
+  "recorded_at": "2026-11-10T06:40:02.451612+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 758.6565999954473,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: CYP2C19 cytochrome P450 2C19 pharmacogenomics clopidogrel loss of function alleles \n \nFound 1 gene \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| CYP2C19 | cytochrome P450 family 2 subfamily C member 19 | 1557 | 10:94762536-94922264 | GRCh38 | P33261 | 124020 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1 of 1 results. \n \n\n\n## Next commands\n- `biomcp get gene CYP2C19`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

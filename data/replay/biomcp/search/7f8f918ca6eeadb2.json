@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "disease": [
+      "Li-Fraumeni syndrome"
+    ],
+    "gene": "TP53",
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "7f8f918ca6eeadb2c03450f5a9e985d70f0d609fab3d0b24f59a684987a2c548",
+  "recorded_at": "2026-11-09T20:42:32.533294+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 8642.399300006218,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=TP53, disease=Li-Fraumeni syndrome, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --gene TP53 --disease \"Li-Fraumeni syndrome\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 27895058|Diagnosis and management of AML in adults: 2017 ELN recommen…|Europe PMC|2016-11-28|-|4502| \n|PMID 20965415|The DNA damage response: making it safe to play with knives.|Europe PMC|2010-10-01|-|3631| \n|PMID 8649766|Analysis of genomic instability in Li-Fraumeni fibroblasts w…|PubTator3|1996-06-06|-|73| \n|PMID 11245491|Mechanism of functional inactivation of a Li-Fraumeni syndro…|PubTator3|2001-02-15|-|25| \n|PMID 42960272|Li-Fraumeni syndrome presenting with early-onset eyelid seba…|PubMed|2026-10-16|-|0| \n \n \n \nNewest indexed: 2026-10-30 (10 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 27895058\n  biomcp search article -g TP53 -d \"Li-Fraumeni syndrome\" --year-min 1996 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

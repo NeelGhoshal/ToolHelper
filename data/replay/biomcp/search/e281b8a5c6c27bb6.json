@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "BRAF V600E vemurafenib dabrafenib clinical trial melanoma survival"
+    ],
+    "limit": 8,
+    "sort": "citations"
+  },
+  "args_key": "e281b8a5c6c27bb6158cba45d92e4d866d06e5646bfcd12b1891fbe1bd653140",
+  "recorded_at": "2026-11-10T04:00:08.446226+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4067.8037000179756,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=BRAF V600E vemurafenib dabrafenib clinical trial melanoma survival, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 8,\n    \"returned\": 8,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 8,\n  \"results\": [\n    {\n      \"pmid\": \"29195078\",\n      \"pmcid\": \"PMC5990023\",\n      \"doi\": \"10.1016/j.cell.2017.10.049\",\n      \"title\": \"A Next Generation Connectivity Map: L1000 Platform and the First 1,000,000 Profiles.\",\n      \"journal\": \"Cell\",\n      \"date\": \"2017-11-01\",\n      \"citation_count\": 3056,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"28889792\",\n      \"pmcid\": \"PMC5706778\",\n      \"doi\": \"10.1056/nejmoa1709684\",\n      \"title\": \"Overall Survival with Combined Nivolumab and Ipilimumab in Advanced Melanoma.\",\n      \"journal\": \"N Engl J Med\",\n      \"date\": \"2017-09-11\",\n      \"citation_count\": 2911,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"23020132\",\n      \"pmcid\": \"PMC3549295\",\n      \"doi\": \"10.1056/nejmoa1210093\",\n      \"title\": \"Combined BRAF and MEK inhibition in melanoma with BRAF V600 mutations.\",\n      \"journal\": \"N Engl J Med\",\n      \"date\": \"2012-09-29\",\n      \"citation_count\": 2141,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"25787767\",\n      \"title\": \"Improved antitumor activity of immunotherapy with BRAF and MEK inhibitors in BRAF(V600E) melanoma.\",\n      \"journal\": \"Science translational medicine\",\n      \"date\": \"2015-03-18\",\n      \"citation_count\": 564,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"33719631\",\n      \"pmcid\": \"PMC8743966\",\n      \"title\": \"Current Advancements and Novel Strategies in the Treatment of Metastatic Melanoma\",\n      \"journal\": \"Integr Cancer Ther\",\n      \"date\": \"2021-01-01\",\n      \"citation_count\": 50,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"26141621\",\n      \"title\": \"What's new in melanoma? Combination!\",\n      \"journal\": \"Journal of translational medicine\",\n      \"date\": \"2015-07-04\",\n      \"citation_count\": 42,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"34830947\",\n      \"pmcid\": \"PMC8616245\",\n      \"title\": \"Oxidative Stress and Autophagy as Key Targets in Melanoma Cell Fate\",\n      \"journal\": \"Cancers (Basel)\",\n      \"date\": \"2021-11-18\",\n      \"citation_count\": 26,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"28650570\",\n      \"title\": \"Perioperative BRAF inhibitors in locally advanced stage III melanoma.\",\n      \"journal\": \"Journal of surgical oncology\",\n      \"date\": \"2017-12-01\",\n      \"citation_count\": 16,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"BRAF V600E vemurafenib dabrafenib clinical trial melanoma survival\\\" --exclude-retracted --sort citations --source semanticscholar --limit 8 --offset 0\",\n      \"biomcp get article 29195078\",\n      \"biomcp search article -k \\\"BRAF V600E vemurafenib dabrafenib clinical trial melanoma survival\\\" --year-min 2012 --year-max 2021 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

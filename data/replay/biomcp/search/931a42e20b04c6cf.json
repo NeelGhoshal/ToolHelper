@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "gene": "BRAF",
+    "json": true,
+    "limit": 10,
+    "significance": "oncogenic"
+  },
+  "args_key": "931a42e20b04c6cf12f314e973d3ff967550d288d741f313aeb5ea1cc47853ca",
+  "recorded_at": "2026-11-09T20:37:00.800891+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2.7421000122558326,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: Invalid argument: Invalid --significance value 'oncogenic'. Expected one of: pathogenic, likely_pathogenic, benign, likely_benign, uncertain_significance, conflicting_interpretations_of_pathogenicity, drug_response, risk_factor, association, protective, affects, not_provided"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

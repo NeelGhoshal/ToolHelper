@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "Melanoma"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "encorafenib",
+      "binimetinib"
+    ],
+    "limit": 5,
+    "json": true
+  },
+  "args_key": "48875e504f69b92cb3ed032d3c603194bcf50a356e81655ed941e3d7f418022a",
+  "recorded_at": "2026-11-10T09:35:27.825871+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 746.0969999956433,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": 30,\n    \"has_more\": true,\n    \"next_page_token\": \"ZVNj7o2Elu8o3lpyBYqp6rLumpOQJJxpZPKk1fAW\"\n  },\n  \"count\": 5,\n  \"results\": [\n    {\n      \"nct_id\": \"NCT04741997\",\n      \"title\": \"Adjuvant Therapy Based on Pathologic Response After Neoadjuvant Encorafenib Binimetinib in Melanoma\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"EARLY_PHASE1\",\n      \"conditions\": [\n        \"Melanoma Stage III\",\n        \"Melanoma Stage IV\",\n        \"BRAF V600 Mutation\"\n      ],\n      \"sponsor\": \"H. Lee Moffitt Cancer Center and Research Institute\"\n    },\n    {\n      \"nct_id\": \"NCT04657991\",\n      \"title\": \"A Clinical Trial of Three Study Medicines (Encorafenib, Binimetinib, and Pembrolizumab) in Patients With Advanced or Metastatic Melanoma\",\n      \"status\": \"ACTIVE_NOT_RECRUITING\",\n      \"phase\": \"PHASE3\",\n      \"conditions\": [\n        \"Melanoma\"\n      ],\n      \"sponsor\": \"Pfizer\"\n    },\n    {\n      \"nct_id\": \"NCT03864042\",\n      \"title\": \"Pharmacokinetic Drug-drug Interaction Study of Encorafenib and Binimetinib on Probe Drugs in Patients With BRAF V600-mutant Melanoma or Other Advanced Solid Tumors\",\n      \"status\": \"COMPLETED\",\n      \"phase\": \"PHASE1\",\n      \"conditions\": [\n        \"Advanced Solid Tumors\",\n        \"Metastatic Melanoma\"\n      ],\n      \"sponsor\": \"Pfizer\"\n    },\n    {\n      \"nct_id\": \"NCT05260684\",\n      \"title\": \"Comparative Effectiveness of Targeted Therapies in BRAF Positive Metastatic Melanoma in the US\",\n      \"status\": \"COMPLETED\",\n      \"conditions\": [\n        \"Melanoma\"\n      ],\n      \"sponsor\": \"Pfizer\"\n    },\n    {\n      \"nct_id\": \"NCT05954546\",\n      \"title\": \"A Study to Compare How Effective is Encorafenib Plus Binimetinib in Real-world and Clinical Trial Settings\",\n      \"status\": \"COMPLETED\",\n      \"conditions\": [\n        \"Metastatic Melanoma\"\n      ],\n      \"sponsor\": \"Pfizer\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get trial NCT04741997\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

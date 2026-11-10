@@ -1,0 +1,40 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "statin"
+    ],
+    "entity": "article",
+    "keyword": [
+      "dementia",
+      "Alzheimer",
+      "cognitive"
+    ],
+    "limit": 25,
+    "offset": 20,
+    "source": "pubmed",
+    "sort": "citations"
+  },
+  "args_key": "f1359d73e8b1303c98c3522b429dc3b5c8c1a25da80b969bd8d047046b31e56a",
+  "recorded_at": "2026-11-10T03:46:09.264568+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1044.1304999985732,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=statin, keyword=dementia Alzheimer cognitive, exclude_retracted=true, sort=citations, source=pubmed, offset=20 \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 25 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41048558|Statins, cholesterol and cognition at the time of Alzheimer'…|PubMed|2025-10-03|-|none| \n|PMID 40169354|Low-density lipoprotein cholesterol levels and risk of incid…|PubMed|2025-09-12|-|none| \n|PMID 40830501|Endothelial delivery of simvastatin by LRP1-targeted nanopar…|PubMed|2025-08-20|-|none| \n|PMID 39271623|HMGCR Inhibitor Restores Mitochondrial Dynamics by Regulatin…|PubMed|2025-06-01|-|none| \n|PMID 40380033|Unlocking Alzheimer's Disease: The Role of BDNF Signaling in…|PubMed|2025-05-17|-|none| \n|PMID 40251348|Targeting of PP2 A/GSK3β/PTEN Axis in Alzheimer Disease: Th…|PubMed|2025-04-18|-|none| \n|PMID 40278411|Lipid Metabolism and Statin Therapy in Neurodegenerative Dis…|PubMed|2025-04-18|-|none| \n|PMID 39900257|Statin is associated with higher cortical thickness in early…|PubMed|2025-04-01|-|none| \n|PMID 40145346|Commonly prescribed multi-medication therapies exert sex-spe…|PubMed|2025-03-01|-|none| \n|PMID 40250966|Managing hypercholesterolemia in adults older than 75 years…|PubMed|2025-03-01|-|none| \n|PMID 39746645|Statins for vascular dementia: A hype or hope.|PubMed|2025-02-16|-|none| \n|PMID 39772858|Medications and cognitive decline in Alzheimer's disease: Co…|PubMed|2025-02-01|-|none| \n|PMID 39863334|Association of statins use and genetic susceptibility with i…|PubMed|2025-02-01|-|none| \n|PMID 39708240|Memantine/Rosuvastatin Therapy Abrogates Cognitive and Hippo…|PubMed|2024-12-21|-|none| \n|PMID 39704877|HMG-CoA reductase inhibitor simvastatin ameliorates trimethy…|PubMed|2024-12-20|-|none| \n|PMID 39684561|Medication Exposure and Risk of Dementia and Alzheimer's Dis…|PubMed|2024-11-29|-|none| \n|PMID 39415568|Intranasal Carrier-Free Nanomodulator Addresses Both Symptom…|PubMed|2024-10-29|-|none| \n|PMID 39312316|Effect of long-term pharmacological treatments on Alzheimer…|PubMed|2024-09-20|-|none| \n|PMID 39283851|Alzheimer Disease: Treatment of Cognitive and Functional Sym…|PubMed|2024-09-01|-|none| \n|PMID 38923201|Cholesterol profiling reveals 7β-hydroxycholesterol as a pa…|PubMed|2024-08-01|-|none| \n|PMID 38963798|Consideration of T-Cell Profile in the Examination of Statin…|PubMed|2024-08-01|-|none| \n|PMID 38447103|Statin Initiation and Risk of Incident Alzheimer Disease and…|PubMed|2024-04-09|-|none| \n|PMID 38298909|Statins and risks of dementia among patients with heart fail…|PubMed|2024-01-17|-|none| \n|PMID 39269837|Association Between Statin Use and Dementia, and Related Mec…|PubMed|2024-01-01|-|none| \n|PMID 38115091|Statins and cognitive decline in patients with Alzheimer's a…|PubMed|2023-12-20|-|none| \n \n \n \nNewest indexed: 2025-10-06 (400 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41048558\n  biomcp search article --drug statin -k \"dementia Alzheimer cognitive\" --source pubmed --year-min 2023 --year-max 2025 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 21-45 of 359 results. Use --offset 45 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

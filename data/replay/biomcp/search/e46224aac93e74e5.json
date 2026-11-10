@@ -1,0 +1,41 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma",
+      "colorectal cancer"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "dabrafenib",
+      "trametinib",
+      "encorafenib",
+      "vemurafenib"
+    ],
+    "json": true,
+    "limit": 10,
+    "status": "recruiting"
+  },
+  "args_key": "e46224aac93e74e5f2fccd16e19ce235135e13a6ffa188b57ecf33342f6e05a2",
+  "recorded_at": "2026-11-10T07:18:16.384528+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1.0797000140883029,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "intervention must contain 1-3 values"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

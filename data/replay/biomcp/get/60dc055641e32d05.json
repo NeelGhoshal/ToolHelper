@@ -1,0 +1,40 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "BRAF",
+    "json": true,
+    "sections": [
+      "diseases",
+      "druggability",
+      "pathways",
+      "civic",
+      "clingen",
+      "constraint",
+      "diagnostics",
+      "guidelines"
+    ]
+  },
+  "args_key": "60dc055641e32d0514ea722c95a2cc2fc85e97fe0cb12891afc753b695cb144f",
+  "recorded_at": "2026-11-10T04:40:47.041348+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.086699980078265,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: guidelines"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

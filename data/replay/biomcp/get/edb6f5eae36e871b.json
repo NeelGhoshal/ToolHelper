@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "37321664",
+    "json": true,
+    "sections": [
+      "tldr"
+    ]
+  },
+  "args_key": "edb6f5eae36e871bb637b759b7987d680cf26c12b7dc0a6f9282eb84dc7c7252",
+  "recorded_at": "2026-11-09T19:33:51.203557+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1989.5273000001907,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/37321664/\"\n      },\n      {\n        \"label\": \"PMC\",\n        \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC10277533/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 37321664 tldr\",\n      \"biomcp article references 37321664 --limit 3\",\n      \"biomcp article citations 37321664 --limit 3\",\n      \"biomcp article recommendations 37321664 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ]\n  },\n  \"abstract_text\": \"The most common oncogenic driver in non-small-cell lung cancer (NSCLC) is the epidermal growth factor receptor (EGFR) gene mutations that occur more frequently among Asians (30%-50%) as opposed to Caucasians (10%-15%). Lung cancer is one of the most prevalent cancers in India, with a reported adenocarcinoma positivity ranging between 26.1% and 86.9% in NSCLC patients. The prevalence of EGFR mutations in adenocarcinoma patients (36.9%) in India is higher than that of Caucasian patients and lower than that of East Asian patients. The exon 19 deletion (Ex19del) is more common than exon 21 L858R mutations in Indian patients with NSCLC. Studies have shown that the clinical behaviour of patients with advanced NSCLC differs between EGFR Ex19del and exon 21 L858R mutation status. In this study, we investigated the differences in clinicopathological features and survival outcomes after first line and second-line treatment with EGFR tyrosine kinase inhibitors (EGFR TKIs) in NSCLC patients with Ex19del and exon 21 L858R EGFR mutation status. This study also focuses on the role and potential benefits of dacomitinib, a second-generation irreversible EGFR TKI, in patients with Ex19del and exon 21 L858R EGFR mutation-positive advanced NSCLC in Indian settings.\",\n  \"author_completeness\": \"complete\",\n  \"author_count\": 4,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Batra U\",\n    \"Biswas B\",\n    \"Prabhash K\",\n    \"Krishna MV\"\n  ],\n  \"citation_count\": 53,\n  \"date\": \"2023-06-01\",\n  \"doi\": \"10.1136/bmjresp-2022-001492\",\n  \"journal\": \"BMJ Open Respir Res\",\n  \"open_access\": true,\n  \"pmcid\": \"PMC10277533\",\n  \"pmid\": \"37321664\",\n  \"publication_type\": \"Review\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"Differential clinicopathological features, treatments and outcomes in patients with Exon 19 deletion and Exon 21 L858R EGFR mutation-positive adenocarcinoma non-small-cell lung cancer.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

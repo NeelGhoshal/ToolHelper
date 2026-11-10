@@ -76,6 +76,10 @@ class FactorialConfig(BaseModel):
     gate: dict[str, float]
     bootstrap: dict[str, int]
     report_subsets: list[Literal["grounded"]] = Field(default_factory=list)  # task subsets with their own effects
+    # Confirm a lead chosen in advance (e.g. an interaction seen in an earlier factorial) on fresh runs:
+    # no factorial, no effects step, no fallback.
+    confirm_only: list[str] = Field(default_factory=list)
+    require_saving: bool = False  # the confirmation also needs its tokens-per-success CI below 0
 
 
 def load_config(path: Path | str) -> FactorialConfig:
@@ -317,6 +321,9 @@ class FactorialOrchestrator(Orchestrator):
         self.cells = cells(cfg)
         self.baseline = make_cell(cfg, {f: False for f in cfg.factors})
         self.subsets = subsets or {}  # name -> task ids, effects reported separately (e.g. `grounded`)
+        unknown = set(cfg.confirm_only) - set(cfg.factors)
+        if unknown:
+            raise ValueError(f"confirm_only names unknown factors {sorted(unknown)}")
 
     def group(self, cell: str, repeat: int = 1) -> str:
         return f"{self.cfg.experiment}-f-{cell}-r{repeat}"
@@ -367,6 +374,15 @@ class FactorialOrchestrator(Orchestrator):
                 self.note(f"{name} tasks only, {f}: {describe(e)}")
         self.note(f"chosen: {chosen or 'nothing (the baseline stays)'}")
 
+    def step_preset(self) -> None:
+        """For `confirm_only`: the factors to confirm are fixed in the config, not estimated."""
+        factors = [f for f in self.cfg.factors if f in self.cfg.confirm_only]
+        cell = make_cell(self.cfg, {f: f in factors for f in self.cfg.factors})
+        self.state["chosen"] = {"factors": factors, "cell": cell.name, "specs": cell.specs,
+                                "max_turns": cell.max_turns,
+                                "reasons": {f: "on: pre-registered for confirmation" for f in factors}}
+        self.note(f"confirm only {cell.name} {cell.specs} (pre-registered; no factorial)")
+
     def step_confirm(self) -> None:
         chosen = self.state["chosen"]
         factors = list(chosen["factors"])
@@ -376,10 +392,18 @@ class FactorialOrchestrator(Orchestrator):
             arms = {"chosen": [self.group(cell.name, r) for r in repeats], "baseline": self.baseline_groups()}
             self.run([p for r in repeats for p in (self.cell_pass(cell, r), self.cell_pass(self.baseline, r))])
             result = self.evaluate(arms["chosen"])
+            ci = result["vs_baseline"].get("delta_tokens_per_success_ci")
+            if self.cfg.require_saving and (ci is None or ci[1] >= 0):
+                result["gate"] = {**result["gate"], "passed": False,
+                                  "reasons": [*result["gate"]["reasons"], f"tokens/success CI {ci} not below 0"]}
             self.state["confirm"] = {"factors": factors, "cell": cell.name, "arms": arms, **result}
             self.note(f"confirm {cell.name} ({self.cfg.confirm_repeats} repeats vs baseline): {result['summary']}; "
                       f"{result['vs_baseline']}; gate {'pass' if result['gate']['passed'] else result['gate']['reasons']}")
             if result["gate"]["passed"]:
+                break
+            if self.cfg.confirm_only:
+                factors = []
+                self.note("confirmation failed the gate; the pre-registered lead is not adopted")
                 break
             worst = min(factors, key=lambda f: self.state["effects"][f]["success_pts"])
             factors = [f for f in factors if f != worst] if len(factors) > 1 else []
@@ -415,8 +439,11 @@ class FactorialOrchestrator(Orchestrator):
 
 
 def factorial_loop(orch: FactorialOrchestrator, store) -> None:
-    orch.step_factorial()
-    orch.step_effects()
+    if orch.cfg.confirm_only:
+        orch.step_preset()
+    else:
+        orch.step_factorial()
+        orch.step_effects()
     orch.step_confirm()
     orch.step_decision(store)
     orch.step_live()

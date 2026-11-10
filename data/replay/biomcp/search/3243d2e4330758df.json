@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "melanoma"
+    ],
+    "intervention": [
+      "dabrafenib",
+      "trametinib"
+    ],
+    "json": true,
+    "limit": 5
+  },
+  "args_key": "3243d2e4330758df664b3094c415bce4f25f2145023035c8f6af57e73c8c1ffa",
+  "recorded_at": "2026-11-09T20:34:22.465161+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1017.9980999964755,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": 53,\n    \"has_more\": true,\n    \"next_page_token\": \"ZVNj7o2Elu8o3lpyBYqp6rLumpOQJJxrZPmm3vEW\"\n  },\n  \"count\": 5,\n  \"results\": [\n    {\n      \"nct_id\": \"NCT07092670\",\n      \"title\": \"MELAFERT: Impact of Adjuvant Therapy on FERTility in Patients With Resected MELAnoma at High Risk of Relapse.\",\n      \"status\": \"RECRUITING\",\n      \"conditions\": [\n        \"Melanoma\",\n        \"Fertility\"\n      ],\n      \"sponsor\": \"Intergruppo Melanoma Italiano\"\n    },\n    {\n      \"nct_id\": \"NCT02027961\",\n      \"title\": \"Phase 1 Safety and Tolerability of MEDI4736 in Combination With Dabrafenib and Trametinib or With Trametinib Alone\",\n      \"status\": \"COMPLETED\",\n      \"phase\": \"PHASE1\",\n      \"conditions\": [\n        \"Melanoma\"\n      ],\n      \"sponsor\": \"MedImmune LLC\"\n    },\n    {\n      \"nct_id\": \"NCT06557291\",\n      \"title\": \"Relapse-Free Survival With Adjuvant Dabrafenib/Trametinib Therapy in Patients With BRAF V600-mutated Stage III/IV Melanoma\",\n      \"status\": \"COMPLETED\",\n      \"conditions\": [\n        \"BRAF V600 Mutated-Stage III/IV Melanoma\"\n      ],\n      \"sponsor\": \"Novartis\"\n    },\n    {\n      \"nct_id\": \"NCT02143050\",\n      \"title\": \"Study of Dabrafenib, Trametinib and Metformin for Melanoma Patients\",\n      \"status\": \"WITHDRAWN\",\n      \"phase\": \"PHASE1/PHASE2\",\n      \"conditions\": [\n        \"Melanoma\"\n      ],\n      \"sponsor\": \"University of Louisville\"\n    },\n    {\n      \"nct_id\": \"NCT04527549\",\n      \"title\": \"Testing Dabrafenib and Trametinib With or Without Hydroxychloroquine in Stage IIIC or IV BRAF V600E/K Melanoma\",\n      \"status\": \"TERMINATED\",\n      \"phase\": \"PHASE2\",\n      \"conditions\": [\n        \"Clinical Stage IV Cutaneous Melanoma AJCC v8\",\n        \"Locally Advanced Melanoma\",\n        \"Pathologic Stage IIIC Cutaneous Melanoma AJCC v8\",\n        \"Pathologic Stage IV Cutaneous Melanoma AJCC v8\",\n        \"Unresectable Melanoma\"\n      ],\n      \"sponsor\": \"ECOG-ACRIN Cancer Research Group\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get trial NCT07092670\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

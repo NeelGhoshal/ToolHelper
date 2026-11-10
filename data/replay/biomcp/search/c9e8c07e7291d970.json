@@ -1,0 +1,40 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "disease": [
+      "lung cancer",
+      "non-small cell lung carcinoma"
+    ],
+    "gene": "EGFR",
+    "keyword": [
+      "EGFR mutation",
+      "tyrosine kinase inhibitor",
+      "osimertinib"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "c9e8c07e7291d970e8126edd703f682f0b2e7ff57de27a4e42a69515502e1193",
+  "recorded_at": "2026-11-10T04:23:03.404137+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 9567.965499998536,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, disease=lung cancer non-small cell lung carcinoma, keyword=EGFR mutation tyrosine kinase inhibitor osimertinib, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene EGFR --disease \"lung cancer non-small cell lung carcinoma\" --keyword \"EGFR mutation tyrosine kinase inhibitor osimertinib\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 38321811|Recent advances and remaining challenges in lung cancer ther…|Europe PMC|2024-02-07|-|33| \n|PMID 34769519|The Use of Inhibitors of Tyrosine Kinase in Paediatric Haema…|Europe PMC|2021-11-08|-|15| \n|PMID 41008825|Transforming the Management of Oligometastatic Non-Small Cel…|Europe PMC|2025-09-12|-|1| \n|PMID 38988445|Combination of microwave ablation and systemic treatments ac…|Europe PMC|2024-06-28|-|0| \n|PMID 42957218|Long-term Disease Control After Probable Endobronchial Small…|PubMed|2026-11-01|-|0| \n|PMID 43002481|From ADAURA to LAURA: the evolving role of EGFR-targeted the…|PubMed|2026-11-01|-|none| \n|PMID 42930153|Risk Stratification and Factors Associated with Heart Failur…|PubMed|2026-09-29|-|0| \n|PMID 42975994|FLAURA2 - a step forward in first-line treatment of advanced…|PubMed|2026-01-01|-|0| \n|PMID 35599009|EGFR   20      NSCLC|PubTator3|2022-05-20|-|none| \n|PMID 34739062|Association of Clinicopathologic and Molecular Tumor Feature…|PubTator3|2021-11-01|-|none| \n \n \n \nNewest indexed: 2026-11-09 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 38321811\n  biomcp search article -g EGFR -d \"lung cancer non-small cell lung carcinoma\" -k \"EGFR mutation tyrosine kinase inhibitor osimertinib\" --year-min 2021 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

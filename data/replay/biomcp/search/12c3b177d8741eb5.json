@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "BRAF",
+    "json": true,
+    "keyword": [
+      "germline",
+      "RASopathy",
+      "Noonan"
+    ],
+    "limit": 8,
+    "sort": "citations"
+  },
+  "args_key": "12c3b177d8741eb5e39d69d87b25ef25a7f87ecd67572f4f59989c8808e078ba",
+  "recorded_at": "2026-11-09T21:55:06.792621+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4062.456600018777,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=BRAF, keyword=germline RASopathy Noonan, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 8,\n    \"returned\": 8,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 8,\n  \"results\": [\n    {\n      \"pmid\": \"35732831\",\n      \"pmcid\": \"PMC9252913\",\n      \"doi\": \"10.1038/s41375-022-01613-1\",\n      \"title\": \"The 5th edition of the World Health Organization Classification of Haematolymphoid Tumours: Myeloid and Histiocytic/Dendritic Neoplasms.\",\n      \"journal\": \"Leukemia\",\n      \"date\": \"2022-06-22\",\n      \"citation_count\": 3542,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"28666118\",\n      \"pmcid\": \"PMC5555610\",\n      \"doi\": \"10.1016/j.cell.2017.06.009\",\n      \"title\": \"RAS Proteins and Their Regulators in Human Disease.\",\n      \"journal\": \"Cell\",\n      \"date\": \"2017-06-01\",\n      \"citation_count\": 1661,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"32528145\",\n      \"pmcid\": \"PMC7809886\",\n      \"doi\": \"10.1038/s41573-020-0068-6\",\n      \"title\": \"RAS-targeted therapies: is the undruggable drugged?\",\n      \"journal\": \"Nat Rev Drug Discov\",\n      \"date\": \"2020-06-11\",\n      \"citation_count\": 939,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"39144424\",\n      \"title\": \"Noonan syndrome and Noonan-like syndrome with loose anagen hair: rare phenotypes may emerge during follow-up.\",\n      \"journal\": \"Translational pediatrics\",\n      \"date\": \"2024-07-31\",\n      \"citation_count\": 11,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"39725732\",\n      \"title\": \"Clinical features and molecular genetics of patients with RASopathies: expanding the phenotype with rare genes and novel variants.\",\n      \"journal\": \"Eur J Pediatr\",\n      \"date\": \"2024-12-27\",\n      \"citation_count\": 6,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"32021610\",\n      \"title\": \"Cardiofaciocutaneous Syndrome Phenotype in a Case with de novo KRAS Pathogenic Variant.\",\n      \"journal\": \"Molecular syndromology\",\n      \"date\": \"2020-01-01\",\n      \"citation_count\": 3,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42393925\",\n      \"title\": \"Genetic Spectrum of Non-PTPN11 Variants in Noonan Syndrome and Related RASopathies: Findings From a Russian Cohort.\",\n      \"journal\": \"Clin Genet\",\n      \"date\": \"2026-07-02\",\n      \"citation_count\": 1,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41854160\",\n      \"title\": \"Novel Variants in PTPN11, NF1, RASA2, and MAP2K1: Expanding the Molecular Spectrum of RASopathies in a Turkish Cohort.\",\n      \"journal\": \"Clin Genet\",\n      \"date\": \"2026-03-19\",\n      \"citation_count\": 0,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --gene BRAF --keyword \\\"germline RASopathy Noonan\\\" --exclude-retracted --sort citations --source semanticscholar --limit 8 --offset 0\",\n      \"biomcp get article 35732831\",\n      \"biomcp search article -g BRAF -k \\\"germline RASopathy Noonan\\\" --year-min 2017 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

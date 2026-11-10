@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "variant_articles",
+  "arguments": {
+    "items": [
+      {
+        "gene": "BRAF",
+        "hgvsp": "p.Val600Glu",
+        "rsid": "rs113488022"
+      }
+    ],
+    "limit": 10,
+    "strategy": "union"
+  },
+  "args_key": "e4c7785e48b706553db38736913375f7cbb1de9c3a6d5d3845b4db6a27b41c43",
+  "recorded_at": "2026-11-09T20:40:37.741641+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "70147d049a9e3bd31190ae3b87d93f1485386242eee6a9cc9a986c130f8b3d8f",
+  "latency_ms": 1.304199977312237,
+  "result": null,
+  "protocol_error": {
+    "code": -32602,
+    "message": "failed to deserialize parameters: unknown field `hgvsp`, expected one of `request_id`, `gene`, `protein`, `coding`, `transcript`, `genomic`, `accession`, `build`, `position`, `ref`, `alt`, `rsid`",
+    "data": null
+  }
+}

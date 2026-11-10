@@ -871,6 +871,29 @@ def experiment_status(db: MonitorOption = MONITOR_DB,
     console.print(table)
 
 
+@experiment_app.command("app")
+def experiment_app_cmd(port: Annotated[int, typer.Option(help="Port to serve on.")] = 8501,
+                       browser: Annotated[bool, typer.Option(help="Open the page in a browser.")] = True) -> None:
+    """Open the Streamlit app to edit, launch, pause and read experiments (needs the `dashboard` extra)."""
+    import importlib.util
+    import subprocess
+    import sys
+    import threading
+    import webbrowser
+
+    if importlib.util.find_spec("streamlit") is None:
+        raise typer.BadParameter("streamlit is not installed; run `uv run --extra dashboard toolhelper experiment app`")
+    script = Path(__file__).parent / "app" / "experiments_app.py"
+    url = f"http://localhost:{port}"
+    console.print(f"serving {url} (Ctrl+C stops the app; running experiments keep going)")
+    if browser:
+        threading.Timer(3, webbrowser.open, [url]).start()
+    # Headless skips Streamlit's first-run email prompt, which blocks a detached start.
+    raise typer.Exit(subprocess.call([sys.executable, "-m", "streamlit", "run", str(script), "--server.port", str(port),
+                                      "--server.headless", "true", "--browser.gatherUsageStats", "false",
+                                      "--server.address", "localhost"], cwd=ROOT))  # it launches runs with your keys
+
+
 def _monitor_rows(db: Path, sql: str, params: tuple) -> list[dict]:
     from toolhelper.monitoring.db import MonitorDB
 

@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "BRAF V600E colorectal cancer thyroid cancer hairy cell leukemia Erdheim Chester"
+    ],
+    "limit": 8,
+    "sort": "citations"
+  },
+  "args_key": "0d515dddb46a2112aec5f7759ca6e87ecee93ade9ad88540231caf174ceb7079",
+  "recorded_at": "2026-11-10T04:00:55.116288+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2202.681800001301,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=BRAF V600E colorectal cancer thyroid cancer hairy cell leukemia Erdheim Chester, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 8,\n    \"returned\": 8,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 8,\n  \"results\": [\n    {\n      \"pmid\": \"26287849\",\n      \"pmcid\": \"PMC4971773\",\n      \"doi\": \"10.1056/nejmoa1502309\",\n      \"title\": \"Vemurafenib in Multiple Nonmelanoma Cancers with BRAF V600 Mutations.\",\n      \"journal\": \"N Engl J Med\",\n      \"date\": \"2015-08-01\",\n      \"citation_count\": 1385,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"38105263\",\n      \"pmcid\": \"PMC10725898\",\n      \"doi\": \"10.1038/s41392-023-01705-z\",\n      \"title\": \"Targeting the RAS/RAF/MAPK pathway for cancer therapy: from mechanism to clinical studies.\",\n      \"journal\": \"Signal Transduct Target Ther\",\n      \"date\": \"2023-12-18\",\n      \"citation_count\": 738,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"26498373\",\n      \"pmcid\": \"PMC4862417\",\n      \"doi\": \"10.1093/jnci/djv310\",\n      \"title\": \"Dramatic Response of BRAF V600E Mutant Papillary Craniopharyngioma to Targeted Therapy.\",\n      \"journal\": \"J Natl Cancer Inst\",\n      \"date\": \"2015-10-23\",\n      \"citation_count\": 176,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"38278874\",\n      \"pmcid\": \"PMC11857949\",\n      \"doi\": \"10.1038/s41571-023-00852-0\",\n      \"title\": \"BRAF - a tumour-agnostic drug target with lineage-specific dependencies.\",\n      \"journal\": \"Nat Rev Clin Oncol\",\n      \"date\": \"2024-01-26\",\n      \"citation_count\": 126,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"35486097\",\n      \"pmcid\": \"PMC9616966\",\n      \"doi\": \"10.1158/1078-0432.ccr-21-2138\",\n      \"title\": \"Molecular Pathways and Mechanisms of BRAF in Cancer Therapy.\",\n      \"journal\": \"Clin Cancer Res\",\n      \"date\": \"2022-11-01\",\n      \"citation_count\": 122,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"32029534\",\n      \"pmcid\": \"PMC7196502\",\n      \"doi\": \"10.1158/2159-8290.cd-19-1265\",\n      \"title\": \"Pan-Cancer Efficacy of Vemurafenib in BRAF V600-Mutant Non-Melanoma Cancers.\",\n      \"journal\": \"Cancer Discov\",\n      \"date\": \"2020-02-06\",\n      \"citation_count\": 116,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"29488071\",\n      \"pmcid\": \"PMC6080616\",\n      \"doi\": \"10.1007/s40265-018-0884-8\",\n      \"title\": \"BRAF and MEK Inhibitors: Use and Resistance in BRAF-Mutated Cancers.\",\n      \"journal\": \"Drugs\",\n      \"date\": \"2018-04-01\",\n      \"citation_count\": 114,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"29846186\",\n      \"pmcid\": \"PMC8063713\",\n      \"doi\": \"10.1097/pas.0000000000001086\",\n      \"title\": \"Bronchiolar Adenoma: Expansion of the Concept of Ciliated Muconodular Papillary Tumors With Proposal for Revised Terminology Based on Morphologic, Immunophenotypic, and Genomic Analysis of 25 Cases.\",\n      \"journal\": \"Am J Surg Pathol\",\n      \"date\": \"2018-08-01\",\n      \"citation_count\": 106,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"BRAF V600E colorectal cancer thyroid cancer hairy cell leukemia Erdheim Chester\\\" --exclude-retracted --sort citations --source semanticscholar --limit 8 --offset 0\",\n      \"biomcp get article 26287849\",\n      \"biomcp search article -k \\\"BRAF V600E colorectal cancer thyroid cancer hairy cell leukemia Erdheim Chester\\\" --year-min 2015 --year-max 2024 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

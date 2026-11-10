@@ -1,0 +1,179 @@
+{
+  "chosen": {
+    "factors": [],
+    "cell": "none",
+    "specs": [
+      "E2:level=minimal",
+      "E6:mode=budget,budget=2000",
+      "E9"
+    ],
+    "max_turns": 6,
+    "reasons": {
+      "T": "on: pre-registered for confirmation",
+      "R": "on: pre-registered for confirmation"
+    },
+    "groups": []
+  },
+  "log": [
+    "2026-11-10 06:13:12 confirm only TR ['E2:level=minimal', 'E6:mode=budget,budget=2000', 'E9', 'E3:modes=tool+rewrite'] (pre-registered; no factorial)",
+    "2026-11-10 06:13:12 start p10d-f-TR-r1 fold A: 27 tasks, ['E2:level=minimal', 'E6:mode=budget,budget=2000', 'E9', 'E3:modes=tool+rewrite']",
+    "2026-11-10 06:13:12 start p10d-f-TR-r1 fold B: 27 tasks, ['E2:level=minimal', 'E6:mode=budget,budget=2000', 'E9', 'E3:modes=tool+rewrite']",
+    "2026-11-10 06:13:12 start p10d-f-none-r1 fold A: 27 tasks, ['E2:level=minimal', 'E6:mode=budget,budget=2000', 'E9']",
+    "2026-11-10 06:13:12 start p10d-f-none-r1 fold B: 27 tasks, ['E2:level=minimal', 'E6:mode=budget,budget=2000', 'E9']",
+    "2026-11-10 07:20:13 finished p10d-f-none-r1 fold A (exit 0); 0 tasks still missing",
+    "2026-11-10 07:20:13 start p10d-f-TR-r2 fold A: 27 tasks, ['E2:level=minimal', 'E6:mode=budget,budget=2000', 'E9', 'E3:modes=tool+rewrite']",
+    "2026-11-10 07:22:13 finished p10d-f-TR-r1 fold B (exit 0); 0 tasks still missing",
+    "2026-11-10 07:22:13 start p10d-f-TR-r2 fold B: 27 tasks, ['E2:level=minimal', 'E6:mode=budget,budget=2000', 'E9', 'E3:modes=tool+rewrite']",
+    "2026-11-10 07:27:13 finished p10d-f-TR-r1 fold A (exit 0); 0 tasks still missing",
+    "2026-11-10 07:27:13 start p10d-f-none-r2 fold A: 27 tasks, ['E2:level=minimal', 'E6:mode=budget,budget=2000', 'E9']",
+    "2026-11-10 07:33:43 finished p10d-f-none-r1 fold B (exit 0); 0 tasks still missing",
+    "2026-11-10 07:33:43 start p10d-f-none-r2 fold B: 27 tasks, ['E2:level=minimal', 'E6:mode=budget,budget=2000', 'E9']",
+    "2026-11-10 08:29:41 finished p10d-f-TR-r2 fold A (exit 0); 0 tasks still missing",
+    "2026-11-10 08:29:41 start p10d-f-TR-r3 fold A: 27 tasks, ['E2:level=minimal', 'E6:mode=budget,budget=2000', 'E9', 'E3:modes=tool+rewrite']",
+    "2026-11-10 08:33:11 finished p10d-f-TR-r2 fold B (exit 0); 0 tasks still missing",
+    "2026-11-10 08:33:11 start p10d-f-TR-r3 fold B: 27 tasks, ['E2:level=minimal', 'E6:mode=budget,budget=2000', 'E9', 'E3:modes=tool+rewrite']",
+    "2026-11-10 08:44:11 finished p10d-f-none-r2 fold A (exit 0); 0 tasks still missing",
+    "2026-11-10 08:44:11 start p10d-f-none-r3 fold A: 27 tasks, ['E2:level=minimal', 'E6:mode=budget,budget=2000', 'E9']",
+    "2026-11-10 08:44:41 finished p10d-f-none-r2 fold B (exit 0); 0 tasks still missing",
+    "2026-11-10 08:44:41 start p10d-f-none-r3 fold B: 27 tasks, ['E2:level=minimal', 'E6:mode=budget,budget=2000', 'E9']",
+    "2026-11-10 09:49:12 finished p10d-f-none-r3 fold B (exit 0); 0 tasks still missing",
+    "2026-11-10 10:06:42 finished p10d-f-none-r3 fold A (exit 0); 0 tasks still missing",
+    "2026-11-10 10:19:12 finished p10d-f-TR-r3 fold B (exit 0); 0 tasks still missing",
+    "2026-11-10 10:30:42 finished p10d-f-TR-r3 fold A (exit 0); 0 tasks still missing",
+    "2026-11-10 10:30:42 confirm TR (3 repeats vs baseline): {'runs': 162, 'repeats': 3, 'success_rate': 0.9567901234567902, 'tokens_per_success': 34629.987096774195, 'median_tokens': 25660.0, 'p90_tokens': 63847, 'trust_mean': 0.9267358024691358, 'transient_excluded': 0}; {'tasks': 54, 'delta_success': 0.0062, 'delta_success_ci': [-0.0185, 0.037], 'delta_tokens_per_success': -0.058, 'delta_tokens_per_success_ci': [-0.1408, 0.0349], 'mcnemar': {'lost': 2, 'gained': 3, 'p': 1.0}}; gate ['tokens/success CI [-0.1408, 0.0349] not below 0']",
+    "2026-11-10 10:30:42 confirmation failed the gate; the pre-registered lead is not adopted",
+    "2026-11-10 10:30:44 decision written: decisions/p10d@v1 (proposed; approve with `toolhelper curate decisions/p10d`)",
+    "2026-11-10 10:30:44 start p10d-live-baseline fold A: 27 tasks, ['E2:level=minimal', 'E6:mode=budget,budget=2000', 'E9']",
+    "2026-11-10 12:58:14 finished p10d-live-baseline fold A (exit 0); 0 tasks still missing",
+    "2026-11-10 12:58:14 live confirmation on fold A: {'p10d-live-baseline': {'runs': 27, 'repeats': 1, 'success_rate': 0.9259259259259259, 'tokens_per_success': 38848.76, 'median_tokens': 26480, 'p90_tokens': 67842, 'trust_mean': 0.9222703703703704, 'transient_excluded': 0}}; replay on the same tasks: {'baseline': {'runs': 81, 'repeats': 3, 'success_rate': 0.9629629629629629, 'tokens_per_success': 40520.03846153846, 'median_tokens': 29548, 'p90_tokens': 77898, 'trust_mean': 0.927279012345679, 'transient_excluded': 0}}",
+    "2026-11-10 12:58:14 experiment finished"
+  ],
+  "confirm": {
+    "factors": [
+      "T",
+      "R"
+    ],
+    "cell": "TR",
+    "arms": {
+      "chosen": [
+        "p10d-f-TR-r1",
+        "p10d-f-TR-r2",
+        "p10d-f-TR-r3"
+      ],
+      "baseline": [
+        "p10d-f-none-r1",
+        "p10d-f-none-r2",
+        "p10d-f-none-r3"
+      ]
+    },
+    "groups": [
+      "p10d-f-TR-r1",
+      "p10d-f-TR-r2",
+      "p10d-f-TR-r3"
+    ],
+    "summary": {
+      "runs": 162,
+      "repeats": 3,
+      "success_rate": 0.9567901234567902,
+      "tokens_per_success": 34629.987096774195,
+      "median_tokens": 25660.0,
+      "p90_tokens": 63847,
+      "trust_mean": 0.9267358024691358,
+      "transient_excluded": 0
+    },
+    "by_kind": {
+      "biomcp": {
+        "runs": 45,
+        "repeats": 3,
+        "success_rate": 1.0,
+        "tokens_per_success": 38849.84444444445,
+        "median_tokens": 39477,
+        "p90_tokens": 60274,
+        "trust_mean": 0.8688644444444444,
+        "transient_excluded": 0
+      },
+      "cross": {
+        "runs": 30,
+        "repeats": 3,
+        "success_rate": 0.9333333333333333,
+        "tokens_per_success": 48406.107142857145,
+        "median_tokens": 41223.0,
+        "p90_tokens": 88780,
+        "trust_mean": 0.9099766666666667,
+        "transient_excluded": 0
+      },
+      "medical": {
+        "runs": 48,
+        "repeats": 3,
+        "success_rate": 0.9166666666666666,
+        "tokens_per_success": 39818.931818181816,
+        "median_tokens": 34349.5,
+        "p90_tokens": 63847,
+        "trust_mean": 0.9486833333333333,
+        "transient_excluded": 0
+      },
+      "omop": {
+        "runs": 39,
+        "repeats": 3,
+        "success_rate": 0.9743589743589743,
+        "tokens_per_success": 13473.71052631579,
+        "median_tokens": 9730,
+        "p90_tokens": 18503,
+        "trust_mean": 0.9793897435897436,
+        "transient_excluded": 0
+      }
+    },
+    "vs_baseline": {
+      "tasks": 54,
+      "delta_success": 0.0062,
+      "delta_success_ci": [
+        -0.0185,
+        0.037
+      ],
+      "delta_tokens_per_success": -0.058,
+      "delta_tokens_per_success_ci": [
+        -0.1408,
+        0.0349
+      ],
+      "mcnemar": {
+        "lost": 2,
+        "gained": 3,
+        "p": 1.0
+      }
+    },
+    "gate": {
+      "passed": false,
+      "reasons": [
+        "tokens/success CI [-0.1408, 0.0349] not below 0"
+      ],
+      "close_call": false
+    }
+  },
+  "decision": "decisions/p10d@v1",
+  "live": {
+    "live": {
+      "p10d-live-baseline": {
+        "runs": 27,
+        "repeats": 1,
+        "success_rate": 0.9259259259259259,
+        "tokens_per_success": 38848.76,
+        "median_tokens": 26480,
+        "p90_tokens": 67842,
+        "trust_mean": 0.9222703703703704,
+        "transient_excluded": 0
+      }
+    },
+    "replay_same_tasks": {
+      "baseline": {
+        "runs": 81,
+        "repeats": 3,
+        "success_rate": 0.9629629629629629,
+        "tokens_per_success": 40520.03846153846,
+        "median_tokens": 29548,
+        "p90_tokens": 77898,
+        "trust_mean": 0.927279012345679,
+        "transient_excluded": 0
+      }
+    }
+  }
+}

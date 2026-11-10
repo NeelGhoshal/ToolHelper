@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "ABL1",
+    "json": true,
+    "sections": [
+      "druggability",
+      "diseases",
+      "pathways",
+      "interactions",
+      "xrefs"
+    ]
+  },
+  "args_key": "d4f8d103069c40917e6afd62249087b453de84876da699d4175165141fdd096a",
+  "recorded_at": "2026-11-09T19:58:20.385243+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.4949000033084303,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: xrefs"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

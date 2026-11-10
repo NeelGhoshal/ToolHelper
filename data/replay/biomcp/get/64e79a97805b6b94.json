@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "HGNC:2621",
+    "sections": [
+      "druggability",
+      "pathways",
+      "interactions",
+      "civic",
+      "clinvar"
+    ]
+  },
+  "args_key": "64e79a97805b6b9479e5a0e8f74364c03bab951af9c8de8f715548a5ea362a98",
+  "recorded_at": "2026-11-10T04:26:56.422083+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.6585999983362854,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: clinvar"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

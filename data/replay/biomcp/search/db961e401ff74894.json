@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "BRAF V600E"
+    ],
+    "limit": 8
+  },
+  "args_key": "db961e401ff748947b67d05c473fde67626d1011a3821f7eaa4fe97ad1979fc6",
+  "recorded_at": "2026-11-09T20:40:09.370806+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 291.48489999352023,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 8 of 137 \n \nQuery: condition=BRAF V600E \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT07809893|Ivosidenib Plus mFOLFOXIR…|RECRUITING|2|Colorectal Cancer| \n|NCT05710406|Testing the Use of BRAF-T…|ACTIVE_NOT_RECRUITING|2/3|Colon Adenocarcinoma, Microsatellite Stable Co… [abridged; 5 conditions total]| \n|NCT06967155|A Study of Irinotecan Wit…|ACTIVE_NOT_RECRUITING|2|Neoplasms| \n|NCT05988697|Evaluate the Efficacy and…|NOT_YET_RECRUITING|-|NSCLC, BRAF V600E Mutation, Advanced Cancer, Stage IIIB NSCLC, Stage IV NSCLC| \n|NCT07042984|RET-US Study - Ultrasound…|NOT_YET_RECRUITING|-|Papillary Thyroid Carcinoma, Thyroid Neoplasms… [abridged; 4 conditions total]| \n|NCT01107418|A Pharmacokinetic/Pharmac…|COMPLETED|1|Malignant Melanoma| \n|NCT02143050|Study of Dabrafenib, Tram…|WITHDRAWN|1/2|Melanoma| \n|NCT02410863|Biopsy- and Biology-drive…|TERMINATED|2|Malignant Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-8 of 137 results. Use --offset 8 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

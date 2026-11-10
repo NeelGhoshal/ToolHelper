@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search disease -q \"cancer susceptibility\" --limit 25",
+    "json": true
+  },
+  "args_key": "881731abbf1db91f47210c1f63f927ad9fe5eeb9a15868b5eaab5e94571d4f7d",
+  "recorded_at": "2026-11-10T09:09:52.582405+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 770.774500007974,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 25,\n    \"returned\": 3,\n    \"total\": 3,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 3,\n  \"results\": [\n    {\n      \"id\": \"MONDO:0008903\",\n      \"name\": \"lung cancer\",\n      \"synonyms_preview\": \"adenocarcinoma of lung, response to tyrosine kinase inhibitor in, autosomal dominant, somatic mutation, adenocarcinoma of lung, somatic (and 7 more)\"\n    },\n    {\n      \"id\": \"MONDO:0011962\",\n      \"name\": \"endometrial cancer\",\n      \"synonyms_preview\": \"cancer of endometrium, endometrial cancer, familial, autosomal dominant, somatic mutation (and 7 more)\"\n    },\n    {\n      \"id\": \"MONDO:0005575\",\n      \"name\": \"large intestine cancer\",\n      \"synonyms_preview\": \"cancer of colorectum, cancer of large bowel (and 8 more)\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get disease MONDO:0008903\",\n      \"biomcp list disease\"\n    ],\n    \"workflow\": \"mutation-catalog\",\n    \"workflow_rationale\": \"Start from the gene, enumerate variants, narrow to a mutation class, then confirm disease literature.\",\n    \"workflow_playbook\": \"biomcp skill mutation-catalog\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

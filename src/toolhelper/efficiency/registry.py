@@ -46,6 +46,46 @@ def parse_spec(spec: str) -> tuple[str, dict[str, Any]]:
     return sid, params
 
 
+# Parameters each builder reads: a list of allowed values, `int`, or a `+`-joined subset of a list.
+# `E7` also takes `ttl_<server>=<seconds>`; E3 `datasets` names come from the dataset index.
+PARAMS: dict[str, dict[str, Any]] = {
+    "E1": {"top_k": int, "mode": ["static", "find_tools"], "route": ["on", "off"]},
+    "E2": {"level": ["light", "aggressive", "minimal"]},
+    "E3": {"modes": ("+", ["hints", "tool", "rewrite"]), "datasets": ("+", None)},
+    "E4": {"mode": ["reject", "repair"]},
+    "E5": {"mode": ["plan", "tool"]},
+    "E6": {"mode": ["projection", "top_n", "summary", "budget"], "top_n": int, "budget": int},
+    "E7": {},
+    "E8": {"mode": ["after_turn", "after_use"]},
+    "E9": {},
+}
+
+
+def check_spec(spec: str) -> list[str]:
+    """Problems with one spec, without building it (empty when the builder would accept it)."""
+    try:
+        sid, params = parse_spec(spec)
+    except ValueError as e:
+        return [str(e)]
+    problems = []
+    for key, value in params.items():
+        allowed = PARAMS[sid].get(key)
+        if sid == "E7" and key.startswith("ttl_"):
+            allowed = int
+        if allowed is None:
+            problems.append(f"{sid}: unknown parameter {key!r}; known: {sorted(PARAMS[sid]) or 'none'}")
+        elif allowed is int:
+            if not isinstance(value, int):
+                problems.append(f"{sid}: {key} must be a whole number, got {value!r}")
+        elif isinstance(allowed, tuple):
+            bad = [v for v in str(value).split("+") if allowed[1] is not None and v not in allowed[1]]
+            if bad or not str(value):
+                problems.append(f"{sid}: {key} values {bad or [value]} not in {allowed[1]}")
+        elif value not in allowed:
+            problems.append(f"{sid}: {key}={value!r} not in {allowed}")
+    return problems
+
+
 def _e1(p, inp):
     from toolhelper.efficiency.arg_guard import learn_rules, observations_from_traces
     from toolhelper.efficiency.retrieval import ToolRetrieval, build_cards

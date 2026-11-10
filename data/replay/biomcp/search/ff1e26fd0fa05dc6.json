@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "hairy cell leukemia"
+    ],
+    "intervention": [
+      "vemurafenib"
+    ],
+    "json": true,
+    "limit": 5
+  },
+  "args_key": "ff1e26fd0fa05dc6bd08acffa3b8846490d25364826d9a7af40eb009478cf090",
+  "recorded_at": "2026-11-09T20:37:00.793919+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 367.7830999949947,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 4,\n    \"total\": 4,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 4,\n  \"results\": [\n    {\n      \"nct_id\": \"NCT06561360\",\n      \"title\": \"A Study of Vemurafenib and Obinutuzumab Compared to Cladribine and Rituximab in People With Hairy Cell Leukemia (HCL)\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE2\",\n      \"conditions\": [\n        \"Hairy Cell Leukemia\"\n      ],\n      \"sponsor\": \"Memorial Sloan Kettering Cancer Center\",\n      \"matched_intervention_label\": \"vemurafenib\"\n    },\n    {\n      \"nct_id\": \"NCT03410875\",\n      \"title\": \"A Phase II Study of the BRAF Inhibitor, Vemurafenib, Plus Obinutuzumab in Patients With Previously Untreated Classical Hairy Cell Leukemia\",\n      \"status\": \"ACTIVE_NOT_RECRUITING\",\n      \"phase\": \"PHASE2\",\n      \"conditions\": [\n        \"Hairy Cell Leukemia\",\n        \"Leukemia\",\n        \"Leukemia, Hairy Cell\"\n      ],\n      \"sponsor\": \"Memorial Sloan Kettering Cancer Center\",\n      \"matched_intervention_label\": \"vemurafenib\"\n    },\n    {\n      \"nct_id\": \"NCT01711632\",\n      \"title\": \"BRAF Inhibitor, Vemurafenib, in Patients With Relapsed or Refractory Hairy Cell Leukemia\",\n      \"status\": \"COMPLETED\",\n      \"phase\": \"PHASE2\",\n      \"conditions\": [\n        \"Hairy Cell Leukemia\"\n      ],\n      \"sponsor\": \"Memorial Sloan Kettering Cancer Center\",\n      \"matched_intervention_label\": \"vemurafenib\"\n    },\n    {\n      \"nct_id\": \"NCT05388123\",\n      \"title\": \"Low Dose Vemurafenib and Rituximab in Hairy Cell Leukemia\",\n      \"status\": \"COMPLETED\",\n      \"phase\": \"PHASE2\",\n      \"conditions\": [\n        \"Hairy Cell Leukemia\"\n      ],\n      \"sponsor\": \"Scripps Health\",\n      \"matched_intervention_label\": \"vemurafenib\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get trial NCT06561360\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

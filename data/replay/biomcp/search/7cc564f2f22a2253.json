@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "gene": "CYP2C19",
+    "hgvsp": "p.Arg144His",
+    "limit": 5
+  },
+  "args_key": "7cc564f2f22a2253e5fd4a4e1189ba0d9bd8e6e6aad26b959a19d71b9491c768",
+  "recorded_at": "2026-11-09T21:10:57.400959+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 234.6970000071451,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Requested variant: CYP2C19 p.Arg144His\n\nVariant identity: resolved\n\n# Variant Search Results \n \nFound: 1 variant(s) \nQuery: gene=CYP2C19, hgvsp=R144H \n \n \n## Filter evaluation \n \ngene: evaluated \n \nhgvsp: evaluated \n \n \n \n| ID | Build | Gene | Transcript | Coding | Protein | Legacy Name | Significance | ClinVar Stars | gnomAD AF | REVEL | GERP | \n|---|---|---|---|---|---|---|---|---|---|---|---| \n| chr10:g.96535246G>A | GRCh37 | CYP2C19 | NM_000769.1 | c.431G>A | p.Arg144His | CYP2C19 R144H | Likely benign | 4 | 0.000890947 | 0.276 | 2.99 | \n \n \nUse `get variant <id>` for details. \nSignificance is the most severe ClinVar RCV classification in MyVariant.info's cached copy; run `get variant <id> clinvar` for the current NCBI ClinVar record-level classification. \nFilters: -g <gene>, --hgvsp <protein>, --significance <value>, --max-frequency <0-1>, --min-cadd <score>, --consequence <term>, --review-status <stars>, --population <pop>, --revel-min <score>, --gerp-min <score>, --tumor-site <site>, --condition <name>, --impact <level>, --lof, --has <field>, --missing <field>, --therapy <name> \n \n \nSee also:\n  biomcp get variant \"chr10:g.96535246G>A\"\n  biomcp get gene CYP2C19 \n \n \n \nShowing 1 of 1 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

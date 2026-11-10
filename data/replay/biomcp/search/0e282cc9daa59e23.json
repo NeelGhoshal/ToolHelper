@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "BRAF",
+    "json": true,
+    "keyword": [
+      "V600E",
+      "melanoma",
+      "inhibitor"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "0e282cc9daa59e23eb188031afc7f7678ac59242a94a91148f3dc5c5cef82290",
+  "recorded_at": "2026-11-09T20:33:22.241912+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 35633.967700006906,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=BRAF, keyword=V600E melanoma inhibitor, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"26462967\",\n      \"pmcid\": \"PMC4739132\",\n      \"doi\": \"10.1089/thy.2015.0020\",\n      \"title\": \"2015 American Thyroid Association Management Guidelines for Adult Patients with Thyroid Nodules and Differentiated Thyroid Cancer: The American Thyroid Association Guidelines Task Force on Thyroid Nodules and Differentiated Thyroid Cancer.\",\n      \"journal\": \"Thyroid\",\n      \"date\": \"2016-01-01\",\n      \"citation_count\": 10412,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"23539594\",\n      \"pmcid\": \"PMC3749880\",\n      \"doi\": \"10.1126/science.1235122\",\n      \"title\": \"Cancer genome landscapes.\",\n      \"journal\": \"Science\",\n      \"date\": \"2013-03-01\",\n      \"citation_count\": 6000,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"21639808\",\n      \"pmcid\": \"PMC3549296\",\n      \"doi\": \"10.1056/nejmoa1103782\",\n      \"title\": \"Improved survival with vemurafenib in melanoma with BRAF V600E mutation.\",\n      \"journal\": \"N Engl J Med\",\n      \"date\": \"2011-06-05\",\n      \"citation_count\": 5808,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"24336571\",\n      \"pmcid\": \"PMC4089965\",\n      \"doi\": \"10.1126/science.1247005\",\n      \"title\": \"Genome-scale CRISPR-Cas9 knockout screening in human cells.\",\n      \"journal\": \"Science\",\n      \"date\": \"2013-12-12\",\n      \"citation_count\": 4502,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42969502\",\n      \"title\": \"Impact of bone metastases on outcomes in patients with metastatic melanoma treated with immune checkpoint inhibitors.\",\n      \"journal\": \"Melanoma research\",\n      \"date\": \"2026-10-29\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42907443\",\n      \"title\": \"p38α orchestrates BRAF(V600E)-melanoma progression and immunotherapy response via tumor fitness and immune microenvironment modulation.\",\n      \"journal\": \"Nature communications\",\n      \"date\": \"2026-09-22\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42794461\",\n      \"title\": \"Predicted STAT1-BRAF and IRF7-MET Regulatory Links Are Associated with MAPK Pathway Reactivation and Targeted Therapy Resistance in Melanoma.\",\n      \"journal\": \"International journal of molecular sciences\",\n      \"date\": \"2026-09-09\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42703371\",\n      \"title\": \"Immune Checkpoint Inhibitor-Induced Diabetes Presenting As Diabetic Ketoacidosis: A Case Report.\",\n      \"journal\": \"Cureus\",\n      \"date\": \"2026-08-07\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"39052013\",\n      \"pmcid\": \"PMC11647256\",\n      \"title\": \"CTHRC1 is associated with BRAF(V600E) mutation and correlates with prognosis, immune cell infiltration, and drug resistance in colon cancer, thyroid cancer, and melanoma\",\n      \"journal\": \"Biomol Biomed\",\n      \"date\": \"2024-07-23\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"38067230\",\n      \"pmcid\": \"PMC10705743\",\n      \"title\": \"Exploring the In Vitro and In Vivo Therapeutic Potential of BRAF and MEK Inhibitor Combination in NRAS-Mutated Melanoma\",\n      \"journal\": \"Cancers (Basel)\",\n      \"date\": \"2023-11-22\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --gene BRAF --keyword \\\"V600E melanoma inhibitor\\\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0\",\n      \"biomcp get article 26462967\",\n      \"biomcp search article -g BRAF -k \\\"V600E melanoma inhibitor\\\" --year-min 2011 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

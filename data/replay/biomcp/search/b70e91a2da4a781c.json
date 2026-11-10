@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "melanoma"
+    ],
+    "intervention": [
+      "dabrafenib",
+      "trametinib"
+    ],
+    "limit": 10
+  },
+  "args_key": "b70e91a2da4a781c925e3377be2ac5ed07f6323cfebf9e31d334c41b1ed6bbd7",
+  "recorded_at": "2026-11-10T04:22:08.135564+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 973.09069999028,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 53 \n \nQuery: condition=melanoma, intervention=dabrafenib trametinib \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT07092670|MELAFERT: Impact of Adjuv…|RECRUITING|-|Melanoma, Fertility| \n|NCT07854522|A Study of QL1706 Combine…|NOT_YET_RECRUITING|4|Melanoma, Acral Melanoma| \n|NCT02027961|Phase 1 Safety and Tolera…|COMPLETED|1|Melanoma| \n|NCT03199846|Treatment Patterns and Ou…|COMPLETED|-|Melanoma| \n|NCT05260684|Comparative Effectiveness…|COMPLETED|-|Melanoma| \n|NCT06557291|Relapse-Free Survival Wit…|COMPLETED|-|BRAF V600 Mutated-Stage III/IV Melanoma| \n|NCT07256184|Prognostic and Treatment-…|COMPLETED|-|Metastatic Malignant Melanoma| \n|NCT02143050|Study of Dabrafenib, Tram…|WITHDRAWN|1/2|Melanoma| \n|NCT04310397|Dabrafenib, Trametinib, a…|TERMINATED|2|Pathologic Stage IIIB Cutaneous Melanoma AJCC… [abridged; 3 conditions total]| \n|NCT04527549|Testing Dabrafenib and Tr…|TERMINATED|2|Clinical Stage IV Cutaneous Melanoma AJCC v8,… [abridged; 5 conditions total]| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-10 of 53 results. Use --offset 10 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "Mendelian randomization",
+      "statin",
+      "Alzheimer"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "d6b4cdd1fa11dc48f2d6c2fa83d79f9f21f5ef2261804ae005adc1825d6dee28",
+  "recorded_at": "2026-11-09T20:25:56.883371+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3204.7340999997687,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=Mendelian randomization statin Alzheimer, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"Mendelian randomization statin Alzheimer\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 28122885|Heart Disease and Stroke Statistics-2017 Update: A Report Fr…|Europe PMC|2017-01-25|-|6484| \n|PMID 33501848|Heart Disease and Stroke Statistics-2021 Update: A Report Fr…|Europe PMC|2021-01-27|-|4456| \n|PMID 36695182|Heart Disease and Stroke Statistics-2023 Update: A Report Fr…|Europe PMC|2023-01-25|-|4105| \n|PMID 24352519|Heart disease and stroke statistics--2014 update: a report f…|Europe PMC|2013-12-18|-|4036| \n|PMID 29335400|Causal associations between risk factors and common diseases…|PubMed|2018-01-15|-|981| \n|PMID 35953131|Mendelian Randomization Study of PCSK9 and HMG-CoA Reductase…|PubTator3, PubMed|2022-08-16|-|116| \n|PMID 31714636|Lipid lowering and Alzheimer disease risk: A mendelian rando…|PubMed|2020-01-01|-|100| \n|PMID 38837845|Causal relationship between PCSK9 inhibitor and common neuro…|PubTator3, PubMed|2024-06-01|-|11| \n|PMID 38235315|What have clinical trials taught us about brain health?|PubTator3|2023-12-28|-|4| \n|PMID 42010230|Brain, benefit, or burden? Revisiting statins and cognitive…|PubMed|2026-06-01|-|1| \n \n \n \nNewest indexed: 2026-04-20 (203 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 28122885\n  biomcp search article -k \"Mendelian randomization statin Alzheimer\" --year-min 2013 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

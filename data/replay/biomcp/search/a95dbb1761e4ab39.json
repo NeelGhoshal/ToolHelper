@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "meta-analysis",
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "dementia"
+    ],
+    "limit": 15,
+    "source": "pubmed",
+    "sort": "citations"
+  },
+  "args_key": "a95dbb1761e4ab39a482e86ea9918fae493857550e7d2d0e20d363cb01dbbd96",
+  "recorded_at": "2026-11-10T03:46:10.253532+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 982.7802999934647,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin dementia, type=meta-analysis, exclude_retracted=true, sort=citations, source=pubmed \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 15 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42566699|Secondary prevention of myocardial infarction in people with…|PubMed|2026-08-03|-|none| \n|PMID 41840386|Deprescribing preventive medications in older adults with ad…|PubMed|2026-03-17|-|none| \n|PMID 41083880|The role of APOE ε4 in modulating the relationship between…|PubMed|2025-10-13|-|none| \n|PMID 40794911|Association of lipid-lowering therapy with dementia and cogn…|PubMed|2025-08-01|-|none| \n|PMID 40199829|Statins and the risk of dementia: a meta-analysis.|PubMed|2025-06-01|-|none| \n|PMID 39312316|Effect of long-term pharmacological treatments on Alzheimer…|PubMed|2024-09-20|-|none| \n|PMID 38165328|C-Reactive Protein, Interleukin-6, and Vascular Recurrence A…|PubMed|2024-01-23|-|none| \n|PMID 37597795|Does Statin Use in Frail Patients Provide Survival Benefits?…|PubMed|2024-01-01|-|none| \n|PMID 36565207|Lipid-Lowering Trials Are Not Representative of Patients Man…|PubMed|2023-01-03|-|none| \n|PMID 35851147|A large-scale genome-wide cross-trait analysis reveals share…|PubMed|2022-07-18|-|none| \n|PMID 34871380|Statin use and risk of dementia or Alzheimer's disease: a sy…|PubMed|2022-05-05|-|none| \n|PMID 35050683|Circulating Metabolome and White Matter Hyperintensities in…|PubMed|2022-04-05|-|none| \n|PMID 35104501|The calcium-free form of atorvastatin inhibits amyloid-β(1-…|PubMed|2022-03-01|-|none| \n|PMID 33609477|Risk of stroke in relation to degree of asymptomatic carotid…|PubMed|2021-03-01|-|none| \n|PMID 34700321|Evaluation of High Cholesterol and Risk of Dementia and Cogn…|PubMed|2021-01-01|-|none| \n \n \n \nNewest indexed: 2026-08-07 (95 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42566699\n  biomcp search article -k \"statin dementia\" --type meta-analysis --source pubmed --year-min 2021 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-15 of 49 results. Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

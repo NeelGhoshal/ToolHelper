@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "metformin",
+      "atherosclerosis",
+      "coronary artery disease"
+    ],
+    "limit": 20,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "6cbb9bd82df294a4c5d1e833cbf44d1476560cf3a13496c60ff499d99d15a2af",
+  "recorded_at": "2026-11-09T21:09:28.565146+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 772.9111999797169,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=metformin atherosclerosis coronary artery disease, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 20 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42214260|Examining the effect of Angiopoietin-like protein 8 (ANGPTL8…|PubMed|2026-10-01|-|none| \n|PMID 42496918|Comparison of non-insulin glucose-lowering therapies on coro…|PubMed|2026-09-01|-|none| \n|PMID 42569931|Genetic Predisposition and Pharmacological Effects Shape the…|PubMed|2026-08-08|-|none| \n|PMID 41713390|Sex-based differences in cardiovascular risk management and…|PubMed|2026-04-01|-|none| \n|PMID 40773213|Geroscience: A Translational Review.|PubMed|2025-09-23|-|none| \n|PMID 39034866|Systemic aging fuels heart failure: Molecular mechanisms and…|PubMed|2025-04-01|-|none| \n|PMID 39706688|Dapagliflozin reduces the white coat effect on systolic bloo…|PubMed|2025-01-01|-|none| \n|PMID 39730492|Metformin-loaded nanoparticles reduce hyperglycemia-associat…|PubMed|2024-12-28|-|none| \n|PMID 38922587|Metformin-Induced Proprotein Convertase Subtilisin/Kexin Typ…|PubMed|2024-08-01|-|none| \n|PMID 39224397|The Regulatory Variant -108C/T in the Promoter of Paraoxonas…|PubMed|2024-07-29|-|none| \n|PMID 37929764|Coronary Artery Calcium and Cognitive Decline in the Diabete…|PubMed|2023-11-07|-|none| \n|PMID 36945734|Effects of oral semaglutide on cardiovascular outcomes in in…|PubMed|2023-07-01|-|none| \n|PMID 36681798|MetfOrmin BenefIts Lower Extremities with Intermittent Claud…|PubMed|2023-01-21|-|none| \n|PMID 36228370|Chinese medicine Fufang Zhenzhu Tiaozhi capsule ameliorates…|PubMed|2022-12-01|-|none| \n|PMID 35512976|Polycystic ovary syndrome: a \"risk-enhancing\" factor for car…|PubMed|2022-05-01|-|none| \n|PMID 33397230|Serum Uric Acid and Diabetes: From Pathophysiology to Cardio…|PubMed|2021-01-01|-|none| \n|PMID 33002553|Comparative clinical study evaluating the effect of adding V…|PubMed|2020-12-01|-|none| \n|PMID 31636172|Interaction Between Type 2 Diabetes Prevention Strategies an…|PubMed|2020-01-01|-|none| \n|PMID 31741087|Effects of Radiotherapy in Coronary Artery Disease.|PubMed|2019-11-19|-|none| \n|PMID 31646294|The early detection of atherosclerosis in type 1 diabetes: w…|PubMed|2019-02-13|-|none| \n \n \n \nNewest indexed: 2026-08-08 (93 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42214260\n  biomcp search article -k \"metformin atherosclerosis coronary artery disease\" --source pubmed --year-min 2019 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-20 of 51 results. Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

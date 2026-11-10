@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CYP2C19 clopidogrel guideline"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "72f696b9d1bdd9b5490bc7377fe48e31ef98213df93102475a8752bd06e2b0e8",
+  "recorded_at": "2026-11-10T04:28:58.673157+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 10476.859499991406,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CYP2C19 clopidogrel guideline, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CYP2C19 clopidogrel guideline\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41834238|Tirofiban with sequential dual antiplatelet therapy in mild…|PubTator3, Europe PMC|2026-12-01|-|0| \n|PMID 42982766|Drug-Drug Interactions of Cenobamate With Medications: Dose-…|Europe PMC|2026-11-01|-|0| \n|PMID 42942824|Convergent Modifiers of Exposure Variability in Approved Can…|Europe PMC|2026-10-12|-|0| \n|PMID 42835306|Pharmacogenetics in pediatric cardiology.|PubTator3, PubMed|2026-09-21|-|0| \n|PMID 42974387|OCEANIC-STROKE: The Wave of the New Antithrombotic Therapy E…|Europe PMC|2026-09-18|-|0| \n|PMID 42533475|CYP2C19 Genotyping to Guide Clopidogrel Prescribing for Neur…|PubTator3, PubMed|2026-07-30|-|1| \n|PMID 42414247|Personalized antiplatelet therapy: are we ready for a precis…|PubTator3, PubMed|2026-07-09|-|0| \n|PMID 41850150|A multidimensional study of antiplatelet therapy and CYP2C19…|PubMed|2026-07-01|-|0| \n|PMID 42364655|Rarely reported cases of hepatotoxicity associated with turm…|Europe PMC|2026-06-27|-|1| \n|PMID 42115787|Limited Visibility and Perception of the Clinical Relevance…|PubMed|2026-05-01|-|0| \n \n \n \nNewest indexed: 2026-11-06 (4 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41834238\n  biomcp search article -k \"CYP2C19 clopidogrel guideline\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "ipilimumab"
+    ],
+    "limit": 25,
+    "status": "recruiting"
+  },
+  "args_key": "ec1e84c9ade1645563d1ff28a38f7b9273ead48527ca97f3bbc9654fe4040c63",
+  "recorded_at": "2026-11-09T21:44:31.438694+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1396.9486000132747,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 25 of 44 \n \nQuery: condition=melanoma, intervention=ipilimumab, status=recruiting \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT07574047|MELCHRONO: A Prospective…|RECRUITING|2|Melanoma, Advanced Melanoma| \n|NCT05498792|Study of CBL0137 in Combi…|RECRUITING|EARLY_PHASE1|Locally Advanced or Metastatic Melanoma| \n|NCT06784778|Observational Study of Pa…|RECRUITING|-|Melanoma Metastatic, Melanoma, Skin, Melanoma Stage III or IV, Melanoma Advanced| \n|NCT06999980|Neo IRENIE (NEOadjuvant I…|RECRUITING|2|Cutaneous Melanoma, Mucosal Melanoma| \n|NCT06754904|Omitting Therapeutic Lymp…|RECRUITING|NA|Melanoma, Skin| \n|NCT06627595|Impact of Physical Activi…|RECRUITING|-|Melanoma, Immunotoxicity| \n|NCT07230613|Neo-adjuvant Immunotherap…|RECRUITING|2|Cutaneous Melanoma, Stage III, Mucosal Melanoma| \n|NCT03340129|Anti-PD 1 Brain Collabora…|RECRUITING|2|Melanoma Stage Iv| \n|NCT06712927|Trial of Relatlimab, Nivo…|RECRUITING|2|Melanoma, Brain Metastases| \n|NCT06295159|Neoadjuvant and Adjuvant…|RECRUITING|2|Melanoma Stage III, Melanoma Stage IV, Advanced Melanoma, Melanoma| \n|NCT04511013|A Study to Compare the Ad…|RECRUITING|2|Acral Lentiginous Melanoma, Clinical Stage IV… [abridged; 7 conditions total]| \n|NCT07564570|Physical Activity Directl…|RECRUITING|NA|Metastatic Melanoma| \n|NCT05652673|Safe Stop Ipilimumab-nivo…|RECRUITING|NA|Melanoma Stage IV, Melanoma Stage III, Immunotherapy, Toxicity, Drug| \n|NCT04605146|Impact of Telemonitoring…|RECRUITING|NA|Melanoma, Lung Cancer, Renal Cancer| \n|NCT07155317|Time-of-Day Specified Imm…|RECRUITING|2|Advanced Acral Melanoma, Advanced Cutaneous M… [abridged; 10 conditions total]| \n|NCT07696715|Timing of Immunotherapy i…|RECRUITING|NA|Melanoma| \n|NCT06047379|Safety and Efficacy of NE…|RECRUITING|1/2|Diffuse Astrocytoma, IDH-Mutant, Glioblastoma… [abridged; 21 conditions total]| \n|NCT07504796|ctDNA-guided Addition of…|RECRUITING|2|Metastatic Melanoma, Advanced Melanoma| \n|NCT03563729|Melanoma Metastasized to…|RECRUITING|2|Malignant Melanoma| \n|NCT06362369|A Study of Oral 7HP349 (A…|RECRUITING|1/2|Advanced Cancer, Advanced Solid Tumor, Melano… [abridged; 18 conditions total]| \n|NCT05428007|Interleukin-6 Receptor In…|RECRUITING|2|Melanoma, Unresectable Melanoma| \n|NCT06594991|A Study of Fianlimab, Cem…|RECRUITING|2|Advanced Melanoma| \n|NCT07422779|Immunotherapy Efficacy an…|RECRUITING|NA|Metastatic Melanoma, Skin Cancer| \n|NCT07740941|NeoAdjuvant, Spare-Adjuva…|RECRUITING|2|Melanoma (Skin Cancer), Melanoma Stage Stage I… [abridged; 4 conditions total]| \n|NCT04697576|Intralesional Influenza V…|RECRUITING|1|Clinical Stage I Cutaneous Melanoma AJCC v8, C… [abridged; 9 conditions total]| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-25 of 44 results. Use --offset 25 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

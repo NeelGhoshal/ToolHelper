@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "BRAF V600E mutant melanoma",
+      "BRAF-mutant melanoma",
+      "BRAF V600 mutation melanoma"
+    ],
+    "entity": "trial",
+    "json": true,
+    "limit": 25,
+    "status": "recruiting"
+  },
+  "args_key": "3e88caafc2d8b1dffe49cd019b7ac0a5dbbb867a3ae6658ab66d60fd16f63b06",
+  "recorded_at": "2026-11-10T04:18:44.004605+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 172.46020000311546,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 25,\n    \"returned\": 0,\n    \"total\": 0,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 0,\n  \"results\": [],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search trial -c \\\"BRAF V600E mutant melanoma BRAF-mutant melanoma BRAF V600 mutation melanoma\\\"\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

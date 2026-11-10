@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF mutations colorectal cancer thyroid cancer"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "0f12ef6d1fafc6451ff7b9580e5d5dc5f17ebc8e9103be76f94068374351739a",
+  "recorded_at": "2026-11-09T20:22:21.965254+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 53024.90049999324,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF mutations colorectal cancer thyroid cancer, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nEurope PMC source status: degraded (Europe PMC timed out after 12s) \nRetry: `biomcp search article --keyword \"BRAF mutations colorectal cancer thyroid cancer\" --exclude-retracted --sort citations --source europepmc --limit 10 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF mutations colorectal cancer thyroid cancer\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42285341|Molecular Landscape and Advanced Diagnostic Technologies for…|PubMed|2027-01-01|-|0| \n|PMID 42487519|New Treatment Strategy and Future Research Direction for BRA…|PubMed|2026-11-01|-|0| \n|PMID 42782531|Colonic metastasis from anaplastic thyroid carcinoma: The va…|PubMed|2026-11-01|-|0| \n|PMID 42985401|A Key Biomarker lnc-ABCA12-5:2 Compensating Diagnostic Defic…|PubMed|2026-10-28|-|0| \n|PMID 42277540|BRAF-targeted therapy in non-melanomatous BRAF-mutant tumour…|PubMed|2026-08-01|-|0| \n|PMID 42237509|[BRAF-Mutant Solid Tumor].|PubTator3, PubMed|2026-05-01|-|0| \n|PMID 42043592|In silico evaluation of selected triterpenes as potential in…|PubMed|2026-04-27|-|0| \n|PMID 41868670|BRAF mutation and tumor immune microenvironment in new era.|PubTator3, PubMed|2026-02-15|-|1| \n|PMID 41497266|AI-driven de novo design of BRAF inhibitors with enhanced bi…|PubMed|2026-01-02|-|1| \n|PMID 41613859|Targeting BRAF in cancers - from molecular diagnostics to pe…|PubMed|2025-12-08|-|0| \n \n \n \nNewest indexed: 2026-11-05 (4 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42285341\n  biomcp search article -k \"BRAF mutations colorectal cancer thyroid cancer\" --year-min 2025 --year-max 2027 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

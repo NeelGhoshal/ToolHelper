@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "date_from": "2025-01-01",
+    "gene": "BRAF",
+    "keyword": [
+      "V600E",
+      "targeted therapy",
+      "clinical significance"
+    ],
+    "limit": 20,
+    "sort": "date"
+  },
+  "args_key": "c93c238c42fdaa7d22ef8e1667f078bdc6b8f4b98ee18d882fa176d0c48fb37f",
+  "recorded_at": "2026-11-10T04:22:00.764639+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 18620.331599988276,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=BRAF, keyword=V600E targeted therapy clinical significance, date_from=2025-01-01, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene BRAF --keyword \"V600E targeted therapy clinical significance\" --date-from 2025-01-01 --exclude-retracted --sort date --source semanticscholar --limit 20 --offset 0` \n \n \nFound 20 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41630477|A data-driven cartography of NSCLC vaccine research: Quantif…|PubTator3, Europe PMC|2026-12-01|-|0| \n|PMID 42992180|Real-world outcomes of first-line gemcitabine-platinum plus…|Europe PMC|2026-10-28|-|0| \n|PMID 42892101|Recent advances in cancer-associated fibroblasts in colorect…|Europe PMC|2026-10-16|-|0| \n|PMID 42921908|RAS-Pathway Mutation Profiles and Clinical Outcomes Among Pa…|PubMed|2026-10-01|-|0| \n|PMID 42733698|Diffuse leptomeningeal glioneuronal tumor mimicking chronic…|Europe PMC|2026-09-03|-|0| \n|PMID 42629972|Impact of Molecular Alterations on Survival in Biliary Tract…|Europe PMC|2026-08-21|-|0| \n|PMID 42682390|Marked response to dabrafenib plus trametinib in a patient w…|PubTator3, PubMed|2026-08-18|-|0| \n|PMID 42552286|Clinical Utility of Molecular Testing in Ameloblastoma: A Sy…|PubMed|2026-08-05|-|0| \n|PMID 42645086|Association Between BRAF Mutation Status and Clinicopatholog…|PubTator3, PubMed|2026-08-04|-|0| \n|PMID 42203678|Evolving Pathology of Anaplastic Thyroid Carcinoma: Integrat…|PubMed|2026-08-01|-|0| \n|PMID 42442381|Efficacy and safety of dabrafenib plus trametinib in adults…|PubMed|2026-08-01|-|1| \n|PMID 42525921|COMMIT: A Randomized Study of mFOLFOX6/Bevacizumab/Atezolizu…|PubTator3|2026-07-29|-|none| \n|PMID 42526429|Immunologic Determinants of Infusion Products and the Tumor…|PubTator3|2026-07-29|-|none| \n|PMID 42457681|Oncogene inactivation-induced senescence facilitates tumor r…|PubMed|2026-07-15|-|0| \n|PMID 42391424|Clinical Validation of Tissue and Liquid Companion Diagnosti…|PubMed|2026-07-01|-|0| \n|PMID 42434285|Histopathologic, molecular, and clinical associations of fus…|PubTator3, PubMed|2026-06-30|-|0| \n|PMID 42360806|Molecular and Clinical Determinants of Targeted Therapy Trea…|PubTator3|2026-06-26|-|none| \n|PMID 42343131|Alternate RNA decoding results in stable and abundant protei…|PubTator3|2026-06-24|-|none| \n|PMID 42298353|Gut microbial markers of immunotherapy response in melanoma:…|Europe PMC|2026-06-15|-|0| \n|PMID 42126144|Novel multiplex immunofluorescence-based tumor inflammation…|Europe PMC|2026-05-13|-|1| \n \n \n \nNewest indexed: 2026-11-07 (3 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41630477 \n \n \n \nShowing 20 results (total unknown). Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

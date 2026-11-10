@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "gene editing",
+      "clinical"
+    ],
+    "limit": 20,
+    "sort": "citations"
+  },
+  "args_key": "acd1ef5521267667a34e6bff4bd0f075a2d97670d2d0c3ed52a5dfc3b60ce3e5",
+  "recorded_at": "2026-11-10T07:40:59.022918+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 19774.405100004515,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR gene editing clinical, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CRISPR gene editing clinical\" --exclude-retracted --sort citations --source semanticscholar --limit 20 --offset 0` \n \n \nFound 20 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 33277608|Engineering precision nanoparticles for drug delivery.|Europe PMC|2020-12-04|-|4994| \n|PMID 38326288|Minimal information for studies of extracellular vesicles (M…|Europe PMC|2024-02-01|-|4340| \n|PMID 24906146|Development and applications of CRISPR-Cas9 for genome engin…|Europe PMC|2014-06-01|-|4075| \n|PMID 23452860|Repurposing CRISPR as an RNA-guided platform for sequence-sp…|Europe PMC|2013-02-01|-|4025| \n|PMID 31634902|Search-and-replace genome editing without double-strand brea…|Europe PMC|2019-10-21|-|3705| \n|PMID 33510482|Natural products in drug discovery: advances and opportuniti…|Europe PMC|2021-01-28|-|3590| \n|PMID 29160308|Programmable base editing of A•T to G•C in genomic DNA w…|Europe PMC|2017-10-25|-|3440| \n|PMID 29449511|CRISPR-Cas12a target binding unleashes indiscriminate single…|Europe PMC|2018-02-15|-|3300| \n|PMID 42992560|Gene therapy for epilepsy: From SCN1A to broadened therapeut…|PubMed|2027-01-01|-|0| \n|PMID 42994815|In Vivo CRISPR Base Editing of ANGPTL3 for Durable Lipid Low…|PubMed|2026-11-06|-|0| \n|PMID 42988560|A modular lentiviral system for multiplexed gene perturbatio…|PubMed|2026-11-05|-|0| \n|PMID 42988947|PRKAG2 Cardiac Syndrome: A Comprehensive Review of Clinical…|PubMed|2026-11-05|-|0| \n|PMID 42990422|END-TO-END, FULLY AUTOMATED MANUFACTURING OF HEMATOPOIETIC S…|PubMed|2026-10-30|-|0| \n|PMID 42999334|A Multi-Kinase Inhibitor Screen Identifies mTOR Signaling as…|PubMed|2026-10-14|-|0| \n|PMID 42992139|Emerging cell therapies for gastrointestinal cancers: Advanc…|PubMed|2026-10-07|-|0| \n|PMID 42999773|CRISPR/Cas9-Mediated Targeting of the Integrin Beta-2 Gene a…|PubMed|2026-10-01|-|0| \n|PMID 42763006|CRISPR and Gene Editing Approaches in Prostate Cancer: Clini…|PubTator3|2026-09-20|-|none| \n|PMID 41840824|CRISPR Gene Editing for Nucleotide Repeat Expansion Disorder…|PubTator3|2026-03-01|-|none| \n|PMID 40160040|Advancing CRISPR genome editing into gene therapy clinical t…|PubTator3|2025-03-31|-|none| \n|PMID 39103499|Next-generation CRISPR-based gene-editing therapies tested i…|PubTator3|2024-08-05|-|none| \n \n \n \nNewest indexed: 2026-11-08 (2 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 33277608\n  biomcp search article -k \"CRISPR gene editing clinical\" --year-min 2013 --year-max 2027 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 20 results (total unknown). Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

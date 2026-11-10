@@ -1,0 +1,60 @@
+confirm only TR ['E2:level=minimal', 'E6:mode=budget,budget=2000', 'E9', 
+'E3:modes=tool+rewrite'] (pre-registered; no factorial)
+start p10d-f-TR-r1 fold A: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9', 'E3:modes=tool+rewrite']
+start p10d-f-TR-r1 fold B: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9', 'E3:modes=tool+rewrite']
+start p10d-f-none-r1 fold A: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9']
+start p10d-f-none-r1 fold B: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9']
+finished p10d-f-none-r1 fold A (exit 0); 0 tasks still missing
+start p10d-f-TR-r2 fold A: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9', 'E3:modes=tool+rewrite']
+finished p10d-f-TR-r1 fold B (exit 0); 0 tasks still missing
+start p10d-f-TR-r2 fold B: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9', 'E3:modes=tool+rewrite']
+finished p10d-f-TR-r1 fold A (exit 0); 0 tasks still missing
+start p10d-f-none-r2 fold A: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9']
+finished p10d-f-none-r1 fold B (exit 0); 0 tasks still missing
+start p10d-f-none-r2 fold B: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9']
+finished p10d-f-TR-r2 fold A (exit 0); 0 tasks still missing
+start p10d-f-TR-r3 fold A: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9', 'E3:modes=tool+rewrite']
+finished p10d-f-TR-r2 fold B (exit 0); 0 tasks still missing
+start p10d-f-TR-r3 fold B: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9', 'E3:modes=tool+rewrite']
+finished p10d-f-none-r2 fold A (exit 0); 0 tasks still missing
+start p10d-f-none-r3 fold A: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9']
+finished p10d-f-none-r2 fold B (exit 0); 0 tasks still missing
+start p10d-f-none-r3 fold B: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9']
+finished p10d-f-none-r3 fold B (exit 0); 0 tasks still missing
+finished p10d-f-none-r3 fold A (exit 0); 0 tasks still missing
+finished p10d-f-TR-r3 fold B (exit 0); 0 tasks still missing
+finished p10d-f-TR-r3 fold A (exit 0); 0 tasks still missing
+confirm TR (3 repeats vs baseline): {'runs': 162, 'repeats': 3, 'success_rate':
+0.9567901234567902, 'tokens_per_success': 34629.987096774195, 'median_tokens': 
+25660.0, 'p90_tokens': 63847, 'trust_mean': 0.9267358024691358, 
+'transient_excluded': 0}; {'tasks': 54, 'delta_success': 0.0062, 
+'delta_success_ci': [-0.0185, 0.037], 'delta_tokens_per_success': -0.058, 
+'delta_tokens_per_success_ci': [-0.1408, 0.0349], 'mcnemar': {'lost': 2, 
+'gained': 3, 'p': 1.0}}; gate ['tokens/success CI [-0.1408, 0.0349] not below 
+0']
+confirmation failed the gate; the pre-registered lead is not adopted
+decision written: decisions/p10d@v1 (proposed; approve with `toolhelper curate 
+decisions/p10d`)
+start p10d-live-baseline fold A: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9']
+finished p10d-live-baseline fold A (exit 0); 0 tasks still missing
+live confirmation on fold A: {'p10d-live-baseline': {'runs': 27, 'repeats': 1, 
+'success_rate': 0.9259259259259259, 'tokens_per_success': 38848.76, 
+'median_tokens': 26480, 'p90_tokens': 67842, 'trust_mean': 0.9222703703703704, 
+'transient_excluded': 0}}; replay on the same tasks: {'baseline': {'runs': 81, 
+'repeats': 3, 'success_rate': 0.9629629629629629, 'tokens_per_success': 
+40520.03846153846, 'median_tokens': 29548, 'p90_tokens': 77898, 'trust_mean': 
+0.927279012345679, 'transient_excluded': 0}}
+experiment finished

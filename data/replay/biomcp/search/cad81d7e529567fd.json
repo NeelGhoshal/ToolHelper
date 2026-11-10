@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "BRAF V600E Erdheim-Chester disease Langerhans cell histiocytosis vemurafenib"
+    ],
+    "limit": 6,
+    "sort": "citations"
+  },
+  "args_key": "cad81d7e529567fd733218cb2aa2c8a0bc1f0b930e77d344026deabee32f9bee",
+  "recorded_at": "2026-11-10T04:01:54.107250+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4251.2634999875445,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=BRAF V600E Erdheim-Chester disease Langerhans cell histiocytosis vemurafenib, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 6,\n    \"returned\": 6,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 6,\n  \"results\": [\n    {\n      \"pmid\": \"26287849\",\n      \"pmcid\": \"PMC4971773\",\n      \"doi\": \"10.1056/nejmoa1502309\",\n      \"title\": \"Vemurafenib in Multiple Nonmelanoma Cancers with BRAF V600 Mutations.\",\n      \"journal\": \"N Engl J Med\",\n      \"date\": \"2015-08-01\",\n      \"citation_count\": 1385,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"22879539\",\n      \"doi\": \"10.1182/blood-2012-05-430140\",\n      \"title\": \"High prevalence of BRAF V600E mutations in Erdheim-Chester disease but not in other non-Langerhans cell histiocytoses.\",\n      \"journal\": \"Blood\",\n      \"date\": \"2012-08-09\",\n      \"citation_count\": 512,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42333372\",\n      \"title\": \"Targeted Therapy in Erdheim-Chester Disease: A Case Report and Review of the Literature.\",\n      \"journal\": \"Cureus\",\n      \"date\": \"2026-05-22\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"40450122\",\n      \"title\": \"Erdheim-Chester Disease of the Jaws: A Case Report and Review of the Literature.\",\n      \"journal\": \"Head and neck pathology\",\n      \"date\": \"2025-05-31\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"37222093\",\n      \"title\": \"Targeting the BRAF pathway in haematological diseases.\",\n      \"journal\": \"Intern Med J\",\n      \"date\": \"2023-05-01\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"37908458\",\n      \"pmcid\": \"PMC10580518\",\n      \"title\": \"Erdheim-Chester Disease With BRAF V600E Mutation and Central Diabetes Insipidus Successfully Treated With Glucocorticoid\",\n      \"journal\": \"JCEM Case Rep\",\n      \"date\": \"2023-03-17\",\n      \"citation_count\": 2,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"BRAF V600E Erdheim-Chester disease Langerhans cell histiocytosis vemurafenib\\\" --exclude-retracted --sort citations --source semanticscholar --limit 6 --offset 0\",\n      \"biomcp get article 26287849\",\n      \"biomcp search article -k \\\"BRAF V600E Erdheim-Chester disease Langerhans cell histiocytosis vemurafenib\\\" --year-min 2012 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

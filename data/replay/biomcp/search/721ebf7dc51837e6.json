@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "BRAF exon 15 mutation detection testing companion diagnostic cobas"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "721ebf7dc51837e6e56702a551ce075e04244059a5ccf2a99085d3c7c426d805",
+  "recorded_at": "2026-11-10T04:02:00.731493+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6618.382399989059,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=BRAF exon 15 mutation detection testing companion diagnostic cobas, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 5,\n  \"results\": [\n    {\n      \"pmid\": \"33548389\",\n      \"pmcid\": \"PMC8268076\",\n      \"doi\": \"10.1016/j.annonc.2021.01.074\",\n      \"title\": \"Exosome-based liquid biopsies in cancer: opportunities and challenges.\",\n      \"journal\": \"Ann Oncol\",\n      \"date\": \"2021-02-04\",\n      \"citation_count\": 716,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"31815659\",\n      \"pmcid\": \"PMC6902404\",\n      \"doi\": \"10.1186/s13045-019-0818-2\",\n      \"title\": \"Emerging insights of tumor heterogeneity and drug resistance mechanisms in lung cancer targeted therapy.\",\n      \"journal\": \"J Hematol Oncol\",\n      \"date\": \"2019-12-09\",\n      \"citation_count\": 477,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"32976510\",\n      \"pmcid\": \"PMC7518588\",\n      \"doi\": \"10.1371/journal.pone.0237802\",\n      \"title\": \"Clinical and analytical validation of FoundationOne Liquid CDx, a novel 324-Gene cfDNA-based comprehensive genomic profiling assay for cancers of solid tumor origin.\",\n      \"journal\": \"PLoS One\",\n      \"date\": \"2020-09-25\",\n      \"citation_count\": 423,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"30713991\",\n      \"pmcid\": \"PMC6352312\",\n      \"doi\": \"10.1142/s2339547818300020\",\n      \"title\": \"The growing role of precision and personalized medicine for cancer treatment.\",\n      \"journal\": \"Technology (Singap World Sci)\",\n      \"date\": \"2018-09-01\",\n      \"citation_count\": 406,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"35294956\",\n      \"pmcid\": \"PMC8926248\",\n      \"doi\": \"10.1371/journal.pone.0264138\",\n      \"title\": \"Clinical and analytical validation of FoundationOne®CDx, a comprehensive genomic profiling assay for solid tumors.\",\n      \"journal\": \"PLoS One\",\n      \"date\": \"2022-03-16\",\n      \"citation_count\": 343,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"BRAF exon 15 mutation detection testing companion diagnostic cobas\\\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0\",\n      \"biomcp get article 33548389\",\n      \"biomcp search article -k \\\"BRAF exon 15 mutation detection testing companion diagnostic cobas\\\" --year-min 2018 --year-max 2022 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

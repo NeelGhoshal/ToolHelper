@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "acetaminophen",
+    "max_results": 5,
+    "omop_field": "concept_id",
+    "omop_table": "concept"
+  },
+  "args_key": "c222d66b519049f4a740865122d405dea0adf1dacfdca8de26f75eefe030cc52",
+  "recorded_at": "2026-11-10T04:45:38.491534+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 782.9320000018924,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 1125315,\n      \"code\": \"161\",\n      \"name\": \"acetaminophen\",\n      \"class\": \"Ingredient\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/1125315\"\n    },\n    {\n      \"concept_id\": 35872049,\n      \"code\": \"OMOP5028847\",\n      \"name\": \"acetaminophen 5 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/35872049\"\n    },\n    {\n      \"concept_id\": 19108617,\n      \"code\": \"437174\",\n      \"name\": \"acetaminophen 15 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19108617\"\n    },\n    {\n      \"concept_id\": 19092702,\n      \"code\": \"336365\",\n      \"name\": \"acetaminophen 25 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19092702\"\n    },\n    {\n      \"concept_id\": 19108622,\n      \"code\": \"437190\",\n      \"name\": \"acetaminophen 30 MG\",\n      \"class\": \"Clinical Drug Comp\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19108622\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"acetaminophen\",\n    \"omop_table\": \"concept\",\n    \"omop_field\": \"concept_id\",\n    \"total_found\": 5,\n    \"candidates_returned\": 5,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

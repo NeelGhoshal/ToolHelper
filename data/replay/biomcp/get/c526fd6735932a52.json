@@ -1,0 +1,40 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "variant",
+    "id": "chr7:g.140453136A>T",
+    "json": true,
+    "sections": [
+      "clinvar",
+      "civic",
+      "cosmic",
+      "population",
+      "diseases",
+      "druggability",
+      "predictions",
+      "all"
+    ]
+  },
+  "args_key": "c526fd6735932a52c0a3398b17692ba15726a45a5874d6a53707f08ef95cb34f",
+  "recorded_at": "2026-11-10T10:10:27.811730+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.0531999869272113,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid variant section: diseases"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "BRAF",
+    "json": true,
+    "keyword": [
+      "Noonan",
+      "cardiofaciocutaneous",
+      "LEOPARD"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "233661c56af68d5a31c0a2688c1628fdf57e556efe43ea6acc47485205031fe4",
+  "recorded_at": "2026-11-09T20:37:00.421278+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 11198.95719998749,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=BRAF, keyword=Noonan cardiofaciocutaneous LEOPARD, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 5,\n  \"results\": [\n    {\n      \"pmid\": \"28666118\",\n      \"pmcid\": \"PMC5555610\",\n      \"doi\": \"10.1016/j.cell.2017.06.009\",\n      \"title\": \"RAS Proteins and Their Regulators in Human Disease.\",\n      \"journal\": \"Cell\",\n      \"date\": \"2017-06-01\",\n      \"citation_count\": 1661,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"28912180\",\n      \"pmcid\": \"PMC5626020\",\n      \"doi\": \"10.1161/circresaha.116.309396\",\n      \"title\": \"Dilated Cardiomyopathy: Genetic Determinants and Mechanisms.\",\n      \"journal\": \"Circ Res\",\n      \"date\": \"2017-09-01\",\n      \"citation_count\": 637,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"19206169\",\n      \"pmcid\": \"4028130\",\n      \"doi\": \"10.1002/humu.20955\",\n      \"semantic_scholar_id\": \"19f45a5a2929d0c0ad9af2c5b8ea3cd99ddce1ea\",\n      \"title\": \"Germline BRAF mutations in Noonan, LEOPARD and cardiofaciocutaneous syndromes: molecular diversity and associated phenotypic spectrum\",\n      \"journal\": \"Human Mutation\",\n      \"date\": \"2009\",\n      \"citation_count\": 292,\n      \"source\": \"semanticscholar\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"29084544\",\n      \"title\": \"Targeted/exome sequencing identified mutations in ten Chinese patients diagnosed with Noonan syndrome and related disorders.\",\n      \"journal\": \"BMC medical genomics\",\n      \"date\": \"2017-10-30\",\n      \"citation_count\": 11,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"39385823\",\n      \"title\": \"Case report: MEK inhibitor as treatment for multi-lineage mosaic KRAS G12D-associated epidermal nevus syndrome in a pediatric patient.\",\n      \"journal\": \"Frontiers in neurology\",\n      \"date\": \"2024-09-25\",\n      \"citation_count\": 10,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get article 28666118\",\n      \"biomcp search article -g BRAF -k \\\"Noonan cardiofaciocutaneous LEOPARD\\\" --year-min 2009 --year-max 2024 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"ok\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

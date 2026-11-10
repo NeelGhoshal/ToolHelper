@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "vemurafenib"
+    ],
+    "json": true,
+    "limit": 25,
+    "status": "recruiting"
+  },
+  "args_key": "aa0723ed7faff07d1841a2a41be0c72da6762023e4d474521633929ff35bc20f",
+  "recorded_at": "2026-11-10T04:18:28.969282+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 863.3108999929391,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 25,\n    \"returned\": 2,\n    \"total\": 2,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 2,\n  \"results\": [\n    {\n      \"nct_id\": \"NCT05768178\",\n      \"title\": \"DETERMINE Trial Treatment Arm 05: Vemurafenib in Combination With Cobimetinib in Adult Patients With BRAF Positive Cancers.\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE2/PHASE3\",\n      \"conditions\": [\n        \"Haematological Malignancy\",\n        \"Melanoma\",\n        \"Thyroid Cancer, Papillary\",\n        \"Ovarian Neoplasms\",\n        \"Colorectal Neoplasms\",\n        \"Laryngeal Neoplasms\",\n        \"Carcinoma, Non-Small-Cell Lung\",\n        \"Glioma\",\n        \"Multiple Myeloma\",\n        \"Erdheim-Chester Disease\",\n        \"Thyroid Carcinoma, Anaplastic\",\n        \"Solid Tumour\"\n      ],\n      \"sponsor\": \"Cancer Research UK\",\n      \"matched_intervention_label\": \"vemurafenib\"\n    },\n    {\n      \"nct_id\": \"NCT01638676\",\n      \"title\": \"A Phase I/II Trial of Vemurafenib and Metformin to Melanoma Patients\",\n      \"status\": \"RECRUITING\",\n      \"phase\": \"PHASE1/PHASE2\",\n      \"conditions\": [\n        \"Melanoma\"\n      ],\n      \"sponsor\": \"University of Louisville\",\n      \"matched_intervention_label\": \"vemurafenib\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get trial NCT05768178\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

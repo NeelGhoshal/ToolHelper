@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp search drug --query erlotinib --json",
+    "json": true
+  },
+  "args_key": "31ae53cbfc05c04dc8da010f536b3d739558853389bae31fe443bbb202585ea6",
+  "recorded_at": "2026-11-10T07:31:18.488971+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 17820.55639999453,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"region\": \"all\",\n  \"regions\": {\n    \"us\": {\n      \"region\": \"us\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 2,\n        \"total\": 2,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"count\": 2,\n      \"results\": [\n        {\n          \"name\": \"erlotinib\",\n          \"drugbank_id\": \"DB00530\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Protein Kinase Inhibitors\",\n          \"target\": \"SLCO2B1\",\n          \"match_kind\": \"active_substance\"\n        },\n        {\n          \"name\": \"erlotinib hydrochloride\",\n          \"drug_type\": \"small-molecule\",\n          \"mechanism\": \"Inhibitor of Epidermal growth factor receptor\",\n          \"target\": \"Epidermal growth factor receptor\",\n          \"match_kind\": \"broad_text\"\n        }\n      ]\n    },\n    \"eu\": {\n      \"region\": \"eu\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 9,\n        \"total\": 9,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"count\": 9,\n      \"results\": [\n        {\n          \"name\": \"Tarceva\",\n          \"active_substance\": \"erlotinib\",\n          \"ema_product_number\": \"EMEA/H/C/000618\",\n          \"status\": \"Authorised\",\n          \"match_kind\": \"active_substance\",\n          \"matched_term\": \"erlotinib\",\n          \"source\": \"query\"\n        },\n        {\n          \"name\": \"Aybintio\",\n          \"active_substance\": \"bevacizumab\",\n          \"ema_product_number\": \"EMEA/H/C/005106\",\n          \"status\": \"Authorised\",\n          \"match_kind\": \"broad_text\",\n          \"matched_term\": \"erlotinib\",\n          \"source\": \"query\"\n        },\n        {\n          \"name\": \"Abevmy\",\n          \"active_substance\": \"bevacizumab\",\n          \"ema_product_number\": \"EMEA/H/C/005327\",\n          \"status\": \"Authorised\",\n          \"match_kind\": \"broad_text\",\n          \"matched_term\": \"erlotinib\",\n          \"source\": \"query\"\n        },\n        {\n          \"name\": \"Alymsys\",\n          \"active_substance\": \"bevacizumab\",\n          \"ema_product_number\": \"EMEA/H/C/005286\",\n          \"status\": \"Authorised\",\n          \"match_kind\": \"broad_text\",\n          \"matched_term\": \"erlotinib\",\n          \"source\": \"query\"\n        },\n        {\n          \"name\": \"Vegzelma\",\n          \"active_substance\": \"bevacizumab\",\n          \"ema_product_number\": \"EMEA/H/C/005534\",\n          \"status\": \"Authorised\",\n          \"match_kind\": \"broad_text\",\n          \"matched_term\": \"erlotinib\",\n          \"source\": \"query\"\n        },\n        {\n          \"name\": \"Oyavas\",\n          \"active_substance\": \"bevacizumab\",\n          \"ema_product_number\": \"EMEA/H/C/005556\",\n          \"status\": \"Authorised\",\n          \"match_kind\": \"broad_text\",\n          \"matched_term\": \"erlotinib\",\n          \"source\": \"query\"\n        },\n        {\n          \"name\": \"Avastin\",\n          \"active_substance\": \"bevacizumab\",\n          \"ema_product_number\": \"EMEA/H/C/000582\",\n          \"status\": \"Authorised\",\n          \"match_kind\": \"broad_text\",\n          \"matched_term\": \"erlotinib\",\n          \"source\": \"query\"\n        },\n        {\n          \"name\": \"Onbevzi\",\n          \"active_substance\": \"bevacizumab\",\n          \"ema_product_number\": \"EMEA/H/C/005640\",\n          \"status\": \"Withdrawn\",\n          \"match_kind\": \"broad_text\",\n          \"matched_term\": \"erlotinib\",\n          \"source\": \"query\"\n        },\n        {\n          \"name\": \"Equidacent\",\n          \"active_substance\": \"bevacizumab\",\n          \"ema_product_number\": \"EMEA/H/C/005181\",\n          \"status\": \"Withdrawn\",\n          \"match_kind\": \"broad_text\",\n          \"matched_term\": \"erlotinib\",\n          \"source\": \"query\"\n        }\n      ]\n    },\n    \"who\": {\n      \"region\": \"who\",\n      \"pagination\": {\n        \"offset\": 0,\n        \"limit\": 10,\n        \"returned\": 0,\n        \"total\": 0,\n        \"has_more\": false,\n        \"next_page_token\": null\n      },\n      \"count\": 0,\n      \"results\": []\n    }\n  },\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get drug erlotinib\",\n      \"biomcp list drug\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

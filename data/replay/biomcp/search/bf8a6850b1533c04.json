@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "BRAF V600E mutation melanoma 40-50% prevalence half of melanomas"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "bf8a6850b1533c04c5bb701770d5d0603171617157413876b8dd1b953283f1d6",
+  "recorded_at": "2026-11-10T04:02:28.197420+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2644.802199996775,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=BRAF V600E mutation melanoma 40-50% prevalence half of melanomas, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 5,\n  \"results\": [\n    {\n      \"pmid\": \"26091043\",\n      \"pmcid\": \"PMC4580370\",\n      \"doi\": \"10.1016/j.cell.2015.05.044\",\n      \"title\": \"Genomic Classification of Cutaneous Melanoma.\",\n      \"journal\": \"Cell\",\n      \"date\": \"2015-06-01\",\n      \"citation_count\": 2588,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"24265153\",\n      \"pmcid\": \"PMC3947264\",\n      \"doi\": \"10.1158/2159-8290.cd-13-0617\",\n      \"title\": \"The genetic landscape of clinical resistance to RAF inhibition in metastatic melanoma.\",\n      \"journal\": \"Cancer Discov\",\n      \"date\": \"2013-11-21\",\n      \"citation_count\": 774,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"38105263\",\n      \"pmcid\": \"PMC10725898\",\n      \"doi\": \"10.1038/s41392-023-01705-z\",\n      \"title\": \"Targeting the RAS/RAF/MAPK pathway for cancer therapy: from mechanism to clinical studies.\",\n      \"journal\": \"Signal Transduct Target Ther\",\n      \"date\": \"2023-12-18\",\n      \"citation_count\": 738,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"26619011\",\n      \"pmcid\": \"PMC4744099\",\n      \"doi\": \"10.1038/nbt.3391\",\n      \"title\": \"Identifying recurrent mutations in cancer reveals widespread lineage diversity and mutational specificity.\",\n      \"journal\": \"Nat Biotechnol\",\n      \"date\": \"2015-11-30\",\n      \"citation_count\": 700,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"39420203\",\n      \"pmcid\": \"PMC11491057\",\n      \"doi\": \"10.1038/s41392-024-01979-x\",\n      \"title\": \"Cold and hot tumors: from molecular mechanisms to targeted therapy.\",\n      \"journal\": \"Signal Transduct Target Ther\",\n      \"date\": \"2024-10-18\",\n      \"citation_count\": 639,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"BRAF V600E mutation melanoma 40-50% prevalence half of melanomas\\\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0\",\n      \"biomcp get article 26091043\",\n      \"biomcp search article -k \\\"BRAF V600E mutation melanoma 40-50% prevalence half of melanomas\\\" --year-min 2013 --year-max 2024 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

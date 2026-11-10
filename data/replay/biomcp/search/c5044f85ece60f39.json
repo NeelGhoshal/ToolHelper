@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "metformin RxCUI 6809"
+    ],
+    "limit": 3
+  },
+  "args_key": "c5044f85ece60f39bbaca6283275de25ea1cb7bed905349f429b303b22337c07",
+  "recorded_at": "2026-11-09T19:45:32.606463+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2413.903599983314,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=metformin RxCUI 6809, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"metformin RxCUI 6809\" --exclude-retracted --sort relevance --source semanticscholar --limit 3 --offset 0` \n \n \nFound 3 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 24551419|Validation and enhancement of a computable medication indica…|Europe PMC|2013-11-16|hybrid 0.263|17| \n|PMID 22195167|Automatically detecting problem list omissions of type 2 dia…|Europe PMC|2011-10-22|hybrid 0.208|12| \n|PMID 30738946|ADEpedia-on-OHDSI: A next generation pharmacovigilance signa…|Europe PMC|2019-02-07|hybrid 0.2|18| \n \n \n \nNewest indexed: 2019-02-11 (2828 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 24551419\n  biomcp search article -k \"metformin RxCUI 6809\" --year-min 2011 --year-max 2019 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 3 results (total unknown). Use --offset 3 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

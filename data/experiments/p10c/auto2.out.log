@@ -1,0 +1,81 @@
+start p10c-f-H-r1 fold A: 2 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9', 'E3:modes=hints']
+start p10c-f-H-r1 fold B: 3 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9', 'E3:modes=hints']
+start p10c-f-HT-r1 fold A: 20 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9', 'E3:modes=hints+tool']
+start p10c-f-HT-r1 fold B: 25 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9', 'E3:modes=hints+tool']
+finished p10c-f-H-r1 fold A (exit 0); 0 tasks still missing
+start p10c-f-HTR-r1 fold A: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9', 'E3:modes=hints+tool+rewrite']
+finished p10c-f-H-r1 fold B (exit 0); 0 tasks still missing
+start p10c-f-HTR-r1 fold B: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9', 'E3:modes=hints+tool+rewrite']
+finished p10c-f-HT-r1 fold B (exit 0); 0 tasks still missing
+finished p10c-f-HT-r1 fold A (exit 0); 0 tasks still missing
+finished p10c-f-HTR-r1 fold A (exit 0); 0 tasks still missing
+finished p10c-f-HTR-r1 fold B (exit 0); 0 tasks still missing
+factorial: 8 cells x 54 tasks done
+H ['E3:modes=hints']: tokens/run +10.1% [0.0182, 0.1923], geomean +7.9% 
+[-0.0003, 0.171], success -1.4 points [-0.0556, 0.0278], tokens/success +11.7% 
+[0.0192, 0.2242], trust 0.9193805555555555; per run: {'first_prompt': 25.5, 
+'carried': 2748.843, 'turns': 0.032, 'errors': 0.509, 'expands': -0.042} -> 
+off: tokens/success +11.7% (CI [0.0192, 0.2242]) is above 0
+T ['E3:modes=tool']: tokens/run -3.8% [-0.1527, 0.0684], geomean -3.1% 
+[-0.1207, 0.0539], success -0.5 points [-0.0278, 0.0185], tokens/success -3.3% 
+[-0.1466, 0.0699], trust 0.9191134259259259; per run: {'first_prompt': 137.0, 
+'carried': -1538.722, 'turns': -0.106, 'errors': -0.167, 'expands': 0.005} -> 
+off: tokens/success -3.3% (CI [-0.1466, 0.0699]) includes 0
+R ['E3:modes=rewrite']: tokens/run +2.1% [-0.0422, 0.0913], geomean +1.0% 
+[-0.0607, 0.0827], success +1.4 points [-0.0139, 0.0463], tokens/success +0.6% 
+[-0.0605, 0.0783], trust 0.9248273148148148; per run: {'first_prompt': 0.0, 
+'carried': 450.213, 'turns': 0.097, 'errors': -0.037, 'expands': -0.06} -> off:
+tokens/success +0.6% (CI [-0.0605, 0.0783]) includes 0
+interaction HR: tokens/run +0.6% [-0.0518, 0.074], geomean +6.3% [-0.0043, 
+0.1354], success +1.4 points [-0.0139, 0.0463], tokens/success -0.9% [-0.0776, 
+0.0694]
+interaction HT: tokens/run -2.3% [-0.086, 0.0458], geomean -4.6% [-0.11, 
+0.0158], success -0.5 points [-0.0278, 0.0185], tokens/success -1.8% [-0.0838, 
+0.0511]
+interaction TR: tokens/run -6.2% [-0.1142, -0.0029], geomean -7.1% [-0.1291, 
+-0.0085], success +2.3 points [0.0, 0.0463], tokens/success -8.4% [-0.14, 
+-0.0219]
+biomcp: H tokens/run +16.0% [0.0021, 0.3405] success +0.0 pts; T tokens/run 
+-0.5% [-0.095, 0.1103] success +0.0 pts; R tokens/run -2.9% [-0.1141, 0.0477] 
+success +0.0 pts
+cross: H tokens/run +2.6% [-0.1047, 0.1453] success -2.5 pts; T tokens/run 
++7.2% [-0.1535, 0.3229] success -2.5 pts; R tokens/run +4.9% [-0.1062, 0.2658] 
+success +2.5 pts
+medical: H tokens/run +9.8% [-0.0555, 0.2826] success +4.7 pts; T tokens/run 
+-14.9% [-0.3663, 0.0643] success -1.6 pts; R tokens/run +7.2% [-0.0027, 0.1579]
+success +1.6 pts
+omop: H tokens/run +11.2% [-0.1044, 0.3841] success -9.6 pts; T tokens/run 
+-5.7% [-0.2152, 0.1205] success +1.9 pts; R tokens/run -2.4% [-0.2412, 0.1808] 
+success +1.9 pts
+grounded tasks only, H: tokens/run +12.4% [0.0178, 0.2414], geomean +9.4% 
+[-0.0137, 0.2124], success -1.9 points [-0.0705, 0.0385], tokens/success +14.7%
+[0.0247, 0.2848], trust 0.9139538461538461; per run: {'first_prompt': 35.308, 
+'carried': 3669.974, 'turns': 0.013, 'errors': 0.577, 'expands': -0.045}
+grounded tasks only, T: tokens/run -3.3% [-0.1677, 0.093], geomean -1.9% 
+[-0.1201, 0.0826], success -0.6 points [-0.0449, 0.0256], tokens/success -2.6% 
+[-0.1555, 0.0955], trust 0.9110878205128206; per run: {'first_prompt': 137.0, 
+'carried': -1293.526, 'turns': -0.141, 'errors': -0.231, 'expands': 0.019}
+grounded tasks only, R: tokens/run +3.9% [-0.031, 0.1196], geomean +3.6% 
+[-0.0336, 0.1112], success +1.9 points [-0.0192, 0.0641], tokens/success +1.8% 
+[-0.0593, 0.1021], trust 0.9185788461538461; per run: {'first_prompt': 0.0, 
+'carried': 771.513, 'turns': 0.205, 'errors': -0.038, 'expands': -0.045}
+chosen: nothing (the baseline stays)
+decision written: decisions/p10c@v1 (proposed; approve with `toolhelper curate 
+decisions/p10c`)
+start p10c-live-baseline fold A: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9']
+finished p10c-live-baseline fold A (exit 0); 0 tasks still missing
+live confirmation on fold A: {'p10c-live-baseline': {'runs': 27, 'repeats': 1, 
+'success_rate': 0.9629629629629629, 'tokens_per_success': 38963.769230769234, 
+'median_tokens': 22657, 'p90_tokens': 62737, 'trust_mean': 0.9020481481481482, 
+'transient_excluded': 0}}; replay on the same tasks: {'baseline': {'runs': 27, 
+'repeats': 3, 'success_rate': 0.9629629629629629, 'tokens_per_success': 
+33914.42307692308, 'median_tokens': 23493, 'p90_tokens': 53492, 'trust_mean': 
+0.9273222222222223, 'transient_excluded': 0}}
+experiment finished

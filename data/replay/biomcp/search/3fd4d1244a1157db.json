@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "review",
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E",
+      "targeted therapy"
+    ],
+    "limit": 8,
+    "sort": "date"
+  },
+  "args_key": "3fd4d1244a1157db3cd51598f2498aae36d055168ff9916b4f46012ad71779e0",
+  "recorded_at": "2026-11-09T20:07:58.154194+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 22555.171799991513,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E targeted therapy, type=review, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 8 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42994867|Comparative efficacy and safety of second- and later-line BR…|PubMed|2026-11-06|-|0| \n|PMID 42957919|Survival Outcomes in Metastatic Colorectal Cancer Patients w…|PubMed|2026-10-30|-|0| \n|PMID 42991091|CLDN18.2 in colorectal mucinous adenocarcinoma: a lineage-as…|PubMed|2026-10-22|-|0| \n|PMID 42892101|Recent advances in cancer-associated fibroblasts in colorect…|Europe PMC|2026-10-16|-|0| \n|PMID 42878587|Molecular biomarkers for diagnosis, prognosis, precision the…|PubMed|2026-10-14|-|0| \n|PMID 42829473|Papillary thyroid carcinoma in children: prevalence, morphol…|PubMed|2026-10-05|-|0| \n|PMID 42987843|[BRAF-Mutant Colorectal Cancer].|PubMed|2026-10-01|-|0| \n|PMID 42930781|Personalized Management of Erdheim-Chester Disease: The Pivo…|PubMed|2026-09-29|-|0| \n \n \n \nNewest indexed: 2026-11-06 (3 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42994867\n  biomcp search article -k \"BRAF V600E targeted therapy\" --type review --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 8 results (total unknown). Use --offset 8 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

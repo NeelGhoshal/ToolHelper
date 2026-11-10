@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "BRAF inhibitor resistance MAPK pathway reactivation MEK ERK melanoma"
+    ],
+    "limit": 6,
+    "sort": "citations"
+  },
+  "args_key": "81cc108b4084564feca18143b3b787e0358cbc90bb317df4f60b500ce33bbf36",
+  "recorded_at": "2026-11-10T04:01:49.847617+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5113.036200025817,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=BRAF inhibitor resistance MAPK pathway reactivation MEK ERK melanoma, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 6,\n    \"returned\": 6,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 6,\n  \"results\": [\n    {\n      \"pmid\": \"25494202\",\n      \"pmcid\": \"PMC4420636\",\n      \"doi\": \"10.1038/nature14136\",\n      \"title\": \"Genome-scale transcriptional activation by an engineered CRISPR-Cas9 complex.\",\n      \"journal\": \"Nature\",\n      \"date\": \"2014-12-10\",\n      \"citation_count\": 2394,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"28802037\",\n      \"pmcid\": \"PMC5726441\",\n      \"doi\": \"10.1016/j.cell.2017.07.029\",\n      \"title\": \"The PI3K Pathway in Human Disease.\",\n      \"journal\": \"Cell\",\n      \"date\": \"2017-08-01\",\n      \"citation_count\": 2285,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"41097061\",\n      \"title\": \"Combinatorial ERK Inhibition Enhances MAPK Pathway Suppression in BRAF-Mutant Melanoma.\",\n      \"journal\": \"Int J Mol Sci\",\n      \"date\": \"2025-10-08\",\n      \"citation_count\": 8,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42891779\",\n      \"title\": \"From MAPK Reactivation to Response: Clinical Approaches Targeting BRAF/MEK Resistance in Melanoma.\",\n      \"journal\": \"American journal of clinical dermatology\",\n      \"date\": \"2026-11-01\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42797500\",\n      \"title\": \"Therapeutic Resistance in Melanoma: Molecular Mechanisms and Emerging Pharmaceutical Strategies.\",\n      \"journal\": \"Pharmaceuticals (Basel, Switzerland)\",\n      \"date\": \"2026-09-14\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"36434749\",\n      \"title\": \"Design and biological characterization of a series of dual mechanism ERK1/2 inhibitors with a Triazolopyridinone core.\",\n      \"journal\": \"Chem Biol Drug Des\",\n      \"date\": \"2022-11-26\",\n      \"citation_count\": 0,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"BRAF inhibitor resistance MAPK pathway reactivation MEK ERK melanoma\\\" --exclude-retracted --sort citations --source semanticscholar --limit 6 --offset 0\",\n      \"biomcp get article 25494202\",\n      \"biomcp search article -k \\\"BRAF inhibitor resistance MAPK pathway reactivation MEK ERK melanoma\\\" --year-min 2014 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

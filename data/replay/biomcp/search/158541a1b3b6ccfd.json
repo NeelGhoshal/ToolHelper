@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "dementia"
+    ],
+    "limit": 20,
+    "sort": "relevance"
+  },
+  "args_key": "158541a1b3b6ccfd7ba90a786313f2ca2ce29b99830f414785a8c1d6dfc8fbe0",
+  "recorded_at": "2026-11-10T06:42:18.719639+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 7157.562699983828,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin dementia, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"statin dementia\" --exclude-retracted --sort relevance --source semanticscholar --limit 20 --offset 0` \n \n \nFound 20 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 39822593|Statin use and dementia risk: A systematic review and update…|PubTator3|2025-01-16|hybrid 0.573 + title 2/2|74| \n|PMID 38115091|Statins and cognitive decline in patients with Alzheimer's a…|PubTator3|2023-12-20|hybrid 0.547 + title+abstract 2/2|65| \n|PMID 35305172|Statin use is associated with lower risk of dementia in stro…|PubTator3|2022-06-01|hybrid 0.521 + title 2/2|17| \n|PMID 39963242|The role of statins in dementia or Alzheimer's disease incid…|PubTator3|2025-02-03|hybrid 0.499 + title+abstract 2/2|12| \n|PMID 42825089|Association between timing of statin treatment after diabete…|Europe PMC, PubMed|2026-08-27|hybrid 0.421 + title 2/2|2| \n|PMID 42971235|Efficacy and safety of statin discontinuation in patients 65…|Europe PMC, PubMed|2027-09-21|hybrid 0.39 + title+abstract 2/2|0| \n|PMID 42998054|Impact of Statin and Aspirin Use on Dementia Diagnosis Strat…|Europe PMC, PubMed|2026-11-07|hybrid 0.383 + title 2/2|0| \n|PMID 42812463|Statin use and all-cause mortality in critically ill ischemi…|Europe PMC, PubMed|2026-09-15|hybrid 0.367 + title 2/2|0| \n|PMID 42522377|Dementia Risk With Combined Statin and Antihypertensive Drug…|Europe PMC|2026-08-01|hybrid 0.36 + title 2/2|0| \n|PMID 42818896|Exploring the role of statin interventions on cognitive func…|PubMed|2026-04-06|hybrid 0.353 + title+abstract 2/2|0| \n|PMID 39746645|Statins for vascular dementia: A hype or hope.|PubTator3|2024-12-31|hybrid 0.349 + title+abstract 1/2|19| \n|PMID 42566699|Secondary prevention of myocardial infarction in people with…|Europe PMC, PubMed|2026-08-01|hybrid 0.345 + title+abstract 2/2|1| \n|PMID 42760680|Explainable artificial intelligence for predicting mortality…|PubMed|2026-09-18|hybrid 0.32 + title+abstract 2/2|0| \n|PMID 34918056|Statins and dementia: effect of statins beyond the treatment…|PubTator3|2022-05-05|hybrid 0.318 + title 1/2|4| \n|PMID 42746319|Potentially Low-Value Medical Interventions in Frail Older A…|PubMed|2026-08-16|hybrid 0.313 + title+abstract 2/2|0| \n|PMID 33451927|Statins, lipids and dementia?|PubTator3|2021-01-01|hybrid 0.293 + title 1/2|7| \n|PMID 40199829|Statins and the risk of dementia: a meta-analysis.|PubTator3|2025-04-09|hybrid 0.268 + title 1/2|2| \n|PMID 42670961|Atorvastatin, Cardiovascular Events, and Disability-free Sur…|PubMed|2026-10-01|hybrid 0.233 + abstract 1/2|5| \n|PMID 42903333|Association of statin use with reduced risk of Alzheimer's d…|Europe PMC, PubMed|2026-10-06|hybrid 0.22 + title+abstract 1/2|0| \n|PMID 42881853|The Association of Fasting Glucose and Total Cholesterol wit…|PubMed|2026-09-23|hybrid 0.217 + abstract 1/2|0| \n \n \n \nNewest indexed: 2026-11-08 (2 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 39822593\n  biomcp search article -k \"statin dementia\" --year-min 2021 --year-max 2027 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 20 results (total unknown). Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

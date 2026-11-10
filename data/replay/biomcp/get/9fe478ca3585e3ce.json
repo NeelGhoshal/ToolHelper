@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "Tylenol",
+    "sections": [
+      "label",
+      "indications",
+      "targets"
+    ]
+  },
+  "args_key": "9fe478ca3585e3ce3ff87f0749b7e353a6977b5a346f6939a1aa3beabe683d91",
+  "recorded_at": "2026-11-10T04:07:18.905262+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1301.818000007188,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# acetaminophen - label, indications, targets \n## FDA Label \n \n### Indications and Usage \nUses temporarily: reduces fever relieves minor aches and pains due to: the common cold flu headache sore throat toothache \n## Targets (ChEMBL / Open Targets) \nPTGS1, PTGS2, TRPV4, FAAH, TRPV1 \n## Indications (Open Targets) \n \nAllergic rhinitis, Arthritic Pain, Backache, Common cold, Fever, Headache disorder, Alzheimer disease, Nasolacrimal duct obstruction, subarachnoid hemorrhage (Phase 3), malaria (Phase 3), Myalgia, stroke disorder \nMore:\n  biomcp get drug acetaminophen approvals   - Drugs@FDA approval history\n  biomcp get drug acetaminophen regulatory --region us   - approval and supplement history; use only if the base card lacks approval context\n  biomcp get drug acetaminophen safety --region us   - regulatory safety detail; use `biomcp drug adverse-events <name>` first when you want post-marketing signal\n\nAll:\n  biomcp get drug acetaminophen all --region us \nSee also:\n  biomcp drug trials acetaminophen\n  biomcp drug adverse-events acetaminophen   - inspect safety reports and adverse-event signal\n  biomcp search pgx -d acetaminophen   - pharmacogenomics interactions\n  biomcp get gene PTGS1 \n\n[DrugBank](https://go.drugbank.com/drugs/DB00316) | [ChEMBL](https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL112) | [DailyMed](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=997b9551-c222-4a9c-8ba1-09a5f97495fa)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

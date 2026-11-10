@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF RAS-RAF-MEK-ERK MAPK pathway kinase"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "a27d1134135aedc61cec6d204881d11eacb014910835926aca646a3d9a130c84",
+  "recorded_at": "2026-11-09T20:21:28.934881+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2416.3899999985006,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF RAS-RAF-MEK-ERK MAPK pathway kinase, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"BRAF RAS-RAF-MEK-ERK MAPK pathway kinase\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 23539594|Cancer genome landscapes.|Europe PMC|2013-03-01|-|6000| \n|PMID 24120142|The somatic genomic landscape of glioblastoma.|Europe PMC|2013-10-01|-|4264| \n|PMID 25417114|Integrated genomic characterization of papillary thyroid car…|Europe PMC|2014-10-01|-|2425| \n|PMID 25494202|Genome-scale transcriptional activation by an engineered CRI…|Europe PMC|2014-12-10|-|2394| \n|PMID 33402199|MEK inhibitors for the treatment of non-small cell lung canc…|PubTator3|2021-01-05|-|223| \n|PMID 38111008|Targeting CRAF kinase in anti-cancer therapy: progress and o…|PubTator3|2023-12-18|-|26| \n|PMID 40928301|Advances in ERK1/2 inhibition: a medicinal chemistry perspec…|PubTator3|2025-12-01|-|18| \n|PMID 37675821|Unraveling the signaling mechanism behind astrocytoma and po…|PubTator3|2023-09-07|-|12| \n|PMID 42562082|A pathway-dependency framework for acquired resistance to ta…|PubMed|2026-09-01|-|1| \n|PMID 42515723|Overcoming Resistance to Anti-EGFR Therapies: Mechanisms of…|PubMed|2026-07-03|-|1| \n \n \n \nNewest indexed: 2026-08-06 (95 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 23539594\n  biomcp search article -k \"BRAF RAS-RAF-MEK-ERK MAPK pathway kinase\" --year-min 2013 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

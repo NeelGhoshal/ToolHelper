@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search disease \"tumor predisposition\" --json",
+    "json": true
+  },
+  "args_key": "88e725dcd83e5cc0fcef27a0c9449d736a25560de44a5a2f201ae197f8bab309",
+  "recorded_at": "2026-11-09T21:37:57.053830+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 231.31880001164973,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 4,\n    \"total\": 4,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 4,\n  \"results\": [\n    {\n      \"id\": \"MONDO:0016473\",\n      \"name\": \"rhabdoid tumor predisposition syndrome\",\n      \"synonyms_preview\": \"familial posterior fossa brain tumor syndrome of infancy, familial posterior fossa brain tumour syndrome of infancy (and 6 more)\"\n    },\n    {\n      \"id\": \"MONDO:0012252\",\n      \"name\": \"rhabdoid tumor predisposition syndrome 1\",\n      \"synonyms_preview\": \"familial rhabdoid tumor caused by mutation in SMARCB1, familial rhabdoid tumour caused by mutation in SMARCB1 (and 5 more)\"\n    },\n    {\n      \"id\": \"MONDO:0013224\",\n      \"name\": \"rhabdoid tumor predisposition syndrome 2\",\n      \"synonyms_preview\": \"familial rhabdoid tumor caused by mutation in SMARCA4, familial rhabdoid tumour caused by mutation in SMARCA4 (and 5 more)\"\n    },\n    {\n      \"id\": \"MONDO:0859346\",\n      \"name\": \"mosaic variegated aneuploidy syndrome 7 with inflammation and tumor predisposition\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get disease MONDO:0016473\",\n      \"biomcp list disease\"\n    ],\n    \"workflow\": \"mutation-catalog\",\n    \"workflow_rationale\": \"Start from the gene, enumerate variants, narrow to a mutation class, then confirm disease literature.\",\n    \"workflow_playbook\": \"biomcp skill mutation-catalog\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

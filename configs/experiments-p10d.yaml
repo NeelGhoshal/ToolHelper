@@ -1,0 +1,41 @@
+# Phase 10, p10d (2026-11-10): confirmation of the one lead p10c left open. Pre-registered here
+# before any p10d run.
+#
+# The lead: in p10c's 2^3 factorial over E3 modes on top of ABC (decisions/p10c@v1), the
+# tool x rewrite interaction was the only estimate with a CI below 0: tokens/success -8.4%
+# (CI -14.0%..-2.2%), success +2.3 points. It was not pre-registered and was one of three
+# interactions, so it may be chance. The TR cell alone vs ABC alone: -4.0% (CI -15%..+10%).
+#
+# Test: ABC + E3:modes=tool+rewrite vs ABC alone, 3 paired repeats each, all 54 tasks, on fresh
+# runs only (groups p10d-*; the p10c runs that produced the lead are not reused, so the lead
+# cannot confirm itself). Adopted only if the p10 gate passes (success drop <= 2 points, trust
+# >= 0.9) AND the tokens-per-success CI lies below 0. No fallback. Live check on fold A only if
+# adopted. Same base, learning groups and seeds as p10c.
+design: factorial
+experiment: p10d
+llm: nim-mistral
+mode: replay            # recordings first; misses fall through to live and are recorded
+max_turns: 8            # overridden by the base's limit (6)
+parallel: 4             # each pass and its servers take ~0.6-1 GB RAM; OneDrive is shut down for the run
+learn_from: [bench-baseline-record, p10-baseline-r1, p10-baseline-r2, p10-baseline-r3]
+
+base:
+  specs: ["E2:level=minimal", "E6:mode=budget,budget=2000", "E9"]
+  max_turns: 6
+  note: decisions/p10b@v2 (accepted 2026-11-09)
+
+factors:
+  T:
+    specs: ["E3:modes=tool"]
+    note: local resolve_entity(text, type?) tool over the dataset index
+  R:
+    specs: ["E3:modes=rewrite"]
+    note: replaces resolved gene symbols, WHO ISO3 country codes and OMOP keywords in arguments
+
+confirm_only: [T, R]
+require_saving: true
+confirm_repeats: 3
+live_fold: A
+order_seed: 13
+gate: {max_success_drop: 0.02, min_trust: 0.9}
+bootstrap: {samples: 2000, seed: 7}

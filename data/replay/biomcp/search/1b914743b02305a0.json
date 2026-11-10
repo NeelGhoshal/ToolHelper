@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "osimertinib FLAURA EGFR-mutant overall survival"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "1b914743b02305a07f35f65ace96cf8297a32dbb55e008439f80f4c067705f02",
+  "recorded_at": "2026-11-10T07:53:06.470399+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 11832.347999996273,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=osimertinib FLAURA EGFR-mutant overall survival, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"osimertinib FLAURA EGFR-mutant overall survival\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 31564718|Resistance mechanisms to osimertinib in EGFR-mutated non-sma…|Europe PMC|2019-09-30|-|1196| \n|PMID 36075878|Non-small cell lung cancer in China.|Europe PMC|2022-09-08|-|588| \n|PMID 31871778|The emerging treatment landscape of targeted therapy in non-…|Europe PMC|2019-12-17|-|518| \n|PMID 31562956|Rare epidermal growth factor receptor (EGFR) mutations in no…|Europe PMC|2019-09-25|-|499| \n|PMID 42465029|Research progress of EGFR-TKI resistance mechanism and treat…|PubMed|2026-06-15|-|0| \n|PMID 41590374|Amivantamab Plus Lazertinib and Platin-Based Chemotherapy Pl…|PubTator3, PubMed|2026-01-17|-|3| \n|PMID 40075694|New Treatment Strategies in Advanced Epidermal Growth Factor…|PubMed|2025-02-28|-|4| \n|PMID 38818015|ATTLAS, IMpower151 and ORIENT-31: Dusting off IMpower150 for…|PubMed|2024-05-25|-|4| \n|PMID 37981090|Pan-Tumor Analytical Validation and Osimertinib Clinical Val…|PubMed|2024-01-01|-|6| \n|PMID 34914096|Overall survival benefit of osimertinib and clinical value o…|PubTator3|2022-04-15|-|none| \n \n \n \nNewest indexed: 2026-07-17 (116 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 31564718\n  biomcp search article -k \"osimertinib FLAURA EGFR-mutant overall survival\" --year-min 2019 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

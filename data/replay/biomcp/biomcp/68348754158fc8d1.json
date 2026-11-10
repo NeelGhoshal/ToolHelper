@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search disease melanoma --limit 10",
+    "json": true
+  },
+  "args_key": "68348754158fc8d184374d1329f60b972bd1f032aef173362325c725dd04c93e",
+  "recorded_at": "2026-11-09T22:28:21.676467+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 34.218500019051135,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": 90,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"count\": 10,\n  \"results\": [\n    {\n      \"id\": \"MONDO:0005105\",\n      \"name\": \"melanoma\",\n      \"synonyms_preview\": \"malignant melanoma, melanoma (disease) (and 2 more)\"\n    },\n    {\n      \"id\": \"MONDO:0007967\",\n      \"name\": \"melanoma and neural system tumor syndrome\",\n      \"synonyms_preview\": \"melanoma-astrocytoma syndrome, melanoma astrocytoma syndrome\"\n    },\n    {\n      \"id\": \"MONDO:0005012\",\n      \"name\": \"skin melanoma\",\n      \"synonyms_preview\": \"cutaneous (skin) melanoma, cutaneous melanoma (and 8 more)\"\n    },\n    {\n      \"id\": \"MONDO:0006486\",\n      \"name\": \"uveal melanoma\",\n      \"synonyms_preview\": \"intraocular melanoma, melanoma (disease) of uvea (and 5 more)\"\n    },\n    {\n      \"id\": \"MONDO:0006325\",\n      \"name\": \"ocular melanoma\",\n      \"synonyms_preview\": \"eye melanoma, eye melanoma (disease) (and 7 more)\"\n    },\n    {\n      \"id\": \"MONDO:0002205\",\n      \"name\": \"vulvar melanoma\",\n      \"synonyms_preview\": \"mammalian vulva melanoma, mammalian vulva melanoma (disease) (and 3 more)\"\n    },\n    {\n      \"id\": \"MONDO:0002988\",\n      \"name\": \"cervix melanoma\",\n      \"synonyms_preview\": \"cervical melanoma, melanoma of the cervix (and 2 more)\"\n    },\n    {\n      \"id\": \"MONDO:0004561\",\n      \"name\": \"retinal melanoma\",\n      \"synonyms_preview\": \"malignant melanoma of retina, malignant melanoma of the retina (and 6 more)\"\n    },\n    {\n      \"id\": \"MONDO:0001652\",\n      \"name\": \"scrotum melanoma\",\n      \"synonyms_preview\": \"melanoma (disease) of scrotum, melanoma of scrotum (and 3 more)\"\n    },\n    {\n      \"id\": \"MONDO:0000543\",\n      \"name\": \"ovarian melanoma\",\n      \"synonyms_preview\": \"metastatic melanoma of ovary, ovary melanoma (disease) (and 1 more)\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get disease MONDO:0005105\",\n      \"biomcp list disease\"\n    ],\n    \"workflow\": \"mutation-catalog\",\n    \"workflow_rationale\": \"Start from the gene, enumerate variants, narrow to a mutation class, then confirm disease literature.\",\n    \"workflow_playbook\": \"biomcp skill mutation-catalog\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

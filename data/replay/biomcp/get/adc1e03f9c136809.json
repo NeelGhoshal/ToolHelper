@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "42854678",
+    "json": true,
+    "sections": [
+      "tldr"
+    ]
+  },
+  "args_key": "adc1e03f9c13680943abfd5c0df956519286e270937687f33c3ffc917e1e2a4d",
+  "recorded_at": "2026-11-10T08:48:07.332141+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 5133.730200002901,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42854678/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp article references 42854678 --limit 3\",\n      \"biomcp article citations 42854678 --limit 3\",\n      \"biomcp article recommendations 42854678 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"Semantic Scholar\"\n        ]\n      }\n    ]\n  },\n  \"abstract_text\": \"Hereditary angioedema is a bradykinin-mediated genetic disorder increasingly controlled with effective long-term prophylaxis. In a phase 3 trial, a single dose of lonvoguran ziclumeran, an in vivo CRISPR-Cas9 therapy targeting KLKB1, significantly reduced attack rates. This approach represents a highly promising therapeutic strategy for HAE. However, it also raises important questions that require further investigation.\",\n  \"author_completeness\": \"complete\",\n  \"author_count\": 2,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Cancian M\",\n    \"Margaglione M\"\n  ],\n  \"citation_count\": 0,\n  \"date\": \"2026-10-09\",\n  \"doi\": \"10.1016/j.medj.2026.101324\",\n  \"journal\": \"Med\",\n  \"open_access\": false,\n  \"pmid\": \"42854678\",\n  \"publication_type\": \"Research Article\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"outcome\": \"data\",\n      \"sources\": [\n        \"Semantic Scholar\"\n      ]\n    }\n  },\n  \"semantic_scholar\": {\n    \"citation_count\": 0,\n    \"influential_citation_count\": 0,\n    \"is_open_access\": false,\n    \"paper_id\": \"1b4a34bb7b1fbc73cdb88b5f11391e622a2a97e5\",\n    \"reference_count\": 10,\n    \"tldr\": \"A single dose of lonvoguran ziclumeran, an in vivo CRISPR-Cas9 therapy targeting KLKB1, significantly reduced attack rates in a phase 3 trial of Hereditary angioedema.\"\n  },\n  \"title\": \"Genome editing for hereditary angioedema: A landmark trial and important unanswered questions.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

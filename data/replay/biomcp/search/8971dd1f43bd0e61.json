@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "json": true,
+    "limit": 10,
+    "query": "BRAF c.1799T>A GRCh38 chr7 140753336"
+  },
+  "args_key": "8971dd1f43bd0e61ec64c482d4be457bde876ba6d2beb7562fb315459fd8e54c",
+  "recorded_at": "2026-11-09T21:29:17.543622+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 446.89500000094995,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search variant -g BRAF\"\n    ]\n  },\n  \"count\": 0,\n  \"diagnostics\": [],\n  \"filter_evaluation\": {\n    \"condition\": \"evaluated\",\n    \"gene\": \"evaluated\"\n  },\n  \"pagination\": {\n    \"has_more\": false,\n    \"limit\": 10,\n    \"next_page_token\": null,\n    \"offset\": 0,\n    \"returned\": 0,\n    \"total\": 0\n  },\n  \"results\": []\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

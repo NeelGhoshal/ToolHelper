@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "Tarceva",
+    "sections": [
+      "label",
+      "approvals",
+      "indications",
+      "targets"
+    ]
+  },
+  "args_key": "bf9f0921f646b9eef16f1299c3af5049004438e4b83844a953c3a20ad1ce126d",
+  "recorded_at": "2026-11-10T10:16:56.466959+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 4644.682099984493,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# erlotinib hydrochloride - label, approvals, indications, targets \n## FDA Label \n \n### Approved Indications \n- Non-Small Cell Lung Cancer (NSCLC) \n- Pancreatic Cancer \n## Drugs@FDA Approvals\n\n### ANDA214719\n\n- Sponsor: ALEMBIC\n- Brands: ERLOTINIB HYDROCHLORIDE\n- Generic Names: ERLOTINIB HYDROCHLORIDE\n| Product | Dosage Form | Route | Marketing Status |\n|---|---|---|---|\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Prescription |\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Prescription |\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Prescription |\n| Submission Type | Number | Status | Date |\n|---|---|---|---|\n| ORIG | 1 | AP | 2021-07-08 |\n\n### ANDA211083\n\n- Sponsor: ACCORD HLTHCARE\n| Product | Dosage Form | Route | Marketing Status |\n|---|---|---|---|\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Discontinued |\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Discontinued |\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Discontinued |\n| Submission Type | Number | Status | Date |\n|---|---|---|---|\n| ORIG | 1 | AP | 2020-07-02 |\n\n### ANDA208396\n\n- Sponsor: APOTEX\n| Product | Dosage Form | Route | Marketing Status |\n|---|---|---|---|\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Discontinued |\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Discontinued |\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Discontinued |\n| Submission Type | Number | Status | Date |\n|---|---|---|---|\n| ORIG | 1 | AP | 2019-11-05 |\n\n### ANDA091002\n\n- Sponsor: RISING\n| Product | Dosage Form | Route | Marketing Status |\n|---|---|---|---|\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Prescription |\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Prescription |\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Prescription |\n| Submission Type | Number | Status | Date |\n|---|---|---|---|\n| SUPPL | 4 | AP | 2019-10-22 |\n| SUPPL | 2 | AP | 2019-10-22 |\n| ORIG | 1 | AP | 2014-06-11 |\n\n### ANDA203843\n\n- Sponsor: CHARTWELL RX\n| Product | Dosage Form | Route | Marketing Status |\n|---|---|---|---|\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Prescription |\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Prescription |\n| Submission Type | Number | Status | Date |\n|---|---|---|---|\n| ORIG | 1 | AP | 2024-09-13 |\n\n### ANDA214366\n\n- Sponsor: MSN\n- Brands: ERLOTINIB HYDROCHLORIDE\n- Generic Names: ERLOTINIB HYDROCHLORIDE\n| Product | Dosage Form | Route | Marketing Status |\n|---|---|---|---|\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Prescription |\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Prescription |\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Prescription |\n| Submission Type | Number | Status | Date |\n|---|---|---|---|\n| ORIG | 1 | AP | 2021-05-10 |\n\n### ANDA208488\n\n- Sponsor: NATCO PHARMA LTD\n| Product | Dosage Form | Route | Marketing Status |\n|---|---|---|---|\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Discontinued |\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Discontinued |\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Discontinued |\n| Submission Type | Number | Status | Date |\n|---|---|---|---|\n| ORIG | 1 | AP | 2019-11-05 |\n\n### ANDA091059\n\n- Sponsor: TEVA PHARMS USA INC\n- Brands: ERLOTINIB\n- Generic Names: ERLOTINIB\n| Product | Dosage Form | Route | Marketing Status |\n|---|---|---|---|\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Prescription |\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Prescription |\n| ERLOTINIB HYDROCHLORIDE | TABLET | oral | Prescription |\n| Submission Type | Number | Status | Date |\n|---|---|---|---|\n| ORIG | 2 | AP | 2020-11-09 |\n| SUPPL | 2 | AP | 2019-10-28 |\n| ORIG | 1 | AP | 2015-08-28 |\n\n \n## Targets (ChEMBL / Open Targets) \nEGFR, SLCO2B1 \n## Indications (Open Targets) \n \nAdenocarcinoma of pancreas, Non-small cell lung cancer, liver cancer (Phase 2), prostate cancer (Phase 2), urinary bladder cancer (Phase 2), hypopharynx squamous cell carcinoma (Phase 1/2), hepatocellular carcinoma (Phase 3), glioblastoma (Phase 2), esophageal adenocarcinoma (Phase 2), gastric cardia adenocarcinoma (Phase 2), germ cell tumor (Phase 2), biliary tract cancer (Phase 2) \nMore:\n  biomcp get drug \"erlotinib hydrochloride\" regulatory --region us   - approval and supplement history; use only if the base card lacks approval context\n  biomcp get drug \"erlotinib hydrochloride\" safety --region us   - regulatory safety detail; use `biomcp drug adverse-events <name>` first when you want post-marketing signal\n  biomcp get drug \"erlotinib hydrochloride\" shortage --region us   - current US, EU, or WHO shortage information\n\nAll:\n  biomcp get drug \"erlotinib hydrochloride\" all --region us \nSee also:\n  biomcp drug trials \"erlotinib hydrochloride\"\n  biomcp drug adverse-events \"erlotinib hydrochloride\"   - inspect safety reports and adverse-event signal\n  biomcp search pgx -d \"erlotinib hydrochloride\"   - pharmacogenomics interactions\n  biomcp get gene EGFR \n\n[DrugBank](https://go.drugbank.com/drugs/DB00530) | [ChEMBL](https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL553) | [DailyMed](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ab6f3cb3-34a8-4492-a5d7-fb6b055a2d6b)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E",
+      "colorectal cancer",
+      "thyroid cancer"
+    ],
+    "limit": 6,
+    "sort": "date"
+  },
+  "args_key": "c698f5de97808cfa487bed4a7c92082a56d39ae1ddbae3bcc79fe6bcc3b71227",
+  "recorded_at": "2026-11-10T09:19:04.851181+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 13158.142900007078,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E colorectal cancer thyroid cancer, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E colorectal cancer thyroid cancer\" --exclude-retracted --sort date --source semanticscholar --limit 6 --offset 0` \n \n \nFound 6 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42782531|Colonic metastasis from anaplastic thyroid carcinoma: The va…|PubMed|2026-11-01|-|0| \n|PMID 42985401|A Key Biomarker lnc-ABCA12-5:2 Compensating Diagnostic Defic…|PubMed|2026-10-28|-|0| \n|PMID 42544547|Practical management of BRAF inhibitors in glioma: toxicity…|Europe PMC|2026-08-03|-|0| \n|PMID 42360103|Inflammation and carcinogenesis: molecular targets and small…|Europe PMC|2026-06-26|-|0| \n|PMID 42297916|Prognostic and therapeutic implications of BRAF mutations in…|PubTator3|2026-06-15|-|none| \n|PMID 42285341|Molecular Landscape and Advanced Diagnostic Technologies for…|PubTator3, Europe PMC, PubMed|2026-06-12|-|0| \n \n \n \nNewest indexed: 2026-11-05 (5 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42782531\n  biomcp search article -k \"BRAF V600E colorectal cancer thyroid cancer\" --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 6 results (total unknown). Use --offset 6 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

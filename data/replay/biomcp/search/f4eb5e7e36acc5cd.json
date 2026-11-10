@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "melanoma"
+    ],
+    "intervention": [
+      "vemurafenib"
+    ],
+    "limit": 10
+  },
+  "args_key": "f4eb5e7e36acc5cd0b6b304d8a0f48e247553c9ce8973f313eaccae9900257f0",
+  "recorded_at": "2026-11-10T06:51:04.938876+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 489.993900002446,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 10 trial(s) \n \nQuery: condition=melanoma, intervention=vemurafenib \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT01006980|A Study of Vemurafenib (R…|COMPLETED|3|Malignant Melanoma|Vemurafenibum| \n|NCT01596140|Vemurafenib in Combinatio…|COMPLETED|1|Advanced Cancer, Solid Tumor|vemurafenib| \n|NCT01849666|A Study of the Effect of…|COMPLETED|1|Malignant Melanoma, Neoplasms|vemurafenib| \n|NCT02354690|Vemurafenib and TIL Thera…|COMPLETED|1/2|Metastatic Melanoma|vemurafenib| \n|NCT02902029|Evaluating the Efficacy a…|COMPLETED|2|Malignant Melanoma|vemurafenib| \n|NCT03101254|LY3022855 With BRAF/MEK I…|COMPLETED|1/2|Melanoma|vemurafenib| \n|NCT03139513|A Study of Adult Particip…|COMPLETED|-|Melanoma|Vemurafenibum| \n|NCT05260684|Comparative Effectiveness…|COMPLETED|-|Melanoma|vemurafenib| \n|NCT03514901|To Evaluate the Efficacy…|UNKNOWN|2|Melanoma Metastatic, BRAF V600 Mutation|vemurafenib| \n|NCT01474551|Vemurafenib (R05185426) i…|TERMINATED|2|Melanoma|Vemurafenibum| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

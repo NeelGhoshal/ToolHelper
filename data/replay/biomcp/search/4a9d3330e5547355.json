@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "disease": [
+      "non-small cell lung cancer",
+      "lung adenocarcinoma"
+    ],
+    "entity": "article",
+    "gene": "EGFR",
+    "keyword": [
+      "EGFR mutation"
+    ],
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "4a9d3330e5547355813ef936af96052519649ebac79f0ee988cb216f3521f20c",
+  "recorded_at": "2026-11-10T03:52:53.954563+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 10243.095999991056,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, disease=non-small cell lung cancer lung adenocarcinoma, keyword=EGFR mutation, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --gene EGFR --disease \"non-small cell lung cancer lung adenocarcinoma\" --keyword \"EGFR mutation\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 36209117|Exosomal circZNF451 restrains anti-PD1 treatment in lung ade…|Europe PMC|2022-10-08|-|74| \n|PMID 38605928|Targeted therapeutic options in early and metastatic NSCLC-o…|PubTator3|2024-03-28|-|51| \n|PMID 36638752|Prevalence, clinical and molecular characteristics of early…|PubTator3|2023-03-01|-|33| \n|PMID 33799592|Co-Operativity between MYC and BCL-2 Pro-Survival Proteins i…|Europe PMC|2021-03-11|-|33| \n|PMID 34584458|Plasma circRNAs as Biomarkers in Cancer.|Europe PMC|2021-09-21|-|30| \n|PMID 40126879|Emerging molecular testing paradigms in non-small cell lung…|PubTator3|2025-03-10|-|26| \n|PMID 27757846|Evolution from genetics to phenotype: reinterpretation of NS…|Europe PMC|2016-10-18|-|26| \n|PMID 33300283|Genomic characteristics of driver genes in Chinese patients…|Europe PMC|2020-12-09|-|25| \n|PMID 27602958|Epigenome-wide association study of smoking and DNA methylat…|Europe PMC|2016-10-01|-|25| \n|PMID 37131310|Infection with human cytomegalovirus, Epstein-Barr virus, an…|PubTator3|2023-04-30|-|12| \n|PMID 40384936|Molecular mechanisms and therapeutic strategies for small-ce…|PubTator3|2025-05-06|-|7| \n|PMID 38769831|[Advances of Molecular Targeted Therapy in EGFR-mutated Squa…|PubTator3|2024-04-20|-|1| \n|PMID 42994820|Successful rechallenge with almonertinib and corticosteroids…|PubMed|2026-11-06|-|0| \n|PMID 42999602|Real-world outcomes of neoadjuvant targeted therapy in resec…|PubMed|2026-10-30|-|0| \n|PMID 42999658|Association between adjuvant EGFR-TKI therapy and survival o…|PubMed|2026-10-30|-|0| \n \n \n \nNewest indexed: 2026-11-08 (2 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 36209117\n  biomcp search article -g EGFR -d \"non-small cell lung cancer lung adenocarcinoma\" -k \"EGFR mutation\" --year-min 2016 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

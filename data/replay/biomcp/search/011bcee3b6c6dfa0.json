@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "EGFR mutation",
+      "lung adenocarcinoma"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "011bcee3b6c6dfa0879a8342897752fb124683f054a71b813c8dcb23fe5fd1d1",
+  "recorded_at": "2026-11-09T19:42:58.849492+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 10590.989199990872,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=EGFR mutation lung adenocarcinoma, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"23550210\",\n      \"pmcid\": \"PMC4160307\",\n      \"doi\": \"10.1126/scisignal.2004088\",\n      \"title\": \"Integrative analysis of complex cancer genomics and clinical profiles using the cBioPortal.\",\n      \"journal\": \"Sci Signal\",\n      \"date\": \"2013-04-02\",\n      \"citation_count\": 12856,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"23000897\",\n      \"pmcid\": \"PMC3465532\",\n      \"doi\": \"10.1038/nature11412\",\n      \"title\": \"Comprehensive molecular portraits of human breast tumours.\",\n      \"journal\": \"Nature\",\n      \"date\": \"2012-09-23\",\n      \"citation_count\": 10271,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"15118073\",\n      \"doi\": \"10.1056/nejmoa040938\",\n      \"title\": \"Activating mutations in the epidermal growth factor receptor underlying responsiveness of non-small-cell lung cancer to gefitinib.\",\n      \"journal\": \"N Engl J Med\",\n      \"date\": \"2004-04-29\",\n      \"citation_count\": 8565,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"15118125\",\n      \"doi\": \"10.1126/science.1099314\",\n      \"title\": \"EGFR mutations in lung cancer: correlation with clinical response to gefitinib therapy.\",\n      \"journal\": \"Science\",\n      \"date\": \"2004-04-29\",\n      \"citation_count\": 7336,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"35081265\",\n      \"pmcid\": \"PMC9060101\",\n      \"title\": \"Clinical characteristics of non-small cell lung cancer patients with EGFR mutations and ALK&ROS1 fusions\",\n      \"journal\": \"Clin Respir J\",\n      \"date\": \"2022-03-01\",\n      \"citation_count\": 10,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"35266536\",\n      \"pmcid\": \"PMC9297517\",\n      \"title\": \"Combination of epidermal growth factor receptor mutation and the presence of high-grade patterns is associated with recurrence in resected stage I lung adenocarcinoma\",\n      \"journal\": \"Interact Cardiovasc Thorac Surg\",\n      \"date\": \"2022-07-09\",\n      \"citation_count\": 7,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"34877318\",\n      \"pmcid\": \"PMC8610895\",\n      \"title\": \"High-resolution computed tomography findings independently predict epidermal growth factor receptor mutation status in ground-glass nodular lung adenocarcinoma\",\n      \"journal\": \"World J Clin Cases\",\n      \"date\": \"2021-11-16\",\n      \"citation_count\": 4,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"34234879\",\n      \"pmcid\": \"PMC8216805\",\n      \"title\": \"Clinicopathological, Radiological, and Molecular Features of Primary Lung Adenocarcinoma with Morule-Like Components\",\n      \"journal\": \"Dis Markers\",\n      \"date\": \"2021-06-12\",\n      \"citation_count\": 2,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42999423\",\n      \"title\": \"Subtype-associated clinicopathological and tumor immune microenvironment heterogeneity in primary EGFR T790M compound-mutant lung adenocarcinoma: a retrospective cohort study.\",\n      \"journal\": \"Translational lung cancer research\",\n      \"date\": \"2026-10-30\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42999602\",\n      \"title\": \"Real-world outcomes of neoadjuvant targeted therapy in resectable epidermal growth factor receptor mutation-positive non-small cell lung cancer: a retrospective study.\",\n      \"journal\": \"Translational lung cancer research\",\n      \"date\": \"2026-10-30\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"EGFR mutation lung adenocarcinoma\\\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0\",\n      \"biomcp get article 23550210\",\n      \"biomcp search article -k \\\"EGFR mutation lung adenocarcinoma\\\" --year-min 2004 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

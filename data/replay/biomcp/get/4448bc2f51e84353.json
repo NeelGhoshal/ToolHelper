@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "42087435",
+    "json": true
+  },
+  "args_key": "4448bc2f51e84353e10ab3765e3e6404eab7e94360849e145cf4d34a4edb10a0",
+  "recorded_at": "2026-11-10T08:06:36.749113+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 2052.7905999915674,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42087435/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42087435 tldr\",\n      \"biomcp article entities 42087435\",\n      \"biomcp search gene -q BRAF\",\n      \"biomcp search gene -q KRAS\",\n      \"biomcp search disease --query \\\"Tall Cell Papillary Thyroid Carcinoma\\\"\",\n      \"biomcp search disease --query \\\"papillary thyroid carcinoma\\\"\",\n      \"biomcp article references 42087435 --limit 3\",\n      \"biomcp article citations 42087435 --limit 3\",\n      \"biomcp article recommendations 42087435 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"annotations\",\n        \"label\": \"PubTator Annotations\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ],\n    \"workflow\": \"article-follow-up\",\n    \"workflow_playbook\": \"biomcp skill article-follow-up\",\n    \"workflow_rationale\": \"Use article annotations first, then citation and recommendation graph pivots for efficient literature expansion.\"\n  },\n  \"abstract_text\": \"We report a case of a 57-year-old male with anaplastic transformation of papillary thyroid carcinoma (PTC) in metastatic lymph nodes. This case presents as a pitfall due to squamous differentiation in anaplastic thyroid carcinoma, which was initially misinterpreted as metastatic squamous cell carcinoma on fine needle aspiration (FNA) of the lymph node in the neck. Subsequent surgical resection reveals a unique rare occurrence of isolated anaplastic transformation of tall cell PTC in the metastatic lymph nodes, associated with the extremely rare co-occurrence of BRAF p.V600E and KRAS p.G12R mutations.\",\n  \"annotations\": {\n    \"diseases\": [\n      {\n        \"count\": 2,\n        \"identifier\": \"MESH:D000077273\",\n        \"name\": \"Thyroid Cancer Papillary\",\n        \"namespace\": \"MESH\",\n        \"text\": \"PTC\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"MESH:D000077273\",\n        \"name\": \"Thyroid Cancer Papillary\",\n        \"namespace\": \"MESH\",\n        \"text\": \"Tall Cell Papillary Thyroid Carcinoma\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"MESH:D000077273\",\n        \"name\": \"Thyroid Cancer Papillary\",\n        \"namespace\": \"MESH\",\n        \"text\": \"papillary thyroid carcinoma\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"MESH:D065646\",\n        \"name\": \"Thyroid Carcinoma Anaplastic\",\n        \"namespace\": \"MESH\",\n        \"text\": \"anaplastic thyroid carcinoma\"\n      },\n      {\n        \"count\": 1,\n        \"identifier\": \"MESH:D002294\",\n        \"name\": \"Carcinoma Squamous Cell\",\n        \"namespace\": \"MESH\",\n        \"text\": \"squamous cell carcinoma\"\n      }\n    ],\n    \"genes\": [\n      {\n        \"count\": 2,\n        \"identifier\": \"673\",\n        \"namespace\": \"NCBIGene\",\n        \"text\": \"BRAF\"\n      },\n      {\n        \"count\": 2,\n        \"identifier\": \"3845\",\n        \"namespace\": \"NCBIGene\",\n        \"text\": \"KRAS\"\n      }\n    ],\n    \"mutations\": [\n      {\n        \"count\": 2,\n        \"identifier\": \"BRAF p.V600E\",\n        \"namespace\": \"HGVS\",\n        \"text\": \"p.V600E\"\n      },\n      {\n        \"count\": 2,\n        \"identifier\": \"KRAS p.G12R\",\n        \"namespace\": \"HGVS\",\n        \"text\": \"p.G12R\"\n      }\n    ]\n  },\n  \"author_completeness\": \"complete\",\n  \"author_count\": 5,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Chia AMX\",\n    \"Go LK\",\n    \"Teo HL\",\n    \"Gan JYJ\",\n    \"Bundele MM\"\n  ],\n  \"citation_count\": 0,\n  \"date\": \"2026-05-05\",\n  \"doi\": \"10.1002/dc.70141\",\n  \"journal\": \"Diagn Cytopathol\",\n  \"open_access\": false,\n  \"pmid\": \"42087435\",\n  \"publication_type\": \"Research Article\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"Isolated Anaplastic Transformation of Tall Cell Papillary Thyroid Carcinoma in Metastatic Lymph Nodes With Extremely Rare Co-Occurrence of BRAF p.V600E and KRAS p.G12R Mutations: A Unique Case.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

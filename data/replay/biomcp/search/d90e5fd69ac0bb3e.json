@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "BRAF",
+    "json": true,
+    "keyword": [
+      "BRAF V600E melanoma targeted therapy"
+    ],
+    "limit": 5
+  },
+  "args_key": "d90e5fd69ac0bb3ec9ed2cdf4f1592f8d2d9d2f24476d6f3760439e2847bacaf",
+  "recorded_at": "2026-11-10T04:17:32.662187+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4329.439799999818,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=BRAF, keyword=BRAF V600E melanoma targeted therapy, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"sort\": \"relevance\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"ranking_policy\": \"hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 5,\n    \"returned\": 5,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 5,\n  \"results\": [\n    {\n      \"pmid\": \"42794461\",\n      \"title\": \"Predicted STAT1-BRAF and IRF7-MET Regulatory Links Are Associated with MAPK Pathway Reactivation and Targeted Therapy Resistance in Melanoma.\",\n      \"journal\": \"International journal of molecular sciences\",\n      \"date\": \"2026-09-09\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"36299811\",\n      \"pmcid\": \"PMC9592364\",\n      \"title\": \"BRAF V600E Immunohistochemistry Predicts Prognosis of Patients with Cutaneous Melanoma in Thai population\",\n      \"journal\": \"Plast Reconstr Surg Glob Open\",\n      \"date\": \"2022-10-24\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42907443\",\n      \"title\": \"p38α orchestrates BRAF(V600E)-melanoma progression and immunotherapy response via tumor fitness and immune microenvironment modulation.\",\n      \"journal\": \"Nature communications\",\n      \"date\": \"2026-09-22\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"38136350\",\n      \"pmcid\": \"PMC10741866\",\n      \"title\": \"The Targeted Degradation of BRAF V600E Reveals the Mechanisms of Resistance to BRAF-Targeted Treatments in Colorectal Cancer Cells\",\n      \"journal\": \"Cancers (Basel)\",\n      \"date\": \"2023-12-12\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42957845\",\n      \"pmcid\": \"PMC13719762\",\n      \"doi\": \"10.1007/s00277-026-07277-6\",\n      \"title\": \"Post-transplant BRAF/MEK inhibitor maintenance sustains complete remission in BRAF V600E-mutant histiocytic sarcoma.\",\n      \"journal\": \"Ann Hematol\",\n      \"date\": \"2026-10-28\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"partial_query_match\",\n        \"message\": \"The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search article --gene BRAF --keyword \\\"BRAF V600E melanoma targeted therapy\\\" --exclude-retracted --sort relevance --source semanticscholar --limit 5 --offset 0\",\n      \"biomcp get article 42794461\",\n      \"biomcp search article -g BRAF -k \\\"BRAF V600E melanoma targeted therapy\\\" --year-min 2022 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR",
+      "lung cancer",
+      "tyrosine kinase inhibitor"
+    ],
+    "limit": 20,
+    "sort": "citations",
+    "source": "pubmed"
+  },
+  "args_key": "d3882a38688ea9b738b29d084ea146b038f5529c3dc111b34a4234a77fa246d0",
+  "recorded_at": "2026-11-09T20:44:51.450078+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1042.7427999966312,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR lung cancer tyrosine kinase inhibitor, exclude_retracted=true, sort=citations, source=pubmed \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 20 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42993168|Impact of Dosage Modifications on Efficacy: Insights from Se…|PubMed|2026-11-06|-|none| \n|PMID 42994820|Successful rechallenge with almonertinib and corticosteroids…|PubMed|2026-11-06|-|none| \n|PMID 42988853|ENPP1 inhibits the cGAS-STING pathway to mediate immune evas…|PubMed|2026-11-05|-|none| \n|PMID 42998399|Novel 4-Anilinopyrimidine-N-Acylhydrazone derivatives as dua…|PubMed|2026-11-05|-|none| \n|PMID 42971390|β-elemene suppressed EMT via IGF1R inhibition in osimertini…|PubMed|2026-11-02|-|none| \n|PMID 42979327|Concurrent loss of RB1 facilitates EGFR-TKI resistance in EG…|PubMed|2026-11-01|-|none| \n|PMID 42999602|Real-world outcomes of neoadjuvant targeted therapy in resec…|PubMed|2026-10-30|-|none| \n|PMID 42999608|Perioperative treatment for resectable non-small cell lung c…|PubMed|2026-10-30|-|none| \n|PMID 42999658|Association between adjuvant EGFR-TKI therapy and survival o…|PubMed|2026-10-30|-|none| \n|PMID 42985469|Epigenetic Silencing of ZNF471 Contributes to Osimertinib Re…|PubMed|2026-10-28|-|none| \n|PMID 42991272|Acute myeloid leukemia following icotinib therapy for non-sm…|PubMed|2026-10-22|-|none| \n|PMID 42991293|Case Report: Lenvatinib plus osimertinib treated a metastati…|PubMed|2026-10-22|-|none| \n|PMID 42984671|Genomic co-alteration patterns are associated with different…|PubMed|2026-10-21|-|none| \n|PMID 42973333|Clinical and Molecular Outcomes of Dabrafenib/Trametinib-Bas…|PubMed|2026-10-20|-|none| \n|PMID 42979409|A Narrative Review of the Cases of Co-altered EGFR and ALK i…|PubMed|2026-10-04|-|none| \n|PMID 42972594|Anlotinib combined with almonertinib reverses almonertinib r…|PubMed|2026-08-05|-|none| \n|PMID 42972485|The TGF-β signaling activated by cancer-associated macropha…|PubMed|2026-08-04|-|none| \n|PMID 43001251|From \"undruggable\" to tractable: Therapeutic advances target…|PubMed|2026-02-10|-|none| \n|PMID 42975994|FLAURA2 - a step forward in first-line treatment of advanced…|PubMed|2026-01-01|-|none| \n|PMID 42976000|Detection of RET fusion in late-line treatment of NSCLC foll…|PubMed|2026-01-01|-|none| \n \n \n \nNewest indexed: 2026-11-09 (0 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42993168\n  biomcp search article -k \"EGFR lung cancer tyrosine kinase inhibitor\" --source pubmed --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-20 of 15338 results. Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

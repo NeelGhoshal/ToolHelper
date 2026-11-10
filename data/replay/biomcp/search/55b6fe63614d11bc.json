@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "variant",
+    "gene": "TP53",
+    "json": true,
+    "limit": 10,
+    "significance": "pathogenic"
+  },
+  "args_key": "55b6fe63614d11bc4d3422888b96608f9047006baefb8ef7de6c7db78d5681e9",
+  "recorded_at": "2026-11-09T19:43:39.405281+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 305.5620999948587,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get variant \\\"chr17:g.7577548C>T\\\"\",\n      \"biomcp get gene TP53\",\n      \"biomcp list variant\"\n    ]\n  },\n  \"count\": 10,\n  \"diagnostics\": [],\n  \"filter_evaluation\": {\n    \"gene\": \"evaluated\",\n    \"significance\": \"evaluated\"\n  },\n  \"pagination\": {\n    \"has_more\": true,\n    \"limit\": 10,\n    \"next_page_token\": null,\n    \"offset\": 0,\n    \"returned\": 10,\n    \"total\": 563\n  },\n  \"results\": [\n    {\n      \"clinvar_stars\": 3,\n      \"gene\": \"TP53\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 4.62,\n      \"gnomad_af\": 0.0,\n      \"hgvs_c\": \"c.733G>A\",\n      \"hgvs_p\": \"p.Gly245Ser\",\n      \"id\": \"chr17:g.7577548C>T\",\n      \"legacy_name\": \"TP53 G245S\",\n      \"revel\": 0.947,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_000546.6\"\n    },\n    {\n      \"clinvar_stars\": 3,\n      \"gene\": \"TP53\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 5.41,\n      \"gnomad_af\": 3.97969e-6,\n      \"hgvs_c\": \"c.524G>A\",\n      \"hgvs_p\": \"p.Arg175His\",\n      \"id\": \"chr17:g.7578406C>T\",\n      \"legacy_name\": \"TP53 R175H\",\n      \"revel\": 0.922,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_000546.6\"\n    },\n    {\n      \"clinvar_stars\": 2,\n      \"gene\": \"TP53\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 3.25,\n      \"gnomad_af\": 0.0,\n      \"hgvs_c\": \"c.637C>T\",\n      \"hgvs_p\": \"p.Arg213Ter\",\n      \"id\": \"chr17:g.7578212G>A\",\n      \"legacy_name\": \"TP53 R213stop\",\n      \"revel\": null,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_000546.6\"\n    },\n    {\n      \"clinvar_stars\": 2,\n      \"gene\": \"TP53\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 4.44,\n      \"gnomad_af\": 3.97655e-6,\n      \"hgvs_c\": \"c.586C>T\",\n      \"hgvs_p\": \"p.Arg196Ter\",\n      \"id\": \"chr17:g.7578263G>A\",\n      \"legacy_name\": \"TP53 R196stop\",\n      \"revel\": null,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_000546.6\"\n    },\n    {\n      \"clinvar_stars\": 2,\n      \"gene\": \"TP53\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 4.62,\n      \"hgvs_c\": \"c.730G>A\",\n      \"hgvs_p\": \"p.Gly244Ser\",\n      \"id\": \"chr17:g.7577551C>T\",\n      \"legacy_name\": \"TP53 G244S\",\n      \"revel\": 0.936,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_000546.6\"\n    },\n    {\n      \"clinvar_stars\": 3,\n      \"gene\": \"TP53\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": -4.03,\n      \"hgvs_c\": \"c.892G>T\",\n      \"hgvs_p\": \"p.Glu298*\",\n      \"id\": \"chr17:g.7577046C>A\",\n      \"legacy_name\": \"TP53 E298stop\",\n      \"revel\": null,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_000546.6\"\n    },\n    {\n      \"clinvar_stars\": 2,\n      \"gene\": \"TP53\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 4.52,\n      \"hgvs_c\": \"c.493C>T\",\n      \"hgvs_p\": \"p.Gln165*\",\n      \"id\": \"chr17:g.7578437G>A\",\n      \"legacy_name\": \"TP53 Q165stop\",\n      \"revel\": null,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_000546.6\"\n    },\n    {\n      \"clinvar_stars\": 2,\n      \"gene\": \"TP53\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 0.597,\n      \"hgvs_c\": \"c.159G>A\",\n      \"hgvs_p\": \"p.Trp53*\",\n      \"id\": \"chr17:g.7579528C>T\",\n      \"legacy_name\": \"TP53 W53stop\",\n      \"revel\": null,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_000546.6\"\n    },\n    {\n      \"clinvar_stars\": 2,\n      \"gene\": \"TP53\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 1.81,\n      \"hgvs_c\": \"c.158G>A\",\n      \"hgvs_p\": \"p.Trp53*\",\n      \"id\": \"chr17:g.7579529C>T\",\n      \"legacy_name\": \"TP53 W53stop\",\n      \"revel\": null,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_000546.6\"\n    },\n    {\n      \"clinvar_stars\": 2,\n      \"gene\": \"TP53\",\n      \"genome_build\": \"GRCh37\",\n      \"genome_build_provenance\": \"MyVariant.info provider default\",\n      \"gerp\": 3.68,\n      \"hgvs_c\": \"c.560-2A>C\",\n      \"id\": \"chr17:g.7578291T>G\",\n      \"revel\": null,\n      \"significance\": \"Pathogenic\",\n      \"significance_source\": \"MyVariant.info\",\n      \"transcript\": \"NM_000546.6\"\n    }\n  ]\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "vemurafenib BRAF V600E melanoma BRIM-3 phase 3"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "53668977162b3afa5b24a9aa7252299dd1af2f5d6af97e0ee5d0e014a9897a8b",
+  "recorded_at": "2026-11-09T20:36:42.991091+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 21336.040800000774,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=vemurafenib BRAF V600E melanoma BRIM-3 phase 3, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"vemurafenib BRAF V600E melanoma BRIM-3 phase 3\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 21639808|Improved survival with vemurafenib in melanoma with BRAF V60…|Europe PMC, PubMed|2011-06-05|-|5808| \n|PMID 22356324|Survival in BRAF V600-mutant advanced melanoma treated with…|Europe PMC|2012-02-01|-|1658| \n|PMID 41807883|BRAF inhibitor resistance in melanoma: from resistance mecha…|PubTator3|2026-03-11|-|none| \n|PMID 36842301|Precision oncology for BRAF-mutant cancers with BRAF and MEK…|PubTator3|2023-04-01|-|none| \n|PMID 22742884|Vemurafenib in patients with BRAF V600E mutation-positive ad…|PubMed|2012-07-01|-|66| \n \n \n \nNewest indexed: 2012-06-30 (5245 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 21639808\n  biomcp search article -k \"vemurafenib BRAF V600E melanoma BRIM-3 phase 3\" --year-min 2011 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

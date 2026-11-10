@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "hypertension, essential",
+    "max_results": 5,
+    "omop_field": "condition_concept_id",
+    "omop_table": "condition_occurrence"
+  },
+  "args_key": "e42b40385400fba2aa220a8d3eaf49c451abc0879236eb335d86e4b510a4cba1",
+  "recorded_at": "2026-11-10T08:06:37.375445+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1072.9259999934584,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 979260,\n      \"code\": \"D000075222\",\n      \"name\": \"Essential Hypertension\",\n      \"class\": \"Main Heading\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"MeSH\",\n      \"url\": \"https://omophub.com/concepts/979260\"\n    },\n    {\n      \"concept_id\": 663764,\n      \"code\": \"MONDO_0011384\",\n      \"name\": \"hypertension, essential, susceptibility to, 1\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"Mondo\",\n      \"url\": \"https://omophub.com/concepts/663764\"\n    },\n    {\n      \"concept_id\": 663773,\n      \"code\": \"MONDO_0011440\",\n      \"name\": \"hypertension, essential, susceptibility to, 2\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"Mondo\",\n      \"url\": \"https://omophub.com/concepts/663773\"\n    },\n    {\n      \"concept_id\": 663829,\n      \"code\": \"MONDO_0011815\",\n      \"name\": \"hypertension, essential, susceptibility to, 3\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"Mondo\",\n      \"url\": \"https://omophub.com/concepts/663829\"\n    },\n    {\n      \"concept_id\": 663884,\n      \"code\": \"MONDO_0012109\",\n      \"name\": \"hypertension, essential, susceptibility to, 4\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"Mondo\",\n      \"url\": \"https://omophub.com/concepts/663884\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"hypertension, essential\",\n    \"omop_table\": \"condition_occurrence\",\n    \"omop_field\": \"condition_concept_id\",\n    \"total_found\": 5,\n    \"candidates_returned\": 5,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "sertraline",
+    "json": true,
+    "sections": [
+      "label",
+      "indications",
+      "safety",
+      "targets",
+      "approvals",
+      "adverse-event"
+    ]
+  },
+  "args_key": "1f7712e296de5cb63924a5cd57f7d9bc142bc1f33c608435890f7a9d9088a458",
+  "recorded_at": "2026-11-09T21:42:40.261011+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.0688000184018165,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid drug section: adverse-event"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

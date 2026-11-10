@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "sertraline",
+    "sections": [
+      "label",
+      "safety"
+    ]
+  },
+  "args_key": "22143ac1628e3f9d2e9ab582ed1e22f5e531e6ee6071b6b9b606c5ffad12ea09",
+  "recorded_at": "2026-11-09T20:21:46.192736+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1121.2811000004876,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# sertraline - label, safety \n## FDA Label \n \n### Boxed Warning \nWARNING: SUICIDAL THOUGHTS AND BEHAVIORS Antidepressants increased the risk of suicidal thoughts and behavior in pediatric and young adult patients in short-term studies. Closely monitor all antidepressant-treated patients for clinical worsening, and for emergence of suicidal thoughts and behaviors [see Warnings and Precautions ( 5.1 )] . WARNING: SUICIDAL THOUGHTS AND BEHAVIORS See full prescribing information for complete boxed warning. Increased risk of suicidal thoughts and behavior in pediatric and young adult patients taking antidepressants. Closely monitor all antidepressant-treated patients for clinical worsening and emergence of suicidal thoughts and behaviors ( 5.1 ) \n### Indications and Usage \n1 INDICATIONS AND USAGE Sertraline Hydrochloride (HCl) Capsules is indicated for the treatment of the following [see Clinical Studies ( 14 )] : Major depressive disorder (MDD) in adults Obsessive-compulsive disorder (OCD) in adults and pediatric patients 6 years and older Sertraline Hydrochloride (HCl) Capsules is a selective serotonin reuptake inhibitor (SSRI) indicated for the treatment of ( 1 ): Major depressive disorder (MDD) in adults Obsessive-compulsive disorder (OCD) in adults and pediatric patients 6 years and older \n## Safety (US - OpenFDA)\n\n### Top adverse events (FAERS)\nNAUSEA, DRUG INEFFECTIVE, FATIGUE\n\n### Warnings\n5 WARNINGS AND PRECAUTIONS Serotonin Syndrome: Increased risk when co-administered with other serotonergic agents, but also when taken alone. If it occurs, discontinue Sertraline HCl Capsules and serotonergic agents and initiate supportive treatment ( 4 , 5.2 , 7.1 ) Increased Risk of Bleeding: Concomitant use of aspirin, nonsteroidal anti-inflammatory drugs (NSAIDs), other antiplatelet drugs, warfarin, and other anticoagulants may increase this risk ( 5.3 ) Activation of Mania or Hypomania: Screen patients for bipolar disorder ( 5.4 ) Discontinuation Syndrome: When discontinuing Sertraline HCl Capsules, reduce dosage gradually whenever possible, and monitor for discontinuation symptoms. Gradual reduction will require use of another sertraline HCl product ( 5.5 ) Seizures: Use with caution in patients with seizure disorders ( 5.6 ) Angle Closure Glaucoma: Avoid use of antidepressants, including Sertraline HCl Capsules, in patients with untreated anatomically narrow angles ( 5.7 ) QTc Prolongation: Sertraline HCl Capsules should be used with caution in patients with risk factors for QTc prolongation ( 5.10 ) Sexual Dysfunction: Sertraline HCl Capsules may cause symptoms of sexual dysfunction ( 5.12 ) 5.1 Suicidal Thoughts and Behaviors in Adolescent and Young Adults In pooled analyses of placebo-controlled trials of antidepressant drugs (SSRIs and other antidepressant classes) that included approximately 77,000 adult patients and over 4,500 pediatric patients, the incidence of suicidal thoughts and behaviors in antidepressant-treated patients age 24 years and younger was greater than in placebo-treated patients. There was considerable variation in risk of suicidal thoughts and behaviors among drugs, but there was an increased risk identified in young patients for most drugs studied. There were differences in absolute risk of suicidal thoughts and behaviors across the different indications, with the highest incidence in patients with MDD. The drug-placebo differences \n\n(truncated, 11698 chars total; full label: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=623b9672-b41e-4ec9-b2cc-f5bb383c39ba)\n \nMore:\n  biomcp get drug sertraline approvals   - Drugs@FDA approval history\n  biomcp get drug sertraline regulatory --region us   - approval and supplement history; use only if the base card lacks approval context\n  biomcp get drug sertraline shortage --region us   - current US, EU, or WHO shortage information\n\nAll:\n  biomcp get drug sertraline all --region us \nSee also:\n  biomcp drug trials sertraline\n  biomcp drug adverse-events sertraline   - inspect safety reports and adverse-event signal\n  biomcp search pgx -d sertraline   - pharmacogenomics interactions\n  biomcp get gene SLC6A4 \n\n[DrugBank](https://go.drugbank.com/drugs/DB01104) | [ChEMBL](https://www.ebi.ac.uk/chembl/compound_report_card/CHEMBL809) | [OpenFDA FAERS](https://api.fda.gov/drug/event.json?search=%28patient.drug.openfda.generic_name%3A%22sertraline%22+OR+patient.drug.openfda.brand_name%3A%22sertraline%22+OR+patient.drug.medicinalproduct%3A%22sertraline%22%29+AND+patient.drug.drugcharacterization%3A1&count=patient.reaction.reactionmeddrapt.exact&limit=50) | [DailyMed](https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=623b9672-b41e-4ec9-b2cc-f5bb383c39ba)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

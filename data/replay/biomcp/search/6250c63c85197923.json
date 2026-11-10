@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "combined dabrafenib and trametinib versus vemurafenib BRAF V600E Long New England 2014"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "6250c63c8519792396647b5c1ffd66700336e55d778bc53a17842f8b78344929",
+  "recorded_at": "2026-11-10T08:15:24.723458+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4677.826600003755,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=combined dabrafenib and trametinib versus vemurafenib BRAF V600E Long New England 2014, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"combined dabrafenib and trametinib versus vemurafenib BRAF V600E Long New England 2014\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 28889792|Overall Survival with Combined Nivolumab and Ipilimumab in A…|Europe PMC|2017-09-11|-|2911| \n|PMID 35294956|Clinical and analytical validation of FoundationOne CDx, a c…|PubTator3, Europe PMC|2022-03-16|-|343| \n|PMID 31935375|Myosin II Reactivation and Cytoskeletal Remodeling as a Hall…|Europe PMC|2020-01-01|-|144| \n|Semantic Scholar 6dcf14569205179488d5b3a38ffce6caccf8b3f9|Consensus statement from the faculty of the Melanoma Nursing…|Semantic Scholar|2017|-|3| \n|DOI 10.1200/jco.2025.43.16_suppl.e20545|Response and long-term survival in stage IV lung adenocarcin…|Semantic Scholar|2025|-|0| \n \n \n \nNewest indexed: 2020-01-17 (2489 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 28889792\n  biomcp search article -k \"combined dabrafenib and trametinib versus vemurafenib BRAF V600E Long New England 2014\" --year-min 2017 --year-max 2025 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}
