@@ -808,6 +808,7 @@ def experiment_freeze(tasks: TasksOption = TASKS_FILE, catalog_dir: CatalogDirOp
     """Freeze the experiment's inputs and folds as experiments/<name> in the context store."""
     from toolhelper.datasets.base import INDEX_PATH
     from toolhelper.datasets.index import EntityIndex
+    from toolhelper.efficiency.custom import used_in
     from toolhelper.experiments.experiment import folds, freeze_inputs, inputs_hash, write_experiment
     from toolhelper.experiments.runner import load_tasks
     from toolhelper.monitoring.db import MonitorDB
@@ -818,7 +819,7 @@ def experiment_freeze(tasks: TasksOption = TASKS_FILE, catalog_dir: CatalogDirOp
     runs = [r["run_id"] for g in groups for r in MonitorDB(db).rows("SELECT run_id FROM runs WHERE group_id = ?", (g,))]
     inputs = freeze_inputs(catalog_hash=latest_snapshot(catalog_dir).catalog_hash, tasks_file=tasks,
                            datasets=EntityIndex(INDEX_PATH).datasets(), llm_profile={"name": cfg.llm, **profile.model_dump()},
-                           store_dir=store, learn_from_runs=runs)
+                           store_dir=store, learn_from_runs=runs, custom_strategies=used_in(cfg.model_dump()))
     fold_map = folds(load_tasks(tasks))
     thing = write_experiment(LocalStore(context_db), cfg, inputs, fold_map)
     console.print(f"{thing.name}@v{thing.version}: inputs {inputs_hash(inputs)[:12]}, folds A={len(fold_map['A'])} "

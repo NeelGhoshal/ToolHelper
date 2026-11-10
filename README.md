@@ -7,9 +7,9 @@ It has two parts:
 - **Monitoring:** exact token usage per tool call, how the model reaches each tool (its pathway), and statistics a human can act on.
 - **Efficiency:** strategies, several of them backed by public datasets, that reduce the tokens needed to call these tools. Every strategy is tested in experiments, the optimum is chosen with an explicit decision log, and each change carries a trust score and evidence.
 
-Ollama is the default LLM, and any other backend can be swapped in to rerun the same experiments.
+Ollama is the default LLM in the plan, and any other backend can be swapped in to rerun the same experiments. The reported experiments ran on Mistral Large 4 through NVIDIA's hosted API, because the local model ran out of memory.
 
-> **Status:** build plan. This README is the specification for building the prototype phase by phase in Claude Code.
+> **Status:** Phases 0 to 10 are built; [Results](#results-what-made-tool-calls-cheaper) reports what the experiments found. Phases 11 and 12 are not started. The rest of this README is the specification the prototype was built from, phase by phase, in Claude Code.
 >
 > **Verified on 2026-11-01:** items marked *verified* were checked against the servers' source code and the SDK versions installed from PyPI and npm on that date. Versions drift, so Phase 2 re-checks them against the live servers.
 >
@@ -17,12 +17,106 @@ Ollama is the default LLM, and any other backend can be swapped in to rerun the 
 
 ## Contents
 
+- [Results: what made tool calls cheaper](#results-what-made-tool-calls-cheaper)
+
 1. [Verified metadata](#1-verified-metadata)
 2. [Architecture](#2-architecture)
 3. [Build steps](#3-build-steps)
 4. [Gotchas](#4-gotchas)
 5. [Working in Claude Code](#5-working-in-claude-code)
 6. [References](#6-references)
+
+---
+
+## Results: what made tool calls cheaper
+
+Phases 0 to 10 are built and the experiments have run. This section reports what they found; the build steps in section 3 remain the specification.
+
+**The accepted configuration cuts tokens per successful task by 31% and solves more tasks.** It combines three changes (called ABC in the experiments) and is recorded as `decisions/p10b@v2`, accepted on 2026-11-09:
+
+| | Change | Setting |
+|---|---|---|
+| A | Schema compression (E2) | `E2:level=minimal` |
+| B | Result shaping (E6) | `E6:mode=budget,budget=2000` |
+| C | Final answer at the turn limit (E9) | `E9` with `max_turns` 6 instead of 8 |
+
+Run it with:
+
+```
+toolhelper bench run --strategy E2:level=minimal --strategy E6:mode=budget,budget=2000 --strategy E9 --max-turns 6
+```
+
+### Measured gain
+
+All numbers are measured tokens on the 54-task benchmark with Mistral Large 4 (`nim-mistral`), 19 tools offered.
+
+| Comparison | Success | Tokens per successful task | Trust |
+|---|---|---|---|
+| Replay, 3 paired repeats: baseline | 88.3% | about 52,300 | about 0.97 |
+| Replay, 3 paired repeats: ABC | 95.1% | 35,902 | 0.923 |
+| Live servers, 27 tasks, 1 run: baseline | 88.9% | 53,596 | 0.970 |
+| Live servers, 27 tasks, 1 run: ABC | 92.6% | 34,823 | 0.919 |
+
+- **Tokens per success:** −31.4% in replay (95% CI −41.2% to −19.6%) and −35% live.
+- **Success:** +6.8 points in replay (CI +1.2 to +13.0). ABC gained 13 tasks and lost 2 (McNemar p = 0.0074).
+- **Trust:** stays above the 0.9 gate but falls by about 0.05.
+
+### Where the tokens went
+
+The baseline runs showed two cost centres, and the three changes aim at them:
+
+- **Tool results carried across turns: 51% of a run's tokens.** Every result is re-sent on each later turn.
+- **Tool definitions: 44%.** All 19 definitions cost 4,804 prompt tokens and are re-sent every turn; `biomcp__search` alone costs 1,489.
+
+### What each change contributed
+
+Effects are from the p10b fractional factorial (8 cells × 54 tasks, paired by task, bootstrap 95% CIs).
+
+| Change | Tokens per success | Success | How it saves |
+|---|---|---|---|
+| A: E2 minimal | −18.1% (−26.3 to −8.6) | +2.3 points | Drops schema bounds that only reject values (string lengths, `minItems`, `uniqueItems`, `format`), most of BioMCP's schema tokens. The first-turn prompt shrinks by 1,144 tokens per run. Calls valid under the original schema stay valid. |
+| B: E6 budget 2000 | −16.8% (−27.1 to −5.8) | −0.5 points | Cuts results over 2,000 tokens to their leading whole items or sections and parks the rest behind `expand_result`. Carried results fall by 9,080 tokens per run, at 0.25 extra expand calls per run. |
+| C: E9, 6 turns | −17.6% (−25.4 to −9.9) | +6.0 points (+1.4 to +11.6) | Stops turn loops: after six tool turns the model is asked once, with no tools, to answer from what it gathered. This is the only change that clearly raises success. |
+
+No interaction between the three was distinguishable from zero, so their savings add up.
+
+### What did not work
+
+| Strategy | Result | Why |
+|---|---|---|
+| E2 light | No difference over 3 repeats (+0.3%, CI −15.3% to +20.5%) | It saves only 635 of the 4,804 definition tokens per turn. |
+| E4 argument guard (repair) | Tokens +0.8% (CI includes 0) | Argument errors fell by 0.45 per run, but that did not reduce tokens. |
+| E1 tool retrieval | Success −9.9 points | Retrieval dropped BioMCP tools that tasks needed. |
+| E8 history compaction (after use) | Success −11.7 points, tokens per success +36.6% | It hid facts the model still needed. |
+| E6 projection | Success −4.3 points, tokens per success +15.2% | It only trims unused fields of three tools. |
+| E5 recipes | +20.6% tokens per success when added to E2 light | |
+| E7 cache | +3.4% tokens per success, success −0.6 points | |
+| E3 grounding on top of ABC: hints | +11.7% tokens per success (CI +1.9% to +22.4%) | Hints add carried tokens and 0.5 more errors per run. |
+| E3 on top of ABC: tool, rewrite | No clear effect (−3.3% and +0.6%, CIs include 0) | |
+| E3 tool + rewrite together | Not confirmed: −5.8% (CI −14.1% to +3.5%) | A lead from one factorial that shrank on fresh runs. |
+
+The E1, E5, E7, E8 and E6 projection results come from one or two runs per strategy in the first iteration, so treat their exact sizes with caution.
+
+### What made the experiments work
+
+- **Single runs are noise.** The per-task spread between identical runs is 0.29 in log tokens, so one run per arm detects only changes of about 14%, and three runs about 8.5%. A −14% result for E2 light from one run disappeared over three repeats.
+- **Diagnose before testing.** The first iteration (p10: singles, then greedy selection) found nothing, because its variants barely touched the two cost centres. The second iteration first computed each variant's saving on the existing baseline traces and tested only variants large enough to detect.
+- **A fractional factorial beats one-at-a-time arms.** Each factor's effect compares half of all runs with the other half, so 8 passes measured four factors and their interactions.
+- **Fix the choice rule in advance, then confirm on fresh runs.** A factor is adopted when its tokens-per-success CI lies below 0, success holds within 2 points and trust stays at or above 0.9.
+- **Keep the replay set honest.** Recordings of an API outage and of rate-limit errors reported as empty results had to be archived and re-recorded before the second iteration. That repair is also why its baseline (88.3%) is higher than the first iteration's (82.1%).
+
+### Limits
+
+- **One model.** All results are for Mistral Large 4 on NVIDIA's hosted API, which is not seed-reproducible. Phase 11 (rerun on another LLM) has not started.
+- **Result shaping costs tokens on OMOP tasks:** +22.8% tokens per run there (CI +5.8% to +45.3%). A per-server setting that turns B off for OMOP has not been tested.
+- **Trust falls by about 0.05,** from the compressed-schema fidelity penalty and the result cuts.
+- **Trust measures consistency with evidence, not correctness.** A wrong answer that matches what a server returned still scores 1.0.
+- **54 tasks.** Intervals are wide; the live check is one run on 27 tasks.
+
+### Reproducing and extending
+
+- Experiment configs are `configs/experiments.yaml` (p10) and `configs/experiments-p10b.yaml`, `-p10c.yaml`, `-p10d.yaml`. Run one with `toolhelper experiment freeze|auto|status --config <file>`.
+- `uv run --extra dashboard toolhelper experiment app` opens a local app to design, launch and read experiments. Its Strategies tab defines further strategies (E10 and up) from three building blocks, saved to `configs/strategies.yaml`; these have not been measured yet.
 
 ---
 
@@ -490,6 +584,8 @@ The first benchmark run uses record mode, experiments use replay, and the final 
 3. **Run a two-level fractional factorial** instead of steps 3 and 6. Every cell runs every task once, in a seeded random order. Each factor's effect compares half of the runs with the other half, paired by task, with bootstrap CIs; two-factor interactions come from the same runs; per-server effects are reported too.
 4. **Fix the choice rule before running.** A factor is on when the CI of its change in tokens per success lies below zero, success holds within the gate and trust stays ≥ 0.9. Confirm the chosen config against the baseline with 3 paired repeats each, then follow steps 9 and 10.
 5. **Keep the replay set honest.** Live fallbacks from parallel passes share a cross-process throttle. Recordings of transient failures (an API outage, rate-limit errors reported as empty results) move to `data/replay-archive/` with a manifest, so the real server re-records them (`scripts/archive_recordings.py`).
+
+**Outcome:** see [Results](#results-what-made-tool-calls-cheaper). The second iteration chose E2 minimal + E6 budget 2000 + E9 with `max_turns` 6 (`decisions/p10b@v2`).
 
 ### Phase 11: Swap the LLM and rerun
 

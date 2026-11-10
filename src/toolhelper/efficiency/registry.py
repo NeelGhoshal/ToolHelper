@@ -18,6 +18,7 @@ from pydantic import BaseModel
 from toolhelper.agent.hooks import ToolDef
 
 ORDER = ["E1", "E2", "E3", "E5", "E4", "E7", "E6", "E8", "E9"]
+BUILTIN = tuple(ORDER)  # user-defined strategies (efficiency/custom.py) are appended to ORDER after these
 
 
 class Inputs(BaseModel):
@@ -57,6 +58,20 @@ PARAMS: dict[str, dict[str, Any]] = {
     "E6": {"mode": ["projection", "top_n", "summary", "budget"], "top_n": int, "budget": int},
     "E7": {},
     "E8": {"mode": ["after_turn", "after_use"]},
+    "E9": {},
+}
+
+
+# What a builder uses for a parameter the spec leaves out.
+DEFAULTS: dict[str, dict[str, Any]] = {
+    "E1": {"top_k": 5, "mode": "static", "route": "off"},
+    "E2": {"level": "light"},
+    "E3": {"modes": "hints"},
+    "E4": {"mode": "reject"},
+    "E5": {"mode": "plan"},
+    "E6": {"mode": "projection", "top_n": 5, "budget": 2000},
+    "E7": {},
+    "E8": {"mode": "after_use"},
     "E9": {},
 }
 
@@ -169,4 +184,24 @@ def build_strategies(specs: list[str], inputs: Inputs) -> list[Any]:
     ids = [sid for sid, _ in parsed]
     if len(set(ids)) != len(ids):
         raise ValueError(f"each strategy once: {ids}")
-    return [BUILDERS[sid](params, inputs) for sid, params in sorted(parsed, key=lambda sp: ORDER.index(sp[0]))]
+    return [BUILDERS[sid]({**DEFAULTS[sid], **params}, inputs)
+            for sid, params in sorted(parsed, key=lambda sp: ORDER.index(sp[0]))]
+
+
+def install_custom(path: Path | None = None) -> dict[str, Any]:
+    """(Re)loads the user-defined strategies into ORDER, PARAMS, DEFAULTS and BUILDERS, in place."""
+    from toolhelper.efficiency import custom
+
+    defs = custom.load(path)
+    for sid in [s for s in ORDER if s not in BUILTIN]:
+        ORDER.remove(sid)
+        for table in (PARAMS, DEFAULTS, BUILDERS):
+            table.pop(sid, None)
+    for sid, d in defs.items():
+        ORDER.append(sid)
+        PARAMS[sid], DEFAULTS[sid] = {}, {}
+        BUILDERS[sid] = lambda p, inp, sid=sid, d=d: custom.build(sid, d, inp)
+    return defs
+
+
+install_custom()

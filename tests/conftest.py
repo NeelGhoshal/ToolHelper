@@ -8,6 +8,15 @@ import pytest
 FIXTURES = Path(__file__).parent / "fixtures"
 
 
+@pytest.fixture(autouse=True)
+def no_user_strategies(monkeypatch, tmp_path):
+    """Tests never see the user's configs/strategies.yaml; each starts with E1-E9 only."""
+    from toolhelper.efficiency import custom, registry
+
+    monkeypatch.setattr(custom, "FILE", tmp_path / "strategies.yaml")
+    registry.install_custom()
+
+
 def load_fixture(name: str) -> dict[str, Any]:
     return json.loads((FIXTURES / name).read_text(encoding="utf-8"))
 

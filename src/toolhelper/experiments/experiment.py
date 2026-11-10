@@ -86,8 +86,11 @@ def replay_set(store_dir: Path) -> dict[str, Any]:
 
 
 def freeze_inputs(*, catalog_hash: str, tasks_file: Path, datasets: list[dict[str, Any]], llm_profile: dict[str, Any],
-                  store_dir: Path, learn_from_runs: list[str]) -> dict[str, Any]:
+                  store_dir: Path, learn_from_runs: list[str],
+                  custom_strategies: dict[str, Any] | None = None) -> dict[str, Any]:
     return {
+        # user-defined strategies the config uses (absent when none, so earlier input hashes still match)
+        **({"custom_strategies": custom_strategies} if custom_strategies else {}),
         "catalog_hash": catalog_hash,
         "benchmark": {"file": tasks_file.name, "sha256": hashlib.sha256(tasks_file.read_bytes()).hexdigest()},
         "datasets": {d["name"]: {"wref": d["wref"], "sha256": d["sha256"]} for d in datasets},
