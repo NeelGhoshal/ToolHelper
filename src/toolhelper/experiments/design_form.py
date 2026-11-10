@@ -2,7 +2,7 @@
 so it can be tested: the text shown for each strategy and parameter, slider ranges, building a
 spec from widget values, and the factor rows the form edits.
 
-The texts repeat the strategies' own docstrings and the measured Phase 10 results (CLAUDE.md);
+The texts repeat the strategies' own docstrings and the measured Phase 10 results (README);
 allowed values and defaults come from the registry, so a new variant shows up in the form
 without a change here (it only lacks a description until one is added).
 """

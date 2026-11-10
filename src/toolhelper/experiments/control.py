@@ -46,7 +46,7 @@ def _windows_user_env(key: str) -> str | None:
 
 
 def tool_dirs() -> list[Path]:
-    """Directories holding uv and biomcp when they are not on PATH (CLAUDE.md, Environment notes)."""
+    """Directories holding uv and biomcp when they are not on PATH (README section 5, Environment notes)."""
     dirs = [Path.home() / ".local" / "bin"]
     if appdata := os.environ.get("APPDATA"):
         dirs += sorted((Path(appdata) / "Python").glob("Python3*/Scripts"))
@@ -92,7 +92,7 @@ def free_memory_gb() -> float | None:
 
 
 def onedrive_running() -> bool:
-    """OneDrive syncing the run's files grew to several GB of RAM during p10/p10b (CLAUDE.md)."""
+    """OneDrive syncing the run's files grew to several GB of RAM during p10/p10b (README section 5)."""
     if sys.platform != "win32":
         return False
     r = subprocess.run(["tasklist", "/FI", "IMAGENAME eq OneDrive.exe", "/NH"], capture_output=True, text=True)

@@ -94,7 +94,7 @@ def require_columns(file: str, header: Iterable[str], required: Iterable[str]) -
 
 def read_tsv(lines: Iterable[str], file: str, required: Iterable[str], *, quoting: int = csv.QUOTE_MINIMAL,
              show_header: bool = True) -> Iterator[dict[str, str]]:
-    """Tab-separated rows as dicts. Prints the real header first (CLAUDE.md: never trust
+    """Tab-separated rows as dicts. Prints the real header first (README section 5: never trust
     remembered column names) and checks the loader's required columns against it."""
     csv.field_size_limit(sys.maxsize if sys.maxsize < 2**31 else 2**31 - 1)
     reader = csv.DictReader(lines, delimiter="\t", quoting=quoting)

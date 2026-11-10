@@ -1,6 +1,6 @@
 """E1: tool retrieval. Offers only the tools a task needs, found by lexical search over
 ToolCards (Paper Librarian's method: FTS5 BM25 per field, fused by reciprocal rank; no
-embeddings, see CLAUDE.md).
+embeddings, see README section 5).
 
 ToolCards are built from the catalog (description, required arguments), successful runs
 (their prompts become example tasks, the runs their evidence) and E4's learned pitfalls,
