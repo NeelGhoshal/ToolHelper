@@ -1,0 +1,71 @@
+# Phase 10, p10e (2026-11-10): five changes on top of the accepted ABC config (decisions/p10b@v2),
+# aimed at what the 378 ABC runs of p10b, p10c and p10d show. Pre-registered here before any p10e run.
+#
+# What those runs show (34,133 tokens per run):
+#   - tool results carried across turns are 53% of tokens, tool definitions 40%; both are re-sent every
+#     turn, so the number of turns multiplies both;
+#   - the model keeps working after it has the answer: in 201 of 241 passed runs with an answer-string
+#     check, the string was already in a turn-1 tool result; 21% of runs still hit the 6-turn limit;
+#   - expand_result returns the whole original: 54 of 89 expands exceeded 2,000 tokens (largest 187,691);
+#   - 228 of 378 runs called the tools of one server only, but every turn carries all 19 definitions;
+#   - errors are not the cost: 17% of calls fail, but an error result averages 17 tokens.
+#
+# Fixed-behaviour predictions on those runs (estimates, not results):
+#   L  turn limit 4 instead of 6: -18.4% tokens; 6 of 378 runs (1.6%, all BioMCP) could no longer pass.
+#      Limit 3 (-35.6%) puts 3.2% of runs at risk, beyond the gate, and is not tested.
+#   S  instruction to answer as soon as the results hold the answer (E10): unknown; ceiling is large.
+#   K  result budget 1,000 instead of 2,000: -17.6% (estimated tokenizer), no passed run loses every copy
+#      of its answer string; expect more expand calls, and trust is 0.92 against the 0.9 gate.
+#   P  expand_result returns what was cut one budget-sized part at a time: -5.6%, and no 100,000-token results.
+#      Each part is an expand call, which the trust score's fidelity component penalizes.
+#   M  server menu (E1 mode=servers): the model loads the servers it needs with one call; with the servers
+#      each run actually used, definitions fall 49% (about -19% of tokens), minus one short loading turn.
+#      That turn counts toward the limit, so L and M may interact.
+#
+# Not tested, with reasons: E2 aggressive on top of minimal (-10% of definitions, ~4% of tokens: below
+# what this design detects); E1 top-k retrieval (dropped needed tools in p10); E7 (no identical repeated
+# call in 378 runs); E4, E3, E5, E8 (measured: no gain or a loss); E6 off for OMOP (OMOP is 9% of tokens).
+#
+# Design: 2^(5-1) fractional factorial, M = -LSKP (resolution V): 16 cells x 54 tasks; every main effect
+# and every two-factor interaction has its own contrast (8 cells vs 8, paired by task). This half
+# fraction holds the cells with an even number of factors on, so it includes `none`, ABC alone. Choice rule, confirmation (3 paired repeats vs ABC, on fresh runs), Decision and live check
+# on fold A are p10b's, unchanged. K replaces the base's budget (overrides_base); P and K add to the
+# base's E6 spec. Passes run 3 at a time (2.4 GB of RAM free at launch).
+design: factorial
+experiment: p10e
+llm: nim-mistral
+mode: replay            # recordings first; misses fall through to live and are recorded
+max_turns: 8            # overridden by the base's limit (6) and by L (4)
+parallel: 3
+# Same learning groups as p10b-d, so the base behaves as it did there; E10 cites their max_turns runs.
+learn_from: [bench-baseline-record, p10-baseline-r1, p10-baseline-r2, p10-baseline-r3]
+
+base:
+  specs: ["E2:level=minimal", "E6:mode=budget,budget=2000", "E9"]
+  max_turns: 6
+  note: decisions/p10b@v2 (accepted 2026-11-09)
+
+factors:
+  L:
+    max_turns: 4
+    note: turn limit 4 instead of 6; E9 then asks once for the answer
+  S:
+    specs: ["E10"]
+    note: 'instruction "Answer early" (configs/strategies.yaml): answer as soon as the results hold what the task asks'
+  K:
+    specs: ["E6:budget=1000"]
+    overrides_base: true
+    note: results over 1,000 tokens (not 2,000) are cut to their leading whole items or sections
+  P:
+    specs: ["E6:expand=page"]
+    note: expand_result returns what was cut one budget-sized part at a time, not the whole original
+  M:
+    specs: ["E1:mode=servers"]
+    note: server menu; no hub tool is offered until the model loads a server's tools with load_tools
+generators: {M: "-LSKP"}   # resolution V half fraction of 2^5: 16 cells, main effects and 2-factor interactions all clear
+
+confirm_repeats: 3      # chosen config vs ABC, paired repeats each (the factorial cells count as repeat 1)
+live_fold: A
+order_seed: 19          # pass order is shuffled with this seed
+gate: {max_success_drop: 0.02, min_trust: 0.9}
+bootstrap: {samples: 2000, seed: 7}

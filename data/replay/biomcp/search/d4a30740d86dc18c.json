@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "dementia",
+      "Alzheimer"
+    ],
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "d4a30740d86dc18cbf47070e87d4e70578ee947b3c2ed55360c8fbdcc9de3277",
+  "recorded_at": "2026-11-12T04:02:16.807470+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4231.355500000063,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin dementia Alzheimer, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"statin dementia Alzheimer\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 32738937|Dementia prevention, intervention, and care: 2020 report of…|Europe PMC|2020-07-30|-|7936| \n|PMID 28122885|Heart Disease and Stroke Statistics-2017 Update: A Report Fr…|Europe PMC|2017-01-25|-|6484| \n|PMID 33501848|Heart Disease and Stroke Statistics-2021 Update: A Report Fr…|Europe PMC|2021-01-27|-|4456| \n|PMID 36695182|Heart Disease and Stroke Statistics-2023 Update: A Report Fr…|Europe PMC|2023-01-25|-|4105| \n|PMID 24352519|Heart disease and stroke statistics--2014 update: a report f…|Europe PMC|2013-12-18|-|4036| \n|PMID 23239837|Heart disease and stroke statistics--2013 update: a report f…|Europe PMC|2012-12-12|-|3703| \n|PMID 34871380|Statin use and risk of dementia or Alzheimer's disease: a sy…|PubTator3|2022-05-05|-|154| \n|PMID 36291224|Statins Use in Alzheimer Disease: Bane or Boon from Frantic…|PubTator3|2022-09-24|-|76| \n|PMID 38115091|Statins and cognitive decline in patients with Alzheimer's a…|PubTator3|2023-12-20|-|65| \n|PMID 37167234|What is the impact of ongoing statin use on cognitive declin…|PubTator3|2023-05-11|-|13| \n|PMID 34405076|Statins' Effect on Cognitive Outcome After Traumatic Brain I…|PubTator3|2021-08-06|-|13| \n|PMID 39963242|The role of statins in dementia or Alzheimer's disease incid…|PubTator3|2025-02-03|-|12| \n|PMID 42998054|Impact of Statin and Aspirin Use on Dementia Diagnosis Strat…|PubMed|2026-11-07|-|0| \n|PMID 42903333|Association of statin use with reduced risk of Alzheimer's d…|PubMed|2026-10-06|-|0| \n|PMID 42735389|Cardiometabolic medication exposures and cognitive outcomes…|PubMed|2026-09-04|-|0| \n \n \n \nNewest indexed: 2026-11-07 (5 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 32738937\n  biomcp search article -k \"statin dementia Alzheimer\" --year-min 2012 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

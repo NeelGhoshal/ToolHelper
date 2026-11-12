@@ -1,0 +1,9 @@
+# User-defined strategies (see src/toolhelper/efficiency/custom.py). Edited by the experiment app.
+strategies:
+  E10:
+    name: Answer early
+    kind: instruction
+    what: Stops the model from searching on after it has what the task asks for.
+    text: Answer as soon as the tool results contain what the task asks for. Do not run further searches to confirm
+      or add to an answer you already have.
+    evidence_runs: max_turns

@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2025-01-01",
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "BRAF V600E",
+      "targeted therapy",
+      "resistance"
+    ],
+    "limit": 10,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "3325243b4a71502647451e0f20b33c68161f4cec239e1949bba8b85ae033baf5",
+  "recorded_at": "2026-11-11T08:43:33.199939+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1036.6498000221327,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=BRAF V600E targeted therapy resistance, date_from=2025-01-01, exclude_retracted=true, sort=date, source=pubmed\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": false,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubmed\"\n    ],\n    \"enrichment_sources\": []\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": 870,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"42897968\",\n      \"title\": \"Precision Thyroid Oncology Using Genetic-Based Therapies: A Narrative Review.\",\n      \"journal\": \"Thyroid : official journal of the American Thyroid Association\",\n      \"date\": \"2026-10-20\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42878587\",\n      \"title\": \"Molecular biomarkers for diagnosis, prognosis, precision therapy, and immunotherapy in cholangiocarcinoma, cHCC-CCA, and HCC.\",\n      \"journal\": \"Hepatology communications\",\n      \"date\": \"2026-10-14\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42829473\",\n      \"title\": \"Papillary thyroid carcinoma in children: prevalence, morphology, molecular and cytogenetic characteristics, and prognostic determinants.\",\n      \"journal\": \"Journal of pediatric endocrinology & metabolism : JPEM\",\n      \"date\": \"2026-10-05\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42801439\",\n      \"title\": \"Dabrafenib plus trametinib in BRAF V600E-mutant Erdheim-Chester disease: a case series including CNS involvement.\",\n      \"journal\": \"International journal of hematology\",\n      \"date\": \"2026-09-27\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42770269\",\n      \"title\": \"A context-dependent modulatory role for eIF6 in acquired resistance to vemurafenib in melanoma.\",\n      \"journal\": \"FEBS letters\",\n      \"date\": \"2026-09-22\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42770652\",\n      \"title\": \"Comprehensive Genomic Profiling Beyond Driver Testing in Non-Squamous Non-Small Cell Lung Cancer With Known Drivers.\",\n      \"journal\": \"Cancer science\",\n      \"date\": \"2026-09-22\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42907443\",\n      \"title\": \"p38α orchestrates BRAF(V600E)-melanoma progression and immunotherapy response via tumor fitness and immune microenvironment modulation.\",\n      \"journal\": \"Nature communications\",\n      \"date\": \"2026-09-22\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42794461\",\n      \"title\": \"Predicted STAT1-BRAF and IRF7-MET Regulatory Links Are Associated with MAPK Pathway Reactivation and Targeted Therapy Resistance in Melanoma.\",\n      \"journal\": \"International journal of molecular sciences\",\n      \"date\": \"2026-09-09\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42808388\",\n      \"title\": \"KRAS and BRAF Hotspot Variants Show Lower Prevalence in Bangladeshi Colorectal Cancer Patients.\",\n      \"journal\": \"Asian Pacific journal of cancer prevention : APJCP\",\n      \"date\": \"2026-09-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42989302\",\n      \"title\": \"Triple-gated domino nanobomb for mutation-selective ferroptosis induction in BRAF V600E thyroid cancer.\",\n      \"journal\": \"Journal of nanobiotechnology\",\n      \"date\": \"2026-08-07\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42897968\",\n      \"biomcp list article\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

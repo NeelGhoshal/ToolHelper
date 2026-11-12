@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2024-06-01",
+    "date_to": "2025-12-31",
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "gene therapy",
+      "clinical"
+    ],
+    "limit": 20,
+    "sort": "date"
+  },
+  "args_key": "42354cdc75965b43976190d9af822be1cccfd92a2be79c0eabb89a3c4ed1395f",
+  "recorded_at": "2026-11-12T03:53:47.747798+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 15492.10960000346,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR gene therapy clinical, date_from=2024-06-01, date_to=2025-12-31, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nPubTator3 source status: degraded (PubTator3 timed out after 12s) \nRetry: `biomcp search article --keyword \"CRISPR gene therapy clinical\" --date-from 2024-06-01 --date-to 2025-12-31 --exclude-retracted --sort date --source pubtator --limit 20 --offset 0` \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CRISPR gene therapy clinical\" --date-from 2024-06-01 --date-to 2025-12-31 --exclude-retracted --sort date --source semanticscholar --limit 20 --offset 0` \n \n \nFound 20 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42903961|Current status and challenges in the diagnosis and treatment…|Europe PMC|2025-12-31|-|0| \n|PMID 41516321|KCNV2-Deficient Retinal Organoid Model of Cone Dystrophy-In…|PubMed|2025-12-31|-|0| \n|PMID 41467444|Interplay of GBA1 with lysosomal dysfunction and inflammatio…|Europe PMC|2025-12-30|-|8| \n|PMID 41467429|Therapeutic potential of astrocyte transdifferentiated neuro…|Europe PMC|2025-12-30|-|6| \n|PMID 41467422|Targeting innovative therapeutic approaches to the hallmarks…|Europe PMC|2025-12-30|-|1| \n|PMID 41468306|Silencing of optogenetic and chemogenetic transgenes in huma…|Europe PMC|2025-12-30|-|1| \n|PMID 41467409|Stem cell models in ataxia-telangiectasia.|Europe PMC|2025-12-30|-|0| \n|PMID 41467414|High mobility group box 1 and its post-translational modific…|Europe PMC|2025-12-30|-|0| \n|PMID 41467427|Stem cell derived neural organoid approaches for neurologica…|Europe PMC|2025-12-30|-|0| \n|PMID 41883386|Stem cell-based approaches for glaucoma treatment: a mini re…|PubMed|2025-12-30|-|0| \n|PMID 41497813|From Bench to Bedside: The Evolving Landscape of Stem Cell T…|PubMed|2025-12-28|-|1| \n|PMID 41570230|CRISPR-Cas genome editing system in the diagnosis and therap…|PubMed|2025-12-28|-|0| \n|PMID 41454672|The role of gut microbiome in aging-associated diseases: whe…|Europe PMC|2025-12-27|-|14| \n|PMID 41562671|Advances in Gene Therapy for Inherited Haemoglobinopathies.|PubMed|2025-12-27|-|1| \n|PMID 41568168|Enhancement of therapeutic transgene insertion for treatment…|PubMed|2025-12-26|-|4| \n|PMID 41437911|Piezo-type mechanosensitive ion channel component 1: a mecha…|Europe PMC|2025-12-24|-|7| \n|PMID 41433220|The role of salvianolic acid B and benzoylpaeoniflorin in en…|Europe PMC|2025-12-23|-|2| \n|PMID 41594738|From Transcriptome to Therapy: The ncRNA Revolution in Neuro…|PubMed|2025-12-23|-|3| \n|PMID 41427517|Polymersome-based nanomedicine for combined cancer therapy.|Europe PMC|2025-12-22|-|2| \n|PMID 42491364|Therapeutic resistance in cancer: lncRNAs as modulators and…|Europe PMC|2025-12-19|-|2| \n \n \n \nNewest indexed: 2026-10-23 (20 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42903961 \n \n \n \nShowing 20 results (total unknown). Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

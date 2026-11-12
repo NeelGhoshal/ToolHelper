@@ -32,23 +32,26 @@ Ollama is the default LLM in the plan, and any other backend can be swapped in t
 
 Phases 0 to 10 are built and the experiments have run. This section reports what they found; the build steps in section 3 remain the specification.
 
-**The accepted configuration cuts tokens per successful task by 31% and solves more tasks.** It combines three changes (called ABC in the experiments) and is recorded as `decisions/p10b@v2`, accepted on 2026-11-09:
+**The accepted configuration was reached in two steps, each confirmed on fresh paired runs.** The first step (three changes, called ABC in the experiments) cut tokens per successful task by 31% and solved more tasks. The second step (S and K, on top of ABC) cut a further 30% at the same success rate. The configuration is recorded as `decisions/p10e@v3`, accepted on 2026-11-12; the first step is `decisions/p10b@v2`, accepted on 2026-11-09.
 
-| | Change | Setting |
-|---|---|---|
-| A | Schema compression (E2) | `E2:level=minimal` |
-| B | Result shaping (E6) | `E6:mode=budget,budget=2000` |
-| C | Final answer at the turn limit (E9) | `E9` with `max_turns` 6 instead of 8 |
+| | Change | Setting | Step |
+|---|---|---|---|
+| A | Schema compression (E2) | `E2:level=minimal` | 1 |
+| B, K | Result shaping (E6) | `E6:mode=budget,budget=1000` (step 1 used a budget of 2,000) | 1, tightened in 2 |
+| C | Final answer at the turn limit (E9) | `E9` with `max_turns` 6 instead of 8 | 1 |
+| S | "Answer early" instruction (E10) | `E10`, defined in `configs/strategies.yaml` | 2 |
 
 Run it with:
 
 ```
-toolhelper bench run --strategy E2:level=minimal --strategy E6:mode=budget,budget=2000 --strategy E9 --max-turns 6
+toolhelper bench run --strategy E2:level=minimal --strategy E6:mode=budget,budget=1000 --strategy E9 --strategy E10 --max-turns 6
 ```
 
 ### Measured gain
 
 All numbers are measured tokens on the 54-task benchmark with Mistral Large 4 (`nim-mistral`), 19 tools offered.
+
+**Step 1: ABC against the baseline (p10b).**
 
 | Comparison | Success | Tokens per successful task | Trust |
 |---|---|---|---|
@@ -61,12 +64,32 @@ All numbers are measured tokens on the 54-task benchmark with Mistral Large 4 (`
 - **Success:** +6.8 points in replay (CI +1.2 to +13.0). ABC gained 13 tasks and lost 2 (McNemar p = 0.0074).
 - **Trust:** stays above the 0.9 gate but falls by about 0.05.
 
+**Step 2: ABC + S + K against ABC (p10e).**
+
+| Comparison | Success | Tokens per successful task | Trust |
+|---|---|---|---|
+| Replay, 3 paired repeats: ABC | 96.3% | about 35,900 | about 0.93 |
+| Replay, 3 paired repeats: ABC + S + K | 96.3% | 25,046 | 0.944 |
+| Live servers, 27 tasks, 1 run: ABC | 96.3% | 37,310 | 0.909 |
+| Live servers, 27 tasks, 1 run: ABC + S + K | 92.6% | 28,209 | 0.922 |
+
+- **Tokens per success:** −30.1% in replay (95% CI −39.4% to −20.2%) and −24% live.
+- **Success:** unchanged in replay; no task was lost or gained across the three paired repeats. Live, S + K passed 25 of 27 tasks and ABC 26: both failed med-004 (a server bug), and S + K also failed bio-014 on its single run.
+- **Trust:** 0.944, slightly above ABC's.
+- **Both steps together:** the first baseline measured 57,901 tokens per successful task at 82.1% success; the accepted configuration measures 25,046 at 96.3%. These come from different run sets (the replay set was repaired in between), so the combined saving of roughly 57% is approximate.
+
 ### Where the tokens went
 
-The baseline runs showed two cost centres, and the three changes aim at them:
+The baseline runs showed two cost centres, and the three changes of step 1 aim at them:
 
 - **Tool results carried across turns: 51% of a run's tokens.** Every result is re-sent on each later turn.
 - **Tool definitions: 44%.** All 19 definitions cost 4,804 prompt tokens and are re-sent every turn; `biomcp__search` alone costs 1,489.
+
+The 378 ABC runs that followed (34,133 tokens per run) showed what was left, and step 2 aims at that:
+
+- **The same two centres, multiplied by turns:** carried results 53%, definitions 40%. Both are re-sent every turn.
+- **The model kept working after it had the answer.** In 201 of 241 passed runs with an answer-string check, the string was already in a tool result of the first turn, yet 21% of runs still hit the 6-turn limit.
+- **Errors are not the cost.** 17% of calls fail, but an error result averages 17 tokens.
 
 ### What each change contributed
 
@@ -79,6 +102,15 @@ Effects are from the p10b fractional factorial (8 cells × 54 tasks, paired by t
 | C: E9, 6 turns | −17.6% (−25.4 to −9.9) | +6.0 points (+1.4 to +11.6) | Stops turn loops: after six tool turns the model is asked once, with no tools, to answer from what it gathered. This is the only change that clearly raises success. |
 
 No interaction between the three was distinguishable from zero, so their savings add up.
+
+Step 2's effects are from the p10e fractional factorial (five factors on top of ABC, 16 cells × 54 tasks, each effect 8 cells against 8).
+
+| Change | Tokens per success | Success | How it saves |
+|---|---|---|---|
+| S: E10 "Answer early" | −26.9% (−33.9 to −19.5) | +0.2 points | One instruction: answer as soon as the tool results hold what the task asks, without further searches to confirm. Runs are 0.52 turns shorter and carry 4,827 fewer result tokens. It costs 40 prompt tokens. |
+| K: E6 budget 1,000 | −6.4% (−10.5 to −2.2) | −0.7 points | Results over 1,000 tokens (not 2,000) are cut. Carried results fall by a further 1,875 tokens per run, at 0.1 extra expand calls per run. |
+
+Together they measured −30.1% in the confirmation, a little less than the sum of the two, which fits the S × K interaction estimate (+3.9%, CI includes 0): a run that stops early has less carried result text left to cut.
 
 ### What did not work
 
@@ -94,6 +126,9 @@ No interaction between the three was distinguishable from zero, so their savings
 | E3 grounding on top of ABC: hints | +11.7% tokens per success (CI +1.9% to +22.4%) | Hints add carried tokens and 0.5 more errors per run. |
 | E3 on top of ABC: tool, rewrite | No clear effect (−3.3% and +0.6%, CIs include 0) | |
 | E3 tool + rewrite together | Not confirmed: −5.8% (CI −14.1% to +3.5%) | A lead from one factorial that shrank on fresh runs. |
+| Turn limit 4 instead of 6, on top of ABC | Tokens per success −25.4%, but success −2.5 points (limit −2) | BioMCP tasks lose 7.5 points; they need the turns. It also overlaps with "Answer early" (interaction +10.2%). |
+| Server menu (`E1:mode=servers`), on top of ABC | Tokens per success −21.5%, but success −3.0 points | The model loads a server's tools with one call, which removes 3,127 first-turn prompt tokens but adds 0.74 turns per run; BioMCP tasks lose 7.5 points. |
+| Paged `expand_result` (`E6:expand=page`), on top of ABC | No effect (−1.6%, CI −6.2% to +3.3%) | Expands are too rare to matter on average. |
 
 The E1, E5, E7, E8 and E6 projection results come from one or two runs per strategy in the first iteration, so treat their exact sizes with caution.
 
@@ -104,18 +139,20 @@ The E1, E5, E7, E8 and E6 projection results come from one or two runs per strat
 - **A fractional factorial beats one-at-a-time arms.** Each factor's effect compares half of all runs with the other half, so 8 passes measured four factors and their interactions.
 - **Fix the choice rule in advance, then confirm on fresh runs.** A factor is adopted when its tokens-per-success CI lies below 0, success holds within 2 points and trust stays at or above 0.9.
 - **Keep the replay set honest.** Recordings of an API outage and of rate-limit errors reported as empty results had to be archived and re-recorded before the second iteration. That repair is also why its baseline (88.3%) is higher than the first iteration's (82.1%).
+- **An outage is not a failure.** During p10e the model endpoint answered 404 for six minutes; 116 runs ended before their first turn and were first scored as failures, which produced a false +19-point success gain. Such runs now count as missing and are redone.
 
 ### Limits
 
 - **One model.** All results are for Mistral Large 4 on NVIDIA's hosted API, which is not seed-reproducible. Phase 11 (rerun on another LLM) has not started.
-- **Result shaping costs tokens on OMOP tasks:** +22.8% tokens per run there (CI +5.8% to +45.3%). A per-server setting that turns B off for OMOP has not been tested.
-- **Trust falls by about 0.05,** from the compressed-schema fidelity penalty and the result cuts.
+- **The "Answer early" instruction is wording for this model.** It carries most of step 2's saving, and another model may not keep working past the answer in the first place.
+- **Result shaping on OMOP tasks:** the 2,000-token budget added 22.8% tokens per run there in step 1 (CI +5.8% to +45.3%), and the 1,000-token budget shows −3.8 points of success there in step 2 (CI −7.7 to 0). A per-server setting that turns shaping off for OMOP has not been tested; OMOP is 9% of all tokens.
+- **Trust is about 0.03 below the unmodified baseline** (0.944 against about 0.97), from the compressed-schema fidelity penalty and the result cuts.
 - **Trust measures consistency with evidence, not correctness.** A wrong answer that matches what a server returned still scores 1.0.
-- **54 tasks.** Intervals are wide; the live check is one run on 27 tasks.
+- **54 tasks.** Intervals are wide; each live check is one run on 27 tasks, so step 2's live success difference is a single task.
 
 ### Reproducing and extending
 
-- Experiment configs are `configs/experiments.yaml` (p10) and `configs/experiments-p10b.yaml`, `-p10c.yaml`, `-p10d.yaml`. Run one with `toolhelper experiment freeze|auto|status --config <file>`.
+- Experiment configs are `configs/experiments.yaml` (p10) and `configs/experiments-p10b.yaml`, `-p10c.yaml`, `-p10d.yaml`, `-p10e.yaml`. Run one with `toolhelper experiment freeze|auto|status --config <file>`.
 - `uv run --extra dashboard toolhelper experiment app` opens a local app to design, launch and read experiments, shown below.
 
 ### The experiment app
@@ -130,7 +167,7 @@ The app runs on `localhost:8501` and has five tabs: Design, Strategies, Run, Pro
 
 ![Design tab: factor H of p10c as a card, with E3 dataset grounding and its modes](docs/images/app-design-factors.png)
 
-**Strategies: making your own.** The tab lists E1 to E9 and defines further ones (E10 and up) without code, from one of three building blocks: an instruction added to the task's context, a filter that hides servers or tools, or your own closing prompt at the turn limit. Definitions are saved to `configs/strategies.yaml` and then appear in the Design tab. None of these has been measured yet; the form below is filled in as an example and was not saved.
+**Strategies: making your own.** The tab lists E1 to E9 and defines further ones (E10 and up) without code, from one of three building blocks: an instruction added to the task's context, a filter that hides servers or tools, or your own closing prompt at the turn limit. Definitions are saved to `configs/strategies.yaml` and then appear in the Design tab. The first one made this way, E10 "Answer early", was measured in p10e and is part of the accepted configuration. The screenshot predates it; the form in it is filled in as an example and was not saved.
 
 ![Strategies tab: the built-in strategies and the form for a new one](docs/images/app-strategies.png)
 
@@ -551,12 +588,12 @@ The first benchmark run uses record mode, experiments use replay, and the final 
 
 | ID | Strategy | Mechanism | Variants to test | Records |
 |---|---|---|---|---|
-| E1 | Tool retrieval | offer only relevant tools via hybrid search over ToolCards (reuse the Paper Librarian search) | top-k 3/5/8; static vs `find_tools` meta-tool; server-first routing | scores, recall@k vs tools actually needed |
+| E1 | Tool retrieval | offer only relevant tools via hybrid search over ToolCards (reuse the Paper Librarian search) | top-k 3/5/8; static vs `find_tools` meta-tool; server-first routing; server menu (the model loads the servers it needs with `load_tools`) | scores, recall@k vs tools actually needed |
 | E2 | Schema compression | shorter descriptions, drop titles/defaults, keep types, enums, required | light vs aggressive vs minimal (also drops bounds that only reject values: string lengths, `minItems`, `uniqueItems`, `format`) | original vs compressed hash, later arg-error rate |
 | E3 | Dataset grounding | resolve task entities to canonical IDs before calls | inject hints vs `resolve_entity` tool vs silent arg rewrite, crossed with dataset subsets | dataset version and row per hint, *uptake* (hinted value used in args) |
 | E4 | Argument guard | validate against schema and domain rules (CDM pairs, BioMCP enums and sections, ISO3, NDC format) before calling; return a one-line fix | reject-with-hint vs deterministic auto-repair | rule fired, original vs repaired args |
 | E5 | Recipes | reuse the shortest frequent successful path for similar tasks | plan injection vs recipe tool | evidence runs, success rate, pinned schema versions |
-| E6 | Result shaping | keep fields traces show get used; park the rest behind `expand_result(handle)`; OMOP: Standard + Valid + preferred vocabulary, top 3–5; BioMCP: minimal `sections` | projection vs top-N vs summary vs token budget (results over N tokens cut to leading whole items or sections) | dropped fields and counts, expand rate |
+| E6 | Result shaping | keep fields traces show get used; park the rest behind `expand_result(handle)`; OMOP: Standard + Valid + preferred vocabulary, top 3–5; BioMCP: minimal `sections` | projection vs top-N vs summary vs token budget (results over N tokens cut to leading whole items or sections); `expand_result` returning everything vs one budget-sized part at a time | dropped fields and counts, expand rate |
 | E7 | Cache | reuse identical canonical calls within TTL | TTL per source | hit rate, age of served result |
 | E8 | History compaction | replace consumed results in later turns with a summary plus handle | after one turn vs after use is detected | carried tokens saved, re-expansions |
 | E9 | Final answer at turn limit | when `max_turns` is reached, make one last LLM call with no tools asking for an answer from what was gathered | on vs off; limit 6/8/12 | turns used, answers produced at the limit |
@@ -711,7 +748,7 @@ These differ from section 1.1 because of Windows. Use them in `configs/servers.y
 - **Bare wrefs in wref fields are pinned to `name@vN` at write time.** A link is stale when its target has a newer version or is retracted; `CommitResult.stale` lists dependents a commit just made stale. Staleness is derived, not written back into Recipe `status`.
 - **Evidence is stored as `Evidence` assertion things** (`evidence/<thing>/v<N>/<i>`, `about` + `affirmed_targets` pinned to the version it supports), not a separate table: WarmHub has no evidence relation and its docs say relationships belong in assertions. Evidence links never count as dependencies.
 - Shape types the plan leaves implicit: `success_rate`, `mean_tokens`, `expand_rate`, `ttl_seconds` are numbers; Recipe and Decision `status` use ToolCard's `proposed|accepted` enum. `RunSummary` and `Experiment` have no fields yet.
-- `toolhelper publish --repo org/name` pushes only accepted, non-stale things with their evidence, targets first, remapping pins to remote version numbers. **Untested live: no `WH_TOKEN` yet**; tested against a second local store and a fake SDK repo. `warmhub.rules.shape_definition` (used to preflight shapes in a test) is not a root export of the SDK.
+- `toolhelper publish --repo org/name` pushes only accepted, non-stale things with their evidence, targets first, remapping pins to remote version numbers. **First live publish 2026-11-11** to the private repo `neelghoshal/toolhelper` (token `toolhelper`, editor on that repo only, expires in 90 days, in the user env var `WH_TOKEN`): 43 things (6 datasets, 3 servers, 19 tool schemas, `decisions/p10b` with `experiments/p10b` and its 13 run summaries) and 669 evidence assertions; a second pass writes nothing. Four things the live run needed: (1) Experiments and RunSummaries are published when a published thing pins them (`SUPPORT_SHAPES`), without the status check, because nothing ever accepts an Experiment; before, an accepted Decision was skipped since its evidence could not go out. (2) An operation may pin a thing added earlier in the same commit. (3) WarmHub takes `affirmed_targets` only on shapes that compose its built-in `Assertion`, so `Evidence` composes it (`SHAPE_COMPOSES`), and WarmHub applies what it can and reports failures per operation, so `apply` now raises on any. (4) WarmHub returns shapes as `Name@vN` and references as `durableId@vN`; the adapter maps both back, or every publish would revise everything. Publishing also adds evidence missing from an unchanged thing. Tests use a second local store and a fake SDK repo. `warmhub.rules.shape_definition` (used to preflight shapes in a test) is not a root export of the SDK.
 
 #### Agent loop and tracer (Phase 4, 2026-11-01)
 
@@ -826,12 +863,34 @@ These differ from section 1.1 because of Windows. Use them in `configs/servers.y
 - Smoke run `smoke-p10c` (bio-001, ABC + all E3 modes): passed, the HER2 -> ERBB2 [HGNC:3430] hint was used in arguments, provenance 1.00.
 - **p10d result (finished 2026-11-10 12:58 UTC): the TR lead is not confirmed; ABC stays.** TR vs ABC, 3 paired repeats, 54 tasks: success 95.7% vs ~95.1% (+0.6 pts, CI -1.9..+3.7), tokens per success 34,630 (-5.8%, CI -14.1%..+3.5%), McNemar lost 2 / gained 3, p 1.0; trust 0.927. The gate failed only on `require_saving` (CI not below 0). The p10c interaction (-8.4%) shrank to -5.8% with a CI that includes 0, as expected of a post-hoc lead. `decisions/p10d@v1` written (proposed). Live baseline (ABC, fold A; it runs even when nothing is adopted): 92.6% / 38,849 tokens per success / trust 0.922 (replay on the same tasks 96.3% / 40,520).
 
+#### Experiments, fifth iteration (p10e, launched 2026-11-10)
+
+- **Why:** the 378 ABC runs of p10b, p10c and p10d (34,133 tokens per run) show where ABC still spends tokens. Tool results carried across turns are 53%, tool definitions 40%; both are re-sent every turn, so turns multiply both. In 201 of 241 passed runs with an answer-string check, the string was already in a turn-1 tool result, yet 21% of runs hit the 6-turn limit. 54 of 89 `expand_result` calls returned over 2,000 tokens (largest 187,691). 228 of 378 runs called one server's tools only. 17% of calls fail, but an error result averages 17 tokens, which is why E4 never saved tokens. No run repeated an identical call, so E7 cannot hit.
+- **Design (`configs/experiments-p10e.yaml`, user-authorized 2026-11-10):** base ABC; five factors in a 2^(5-1) fractional factorial, `M = -LSKP` (resolution V: every main effect and two-factor interaction has its own contrast), 16 cells x 54 tasks, 8 cells vs 8 per effect. The fraction holds the cells with an even number of factors on, so it includes `none` (ABC alone). Choice rule, confirmation (3 paired repeats), Decision and live check as in p10b. 1,134 task runs at most.
+- **Factors and fixed-behaviour predictions on the ABC runs (estimates, not results):** L turn limit 4 instead of 6 (-18.4% tokens; 6 of 378 runs, all BioMCP, could no longer pass; limit 3 would put 3.2% at risk and is not tested). S the instruction E10 "Answer early" (unknown). K budget 1,000 instead of 2,000 (-17.6% on the estimated tokenizer; no passed run loses every copy of its answer string). P paged expand (-5.6%, and no 100,000-token results). M server menu (definitions -49% with the servers each run used, about -19% of tokens, minus one loading turn that counts toward the limit).
+- **Not tested, with reasons:** E2 aggressive on top of minimal saves 10% of definitions (about 4% of tokens, below what the design detects; `biomcp__search`'s 729 estimated tokens are untouched by it); E1 top-k; E7; E4, E3, E5, E8; E6 off for OMOP (OMOP is 9% of tokens).
+- **Built for it:** `E6:expand=page` (`expand_result(handle, page)` returns what was cut in parts of whole lines within the budget; the shaped text plus the parts are the original). `E1:mode=servers` (`ServerMenu`: one `toolhelper__load_tools(servers)` tool whose description lists each server's tools with the first line of their own descriptions and required enum arguments, 496 estimated tokens; evidence is schema hashes). A factor with `overrides_base: true` replaces a base setting of the same strategy (K's budget) instead of conflicting. A generator word with a leading `-` selects the other half fraction. **Tools offered mid-run now pass through `transform_schemas`** (they used to arrive uncompressed, which also affected E1 `find_tools`). `configs/strategies.yaml` holds E10; it is locked now that p10e names it.
+- **The design form cannot express p10e's partial specs** (`E6:budget=1000`, `E6:expand=page`): it always writes a strategy's mode. p10e was written by hand; the form shows it but would rewrite those two factors.
+- **Smoke run `smoke-p10e`** (all five factors on, limit 4; omop-001, med-001, bio-001, x-001; one run each): 4/4 passed, provenance 1.00, every strategy acted. Not evidence of an effect.
+- **Run:** frozen as `experiments/p10e@v1` (inputs c5da6a6c7f24, 10,107 recordings, 217 learning runs). The code changes were uncommitted at freeze time, so the frozen `code_commit` is the commit before them. Launched 2026-11-10 17:23 local, orchestrator pid 9876, 3 passes at a time (2.4 GB RAM free after OneDrive was stopped; a browser held 10 GB). Logs in `data/experiments/p10e/`. Pause and resume as for p10b.
+- **Interrupted by a Windows reboot at 04:13 local on 2026-11-11** (last log write 04:06) with 8 of 16 cells complete (LK, LKPM, none, KM, LP, LSKM, SKPM, and SM fold A) and SM fold B 12/27, SP fold A 2/27. Resumed 15:11 local (orchestrator pid 26968, `auto-20261111-151101.*.log`); it restarted SM-B with 15 tasks, SP-A with 25 and SP-B with 27. OneDrive had relaunched after the reboot and was stopped again.
+- **Paused 2026-11-11 21:20 local by the user** (`control.stop`, whole process tree): 15 of 16 cells complete; only PM is left (fold A 8/27 and fold B a few tasks in the logs; tasks in flight are redone). Then confirmation, Decision and live check. OneDrive is still stopped. Resume as above.
+- **Resumed 2026-11-11 21:51 local** (orchestrator pid 9892, `auto-20261111-215102.*.log`): PM fold A with 19 tasks and fold B with 23.
+- **Factorial result (2026-11-11 22:5x local): chosen S + K.** Main effects on tokens per success: L -25.4% but success -2.5 points (off, limit -2); S -26.9% [-33.9, -19.5], success +0.2 (on); K on (tokens/run -7.1% [-10.8, -3.4], success -0.7); P -1.6% [-6.2, +3.3] (off, CI includes 0); M -21.5%, success -3.0 points (off). L and M each lose 7.5 points on BioMCP; LS interaction +10.2% (they overlap).
+- **NVIDIA endpoint outage 23:49-23:55 local on 2026-11-11:** the model endpoint answered `404` and 116 runs ended before their first turn (SK-r3 15, none-r3 47, live-baseline 27, live-chosen 27). They were scored as failures, so the first confirmation (success +19.1 points, 31 gained, 0 lost), `decisions/p10e@v1` and the live check (0/27 both arms) are **invalid; do not approve v1**. Fix: `NotFoundError: Error code: 404` is now in `analysis.TRANSIENT` (the runner uses the same tuple), so those runs count as missing and are redone; relaunching recomputes the confirmation, rewrites the Decision and repeats the live check. The endpoint answered again at 09:55 on 2026-11-12.
+- Relaunched 09:56 on 2026-11-12, but the laptop went into standby at 09:59 (on battery) until 13:14 and nothing ran. Restarted 13:15 (orchestrator pid 6632, `auto-20261112-131531.*.log`) with a hidden PowerShell helper that holds `SetThreadExecutionState` while that pid lives; it does not stop a lid-close sleep. Redone runs carry real tokens from 13:20.
+- **Slept again 13:55-15:49 local on 2026-11-12** (Windows sleep reason: Battery, 3% charge; the keep-awake helper cannot stop that and did not survive it). The orchestrator (pid 6632) and both `none-r3` passes survived the sleep and continued by themselves once the laptop was on power; nothing was relaunched. `SK-r3` is complete (52/54); `none-r3` had 18 of 54 passed at 15:53. A new keep-awake helper (pid 16444) was started at 15:54. Keep the laptop plugged in until the live check ends.
+- **Confirmation (S + K r1-r3 vs `none` r1-r3, 54 tasks, finished 2026-11-12 16:37 local): gate pass.** Success 96.3% in both arms (McNemar lost 0 / gained 0), tokens per success 25,046 (-30.1%, CI -39.4%..-20.2%), median 16,640 / p90 45,578 tokens per run, trust 0.944, no transient runs excluded. `decisions/p10e@v2` written as `proposed` (it replaces the invalid v1); accepted 2026-11-12 by NeelGhoshal (`decisions/p10e@v3`). The accepted config is now E2 minimal + E6 budget 1,000 + E9 + E10, max_turns 6; L, P and M stay off.
+- **Live, fold A (27 tasks, 1 run each, finished 17:57):** ABC 96.3% / 37,310 tokens per success / trust 0.909; S + K 92.6% / 28,209 (-24%) / trust 0.922. Replay on the same tasks (3 repeats): ABC 96.3% / 37,860; S + K 96.3% / 27,776. Live failures: med-004 in both arms (the NDC server bug); S + K also failed bio-014, one run, so the 3.7-point live difference is a single task. The experiment finished at 17:57; the orchestrator and the keep-awake helper have exited.
+- **Trust risk known in advance:** K and P both add expand calls, which the fidelity component penalizes; ABC's trust is 0.92 against the 0.9 gate.
+
 #### Experiment app (2026-11-10)
 
 - `uv run --extra dashboard toolhelper experiment app` (Streamlit, `src/toolhelper/app/experiments_app.py`, localhost only, headless so Streamlit's first-run email prompt can't block it). Tabs: Design (form for factorial configs: base, factors table, generators, confirm_only, gate, repeats, seeds, pre-registration header; cell preview, run count and hour estimate; raw YAML for any config incl. p10), Run (freeze, launch/resume, pause, approve the Decision; RAM, OneDrive and key/PATH checks), Progress (groups from the monitoring DB, orchestrator log; refreshes every 30 s), Results (choice, effects with CIs, interactions, subsets, per server, confirmation, live).
 - **Design tab is a form, not YAML (2026-11-10):** strategies are picked from a list and set with sliders and choices, each with an info box (what it does, what p10/p10b/p10c measured); factors are cards (letter, strategies, optional turn limit) added with "Add factor"; the design type (full / fraction / confirm only), gate and repeats are choices and sliders; sidebar "New design" starts an empty design with the current run settings. Texts, slider ranges and spec building are in `src/toolhelper/experiments/design_form.py` (no Streamlit; `PARAM_UI` needs an entry for each new parameter or a test fails). The YAML file format is unchanged; the form writes every applicable parameter explicitly (`E6:mode=projection`), and the three factorial configs round-trip unchanged (tested). `registry.DEFAULTS` now holds the builders' parameter defaults and `build_strategies` applies them.
 - **User-defined strategies E10+ (2026-11-10; not in the original plan):** the app's Strategies tab writes `configs/strategies.yaml`; `src/toolhelper/efficiency/custom.py` turns each definition into a strategy from one building block: `instruction` (context text; evidence = learning runs chosen by `evidence_runs`: max_turns / tool_errors / all, and it refuses to build without any), `tool_filter` (hide servers/tools; evidence = hidden tools' schema hashes), `closing_prompt` (E9 with its own wording). No user code runs. `registry.install_custom()` loads the file at import and appends the ids to `ORDER` after `BUILTIN` (they apply after E1-E9); specs take no parameters (`E10`). A definition named by any `configs/experiments*.yaml` is locked in the app. `experiment freeze` stores the definitions a config uses under `custom_strategies` in its inputs (key absent when none, so earlier hashes are unchanged). Tests isolate the file (`conftest.no_user_strategies`). Not yet run on the benchmark.
 - **Taking factors from other configs:** Design tab section 3, "Add factors from another config", adds them as factors (a taken letter gets the next free one) or merges them into the base (`design_form.import_factors`; conflicting settings of one strategy are refused).
+- **Texts updated for p10e (2026-11-12):** the info boxes for E1, E2, E6 and E9, the budget, expand and turn-limit help and the trust help now give p10e's results and say "the accepted config" (`decisions/p10e@v3`), not ABC. A user-defined strategy shows a measured result when `design_form.CUSTOM_FOUND` has one for its id and name (E10 "Answer early"); others still say "none yet". The screenshots in the Results section are from 2026-11-10 and were not retaken.
 - Saving refuses a config whose experiment already has a state.json (a changed design would mix runs); use a new name. Configs save to `configs/experiments-<name>.yaml`.
 - `src/toolhelper/experiments/control.py`: detached launch with keys from the Windows user env and uv/biomcp dirs on PATH, `process.json` (pid + creation time, so a reused pid is not mistaken for the run), pause = `taskkill /T /F`. `registry.PARAMS`/`check_spec` validate specs without building strategies.
 
@@ -849,7 +908,7 @@ These differ from section 1.1 because of Windows. Use them in `configs/servers.y
 | 7 | Datasets | done (WHO indicators and full Athena vocabularies pending) |
 | 8 | Efficiency strategies | done |
 | 9 | Trust | done |
-| 10 | Experiments and optimum | done: `decisions/p10b@v2` accepted (ABC). p10c (E3 modes on top of ABC): nothing chosen; p10d did not confirm the TR lead (2026-11-10), so ABC stays; `decisions/p10c@v1` and `p10d@v1` are proposed, not approved. Experiment app added 2026-11-10. History: p10c (E3 on top of ABC) set up and frozen 2026-11-09, launched 14:20 local; paused by the user 17:48 with 382 of 432 factorial runs saved (none, R, T, HR, TR complete; H 49/54, HT 9/54, HTR not started). Resumed 22:40 (orchestrator pid 1060; log `data/experiments/p10c/auto2.out.log`). p10 finished 2026-11-05 (`decisions/p10@v1`, E2 light: no significant gain). Second iteration p10b (fractional factorial) running since 2026-11-08 00:55 local (`experiments/p10b@v2`; logs in `data/experiments/p10b/`). Factorial done 07:55: A, B and C chosen, D off. Confirmation passed and the live check finished 2026-11-09 05:24: ABC (E2 minimal + E6 budget 2000 + E9/max_turns 6) gives -31% tokens per success and +6.8 pts success. `decisions/p10b@v2` accepted 2026-11-09 |
+| 10 | Experiments and optimum | p10e (five factors on top of ABC) finished 2026-11-12 17:57 local: S + K chosen (E10 "Answer early" + E6 budget 1,000), confirmation -30.1% tokens per success at equal success, live check done; `decisions/p10e@v3` accepted 2026-11-12. Earlier: `decisions/p10b@v2` accepted (ABC). p10c (E3 modes on top of ABC): nothing chosen; p10d did not confirm the TR lead (2026-11-10), so ABC stays; `decisions/p10c@v1` and `p10d@v1` are proposed, not approved. Experiment app added 2026-11-10. History: p10c (E3 on top of ABC) set up and frozen 2026-11-09, launched 14:20 local; paused by the user 17:48 with 382 of 432 factorial runs saved (none, R, T, HR, TR complete; H 49/54, HT 9/54, HTR not started). Resumed 22:40 (orchestrator pid 1060; log `data/experiments/p10c/auto2.out.log`). p10 finished 2026-11-05 (`decisions/p10@v1`, E2 light: no significant gain). Second iteration p10b (fractional factorial) running since 2026-11-08 00:55 local (`experiments/p10b@v2`; logs in `data/experiments/p10b/`). Factorial done 07:55: A, B and C chosen, D off. Confirmation passed and the live check finished 2026-11-09 05:24: ABC (E2 minimal + E6 budget 2000 + E9/max_turns 6) gives -31% tokens per success and +6.8 pts success. `decisions/p10b@v2` accepted 2026-11-09 |
 | 11 | Swap the LLM and rerun | not started |
 | 12 | Gateway (optional) | not started |
 

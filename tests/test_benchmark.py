@@ -181,5 +181,7 @@ def test_only_api_failures_count_as_transient():
 
     assert is_transient(T("error", "APITimeoutError: Request timed out."))
     assert is_transient(T("error", "APIConnectionError: Connection error."))
+    assert is_transient(T("error", "NotFoundError: Error code: 404"))  # the model endpoint was down
+    assert not is_transient(T("error", "NotFoundError: wref target 'x' not found"))
     assert not is_transient(T("error", "ReplayMiss: no recording for ..."))
     assert not is_transient(T("max_turns", None))

@@ -11,6 +11,9 @@ benchmark task never retrieves tools through its own prompt (leave-one-out).
 Variants: `top_k` (3/5/8); `static` (offer the top k) vs `find_tools` (offer the top k plus
 a `find_tools(query)` meta-tool that adds more mid-run); `route` (server-first: keep the
 best-scoring server's tools, plus any other server that scores within `route_margin`).
+`servers` (`ServerMenu`) uses no search at all: the model sees one `load_tools(servers)` tool
+that lists each server's tools by name and loads the servers it picks, so only their
+definitions are re-sent on later turns (228 of 378 ABC runs called one server's tools only).
 Evidence per offered tool: its schema hash with the retrieval score and rank;
 `recall_at_k(trace, task)` compares what was offered with what the task needed.
 """
@@ -31,6 +34,7 @@ from toolhelper.experiments.scoring import ANSWERED
 from toolhelper.mcp.hub import ToolResult
 
 FIND_TOOLS = "toolhelper__find_tools"
+LOAD_TOOLS = "toolhelper__load_tools"
 RRF_K = 60  # standard reciprocal-rank-fusion constant (as in Paper Librarian)
 TOKEN = re.compile(r"[a-z0-9]+")
 FIELDS = ("name", "description", "notes", "examples", "pitfalls")
@@ -198,6 +202,75 @@ class ToolRetrieval(BaseStrategy):
             "Search for more tools by what you need to do; matching tools become callable on the next turn."),
             input_schema={"type": "object", "properties": {"query": {"type": "string"}}, "required": ["query"]}),
             handler=find)]
+
+
+class ServerMenu(BaseStrategy):
+    """E1 `mode=servers`: no hub tool is offered at the start; `load_tools(servers)` adds the
+    chosen servers' tools from the next turn. Evidence: the schema hash of every tool hidden
+    at the start and of every tool loaded."""
+
+    name = "E1_server_menu"
+
+    def __init__(self, tools: Iterable[ToolDef]) -> None:
+        self.by_server: dict[str, list[ToolDef]] = {}
+        for t in tools:
+            if t.server:
+                self.by_server.setdefault(t.server, []).append(t)
+        if not self.by_server:
+            raise ValueError("E1 mode=servers needs the catalog's tools")
+
+    def config(self) -> dict[str, Any]:
+        return {"mode": "servers", "servers": {s: len(ts) for s, ts in self.by_server.items()}}
+
+    def menu(self) -> str:
+        lines = []
+        for server, tools in self.by_server.items():
+            # The servers' own tool names and the first line of their own descriptions.
+            items = []
+            for t in tools:
+                first = next((line.strip() for line in t.description.splitlines() if line.strip()), "")
+                # A required enum argument says what the tool covers (BioMCP `get`: entity gene, variant, trial, ...).
+                props = t.input_schema.get("properties", {})
+                enums = [f"{k}: {', '.join(map(str, props[k]['enum']))}" for k in t.input_schema.get("required", [])
+                         if isinstance(props.get(k), dict) and props[k].get("enum")]
+                items.append(t.tool + (f": {first[:70]}" if first else "") + (f" ({'; '.join(enums)})" if enums else ""))
+            lines.append(f"- {server} ({len(tools)} tools): " + "; ".join(items))
+        return "\n".join(lines)
+
+    def select_tools(self, task: Task, tools: list[ToolDef]) -> list[ToolDef]:
+        hidden = [t for t in tools if t.server]
+        kept = [t for t in tools if not t.server]
+        self.live = {t.name: t for t in hidden}  # the run's own definitions, hashes included
+        self.run.transform("tools", before=len(tools), after=len(kept), note=f"server menu: {len(hidden)} tools load on request",
+                           evidence=[EvidenceRef(kind="schema_hash", ref=t.schema_hash or t.name, detail={"tool": t.name})
+                                     for t in hidden])
+        return kept
+
+    def extra_tools(self) -> list[ExtraTool]:
+        async def load(call: PendingCall) -> ToolResult:
+            asked = call.arguments.get("servers")
+            asked = [asked] if isinstance(asked, str) else list(asked or [])
+            unknown = [s for s in asked if s not in self.by_server]
+            if unknown or not asked:
+                text, tools = f"Error: unknown servers {unknown}; choose from {sorted(self.by_server)}.", []
+            else:
+                offered = set(self.run.trace.tools_offered)
+                tools = [self.live.get(t.name, t) for s in asked for t in self.by_server[s] if t.name not in offered]
+                if tools:
+                    self.run.offer(self.name, tools, note=f"load_tools({asked})",
+                                   evidence=[EvidenceRef(kind="schema_hash", ref=t.schema_hash or t.name,
+                                                         detail={"tool": t.name, "server": t.server}) for t in tools])
+                text = (f"Loaded {len(tools)} tools, callable from your next turn: " + ", ".join(t.name for t in tools)
+                        if tools else f"The tools of {asked} are already loaded.")
+            return ToolResult(name=LOAD_TOOLS, server="toolhelper", tool="load_tools", arguments=call.arguments,
+                              text=text, is_error=not tools and bool(unknown or not asked), source="local", latency_ms=0)
+
+        return [ExtraTool(tool=ToolDef(name=LOAD_TOOLS, description=(
+            "Load the tools of one or more servers before using them; they become callable on your next turn. "
+            "Load only the servers this task needs.\n" + self.menu()),
+            input_schema={"type": "object", "required": ["servers"], "properties": {"servers": {
+                "type": "array", "items": {"type": "string", "enum": sorted(self.by_server)}}}}),
+            handler=load)]
 
 
 def needed_tools(task: Task) -> set[str]:

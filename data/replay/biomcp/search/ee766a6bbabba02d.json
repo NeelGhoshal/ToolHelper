@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "pembrolizumab"
+    ],
+    "entity": "article",
+    "keyword": [
+      "Keytruda",
+      "indications"
+    ],
+    "limit": 10
+  },
+  "args_key": "ee766a6bbabba02d8d4afd9223951b897d3ed3ce7b8fe7a0e2980ba901451364",
+  "recorded_at": "2026-11-11T06:18:24.239243+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 29072.59840000188,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=pembrolizumab, keyword=Keytruda indications, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --drug pembrolizumab --keyword \"Keytruda indications\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41047324|Model-based dose selection and pharmacokinetic bridging of s…|PubTator3|2025-11-17|hybrid 0.384 + title+abstract 2/3|4| \n|PMID 35251840|Bullous Pemphigoid Associated With Pembrolizumab Therapy for…|PubTator3|2022-01-31|hybrid 0.3 + title+abstract 1/3|10| \n|PMID 42997904|Messenger RNA vaccine platforms from molecular optimization…|PubMed|2026-10-30|hybrid 0.25 + abstract 2/3|0| \n|PMID 38156547|Use of Pembrolizumab Among Older Adults with Cancer in the U…|PubTator3|2023-12-29|hybrid 0.233 + title+abstract 1/3|1| \n|PMID 42091547|[Trends in Spontaneous Adverse Event Reports Following the E…|PubTator3|2026-01-01|hybrid 0.225 + title+abstract 2/3|0| \n|PMID 42979722|An Update of Management Strategies in Locally Advanced Oral…|PubMed|2026-11-04|hybrid 0.225 + abstract 2/3|0| \n|PMID 42975999|Long term response to immunotherapy in a patient with low PD…|PubMed|2026-01-01|hybrid 0.2 + abstract 2/3|0| \n|PMID 42795773|Current Therapies for Breast Cancer: What the Plastic Surgeo…|Europe PMC|2026-09-10|hybrid 0.125 + abstract 1/3|0| \n|PMID 42118514|Impact of Japanese Subpopulation Data and Overall Survival i…|Europe PMC|2026-05-12|hybrid 0.075|0| \n|PMID 43009051|Common targets, unfunded therapies: regulatory mapping and c…|PubMed|2026-11-10|hybrid 0.075|none| \n \n \n \nNewest indexed: 2026-11-10 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41047324\n  biomcp search article --drug pembrolizumab -k \"Keytruda indications\" --year-min 2022 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -25,7 +25,9 @@ from typing import Any
 
 from pydantic import BaseModel
 
-TRANSIENT = ("APITimeoutError", "APIConnectionError")
+# The model endpoint answering 404 is an outage too (NVIDIA, 2026-11-11 23:49-23:55 local: 116 p10e runs ended
+# before the first turn); the full message keeps the context store's own NotFoundError out.
+TRANSIENT = ("APITimeoutError", "APIConnectionError", "NotFoundError: Error code: 404")
 
 
 class RunRow(BaseModel):

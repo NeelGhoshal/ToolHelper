@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "research-article",
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "cognitive decline",
+      "cohort"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "e0f6dcf0ec4fc418e2a685ffd8e4f9fe653f27a752f30a6b3ae563df100f1528",
+  "recorded_at": "2026-11-12T04:02:34.864782+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 901.8469000002369,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin cognitive decline cohort, type=research-article, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 30496104|Global, regional, and national incidence, prevalence, and ye…|Europe PMC|2018-11-08|-|10335| \n|PMID 28122885|Heart Disease and Stroke Statistics-2017 Update: A Report Fr…|Europe PMC|2017-01-25|-|6484| \n|PMID 18539917|Effects of intensive glucose lowering in type 2 diabetes.|Europe PMC|2008-06-06|-|5363| \n|PMID 33501848|Heart Disease and Stroke Statistics-2021 Update: A Report Fr…|Europe PMC|2021-01-27|-|4456| \n|PMID 26551272|A Randomized Trial of Intensive versus Standard Blood-Pressu…|Europe PMC|2015-11-09|-|4412| \n|PMID 27222591|2016 European Guidelines on cardiovascular disease preventio…|Europe PMC|2016-05-23|-|4362| \n|PMID 36695182|Heart Disease and Stroke Statistics-2023 Update: A Report Fr…|Europe PMC|2023-01-25|-|4105| \n|PMID 24352519|Heart disease and stroke statistics--2014 update: a report f…|Europe PMC|2013-12-18|-|4036| \n|PMID 30879355|2019 ACC/AHA Guideline on the Primary Prevention of Cardiova…|Europe PMC|2019-03-17|-|3993| \n|PMID 23239837|Heart disease and stroke statistics--2013 update: a report f…|Europe PMC|2012-12-12|-|3703| \n \n \n \nNewest indexed: 2023-01-25 (1387 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 30496104\n  biomcp search article -k \"statin cognitive decline cohort\" --type research-article --year-min 2008 --year-max 2023 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

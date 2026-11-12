@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "mutation": "V600E",
+    "status": "recruiting"
+  },
+  "args_key": "fd8e291202177fd5abe24e4dd9895c20b98a0bbc5fac2896c0aa2d1d86a209a2",
+  "recorded_at": "2026-11-11T22:37:47.606035+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1902.0167000053334,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 10 of 10 \n \nQuery: condition=melanoma, status=recruiting, mutation=V600E \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT07751042|Phase 1/2 Study of Intrav…|RECRUITING|1/2|Advanced Solid Tumor| \n|NCT06194929|Defactinib and Avutometin…|RECRUITING|1/2|Cutaneous Melanoma, Brain Metastases| \n|NCT05076760|MEM-288 Oncolytic Virus A…|RECRUITING|1|Solid Tumor, Advanced Cancer, Metastatic Canc… [abridged; 10 conditions total]| \n|NCT01898039|Modified Vaccine for High…|RECRUITING|1/2|Malignant Melanoma| \n|NCT06249048|Phase 1/2 Study of Intrat…|RECRUITING|1/2|Advanced Solid Tumor| \n|NCT07870265|Detection of the BRAF V60…|RECRUITING|NA|Unresectable Metastatic Melanoma| \n|NCT06172478|A Study of HER3-DXd in Su…|RECRUITING|2|Advanced Solid Tumor, Melanoma, Head and Neck… [abridged; 14 conditions total]| \n|NCT05940311|Versatile Ampification Si…|RECRUITING|-|Liquid Biopsy, Melanoma (Skin), Melanoma Stage III, Melanoma Stage IV| \n|NCT05914116|A Phase 1/2a Study of DB-…|RECRUITING|1/2|Advanced Solid Tumors| \n|NCT02870244|Adoptive T Cell Immunothe…|RECRUITING|1|Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-10 of 10 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -214,10 +214,13 @@ class Agent:
                 pending = PendingCall(id=c.id, turn=turn, name=c.name, arguments=c.arguments)
                 messages.append(await self._tool_call(run, pending, offered, extra))
             if run.offers:
-                for t in run.offers:
-                    if t.name not in offered:
-                        offered[t.name] = t
-                        specs.append(ToolSpec(name=t.name, description=t.description, input_schema=t.input_schema))
+                # Tools offered mid-run get the same schema transforms as the initial ones (E2).
+                new = [t for t in run.offers if t.name not in offered]
+                for s in self.strategies:
+                    new = self._hook(run, s, "transform_schemas", "tools", new, lambda s=s, t=new: s.transform_schemas(t))
+                for t in new:
+                    offered[t.name] = t
+                    specs.append(ToolSpec(name=t.name, description=t.description, input_schema=t.input_schema))
                 run.offers = []
                 trace.tools_offered = list(offered)
             for s in self.strategies:

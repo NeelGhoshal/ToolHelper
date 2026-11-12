@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "creatinine serum plasma LOINC 2160-0",
+    "max_results": 10,
+    "omop_field": "concept_name",
+    "omop_table": "measurement"
+  },
+  "args_key": "fa71f3b93587e6608adc0fefe936966d252e84112708c360b547da690667533c",
+  "recorded_at": "2026-11-12T01:39:22.183179+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1212.7821000030963,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"error\": \"No results found for keyword 'creatinine serum plasma LOINC 2160-0'. The search term may not exist in the OMOP vocabulary.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

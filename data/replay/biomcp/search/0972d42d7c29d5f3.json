@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "BRAF",
+    "keyword": [
+      "BRAF V600E vemurafenib dabrafenib response resistance"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "0972d42d7c29d5f3a8c9c7d6bfe32f62d8f8a800878cfcd03d856897a3cd2a2a",
+  "recorded_at": "2026-11-12T04:22:27.321650+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3227.2328000108246,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=BRAF, keyword=BRAF V600E vemurafenib dabrafenib response resistance, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene BRAF --keyword \"BRAF V600E vemurafenib dabrafenib response resistance\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 29195078|A Next Generation Connectivity Map: L1000 Platform and the F…|Europe PMC|2017-11-01|-|3056| \n|PMID 26091043|Genomic Classification of Cutaneous Melanoma.|Europe PMC|2015-06-01|-|2643| \n|PMID 41807883|BRAF inhibitor resistance in melanoma: from resistance mecha…|PubTator3|2026-03-11|-|none| \n|PMID 39577552|A comprehensive review of targeting RAF kinase in cancer.|PubMed|2025-01-05|-|4| \n|PMID 39507030|Triple-targeted therapy of dabrafenib, trametinib, and osime…|PubMed|2024-10-31|-|18| \n \n \n \nNewest indexed: 2024-11-22 (720 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 29195078\n  biomcp search article -g BRAF -k \"BRAF V600E vemurafenib dabrafenib response resistance\" --year-min 2015 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

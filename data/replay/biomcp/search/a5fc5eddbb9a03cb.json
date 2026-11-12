@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "json": true,
+    "limit": 10,
+    "query": "BRAF gene v-raf murine sarcoma viral oncogene homolog B"
+  },
+  "args_key": "a5fc5eddbb9a03cb14cc41163023b4198f59c96738764890fe66439ef3414295",
+  "recorded_at": "2026-11-11T20:28:56.827866+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1085.7629000020097,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 1,\n    \"total\": 1,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 1,\n  \"results\": [\n    {\n      \"symbol\": \"BRAF\",\n      \"name\": \"B-Raf proto-oncogene, serine/threonine kinase\",\n      \"entrez_id\": \"673\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"7:140719327-140925199\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"P15056\",\n      \"omim_id\": \"164757\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get gene BRAF\",\n      \"biomcp list gene\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

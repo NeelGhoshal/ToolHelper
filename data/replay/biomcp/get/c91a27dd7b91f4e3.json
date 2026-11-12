@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "ABL1",
+    "json": true,
+    "sections": [
+      "druggability",
+      "pathways",
+      "diseases",
+      "annotations"
+    ]
+  },
+  "args_key": "c91a27dd7b91f4e3ed6c47792a7eb1a24943651bd1f2692c957fd08e6b8d9472",
+  "recorded_at": "2026-11-11T03:39:39.813137+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.4584999880753458,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: annotations"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

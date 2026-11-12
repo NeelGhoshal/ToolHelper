@@ -95,3 +95,42 @@ async def test_find_tools_adds_tools_mid_run(replay_hub, tools):
     assert details.source == "replay" and details.error_class is None  # callable once offered
     offer = [t for t in trace.transformations if t.hook == "offer"]
     assert offer and offer[0].strategy == "E1_retrieval" and trace.provenance_coverage == 1.0
+
+
+async def test_server_menu_loads_the_servers_the_model_picks(replay_hub, tools, store):
+    from toolhelper.efficiency.compression import SchemaCompression
+    from toolhelper.efficiency.retrieval import LOAD_TOOLS, ServerMenu
+
+    menu = ServerMenu(tools)
+    args = recorded(store, "find_omop_concept", keyword="heart attack", omop_table="condition_occurrence")
+    trace = await run(replay_hub, [menu, SchemaCompression("minimal")], OMOP_TASK,
+                      tool_call(LOAD_TOOLS, {"servers": ["omop"]}), tool_call("omop__find_omop_concept", args))
+    first, second, *_ = trace.llm_calls
+    assert first.tools_offered == [LOAD_TOOLS]
+    assert sorted(second.tools_offered) == sorted([LOAD_TOOLS, "omop__batch_map_concepts_from_csv", "omop__find_omop_concept"])
+    assert first.est_breakdown["tool_defs"] < 600 and second.est_breakdown["tool_defs"] < 900  # vs ~3,600 for all 19
+    load, find = trace.tool_calls
+    assert "Loaded 2 tools" in load.shaped_text and find.source == "replay" and find.error_class is None
+    hidden, offer, *rest = [t for t in trace.transformations if t.strategy == "E1_server_menu"]
+    assert (hidden.hook, len(hidden.evidence)) == ("select_tools", len(tools)) and offer.hook == "offer"
+    assert {e.kind for e in hidden.evidence + offer.evidence} == {"schema_hash"} and len(offer.evidence) == 2
+    # Tools loaded mid-run are compressed like the initial ones.
+    assert any(t.strategy.startswith("E2") and t.turn == 1 and t.hook == "transform_schemas" for t in trace.transformations[2:])
+    assert trace.provenance_coverage == 1.0 and trace.problems() == [] and score(trace, OMOP_TASK).success
+    text = menu.extra_tools()[0].tool.description
+    assert "- omop (2 tools): batch_map_concepts_from_csv: Process a CSV file" in text and "(entity: gene, variant, article" in text
+    assert "search-drugs: Search for drug information using FDA database" in text and "- biomcp (7 tools)" in text
+
+
+async def test_server_menu_refuses_unknown_servers_and_calls_before_loading(replay_hub, tools, store):
+    from toolhelper.efficiency.retrieval import LOAD_TOOLS, ServerMenu
+
+    args = recorded(store, "find_omop_concept", keyword="heart attack", omop_table="condition_occurrence")
+    trace = await run(replay_hub, [ServerMenu(tools)], OMOP_TASK, tool_call("omop__find_omop_concept", args),
+                      tool_call(LOAD_TOOLS, {"servers": ["pubmed"]}), tool_call(LOAD_TOOLS, {"servers": "omop"}),
+                      tool_call(LOAD_TOOLS, {"servers": ["omop"]}))
+    early, unknown, loaded, again = trace.tool_calls
+    assert early.error_class == "not_offered"
+    assert unknown.is_error and "choose from ['biomcp', 'medical', 'omop']" in unknown.shaped_text
+    assert "Loaded 2 tools" in loaded.shaped_text and "already loaded" in again.shaped_text and not again.is_error
+    assert trace.provenance_coverage == 1.0

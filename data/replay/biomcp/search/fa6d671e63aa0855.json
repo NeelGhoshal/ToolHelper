@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "type 2 diabetes mellitus"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "tirzepatide"
+    ],
+    "limit": 5
+  },
+  "args_key": "fa6d671e63aa0855d3182d010aa861947fe71d53fef0ab41730df493c2ac3ae8",
+  "recorded_at": "2026-11-10T22:32:22.931894+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2898.796499997843,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 5 of 88 \n \nQuery: condition=type 2 diabetes mellitus, intervention=tirzepatide \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT07588438|Efficacy, Safety, and Tol…|RECRUITING|4|Obesity, Diabetes Mellitus, Type 2| \n|NCT07555730|AI-assisted Multi-domain…|NOT_YET_RECRUITING|4|Overweight or Obesity; Type 2 Diabetes, Weight Loss Maintenance| \n|NCT07796477|A Study of SYH2069 Inject…|NOT_YET_RECRUITING|2|T2DM (Type 2 Diabetes Mellitus)| \n|NCT03730662|A Study of Tirzepatide (L…|COMPLETED|3|Type 2 Diabetes Mellitus| \n|NCT05708859|Effect of Tirzepatide on…|UNKNOWN|4|Type II Diabetes, Atherosclerosis| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-5 of 88 results. Use --offset 5 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

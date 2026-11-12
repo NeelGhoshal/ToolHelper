@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "Melanoma (disorder)",
+    "max_results": 10,
+    "omop_field": "condition_concept_id",
+    "omop_table": "condition_occurrence"
+  },
+  "args_key": "45648093eb69fa4fda2fa264826be046133cb59db9cab6d21c7e996b446dca3d",
+  "recorded_at": "2026-11-12T04:28:02.654035+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 912.3945999890566,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 36715103,\n      \"code\": \"720587009\",\n      \"name\": \"Donor derived melanoma\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/36715103\"\n    },\n    {\n      \"concept_id\": 37168635,\n      \"code\": \"1285321001\",\n      \"name\": \"Nevoid melanoma\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/37168635\"\n    },\n    {\n      \"concept_id\": 42598156,\n      \"code\": \"329951000009104\",\n      \"name\": \"Melanoma of eye\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED Veterinary\",\n      \"url\": \"https://omophub.com/concepts/42598156\"\n    },\n    {\n      \"concept_id\": 42599724,\n      \"code\": \"358661000009102\",\n      \"name\": \"Limbal melanoma\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED Veterinary\",\n      \"url\": \"https://omophub.com/concepts/42599724\"\n    },\n    {\n      \"concept_id\": 954171,\n      \"code\": \"361901000009105\",\n      \"name\": \"Melanocytoma\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED Veterinary\",\n      \"url\": \"https://omophub.com/concepts/954171\"\n    },\n    {\n      \"concept_id\": 40391314,\n      \"code\": \"189758001\",\n      \"name\": \"Melanoma in situ\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/40391314\"\n    },\n    {\n      \"concept_id\": 42574059,\n      \"code\": \"321031000009106\",\n      \"name\": \"Melanoma of skin\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED Veterinary\",\n      \"url\": \"https://omophub.com/concepts/42574059\"\n    },\n    {\n      \"concept_id\": 42596198,\n      \"code\": \"309341000009105\",\n      \"name\": \"Melanoma of uvea\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED Veterinary\",\n      \"url\": \"https://omophub.com/concepts/42596198\"\n    },\n    {\n      \"concept_id\": 4297187,\n      \"code\": \"403921000\",\n      \"name\": \"Borderline malignant melanoma\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4297187\"\n    },\n    {\n      \"concept_id\": 4162276,\n      \"code\": \"372244006\",\n      \"name\": \"Malignant melanoma\",\n      \"class\": \"Disorder\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4162276\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"Melanoma (disorder)\",\n    \"omop_table\": \"condition_occurrence\",\n    \"omop_field\": \"condition_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR mutation lung cancer review",
+      "comprehensive genomic profiling",
+      "liquid biopsy ctDNA"
+    ],
+    "limit": 10,
+    "sort": "citations",
+    "article_type": "review"
+  },
+  "args_key": "f66341b6d44a80a65f45ebe44338f4c28af2cfc0281f59c386e80c3337ca4b95",
+  "recorded_at": "2026-11-11T04:00:13.614633+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 691.9926000118721,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR mutation lung cancer review comprehensive genomic profiling liquid biopsy ctDNA, type=review, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 24449238|Liquid biopsies: genotyping circulating tumor DNA.|Europe PMC|2014-01-21|-|1758| \n|PMID 30720861|Artificial intelligence in cancer imaging: Clinical challeng…|Europe PMC|2019-02-05|-|1250| \n|PMID 34002056|Kinase drug discovery 20 years after imatinib: progress and…|Europe PMC|2021-05-17|-|872| \n|PMID 36096847|Liquid biopsy: current technology and clinical applications.|Europe PMC|2022-09-12|-|763| \n|PMID 34803167|Circulating tumor cells: biology and clinical significance.|Europe PMC|2021-11-22|-|746| \n|PMID 33548389|Exosome-based liquid biopsies in cancer: opportunities and c…|Europe PMC|2021-02-04|-|716| \n|PMID 31937368|Molecular profiling for precision cancer therapies.|Europe PMC|2020-01-14|-|649| \n|PMID 34445366|Current and Future Development in Lung Cancer Diagnosis.|Europe PMC|2021-08-12|-|630| \n|PMID 35303879|Liquid biopsy: a step closer to transform diagnosis, prognos…|Europe PMC|2022-03-18|-|618| \n|PMID 33811123|Artificial Intelligence in Cancer Research and Precision Med…|Europe PMC|2021-04-01|-|520| \n \n \n \nNewest indexed: 2022-09-14 (1519 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 24449238\n  biomcp search article -k \"EGFR mutation lung cancer review comprehensive genomic profiling liquid biopsy ctDNA\" --type review --year-min 2014 --year-max 2022 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

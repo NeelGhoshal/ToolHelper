@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "ERBB2",
+    "json": true,
+    "sections": [
+      "ontology",
+      "diseases",
+      "druggability",
+      "tldr"
+    ]
+  },
+  "args_key": "742b395fd2b98df99a16ef74418c94823a00387824a982c6083ed0ac1063e4e4",
+  "recorded_at": "2026-11-11T07:01:49.506148+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 0.8479999960400164,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: tldr"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

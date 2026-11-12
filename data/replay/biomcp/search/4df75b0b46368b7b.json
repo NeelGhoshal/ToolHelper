@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 5,
+    "query": "EGFR epidermal growth factor receptor lung cancer"
+  },
+  "args_key": "4df75b0b46368b7b4e4ec69cb9f6a27cbec0373b63ec1953f44cb1b701edc637",
+  "recorded_at": "2026-11-11T03:47:54.848049+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1557.5789000140503,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: EGFR epidermal growth factor receptor lung cancer \n \nFound 1 gene \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| EGFR | epidermal growth factor receptor | 1956 | 7:55018820-55211628 | GRCh38 | P00533 | 131550 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1 of 1 results. \n \n\n\n## Next commands\n- `biomcp get gene EGFR`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

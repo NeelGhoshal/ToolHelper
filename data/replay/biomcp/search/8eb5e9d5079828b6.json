@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "TP53",
+    "json": true,
+    "keyword": [
+      "Li-Fraumeni syndrome",
+      "TP53-associated cancers",
+      "germline TP53"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "8eb5e9d5079828b6643d7fe6f5d1601021d22e1820334688668ad08fb10e3584",
+  "recorded_at": "2026-11-11T04:55:21.112401+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 17134.72199998796,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"gene=TP53, keyword=Li-Fraumeni syndrome TP53-associated cancers germline TP53, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"20965415\",\n      \"pmcid\": \"PMC2988877\",\n      \"doi\": \"10.1016/j.molcel.2010.09.019\",\n      \"title\": \"The DNA damage response: making it safe to play with knives.\",\n      \"journal\": \"Mol Cell\",\n      \"date\": \"2010-10-01\",\n      \"citation_count\": 3631,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"35732831\",\n      \"pmcid\": \"PMC9252913\",\n      \"doi\": \"10.1038/s41375-022-01613-1\",\n      \"title\": \"The 5th edition of the World Health Organization Classification of Haematolymphoid Tumours: Myeloid and Histiocytic/Dendritic Neoplasms.\",\n      \"journal\": \"Leukemia\",\n      \"date\": \"2022-06-22\",\n      \"citation_count\": 3542,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"27993330\",\n      \"pmcid\": \"PMC5707196\",\n      \"doi\": \"10.1016/j.jmoldx.2016.10.002\",\n      \"title\": \"Standards and Guidelines for the Interpretation and Reporting of Sequence Variants in Cancer: A Joint Consensus Recommendation of the Association for Molecular Pathology, American Society of Clinical Oncology, and College of American Pathologists.\",\n      \"journal\": \"J Mol Diagn\",\n      \"date\": \"2017-01-01\",\n      \"citation_count\": 1708,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"28886379\",\n      \"pmcid\": \"PMC5743327\",\n      \"doi\": \"10.1016/j.cell.2017.08.028\",\n      \"title\": \"Putting p53 in Context.\",\n      \"journal\": \"Cell\",\n      \"date\": \"2017-09-01\",\n      \"citation_count\": 1683,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"34709361\",\n      \"pmcid\": \"PMC8554692\",\n      \"title\": \"Analysis of the Li-Fraumeni Spectrum Based on an International Germline TP53 Variant Data Set\",\n      \"journal\": \"JAMA Oncol\",\n      \"date\": \"2021-12-01\",\n      \"citation_count\": 137,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"33051812\",\n      \"title\": \"The role of TP53 pathogenic variants in early-onset HER2-positive breast cancer.\",\n      \"journal\": \"Fam Cancer\",\n      \"date\": \"2021-07-01\",\n      \"citation_count\": 6,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"39629784\",\n      \"title\": \"Clinicopathologic Features of Breast Tumors in Germline TP53 Variant-Associated Li-Fraumeni Syndrome.\",\n      \"journal\": \"Am J Surg Pathol\",\n      \"date\": \"2024-12-04\",\n      \"citation_count\": 2,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"33880204\",\n      \"pmcid\": \"PMC8053471\",\n      \"title\": \"Multiple meningiomas arising within the same hemisphere associated with Li-Fraumeni syndrome\",\n      \"journal\": \"Surg Neurol Int\",\n      \"date\": \"2021-03-17\",\n      \"citation_count\": 2,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42960272\",\n      \"title\": \"Li-Fraumeni syndrome presenting with early-onset eyelid sebaceous carcinoma.\",\n      \"journal\": \"American journal of ophthalmology case reports\",\n      \"date\": \"2026-10-16\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42879099\",\n      \"title\": \"Colorectal neoplasia detected during colonoscopic surveillance in Li-Fraumeni syndrome: a retrospective case series.\",\n      \"journal\": \"Clinical journal of gastroenterology\",\n      \"date\": \"2026-10-15\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --gene TP53 --keyword \\\"Li-Fraumeni syndrome TP53-associated cancers germline TP53\\\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0\",\n      \"biomcp get article 20965415\",\n      \"biomcp search article -g TP53 -k \\\"Li-Fraumeni syndrome TP53-associated cancers germline TP53\\\" --year-min 2010 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

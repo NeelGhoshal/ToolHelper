@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "EGFR",
+    "keyword": [
+      "lung cancer",
+      "EGFR mutation"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "d04d04238387441d0a168993e1a9c987950608b1ab33f20dfed02cd3f91fa7e2",
+  "recorded_at": "2026-11-11T04:33:10.392821+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 46006.394900003215,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, keyword=lung cancer EGFR mutation, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene EGFR --keyword \"lung cancer EGFR mutation\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 23550210|Integrative analysis of complex cancer genomics and clinical…|Europe PMC|2013-04-02|-|12856| \n|PMID 23000897|Comprehensive molecular portraits of human breast tumours.|Europe PMC|2012-09-23|-|10271| \n|PMID 32029601|The biology, function, and biomedical applications of exosom…|Europe PMC|2020-02-01|-|8962| \n|PMID 20303878|Immunity, inflammation, and cancer.|Europe PMC|2010-03-01|-|8587| \n|PMID 43007370|The genomic landscape of non-small cell lung cancer in North…|PubMed|2026-11-10|-|none| \n|PMID 43008131|Prevalence and Actionability of MTAP Loss in Driver Oncogene…|PubMed|2026-11-10|-|none| \n|PMID 43008835|The Presence of Targetable Mutations in Non-Small Cell Lung…|PubMed|2026-11-10|-|none| \n|PMID 43008663|Coexistence of Osimertinib-Resistant and Osimertinib-Sensiti…|PubMed|2026-11-05|-|none| \n|PMID 38851874|Impact of smoking on resected lung cancer depends on epiderm…|PubTator3|2024-06-08|-|none| \n|PMID 35702826|Prognostic features and comprehensive genomic analysis of  N…|PubTator3|2023-01-01|-|none| \n \n \n \nNewest indexed: 2026-11-10 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 23550210\n  biomcp search article -g EGFR -k \"lung cancer EGFR mutation\" --year-min 2010 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

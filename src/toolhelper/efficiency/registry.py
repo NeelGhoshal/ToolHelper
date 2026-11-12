@@ -50,12 +50,12 @@ def parse_spec(spec: str) -> tuple[str, dict[str, Any]]:
 # Parameters each builder reads: a list of allowed values, `int`, or a `+`-joined subset of a list.
 # `E7` also takes `ttl_<server>=<seconds>`; E3 `datasets` names come from the dataset index.
 PARAMS: dict[str, dict[str, Any]] = {
-    "E1": {"top_k": int, "mode": ["static", "find_tools"], "route": ["on", "off"]},
+    "E1": {"top_k": int, "mode": ["static", "find_tools", "servers"], "route": ["on", "off"]},
     "E2": {"level": ["light", "aggressive", "minimal"]},
     "E3": {"modes": ("+", ["hints", "tool", "rewrite"]), "datasets": ("+", None)},
     "E4": {"mode": ["reject", "repair"]},
     "E5": {"mode": ["plan", "tool"]},
-    "E6": {"mode": ["projection", "top_n", "summary", "budget"], "top_n": int, "budget": int},
+    "E6": {"mode": ["projection", "top_n", "summary", "budget"], "top_n": int, "budget": int, "expand": ["full", "page"]},
     "E7": {},
     "E8": {"mode": ["after_turn", "after_use"]},
     "E9": {},
@@ -69,7 +69,7 @@ DEFAULTS: dict[str, dict[str, Any]] = {
     "E3": {"modes": "hints"},
     "E4": {"mode": "reject"},
     "E5": {"mode": "plan"},
-    "E6": {"mode": "projection", "top_n": 5, "budget": 2000},
+    "E6": {"mode": "projection", "top_n": 5, "budget": 2000, "expand": "full"},
     "E7": {},
     "E8": {"mode": "after_use"},
     "E9": {},
@@ -103,8 +103,10 @@ def check_spec(spec: str) -> list[str]:
 
 def _e1(p, inp):
     from toolhelper.efficiency.arg_guard import learn_rules, observations_from_traces
-    from toolhelper.efficiency.retrieval import ToolRetrieval, build_cards
+    from toolhelper.efficiency.retrieval import ServerMenu, ToolRetrieval, build_cards
 
+    if p.get("mode") == "servers":  # the model picks servers itself; nothing is learned or searched
+        return ServerMenu(inp.tools)
     cards = build_cards(inp.tools, inp.traces, learn_rules(observations_from_traces(inp.traces)))
     return ToolRetrieval(cards, top_k=p.get("top_k", 5), mode=p.get("mode", "static"), route=p.get("route") == "on")
 
@@ -152,7 +154,7 @@ def _e6(p, inp):
     cdm = CdmFields.load(inp.cdm_path) if inp.cdm_path and inp.cdm_path.exists() else None
     mode, budget = p.get("mode", "projection"), p.get("budget", 2000)
     policies = learn_policies(inp.traces, budgets=[budget] if mode == "budget" else [])
-    return ResultShaper(mode, policies, top_n=p.get("top_n", 5), budget=budget, cdm=cdm)
+    return ResultShaper(mode, policies, top_n=p.get("top_n", 5), budget=budget, cdm=cdm, expand=p.get("expand", "full"))
 
 
 def _e7(p, inp):

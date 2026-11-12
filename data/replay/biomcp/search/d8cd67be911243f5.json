@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "EGFR",
+      "exon 20 insertion",
+      "NSCLC"
+    ],
+    "limit": 10,
+    "sort": "relevance"
+  },
+  "args_key": "d8cd67be911243f5b98e92a4c9dab5605b0f4fd102d4878d3b00fc121f2976d9",
+  "recorded_at": "2026-11-11T22:42:49.244006+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4374.057799999719,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=EGFR exon 20 insertion NSCLC, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"sort\": \"relevance\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"ranking_policy\": \"hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position)\",\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"36738930\",\n      \"title\": \"Distribution and Detectability of EGFR Exon 20 Insertion Variants in NSCLC.\",\n      \"journal\": \"J Thorac Oncol\",\n      \"date\": \"2023-02-03\",\n      \"citation_count\": 44,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"34391686\",\n      \"pmcid\": \"PMC8766618\",\n      \"doi\": \"10.1016/j.cllc.2021.07.001\",\n      \"title\": \"EGFR exon 20 Insertion NSCLC and Response to Platinum-Based Chemotherapy.\",\n      \"journal\": \"Clin Lung Cancer\",\n      \"date\": \"2021-07-19\",\n      \"citation_count\": 26,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42212913\",\n      \"title\": \"First-Line Sunvozertinib in NSCLC with EGFR Exon 20 Insertion Mutations.\",\n      \"journal\": \"N Engl J Med\",\n      \"date\": \"2026-05-29\",\n      \"citation_count\": 13,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"35882108\",\n      \"title\": \"Optimizing diagnosis and treatment of EGFR exon 20 insertions mutant NSCLC.\",\n      \"journal\": \"Cancer Treat Rev\",\n      \"date\": \"2022-09-01\",\n      \"citation_count\": 14,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"34381206\",\n      \"title\": \"Amivantamab is effective in NSCLC harbouring EGFR exon 20 insertions.\",\n      \"journal\": \"Nat Rev Clin Oncol\",\n      \"date\": \"2021-10-01\",\n      \"citation_count\": 4,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42239888\",\n      \"pmcid\": \"PMC13225986\",\n      \"doi\": \"10.3389/fonc.2026.1827867\",\n      \"title\": \"Paired ctDNA analysis reveals diverse resistance mechanisms to mobocertinib in EGFR exon 20 insertion NSCLC.\",\n      \"journal\": \"Front Oncol\",\n      \"date\": \"2026-05-19\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42238296\",\n      \"pmcid\": \"PMC13227531\",\n      \"doi\": \"10.2147/lctt.s592922\",\n      \"title\": \"Sunvozertinib in EGFR Exon 20 Insertion NSCLC: Approved but Not Available - Practical Dose Selection Considerations and Real-World Access Challenges.\",\n      \"journal\": \"Lung Cancer (Auckl)\",\n      \"date\": \"2026-05-28\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42999608\",\n      \"title\": \"Perioperative treatment for resectable non-small cell lung cancer harboring EGFR exon 20 insertion mutations: a narrative review from advanced-stage evidence to whole-course precision management.\",\n      \"journal\": \"Translational lung cancer research\",\n      \"date\": \"2026-10-30\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42883213\",\n      \"title\": \"Small-Molecule Drugs Approved by the FDA in 2025.\",\n      \"journal\": \"Molecules (Basel, Switzerland)\",\n      \"date\": \"2026-09-27\",\n      \"citation_count\": 1,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"31122566\",\n      \"doi\": \"10.1016/j.jtho.2019.01.026\",\n      \"title\": \"Paraneoplastic Hypomyopathic Dermatomyositis Associated With EGFR Exon-20 Insertion NSCLC.\",\n      \"journal\": \"J Thorac Oncol\",\n      \"date\": \"2019-06-01\",\n      \"citation_count\": 4,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"EGFR exon 20 insertion NSCLC\\\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0\",\n      \"biomcp get article 36738930\",\n      \"biomcp search article -k \\\"EGFR exon 20 insertion NSCLC\\\" --year-min 2019 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"degraded\",\n        \"message\": \"Semantic Scholar search unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

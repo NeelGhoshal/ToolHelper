@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "disease": [
+      "lung cancer",
+      "non-small cell lung carcinoma"
+    ],
+    "entity": "article",
+    "gene": "EGFR",
+    "limit": 15,
+    "sort": "relevance"
+  },
+  "args_key": "132f76b2c9c3b36bf3fd28011f864edd9c951fc55cae26011ff5a6cae9562389",
+  "recorded_at": "2026-11-12T03:56:48.522962+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6758.304899994982,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, disease=lung cancer non-small cell lung carcinoma, exclude_retracted=true, sort=relevance, ranking_mode=lexical, ranking_policy=calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene EGFR --disease \"lung cancer non-small cell lung carcinoma\" --exclude-retracted --sort relevance --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \nRanking: calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 29277186|EGFR-TKI|PubTator3|2017-12-20|title 1/2|none| \n|PMID 38163979|EGFR|PubTator3|2024-01-02|title 1/2|none| \n|PMID 43009809|Impact of antibiotic exposure on survival outcomes in NSCLC…|PubMed|2026-08-14|title 1/2|0| \n|PMID 25034590|EGFR|PubTator3|2014-07-20|title 1/2|none| \n|PMID 43003698|Disparities in Treatment Patterns for Advanced ALK- and EGFR…|PubMed|2026-11-01|title 1/2|0| \n|PMID 43002481|From ADAURA to LAURA: the evolving role of EGFR-targeted the…|PubMed|2026-11-01|title 1/2|0| \n|PMID 36172732|EGFR|PubTator3|2022-09-20|title 1/2|none| \n|PMID 43002340|EGFR-targeted drugs and resistance mechanisms in non-small c…|PubMed|2026-11-09|title 1/2|0| \n|PMID 31451147|EGFR|PubTator3|2019-08-20|title 1/2|none| \n|PMID 41683202|Effects of Epigallocatechin Gallate Against Lung Cancer: Mec…|Europe PMC|2026-01-23|-|6| \n|PMID 40867304|Clinical Characteristics and Outcomes of SMARCA4-Mutated or…|Europe PMC|2025-08-16|-|3| \n|PMID 41008825|Transforming the Management of Oligometastatic Non-Small Cel…|Europe PMC|2025-09-12|-|1| \n|PMID 42774169|Economic evaluations of next-generation sequencing for targe…|Europe PMC|2026-09-08|-|0| \n|PMID 37877351|Unmasking the tumourigenic role of SIN1/MAPKAP1 in the mTOR…|Europe PMC|2023-10-01|-|12| \n|PMID 38988445|Combination of microwave ablation and systemic treatments ac…|Europe PMC|2024-06-28|-|0| \n \n \n \nNewest indexed: 2026-11-10 (2 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 29277186\n  biomcp search article -g EGFR -d \"lung cancer non-small cell lung carcinoma\" --year-min 2014 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n\nCache note: Europe PMC data served from cache, 2530 s old (older than the provider's freshness window).\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

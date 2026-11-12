@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search disease -q \"TP53\" --limit 15",
+    "json": true
+  },
+  "args_key": "1c8ed54a3377d46451a6d315e201611900e02973c9ce3ea681b7fb353a7186fb",
+  "recorded_at": "2026-11-10T22:54:22.792826+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 875.8692000119481,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 15,\n    \"returned\": 5,\n    \"total\": 5,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 5,\n  \"results\": [\n    {\n      \"id\": \"MONDO:0956964\",\n      \"name\": \"medulloblastoma SHH activated and TP53 mutant\"\n    },\n    {\n      \"id\": \"MONDO:0956965\",\n      \"name\": \"medulloblastoma SHH activated and TP53 wild-type\",\n      \"synonyms_preview\": \"Medulloblastoma SHH-Activated TP53-Wildtype\"\n    },\n    {\n      \"id\": \"MONDO:0018875\",\n      \"name\": \"Li-Fraumeni syndrome 1\",\n      \"synonyms_preview\": \"LFS, Li Fraumeni syndrome (and 8 more)\"\n    },\n    {\n      \"id\": \"MONDO:0013876\",\n      \"name\": \"basal cell carcinoma, susceptibility to, 7\",\n      \"synonyms_preview\": \"basal cell carcinoma 7, basal cell carcinoma, susceptibility to, type 7 (and 3 more)\"\n    },\n    {\n      \"id\": \"MONDO:0011775\",\n      \"name\": \"nasopharyngeal carcinoma, susceptibility to, 1\",\n      \"synonyms_preview\": \"nasopharyngeal carcinoma 1, nasopharyngeal carcinoma caused by mutation in TP53 (and 3 more)\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get disease MONDO:0956964\",\n      \"biomcp list disease\"\n    ],\n    \"workflow\": \"mutation-catalog\",\n    \"workflow_rationale\": \"Start from the gene, enumerate variants, narrow to a mutation class, then confirm disease literature.\",\n    \"workflow_playbook\": \"biomcp skill mutation-catalog\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

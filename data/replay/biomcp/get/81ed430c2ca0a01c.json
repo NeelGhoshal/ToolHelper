@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "42522639",
+    "json": true,
+    "sections": [
+      "tldr"
+    ]
+  },
+  "args_key": "81ed430c2ca0a01c6f669255f9f220843261111cf678ba8c14a6d9e3fff37791",
+  "recorded_at": "2026-11-11T05:25:02.454380+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 3400.115199998254,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42522639/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42522639 tldr\",\n      \"biomcp article references 42522639 --limit 3\",\n      \"biomcp article citations 42522639 --limit 3\",\n      \"biomcp article recommendations 42522639 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ]\n  },\n  \"abstract_text\": \"Thyroid carcinomas of follicular-cell origin are divided into 2 distinct morphologic and molecular families, RAS-like and BRAF p.V600E-like. Multifocality is common, usually of a single type. We retrospectively examined thyroid specimens diagnosed between 2019 and 2025 at one institution to evaluate the prevalence, clinicopathologic features, and immunohistochemical profiles of multifocal thyroid carcinomas with discordant molecular drivers. Clinical, demographic, and pathologic data were collected. Tissue microarrays were constructed for immunohistochemistry to localize BRAF p.V600E, NRAS p.Q61R, HBME-1, CK19, and Galectin-3. Among 1778 thyroid specimens, 626 thyroidectomy cases contained follicular cell-derived carcinomas. Multifocal disease was identified in 245 patients (39.1%); 63 (25.7%) had coexisting RAS-like and BRAF p.V600E-like carcinomas within the same gland. Most cases had a dominant tumor >1 cm and a second tumor <1 cm; in 19 cases (7.8%), both tumors were >=1 cm. RAS-like tumors were larger (mean 3.6 cm) than BRAF p.V600E-like tumors (mean 1.85 cm; median 2.30 vs. 0.60 cm, P<0.001). HBME-1, CK19 and galectin-3 expression was more frequent in BRAF p.V600E-like tumors (81.0%, 82.5%, and 74.6%) compared with RAS-like tumors (63.5%, 65.1%, and 28.6%) (P=0.004, P=0.003 and P<0.001). Lymphatic invasion occurred in 14 cases and lymph node metastasis in 10, predominantly from BRAF p.V600E-like papillary thyroid carcinoma, including 9 metastases arising from the smaller tumor focus. Two collision tumors were identified. We conclude that RAS-like and BRAF p.V600E-like tumors commonly coexist within the same thyroid gland. BRAF p.V600E-like papillary thyroid carcinomas demonstrate greater metastatic potential regardless of size, highlighting the importance of comprehensive histopathologic, immunohistochemical, and molecular evaluation for accurate risk stratification and individualized management.\",\n  \"author_completeness\": \"complete\",\n  \"author_count\": 3,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Altun E\",\n    \"Ergenç M\",\n    \"Asa SL\"\n  ],\n  \"citation_count\": 0,\n  \"date\": \"2026-07-29\",\n  \"doi\": \"10.1097/pas.0000000000002594\",\n  \"journal\": \"Am J Surg Pathol\",\n  \"open_access\": false,\n  \"pmid\": \"42522639\",\n  \"publication_type\": \"research support, non-u.s. gov't\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"Multifocal Thyroid Follicular Cell-Derived Carcinomas With Discordant Molecular Drivers: Morphologic and Clinical Features in 63 Patients.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

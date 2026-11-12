@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CYP2C19 clopidogrel guideline phenoconversion intermediate metabolizer normal metabolizer recommendation"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "65f9e373231d4687bfee9fe08e5f8e9eb99387ffad33deb27b9c10541e757151",
+  "recorded_at": "2026-11-10T22:50:51.728060+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2510.374400008004,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CYP2C19 clopidogrel guideline phenoconversion intermediate metabolizer normal metabolizer recommendation, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"CYP2C19 clopidogrel guideline phenoconversion intermediate metabolizer normal metabolizer recommendation\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 27981572|Clinical Pharmacogenetics Implementation Consortium (CPIC) G…|Europe PMC|2017-04-18|-|311| \n|PMID 26479518|Pharmacogenetic allele nomenclature: International workgroup…|Europe PMC|2015-11-20|-|123| \n|PMID 37274118|Pharmacogenomics in practice: a review and implementation gu…|Europe PMC|2023-05-18|-|64| \n|PMID 34065361|The Influence of Pharmacogenetics on the Clinical Relevance…|PubTator3, Europe PMC|2021-05-20|-|60| \n|PMID 33048353|A Tutorial for Pharmacogenomics Implementation Through End-t…|Europe PMC|2020-11-15|-|41| \n|PMID 22591598|Personalized medicine: is it a pharmacogenetic mirage?|Europe PMC|2012-10-01|-|41| \n|PMID 33815120|Sequence2Script: A Web-Based Tool for Translation of Pharmac…|PubTator3, Europe PMC|2021-03-18|-|36| \n|PMID 33638977|The role of pharmacogenomics in contemporary cardiovascular…|Europe PMC|2022-01-01|-|35| \n|PMID 33363564|How Can Drug Metabolism and Transporter Genetics Inform Psyc…|Europe PMC|2020-12-08|-|28| \n|PMID 36353710|Drug-Drug-Gene Interactions in Cardiovascular Medicine|PubTator3|2022-11-02|-|23| \n \n \n \nNewest indexed: 2023-06-06 (1253 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 27981572\n  biomcp search article -k \"CYP2C19 clopidogrel guideline phenoconversion intermediate metabolizer normal metabolizer recommendation\" --year-min 2012 --year-max 2023 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

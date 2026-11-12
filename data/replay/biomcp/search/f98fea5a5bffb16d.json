@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CRISPR in vivo transthyretin amyloidosis NTLA-2001"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "f98fea5a5bffb16da30bac825542c26ebb4771ce34560828a56bdfb59d9f974a",
+  "recorded_at": "2026-11-12T04:49:34.211904+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2748.0477999924915,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR in vivo transthyretin amyloidosis NTLA-2001, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CRISPR in vivo transthyretin amyloidosis NTLA-2001\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 34394960|Lipid nanoparticles for mRNA delivery.|Europe PMC|2021-08-10|-|3206| \n|PMID 34215024|CRISPR-Cas9 In Vivo Gene Editing for Transthyretin Amyloidos…|PubTator3, Europe PMC, PubMed|2021-08-05|-|1382| \n|PMID 34983972|Drug delivery systems for RNA therapeutics.|Europe PMC|2022-01-04|-|1075| \n|PMID 35597779|mRNA-based therapeutics: powerful and versatile tools to com…|Europe PMC|2022-05-21|-|608| \n|PMID 36691401|Passive, active and endogenous organ-targeted lipid and poly…|Europe PMC|2023-01-19|-|528| \n|PMID 34279087|Lipids and Lipid Derivatives for RNA Delivery.|Europe PMC|2021-07-19|-|495| \n|PMID 36646687|CRISPR/Cas9 therapeutics: progress and prospects.|Europe PMC|2023-01-16|-|480| \n|PMID 32622021|Lipid nanoparticle technology for therapeutic gene regulatio…|Europe PMC|2020-07-02|-|309| \n|PMID 35594500|Lipid-Nanoparticle-Based Delivery of CRISPR/Cas9 Genome-Edit…|Europe PMC|2022-05-20|-|241| \n|PMID 35865096|Current approaches of nanomedicines in the market and variou…|Europe PMC|2022-03-01|-|218| \n \n \n \nNewest indexed: 2023-01-24 (1388 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 34394960\n  biomcp search article -k \"CRISPR in vivo transthyretin amyloidosis NTLA-2001\" --year-min 2020 --year-max 2023 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

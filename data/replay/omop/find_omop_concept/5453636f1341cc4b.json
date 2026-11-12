@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "acetaminophen Oral Tablet",
+    "max_results": 5,
+    "omop_field": "drug_concept_id",
+    "omop_table": "drug_exposure"
+  },
+  "args_key": "5453636f1341cc4b00f1fc160948692d7466c88e804083535c298c2f8bed4ca5",
+  "recorded_at": "2026-11-12T02:01:16.024530+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 11236.26399999921,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error executing tool find_omop_concept: OMOP vocabulary API is not accessible: Both APIs failed — suggest: [Errno 11001] getaddrinfo failed, basic: [Errno 11001] getaddrinfo failed"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

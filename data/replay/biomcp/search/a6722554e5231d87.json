@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "TP53",
+    "keyword": [
+      "Li-Fraumeni syndrome",
+      "germline TP53",
+      "cancer spectrum"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "a6722554e5231d870cfaf5e2a5524a34dabf729c4a9b577da2ae25a81dcf4a74",
+  "recorded_at": "2026-11-11T04:06:16.865276+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 12024.918500013882,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=TP53, keyword=Li-Fraumeni syndrome germline TP53 cancer spectrum, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --gene TP53 --keyword \"Li-Fraumeni syndrome germline TP53 cancer spectrum\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 20965415|The DNA damage response: making it safe to play with knives.|Europe PMC|2010-10-01|-|3631| \n|PMID 35732831|The 5th edition of the World Health Organization Classificat…|Europe PMC|2022-06-22|-|3542| \n|PMID 35767897|International Consensus Classification of Myeloid Neoplasms…|Europe PMC|2022-09-01|-|2575| \n|PMID 27993330|Standards and Guidelines for the Interpretation and Reportin…|Europe PMC|2017-01-01|-|1708| \n|PMID 34709361|Analysis of the Li-Fraumeni Spectrum Based on an Internation…|PubTator3|2021-12-01|-|137| \n|PMID 35954327|Li-Fraumeni Syndrome: Mutation of TP53 Is a Biomarker of Her…|PubTator3|2022-07-27|-|40| \n|PMID 33051812|The role of TP53 pathogenic variants in early-onset HER2-pos…|PubTator3|2021-07-01|-|6| \n|PMID 33880204|Multiple meningiomas arising within the same hemisphere asso…|PubTator3|2021-03-17|-|2| \n|PMID 42741779|Li-Fraumeni Syndrome: Current Perspectives on Molecular Path…|PubMed|2026-08-15|-|1| \n|PMID 42960272|Li-Fraumeni syndrome presenting with early-onset eyelid seba…|PubMed|2026-10-16|-|0| \n \n \n \nNewest indexed: 2026-10-30 (12 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 20965415\n  biomcp search article -g TP53 -k \"Li-Fraumeni syndrome germline TP53 cancer spectrum\" --year-min 2010 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

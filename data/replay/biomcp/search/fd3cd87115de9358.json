@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "statin",
+      "cognitive",
+      "randomized"
+    ],
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "fd3cd87115de9358071aa702ae9ebc9d479b9f5ae9c8d5e490753167e07c96d8",
+  "recorded_at": "2026-11-10T22:41:29.939614+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 18111.27699998906,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statin cognitive randomized, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"statin cognitive randomized\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 28985560|Ferroptosis: A Regulated Cell Death Nexus Linking Metabolism…|Europe PMC|2017-10-01|-|6714| \n|PMID 28122885|Heart Disease and Stroke Statistics-2017 Update: A Report Fr…|Europe PMC|2017-01-25|-|6484| \n|PMID 18539917|Effects of intensive glucose lowering in type 2 diabetes.|Europe PMC|2008-06-06|-|5337| \n|PMID 33501848|Heart Disease and Stroke Statistics-2021 Update: A Report Fr…|Europe PMC|2021-01-27|-|4456| \n|PMID 26551272|A Randomized Trial of Intensive versus Standard Blood-Pressu…|Europe PMC|2015-11-09|-|4412| \n|PMID 27222591|2016 European Guidelines on cardiovascular disease preventio…|Europe PMC|2016-05-23|-|4362| \n|PMID 33189626|Association between statin use and cognitive function: A sys…|PubTator3|2021-01-01|-|45| \n|PMID 38298909|Statins and risks of dementia among patients with heart fail…|PubTator3|2024-01-17|-|29| \n|PMID 36598445|Primary Prevention Statin Therapy in Older Adults|PubTator3|2023-01-01|-|16| \n|PMID 40207842|Managing Hypercholesterolemia in Adults Older Than 75 years…|PubTator3|2025-04-10|-|12| \n|PMID 41118164|Preserved Cognitive Function After Statin Administration Dur…|PubTator3|2025-10-01|-|2| \n|PMID 42692163|Targeting the AMPK/SIRT1-NLRP3 inflammasome axis: Simvastati…|PubMed|2026-12-15|-|0| \n|PMID 42546862|Neurocognitive outcomes and survival with high- vs low-inten…|PubMed|2026-09-01|-|0| \n|PMID 42706978|Statin Therapy for Primary Prevention in Adults Aged 80 Year…|PubMed|2026-08-28|-|0| \n|PMID 42711208|Safety of lipid-lowering therapies: it is time for a \"DOCebo…|PubMed|2026-08-18|-|0| \n \n \n \nNewest indexed: 2026-09-08 (63 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 28985560\n  biomcp search article -k \"statin cognitive randomized\" --year-min 2008 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

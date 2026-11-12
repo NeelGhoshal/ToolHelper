@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "serum creatinine",
+    "max_results": 10,
+    "omop_field": "measurement",
+    "omop_table": "measurement"
+  },
+  "args_key": "86e4bb6bff2d81d3f2017809bcc59218801c80f46c5cff174a3c9f0af99d6889",
+  "recorded_at": "2026-11-11T20:38:53.481400+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1088.168999995105,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 4013964,\n      \"code\": \"113075003\",\n      \"name\": \"Creatinine measurement, serum\",\n      \"class\": \"Procedure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4013964\"\n    },\n    {\n      \"concept_id\": 4276437,\n      \"code\": \"365757006\",\n      \"name\": \"Serum creatinine level - finding\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4276437\"\n    },\n    {\n      \"concept_id\": 4197967,\n      \"code\": \"313822004\",\n      \"name\": \"Corrected serum creatinine measurement\",\n      \"class\": \"Procedure\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4197967\"\n    },\n    {\n      \"concept_id\": 4041902,\n      \"code\": \"166717003\",\n      \"name\": \"Serum creatinine above reference range\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4041902\"\n    },\n    {\n      \"concept_id\": 4055579,\n      \"code\": \"166715006\",\n      \"name\": \"Serum creatinine below reference range\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4055579\"\n    },\n    {\n      \"concept_id\": 4042575,\n      \"code\": \"166716007\",\n      \"name\": \"Serum creatinine within reference range\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4042575\"\n    },\n    {\n      \"concept_id\": 4042574,\n      \"code\": \"166714005\",\n      \"name\": \"Serum creatinine outside reference range\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4042574\"\n    },\n    {\n      \"concept_id\": 40765539,\n      \"code\": \"62807-3\",\n      \"name\": \"PhenX - serum creatinine assay for kidney function protocol 141401\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/40765539\"\n    },\n    {\n      \"concept_id\": 1314395,\n      \"code\": \"G9722\",\n      \"name\": \"Documented history of renal failure or baseline serum creatinine >= 4.0 mg/dl; renal transplant recipients are not considered to have preoperative renal failure, unless, since transplantation the cr has been or is 4.0 or higher\",\n      \"class\": \"HCPCS\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"HCPCS\",\n      \"url\": \"https://omophub.com/concepts/1314395\"\n    },\n    {\n      \"concept_id\": 37036132,\n      \"code\": \"LP404513-6\",\n      \"name\": \"HEDIS 2014-2019 Value Set - Serum Creatinine | Patient | HEDIS panels\",\n      \"class\": \"LOINC Hierarchy\",\n      \"concept\": \"C\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/37036132\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"serum creatinine\",\n    \"omop_table\": \"measurement\",\n    \"omop_field\": \"measurement\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

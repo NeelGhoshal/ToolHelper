@@ -332,7 +332,13 @@ class ResultShaper(BaseStrategy):
     name = "E6_shaping"
 
     def __init__(self, mode: Mode = "projection", policies: dict[str, ToolPolicy] | None = None, *, top_n: int = 5,
-                 budget: int = 2000, cdm: CdmFields | None = None, min_reduction: float = 0.1) -> None:
+                 budget: int = 2000, cdm: CdmFields | None = None, min_reduction: float = 0.1,
+                 expand: Literal["full", "page"] = "full") -> None:
+        # expand=page: expand_result returns what was cut one part of at most `budget` tokens at a
+        # time, not the whole original (54 of 89 expands in the ABC runs exceeded 2,000 tokens; one had 187,691).
+        self.expand = expand
+        self.seen: dict[str, int] = {}  # per handle: characters of the original the shaped text already shows
+        self.pages: dict[str, list[str]] = {}
         self.mode = mode
         self.policies = policies or {}
         self.top_n = top_n
@@ -344,13 +350,15 @@ class ResultShaper(BaseStrategy):
     def config(self) -> dict[str, Any]:
         out = {"mode": self.mode, "top_n": self.top_n, "tools": sorted(self.policies),
                "cdm": self.cdm.ref if self.cdm else None}
+        if self.expand != "full":
+            out["expand"] = self.expand
         if self.mode == "budget":
             out |= {"budget": self.budget, "budget_tools": sorted(t for t, p in self.policies.items()
                                                                   if p.budget_runs.get(self.budget))}
         return out
 
     def prepare(self, task: Task, ctx) -> list:
-        self.parked = {}
+        self.parked, self.seen, self.pages = {}, {}, {}
         return []
 
     def _omop_filter(self, call: PendingCall, items: list[Item]) -> tuple[list[Item], list[EvidenceRef], str]:
@@ -409,23 +417,67 @@ class ResultShaper(BaseStrategy):
         if not evidence:
             return result
         handle = f"r{len(self.parked) + 1}"
-        text += f"\n\n[shaped: {'; '.join(notes)}. Full result: {EXPAND}(handle=\"{handle}\")]"
+        shown = len(text) if result.text.startswith(text) else 0
+        more = "Full result" if self.expand == "full" else "More, one part at a time"
+        text += f"\n\n[shaped: {'; '.join(notes)}. {more}: {EXPAND}(handle=\"{handle}\")]"
         # The handle note costs tokens too: small results whose cut does not pay for it stay whole.
         if self.run.tokens(text) > self.run.tokens(result.text) * (1 - self.min_reduction):
             return result
         self.parked[handle] = result
+        self.seen[handle] = shown
         self.run.transform(call.name, before=result.text, after=text, evidence=evidence,
                            note=f"handle {handle}: {'; '.join(notes)}")
         return result.model_copy(update={"text": text, "structured": None})
+
+    def _pages(self, handle: str) -> list[str]:
+        """The original after what the shaped text already shows (all of it when the shaped text is
+        not a prefix), in parts of leading whole lines within the budget."""
+        if handle not in self.pages:
+            original = self.parked[handle].text
+            rest = original[self.seen.get(handle, 0):].lstrip("\n")
+            rest = rest if rest.strip() else original
+            pages = []
+            while rest.strip():
+                kept, _, _ = _cut_lines(rest, self.budget, self.run.tokens)
+                if not kept:
+                    break
+                pages.append(kept)
+                rest = rest[len(kept):].lstrip("\n")
+            self.pages[handle] = pages
+        return self.pages[handle]
 
     def extra_tools(self) -> list[ExtraTool]:
         async def expand(call: PendingCall) -> ToolResult:
             handle = str(call.arguments.get("handle", ""))
             original = self.parked.get(handle)
-            text = original.text if original else f"Error: no result with handle {handle!r}."
+            error = original is None
+            if error:
+                text = f"Error: no result with handle {handle!r}."
+            elif self.expand == "full":
+                text = original.text
+            else:
+                pages = self._pages(handle)
+                try:
+                    page = int(call.arguments.get("page") or 1)
+                except (TypeError, ValueError):
+                    page = 0
+                if error := not 1 <= page <= len(pages):
+                    text = f"Error: handle {handle!r} has parts 1-{len(pages)}."
+                else:
+                    what = "what was cut" if self.seen.get(handle) else "the full result"
+                    text = pages[page - 1] + (
+                        f"\n\n[part {page} of {len(pages)} of {what}; next: {EXPAND}(handle=\"{handle}\", page={page + 1})]"
+                        if page < len(pages) else f"\n\n[part {page} of {len(pages)} of {what}; nothing further]")
             return ToolResult(name=EXPAND, server="toolhelper", tool="expand_result", arguments=call.arguments,
-                              text=text, is_error=original is None, source="local", latency_ms=0)
+                              text=text, is_error=bool(error), source="local", latency_ms=0)
 
+        if self.expand == "page":
+            return [ExtraTool(tool=ToolDef(name=EXPAND, description=(
+                "Return more of a tool result that was shortened, one part at a time. Pass the handle shown in it; "
+                "`page` selects the part (default 1)."),
+                input_schema={"type": "object", "properties": {"handle": {"type": "string"},
+                                                               "page": {"type": "integer", "minimum": 1}},
+                              "required": ["handle"]}), handler=expand)]
         return [ExtraTool(tool=ToolDef(name=EXPAND, description=(
             "Return the full, unshaped text of a tool result that was shortened. Pass the handle shown in it."),
             input_schema={"type": "object", "properties": {"handle": {"type": "string"}}, "required": ["handle"]}),

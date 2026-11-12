@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "HER2",
+      "targeted therapy",
+      "2025"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "8332114eb3fbb8502af8aa4756d4b15c0688bc1e1ae9028d7d4df2f5af44b527",
+  "recorded_at": "2026-11-11T04:11:11.629179+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 12522.127400006866,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=HER2 targeted therapy 2025, exclude_retracted=true, sort=date\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"41423932\",\n      \"pmcid\": \"PMC12724186\",\n      \"title\": \"Nanotherapeutics for enhanced treatments for ovarian cancer: a comprehensive minireview\",\n      \"journal\": \"Drug Deliv\",\n      \"date\": \"2026-12-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41496551\",\n      \"pmcid\": \"PMC12785206\",\n      \"title\": \"Oncolytic virus OVV-03 enhances CAR-T cell therapy against glioblastoma via immune modulation and specific HER2 upregulation\",\n      \"journal\": \"Oncoimmunology\",\n      \"date\": \"2026-12-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41866709\",\n      \"pmcid\": \"PMC13011097\",\n      \"title\": \"Extracellular payload release from non-internalizing antibody-drug conjugates: mechanisms and linker technologies\",\n      \"journal\": \"Drug Deliv\",\n      \"date\": \"2026-12-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41936024\",\n      \"pmcid\": \"PMC13051602\",\n      \"title\": \"Tokenizing loops of antibodies\",\n      \"journal\": \"MAbs\",\n      \"date\": \"2026-12-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41560619\",\n      \"pmcid\": \"PMC12826703\",\n      \"title\": \"Antibodies to watch in 2026\",\n      \"journal\": \"MAbs\",\n      \"date\": \"2026-12-01\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41630477\",\n      \"pmcid\": \"PMC12885418\",\n      \"title\": \"A data-driven cartography of NSCLC vaccine research: Quantifying the paradigm shift toward immuno-oncology combination therapies\",\n      \"journal\": \"Hum Vaccin Immunother\",\n      \"date\": \"2026-12-01\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41645963\",\n      \"pmcid\": \"PMC12885431\",\n      \"title\": \"Expanding the horizons of cancer therapy with next-generation 4-1BB agonists: a review of molecular and clinical strategies to maximize efficacy and ensure safety\",\n      \"journal\": \"MAbs\",\n      \"date\": \"2026-12-01\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41665114\",\n      \"pmcid\": \"PMC12893152\",\n      \"title\": \"Integrating virtual screening and molecular dynamics simulations to identify emodin as a PYCR1 inhibitor modulating docetaxel sensitivity in prostate cancer\",\n      \"journal\": \"J Enzyme Inhib Med Chem\",\n      \"date\": \"2026-12-01\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41689452\",\n      \"pmcid\": \"PMC12915772\",\n      \"title\": \"ASD: antigen-specific antibody database\",\n      \"journal\": \"MAbs\",\n      \"date\": \"2026-12-01\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42009253\",\n      \"title\": \"Cost-effectiveness analysis of capivasertib plus fulvestrant in the PIK3CA/AKT1/PTEN-altered subgroup with HR+/HER2- advanced breast cancer: a United States payer perspective.\",\n      \"journal\": \"J Med Econ\",\n      \"date\": \"2026-12-01\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"HER2 targeted therapy 2025\\\" --exclude-retracted --sort date --source europepmc --limit 10 --offset 0\",\n      \"biomcp search article --keyword \\\"HER2 targeted therapy 2025\\\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0\",\n      \"biomcp get article 41423932\",\n      \"biomcp search article -k \\\"HER2 targeted therapy 2025\\\" --year-min 2026 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"europepmc\",\n        \"enabled\": true,\n        \"status\": \"degraded\",\n        \"message\": \"Europe PMC timed out after 12s\"\n      },\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR T790M resistance osimertinib third-generation",
+      "exon 20 insertion",
+      "EGFR mutation prevalence epidemiology"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "104cd7a845b9121457a4e5a4b1d559f24452d59cb0129b3dba5dc76d0c46931c",
+  "recorded_at": "2026-11-11T03:59:59.310936+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 8012.704499997199,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR T790M resistance osimertinib third-generation exon 20 insertion EGFR mutation prevalence epidemiology, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"EGFR T790M resistance osimertinib third-generation exon 20 insertion EGFR mutation prevalence epidemiology\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 36075878|Non-small cell lung cancer in China.|Europe PMC|2022-09-08|-|588| \n|PMID 30045933|Tumor Mutation Burden and Efficacy of EGFR-Tyrosine Kinase I…|Europe PMC|2018-07-25|-|295| \n|PMID 38195910|Lung cancer in patients who have never smoked - an emerging…|Europe PMC|2024-01-09|-|283| \n|PMID 35762249|Brain metastases: A Society for Neuro-Oncology (SNO) consens…|Europe PMC|2022-10-01|-|145| \n|PMID 33435440|Molecular Epidemiology of the Main Druggable Genetic Alterat…|Europe PMC|2021-01-09|-|140| \n|PMID 37396553|Non-small cell lung carcinoma (NSCLC): Implications on molec…|Europe PMC|2022-08-23|-|96| \n|PMID 34638411|Molecular Mechanism of EGFR-TKI Resistance in EGFR-Mutated N…|PubTator3, Europe PMC|2021-09-30|-|95| \n|PMID 30539501|Liquid-Biopsy-Based Identification of EGFR T790M Mutation-Me…|Europe PMC|2019-02-01|-|88| \n|PMID 40517166|Advances in molecular pathology and therapy of non-small cel…|Europe PMC|2025-06-15|-|85| \n|PMID 33684140|Epidemiological and clinical burden of EGFR Exon 20 insertio…|PubTator3, Europe PMC|2021-03-08|-|82| \n \n \n \nNewest indexed: 2025-06-15 (514 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 36075878\n  biomcp search article -k \"EGFR T790M resistance osimertinib third-generation exon 20 insertion EGFR mutation prevalence epidemiology\" --year-min 2018 --year-max 2025 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

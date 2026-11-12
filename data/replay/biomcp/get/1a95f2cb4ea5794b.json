@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "BRAF",
+    "json": true,
+    "maxItems": 20,
+    "sections": [
+      "diseases",
+      "druggability",
+      "pathways",
+      "constraint",
+      "clingen",
+      "gencc"
+    ]
+  },
+  "args_key": "1a95f2cb4ea5794bab3e892786ae378a00188f07e4db818dbcd4dc7f0edafcb8",
+  "recorded_at": "2026-11-12T01:52:13.585283+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.0999000005540438,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "unknown gene get field: maxItems"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

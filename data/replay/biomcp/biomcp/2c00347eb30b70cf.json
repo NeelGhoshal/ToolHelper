@@ -1,0 +1,28 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "get disease MONDO:0005105 genes"
+  },
+  "args_key": "2c00347eb30b70cfe15013f96d8124bbb0869c2069bf876835a158f86d6d4483",
+  "recorded_at": "2026-11-12T00:46:43.564901+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 2341.718099996797,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# melanoma - genes \n## Associated Genes \n \n| Gene | Relationship | Source | OpenTargets | \n|---|---|---|---| \n| BAP1 | gene associated with condition | [OpenTargets; infores:orphanet](https://www.orpha.net/en/disease/detail/411533) | overall 0.816; rare 0.699; somatic 0.855 | \n| MITF | gene associated with condition | [OpenTargets; infores:orphanet](https://www.orpha.net/en/disease/detail/411533) | overall 0.755; GWAS 0.951; rare 0.659; somatic 0.690 | \n| ACD | gene associated with condition | [infores:orphanet](https://www.orpha.net/en/disease/detail/411533) | - | \n| POT1 | gene associated with condition | [infores:orphanet](https://www.orpha.net/en/disease/detail/411533) | overall 0.704; GWAS 0.358; rare 0.012; somatic 0.725 | \n| CDKN2B | gene associated with condition | [infores:orphanet](https://www.orpha.net/en/disease/detail/411533) | - | \n| CDK4 | gene associated with condition | [OpenTargets; infores:orphanet](https://www.orpha.net/en/disease/detail/411533) | overall 0.735; rare 0.797; somatic 0.777 | \n| MGMT | gene associated with condition | [infores:orphanet](https://www.orpha.net/en/disease/detail/411533) | - | \n| TERF2IP | gene associated with condition | [infores:orphanet](https://www.orpha.net/en/disease/detail/411533) | - | \n| MC1R | gene associated with condition | [infores:orphanet](https://www.orpha.net/en/disease/detail/411533) | - | \n| CDKN2A | gene associated with condition | [OpenTargets; infores:orphanet](https://www.orpha.net/en/disease/detail/411533) | overall 0.873; GWAS 0.742; rare 0.962; somatic 0.929 | \n| TERT | gene associated with condition | [OpenTargets; infores:orphanet](https://www.orpha.net/en/disease/detail/411533) | overall 0.720; GWAS 0.505; somatic 0.905 | \n| BRAF | associated with disease | CIViC; OpenTargets | overall 0.853; rare 0.699; somatic 0.880 | \n| NRAS | associated with disease | CIViC; OpenTargets | overall 0.779; rare 0.000; somatic 0.951 | \n| CD274 | associated with disease | CIViC | - | \n| MET | associated with disease | CIViC | - | \n| GNAS | associated with disease | CIViC | - | \n| MAP2K1 | associated with disease | OpenTargets | overall 0.807; somatic 0.883 | \n| MAP2K2 | associated with disease | OpenTargets | overall 0.769; rare 0.000; somatic 0.922 | \n| PTEN | associated with disease | OpenTargets | overall 0.765; rare 0.000; somatic 0.871 | \n| NF1 | associated with disease | OpenTargets | overall 0.743; rare 0.000; somatic 0.926 | \nMore:\n  biomcp get disease MONDO:0005105 pathways   - pathways from associated genes\n  biomcp get disease MONDO:0005105 phenotypes   - HPO phenotype annotations\n  biomcp get disease MONDO:0005105 diagnostics   - diagnostic tests for this condition from GTR and WHO IVD\n  biomcp get disease MONDO:0005105 clinical_features   - Monarch/HPO phenotype rows as clinical features\n  biomcp get disease MONDO:0005105 survival   - SEER Explorer cancer survival rates\n  biomcp get disease MONDO:0005105 funding   - NIH Reporter grant support\nAll:\n  biomcp get disease MONDO:0005105 all \nSee also:\n  biomcp get gene CDKN2A clingen constraint   - review ClinGen validity and constraint evidence for the top disease gene\n  biomcp search trial -c \"melanoma\"\n  biomcp search article -d \"melanoma\"\n  biomcp search diagnostic --disease \"melanoma\"   - diagnostic tests for this condition\n  biomcp search drug --indication \"melanoma\"   - treatment options for this condition\n  biomcp study download --list   - browse downloadable cancer genomics studies \n\n[Monarch](https://monarchinitiative.org/MONDO:0005105) | [Orphanet](https://www.orpha.net/en/disease/detail/411533)\n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

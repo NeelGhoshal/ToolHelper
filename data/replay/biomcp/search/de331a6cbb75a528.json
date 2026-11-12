@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2024-01-01",
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "Cas9",
+      "gene editing"
+    ],
+    "limit": 25,
+    "sort": "citations"
+  },
+  "args_key": "de331a6cbb75a5283f9c575674278a2096a2c3eed2761ca069f2c239a0d098d3",
+  "recorded_at": "2026-11-12T03:54:53.729816+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 7044.340199994622,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR Cas9 gene editing, date_from=2024-01-01, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CRISPR Cas9 gene editing\" --date-from 2024-01-01 --exclude-retracted --sort citations --source semanticscholar --limit 25 --offset 0` \n \n \nFound 25 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 38326288|Minimal information for studies of extracellular vesicles (M…|Europe PMC|2024-02-01|-|4340| \n|PMID 39013849|Exploring treatment options in cancer: Tumor treatment strat…|Europe PMC|2024-07-17|-|821| \n|PMID 38565561|Adeno-associated virus as a delivery vector for gene therapy…|Europe PMC|2024-04-03|-|797| \n|PMID 38762484|Regulatory mechanisms of PD-1/PD-L1 in cancers.|Europe PMC|2024-05-18|-|756| \n|PMID 38626459|Polymeric Nanoparticles for Drug Delivery.|Europe PMC|2024-04-16|-|725| \n|PMID 38961290|NBS1 lactylation is required for efficient DNA repair and ch…|Europe PMC|2024-07-03|-|557| \n|PMID 38763973|Tumor biomarkers for diagnosis, prognosis and targeted thera…|Europe PMC|2024-05-20|-|523| \n|PMID 38729160|Understanding the complexity of p53 in a new era of tumor su…|Europe PMC|2024-05-09|-|472| \n|PMID 39370455|Signaling pathways involved in colorectal cancer: pathogenes…|Europe PMC|2024-10-07|-|470| \n|PMID 39934144|Lactate and lactylation in cancer.|Europe PMC|2025-02-12|-|458| \n|PMID 43012712|Clustered Regularly Interspaced Palindromic Repeats-Cas Geno…|PubMed|2026-11-11|-|none| \n|PMID 43013067|Tumor-Specific Gene Editing Enhances Cancer Immunogenicity t…|PubMed|2026-11-11|-|none| \n|PMID 43013686|Virus-like particles enable highly efficient gene editing ac…|PubMed|2026-11-11|-|none| \n|PMID 43007365|CRISPR interference-based gene silencing in insects: from fu…|PubMed|2026-11-10|-|0| \n|PMID 43009024|Stimuli-responsive CRISPR-based genome editing delivery syst…|PubMed|2026-11-10|-|0| \n|PMID 43011237|CRISPR Technology: From Bench to Bedside Applications.|PubMed|2026-11-09|-|none| \n|PMID 43004989|Genome Editing of Mitochondrial Dysfunction in Neurological…|PubMed|2026-11-04|-|0| \n|PMID 43005201|A rapid and simple vacuum infiltration system of germinated…|PubMed|2026-10-26|-|0| \n|PMID 43011861|SmMYB44, a transcriptional repressor, negatively regulates a…|PubMed|2026-10-26|-|none| \n|PMID 43011756|Comprehensive characterization of the cellular and molecular…|PubMed|2026-10-21|-|none| \n|PMID 42370783|Effect of BRD0539 on Gene Editing and Mosaicism Rate in Porc…|PubTator3|2026-07-01|-|none| \n|PMID 41028383|CRISPR/Cas9-Based Gene Editing in Soybean.|PubTator3|2026-01-01|-|none| \n|PMID 41514894|CRISPR-Cas9 Gene Editing in Aspergillus: From Pathogenesis t…|PubTator3|2025-12-28|-|none| \n|PMID 41476860|Therapeutic applications of CRISPR-Cas9 gene editing.|PubTator3|2025-12-16|-|none| \n|PMID 40451743|Efficient and heritable gene editing through CRISPR-Cas9 in…|PubTator3|2025-06-01|-|none| \n \n \n \nNewest indexed: 2026-11-11 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 38326288 \n \n \n \nShowing 25 results (total unknown). Use --offset 25 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

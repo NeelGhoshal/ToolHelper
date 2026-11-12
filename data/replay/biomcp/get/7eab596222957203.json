@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "ABL1",
+    "sections": [
+      "druggability"
+    ]
+  },
+  "args_key": "7eab59622295720363fe8757948faf7dd03b6b9fef229b7b82a30cd7ba879a25",
+  "recorded_at": "2026-11-11T22:05:27.157014+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 909.7080999999889,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# ABL1 - druggability \n## Druggability (DGIdb / Open Targets) \n \nCategories: Clinically Actionable, Drug Resistance, Druggable Genome, Enzyme, Kinase, Serine Threonine Kinase, Tumor Suppressor, Tyrosine Kinase \n### OpenTargets tractability \n \n| Modality | Tractable | Evidence | \n|---|---|---| \n| small molecule | yes | Approved Drug, Structure with Ligand, High-Quality Ligand, High-Quality Pocket, Druggable Family | \n| antibody | yes | GO CC med conf | \n| PROTAC | yes | Literature, UniProt Ubiquitination, Database Ubiquitination, Small Molecule Binder | \n| other modality | no | - | \n### OpenTargets safety liabilities \n \n| Event | Datasource | Effect | Biosample | \n|---|---|---|---| \n| heart disease | Force et al. (2011) | - | cardiovascular system | \n| regulation of catalytic activity | ToxCast | - | cell-free | \n| Drug | Interaction Types | Score | Approved | Sources | \n|---|---|---|---|---| \n| ASCIMINIB | inhibitor, modulator | 2.109 | yes | 9 | \n| NILOTINIB | inhibitor | 0.868 | yes | 16 | \n| GNF-5 | inhibitor | 0.633 | no | 3 | \n| OMACETAXINE | - | 0.633 | yes | 2 | \n| PONATINIB | inhibitor | 0.597 | yes | 15 | \n| BOSUTINIB | inhibitor | 0.567 | yes | 16 | \n| BCR-ABL INHIBITOR GNF-2 | - | 0.422 | no | 2 | \n| BO1 | inhibitor | 0.422 | no | 1 | \n| COMPOUND 33A [PMID: 35944901] | inhibitor | 0.422 | no | 1 | \n| EMBIBATINIB | modulator | 0.422 | no | 1 | \n| MERIBATINIB | modulator | 0.422 | no | 1 | \n| PD173955 | inhibitor | 0.422 | no | 1 | \n| RADOTINIB | inhibitor | 0.422 | no | 3 | \n| RELCOBATINIB | inhibitor | 0.422 | no | 1 | \n| SIAIS178 | inhibitor | 0.422 | no | 1 | \nMore:\n  biomcp get gene ABL1 pathways   - Reactome/KEGG pathway context\n  biomcp get gene ABL1 ontology   - GO-style functional enrichment\n  biomcp get gene ABL1 diseases   - disease associations\n  biomcp get gene ABL1 diagnostics   - diagnostic tests for this gene from GTR\nAll:\n  biomcp get gene ABL1 all \nSee also:\n  biomcp search diagnostic --gene ABL1   - diagnostic tests for this gene\n  biomcp search pgx -g ABL1   - pharmacogenomics interactions\n  biomcp search variant -g ABL1\n  biomcp search article -g ABL1\n  biomcp search drug --target ABL1\n  biomcp gene trials ABL1 \n\n[NCBI Gene](https://www.ncbi.nlm.nih.gov/gene/25) | [UniProt](https://www.uniprot.org/uniprot/P00519) | [Ensembl](https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000097007) | [OMIM](https://www.omim.org/entry/189980)\n\n\n## Sources\n- Identity: NCBI Gene / MyGene.info\n- Summary: NCBI Gene\n- Aliases: NCBI Gene / MyGene.info\n- Druggability: DGIdb, Open Targets\n\n## Next commands\n- `biomcp get gene ABL1 pathways`\n- `biomcp get gene ABL1 ontology`\n- `biomcp get gene ABL1 diseases`\n- `biomcp get gene ABL1 diagnostics`\n- `biomcp search diagnostic --gene ABL1`\n- `biomcp search pgx -g ABL1`\n- `biomcp search variant -g ABL1`\n- `biomcp search article -g ABL1`\n- `biomcp search drug --target ABL1`\n- `biomcp gene trials ABL1`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

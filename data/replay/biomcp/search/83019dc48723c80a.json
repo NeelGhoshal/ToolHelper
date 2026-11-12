@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2025-01-01",
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "BRAF V600E",
+      "melanoma",
+      "immunotherapy"
+    ],
+    "limit": 10,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "83019dc48723c80a48c9aa722b7304f4df42b087d645a663c5d7fda315cb35bd",
+  "recorded_at": "2026-11-11T08:44:29.095963+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1209.2991000390612,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=BRAF V600E melanoma immunotherapy, date_from=2025-01-01, exclude_retracted=true, sort=date, source=pubmed\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": false,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubmed\"\n    ],\n    \"enrichment_sources\": []\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": 249,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"42969502\",\n      \"title\": \"Impact of bone metastases on outcomes in patients with metastatic melanoma treated with immune checkpoint inhibitors.\",\n      \"journal\": \"Melanoma research\",\n      \"date\": \"2026-10-29\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42907443\",\n      \"title\": \"p38α orchestrates BRAF(V600E)-melanoma progression and immunotherapy response via tumor fitness and immune microenvironment modulation.\",\n      \"journal\": \"Nature communications\",\n      \"date\": \"2026-09-22\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42650005\",\n      \"title\": \"Clinicopathological Predictors of Recurrence in Resected Stage IIB-IIIB Melanoma: The Prognostic Impact of Stage IIC in a Real-World Cohort.\",\n      \"journal\": \"Cancers\",\n      \"date\": \"2026-08-20\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42703371\",\n      \"title\": \"Immune Checkpoint Inhibitor-Induced Diabetes Presenting As Diabetic Ketoacidosis: A Case Report.\",\n      \"journal\": \"Cureus\",\n      \"date\": \"2026-08-07\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42496516\",\n      \"title\": \"A Case Report of Metastatic Melanoma of Unknown Primary with Massive Jejunal Involvement Mimicking Intestinal Lymphoma in a Young Adult: Diagnostic Pitfalls and Surgical Challenges.\",\n      \"journal\": \"Reports (MDPI)\",\n      \"date\": \"2026-07-10\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42245718\",\n      \"title\": \"TIL cell therapy in HIV positive patient with metastatic melanoma: case report.\",\n      \"journal\": \"Frontiers in oncology\",\n      \"date\": \"2026-05-20\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42052498\",\n      \"title\": \"Case Report: The role of BRAF mutation in adjuvant and neoadjuvant treatment of melanoma patients: what is the optimal approach?\",\n      \"journal\": \"Frontiers in oncology\",\n      \"date\": \"2026-04-13\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42157743\",\n      \"title\": \"Metastatic melanoma with heterologous bone after neoadjuvant immunotherapy: diagnostic insights.\",\n      \"journal\": \"Pathologica\",\n      \"date\": \"2026-04-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42146866\",\n      \"title\": \"Mechanistic and preclinical evaluation of SIRT3 as a therapeutic target in melanoma.\",\n      \"journal\": \"Journal of dermato-oncology\",\n      \"date\": \"2026-01-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42167845\",\n      \"title\": \"Cancer biomarker that are currently used in cancer therapy and under evaluation in clinical trials.\",\n      \"journal\": \"Advances in cancer research\",\n      \"date\": \"2026-01-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42969502\",\n      \"biomcp list article\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

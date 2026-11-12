@@ -8,6 +8,7 @@ from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
+from toolhelper.experiments.analysis import TRANSIENT as TRANSIENT_ERRORS
 from toolhelper.agent.hooks import Task
 from toolhelper.agent.loop import Agent
 from toolhelper.experiments.scoring import Score, score
@@ -65,7 +66,6 @@ def validate_tasks(tasks: list[Task], tool_names: set[str]) -> dict[str, Any]:
 
 # LLM API failures worth repeating: the request never got an answer (stalled free tier,
 # dropped connection). Model mistakes, tool errors and replay misses are not retried.
-TRANSIENT_ERRORS = ("APITimeoutError", "APIConnectionError")
 
 
 def is_transient(trace: Trace) -> bool:

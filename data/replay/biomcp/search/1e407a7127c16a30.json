@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "type 2 diabetes mellitus"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "semaglutide"
+    ],
+    "limit": 5
+  },
+  "args_key": "1e407a7127c16a302b9e10a66e175bfc7ae15f17237a04a604171abe33fe1694",
+  "recorded_at": "2026-11-10T22:32:12.734627+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1645.631699997466,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 5 trial(s) \n \nQuery: condition=type 2 diabetes mellitus, intervention=semaglutide \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT05569772|Semaglutide for the Treat…|RECRUITING|3|Glucose Intolerance After a Recent History of Gestational Diabetes|Sémaglutide| \n|NCT07668388|A Research Study Comparin…|RECRUITING|2|Diabetes Mellitus, Type 2|semaglutide| \n|NCT07728669|Digital Dietary Intervent…|RECRUITING|NA|Type 2 Diabetes Mellitus (T2DM), Obesity (Diso… [abridged; 4 conditions total]|semaglutide| \n|NCT04261933|A Research Study Looking…|COMPLETED|-|Diabetes Mellitus, Type 2|semaglutide| \n|NCT04878406|A Research Study of How t…|COMPLETED|1|Healthy Volunteers Type 2 Diabetes|semaglutide| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

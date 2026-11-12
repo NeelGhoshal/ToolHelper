@@ -1,0 +1,30 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "limit": 5,
+    "query": "CSF1R colony stimulating factor 1 receptor imatinib target"
+  },
+  "args_key": "8725b29ee1a2232866a0d2e716b69b3107c588526b8a77884d0467d7525ebdef",
+  "recorded_at": "2026-11-11T22:33:16.067993+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 234.97710000083316,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Genes: CSF1R colony stimulating factor 1 receptor imatinib target \n \nFound 1 gene \n \n| Symbol | Name | Entrez ID | Coordinate | Build | UniProt | OMIM | \n|---|---|---|---|---|---|---| \n| CSF1R | colony stimulating factor 1 receptor | 1436 | 5:150053291-150113372 | GRCh38 | P07333 | 164770 | \n \n \nUse `get gene <symbol>` for details. \nFilters: -q <query>, --type <protein-coding|ncRNA|pseudo>, --chromosome <N>, --region <chr:start-end>, --pathway <id>, --go <term> \n \n \nShowing 1 of 1 results. \n \n\n\n## Next commands\n- `biomcp get gene CSF1R`\n- `biomcp list gene`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

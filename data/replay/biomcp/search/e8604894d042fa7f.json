@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "exagamglogene autotemcel",
+      "Casgevy",
+      "CRISPR"
+    ],
+    "entity": "article",
+    "limit": 15,
+    "sort": "date"
+  },
+  "args_key": "e8604894d042fa7f541fa58507dcd1f28efacbc514e7d43c02d78d3456da2f49",
+  "recorded_at": "2026-11-11T03:54:06.920772+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 20946.304199984297,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=exagamglogene autotemcel Casgevy CRISPR, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --drug \"exagamglogene autotemcel Casgevy CRISPR\" --exclude-retracted --sort date --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42977761|Genotoxic safety and long-term engraftment dynamics of effic…|PubMed|2026-11-03|-|0| \n|PMID 42400217|Efficacy, Safety, and Treatment-Delivery Feasibility of Auto…|PubMed|2026-11-01|-|1| \n|PMID 42925849|When prevention constrains cure: Institutional lock-in and g…|PubTator3, PubMed|2026-10-23|-|0| \n|PMID 42859304|Recent trends and innovative strategies in the curative appr…|PubTator3, PubMed|2026-10-10|-|0| \n|PMID 42786162|RNA therapeutics: current status and future directions.|Europe PMC|2026-09-24|-|1| \n|PMID 42274009|Exa-cel in Children with Transfusion-Dependent β-Thalassemi…|PubMed|2026-09-10|-|8| \n|PMID 42798774|A review of genetic modification for ex vivo cellular therap…|Europe PMC|2026-09-01|-|0| \n|PMID 42617141|Translating CRISPR to Practice in the Clinic: Transformative…|PubMed|2026-08-19|-|0| \n|PMID 42608275|On-target and off-target activities of CRISPR therapeutics a…|PubMed|2026-08-17|-|0| \n|PMID 42252696|Correction of Ineffective Erythropoiesis and Normalization o…|PubMed|2026-08-01|-|3| \n|PMID 42512120|Sickle Cell Disease: From Ancient Origins to Modern Breakthr…|PubTator3, PubMed|2026-07-22|-|0| \n|PMID 42582990|Clinical translation of epigenome editing technologies|PubTator3|2026-06-01|-|3| \n|PMID 42074029|Clinical Trial Landscape of Gene-Edited Autologous Hematopoi…|PubTator3, PubMed|2026-04-09|-|0| \n|PMID 41920440|Chaperonin in health and disease|PubTator3|2026-04-01|-|0| \n|PMID 41141962|Landscape of ex vivo gene therapies: Technological trends an…|Europe PMC|2025-08-29|-|3| \n \n \n \nNewest indexed: 2026-11-03 (8 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42977761\n  biomcp search article --drug \"exagamglogene autotemcel Casgevy CRISPR\" --year-min 2025 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

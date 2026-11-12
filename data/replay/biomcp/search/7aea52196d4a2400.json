@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "sickle cell",
+      "thalassemia"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "7aea52196d4a24006438ba4102c7e11fa67c2bb9b756e22152e3fa33c335c0c7",
+  "recorded_at": "2026-11-12T03:58:43.795672+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2178.8150999927893,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR sickle cell thalassemia, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"CRISPR sickle cell thalassemia\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 33283989|CRISPR-Cas9 Gene Editing for Sickle Cell Disease and beta-Th…|PubTator3, Europe PMC|2021-01-21|-|1420| \n|PMID 31147612|The next generation of CRISPR-Cas technologies and applicati…|Europe PMC|2019-08-01|-|1064| \n|PMID 33558455|Viral vector platforms within the gene therapy landscape.|Europe PMC|2021-02-08|-|1017| \n|PMID 26121415|Chemically modified guide RNAs enhance CRISPR-Cas genome edi…|Europe PMC|2015-06-29|-|954| \n|PMID 30846391|Delivering the Messenger: Advances in Technologies for Thera…|Europe PMC|2019-02-19|-|873| \n|PMID 32296011|Applications of genome editing technology in the targeted th…|Europe PMC|2020-01-03|-|778| \n|PMID 27820943|CRISPR/Cas9 β-globin gene targeting in human haematopoietic…|Europe PMC|2016-11-07|-|771| \n|PMID 29654266|Clinical use of lentiviral vectors.|Europe PMC|2018-03-22|-|737| \n|PMID 37735472|Targeting ferroptosis opens new avenues for the development…|Europe PMC|2023-09-21|-|569| \n|PMID 33846636|Chromothripsis as an on-target consequence of CRISPR-Cas9 ge…|Europe PMC|2021-04-12|-|519| \n \n \n \nNewest indexed: 2023-09-22 (1147 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 33283989\n  biomcp search article -k \"CRISPR sickle cell thalassemia\" --year-min 2015 --year-max 2023 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -2,18 +2,20 @@
 
 Writes translate one-to-one to the SDK's Add/Revise/Retract/Reaffirm. Inbound refs
 and staleness are computed from pinned wrefs in head data, the same way for any
-store, instead of relying on the wire shape of `thing.refs`. Untested against a
-live repository (no WH_TOKEN yet); `publish` is tested with a local store as remote.
+store, instead of relying on the wire shape of `thing.refs`. `publish` ran against a
+live repository on 2026-11-11; the tests use a local store and a fake SDK repo as remote.
 """
 
 from __future__ import annotations
 
+import re
 from typing import Any, Literal
 from uuid import uuid4
 
 from pydantic import Field
 
 from toolhelper.context.model import (
+    ConflictError,
     Add,
     CommitResult,
     ContextStore,
@@ -32,7 +34,7 @@ from toolhelper.context.model import (
     pin_data,
     wref_values,
 )
-from toolhelper.context.shapes import SHAPES, has_status
+from toolhelper.context.shapes import SHAPES, has_status, wref_fields
 
 def scan_links(store: ContextStore) -> list[Link]:
     everything = {t.name: t for t in store.head(include_retracted=True)}
@@ -50,6 +52,12 @@ def scan_links(store: ContextStore) -> list[Link]:
     return links
 
 
+DURABLE_ID = re.compile(r"[0-9A-Z]{40,}")
+
+# WarmHub takes `affirmed_targets` only on things whose shape composes its built-in Assertion shape.
+SHAPE_COMPOSES = {"Evidence": ["Assertion"]}
+
+
 class WarmHubStore:
     def __init__(self, locator: str, client: Any = None) -> None:
         if client is None:
@@ -59,6 +67,7 @@ class WarmHubStore:
         self.wh = client
         self.org, self.repo_name = locator.split("/", 1)
         self.repo = client.repository(locator)
+        self._names: dict[str, str] = {}  # durable id -> name
 
     # ---------- writes ----------
 
@@ -67,10 +76,15 @@ class WarmHubStore:
 
         result = CommitResult(message=message)
         sdk_ops: list[Any] = []
+        written: dict[str, int] = {}  # versions this commit creates: later operations may pin them
+
+        def head_version(name: str) -> int | None:
+            return written.get(name) or self._head_version(name)
+
         for op in operations:
             current = self._maybe_get(op.name)
             if isinstance(op, Add):
-                data = pin_data(op.shapes, op.data, self._head_version)
+                data = pin_data(op.shapes, op.data, head_version)
                 sdk_ops.append(warmhub.Add(op.name, shapes=op.shapes, data=data,
                                            **_opt(affirmed_targets=op.affirmed_targets)))
                 version = 1
@@ -78,7 +92,7 @@ class WarmHubStore:
                 if current is None:
                     raise NotFoundError(f"no active thing named {op.name!r}")
                 shapes = op.shapes if op.shapes is not None else current.shapes
-                data = pin_data(shapes, op.data, self._head_version)
+                data = pin_data(shapes, op.data, head_version)
                 if (shapes, data, op.affirmed_targets) == (current.shapes, current.data, current.affirmed):
                     result.unchanged.append(current.wref)
                     continue
@@ -95,6 +109,7 @@ class WarmHubStore:
                                                                 expected_version=op.expected_version)))
                 version = (current.version if current else 0) + 1
             result.written.append(pin(op.name, version))
+            written[op.name] = version
             if isinstance(op, (Add, Revise)):
                 for i, ev in enumerate(op.evidence):
                     e = evidence_add(op.name, version, i, ev)
@@ -102,7 +117,13 @@ class WarmHubStore:
                                                affirmed_targets=e.affirmed_targets))
                     result.written.append(pin(e.name, 1))
         if sdk_ops:
-            self.repo.apply(message, sdk_ops, shapes=SHAPES)
+            submitted = self.repo.apply(message, sdk_ops, shapes=SHAPES)
+            # WarmHub applies what it can and reports the rest per operation; an unread report hides them.
+            failed = [o for o in submitted.operations if o.status == "error"]
+            if failed:
+                first = "; ".join(f"{o.submitted_name or o.name}: {o.error.message if o.error else 'error'}"
+                                  for o in failed[:3])
+                raise ConflictError(f"{len(failed)} of {len(sdk_ops)} operations failed ({first})")
         return result
 
     def ensure_shapes(self, names: list[str]) -> list[str]:
@@ -111,13 +132,18 @@ class WarmHubStore:
 
         created = []
         for name in names:
+            composes = SHAPE_COMPOSES.get(name, [])
             try:
-                self.repo.things.get(f"hub/shapes/{name}")
+                shape = self.repo.things.get(f"hub/shapes/{name}")
             except WarmHubError as e:
                 if getattr(e, "kind", None) != "NOT_FOUND":
                     raise
-                self.wh.shape.create(self.org, self.repo_name, name, SHAPES[name], event_request_id=str(uuid4()))
+                self.wh.shape.create(self.org, self.repo_name, name, SHAPES[name], event_request_id=str(uuid4()),
+                                     **_opt(composes=composes))
                 created.append(name)
+                continue
+            if set(composes) - set((shape.data or {}).get("composes") or []):
+                self.wh.shape.revise(self.org, self.repo_name, name, composes=composes, event_request_id=str(uuid4()))
         return created
 
     # ---------- reads ----------
@@ -137,7 +163,7 @@ class WarmHubStore:
 
         name, pinned = parse_wref(wref)
         try:
-            return _to_thing(self.repo.things.get(name, **_opt(version=version or pinned,
+            return self._thing(self.repo.things.get(name, **_opt(version=version or pinned,
                                                                include_retracted=include_retracted or None)))
         except WarmHubError as e:
             if getattr(e, "kind", None) == "NOT_FOUND":
@@ -148,14 +174,36 @@ class WarmHubStore:
              limit: int | None = None) -> list[Thing]:
         res = self.repo.things.head(**_opt(shape=shape, match=match, include_retracted=include_retracted or None,
                                            limit=limit, exclude_infra_shapes=True))
-        return [_to_thing(i) for i in res.items]
+        return [self._thing(i) for i in res.items]
+
+    def _thing(self, item: Any) -> Thing:
+        """An SDK item as a Thing in the local store's terms: shapes without their version, and
+        references as `name@vN` (WarmHub returns them as `durableId@vN`)."""
+        shapes = [parse_wref(s)[0] for s in getattr(item, "declared_shapes", None) or []]
+        data = dict(getattr(item, "data", None) or {})
+        for shape in shapes:
+            for field, is_array in wref_fields(shape).items():
+                if data.get(field) is not None:
+                    data[field] = [self._named(w) for w in data[field]] if is_array else self._named(data[field])
+        about = getattr(item, "about_wref", None)
+        return Thing(name=item.name, version=item.version, active=bool(getattr(item, "active", True)),
+                     shapes=shapes, data=data, about=self._named(about) if about else None,
+                     affirmed=[self._named(w) for w in getattr(item, "affirmed_wrefs", None) or []])
+
+    def _named(self, wref: str) -> str:
+        target, version = parse_wref(wref)
+        if DURABLE_ID.fullmatch(target):
+            if target not in self._names:
+                self._names[target] = self.repo.things.get(target, include_retracted=True).name
+            target = self._names[target]
+        return pin(target, version) if version is not None else target
 
     def history(self, name: str) -> list[Thing]:
         res = self.wh.thing.history(self.org, self.repo_name, wref=name, include_retracted=True)
-        return sorted((_to_thing(i) for i in res.items), key=lambda t: t.version)
+        return sorted((self._thing(i) for i in res.items), key=lambda t: t.version)
 
     def search(self, text: str, *, shape: str | None = None, limit: int | None = None) -> list[Thing]:
-        return [_to_thing(i) for i in self.repo.things.search(text, **_opt(shape=shape, limit=limit)).items]
+        return [self._thing(i) for i in self.repo.things.search(text, **_opt(shape=shape, limit=limit)).items]
 
     def refs(self, wref: str, *, direction: Literal["inbound", "outbound"] = "inbound") -> list[Link]:
         name, _ = parse_wref(wref)
@@ -171,17 +219,14 @@ def _opt(**kwargs: Any) -> dict[str, Any]:
     return {k: v for k, v in kwargs.items() if v not in (None, [], ())}
 
 
-def _to_thing(item: Any) -> Thing:
-    data = getattr(item, "data", None) or {}
-    return Thing(name=item.name, version=item.version, active=bool(getattr(item, "active", True)),
-                 shapes=list(getattr(item, "declared_shapes", None) or []), data=dict(data),
-                 about=getattr(item, "about_wref", None), affirmed=list(getattr(item, "affirmed_wrefs", None) or []))
-
-
 # ---------- publish ----------
 
 DEFAULT_PUBLISH_SHAPES = ["McpServer", "ToolSchema", "ToolCard", "Dataset", "EntityHint", "Recipe",
                           "Projection", "CachePolicy", "Decision"]
+# Records a published thing cites (a Decision's evidence is RunSummaries, which pin their Experiment).
+# They go out only with something that pins them, and without the status check: an Experiment is a
+# frozen plan that nothing ever accepts, and its own status travels with it.
+SUPPORT_SHAPES = ["Experiment", "RunSummary"]
 
 
 class PublishPlan(CommitResult):
@@ -191,7 +236,8 @@ class PublishPlan(CommitResult):
 def publish(local: ContextStore, remote: ContextStore, *, shapes: list[str] | None = None,
             dry_run: bool = False, message: str = "toolhelper publish") -> PublishPlan:
     """Pushes curated local things (accepted, not stale) and their evidence to `remote`,
-    targets before dependents, with pinned versions remapped to the remote's numbering."""
+    targets before dependents, with pinned versions remapped to the remote's numbering.
+    Experiments and run summaries are pushed when a published thing pins them."""
     shapes = shapes or DEFAULT_PUBLISH_SHAPES
     plan = PublishPlan(message=message)
     stale = {s.thing.name for s in local.stale()}
@@ -205,6 +251,8 @@ def publish(local: ContextStore, remote: ContextStore, *, shapes: list[str] | No
             plan.skipped[t.name] = "stale"
         else:
             candidates[t.name] = t
+    support = {t.name: t for t in local.head()
+               if set(t.shapes) & set(SUPPORT_SHAPES) and t.name not in candidates and t.name not in stale}
 
     remote_version: dict[str, int] = {}
     ops: list[Operation] = []
@@ -221,10 +269,10 @@ def publish(local: ContextStore, remote: ContextStore, *, shapes: list[str] | No
     def visit(name: str, path: tuple[str, ...] = ()) -> None:
         if name in remote_version or name in plan.skipped or name in path:
             return
-        thing = candidates[name]
+        thing = candidates.get(name) or support[name]
         deps = [parse_wref(w)[0] for _, w in wref_values(thing.shapes, thing.data)]
         for dep in deps:
-            if dep in candidates:
+            if dep in candidates or dep in support:
                 visit(dep, path + (name,))
         try:
             data = _remap_data(thing, remap)
@@ -238,6 +286,7 @@ def publish(local: ContextStore, remote: ContextStore, *, shapes: list[str] | No
         elif (current.shapes, current.data) == (thing.shapes, data):
             plan.unchanged.append(current.wref)
             remote_version[name] = current.version
+            _publish_evidence(local, thing, current.version, ops, plan, published=remote)
             return
         else:
             ops.append(Revise(name=name, shapes=thing.shapes, data=data, expected_version=current.version))
@@ -253,18 +302,19 @@ def publish(local: ContextStore, remote: ContextStore, *, shapes: list[str] | No
 
 
 def _publish_evidence(local: ContextStore, thing: Thing, version: int, ops: list[Operation],
-                      plan: PublishPlan) -> None:
+                      plan: PublishPlan, published: ContextStore | None = None) -> None:
+    """Adds a thing's evidence; with `published` (the thing is already there), only what is missing."""
     for ev in local.head(shape="Evidence", match=f"evidence/{thing.name}/v{thing.version}/*"):
         index = int(ev.name.rsplit("/", 1)[1])
         target = pin(thing.name, version)
+        if published is not None and _maybe(published, evidence_name(thing.name, version, index)) is not None:
+            continue
         ops.append(Add(name=evidence_name(thing.name, version, index), shapes=["Evidence"],
                        data={**ev.data, "about": target}, affirmed_targets=[target]))
         plan.written.append(pin(evidence_name(thing.name, version, index), 1))
 
 
 def _remap_data(thing: Thing, remap) -> dict[str, Any]:
-    from toolhelper.context.shapes import wref_fields
-
     data = dict(thing.data)
     for shape in thing.shapes:
         for field, is_array in wref_fields(shape).items():

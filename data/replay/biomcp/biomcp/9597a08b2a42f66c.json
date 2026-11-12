@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "biomcp get pgx CYP2C19 --json 2>/dev/null || biomcp list pgx",
+    "json": true
+  },
+  "args_key": "9597a08b2a42f66c7a855c1b9467b8d9c308c36fb0bcb22a484419f3691f7868",
+  "recorded_at": "2026-11-12T03:58:16.429031+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 15.899799996986985,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Error: Invalid argument: Unknown section \"2>/dev/null\" for pgx. Available: interactions, recommendations, frequencies, guidelines, annotations, all"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

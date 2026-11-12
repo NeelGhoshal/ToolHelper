@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "activating mutations epidermal growth factor receptor gefitinib responsiveness"
+    ],
+    "limit": 5,
+    "sort": "citations"
+  },
+  "args_key": "e71b13b3ef20a18e0a21e53ca7a1a4a2d241124bfc21a692f04bf7df237975b1",
+  "recorded_at": "2026-11-12T20:58:35.264921+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 9992.549899994629,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=activating mutations epidermal growth factor receptor gefitinib responsiveness, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"activating mutations epidermal growth factor receptor gefitinib responsiveness\" --exclude-retracted --sort citations --source semanticscholar --limit 5 --offset 0` \n \n \nFound 5 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 15118073|Activating mutations in the epidermal growth factor receptor…|Europe PMC|2004-04-29|-|8565| \n|PMID 21252716|International association for the study of lung cancer/ameri…|Europe PMC|2011-02-01|-|3692| \n|PMID 35158954|Fluorescence Imaging of Epidermal Growth Factor Receptor Tyr…|PubTator3|2022-01-28|-|8| \n|PMID 38090376|Busting the Breast Cancer with AstraZeneca's Gefitinib|PubTator3|2023-12-04|-|5| \n|PMID 42926325|Live-cell FRET imaging-based efficacy prediction of EGFR-TKI…|PubMed|2026-10-01|-|0| \n \n \n \nNewest indexed: 2026-10-25 (18 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 15118073\n  biomcp search article -k \"activating mutations epidermal growth factor receptor gefitinib responsiveness\" --year-min 2004 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

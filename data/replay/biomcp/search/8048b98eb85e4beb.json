@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "drug",
+    "drug": [
+      "vemurafenib",
+      "dabrafenib",
+      "encorafenib"
+    ],
+    "json": true,
+    "limit": 10
+  },
+  "args_key": "8048b98eb85e4bebc38b0b021dc5cbbf4606e2bde1bd075ac6523501a33c73e9",
+  "recorded_at": "2026-11-11T04:43:57.380639+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1.0126999986823648,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid typed search entity; valid entities: author, gene, pgx, gwas, article, trial, variant, protein"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

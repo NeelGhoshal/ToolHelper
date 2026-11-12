@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "BRAF",
+    "json": true,
+    "sections": [
+      "diseases",
+      "pathways",
+      "druggability",
+      "civic",
+      "constraint",
+      "pgx"
+    ]
+  },
+  "args_key": "4372c3bfe30375d386862178493f4fa993c12a8d8571b7b28788f74d36bbbccb",
+  "recorded_at": "2026-11-11T03:32:53.972944+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 0.971800007391721,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: pgx"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

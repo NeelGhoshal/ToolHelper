@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2024-01-01",
+    "entity": "article",
+    "keyword": [
+      "HER2-targeted therapy",
+      "resistance",
+      "antibody-drug conjugate"
+    ],
+    "limit": 10,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "3ec329946ae780988ca6f5b3ae5be5f70a5f5529d92bae36b61e4b1c4dc43bbf",
+  "recorded_at": "2026-11-11T06:40:33.030284+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1062.8587999963202,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=HER2-targeted therapy resistance antibody-drug conjugate, date_from=2024-01-01, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 10 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42826516|SMP-656: A self-catalyzed ring-opening hydrolysis linker-bas…|PubMed|2026-12-15|-|none| \n|PMID 42924615|Advances in resistance mechanisms and counterstrategies for…|PubMed|2026-12-01|-|none| \n|PMID 42994133|2026 Key European Guideline Changes for Metastatic Breast Ca…|PubMed|2026-10-07|-|none| \n|PMID 42811741|Optimizing the ER Cutoff in HER2-Positive Breast Cancer: ER…|PubMed|2026-10-01|-|none| \n|PMID 42830854|HER2-Targeted Antibody-Drug Conjugates in Advanced HER2-Low…|PubMed|2026-09-30|-|none| \n|PMID 42591779|Sequential HER2-targeted antibody-drug conjugate therapy for…|PubMed|2026-07-31|-|none| \n|PMID 42484946|Efficacy and safety of antibody-drug conjugates in HER2-posi…|PubMed|2026-07-22|-|none| \n|PMID 42513436|Precision Therapeutics in Pancreatic Cancer: Emerging Target…|PubMed|2026-07-14|-|none| \n|PMID 42341369|Targeting HER2 in urothelial carcinoma: from pathway inhibit…|PubMed|2026-07-01|-|none| \n|PMID 42410700|Duocarmycin-Bearing Antibody-Mimetic Drug Conjugate Combined…|PubMed|2026-07-01|-|none| \n \n \n \nNewest indexed: 2026-11-06 (5 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42826516 \n \n \n \nShowing 1-10 of 117 results. Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "melanoma"
+    ],
+    "intervention": [
+      "dabrafenib plus trametinib"
+    ],
+    "limit": 10
+  },
+  "args_key": "07806dac089fc5ff8e0dc5763c1ded19a33febbec8a7dde16c46ea6cb20ac0bd",
+  "recorded_at": "2026-11-11T23:33:59.289665+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2198.841999997967,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 5 of 5 \n \nQuery: condition=melanoma, intervention=dabrafenib plus trametinib \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT04949113|Neoadjuvant Ipilimumab Pl…|ACTIVE_NOT_RECRUITING|3|Malignant Melanoma Stage III| \n|NCT01597908|Dabrafenib Plus Trametini…|COMPLETED|3|Melanoma| \n|NCT02039947|Study to Evaluate Treatme…|COMPLETED|2|Melanoma and Brain Metastases| \n|NCT02439411|Retrospective Analysis of…|COMPLETED|-|Malignant Melanoma Stage IV, Malignant Melanoma Stage IIIc| \n|NCT03352947|Continuous vs Intermitten…|COMPLETED|2|Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-5 of 5 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

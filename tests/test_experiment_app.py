@@ -16,9 +16,12 @@ APP = ROOT / "src" / "toolhelper" / "app" / "experiments_app.py"
 
 
 def test_every_spec_in_the_repo_configs_passes_the_check():
+    from toolhelper.efficiency import registry
+
+    registry.install_custom(ROOT / "configs" / "strategies.yaml")  # configs may name the repo's own E10+
     for path in control.config_files():
         data = yaml.safe_load(path.read_text(encoding="utf-8"))
-        specs = [*data.get("base", {}).get("specs", []), *(s for f in data.get("factors", {}).values() for s in f["specs"]),
+        specs = [*data.get("base", {}).get("specs", []), *(s for f in data.get("factors", {}).values() for s in f.get("specs", [])),
                  *(s for arm in data.get("arms", {}).values() for s in arm)]
         assert specs, path
         assert [p for s in specs for p in check_spec(s)] == [], path
@@ -43,12 +46,17 @@ def test_good_specs_pass():
 
 
 def test_the_form_rebuilds_every_factorial_spec_in_the_repo_configs_unchanged():
+    from toolhelper.efficiency import registry
+
+    registry.install_custom(ROOT / "configs" / "strategies.yaml")
     for path in control.config_files():
         data = yaml.safe_load(path.read_text(encoding="utf-8"))
         if data.get("design") != "factorial":
             continue
-        for spec in [*data.get("base", {}).get("specs", []), *(s for f in data["factors"].values() for s in f["specs"])]:
+        for spec in [*data.get("base", {}).get("specs", []), *(s for f in data["factors"].values() for s in f.get("specs", []))]:
             sid, values = form.spec_values(spec)
+            if "mode" in PARAMS[sid] and "mode" not in values:
+                continue  # a partial spec that only changes one setting of the base's (p10e: E6:budget=1000)
             assert form.build_spec(sid, {**form.default_values(sid), **values}) == spec, path
 
 

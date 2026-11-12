@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "sertraline Oral Tablet",
+    "max_results": 10,
+    "omop_field": "drug_concept_id",
+    "omop_table": "drug_exposure"
+  },
+  "args_key": "d119cb5c751916c245593a9bd644c04755c59eb1c176a7ee8722789d7ae9d45f",
+  "recorded_at": "2026-11-11T05:45:39.528196+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1360.6653999886476,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 40081943,\n      \"code\": \"373868\",\n      \"name\": \"sertraline Oral Tablet\",\n      \"class\": \"Clinical Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40081943\"\n    },\n    {\n      \"concept_id\": 35866163,\n      \"code\": \"OMOP5022395\",\n      \"name\": \"sertraline Oral Tablet [Beiyu]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/35866163\"\n    },\n    {\n      \"concept_id\": 43268423,\n      \"code\": \"OMOP548359\",\n      \"name\": \"Sertraline Oral Tablet [Eleva]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/43268423\"\n    },\n    {\n      \"concept_id\": 43290125,\n      \"code\": \"OMOP548363\",\n      \"name\": \"Sertraline Oral Tablet [Xydep]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/43290125\"\n    },\n    {\n      \"concept_id\": 40081945,\n      \"code\": \"368413\",\n      \"name\": \"sertraline Oral Tablet [Zoloft]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40081945\"\n    },\n    {\n      \"concept_id\": 40862641,\n      \"code\": \"OMOP2060603\",\n      \"name\": \"Sertraline Oral Tablet [Gladem]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/40862641\"\n    },\n    {\n      \"concept_id\": 35866156,\n      \"code\": \"OMOP5022388\",\n      \"name\": \"sertraline Oral Tablet [Leyuan]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/35866156\"\n    },\n    {\n      \"concept_id\": 43284715,\n      \"code\": \"OMOP548368\",\n      \"name\": \"Sertraline Oral Tablet [Ralset]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/43284715\"\n    },\n    {\n      \"concept_id\": 42931924,\n      \"code\": \"OMOP4658677\",\n      \"name\": \"Sertraline Oral Tablet [SELTRA]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/42931924\"\n    },\n    {\n      \"concept_id\": 43257528,\n      \"code\": \"OMOP548361\",\n      \"name\": \"Sertraline Oral Tablet [Sertra]\",\n      \"class\": \"Branded Drug Form\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/43257528\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"sertraline Oral Tablet\",\n    \"omop_table\": \"drug_exposure\",\n    \"omop_field\": \"drug_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

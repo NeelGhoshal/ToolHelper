@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "clopidogrel"
+    ],
+    "entity": "article",
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "e151d54fbe7caf3da7bf4fd1a76b8faffc0133cbf96cd97e3d5f3e53be59d38d",
+  "recorded_at": "2026-11-11T22:48:45.433145+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3091.6963999989093,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: drug=clopidogrel, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --drug clopidogrel --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 18436948|GRADE: an emerging consensus on rating quality of evidence a…|Europe PMC|2008-04-01|-|17656| \n|PMID 27733354|ROBINS-I: a tool for assessing risk of bias in non-randomise…|Europe PMC|2016-10-12|-|13601| \n|PMID 23746838|The hallmarks of aging.|Europe PMC|2013-06-01|-|12528| \n|PMID 29158945|NF-κB signaling in inflammation.|Europe PMC|2017-07-14|-|6992| \n|PMID 36843628|The role of clopidogrel resistance-related genetic and epige…|PubTator3|2023-02-08|-|18| \n|PMID 33648379|Generic Clopidogrel: Has Substitution for Brand Name Plavix…|PubTator3|2022-08-01|-|8| \n|PMID 37448335|Clinical outcomes of generic versus brand-name clopidogrel f…|PubTator3|2023-07-14|-|6| \n|PMID 40953648|Promising clopidogrel analogs may overcome clopidogrel resis…|PubTator3|2025-09-13|-|3| \n|PMID 43005498|Evaluation of Neointimal Coverage After Guiding De-escalatio…|PubMed|2026-09-21|-|0| \n|PMID 43007493|Proton pump inhibitors in antithrombotic therapy: gastroprot…|PubMed|2026-11-10|-|0| \n \n \n \nNewest indexed: 2026-11-10 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 18436948\n  biomcp search article --drug clopidogrel --year-min 2008 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

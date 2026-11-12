@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "disease": [
+      "lung cancer"
+    ],
+    "entity": "article",
+    "keyword": [
+      "EGFR",
+      "mutation",
+      "osimertinib"
+    ],
+    "limit": 20,
+    "sort": "citations"
+  },
+  "args_key": "b63dbec390604efc6b5d03010dca4025528b5f4df14eb0044e915ab22716ee1b",
+  "recorded_at": "2026-11-11T06:04:44.821414+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 41451.55850000447,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: disease=lung cancer, keyword=EGFR mutation osimertinib, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --disease \"lung cancer\" --keyword \"EGFR mutation osimertinib\" --exclude-retracted --sort citations --source semanticscholar --limit 20 --offset 0` \n \n \nFound 20 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 27899662|KEGG: new perspectives on genomes, pathways, diseases and dr…|Europe PMC|2016-11-28|-|6809| \n|PMID 29151359|Osimertinib in Untreated EGFR-Mutated Advanced Non-Small-Cel…|Europe PMC|2017-11-18|-|4492| \n|PMID 27959700|Osimertinib or Platinum-Pemetrexed in EGFR T790M-Positive Lu…|Europe PMC|2016-12-06|-|2847| \n|PMID 31751012|Overall Survival with Osimertinib in Untreated, EGFR-Mutated…|Europe PMC|2019-11-21|-|2495| \n|PMID 35403841|Neoadjuvant Nivolumab plus Chemotherapy in Resectable Lung C…|Europe PMC|2022-04-11|-|2339| \n|PMID 28890946|OncoKB: A Precision Oncology Knowledge Base.|Europe PMC|2017-05-16|-|2233| \n|PMID 31723286|A view on drug resistance in cancer.|Europe PMC|2019-11-13|-|2196| \n|PMID 32203277|Targeting apoptosis in cancer therapy.|Europe PMC|2020-03-23|-|2031| \n|PMID 42993168|Impact of Dosage Modifications on Efficacy: Insights from Se…|PubMed|2026-11-06|-|0| \n|PMID 43008663|Coexistence of Osimertinib-Resistant and Osimertinib-Sensiti…|PubMed|2026-11-05|-|none| \n|PMID 42990969|Il ruolo di osimertinib nel percorso terapeutico del NSCLC E…|PubMed|2026-11-04|-|0| \n|PMID 42977475|Transformation to Small-Cell Lung Carcinoma and Then to Sarc…|PubMed|2026-11-01|-|0| \n|PMID 42991776|Expert Consensus Recommendations on NSCLC Management: Eviden…|PubMed|2026-11-01|-|0| \n|PMID 43002481|From ADAURA to LAURA: the evolving role of EGFR-targeted the…|PubMed|2026-11-01|-|0| \n|PMID 42991293|Case Report: Lenvatinib plus osimertinib treated a metastati…|PubMed|2026-10-22|-|0| \n|PMID 43004360|EGFR-mutant lung adenocarcinoma featuring massive bronchorrh…|PubMed|2026-08-12|-|0| \n|PMID 40114953|Novel LZTR1 germline mutation as a mechanism of resistance t…|PubTator3|2025-02-28|-|none| \n|PMID 39933981|CNS Outcomes of Osimertinib Plus Chemotherapy in Patients Wi…|PubTator3|2025-01-11|-|none| \n|PMID 39061985|Potential Utility of a 4th-Generation EGFR-TKI and Explorati…|PubTator3|2024-06-25|-|none| \n|PMID 38975613|First-line Osimertinib for Lung Cancer With Uncommon EGFR Ex…|PubTator3|2024-05-16|-|none| \n \n \n \nNewest indexed: 2026-11-10 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 27899662\n  biomcp search article -d \"lung cancer\" -k \"EGFR mutation osimertinib\" --year-min 2016 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 20 results (total unknown). Use --offset 20 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

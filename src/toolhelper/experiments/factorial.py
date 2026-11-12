@@ -57,6 +57,9 @@ class Factor(BaseModel):
     specs: list[str] = Field(default_factory=list)
     max_turns: int | None = None  # a turn limit the factor sets (E9's limit variant)
     note: str = ""
+    # The factor's settings replace the base's for the same strategy parameter (budget 1000 on a base
+    # with budget 2000) instead of conflicting with them.
+    overrides_base: bool = False
 
 
 class FactorialConfig(BaseModel):
@@ -98,17 +101,20 @@ class Cell(BaseModel):
     max_turns: int | None = None
 
 
-def merge_specs(specs: list[str]) -> list[str]:
+def merge_specs(specs: list[str], overriding: list[str] | tuple[str, ...] = ()) -> list[str]:
     """One spec per strategy: specs of the same strategy merge their parameters, and `modes`
-    values join with `+` (`E3:modes=hints` + `E3:modes=tool` -> `E3:modes=hints+tool`)."""
+    values join with `+` (`E3:modes=hints` + `E3:modes=tool` -> `E3:modes=hints+tool`).
+    Parameters of `overriding` specs replace those of `specs`; any other conflict is an error."""
     merged: dict[str, dict[str, str]] = {}
-    for spec in specs:
+    for spec, replace in [*((s, False) for s in specs), *((s, True) for s in overriding)]:
         sid, _, rest = spec.partition(":")
         params = merged.setdefault(sid.strip().upper(), {})
         for pair in filter(None, rest.split(",")):
             key, _, value = pair.partition("=")
             key, value = key.strip(), value.strip()
-            if key == "modes" and key in params:
+            if replace:
+                params[key] = value
+            elif key == "modes" and key in params:
                 params[key] += "+" + value
             elif params.get(key, value) != value:
                 raise ValueError(f"{sid}: conflicting {key} ({params[key]} vs {value})")
@@ -118,7 +124,9 @@ def merge_specs(specs: list[str]) -> list[str]:
 
 
 def make_cell(cfg: FactorialConfig, on: dict[str, bool]) -> Cell:
-    specs = merge_specs([*cfg.base.specs, *(s for f, v in on.items() if v for s in cfg.factors[f].specs)])
+    active = [cfg.factors[f] for f, v in on.items() if v]
+    specs = merge_specs([*cfg.base.specs, *(s for f in active if not f.overrides_base for s in f.specs)],
+                        [s for f in active if f.overrides_base for s in f.specs])
     limits = [lim for lim in [cfg.base.max_turns, *(cfg.factors[f].max_turns for f, v in on.items() if v)] if lim]
     return Cell(name="".join(f for f, v in on.items() if v) or "none", on=on, specs=specs,
                 max_turns=min(limits) if limits else None)
@@ -134,14 +142,15 @@ def grounded_tasks(tasks, index) -> list[str]:
 
 def cells(cfg: FactorialConfig) -> list[Cell]:
     """Full factorial over the non-generated factors; each generated factor is on where the
-    product of its word's signs (+1 on, -1 off) is +1."""
+    product of its word's signs (+1 on, -1 off) is +1, or -1 for a word written with a leading
+    `-` (the other half fraction: `E: -ABCD` keeps the cell with every factor off)."""
     letters = list(cfg.factors)
     base = [f for f in letters if f not in cfg.generators]
     out = []
     for bits in itertools.product([False, True], repeat=len(base)):
         on = dict(zip(base, bits, strict=True))
         for f, word in cfg.generators.items():
-            on[f] = math.prod(1 if on[g] else -1 for g in word) > 0
+            on[f] = math.prod(1 if on[g] else -1 for g in word.lstrip("-")) * (-1 if word.startswith("-") else 1) > 0
         out.append(make_cell(cfg, {f: on[f] for f in letters}))
     return out
 

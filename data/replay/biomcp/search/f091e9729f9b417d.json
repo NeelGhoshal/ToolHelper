@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "melanoma"
+    ],
+    "intervention": [
+      "vemurafenib"
+    ],
+    "limit": 6
+  },
+  "args_key": "f091e9729f9b417d2a490baae78bd0fb092ee55cd1fb934869d403cddfc78046",
+  "recorded_at": "2026-11-12T18:28:24.050833+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1351.4288000005763,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 6 trial(s) \n \nQuery: condition=melanoma, intervention=vemurafenib \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT00949702|A Study of Vemurafenib in…|COMPLETED|2|Malignant Melanoma|vemurafenib| \n|NCT01248936|A Study of RO5185426 in P…|COMPLETED|2|Malignant Melanoma|Vemurafenibum| \n|NCT01596140|Vemurafenib in Combinatio…|COMPLETED|1|Advanced Cancer, Solid Tumor|vemurafenib| \n|NCT01597908|Dabrafenib Plus Trametini…|COMPLETED|3|Melanoma|vemurafenib| \n|NCT01943422|Safety and Efficacy Study…|COMPLETED|1|Melanoma|vemurafenib| \n|NCT03026517|Clinical Trial of Phenfor…|COMPLETED|1|Melanoma|vemurafenib| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 6 results (total unknown). Use --offset 6 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

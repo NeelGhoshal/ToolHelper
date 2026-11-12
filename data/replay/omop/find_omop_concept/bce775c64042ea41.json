@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "weight",
+    "max_results": 10,
+    "omop_field": "measurement_concept_id",
+    "omop_table": "measurement"
+  },
+  "args_key": "bce775c64042ea412b8b05abaa745f91ec19319aeb9bf2abdddbb0269e6bcf69",
+  "recorded_at": "2026-11-10T23:04:44.288933+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1274.8352999915369,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 37111521,\n      \"code\": \"726527001\",\n      \"name\": \"Weight\",\n      \"class\": \"Qualifier Value\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Observation\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/37111521\"\n    },\n    {\n      \"concept_id\": 4099154,\n      \"code\": \"27113001\",\n      \"name\": \"Body weight\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4099154\"\n    },\n    {\n      \"concept_id\": 3025315,\n      \"code\": \"29463-7\",\n      \"name\": \"Body weight\",\n      \"class\": \"Clinical Observation\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"LOINC\",\n      \"url\": \"https://omophub.com/concepts/3025315\"\n    },\n    {\n      \"concept_id\": 437525,\n      \"code\": \"238131007\",\n      \"name\": \"Overweight\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/437525\"\n    },\n    {\n      \"concept_id\": 4232667,\n      \"code\": \"360096006\",\n      \"name\": \"Gold weight\",\n      \"class\": \"Physical Object\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Device\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4232667\"\n    },\n    {\n      \"concept_id\": 435372,\n      \"code\": \"248342006\",\n      \"name\": \"Underweight\",\n      \"class\": \"Clinical Finding\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Condition\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/435372\"\n    },\n    {\n      \"concept_id\": 37311268,\n      \"code\": \"816159004\",\n      \"name\": \"Weight gain\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/37311268\"\n    },\n    {\n      \"concept_id\": 37311267,\n      \"code\": \"816160009\",\n      \"name\": \"Weight loss\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/37311267\"\n    },\n    {\n      \"concept_id\": 36878816,\n      \"code\": \"OMOP999507\",\n      \"name\": \"lightweight\",\n      \"class\": \"Ingredient\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/36878816\"\n    },\n    {\n      \"concept_id\": 4264825,\n      \"code\": \"364589006\",\n      \"name\": \"Birth weight\",\n      \"class\": \"Observable Entity\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Measurement\",\n      \"vocab\": \"SNOMED\",\n      \"url\": \"https://omophub.com/concepts/4264825\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"weight\",\n    \"omop_table\": \"measurement\",\n    \"omop_field\": \"measurement_concept_id\",\n    \"total_found\": 10,\n    \"candidates_returned\": 10,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

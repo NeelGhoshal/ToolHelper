@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "HER2",
+      "targeted therapy",
+      "resistance"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "62b2912821f629e36155297d9a8b69ad237a195bc4cc06a2304f7da3d57285c2",
+  "recorded_at": "2026-11-11T05:15:34.346021+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 30690.990600007353,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=HER2 targeted therapy resistance, exclude_retracted=true, sort=date\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"41496551\",\n      \"pmcid\": \"PMC12785206\",\n      \"title\": \"Oncolytic virus OVV-03 enhances CAR-T cell therapy against glioblastoma via immune modulation and specific HER2 upregulation\",\n      \"journal\": \"Oncoimmunology\",\n      \"date\": \"2026-12-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41530924\",\n      \"pmcid\": \"PMC12818823\",\n      \"title\": \"Multi-platform analysis of the tumor immune microenvironment associated with breast cancer subtypes\",\n      \"journal\": \"Oncoimmunology\",\n      \"date\": \"2026-12-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41837409\",\n      \"pmcid\": \"PMC12998029\",\n      \"title\": \"The role of copper and cuproptosis in digestive system cancers: novel therapeutic strategies and mechanistic insights\",\n      \"journal\": \"Cancer Biol Ther\",\n      \"date\": \"2026-12-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"41866709\",\n      \"pmcid\": \"PMC13011097\",\n      \"title\": \"Extracellular payload release from non-internalizing antibody-drug conjugates: mechanisms and linker technologies\",\n      \"journal\": \"Drug Deliv\",\n      \"date\": \"2026-12-31\",\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"43007374\",\n      \"title\": \"Tumor microenvironment features of CLDN18.2-positive gastric cancer and advances in targeted and immunotherapy.\",\n      \"journal\": \"Medical oncology (Northwood, London, England)\",\n      \"date\": \"2026-11-10\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"43004029\",\n      \"title\": \"The landscape of cell surface target expression in treatment resistant early-stage breast cancer.\",\n      \"journal\": \"Breast cancer research and treatment\",\n      \"date\": \"2026-11-09\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42999616\",\n      \"title\": \"Antibody-drug conjugates in the perioperative treatment of resectable non-small cell lung cancer: a narrative review of research advances and prospects.\",\n      \"journal\": \"Translational lung cancer research\",\n      \"date\": \"2026-10-30\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"43005634\",\n      \"title\": \"A patient-derived bladder cancer organoid and xenograft platform for personalized drug response prediction and salvage therapeutics screening.\",\n      \"journal\": \"Chinese journal of cancer research = Chung-kuo yen cheng yen chiu\",\n      \"date\": \"2026-10-30\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42787620\",\n      \"pmcid\": \"PMC13602404\",\n      \"doi\": \"10.1016/j.bioactmat.2026.09.015\",\n      \"title\": \"An endoplasmic reticulum-enriched nanogel couples ferroptotic tumor damage with macrophage reprogramming for triple-negative breast cancer immunotherapy.\",\n      \"journal\": \"Bioact Mater\",\n      \"date\": \"2026-09-17\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"42729408\",\n      \"pmcid\": \"PMC13562401\",\n      \"doi\": \"10.1016/j.bioactmat.2026.08.029\",\n      \"title\": \"Biomolecular coacervation-mediated materials: Phase states, phase transitions, and biomedical applications.\",\n      \"journal\": \"Bioact Mater\",\n      \"date\": \"2026-09-01\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"HER2 targeted therapy resistance\\\" --exclude-retracted --sort date --source semanticscholar --limit 10 --offset 0\",\n      \"biomcp get article 41496551\",\n      \"biomcp search article -k \\\"HER2 targeted therapy resistance\\\" --year-min 2026 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"unavailable\",\n        \"message\": \"Semantic Scholar enrichment unavailable\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

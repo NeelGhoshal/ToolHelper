@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "article",
+    "id": "42024101",
+    "json": true,
+    "sections": [
+      "tldr"
+    ]
+  },
+  "args_key": "8b54d37f0fa9fea86937a7172cd28ed7e01b2bf843e22b566200025c76b20efc",
+  "recorded_at": "2026-11-11T05:25:07.566889+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 5108.57389998273,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"_meta\": {\n    \"evidence_urls\": [\n      {\n        \"label\": \"PubMed\",\n        \"url\": \"https://pubmed.ncbi.nlm.nih.gov/42024101/\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42024101 tldr\",\n      \"biomcp article references 42024101 --limit 3\",\n      \"biomcp article citations 42024101 --limit 3\",\n      \"biomcp article recommendations 42024101 --limit 3\"\n    ],\n    \"section_sources\": [\n      {\n        \"key\": \"bibliography\",\n        \"label\": \"Bibliography\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"authors\",\n        \"label\": \"Authors\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubTator3\"\n        ]\n      },\n      {\n        \"key\": \"abstract\",\n        \"label\": \"Abstract\",\n        \"outcome\": \"data\",\n        \"sources\": [\n          \"PubMed\",\n          \"Europe PMC\"\n        ]\n      },\n      {\n        \"key\": \"tldr\",\n        \"label\": \"Semantic Scholar\",\n        \"outcome\": \"unavailable\",\n        \"sources\": []\n      }\n    ]\n  },\n  \"abstract_text\": \"Primary dedifferentiated and undifferentiated melanomas are extremely rare and diagnostically challenging. A 55-year-old female patient referred to us with a slowly growing mass in her right popliteal region of 1 year duration, which, on biopsy, performed elsewhere, was diagnosed as a synovial sarcoma. Radio imaging revealed a 6.9-cm-sized intense lesion in the dermis. A review of the biopsy and a subsequent resection revealed malignant cells in the epidermis, exhibiting focal pigmentation (melanin) along with the dermis replaced by malignant spindle cells, arranged in intersecting fascicles. Immunohistochemically, the malignant cells in the epidermis were positive for S100, HMB45, Melan A, SOX10, and PRAME, while the spindle cells in the dermis were completely negative for all those immunostains. Additionally, the malignant spindle cells in the dermis showed diffuse p53 immunostaining (mutation-type) and high Ki67/MIB1. A diagnosis of dedifferentiated melanoma was offered on biopsy, as well as on the resection. On comprehensive genetic testing, the tumor revealed BRAF p.Val600Glu (c.1799T>A) ex11, CDKN2A (c.238C>T) ex2, TP53 (c.722C>T) ex7, and TERT (c.-124C>T) promoter mutations. Post-wide excision, the patient developed multiple pleural and mediastinal tumor deposits on radio imaging. Primary dedifferentiated melanomas are rare and often misdiagnosed as soft tissue sarcomas. A careful assessment of the tumor components, an index of suspicion, relevant immunohistochemical stains, and molecular testing is necessary for an exact diagnosis. These tumors are relatively aggressive and often associated with multiple mutations, including those associated with their aggressive clinical behavior. A review of similar reported tumors in the literature is discussed herewith.\",\n  \"author_completeness\": \"complete\",\n  \"author_count\": 5,\n  \"author_source\": \"pubtator\",\n  \"authors\": [\n    \"Rekhi B\",\n    \"Bapat P\",\n    \"Agaimy A\",\n    \"Ramadwar M\",\n    \"Shetty O\"\n  ],\n  \"citation_count\": 0,\n  \"date\": \"2026-04-23\",\n  \"doi\": \"10.1177/10668969261437722\",\n  \"journal\": \"Int J Surg Pathol\",\n  \"open_access\": false,\n  \"pmid\": \"42024101\",\n  \"publication_type\": \"Research Article\",\n  \"pubtator_fallback\": false,\n  \"section_outcomes\": {\n    \"fulltext\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"indexing\": {\n      \"outcome\": \"not_requested\",\n      \"sources\": []\n    },\n    \"tldr\": {\n      \"message\": \"Semantic Scholar article context is temporarily unavailable.\",\n      \"outcome\": \"unavailable\",\n      \"sources\": []\n    }\n  },\n  \"title\": \"A Primary Dedifferentiated Melanoma, Masquerading as a Soft Tissue Sarcoma, Displaying BRAF p.V600E, CDKN2A, TP53, and TERT Promoter Mutations.\"\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

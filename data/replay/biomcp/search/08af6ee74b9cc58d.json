@@ -1,0 +1,38 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "disease": [
+      "lung cancer",
+      "non-small cell lung carcinoma"
+    ],
+    "entity": "article",
+    "gene": "EGFR",
+    "keyword": [
+      "EGFR mutation"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "08af6ee74b9cc58dab44b4f6f04d82feb8cf6e7e6e27b3f7cb13b464819bf842",
+  "recorded_at": "2026-11-11T07:46:46.734975+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 21794.60329998983,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=EGFR, disease=lung cancer non-small cell lung carcinoma, keyword=EGFR mutation, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene EGFR --disease \"lung cancer non-small cell lung carcinoma\" --keyword \"EGFR mutation\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 18709663|Expression and mutational analysis of MET in human solid can…|Europe PMC|2008-12-01|-|243| \n|PMID 33870211|The Metabolic Landscape of RAS-Driven Cancers from biology t…|Europe PMC|2021-03-24|-|232| \n|PMID 24077454|CDKN2A/p16 inactivation mechanisms and their relationship to…|Europe PMC|2013-11-01|-|90| \n|PMID 24979348|BRAF mutations in patients with non-small cell lung cancer:…|Europe PMC|2014-06-30|-|83| \n|PMID 43002340|EGFR-targeted drugs and resistance mechanisms in non-small c…|PubMed|2026-11-09|-|0| \n|PMID 43002481|From ADAURA to LAURA: the evolving role of EGFR-targeted the…|PubMed|2026-11-01|-|0| \n|PMID 43003698|Disparities in Treatment Patterns for Advanced ALK- and EGFR…|PubMed|2026-11-01|-|0| \n|PMID 43001251|From \"undruggable\" to tractable: Therapeutic advances target…|PubMed|2026-02-10|-|0| \n|PMID 38163979|EGFR|PubTator3|2024-01-02|-|none| \n|PMID 36172732|EGFR|PubTator3|2022-09-20|-|none| \n \n \n \nNewest indexed: 2026-11-09 (2 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 18709663\n  biomcp search article -g EGFR -d \"lung cancer non-small cell lung carcinoma\" -k \"EGFR mutation\" --year-min 2008 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

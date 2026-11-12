@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "review",
+    "entity": "article",
+    "keyword": [
+      "metformin",
+      "cardiovascular disease",
+      "cardioprotection"
+    ],
+    "limit": 15,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "89cc93d502432f3db51d9943f1977236c6ac7bd50362a703c347e86e1e1d7ad7",
+  "recorded_at": "2026-11-11T03:43:21.596416+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 890.6359999964479,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=metformin cardiovascular disease cardioprotection, type=review, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 15 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42906793|Mitochondrial pharmacology of cardiovascular and antidiabeti…|PubMed|2026-10-21|-|none| \n|PMID 42047732|Metformin as a potential therapeutic agent in broken heart s…|PubMed|2026-04-28|-|none| \n|PMID 41578414|Diabetes and cancer: therapeutic implications.|PubMed|2026-01-23|-|none| \n|PMID 40524049|Exploiting the cardioprotective potential of metformin again…|PubMed|2025-12-01|-|none| \n|PMID 40834569|Pharmacological activation of Nrf2: Cardioprotective effects…|PubMed|2025-10-01|-|none| \n|PMID 41146812|Mechanistic Insights Into the Cardioprotective Effects of Mo…|PubMed|2025-09-26|-|none| \n|PMID 40471543|Metformin: An Old Drug with New Tricks-Promising Role in Vas…|PubMed|2025-08-01|-|none| \n|PMID 40167623|Effects of oral antidiabetic agents on the renin-angiotensin…|PubMed|2025-06-01|-|none| \n|PMID 40086589|Advances in incretin therapies for targeting cardiovascular…|PubMed|2025-05-01|-|none| \n|PMID 40430489|Exploring the Protective Effects of Traditional Antidiabetic…|PubMed|2025-05-01|-|none| \n|PMID 40364115|Risk Factors and Prevention of Cancer and CVDs: A Chicken an…|PubMed|2025-04-29|-|none| \n|PMID 39639832|Interactions between antidiabetes medications and heart-brai…|PubMed|2025-02-01|-|none| \n|PMID 39161152|Unveiling the Protective Role of Metformin against Chemother…|PubMed|2025-01-01|-|none| \n|PMID 40257024|Novel Molecules Targeting Metabolism and Mitochondrial Funct…|PubMed|2025-01-01|-|none| \n|PMID 38932889|Narrative review of data supporting alternate first-line the…|PubMed|2024-03-25|-|none| \n \n \n \nNewest indexed: 2026-10-22 (20 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42906793\n  biomcp search article -k \"metformin cardiovascular disease cardioprotection\" --type review --source pubmed --year-min 2024 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-15 of 83 results. Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

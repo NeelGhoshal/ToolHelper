@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "T790M gatekeeper mutation acquired resistance EGFR",
+      "amivantamab mobocertinib exon 20 insertion NSCLC CHRYSALIS PAPILLON"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "7bad6df138537c712b167ab5821cea50469430c04282fc58534ec44299525b05",
+  "recorded_at": "2026-11-11T04:00:28.251586+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2170.2982999850065,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=T790M gatekeeper mutation acquired resistance EGFR amivantamab mobocertinib exon 20 insertion NSCLC CHRYSALIS PAPILLON, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"T790M gatekeeper mutation acquired resistance EGFR amivantamab mobocertinib exon 20 insertion NSCLC CHRYSALIS PAPILLON\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 38347643|Oncogenic alterations in advanced NSCLC: a molecular super-h…|PubTator3, Europe PMC|2024-02-12|-|134| \n|PMID 34301786|Targeting EGFR Exon 20 Insertions in Non-Small Cell Lung Can…|Europe PMC|2021-07-23|-|87| \n|PMID 37577308|EGFR exon 20 insertion mutations and ERBB2 mutations in lung…|PubTator3, Europe PMC|2023-07-31|-|36| \n|PMID 38705930|Novel therapeutic strategies for rare mutations in non-small…|Europe PMC|2024-05-05|-|33| \n|PMID 33727854|Tackling Drug Resistance in EGFR Exon 20 Insertion Mutant Lu…|PubTator3, Europe PMC|2021-03-09|-|25| \n|PMID 37894376|Resistance of Lung Cancer to EGFR-Specific Kinase Inhibitors…|PubTator3, Europe PMC|2023-10-16|-|21| \n|PMID 40243603|Strategies to Overcome Resistance to Osimertinib in EGFR-Mut…|Europe PMC|2025-03-25|-|17| \n|PMID 35053553|EGFR Exon 20 Insertion Mutations in Sinonasal Squamous Cell…|PubTator3, Europe PMC|2022-01-13|-|17| \n|PMID 39417568|Targeting EGFR Exon 20 Insertion Mutations in Non-small-Cell…|PubTator3, Europe PMC|2024-01-01|-|4| \n|PMID 42123300|Therapeutic Advances in Non-Small Cell Lung Cancer Harboring…|Europe PMC|2026-04-22|-|3| \n \n \n \nNewest indexed: 2026-05-15 (180 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 38347643\n  biomcp search article -k \"T790M gatekeeper mutation acquired resistance EGFR amivantamab mobocertinib exon 20 insertion NSCLC CHRYSALIS PAPILLON\" --year-min 2021 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -280,3 +280,36 @@ def test_confirm_only_plan_tests_a_preregistered_lead_on_fresh_runs(server_confi
     with pytest.raises(ValueError, match="confirm_only"):
         FactorialOrchestrator(config({"A": Factor(specs=["E2"])}, confirm_only=["Z"]), PLAN_TASKS, db,
                               tmp_path / "w2", launch=launch, poll_s=0, log=lambda m: None)
+
+
+def test_a_factor_can_replace_a_base_setting():
+    from toolhelper.experiments.factorial import FactorialConfig, cells, merge_specs
+
+    assert merge_specs(["E6:mode=budget,budget=2000", "E9"], ["E6:budget=1000,expand=page"]) == [
+        "E6:mode=budget,budget=1000,expand=page", "E9"]
+    data = {"experiment": "x", "llm": "nim-mistral", "learn_from": [], "gate": {}, "bootstrap": {},
+            "base": {"specs": ["E6:mode=budget,budget=2000", "E9"], "max_turns": 6},
+            "factors": {"K": {"specs": ["E6:budget=1000"], "overrides_base": True},
+                        "P": {"specs": ["E6:expand=page"]}, "L": {"max_turns": 4}}}
+    by_name = {c.name: c for c in cells(FactorialConfig.model_validate(data))}
+    assert by_name["none"].specs == ["E6:mode=budget,budget=2000", "E9"] and by_name["none"].max_turns == 6
+    assert by_name["KPL"].specs == ["E6:mode=budget,budget=1000,expand=page", "E9"] and by_name["KPL"].max_turns == 4
+    assert by_name["P"].specs == ["E6:mode=budget,budget=2000,expand=page", "E9"]
+    data["factors"]["K"]["overrides_base"] = False
+    with pytest.raises(ValueError, match="conflicting budget"):
+        cells(FactorialConfig.model_validate(data))
+
+
+def test_a_negative_generator_gives_the_half_fraction_with_the_baseline_cell():
+    from toolhelper.experiments.factorial import cells, interaction_groups, load_config
+
+    cfg = load_config("configs/experiments-p10e.yaml")
+    cs = cells(cfg)
+    names = [c.name for c in cs]
+    assert len(cs) == 16 and "none" in names and all(sum(c.on.values()) % 2 == 0 for c in cs)
+    assert all(sum(c.on[f] for c in cs) == 8 for f in cfg.factors)  # balanced
+    assert all(len(g) == 1 for g in interaction_groups(cfg)) and len(interaction_groups(cfg)) == 10  # resolution V
+    by_name = {c.name: c for c in cs}
+    assert by_name["none"].specs == ["E2:level=minimal", "E6:mode=budget,budget=2000", "E9"] and by_name["none"].max_turns == 6
+    assert by_name["LSKP"].specs == ["E2:level=minimal", "E6:mode=budget,budget=1000,expand=page", "E9", "E10"]
+    assert by_name["LSKP"].max_turns == 4 and by_name["KM"].specs[-1] == "E1:mode=servers"

@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "metastatic melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "mutation": [
+      "V600E"
+    ]
+  },
+  "args_key": "a447c3fce7ff4d41695b9fe25a1de1e223e4e2629525a3049a34c19743bddbdf",
+  "recorded_at": "2026-11-12T04:17:50.294868+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6059.4044999888865,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 25 trial(s) \n \nQuery: condition=metastatic melanoma, mutation=V600E \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT04557956|Testing the Addition of t…|ACTIVE_NOT_RECRUITING|1/2|Clinical Stage IV Cutaneous Melanoma AJCC v8, Metastatic Melanoma| \n|NCT04657991|A Clinical Trial of Three…|ACTIVE_NOT_RECRUITING|3|Melanoma| \n|NCT05176470|Neoadj Admin Autologous T…|ACTIVE_NOT_RECRUITING|1|Locally Advanced Melanoma, Pathologic Stage II… [abridged; 5 conditions total]| \n|NCT00866177|MEK Inhibitor AZD6244 in…|COMPLETED|2|Recurrent Melanoma, Stage III Skin Melanoma, Stage IV Skin Melanoma| \n|NCT01006980|A Study of Vemurafenib (R…|COMPLETED|3|Malignant Melanoma| \n|NCT01107418|A Pharmacokinetic/Pharmac…|COMPLETED|1|Malignant Melanoma| \n|NCT01164891|A Pharmacokinetic and Met…|COMPLETED|1|Malignant Melanoma| \n|NCT01227889|A Study Comparing GSK2118…|COMPLETED|3|Cancer| \n|NCT01245556|Safety and Efficacy Study…|COMPLETED|1|Melanoma| \n|NCT01619774|An Open-Label Phase II St…|COMPLETED|2|Melanoma| \n|NCT01659151|Vemurafenib With Lymphode…|COMPLETED|2|Metastatic Melanoma| \n|NCT01689519|A Study Comparing Vemuraf…|COMPLETED|3|Malignant Melanoma| \n|NCT01726738|LCCC 1128: Open Label Pha…|COMPLETED|2|Stage III Melanoma, Stage IV Melanoma, Unresec… [abridged; 4 conditions total]| \n|NCT01767454|Study of Dabrafenib +/- T…|COMPLETED|1|Solid Tumours| \n|NCT02257424|Dabrafenib, Trametinib an…|COMPLETED|1/2|Advanced BRAF Mutant Melanoma| \n|NCT03553329|Study of the Variations o…|COMPLETED|-|Unresecable Stage IIIc or IV Melanoma| \n|NCT06208124|A Study of IMM-6-415 in R…|COMPLETED|1/2|Advanced Solid Tumor (Phase 1), Pancreas Adeno… [abridged; 4 conditions total]| \n|NCT02460068|A Study of Fotemustine(FT…|UNKNOWN|3|Brain Metastases| \n|NCT02625337|Study Comparing Pembroliz…|UNKNOWN|2|Metastatic Melanoma| \n|NCT01701037|Dabrafenib Alone and in C…|TERMINATED|2|Recurrent Melanoma, Stage IIB Melanoma (Locall… [abridged; 7 conditions total]| \n|NCT01875653|Autologous Dendritic Cell…|TERMINATED|3|Stage IV Melanoma, Stage III Melanoma| \n|NCT01942993|The Effects of Treatment…|TERMINATED|2|Melanoma| \n|NCT01978236|Dabrafenib/Trametinib, BR…|TERMINATED|2|Melanoma and Brain Metastases| \n|NCT03207867|A Phase 2 Study of NIR178…|TERMINATED|2|NSCLC, Non Small Cell Lung Cancer, RCC, Renal… [abridged; 10 conditions total]| \n|NCT04157517|A Study of Modakafusp Alf…|TERMINATED|1/2|Neoplasms, Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 25 results (total unknown). Use --offset 25 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

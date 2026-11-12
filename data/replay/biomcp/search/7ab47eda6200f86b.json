@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "review",
+    "entity": "article",
+    "keyword": [
+      "EGFR mutation NSCLC osimertinib resistance"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "7ab47eda6200f86b93ea111c5c5edce9718eac75adac611ae176566354552b16",
+  "recorded_at": "2026-11-12T20:58:03.896107+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2237.637900005211,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR mutation NSCLC osimertinib resistance, type=review, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 31723286|A view on drug resistance in cancer.|Europe PMC|2019-11-13|-|2196| \n|PMID 32203277|Targeting apoptosis in cancer therapy.|Europe PMC|2020-03-23|-|2031| \n|PMID 28513565|Epidermal Growth Factor Receptor Cell Proliferation Signalin…|Europe PMC|2017-05-17|-|1544| \n|PMID 31564718|Resistance mechanisms to osimertinib in EGFR-mutated non-sma…|Europe PMC|2019-09-30|-|1196| \n|PMID 34054126|Small molecules in targeted cancer therapy: advances, challe…|Europe PMC|2021-05-31|-|1181| \n|PMID 35062949|Combination strategies with PD-1/PD-L1 blockade: current adv…|Europe PMC|2022-01-21|-|1162| \n|PMID 29455673|Kinase-targeted cancer therapies: progress, challenges and f…|Europe PMC|2018-02-19|-|965| \n|PMID 33442008|Targeting metastatic cancer.|Europe PMC|2021-01-13|-|883| \n|PMID 34322663|Drug resistance and combating drug resistance in cancer.|Europe PMC|2019-06-19|-|878| \n|PMID 34002056|Kinase drug discovery 20 years after imatinib: progress and…|Europe PMC|2021-05-17|-|872| \n \n \n \nNewest indexed: 2022-01-24 (1753 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 31723286\n  biomcp search article -k \"EGFR mutation NSCLC osimertinib resistance\" --type review --year-min 2017 --year-max 2022 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

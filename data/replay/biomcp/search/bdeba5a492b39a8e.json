@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "research-article",
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "HER2",
+      "targeted therapy"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "bdeba5a492b39a8eb01bfa12610f6b6abb0fe88c22b302c1cf09b8dcae662c96",
+  "recorded_at": "2026-11-11T03:31:07.709997+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 60027.27180000511,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=HER2 targeted therapy, type=research-article, exclude_retracted=true, sort=date\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": false,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"europepmc\",\n      \"pubmed\"\n    ],\n    \"enrichment_sources\": [\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"note\": \"Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering.\",\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": false,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"43007374\",\n      \"title\": \"Tumor microenvironment features of CLDN18.2-positive gastric cancer and advances in targeted and immunotherapy.\",\n      \"journal\": \"Medical oncology (Northwood, London, England)\",\n      \"date\": \"2026-11-10\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"43002362\",\n      \"title\": \"Imlunestrant as Monotherapy or in Combination with Abemaciclib in ER+, HER2- Advanced Breast Cancer: Chinese Subgroup Analysis of the Phase III Randomized EMBER-3 Study.\",\n      \"journal\": \"Targeted oncology\",\n      \"date\": \"2026-11-09\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"43003957\",\n      \"title\": \"Pertuzumab in HER2-positive breast cancer: a systematic review and meta-analysis of randomized controlled trials.\",\n      \"journal\": \"Breast cancer research and treatment\",\n      \"date\": \"2026-11-09\",\n      \"citation_count\": 0,\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"43004029\",\n      \"title\": \"The landscape of cell surface target expression in treatment resistant early-stage breast cancer.\",\n      \"journal\": \"Breast cancer research and treatment\",\n      \"date\": \"2026-11-09\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"43001820\",\n      \"title\": \"Evaluation of HER2 expression in 125 serous endometrial carcinomas: A single institutional, retrospective study from a tertiary cancer referral centre.\",\n      \"journal\": \"Journal of cancer research and therapeutics\",\n      \"date\": \"2026-11-05\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"43001151\",\n      \"title\": \"Successful Trastuzumab Desensitization After a Severe Infusion-Related Reaction with Acute Hypoxemia and Suspected Pulmonary Toxicity in HER2-Positive Metastatic Breast Cancer: A Case Report.\",\n      \"journal\": \"Cancer management and research\",\n      \"date\": \"2026-11-04\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42961335\",\n      \"pmcid\": \"PMC13733213\",\n      \"doi\": \"10.1080/15384101.2026.2753856\",\n      \"title\": \"G-quadruplex ligand-mediated CHK1 and ERα suppression in endocrine-sensitive and endocrine-resistant luminal breast cancer cells.\",\n      \"journal\": \"Cell Cycle\",\n      \"date\": \"2026-10-30\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"43005634\",\n      \"title\": \"A patient-derived bladder cancer organoid and xenograft platform for personalized drug response prediction and salvage therapeutics screening.\",\n      \"journal\": \"Chinese journal of cancer research = Chung-kuo yen cheng yen chiu\",\n      \"date\": \"2026-10-30\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42992180\",\n      \"pmcid\": \"PMC13738297\",\n      \"doi\": \"10.1016/j.esmogo.2026.100437\",\n      \"title\": \"Real-world outcomes of first-line gemcitabine-platinum plus an immune checkpoint inhibitor and subsequent treatment with matched targeted therapy in biliary tract cancer.\",\n      \"journal\": \"ESMO Gastrointest Oncol\",\n      \"date\": \"2026-10-28\",\n      \"citation_count\": 0,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"43005698\",\n      \"title\": \"Transcriptional cyclin-dependent kinases as therapeutic targets in bone metastasizing cancers.\",\n      \"journal\": \"Frontiers in oncology\",\n      \"date\": \"2026-10-26\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp search article --keyword \\\"HER2 targeted therapy\\\" --type research-article --exclude-retracted --sort date --source europepmc --limit 10 --offset 0\",\n      \"biomcp get article 43007374\",\n      \"biomcp search article -k \\\"HER2 targeted therapy\\\" --type research-article --year-min 2026 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"pubtator\",\n        \"enabled\": true,\n        \"status\": \"degraded\",\n        \"message\": \"article search deadline elapsed during article metadata fallback\"\n      },\n      {\n        \"source\": \"europepmc\",\n        \"enabled\": true,\n        \"status\": \"degraded\",\n        \"message\": \"article search deadline elapsed during article metadata fallback\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "sertraline 20 MG/ML Oral Solution [Zoloft]",
+    "max_results": 3,
+    "omop_field": "drug_concept_id",
+    "omop_table": "drug_exposure"
+  },
+  "args_key": "e65240ec4339182954c90b22907265d48a1cff52f31f3791f8386eee0062a40d",
+  "recorded_at": "2026-11-11T05:28:31.666219+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1226.432900002692,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 40165283,\n      \"code\": \"861066\",\n      \"name\": \"sertraline 20 MG/ML Oral Solution [Zoloft]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/40165283\"\n    },\n    {\n      \"concept_id\": 3982195,\n      \"code\": \"58151060135\",\n      \"name\": \"sertraline 20 MG/ML Oral Solution [Zoloft]\",\n      \"class\": \"11-digit NDC\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"NDC\",\n      \"url\": \"https://omophub.com/concepts/3982195\"\n    },\n    {\n      \"concept_id\": 42822518,\n      \"code\": \"00049005001\",\n      \"name\": \"sertraline 20 MG/ML Oral Solution [Zoloft]\",\n      \"class\": \"11-digit NDC\",\n      \"concept\": null,\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"NDC\",\n      \"url\": \"https://omophub.com/concepts/42822518\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"sertraline 20 MG/ML Oral Solution [Zoloft]\",\n    \"omop_table\": \"drug_exposure\",\n    \"omop_field\": \"drug_concept_id\",\n    \"total_found\": 3,\n    \"candidates_returned\": 3,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

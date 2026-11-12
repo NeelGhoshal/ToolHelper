@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "ABL1",
+    "json": true,
+    "sections": [
+      "druggability",
+      "diseases",
+      "pathways",
+      "drug_response"
+    ]
+  },
+  "args_key": "4660ec0f5e6435d1149535aea16ac28c9c824fdd3158782baa9395576722c35c",
+  "recorded_at": "2026-11-12T04:20:00.647740+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.1222000030102208,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid gene section: drug_response"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

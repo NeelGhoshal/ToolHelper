@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "drug": [
+      "clopidogrel"
+    ],
+    "entity": "pgx",
+    "json": true,
+    "limit": 25
+  },
+  "args_key": "12636de77e60690dc297b5583643648968b7bd26b4ab59e6ed9773c577466b06",
+  "recorded_at": "2026-11-11T03:55:05.677971+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 635.6749999977183,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 25,\n    \"returned\": 2,\n    \"total\": 2,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 2,\n  \"results\": [\n    {\n      \"genesymbol\": \"CYP2C19\",\n      \"drugname\": \"clopidogrel\",\n      \"cpiclevel\": \"A\",\n      \"pgxtesting\": \"Actionable PGx\",\n      \"guidelinename\": \"CYP2C19 and Clopidogrel\"\n    },\n    {\n      \"genesymbol\": \"CES1\",\n      \"drugname\": \"clopidogrel\",\n      \"cpiclevel\": \"C\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get pgx clopidogrel\",\n      \"biomcp list pgx\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "condition": [
+      "BRAF V600E melanoma"
+    ],
+    "intervention": [
+      "vemurafenib"
+    ],
+    "limit": 5
+  },
+  "args_key": "f24677931885163ed7ff44ac44ca6d56dd9c53ff377d76d33171b2c9408caf3b",
+  "recorded_at": "2026-11-11T04:01:55.699877+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 517.25509998505,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 5 trial(s) \n \nQuery: condition=BRAF V600E melanoma, intervention=vemurafenib \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT01006980|A Study of Vemurafenib (R…|COMPLETED|3|Malignant Melanoma|vemurafenib| \n|NCT01689519|A Study Comparing Vemuraf…|COMPLETED|3|Malignant Melanoma|vemurafenib| \n|NCT01909453|Study Comparing Combinati…|COMPLETED|3|Melanoma|Vemurafenibum| \n|NCT05263453|HL-085+Vemurafenib to Tre…|UNKNOWN|2|Melanoma|vemurafenib| \n|NCT02427893|Trial of Vemurafenib and…|WITHDRAWN|3|Melanoma|vemurafenib| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

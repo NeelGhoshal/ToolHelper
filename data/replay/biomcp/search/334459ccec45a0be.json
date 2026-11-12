@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR exon 19 deletion",
+      "lung adenocarcinoma",
+      "TKI sensitivity"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "334459ccec45a0bed9d3323d4da3b8c911d21b81043d8c27df4d60ac345df10a",
+  "recorded_at": "2026-11-11T04:38:30.182306+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 7418.7968999904115,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR exon 19 deletion lung adenocarcinoma TKI sensitivity, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"EGFR exon 19 deletion lung adenocarcinoma TKI sensitivity\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 21252716|International association for the study of lung cancer/ameri…|Europe PMC|2011-02-01|-|3664| \n|PMID 15329413|EGF receptor gene mutations are common in lung cancers from…|Europe PMC|2004-08-25|-|3294| \n|PMID 27959700|Osimertinib or Platinum-Pemetrexed in EGFR T790M-Positive Lu…|Europe PMC|2016-12-06|-|2847| \n|PMID 21430269|Genotypic and histological evolution of lung cancers acquiri…|Europe PMC|2011-03-01|-|2797| \n|PMID 23470965|Analysis of tumor specimens at the time of acquired resistan…|Europe PMC|2013-03-07|-|2071| \n|PMID 24893891|AZD9291, an irreversible EGFR TKI, overcomes T790M-mediated…|Europe PMC|2014-06-03|-|1864| \n|PMID 24419411|A prospective, molecular epidemiology study of EGFR mutation…|Europe PMC|2014-02-01|-|1270| \n|PMID 34054126|Small molecules in targeted cancer therapy: advances, challe…|Europe PMC|2021-05-31|-|1181| \n|PMID 30333516|NTRK fusion-positive cancers and TRK inhibitor therapy.|Europe PMC|2018-12-01|-|1163| \n|PMID 37169756|Angiogenic signaling pathways and anti-angiogenic therapy fo…|Europe PMC|2023-05-11|-|1145| \n \n \n \nNewest indexed: 2023-05-12 (1279 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 21252716\n  biomcp search article -k \"EGFR exon 19 deletion lung adenocarcinoma TKI sensitivity\" --year-min 2004 --year-max 2023 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "research-article",
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "gene therapy"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "91a8e0090286e08c755464337d0aaccc33154b66579671af72128b2640631a3f",
+  "recorded_at": "2026-11-11T20:21:47.306390+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5472.58029999648,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR gene therapy, type=research-article, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 43010175|Engineered bacteriophages as precision antimicrobials agains…|PubMed|2026-12-01|-|0| \n|PMID 43009024|Stimuli-responsive CRISPR-based genome editing delivery syst…|PubMed|2026-11-10|-|0| \n|PMID 43009097|CRISPR, mRNA, and Beyond: Nucleic Acid Therapeutics in Aller…|PubMed|2026-11-10|-|0| \n|PMID 43010164|The road ahead for stem cell therapies in type 1 diabetes.|PubMed|2026-11-10|-|0| \n|PMID 43011237|CRISPR Technology: From Bench to Bedside Applications.|PubMed|2026-11-09|-|none| \n|PMID 42988560|A modular lentiviral system for multiplexed gene perturbatio…|Europe PMC|2026-11-05|-|0| \n|PMID 43004989|Genome Editing of Mitochondrial Dysfunction in Neurological…|PubMed|2026-11-04|-|0| \n|PMID 43012455|Mapping Osteosarcoma Biology With CRISPR/Cas: From Gene Func…|PubMed|2026-11-01|-|none| \n|PMID 42999915|A let-7a-5p-engineered extracellular vesicle-laden bioactive…|Europe PMC|2026-10-30|-|0| \n|PMID 43001243|Progress and applications of microneedle-based gene therapy.|PubMed|2026-10-29|-|0| \n \n \n \nNewest indexed: 2026-11-11 (0 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 43010175\n  biomcp search article -k \"CRISPR gene therapy\" --type research-article --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

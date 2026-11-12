@@ -177,3 +177,28 @@ async def test_budget_shaping_is_evidenced_and_reversible(replay_hub, store):
     bare = await run(replay_hub, [ResultShaper("budget", {}, budget=BUDGET)],
                      tool_call("medical__search-drug-nomenclature", rxnorm))
     assert bare.transformations == [] and bare.tool_calls[0].shaped_text == bare.tool_calls[0].raw_text
+
+
+async def test_paged_expand_returns_what_was_cut_in_budget_sized_parts(replay_hub, store):
+    rxnorm = recorded(store, "search-drug-nomenclature", query="metformin")
+    traces = await history(replay_hub, 2, tool_call("medical__search-drug-nomenclature", rxnorm),
+                           answer="Kombiglyze, RxCUI 1043567.")
+    policies = learn_policies(traces, budgets=[BUDGET], counter=estimate_tokens)
+    shaper = ResultShaper("budget", policies, budget=BUDGET, expand="page")
+    trace = await run(replay_hub, [shaper], tool_call("medical__search-drug-nomenclature", rxnorm),
+                      tool_call(EXPAND, {"handle": "r1"}), tool_call(EXPAND, {"handle": "r1", "page": 2}),
+                      tool_call(EXPAND, {"handle": "r1", "page": 99}), answer="RxCUI 1043567.")
+    shaped, one, two, beyond = trace.tool_calls
+    assert f'More, one part at a time: {EXPAND}(handle="r1")' in shaped.shaped_text
+    pages = shaper.pages["r1"]
+    assert len(pages) > 2 and all(estimate_tokens(p) <= BUDGET for p in pages)
+    assert one.shaped_text.startswith(pages[0]) and f'part 1 of {len(pages)} of what was cut; next: {EXPAND}(handle="r1", page=2)' in one.shaped_text
+    assert two.shaped_text.startswith(pages[1]) and one.shaped_result_tokens < BUDGET + 60
+    assert beyond.is_error and f"parts 1-{len(pages)}" in beyond.shaped_text
+    # The part already shown plus the pages are the original: nothing is lost, nothing repeated.
+    shown = shaped.shaped_text.split("\n\n[shaped:")[0]
+    squash = lambda s: "".join(s.split())  # noqa: E731
+    assert squash(shown + "".join(pages)) == squash(shaped.raw_text)
+    assert trace.provenance_coverage == 1.0 and trace.problems() == []
+    assert "page" in shaper.extra_tools()[0].tool.input_schema["properties"]
+    assert "page" not in ResultShaper("budget", policies).extra_tools()[0].tool.input_schema["properties"]

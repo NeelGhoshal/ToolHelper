@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "limit": 25,
+    "mutation": "BRAF V600E",
+    "status": "recruiting"
+  },
+  "args_key": "b49a6119da7561bda70e542fbdeda16918f37d21eb685711d0fd98f64fc05386",
+  "recorded_at": "2026-11-11T22:37:45.694855+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 6805.045200002496,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 25 trial(s) \n \nQuery: status=recruiting, mutation=BRAF V600E \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT05701787|Molecular Landscape Analy…|RECRUITING|-|NSCLC, NSCLC Stage IV, NSCLC, Recurrent| \n|NCT06563999|Neoadjuvant Umbrella Tria…|RECRUITING|2|Lung Cancer Stage III, Mutation| \n|NCT07809893|Ivosidenib Plus mFOLFOXIR…|RECRUITING|2|Colorectal Cancer| \n|NCT06598371|A Phase 1/2 Study of KSQ-…|RECRUITING|1/2|Select Advanced Solid Tumors| \n|NCT07169552|HC010 in First-line PD-L1…|RECRUITING|2|NSCLC| \n|NCT06425133|Regorafenib in Combinatio…|RECRUITING|2|Metastatic Colorectal Cancer| \n|NCT06878131|Precision-MRD: Prospectiv…|RECRUITING|-|Colorectal Cancer| \n|NCT07751042|Phase 1/2 Study of Intrav…|RECRUITING|1/2|Advanced Solid Tumor| \n|NCT05706779|Encorafenib Plus Cetuxima…|RECRUITING|2|Colorectal Cancer, BRAF V600E Mutation Positive| \n|NCT05267912|Prospective Multicenter S…|RECRUITING|NA|Advanced, Pretreated Solid Tumors| \n|NCT06411600|Combination Therapy for B…|RECRUITING|2|Metastatic Colorectal Cancer| \n|NCT06610682|A Trial to Evaluate CSF c…|RECRUITING|EARLY_PHASE1|BRAF V600E Mutation| \n|NCT06369259|Open-label Phase 2 Study…|RECRUITING|2|Advanced Colorectal Cancer| \n|NCT05800340|Neoadjuvant Immunotherapy…|RECRUITING|2|Non-Small Cell Lung Cancer, RET Driver Mutatio… [abridged; 6 conditions total]| \n|NCT06475989|Study of Targeted Therapy…|RECRUITING|3|Refractory Differentiated Thyroid Gland Carcinoma| \n|NCT06868836|Phase II Clinical Study o…|RECRUITING|2|Non-squamous Non-small Cell Lung Cancer| \n|NCT07283367|A Phase Ib/II Trial of HS…|RECRUITING|1/2|CRC| \n|NCT06262919|Special Drug Use-results…|RECRUITING|-|BRAF V600E Mutation-positive Unresectable Advanced or Recurrent Solid Tumor| \n|NCT06448572|EXL01 in Combination With…|RECRUITING|1/2|Non-Small Cell Lung Cancer| \n|NCT06561360|A Study of Vemurafenib an…|RECRUITING|2|Hairy Cell Leukemia| \n|NCT06207656|Study to Evaluate the Eff…|RECRUITING|2|Colorectal Cancer| \n|NCT05673148|Testing the Addition of T…|RECRUITING|2|Metastatic Colorectal Adenocarcinoma, Stage IV… [abridged; 3 conditions total]| \n|NCT06666348|Phase 1/2 Study of Mirdam…|RECRUITING|1/2|Pediatric Low-grade Glioma| \n|NCT05101070|S-531011 as Monotherapy a…|RECRUITING|1/2|Solid Tumors| \n|NCT05999396|FIH, Bispecific CD276xCD3…|RECRUITING|1|Colorectal Cancer, Breast Carcinoma, Sarcoma, Penile Carcinoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 25 results (total unknown). Use --offset 25 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,31 @@
+{
+  "server": "omop",
+  "tool": "find_omop_concept",
+  "arguments": {
+    "keyword": "sertraline 50 MG Oral Tablet [Zoloft]",
+    "max_results": 3,
+    "omop_field": "drug_concept_id",
+    "omop_table": "drug_exposure"
+  },
+  "args_key": "c9274a797f546487b6609ccf1769d213f9e8d4f8d8579d6c19265afde9ef59be",
+  "recorded_at": "2026-11-11T05:28:30.389449+00:00",
+  "package": "OHNLP/omop_mcp",
+  "server_version": "7628155",
+  "server_info": {
+    "name": "omop_concept_mapper",
+    "version": "1.7.1"
+  },
+  "schema_hash": "f4237c2e06f0031fbc95cc8f59fdf6080f561712e77183090fb04d486688447b",
+  "latency_ms": 1221.0963999968953,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"candidates\": [\n    {\n      \"concept_id\": 19037684,\n      \"code\": \"208161\",\n      \"name\": \"sertraline 50 MG Oral Tablet [Zoloft]\",\n      \"class\": \"Branded Drug\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm\",\n      \"url\": \"https://omophub.com/concepts/19037684\"\n    },\n    {\n      \"concept_id\": 41308243,\n      \"code\": \"OMOP2506205\",\n      \"name\": \"Sertraline 50 MG Oral Tablet [Zoloft] Box of 20\",\n      \"class\": \"Branded Drug Box\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/41308243\"\n    },\n    {\n      \"concept_id\": 40933781,\n      \"code\": \"OMOP2131743\",\n      \"name\": \"Sertraline 50 MG Oral Tablet [Zoloft] Box of 28\",\n      \"class\": \"Branded Drug Box\",\n      \"concept\": \"S\",\n      \"validity\": \"Valid\",\n      \"domain\": \"Drug\",\n      \"vocab\": \"RxNorm Extension\",\n      \"url\": \"https://omophub.com/concepts/40933781\"\n    }\n  ],\n  \"search_metadata\": {\n    \"keyword_searched\": \"sertraline 50 MG Oral Tablet [Zoloft]\",\n    \"omop_table\": \"drug_exposure\",\n    \"omop_field\": \"drug_concept_id\",\n    \"total_found\": 3,\n    \"candidates_returned\": 3,\n    \"selection_guidance\": \"Select the most appropriate concept based on clinical context. Access omop://preferred_vocabularies for vocabulary preferences. Generally prefer Standard + Valid concepts from recommended vocabularies, but context may require different choices (e.g., research needs, specific vocabulary requirements, or non-standard mappings).\"\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "date_from": "2024-01-01",
+    "entity": "article",
+    "keyword": [
+      "BRAF V600E",
+      "review",
+      "clinical significance"
+    ],
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "59e5904d120634aa36fd29ec41191a1e72e5d2a9d776480a26a531be1b72807c",
+  "recorded_at": "2026-11-11T05:24:21.365449+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 60014.35909999418,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=BRAF V600E review clinical significance, date_from=2024-01-01, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"BRAF V600E review clinical significance\" --date-from 2024-01-01 --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \nPubTator3 source status: degraded (article search deadline elapsed during article metadata fallback) \nRetry: `biomcp search article --keyword \"BRAF V600E review clinical significance\" --date-from 2024-01-01 --exclude-retracted --sort citations --source pubtator --limit 15 --offset 0` \nEurope PMC source status: degraded (article search deadline elapsed during article metadata fallback) \nRetry: `biomcp search article --keyword \"BRAF V600E review clinical significance\" --date-from 2024-01-01 --exclude-retracted --sort citations --source europepmc --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 39420203|Cold and hot tumors: from molecular mechanisms to targeted t…|Europe PMC|2024-10-18|-|639| \n|PMID 40844370|2025 American Thyroid Association Management Guidelines for…|Europe PMC|2025-08-01|-|585| \n|PMID 39370455|Signaling pathways involved in colorectal cancer: pathogenes…|Europe PMC|2024-10-07|-|470| \n|PMID 38589574|Concurrent inhibition of oncogenic and wild-type RAS-GTP for…|Europe PMC|2024-04-08|-|387| \n|PMID 37849038|Quantifying the Expanding Landscape of Clinical Actionabilit…|Europe PMC|2024-01-01|-|383| \n|PMID 39039250|A foundation model for clinical-grade computational patholog…|Europe PMC|2024-07-22|-|376| \n|PMID 43007602|Clinical Significance of Comprehensive Genomic Profiling Acc…|PubMed|2026-11-10|-|none| \n|PMID 43003655|Solitary Eosinophilic Granuloma of the Cervical Spine in an…|PubMed|2026-11-09|-|0| \n|PMID 42942505|Diagnostic Accuracy of VE1 Immunohistochemistry for BRAF p.V…|PubMed|2026-10-12|-|0| \n|PMID 42633244|Prognostic impact of circulating tumor RAS and BRAF mutation…|PubMed|2026-08-13|-|0| \n|PMID 42576002|Sialadenoma papilliferum of the floor of the mouth with HPV…|PubMed|2026-08-11|-|0| \n|PMID 42552286|Clinical Utility of Molecular Testing in Ameloblastoma: A Sy…|PubMed|2026-08-05|-|none| \n|PMID 42134541|Advances in MAPK Pathway-Targeted Therapy for Ameloblastoma:…|PubTator3, PubMed|2026-05-13|-|none| \n|PMID 41980527|Precision therapy for BRAF V600E-mutated ameloblastoma: Syst…|PubTator3|2026-04-13|-|none| \n|PMID 41898318|BRAF Mutations in Myeloid Neoplasms: Prevalence, Co-Mutation…|PubTator3|2026-03-15|-|none| \n \n \n \nNewest indexed: 2026-11-10 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 39420203 \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

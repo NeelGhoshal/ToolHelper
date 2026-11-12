@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "trial",
+    "intervention": [
+      "vemurafenib"
+    ],
+    "limit": 25,
+    "status": "recruiting"
+  },
+  "args_key": "bf4632549172713a6802862098c9ee08464ce1c97be83a1185aa2c24a7fceca4",
+  "recorded_at": "2026-11-11T04:27:35.811451+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 431.3655000005383,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 15 of 15 \n \nQuery: intervention=vemurafenib, status=recruiting \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT04423185|PLATFORM Study of Precisi…|RECRUITING|2|Rare Tumor|vemurafenib| \n|NCT02925234|The Drug Rediscovery Prot…|RECRUITING|2|Cancer, Tumors, Neoplasm, Neoplasia|vemurafenib| \n|NCT05768178|DETERMINE Trial Treatment…|RECRUITING|2/3|Haematological Malignancy, Melanoma, Thyroid… [abridged; 12 conditions total]|vemurafenib| \n|NCT06561360|A Study of Vemurafenib an…|RECRUITING|2|Hairy Cell Leukemia|vemurafenib| \n|NCT02693535|TAPUR: Testing the Use of…|RECRUITING|2|Lymphoma, Non-Hodgkin, Multiple Myeloma, Advanced Solid Tumors|vemurafenib| \n|NCT06603376|Irinotecan Hydrochloride…|RECRUITING|2|Colorectal Carcinoma|vemurafenib| \n|NCT05203172|The FLOTILLA Study: Provi…|RECRUITING|4|Solid Tumors|vemurafenib| \n|NCT04817956|Improving Public Cancer C…|RECRUITING|2|Cancer Metastatic|vemurafenib| \n|NCT04341181|ProTarget - A Danish Nati…|RECRUITING|2|Cancer, Tumors, Neoplasms, Neoplasia|vemurafenib| \n|NCT06440850|Vemurafenib and Cobimetin…|RECRUITING|2|Thyroid Gland Follicular Carcinoma, Thyroid Gl… [abridged; 3 conditions total]|vemurafenib| \n|NCT03297606|Canadian Profiling and Ta…|RECRUITING|2|Lymphoma, Non-Hodgkin, Multiple Myeloma, Advanced Solid Tumors|vemurafenib| \n|NCT05159245|The Finnish National Stud…|RECRUITING|2|Advanced Cancer, Solid Tumor, Haematological Malignancy|vemurafenib| \n|NCT05722886|DETERMINE (Determining Ex…|RECRUITING|2/3|Haematological Malignancy, Solid Tumour|vemurafenib| \n|NCT01638676|A Phase I/II Trial of Vem…|RECRUITING|1/2|Melanoma|vemurafenib| \n|NCT06008119|Efficacy and Safety of Tu…|RECRUITING|3|Colorectal Cancer Metastatic|vemurafenib| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-15 of 15 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "article_type": "review",
+    "keyword": [
+      "EGFR mutation",
+      "lung cancer",
+      "resistance"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "bc84bee17c31ac8900fe16c2d551cc726c99b3e9bad8bbd5f09ddb3016d2b611",
+  "recorded_at": "2026-11-11T04:33:58.199478+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1093.5482999775559,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR mutation lung cancer resistance, type=review, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 32029601|The biology, function, and biomedical applications of exosom…|Europe PMC|2020-02-01|-|8962| \n|PMID 20303878|Immunity, inflammation, and cancer.|Europe PMC|2010-03-01|-|8587| \n|PMID 28122885|Heart Disease and Stroke Statistics-2017 Update: A Report Fr…|Europe PMC|2017-01-25|-|6484| \n|PMID 23539594|Cancer genome landscapes.|Europe PMC|2013-03-01|-|6000| \n|PMID 33479224|Hepatocellular carcinoma.|Europe PMC|2021-01-21|-|5591| \n|PMID 28187290|Primary, Adaptive, and Acquired Resistance to Cancer Immunot…|Europe PMC|2017-02-01|-|4728| \n|PMID 17237348|Nitric oxide and peroxynitrite in health and disease.|Europe PMC|2007-01-01|-|4381| \n|PMID 36695182|Heart Disease and Stroke Statistics-2023 Update: A Report Fr…|Europe PMC|2023-01-25|-|4105| \n|PMID 27834398|Cancer nanomedicine: progress, challenges and opportunities.|Europe PMC|2016-11-11|-|3931| \n|PMID 20371345|Matrix metalloproteinases: regulators of the tumor microenvi…|Europe PMC|2010-04-01|-|3925| \n \n \n \nNewest indexed: 2023-01-25 (1386 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 32029601\n  biomcp search article -k \"EGFR mutation lung cancer resistance\" --type review --year-min 2007 --year-max 2023 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

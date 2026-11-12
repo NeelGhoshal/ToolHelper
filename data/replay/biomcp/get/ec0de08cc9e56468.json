@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "gene",
+    "id": "PDGFRA",
+    "sections": [
+      "diseases",
+      "druggability",
+      "pathways"
+    ]
+  },
+  "args_key": "ec0de08cc9e56468622c73396c7e728b2cb2dc933889afbc661df6ba2ce699b5",
+  "recorded_at": "2026-11-12T01:30:44.257365+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 724.1637999977684,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# PDGFRA - diseases, druggability, pathways \n## Pathways \n \n| Source | ID | Name | \n|---|---|---| \n| KEGG | hsa04010 | MAPK signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04014 | Ras signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04015 | Rap1 signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04020 | Calcium signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04072 | Phospholipase D signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04144 | Endocytosis - Homo sapiens (human) | \n| KEGG | hsa04151 | PI3K-Akt signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04510 | Focal adhesion - Homo sapiens (human) | \n| KEGG | hsa04540 | Gap junction - Homo sapiens (human) | \n| KEGG | hsa04630 | JAK-STAT signaling pathway - Homo sapiens (human) | \n| KEGG | hsa04810 | Regulation of actin cytoskeleton - Homo sapiens (human) | \n| KEGG | hsa05163 | Human cytomegalovirus infection - Homo sapiens (human) | \n| KEGG | hsa05200 | Pathways in cancer - Homo sapiens (human) | \n| KEGG | hsa05206 | MicroRNAs in cancer - Homo sapiens (human) | \n| KEGG | hsa05214 | Glioma - Homo sapiens (human) | \n| KEGG | hsa05215 | Prostate cancer - Homo sapiens (human) | \n| KEGG | hsa05218 | Melanoma - Homo sapiens (human) | \n| KEGG | hsa05230 | Central carbon metabolism in cancer - Homo sapiens (human) | \n| KEGG | hsa05231 | Choline metabolism in cancer - Homo sapiens (human) | \n| Reactome | R-HSA-186794 | PDGFRA | \n| Reactome | R-HSA-9671971 | PDGFRA Y288C | \n| Reactome | R-HSA-9671974 | PDGFRA Y849C | \n| Reactome | R-HSA-9671961 | PDGFRA N848K | \n| Reactome | R-HSA-9671958 | PDGFRA D846Y | \n| Reactome | R-HSA-9671956 | PDGFRA D842Y | \n| Reactome | R-HSA-9674306 | PDGFRA D846V | \n| Reactome | R-HSA-9673603 | PDGFRA T674I | \n| Reactome | R-HSA-9671964 | PDGFRA V536E | \n| Reactome | R-HSA-9673600 | PDGFRA S601P | \n| Reactome | P16234-2 | PDGFRA | \n| Reactome | R-HSA-9674332 | PDGFRA D846V dimer | \n## Diseases (Enrichr) \n \n| Term | P-value | Library | \n|---|---|---| \n| Malignant neoplasm of thymus | 3.00e-4 | DisGeNET | \n| Anaplastic Oligoastrocytoma | 3.00e-4 | DisGeNET | \n| CHROMOSOME 8p11 MYELOPROLIFERATIVE SYNDROME | 3.50e-4 | DisGeNET | \n| Supratentorial Neoplasms | 4.00e-4 | DisGeNET | \n| Hip pain | 4.00e-4 | DisGeNET | \n## Druggability (DGIdb / Open Targets) \n \nCategories: Cell Surface, Clinically Actionable, Drug Resistance, Druggable Genome, External Side Of Plasma Membrane, Kinase, Tyrosine Kinase \n### OpenTargets tractability \n \n| Modality | Tractable | Evidence | \n|---|---|---| \n| small molecule | yes | Approved Drug, Structure with Ligand, High-Quality Ligand, Druggable Family | \n| antibody | yes | Approved Drug, UniProt loc high conf, GO CC high conf, UniProt SigP or TMHMM | \n| PROTAC | yes | UniProt Ubiquitination, Database Ubiquitination, Half-life Data, Small Molecule Binder | \n| other modality | yes | Approved Drug | \n| Drug | Interaction Types | Score | Approved | Sources | \n|---|---|---|---|---| \n| OLARATUMAB | antibody, inhibitor | 2.318 | yes | 6 | \n| TOVETUMAB | antibody, inhibitor | 1.391 | no | 4 | \n| CRENOLANIB | inhibitor | 0.850 | no | 9 | \n| AVAPRITINIB | inhibitor | 0.579 | yes | 5 | \n| BECAPLERMIN | agonist | 0.464 | yes | 3 | \n| RIPRETINIB | inhibitor | 0.464 | yes | 4 | \n| SUNITINIB | inhibitor | 0.272 | yes | 10 | \n| MASITINIB | inhibitor | 0.265 | yes | 7 | \n| AMUVATINIB | inhibitor | 0.258 | no | 5 | \n| ELENESTINIB | inhibitor | 0.232 | no | 1 | \n| SERALUTINIB | inhibitor | 0.232 | no | 2 | \n| TANDUTINIB | inhibitor | 0.232 | no | 4 | \n| MOTESANIB | inhibitor | 0.206 | no | 4 | \n| AC710 | inhibitor | 0.185 | no | 2 | \n| RAMUCIRUMAB | antibody, inhibitor | 0.185 | yes | 2 | \nMore:\n  biomcp get gene PDGFRA ontology   - GO-style functional enrichment\n  biomcp get gene PDGFRA diagnostics   - diagnostic tests for this gene from GTR\n  biomcp get gene PDGFRA funding   - NIH Reporter grant support\n  biomcp get gene PDGFRA protein   - UniProt function and localization detail\nAll:\n  biomcp get gene PDGFRA all \nSee also:\n  biomcp search diagnostic --gene PDGFRA   - diagnostic tests for this gene\n  biomcp search pgx -g PDGFRA   - pharmacogenomics interactions\n  biomcp search variant -g PDGFRA\n  biomcp search article -g PDGFRA\n  biomcp search drug --target PDGFRA\n  biomcp gene trials PDGFRA \n\n[NCBI Gene](https://www.ncbi.nlm.nih.gov/gene/5156) | [UniProt](https://www.uniprot.org/uniprot/P16234) | [Ensembl](https://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000134853) | [OMIM](https://www.omim.org/entry/173490)\n\n\n## Sources\n- Identity: NCBI Gene / MyGene.info\n- Summary: NCBI Gene\n- Aliases: NCBI Gene / MyGene.info\n- Pathways: KEGG, Reactome\n- Diseases: Enrichr\n- Druggability: DGIdb, Open Targets\n\n## Next commands\n- `biomcp get gene PDGFRA ontology`\n- `biomcp get gene PDGFRA diagnostics`\n- `biomcp get gene PDGFRA funding`\n- `biomcp get gene PDGFRA protein`\n- `biomcp search diagnostic --gene PDGFRA`\n- `biomcp search pgx -g PDGFRA`\n- `biomcp search variant -g PDGFRA`\n- `biomcp search article -g PDGFRA`\n- `biomcp search drug --target PDGFRA`\n- `biomcp gene trials PDGFRA`"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

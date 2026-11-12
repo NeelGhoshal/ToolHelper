@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "unresectable or metastatic melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "mutation": [
+      "BRAF V600E"
+    ]
+  },
+  "args_key": "d56a09d779734d4fcfe0181edb5dfed712f8c5a62bfba3a82de19f60076eebe6",
+  "recorded_at": "2026-11-12T04:18:00.109973+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2595.098699996015,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 18 of 18 \n \nQuery: condition=unresectable or metastatic melanoma, mutation=BRAF V600E \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT03235245|Immunotherapy With Ipilim…|ACTIVE_NOT_RECRUITING|2|Unresectable Stage III Melanoma, Stage IV Melanoma| \n|NCT04657991|A Clinical Trial of Three…|ACTIVE_NOT_RECRUITING|3|Melanoma| \n|NCT01006980|A Study of Vemurafenib (R…|COMPLETED|3|Malignant Melanoma| \n|NCT01584648|A Study Comparing Trameti…|COMPLETED|3|Melanoma| \n|NCT01597908|Dabrafenib Plus Trametini…|COMPLETED|3|Melanoma| \n|NCT01689519|A Study Comparing Vemuraf…|COMPLETED|3|Malignant Melanoma| \n|NCT01767454|Study of Dabrafenib +/- T…|COMPLETED|1|Solid Tumours| \n|NCT01909453|Study Comparing Combinati…|COMPLETED|3|Melanoma| \n|NCT02027961|Phase 1 Safety and Tolera…|COMPLETED|1|Melanoma| \n|NCT03159117|Pfizer PF-06688992 in Pat…|COMPLETED|1|Melanoma| \n|NCT03864042|Pharmacokinetic Drug-drug…|COMPLETED|1|Advanced Solid Tumors, Metastatic Melanoma| \n|NCT05003622|Phase 1 Safety Study of E…|COMPLETED|1|BRAF V600E Unresectable or Metastatic Melanoma… [abridged; 3 conditions total]| \n|NCT05309421|A Single Arm Trial Evalua…|COMPLETED|2|Melanoma Stage IV, Unresectable Melanoma| \n|NCT04759846|Hepatic Impairment Study…|WITHDRAWN|1|BRAF V600 Mutation, Unresectable Melanoma, Met… [abridged; 4 conditions total]| \n|NCT02200562|Ipilimumab and Dabrafenib…|TERMINATED|1|Stage III or IV Melanoma| \n|NCT02410863|Biopsy- and Biology-drive…|TERMINATED|2|Malignant Melanoma| \n|NCT03878719|Study of the Combination…|TERMINATED|1|Melanoma| \n|NCT02416232|Access Study of Trametini…|NO_LONGER_AVAILABLE|-|Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-18 of 18 results. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

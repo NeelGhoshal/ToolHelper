@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "type 2 diabetes mellitus"
+    ],
+    "entity": "trial",
+    "intervention": [
+      "empagliflozin"
+    ],
+    "limit": 5
+  },
+  "args_key": "e6e3916d8a25d941bac64594e9e93104f8c5248d430c635a901d78d4c339f6b5",
+  "recorded_at": "2026-11-10T22:32:13.535830+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 796.8617999868002,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nFound: 5 trial(s) \n \nQuery: condition=type 2 diabetes mellitus, intervention=empagliflozin \n \n \n|NCT ID|Title|Status|Phase|Conditions|Matched Intervention| \n|---|---|---|---|---|---| \n|NCT07775846|QUARTET-DKD: Quadruple Th…|RECRUITING|4|Type 2 Diabetic Kidney Disease|empagliflozin| \n|NCT00558571|4 Week Treatment With Thr…|COMPLETED|1|Diabetes Mellitus, Type 2|empagliflozin| \n|NCT06797115|Hydroxyl Free Radical Ass…|COMPLETED|-|T2DM|empagliflozin| \n|NCT06823856|Pharmacokinetics and Bioe…|COMPLETED|1|Diabetes Mellitus Type 2|empagliflozin| \n|NCT02985242|Empagliflozin Reduces Pro…|TERMINATED|4|Diabetes Mellitus, Type II|empagliflozin| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 5 results (total unknown). Use --offset 5 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

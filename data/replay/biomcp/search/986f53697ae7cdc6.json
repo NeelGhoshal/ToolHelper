@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "review",
+    "entity": "article",
+    "keyword": [
+      "HER2",
+      "targeted therapy"
+    ],
+    "limit": 10,
+    "sort": "date"
+  },
+  "args_key": "986f53697ae7cdc624a2fd15f7bd9ccd6743ace2cab6f8eebe7bbdb11905742e",
+  "recorded_at": "2026-11-12T04:04:36.203818+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3467.229600006249,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=HER2 targeted therapy, type=review, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 43007374|Tumor microenvironment features of CLDN18.2-positive gastric…|PubMed|2026-11-10|-|0| \n|PMID 43003957|Pertuzumab in HER2-positive breast cancer: a systematic revi…|PubMed|2026-11-09|-|0| \n|PMID 42998776|Comparative efficacy and safety of first-line therapies for…|PubMed|2026-11-07|-|0| \n|PMID 42995001|Zanidatamab in the treatment of esophagogastric adenocarcino…|PubMed|2026-11-06|-|0| \n|PMID 42986511|Artificial intelligence-driven precision immunogenetics for…|PubMed|2026-11-05|-|0| \n|PMID 42999616|Antibody-drug conjugates in the perioperative treatment of r…|PubMed|2026-10-30|-|0| \n|PMID 42953944|Harnessing chemokines and nanocarriers to reprogram the tumo…|Europe PMC|2026-10-29|-|0| \n|PMID 42947311|Targeting G2/M checkpoint vulnerability in homologous recomb…|Europe PMC|2026-10-27|-|0| \n|PMID 43005698|Transcriptional cyclin-dependent kinases as therapeutic targ…|PubMed|2026-10-26|-|0| \n|PMID 42927317|Beyond PD-L1 and HER2: emerging predictive biomarkers in gas…|Europe PMC|2026-10-17|-|0| \n \n \n \nNewest indexed: 2026-11-10 (2 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 43007374\n  biomcp search article -k \"HER2 targeted therapy\" --type review --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "BRAF V600E",
+      "resistance",
+      "immunotherapy"
+    ],
+    "limit": 10,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "c98d189098153e263830ec7a0a92d20bcdba92cff247b61f94ee1cd28d5f94c3",
+  "recorded_at": "2026-11-11T22:01:46.423021+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1125.3679000001284,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=BRAF V600E resistance immunotherapy, exclude_retracted=true, sort=date, source=pubmed\",\n  \"sort\": \"date\",\n  \"semantic_scholar_enabled\": false,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubmed\"\n    ],\n    \"enrichment_sources\": []\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": 162,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"42878587\",\n      \"title\": \"Molecular biomarkers for diagnosis, prognosis, precision therapy, and immunotherapy in cholangiocarcinoma, cHCC-CCA, and HCC.\",\n      \"journal\": \"Hepatology communications\",\n      \"date\": \"2026-10-14\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42550920\",\n      \"title\": \"Systemic therapy of biliary tract cancer: The road to personalised strategies.\",\n      \"journal\": \"Journal of hepatology\",\n      \"date\": \"2026-10-01\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42907443\",\n      \"title\": \"p38α orchestrates BRAF(V600E)-melanoma progression and immunotherapy response via tumor fitness and immune microenvironment modulation.\",\n      \"journal\": \"Nature communications\",\n      \"date\": \"2026-09-22\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42747511\",\n      \"title\": \"Unveiling BRAF Mutations in Non-small Cell Lung Cancer: State of the Art and Future Perspectives.\",\n      \"journal\": \"Lung\",\n      \"date\": \"2026-09-16\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42774118\",\n      \"title\": \"Clinical activity of chidamide-containing regimens after prior PD-1-based therapy in two patients with microsatellite-stable metastatic colorectal cancer: a case series and narrative review.\",\n      \"journal\": \"Frontiers in oncology\",\n      \"date\": \"2026-09-08\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42669994\",\n      \"title\": \"Oncogenic Signalling and Immune Checkpoint Crosstalk in Cancer: Emerging Targets and Precision Therapeutic Strategies.\",\n      \"journal\": \"Current drug targets\",\n      \"date\": \"2026-08-18\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42682390\",\n      \"title\": \"Marked response to dabrafenib plus trametinib in a patient with BRAF V600E-mutant pancreatic hepatoid carcinoma: a case report and systematic analysis of 57 cases.\",\n      \"journal\": \"Frontiers in oncology\",\n      \"date\": \"2026-08-18\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42500583\",\n      \"title\": \"Cancer Drug Development in Never-Smoker Lung Cancer: Targeted and Immune-Based Therapeutic Strategies.\",\n      \"journal\": \"Oncology research\",\n      \"date\": \"2026-07-16\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42375537\",\n      \"title\": \"Machine learning algorithms develop a tumor-educated platelets-related gene signature to predict colorectal cancer prognosis and therapy response.\",\n      \"journal\": \"iScience\",\n      \"date\": \"2026-06-17\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"42282106\",\n      \"title\": \"Checkpoint inhibitors in microsatellite instability-high metastatic colorectal cancer: treatment strategies, specificities, and care management questions.\",\n      \"journal\": \"ESMO gastrointestinal oncology\",\n      \"date\": \"2026-06-02\",\n      \"source\": \"pubmed\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"warnings\": [\n      {\n        \"code\": \"date_sort_replaces_relevance\",\n        \"message\": \"Date sort replaces relevance ranking; results are ordered by publication date.\"\n      }\n    ],\n    \"next_commands\": [\n      \"biomcp get article 42878587\",\n      \"biomcp search article -k \\\"BRAF V600E resistance immunotherapy\\\" --source pubmed --year-min 2026 --year-max 2026 --limit 5\",\n      \"biomcp list article\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

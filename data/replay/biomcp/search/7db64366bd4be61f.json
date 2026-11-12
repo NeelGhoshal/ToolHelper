@@ -1,0 +1,32 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "pembrolizumab FDA approved indications Keytruda label"
+    ],
+    "limit": 10
+  },
+  "args_key": "7db64366bd4be61fea8e0eb51a7754f8cb96ce543bb16d4af0fb4bcd464dc57e",
+  "recorded_at": "2026-11-11T04:56:34.616338+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 43433.46249999013,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=pembrolizumab FDA approved indications Keytruda label, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"pembrolizumab FDA approved indications Keytruda label\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 41971155|Communicating clinical trial information about cancer drug p…|Europe PMC|2026-04-07|hybrid 0.271|1| \n|PMID 42729864|Structure and function of therapeutic antibodies approved by…|Europe PMC|2026-05-28|hybrid 0.186 + title 2/6|0| \n|PMID 36271954|Pembrolizumab for all|PubTator3|2022-10-22|hybrid 0.121 + title 1/6|none| \n|PMID 42113041|Broader gene representation by whole-exome sequencing improv…|PubMed|2026-05-11|hybrid 0.121 + title 1/6|0| \n|PMID 41730003|Economic evaluation of perioperative pembrolizumab plus stan…|PubMed|2026-12-01|hybrid 0.107 + title 1/6|0| \n|PMID 42079859|FDA 2025 Cancer Drug Approvals: targeted therapy dominates.|Europe PMC|2026-04-27|hybrid 0.107 + title 1/6|0| \n|PMID 41202200|Pricing Trends and Overlapping Indications of Checkpoint Inh…|PubTator3, PubMed|2025-11-07|hybrid 0.1 + title 1/6|5| \n|PMID 42346240|Identifying Factors Associated with the Acquisition of Multi…|Europe PMC|2026-06-06|hybrid 0.093 + title 1/6|0| \n|PMID 36418841|Histology-Agnostic Drugs: A Paradigm Shift:A Narrative Revie…|PubTator3|2022-11-23|hybrid 0.086|none| \n|PMID 31154457|Assessment of the Safety of Pembrolizumab in Patients With H…|PubMed|2019-09-01|hybrid 0.05 + title 1/6|203| \n \n \n \nNewest indexed: 2026-09-13 (59 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 41971155\n  biomcp search article -k \"pembrolizumab FDA approved indications Keytruda label\" --year-min 2019 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

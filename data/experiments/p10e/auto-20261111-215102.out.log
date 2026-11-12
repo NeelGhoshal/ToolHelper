@@ -1,0 +1,132 @@
+start p10e-f-PM-r1 fold A: 19 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000,expand=page', 'E9', 'E1:mode=servers']
+start p10e-f-PM-r1 fold B: 23 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000,expand=page', 'E9', 'E1:mode=servers']
+finished p10e-f-PM-r1 fold A (exit 0); 0 tasks still missing
+finished p10e-f-PM-r1 fold B (exit 0); 0 tasks still missing
+factorial: 16 cells x 54 tasks done
+L []: tokens/run -27.4% [-0.3255, -0.2092], geomean -18.4% [-0.2376, -0.1306], 
+success -2.5 points [-0.0532, -0.0046], tokens/success -25.4% [-0.3036, 
+-0.1909], trust 0.9461321759259259; per run: {'first_prompt': 0.0, 'carried': 
+-4211.021, 'turns': -0.544, 'errors': -0.204, 'expands': -0.123} -> off: 
+success -2.5 points (limit -2)
+S ['E10']: tokens/run -26.7% [-0.3382, -0.1927], geomean -24.7% [-0.3015, 
+-0.1915], success +0.2 points [-0.0069, 0.0139], tokens/success -26.9% 
+[-0.3388, -0.1951], trust 0.9472680555555556; per run: {'first_prompt': 40.0, 
+'carried': -4826.817, 'turns': -0.521, 'errors': -0.278, 'expands': -0.118} -> 
+on: tokens/success -26.9% (CI [-0.3388, -0.1951]), success +0.2 points, trust 
+0.947
+K ['E6:budget=1000']: tokens/run -7.1% [-0.1081, -0.0336], geomean -6.8% 
+[-0.1072, -0.0287], success -0.7 points [-0.0208, 0.0046], tokens/success -6.4%
+[-0.1048, -0.0216], trust 0.9379854166666667; per run: {'first_prompt': 0.0, 
+'carried': -1875.123, 'turns': 0.1, 'errors': 0.111, 'expands': 0.1} -> on: 
+tokens/success -6.4% (CI [-0.1048, -0.0216]), success -0.7 points, trust 0.938
+P ['E6:expand=page']: tokens/run -1.4% [-0.0613, 0.0359], geomean -0.6% 
+[-0.042, 0.0333], success +0.2 points [-0.0069, 0.0139], tokens/success -1.6% 
+[-0.0621, 0.0334], trust 0.9372199074074075; per run: {'first_prompt': 25.0, 
+'carried': -530.484, 'turns': 0.049, 'errors': 0.046, 'expands': 0.146} -> off:
+tokens/success -1.6% (CI [-0.0621, 0.0334]) includes 0
+M ['E1:mode=servers']: tokens/run -24.0% [-0.3149, -0.1587], geomean -32.9% 
+[-0.3851, -0.2644], success -3.0 points [-0.0833, 0.0116], tokens/success 
+-21.5% [-0.291, -0.126], trust 0.9459699074074074; per run: {'first_prompt': 
+-3127.0, 'carried': -818.382, 'turns': 0.743, 'errors': -0.204, 'expands': 
+-0.035} -> off: success -3.0 points (limit -2)
+interaction KM: tokens/run -4.2% [-0.0762, -0.0026], geomean -1.1% [-0.0482, 
+0.0335], success +0.7 points [-0.0046, 0.0208], tokens/success -4.9% [-0.0851, 
+-0.0086]
+interaction KP: tokens/run -0.3% [-0.0359, 0.031], geomean -0.1% [-0.0302, 
+0.0303], success +0.2 points [-0.0116, 0.0162], tokens/success -0.6% [-0.0434, 
+0.0311]
+interaction LK: tokens/run -1.9% [-0.0568, 0.0218], geomean -0.6% [-0.0408, 
+0.0314], success +0.2 points [-0.0139, 0.0185], tokens/success -2.1% [-0.0605, 
+0.0197]
+interaction LM: tokens/run -2.5% [-0.0767, 0.0355], geomean -1.1% [-0.053, 
+0.0325], success +1.6 points [0.0, 0.037], tokens/success -4.2% [-0.0941, 
+0.0191]
+interaction LP: tokens/run +1.9% [-0.0326, 0.0624], geomean +2.2% [-0.0204, 
+0.0642], success -0.7 points [-0.0208, 0.0046], tokens/success +2.6% [-0.0287, 
+0.0739]
+interaction LS: tokens/run +11.6% [0.0585, 0.1765], geomean +7.6% [0.0351, 
+0.1187], success +1.2 points [-0.0069, 0.037], tokens/success +10.2% [0.0385, 
+0.1667]
+interaction PM: tokens/run -1.5% [-0.0563, 0.0282], geomean -0.2% [-0.0371, 
+0.0357], success -0.2 points [-0.0116, 0.0069], tokens/success -1.2% [-0.0549, 
+0.0307]
+interaction SK: tokens/run +5.2% [-0.0014, 0.1155], geomean +5.5% [0.0086, 
+0.1051], success +1.2 points [0.0, 0.0278], tokens/success +3.9% [-0.0173, 
+0.1058]
+interaction SM: tokens/run +2.9% [-0.0098, 0.0743], geomean +3.8% [-0.0032, 
+0.081], success -1.2 points [-0.0347, 0.0046], tokens/success +4.1% [-0.0009, 
+0.0863]
+interaction SP: tokens/run -1.1% [-0.0582, 0.0395], geomean -0.6% [-0.0433, 
+0.0346], success -1.6 points [-0.0324, -0.0023], tokens/success +0.7% [-0.0448,
+0.0637]
+biomcp: L tokens/run -30.2% [-0.3924, -0.1969] success -7.5 pts; S tokens/run 
+-23.1% [-0.3225, -0.1218] success +0.8 pts; K tokens/run -4.4% [-0.1151, 
+0.0258] success +0.8 pts; P tokens/run -4.2% [-0.1399, 0.0446] success +0.8 
+pts; M tokens/run -17.1% [-0.2747, -0.0612] success -7.5 pts
+cross: L tokens/run -28.9% [-0.3875, -0.1505] success +0.0 pts; S tokens/run 
+-33.4% [-0.3997, -0.282] success +0.0 pts; K tokens/run -10.7% [-0.1772, 
+-0.0247] success +0.0 pts; P tokens/run -1.7% [-0.1263, 0.0731] success +0.0 
+pts; M tokens/run -7.5% [-0.2827, 0.1729] success +0.0 pts
+medical: L tokens/run -29.8% [-0.3699, -0.16] success +0.0 pts; S tokens/run 
+-27.3% [-0.4575, -0.0881] success +0.0 pts; K tokens/run -6.9% [-0.115, 
+-0.0075] success +0.0 pts; P tokens/run +1.2% [-0.0479, 0.1179] success +0.0 
+pts; M tokens/run -30.8% [-0.4041, -0.2051] success +0.0 pts
+omop: L tokens/run -1.9% [-0.0529, 0.0199] success -1.9 pts; S tokens/run 
+-19.3% [-0.2918, -0.0837] success +0.0 pts; K tokens/run -7.7% [-0.1801, 
+0.0347] success -3.8 pts; P tokens/run +1.1% [-0.0439, 0.0525] success +0.0 
+pts; M tokens/run -55.6% [-0.5917, -0.5106] success -3.8 pts
+chosen: ['S', 'K']
+start p10e-f-SK-r2 fold A: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=1000', 'E9', 'E10']
+start p10e-f-SK-r2 fold B: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=1000', 'E9', 'E10']
+start p10e-f-none-r2 fold A: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9']
+finished p10e-f-SK-r2 fold A (exit 0); 0 tasks still missing
+finished p10e-f-SK-r2 fold B (exit 0); 0 tasks still missing
+start p10e-f-none-r2 fold B: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9']
+start p10e-f-SK-r3 fold A: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=1000', 'E9', 'E10']
+finished p10e-f-none-r2 fold A (exit 0); 0 tasks still missing
+start p10e-f-SK-r3 fold B: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=1000', 'E9', 'E10']
+finished p10e-f-SK-r3 fold A (exit 0); 0 tasks still missing
+start p10e-f-none-r3 fold A: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9']
+finished p10e-f-none-r2 fold B (exit 0); 0 tasks still missing
+start p10e-f-none-r3 fold B: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9']
+finished p10e-f-SK-r3 fold B (exit 0); 0 tasks still missing
+finished p10e-f-none-r3 fold A (exit 0); 0 tasks still missing
+finished p10e-f-none-r3 fold B (exit 0); 0 tasks still missing
+confirm SK (3 repeats vs baseline): {'runs': 162, 'repeats': 3, 'success_rate':
+0.8703703703703703, 'tokens_per_success': 25901.04964539007, 'median_tokens': 
+15589.5, 'p90_tokens': 45578, 'trust_mean': 0.9477141975308642, 
+'transient_excluded': 0}; {'tasks': 54, 'delta_success': 0.1914, 
+'delta_success_ci': [0.1481, 0.2346], 'delta_tokens_per_success': -0.2957, 
+'delta_tokens_per_success_ci': [-0.3883, -0.2012], 'mcnemar': {'lost': 0, 
+'gained': 31, 'p': 0.0}}; gate pass
+decision written: decisions/p10e@v1 (proposed; approve with `toolhelper curate 
+decisions/p10e`)
+start p10e-live-baseline fold A: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=2000', 'E9']
+start p10e-live-chosen fold A: 27 tasks, ['E2:level=minimal', 
+'E6:mode=budget,budget=1000', 'E9', 'E10']
+finished p10e-live-baseline fold A (exit 0); 0 tasks still missing
+finished p10e-live-chosen fold A (exit 0); 0 tasks still missing
+live confirmation on fold A: {'p10e-live-baseline': {'runs': 27, 'repeats': 1, 
+'success_rate': 0.0, 'tokens_per_success': None, 'median_tokens': 0, 
+'p90_tokens': 0, 'trust_mean': 1.0, 'transient_excluded': 0}, 
+'p10e-live-chosen': {'runs': 27, 'repeats': 1, 'success_rate': 0.0, 
+'tokens_per_success': None, 'median_tokens': 0, 'p90_tokens': 0, 'trust_mean': 
+1.0, 'transient_excluded': 0}}; replay on the same tasks: {'baseline': {'runs':
+81, 'repeats': 3, 'success_rate': 0.7160493827160493, 'tokens_per_success': 
+40181.879310344826, 'median_tokens': 16143, 'p90_tokens': 74658, 'trust_mean': 
+0.9463679012345679, 'transient_excluded': 0}, 'chosen': {'runs': 81, 'repeats':
+3, 'success_rate': 0.9629629629629629, 'tokens_per_success': 27776.24358974359,
+'median_tokens': 16294, 'p90_tokens': 52156, 'trust_mean': 0.9468666666666666, 
+'transient_excluded': 0}}
+experiment finished

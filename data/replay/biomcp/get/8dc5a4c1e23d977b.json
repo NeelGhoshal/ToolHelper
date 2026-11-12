@@ -1,0 +1,37 @@
+{
+  "server": "biomcp",
+  "tool": "get",
+  "arguments": {
+    "entity": "drug",
+    "id": "metformin",
+    "json": true,
+    "sections": [
+      "targets",
+      "chembl",
+      "drug_response",
+      "indications",
+      "approvals"
+    ]
+  },
+  "args_key": "8dc5a4c1e23d977b3235857c3e47aaf8f75852483e9a876cc0b71841d75de7fb",
+  "recorded_at": "2026-11-12T04:42:50.443390+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "e89329428f890a355bca7ffdcbbdd33036f6719be1190416c1358bc76a1e0652",
+  "latency_ms": 1.085999989300035,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "invalid drug section: chembl"
+      }
+    ],
+    "isError": true,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

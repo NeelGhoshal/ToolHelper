@@ -3,7 +3,7 @@ progress and read its results.
 
     uv run --extra dashboard toolhelper experiment app
 
-Designs are the factorial configs (`design: factorial`, configs/experiments-p10b..d.yaml), built
+Designs are the factorial configs (`design: factorial`, configs/experiments-p10b..e.yaml), built
 in a form: strategies are picked and set with sliders and choices (texts and ranges in
 experiments/design_form.py), factors are cards and can be taken over from other configs. The
 Strategies tab defines new strategies (E10, E11, ...) from building blocks (efficiency/custom.py,
@@ -32,7 +32,7 @@ from toolhelper.efficiency.registry import BUILTIN, DEFAULTS, ORDER, PARAMS, che
 from toolhelper.experiments import control
 from toolhelper.experiments import design_form as form
 from toolhelper.experiments.experiment import folds
-from toolhelper.experiments.factorial import FactorialConfig, cells, interaction_groups, merge_specs
+from toolhelper.experiments.factorial import FactorialConfig, cells, interaction_groups, make_cell
 from toolhelper.experiments.runner import load_tasks
 
 st.set_page_config(page_title="ToolHelper experiments", layout="wide")
@@ -109,7 +109,7 @@ def validate(data: dict[str, Any]) -> tuple[FactorialConfig | None, list[str]]:
     for where, specs in [("base", cfg.base.specs), *((f"factor {k}", f.specs) for k, f in cfg.factors.items())]:
         problems += [f"{where}: {p}" for s in specs for p in check_spec(s)]
     for f, word in cfg.generators.items():
-        if f not in cfg.factors or any(g not in cfg.factors or g in cfg.generators for g in word):
+        if f not in cfg.factors or any(g not in cfg.factors or g in cfg.generators for g in word.lstrip("-")):
             problems.append(f"generator {f} = {word}: use factor letters that are not generated themselves")
     if set(cfg.confirm_only) - set(cfg.factors):
         problems.append(f"confirm_only names unknown factors {sorted(set(cfg.confirm_only) - set(cfg.factors))}")
@@ -217,7 +217,7 @@ def turn_limit(kp: str, current: int | None, label: str, help: str) -> int | Non
     if not on:
         return None
     return st.slider("turn limit", 1, 20, int(current or 6), key=f"{kp}_limit",
-                     help="Tool-calling turns before the run stops. The baseline uses 8; the accepted ABC config uses 6 with E9.")
+                     help="Tool-calling turns before the run stops. The baseline uses 8; the accepted config uses 6 with E9 (a limit of 4 lost 2.5 points of success in p10e).")
 
 
 def factor_card(row: dict[str, Any], rev: int) -> dict[str, Any]:
@@ -234,7 +234,11 @@ def factor_card(row: dict[str, Any], rev: int) -> dict[str, Any]:
         specs = strategy_editor(kp, row["specs"], "strategies this factor switches on")
         turns = turn_limit(kp, row["max_turns"], "this factor also sets a turn limit",
                            "For E9's limit variant: with the factor on, runs stop after this many turns.")
-    return {"id": row["id"], "name": name.strip(), "specs": specs, "max_turns": turns, "note": note.strip()}
+        overrides = st.checkbox("its settings replace the base's", bool(row.get("overrides_base")), key=f"{kp}_over",
+                                help="Tick it when the factor changes a setting of a strategy that is already in the "
+                                     "base, e.g. budget 1000 where the base has budget 2000. Unticked, that is a conflict.")
+    return {"id": row["id"], "name": name.strip(), "specs": specs, "max_turns": turns, "note": note.strip(),
+            "overrides_base": overrides}
 
 
 def add_factor_row(rev: int) -> None:
@@ -246,7 +250,8 @@ def add_factor_row(rev: int) -> None:
     if a2.button("Add factor", key="add_factor", type="primary"):
         rows = st.session_state.rows
         rows.append({"id": st.session_state.row_seq, "name": form.next_letter([r["name"] for r in rows]),
-                     "specs": [form.default_spec(sid)] if sid in ORDER else [], "max_turns": None, "note": ""})
+                     "specs": [form.default_spec(sid)] if sid in ORDER else [], "max_turns": None, "note": "",
+                     "overrides_base": False})
         st.session_state.row_seq += 1
         st.rerun()
 
@@ -297,10 +302,10 @@ def design_kind(d: dict[str, Any], rows: list[dict[str, Any]], rev: int) -> tupl
         for r in rows:
             word = d.get("generators", {}).get(r["name"], "")
             picked = factor_multiselect(f"{r['name'] or '?'} is switched as the product of", f"gen{rev}_{r['id']}",
-                                        [i for i in names if i != r["id"]], [by_name[g] for g in word if g in by_name],
+                                        [i for i in names if i != r["id"]], [by_name[g] for g in word.lstrip("-") if g in by_name],
                                         names, "Leave empty for a free factor.")
-            if picked:
-                generators[r["name"]] = "".join(names[i] for i in picked)
+            if picked:  # a leading "-" (the other half fraction) is kept from the loaded config
+                generators[r["name"]] = ("-" if word.startswith("-") else "") + "".join(names[i] for i in picked)
     elif kind == "confirm":
         picked = factor_multiselect("factors to confirm together", f"co{rev}", list(names),
                                     [by_name[f] for f in d.get("confirm_only", []) if f in by_name], names,
@@ -317,7 +322,7 @@ def design_tab(path: Path) -> None:
     rev = st.session_state.draft_rev
     if d.get("design") != "factorial":
         st.info("This config is the original p10 plan (singles, E3 grid, greedy). Edit it as raw YAML below; "
-                "the form is for factorial designs. Pick experiments-p10b/c/d.yaml or press New design.")
+                "the form is for factorial designs. Pick one of experiments-p10b..e.yaml or press New design.")
         raw_yaml_editor(path)
         return
     if pending := st.session_state.pop("pending_import", None):
@@ -386,7 +391,7 @@ def design_tab(path: Path) -> None:
                      help="With 2, a config that solves 80% where the base solves 82% still passes.")
     trust = h2.slider("lowest mean trust allowed", 0.5, 1.0, max(0.5, float(gate["min_trust"])), 0.01, key=f"trust{rev}",
                       help="Trust (0 to 1) scores how well answers and transformations agree with their evidence. "
-                           "The baseline runs at about 0.97; ABC at about 0.92.")
+                           "The baseline runs at about 0.97; the accepted config at about 0.94.")
     repeats = h3.slider("confirmation repeats", 1, max(6, int(d.get("confirm_repeats", 3))), int(d.get("confirm_repeats", 3)),
                         key=f"rep{rev}", help="Paired repeats of the chosen config and of the base. One run per arm "
                                               "detects only changes of about 14%; three, about 8.5%.")
@@ -460,7 +465,7 @@ def preview(cfg: FactorialConfig, n_tasks: int, fold_sizes: dict[str, int]) -> N
         st.dataframe(pd.DataFrame([{"cell": c.name, "specs": " ; ".join(c.specs) or "(none)", "max_turns": c.max_turns or cfg.max_turns}
                                    for c in cs]), width="stretch", hide_index=True)
     else:
-        on = merge_specs([*cfg.base.specs, *(s for f in cfg.confirm_only for s in cfg.factors[f].specs)])
+        on = make_cell(cfg, {f: f in cfg.confirm_only for f in cfg.factors}).specs
         st.write(f"**Confirmation only:** {' ; '.join(on)} vs base {' ; '.join(cfg.base.specs) or '(no strategies)'}, "
                  f"{cfg.confirm_repeats} paired repeats.")
     plan = control.plan_runs(cfg, n_tasks, fold_sizes[cfg.live_fold])
@@ -672,7 +677,7 @@ def progress_tab(data: dict[str, Any]) -> None:
     st.write(f"**{name}**: {state} {info} (refreshes every 30 s)")
     monitor_rows.clear()
     rows = monitor_rows("SELECT group_id, COUNT(DISTINCT task_id) AS tasks, COUNT(DISTINCT CASE WHEN success THEN task_id END) "
-                        "AS passed, SUM(error LIKE 'APITimeout%' OR error LIKE 'APIConnection%') AS transient, "
+                        "AS passed, SUM(error LIKE 'APITimeout%' OR error LIKE 'APIConnection%' OR error LIKE 'NotFoundError: Error code: 404%') AS transient, "
                         "MIN(started_at) AS first, MAX(started_at) AS last FROM runs WHERE group_id LIKE ? "
                         "GROUP BY group_id ORDER BY MIN(started_at)", (f"{name}-%",))
     if rows:

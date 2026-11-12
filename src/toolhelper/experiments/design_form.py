@@ -36,12 +36,14 @@ STRATEGIES: dict[str, dict[str, str]] = {
     "E1": {"name": "tool retrieval",
            "what": "Offers the model only the tools that match the task (lexical search over ToolCards) instead "
                    "of all 19, so fewer tool definitions are sent each turn.",
-           "found": "p10, alone: success -9.9 points; retrieval dropped BioMCP tools that tasks needed. Failed the gate."},
+           "found": "p10, alone: success -9.9 points; retrieval dropped BioMCP tools that tasks needed. Failed the gate. "
+                    "p10e, server menu on top of ABC: tokens per success -21.5%, but success -3.0 points "
+                    "(BioMCP -7.5), so it stays off."},
     "E2": {"name": "schema compression",
            "what": "Shortens the tool definitions (44% of a baseline run's tokens). Any call valid under the "
                    "original schema stays valid.",
            "found": "p10b, minimal: tokens per success -18.1% (CI -26.3..-8.6). Light saved only 635 of 4,804 "
-                    "definition tokens per turn. Lowers trust by about 0.04. Part of the accepted ABC config."},
+                    "definition tokens per turn. Lowers trust by about 0.04. Part of the accepted config."},
     "E3": {"name": "dataset grounding",
            "what": "Resolves entities named in the task (genes, drugs, countries, OMOP terms) to canonical IDs "
                    "from the Phase 7 datasets before any call.",
@@ -59,7 +61,9 @@ STRATEGIES: dict[str, dict[str, str]] = {
            "what": "Keeps the part of a tool result that runs actually use and parks the rest behind "
                    "expand_result, so nothing is lost. Tool results carried across turns are 51% of a run's tokens.",
            "found": "p10b, budget 2000: tokens per success -16.8% (CI -27.1..-5.8), but +22.8% tokens per run on "
-                    "OMOP tasks. Projection failed p10's gate (-4.3 points). Part of the accepted ABC config."},
+                    "OMOP tasks. Projection failed p10's gate (-4.3 points). p10e, budget 1000 instead of 2000: a "
+                    "further -6.4% (CI -10.5..-2.2), success -0.7 points; paged expand had no effect (-1.6%, CI "
+                    "includes 0). Budget 1000 is part of the accepted config."},
     "E7": {"name": "result cache",
            "what": "Reuses the result of an identical call within its time to live instead of calling again.",
            "found": "p10, alone: no gain (tokens per success +3.4%, success -0.6 points)."},
@@ -72,19 +76,29 @@ STRATEGIES: dict[str, dict[str, str]] = {
            "what": "When the turn limit runs out, asks once more, with no tools, for an answer from what was "
                    "gathered. Give the base or factor a turn limit to go with it.",
            "found": "p10b, with a limit of 6 turns: tokens per success -17.6%, success +6.0 points. Part of the "
-                    "accepted ABC config."},
+                    "accepted config. p10e, a limit of 4: tokens per success -25.4%, but success -2.5 points "
+                    "(BioMCP -7.5), so the limit stays 6."},
+}
+
+# What experiments measured for user-defined strategies, by id and the name it had when measured
+# (a definition named by a config is locked, so the pair identifies it).
+CUSTOM_FOUND: dict[tuple[str, str], str] = {
+    ("E10", "Answer early"): "p10e, on top of ABC: tokens per success -26.9% (CI -33.9..-19.5), success +0.2 points; "
+                             "runs are 0.52 turns shorter. Part of the accepted config.",
 }
 
 # Per (strategy, parameter): label, help, `range` (min, max, step) for numbers, `values` (what each
 # choice means) and `when` (parameter, values): shown only while that earlier parameter has one of them.
 PARAM_UI: dict[tuple[str, str], dict[str, Any]] = {
-    ("E1", "top_k"): {"label": "tools offered (top_k)", "range": (1, 19, 1),
+    ("E1", "top_k"): {"label": "tools offered (top_k)", "range": (1, 19, 1), "omit_default": True,
                       "help": "How many of the 19 tools the model sees. Share of needed tools still offered on "
                               "the benchmark: 0.79 at 3, 0.83 at 5, 0.96 at 8."},
     ("E1", "mode"): {"label": "how tools are offered", "values": {
         "static": "The top k tools, chosen once from the task.",
-        "find_tools": "The top k tools plus a find_tools(query) tool that adds more during the run."}},
-    ("E1", "route"): {"label": "server routing", "values": {
+        "find_tools": "The top k tools plus a find_tools(query) tool that adds more during the run.",
+        "servers": "No search: one load_tools(servers) tool lists each server's tools, and the model loads the "
+                   "servers it needs (top_k and routing are ignored)."}},
+    ("E1", "route"): {"label": "server routing", "omit_default": True, "values": {
         "off": "Tools are ranked across all servers.",
         "on": "Keeps the best-scoring server's tools, plus any server scoring within half of it. "
               "It did not help on the benchmark."}},
@@ -114,7 +128,11 @@ PARAM_UI: dict[tuple[str, str], dict[str, Any]] = {
                       "help": "A cut is applied only where earlier runs' used items all ranked within N."},
     ("E6", "budget"): {"label": "token budget per result", "range": (500, 8000, 250), "when": ("mode", ("budget",)),
                        "help": "Results longer than this are cut; the rest stays reachable through expand_result. "
-                               "p10b used 2,000. Smaller saves more carried tokens but causes more expand calls."},
+                               "p10b used 2,000; p10e adopted 1,000. Smaller saves more carried tokens but causes "
+                               "more expand calls."},
+    ("E6", "expand"): {"label": "what expand_result returns", "omit_default": True, "values": {
+        "full": "The whole original result (one expand returned 187,691 tokens).",
+        "page": "What was cut, one part of at most the token budget at a time. No measurable effect in p10e."}},
     ("E8", "mode"): {"label": "when a result is compacted", "values": {
         "after_turn": "Every result, once it is carried past the turn it arrived in.",
         "after_use": "Only once its identifiers appear in a later message or call."}},
@@ -140,7 +158,7 @@ def info(sid: str, defs: dict[str, custom.Definition] | None = None) -> dict[str
     if d is None:
         return {"name": "unknown", "what": "Not defined in configs/strategies.yaml.", "found": "none"}
     return {"name": d.name, "what": f"{d.what.strip() + ' ' if d.what.strip() else ''}Your own strategy ({d.summary()}).",
-            "found": "none yet; it has not been measured."}
+            "found": CUSTOM_FOUND.get((sid, d.name), "none yet; it has not been measured.")}
 
 
 def needs_runs(sid: str, defs: dict[str, custom.Definition]) -> bool:
@@ -163,7 +181,8 @@ def build_spec(sid: str, values: dict[str, Any]) -> str:
     """Widget values -> spec, in the registry's parameter order; empty values are left to the default."""
     order = [*PARAMS[sid], *(k for k in values if k not in PARAMS[sid])]
     parts = [f"{k}={'+'.join(values[k]) if isinstance(values[k], list) else values[k]}"
-             for k in order if k in values and values[k] not in (None, "", [])]
+             for k in order if k in values and values[k] not in (None, "", [])
+             and not (PARAM_UI.get((sid, k), {}).get("omit_default") and values[k] == DEFAULTS[sid].get(k))]
     return sid + (":" + ",".join(parts) if parts else "")
 
 
@@ -195,7 +214,8 @@ def next_letter(used: list[str]) -> str:
 def rows_from(factors: dict[str, Any]) -> list[dict[str, Any]]:
     """The form's factor rows; `id` keys a row's widgets, so renaming a factor keeps its settings."""
     return [{"id": i, "name": name, "specs": list(f.get("specs", [])), "max_turns": f.get("max_turns"),
-             "note": f.get("note", "")} for i, (name, f) in enumerate(factors.items())]
+             "note": f.get("note", ""), "overrides_base": bool(f.get("overrides_base"))}
+            for i, (name, f) in enumerate(factors.items())]
 
 
 def factors_from(rows: list[dict[str, Any]]) -> dict[str, Any]:
@@ -206,6 +226,8 @@ def factors_from(rows: list[dict[str, Any]]) -> dict[str, Any]:
             f["max_turns"] = int(row["max_turns"])
         if row.get("note"):
             f["note"] = row["note"]
+        if row.get("overrides_base"):
+            f["overrides_base"] = True
         out[row["name"]] = f
     return out
 

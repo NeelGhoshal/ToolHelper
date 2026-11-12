@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "base editing HBG1 HBG2 sickle cell"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "00b765f70d251c1f7de238e8d8200a91d2756a5bbdbdcce0f916644737c9e731",
+  "recorded_at": "2026-11-12T04:49:31.459812+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5100.029199995333,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=base editing HBG1 HBG2 sickle cell, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"base editing HBG1 HBG2 sickle cell\" --exclude-retracted --sort citations --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 29160308|Programmable base editing of A•T to G•C in genomic DNA w…|Europe PMC|2017-10-25|-|3440| \n|PMID 32433547|Phage-assisted evolution of an adenine base editor with impr…|Europe PMC|2020-03-16|-|912| \n|PMID 34653350|Enhanced prime editing systems by manipulating cellular dete…|Europe PMC|2021-10-14|-|772| \n|PMID 29606353|Direct Promoter Repression by BCL11A Controls the Fetal to A…|Europe PMC|2018-03-29|-|441| \n|PMID 42755327|CRISPR-Based Mediated Reactivation of Fetal Hemoglobin as a…|PubTator3, PubMed|2026-09-18|-|0| \n|PMID 41931047|CRISPR-Cas12a Gene Editing of HBG1 and HBG2 Promoters to Tre…|PubTator3, PubMed|2026-04-02|-|11| \n|PMID 41931046|Base Editing of HBG1 and HBG2 Promoters for Sickle Cell Dise…|PubTator3, PubMed|2026-04-01|-|16| \n|PMID 39637306|Nonclinical evaluation of HBG1/2 and BCL11A as genome-editin…|PubTator3|2024-12-05|-|none| \n|PMID 39086133|Development and IND-enabling studies of a novel Cas9 genome-…|PubMed|2024-10-02|-|15| \n|PMID 37646679|CRISPR-Cas9 Editing of the HBG1 and HBG2 Promoters to Treat…|PubMed|2023-08-31|-|143| \n \n \n \nNewest indexed: 2024-08-01 (833 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 29160308\n  biomcp search article -k \"base editing HBG1 HBG2 sickle cell\" --year-min 2017 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

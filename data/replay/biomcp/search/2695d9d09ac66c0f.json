@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "condition": [
+      "melanoma"
+    ],
+    "entity": "trial",
+    "limit": 25,
+    "source": "ctgov"
+  },
+  "args_key": "2695d9d09ac66c0f57002d73db028f9d9f5e9a9b3b8f2575dbe0bef505dadf62",
+  "recorded_at": "2026-11-11T20:36:09.580008+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 552.4808999980451,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Trial Search Results \n \nResults: 25 of 3782 \n \nQuery: condition=melanoma \n \n \n|NCT ID|Title|Status|Phase|Conditions| \n|---|---|---|---|---| \n|NCT05899465|Perioperative Treatment W…|RECRUITING|3|Melanoma| \n|NCT07410494|Biomarker-Guided Allogene…|RECRUITING|1/2|Cancer, Breast Cancer, Non-Small Cell Lung Ca… [abridged; 13 conditions total]| \n|NCT07347392|The Role of Radiotherapy…|ENROLLING_BY_INVITATION|-|Non-Melanoma Skin Cancer (NMSC), Basal Cell Ca… [abridged; 3 conditions total]| \n|NCT00154388|Phase II Study of Imatini…|COMPLETED|2|Life Threatening Diseases| \n|NCT00466687|Erlotinib and Bevacizumab…|COMPLETED|2|Melanoma| \n|NCT00513604|Phase II Study of Short-T…|COMPLETED|2|Melanoma, Malignant Melanoma, Melanoma, Experimental, Experimental Melanomas| \n|NCT00518206|Study of NY-ESO-1 ISCOMAT…|COMPLETED|2|Melanoma| \n|NCT00707174|Combination Therapy With…|COMPLETED|NA|Cancer, Lentigo Maligna| \n|NCT01307267|A Study Of PF-05082566 As…|COMPLETED|1|Lymphoma, Non-Hodgkin, Lymphoma, Follicular, L… [abridged; 7 conditions total]| \n|NCT01430416|Safety and Efficacy of AE…|COMPLETED|1|Uveal Melanoma| \n|NCT01711684|Treatment of Cutaneous Me…|COMPLETED|1|Neoplasm Metastasis, Melanoma| \n|NCT02575404|GR-MD-02 Plus Pembrolizum…|COMPLETED|1|Melanoma, Non-Small Cell Lung Cancer, Squamous… [abridged; 3 conditions total]| \n|NCT02668887|Employment and Quality of…|COMPLETED|-|Malignant Melanoma of Skin, Quality of Life, Work Ability| \n|NCT03849469|A Study of XmAb®22841 Mo…|COMPLETED|1|Melanoma, Cervical Carcinoma, Pancreatic Carc… [abridged; 23 conditions total]| \n|NCT04082962|Dexamethasone Implant for…|COMPLETED|1|Exudative Retinal Detachment and Uveal Melanoma| \n|NCT04890028|Detection and Metabolic C…|COMPLETED|NA|Brain Metastases, MRI| \n|NCT06014086|Intratumoral PH-762 for C…|COMPLETED|1|Squamous Cell Carcinoma of the Skin, Malignant… [abridged; 3 conditions total]| \n|NCT07757386|MelaMEd Online Training f…|COMPLETED|NA|Cutaneous Melanoma| \n|NCT02654821|Study With T-cel Receptor…|UNKNOWN|1/2|Stage IV Skin Melanoma, Eye; Melanoma| \n|NCT04272658|PET/CT Whole-body Dynamic…|UNKNOWN|-|Metastatic Melanoma| \n|NCT04929535|Hydrogen Peroxide Trial t…|UNKNOWN|2|Basal Cell Carcinoma, Squamous Cell Carcinoma of Skin Differentiated| \n|NCT05179174|The Role of Genetic Mutat…|UNKNOWN|-|Uveal Melanoma| \n|NCT00535314|Study of Two Dose Levels…|WITHDRAWN|2|Malignant Melanoma| \n|NCT00499733|Cyclophosphamide and Cryo…|TERMINATED|EARLY_PHASE1|Cancer| \n|NCT05457842|A Study to Find the Best…|TERMINATED|2|Sentinel Lymph Node Biopsy, Breast Cancer, Melanoma| \n \n \nUse `get trial <nct_id>` for details. \nFilters: -c <condition>, -i <intervention>, --facility <name>, --age <years>, --sex <female|male|all>, -s <status>, -p <phase>, --mutation <text>, --criteria <text>, --sponsor-type <nih|industry|fed|other>, --lat <N> --lon <N> --distance <mi>, --results-available, --count-only \n \n \nShowing 1-25 of 3782 results. Use --offset 25 for more. (--next-page is also supported.) \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

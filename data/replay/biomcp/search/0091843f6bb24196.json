@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "EGFR mutation",
+      "gefitinib",
+      "lung cancer"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "0091843f6bb2419638e5db6c2ad8ab1b219c6842cabb6fa3a7aefd2cb9f0d42e",
+  "recorded_at": "2026-11-11T04:34:55.242966+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 7107.293900015065,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=EGFR mutation gefitinib lung cancer, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 23550210|Integrative analysis of complex cancer genomics and clinical…|Europe PMC|2013-04-02|-|12856| \n|PMID 15118073|Activating mutations in the epidermal growth factor receptor…|Europe PMC|2004-04-29|-|8565| \n|PMID 15118125|EGFR mutations in lung cancer: correlation with clinical res…|Europe PMC|2004-04-29|-|7336| \n|PMID 27899662|KEGG: new perspectives on genomes, pathways, diseases and dr…|Europe PMC|2016-11-28|-|6809| \n|PMID 15728811|EGFR mutation and resistance of non-small-cell lung cancer t…|Semantic Scholar|2005|-|4132| \n|PMID 27083334|Afatinib versus gefitinib as first-line treatment of patient…|Semantic Scholar|2016|-|1078| \n|PMID 28958502|Dacomitinib versus gefitinib as first-line treatment for pat…|Semantic Scholar|2017|-|996| \n|PMID 35662408|Furmonertinib (AST2818) versus gefitinib as first-line thera…|Semantic Scholar|2022|-|206| \n|PMID 35991226|Comparison of Gefitinib in the treatment of patients with no…|PubTator3|2022-07-01|-|6| \n|PMID 36581856|Osteosclerotic change as a therapeutic response to gefitinib…|PubTator3|2022-12-29|-|5| \n \n \n \nNewest indexed: 2016-12-01 (3632 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 23550210\n  biomcp search article -k \"EGFR mutation gefitinib lung cancer\" --year-min 2004 --year-max 2022 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

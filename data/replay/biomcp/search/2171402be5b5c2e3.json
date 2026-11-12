@@ -1,0 +1,33 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "disease": [
+      "Li-Fraumeni syndrome"
+    ],
+    "gene": "TP53",
+    "limit": 10
+  },
+  "args_key": "2171402be5b5c2e3cfc682ece9cca472442c44e34eaa337e1f9b821cc6fcbd64",
+  "recorded_at": "2026-11-11T04:06:34.301255+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 17429.64309998206,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=TP53, disease=Li-Fraumeni syndrome, exclude_retracted=true, sort=relevance, ranking_mode=lexical, ranking_policy=calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --gene TP53 --disease \"Li-Fraumeni syndrome\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 10 articles \n \n \nSemantic Scholar: enabled \n \nRanking: calibrated PubMed rescue + lexical directness (top-ranked weak PubMed unique/led rows with at least one anchor hit > title coverage > title+abstract coverage > study/review cue > citation support > source-local position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 12584563|Screening for TP53 rearrangements in families with the Li-Fr…|PubTator3|2003-02-13|title 2/2|76| \n|PMID 42960272|Li-Fraumeni syndrome presenting with early-onset eyelid seba…|Europe PMC, PubMed|2026-10-16|title+abstract 2/2|0| \n|PMID 42928139|Characterisation of a novel p53 mutation (p53(N263Tfs*7)) as…|PubMed|2026-07-29|title+abstract 2/2|0| \n|PMID 42832373|Progress in Clinical Care and Research for Li-Fraumeni Syndr…|Europe PMC, PubMed|2026-10-05|title+abstract 2/2|0| \n|PMID 42660424|Myxoid Pleomorphic Liposarcoma: A Clinicopathological and Cy…|PubMed|2026-08-27|title+abstract 2/2|1| \n|PMID 42648386|iPSC models of hereditary cancer predisposition: Mechanistic…|PubMed|2026-10-01|title+abstract 2/2|0| \n|PMID 7887414|Germ-line p53 mutations in 15 families with Li-Fraumeni synd…|PubTator3|1995-03-01|title 1/2|203| \n|PMID 11245491|Mechanism of functional inactivation of a Li-Fraumeni syndro…|PubTator3|2001-02-15|title 1/2|25| \n|PMID 42879099|Colorectal neoplasia detected during colonoscopic surveillan…|Europe PMC, PubMed|2026-10-15|title 1/2|0| \n|PMID 8649766|Analysis of genomic instability in Li-Fraumeni fibroblasts w…|PubTator3|1996-06-06|-|73| \n \n \n \nNewest indexed: 2026-10-31 (11 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 12584563\n  biomcp search article -g TP53 -d \"Li-Fraumeni syndrome\" --year-min 1995 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 10 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

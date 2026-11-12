@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "Cache County",
+      "statin",
+      "Alzheimer"
+    ],
+    "limit": 10
+  },
+  "args_key": "bd50a39659edcb909859a71232b85100d27aee11d6b7965fddbce9124f03deeb",
+  "recorded_at": "2026-11-11T21:45:30.524053+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2795.8188999982667,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=Cache County statin Alzheimer, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n> Warning: The top result has partial lexical query coverage. Check the Why column or full ranking metadata before citing it. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"Cache County statin Alzheimer\" --exclude-retracted --sort relevance --source semanticscholar --limit 10 --offset 0` \n \n \nFound 9 articles \n \n \nSemantic Scholar: enabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 24423221|The Cache County Study on Memory in Aging: factors affecting…|Europe PMC|2013-12-01|hybrid 0.398 + title+abstract 3/4|44| \n|PMID 37627038|Acute Myocardial Infarction and Risk of Cognitive Impairment…|PubTator3, Europe PMC|2023-08-21|hybrid 0.38 + abstract 2/4|31| \n|PMID 30975575|Association study of rs3846662 with Alzheimer's disease in a…|Europe PMC|2019-03-15|hybrid 0.369 + title+abstract 3/4|7| \n|PMID 16191233|Is cholesterol a culprit in Alzheimer's disease?|PubMed|2003-01-01|hybrid 0.334 + title+abstract 2/4|14| \n|PMID 37974180|Roles of peripheral lipoproteins and cholesteryl ester trans…|PubTator3, Europe PMC|2023-11-16|hybrid 0.29 + abstract 1/4|43| \n|PMID 25799928|Statins, cognition, and dementia—systematic review and met…|Europe PMC|2015-03-24|hybrid 0.275 + abstract 1/4|121| \n|PMID 37090575|Associations of Antihypertensive Medication Consumption and…|PubTator3|2023-04-13|hybrid 0.25 + title+abstract 2/4|1| \n|PMID 34934803|Dementia risk reduction: why haven't the pharmacological ris…|PubTator3, Europe PMC|2021-12-08|hybrid 0.25 + abstract 1/4|19| \n|PMID 32062643|The Relationship of Coronary Artery Calcium and Clinical Cor…|Europe PMC|2020-02-15|hybrid 0.169|28| \n \n \n \nNewest indexed: 2020-02-18 (2458 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 24423221\n  biomcp search article -k \"Cache County statin Alzheimer\" --year-min 2003 --year-max 2023 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 9 results (total unknown). Use --offset 10 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

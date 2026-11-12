@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "gene therapy"
+    ],
+    "limit": 15,
+    "sort": "date"
+  },
+  "args_key": "b2c398ebed91df4a4f014952989e984587493b01f5fe9314aaf539b9bf45a542",
+  "recorded_at": "2026-11-12T03:53:17.084464+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 4734.007499995641,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=CRISPR gene therapy, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: degraded (Semantic Scholar search unavailable) \nRetry: `biomcp search article --keyword \"CRISPR gene therapy\" --exclude-retracted --sort date --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42950788|Ultrasound-triggered bio-scaffold integrating engineered ste…|PubTator3|2027-02-01|-|0| \n|PMID 42668207|CRISPR-Cas9 mediated adiA knockout in Hafnia paralvei: Impli…|PubTator3|2027-01-01|-|0| \n|PMID 42771316|Quantitative Analysis of CRISPR Encoding Plasmid DNA-Nanocar…|PubTator3|2027-01-01|-|0| \n|PMID 42911482|Role of Chromatin-Associated RNAs in Eye Physiology and Path…|PubTator3|2027-01-01|-|0| \n|PMID 42926261|Generation of Functional Gene Knockout Melanoma Cell Lines b…|PubTator3|2027-01-01|-|0| \n|PMID 42955689|RNA-RNA Interaction Prediction in Therapeutics and Drug Disc…|PubTator3|2027-01-01|-|0| \n|PMID 43010175|Engineered bacteriophages as precision antimicrobials agains…|PubMed|2026-12-01|-|0| \n|PMID 43010164|The road ahead for stem cell therapies in type 1 diabetes.|PubMed|2026-11-10|-|0| \n|PMID 43011237|CRISPR Technology: From Bench to Bedside Applications.|PubMed|2026-11-09|-|none| \n|PMID 43012455|Mapping Osteosarcoma Biology With CRISPR/Cas: From Gene Func…|PubMed|2026-11-01|-|none| \n|PMID 42999915|A let-7a-5p-engineered extracellular vesicle-laden bioactive…|Europe PMC|2026-10-30|-|0| \n|PMID 42964622|Breaking the degenerative triad: Microenvironment reprogramm…|Europe PMC|2026-10-23|-|0| \n|PMID 43011756|Comprehensive characterization of the cellular and molecular…|PubMed|2026-10-21|-|none| \n|PMID 42831006|Advances and perspectives in genetically encoded biosensors…|Europe PMC|2026-09-23|-|0| \n|PMID 42774404|Genetic engineering of cyanophages for harmful cyanobacteria…|Europe PMC|2026-09-15|-|0| \n \n \n \nNewest indexed: 2026-11-11 (1 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42950788\n  biomcp search article -k \"CRISPR gene therapy\" --year-min 2026 --year-max 2027 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

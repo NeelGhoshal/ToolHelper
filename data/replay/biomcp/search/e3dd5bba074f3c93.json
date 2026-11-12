@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "metformin",
+      "cardiovascular"
+    ],
+    "limit": 15,
+    "sort": "date",
+    "source": "pubmed"
+  },
+  "args_key": "e3dd5bba074f3c936a3ae81d44f56a114d311ccb5e5066314bf526fb3a91a2d6",
+  "recorded_at": "2026-11-12T04:38:12.998914+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3311.1258999997517,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=metformin cardiovascular, exclude_retracted=true, sort=date, source=pubmed \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubMed]; enrichment [] \n \n \n \nFound 15 articles \n \n \nSemantic Scholar: disabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42980248|Targeting Accelerated Aging in COPD: The AMICO (A Trial of M…|PubMed|2026-12-01|-|none| \n|PMID 42980096|Editorial Note: AMP-activated protein kinase, stress respons…|PubMed|2026-11-11|-|none| \n|PMID 42978208|Next-generation incretin therapeutics for polyendocrine meta…|PubMed|2026-11-10|-|none| \n|PMID 43003454|Is metformin use associated with cognitive, physical and car…|PubMed|2026-11-09|-|none| \n|PMID 42998247|Initial Diabetes Therapy After Coronary Artery Bypass Grafti…|PubMed|2026-11-07|-|none| \n|PMID 42993255|Clinical pharmacology of antidiabetic drugs: an update.|PubMed|2026-11-06|-|none| \n|PMID 42986015|The H(2)S-releasing metformin hybrid Met-ITC protects agains…|PubMed|2026-11-05|-|none| \n|PMID 42986362|Common Genetic Variants Near SLC2A2 and Glycemic Response to…|PubMed|2026-11-05|-|none| \n|PMID 42988105|Associations between Antidiabetic Drug Classes and Aortic An…|PubMed|2026-11-05|-|none| \n|PMID 43004984|Breaking the Hypoxic Code: Metformin as a Master Switch in C…|PubMed|2026-11-04|-|none| \n|PMID 43006878|Trends in Anti-Hyperglycemic Medicines Among US Adults With…|PubMed|2026-11-01|-|none| \n|PMID 42957066|GLP-1 Receptor Agonists Decrease the Rate of Rupture, Cardia…|PubMed|2026-10-29|-|none| \n|PMID 42983241|Beyond Insulin Therapy: Therapeutic Potential of Alpha-gluco…|PubMed|2026-10-28|-|none| \n|PMID 42973323|Association Between GLP-1 Receptor Agonists, Other Antidiabe…|PubMed|2026-10-19|-|none| \n|PMID 42985179|Associations of mortality and sepsis after GLP-1 receptor ag…|PubMed|2026-09-21|-|none| \n \n \n \nNewest indexed: 2026-11-10 (2 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42980248\n  biomcp search article -k \"metformin cardiovascular\" --source pubmed --year-min 2026 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 1-15 of 5604 results. Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

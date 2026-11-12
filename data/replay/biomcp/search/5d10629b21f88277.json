@@ -1,0 +1,31 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "gene",
+    "json": true,
+    "limit": 25,
+    "query": "melanoma driver genes BRAF NRAS KIT"
+  },
+  "args_key": "5d10629b21f88277c53e66e53a9ab606eb3d5ec450cba068993b684b587fdd42",
+  "recorded_at": "2026-11-11T20:51:27.993259+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 1198.5706000050413,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 25,\n    \"returned\": 3,\n    \"total\": 3,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 3,\n  \"results\": [\n    {\n      \"symbol\": \"KIT\",\n      \"name\": \"KIT proto-oncogene, receptor tyrosine kinase\",\n      \"entrez_id\": \"3815\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"4:54657267-54740783\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"P10721\",\n      \"omim_id\": \"164920\"\n    },\n    {\n      \"symbol\": \"NRAS\",\n      \"name\": \"NRAS proto-oncogene, GTPase\",\n      \"entrez_id\": \"4893\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"1:114704468-114716775\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"P01111\",\n      \"omim_id\": \"164790\"\n    },\n    {\n      \"symbol\": \"BRAF\",\n      \"name\": \"B-Raf proto-oncogene, serine/threonine kinase\",\n      \"entrez_id\": \"673\",\n      \"genomic_coordinates\": {\n        \"coordinate\": \"7:140719327-140925199\",\n        \"genome_build\": \"GRCh38\",\n        \"source\": \"MyGene.info\",\n        \"provenance\": \"MyGene.info provider default\"\n      },\n      \"uniprot_id\": \"P15056\",\n      \"omim_id\": \"164757\"\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get gene KIT\",\n      \"biomcp list gene\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

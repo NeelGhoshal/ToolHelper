@@ -1,0 +1,35 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "keyword": [
+      "base editing",
+      "PCSK9",
+      "VERVE"
+    ],
+    "limit": 15,
+    "sort": "citations"
+  },
+  "args_key": "e2cb0525f055a6ba5c40045a801e1973ca8e087582d37a8386c0eb20dc54db47",
+  "recorded_at": "2026-11-12T04:46:09.568749+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 5463.885699995444,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=base editing PCSK9 VERVE, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --keyword \"base editing PCSK9 VERVE\" --exclude-retracted --sort citations --source semanticscholar --limit 15 --offset 0` \n \n \nFound 15 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 34012082|In vivo CRISPR base editing of PCSK9 durably lowers choleste…|Europe PMC|2021-05-19|-|717| \n|PMID 31915397|A brief history of human disease genetics.|Europe PMC|2020-01-08|-|609| \n|PMID 35021064|Engineered virus-like particles for efficient in vivo deliv…|Europe PMC|2022-01-11|-|562| \n|PMID 36691401|Passive, active and endogenous organ-targeted lipid and poly…|Europe PMC|2023-01-19|-|528| \n|PMID 36634672|15 years of GWAS discovery: Realizing the promise.|Europe PMC|2023-01-11|-|506| \n|PMID 36314243|Efficacy and Safety of an Investigational Single-Course CRIS…|PubTator3, Europe PMC|2023-01-17|-|211| \n|PMID 37142705|Efficient prime editing in mouse brain, liver and heart with…|Europe PMC|2023-05-04|-|208| \n|PMID 42045609|Base editing and silencing of PCSK9 shows clinical promise i…|PubMed|2026-07-01|-|0| \n|PMID 42241517|New and Emerging Therapeutic Targets for ApoB-Containing Par…|PubMed|2026-06-05|-|3| \n|PMID 42187087|In Vivo Base Editing of PCSK9 with VERVE-102 for Hypercholes…|PubTator3, PubMed|2026-05-25|-|13| \n|PMID 41766536|Barriers and Emerging Strategies to Bridge Gaps in Implement…|PubMed|2026-04-01|-|1| \n|PMID 40288084|Treatment of Homozygous Familial Hypercholesterolemia|PubTator3|2025-04-26|-|none| \n|PMID 39804565|CRISPR-Cas9 Targeting PCSK9: A Promising Therapeutic Approac…|PubMed|2025-04-01|-|9| \n|PMID 39731775|Gene therapy in cardiology: pioneering a new era in medical…|PubMed|2025-01-01|-|1| \n|PMID 38878270|VERVE-101, a CRISPR base-editing therapy designed to permane…|PubTator3, PubMed|2024-06-21|-|38| \n \n \n \nNewest indexed: 2026-06-04 (161 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 34012082\n  biomcp search article -k \"base editing PCSK9 VERVE\" --year-min 2020 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "article_type": "meta-analysis",
+    "entity": "article",
+    "keyword": [
+      "statins",
+      "Alzheimer"
+    ],
+    "limit": 15
+  },
+  "args_key": "b9e2e5bcb3a82a79368b8a4f6f7923b108d27f1d76db61b1b5688c1877cbb8b5",
+  "recorded_at": "2026-11-10T22:38:07.907557+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 18477.3259999929,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: keyword=statins Alzheimer, type=meta-analysis, exclude_retracted=true, sort=relevance, ranking_mode=hybrid, ranking_policy=hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \nSource plan: candidates [Europe PMC, PubMed]; enrichment [PubTator3, Europe PMC] \n \n \n \nFound 15 articles \n \n \n> Note: --type restricts article search to Europe PMC and PubMed. PubTator3, LitSense2, and Semantic Scholar do not support publication-type filtering. \n \n \nSemantic Scholar: disabled \n \nRanking: hybrid relevance (score = 0.4*semantic + 0.3*lexical + 0.2*citations + 0.1*position) \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 31930449|The efficacy of statins in the treatment of Alzheimer's dise…|Europe PMC, PubMed|2020-01-13|hybrid 0.472 + title 2/2|37| \n|PMID 32918868|Effect of statins on amyloidosis in the rodent models of Alz…|Europe PMC, PubMed|2020-09-10|hybrid 0.413 + title 2/2|5| \n|PMID 34871380|Statin use and risk of dementia or Alzheimer's disease: a sy…|Europe PMC, PubMed|2022-05-01|hybrid 0.41 + title 1/2|167| \n|PMID 30045255|Statins use and risk of dementia: A dose-response meta analy…|Europe PMC, PubMed|2018-07-01|hybrid 0.321 + title 1/2|67| \n|PMID 32039479|Benefits and Harms of Statins in People with Dementia: A Sys…|Europe PMC, PubMed|2020-02-10|hybrid 0.296 + title 1/2|20| \n|PMID 34397718|Relationship between statins and the risk of amyotrophic lat…|Europe PMC|2021-07-01|hybrid 0.28 + title 1/2|11| \n|PMID 39798939|GWAS of CRP response to statins further supports the role of…|PubMed|2025-02-01|hybrid 0.237 + title 1/2|3| \n|PMID 41042837|Bridging the gap: Efficacy of combined therapies for cogniti…|Europe PMC|2025-10-03|hybrid 0.23 + title 1/2|1| \n|PMID 39312316|Effect of long-term pharmacological treatments on Alzheimer…|PubMed|2024-09-20|hybrid 0.23 + title 1/2|2| \n|PMID 35851147|A large-scale genome-wide cross-trait analysis reveals share…|PubMed|2022-07-18|hybrid 0.223 + title 1/2|77| \n|PMID 34261627|Associations between statins and adverse events in primary p…|PubMed|2021-07-14|hybrid 0.203 + title 1/2|168| \n|PMID 40169548|Anti-inflammatory interventions for the treatment and preven…|Europe PMC|2025-04-01|hybrid 0.199|20| \n|PMID 39239841|Poststroke Cognitive Impairment and the Risk of Recurrent St…|Europe PMC|2024-09-06|hybrid 0.181|30| \n|PMID 31714636|Lipid lowering and Alzheimer disease risk: A mendelian rando…|PubMed|2020-01-01|hybrid 0.177 + title 1/2|95| \n|PMID 41286463|Dissecting the genetic and proteomic risk factors for deliri…|Europe PMC|2025-11-24|hybrid 0.177|9| \n \n \n \nNewest indexed: 2025-11-25 (350 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 31930449\n  biomcp search article -k \"statins Alzheimer\" --type meta-analysis --year-min 2018 --year-max 2025 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 15 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

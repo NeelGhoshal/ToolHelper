@@ -1,0 +1,36 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "json": true,
+    "keyword": [
+      "EGFR mutation",
+      "lung adenocarcinoma",
+      "never smokers"
+    ],
+    "limit": 10,
+    "sort": "citations"
+  },
+  "args_key": "13aeb0353d4c5f89fd06ceafbc4123057d9a0641dd1e4a49ee61941ae894f150",
+  "recorded_at": "2026-11-11T22:42:44.855999+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 2583.434300002409,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"query\": \"keyword=EGFR mutation lung adenocarcinoma never smokers, exclude_retracted=true, sort=citations\",\n  \"sort\": \"citations\",\n  \"semantic_scholar_enabled\": true,\n  \"source_plan\": {\n    \"candidate_sources\": [\n      \"pubtator\",\n      \"europepmc\",\n      \"pubmed\",\n      \"semanticscholar\"\n    ],\n    \"enrichment_sources\": [\n      \"semanticscholar\",\n      \"pubtator\",\n      \"europepmc\"\n    ]\n  },\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 10,\n    \"total\": null,\n    \"has_more\": true,\n    \"next_page_token\": null\n  },\n  \"complete\": true,\n  \"count\": 10,\n  \"results\": [\n    {\n      \"pmid\": \"25079552\",\n      \"pmcid\": \"PMC4231481\",\n      \"doi\": \"10.1038/nature13385\",\n      \"title\": \"Comprehensive molecular profiling of lung adenocarcinoma.\",\n      \"journal\": \"Nature\",\n      \"date\": \"2014-07-09\",\n      \"citation_count\": 4759,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"21252716\",\n      \"pmcid\": \"PMC4513953\",\n      \"doi\": \"10.1097/jto.0b013e318206a221\",\n      \"title\": \"International association for the study of lung cancer/american thoracic society/european respiratory society international multidisciplinary classification of lung adenocarcinoma.\",\n      \"journal\": \"J Thorac Oncol\",\n      \"date\": \"2011-02-01\",\n      \"citation_count\": 3664,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"15329413\",\n      \"pmcid\": \"PMC516528\",\n      \"doi\": \"10.1073/pnas.0405220101\",\n      \"title\": \"EGF receptor gene mutations are common in lung cancers from \\\"never smokers\\\" and are associated with sensitivity of tumors to gefitinib and erlotinib.\",\n      \"journal\": \"Proc Natl Acad Sci U S A\",\n      \"date\": \"2004-08-25\",\n      \"citation_count\": 3294,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"21430269\",\n      \"pmcid\": \"PMC3132801\",\n      \"doi\": \"10.1126/scitranslmed.3002003\",\n      \"title\": \"Genotypic and histological evolution of lung cancers acquiring resistance to EGFR inhibitors.\",\n      \"journal\": \"Sci Transl Med\",\n      \"date\": \"2011-03-01\",\n      \"citation_count\": 2797,\n      \"source\": \"europepmc\",\n      \"is_retracted\": false\n    },\n    {\n      \"pmid\": \"24179496\",\n      \"pmcid\": \"3813793\",\n      \"doi\": \"10.3892/ol.2013.1551\",\n      \"semantic_scholar_id\": \"91541f6400235e4be541a44975e3e7e44c58fc3c\",\n      \"title\": \"Differences in EGFR and KRAS mutation spectra in lung adenocarcinoma of never and heavy smokers\",\n      \"journal\": \"Oncology Letters\",\n      \"date\": \"2013\",\n      \"citation_count\": 38,\n      \"source\": \"semanticscholar\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"25955322\",\n      \"pmcid\": \"4425557\",\n      \"doi\": \"10.1371/journal.pone.0123587\",\n      \"semantic_scholar_id\": \"516a77626aea9e8ad74f64e289bff44f54ccf70c\",\n      \"title\": \"Impact of Smoking and Brain Metastasis on Outcomes of Advanced EGFR Mutation Lung Adenocarcinoma Patients Treated with First Line Epidermal Growth Factor Receptor Tyrosine Kinase Inhibitors\",\n      \"journal\": \"PLoS ONE\",\n      \"date\": \"2015\",\n      \"citation_count\": 34,\n      \"source\": \"semanticscholar\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"36644085\",\n      \"pmcid\": \"PMC9833623\",\n      \"title\": \"Lung Cancer in Non-Smokers: Clinicopathological and Survival Differences from Smokers\",\n      \"journal\": \"Cureus\",\n      \"date\": \"2022-12-11\",\n      \"citation_count\": 14,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"35220256\",\n      \"doi\": \"10.21873/anticanres.15633\",\n      \"semantic_scholar_id\": \"5eb8ace748a70d9eefde6caec6040871ba620e49\",\n      \"title\": \"The Gut Microbiome as a Biomarker of Cancer Progression Among Female Never-smokers With Lung Adenocarcinoma\",\n      \"journal\": \"Anticancer Research\",\n      \"date\": \"2022\",\n      \"citation_count\": 13,\n      \"source\": \"semanticscholar\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"35409936\",\n      \"pmcid\": \"PMC8999081\",\n      \"title\": \"Residential Radon Exposure in Patients with Advanced Lung Cancer in Lublin Region, Poland\",\n      \"journal\": \"Int J Environ Res Public Health\",\n      \"date\": \"2022-04-02\",\n      \"citation_count\": 12,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    },\n    {\n      \"pmid\": \"35966305\",\n      \"pmcid\": \"PMC9372223\",\n      \"title\": \"The predictive value of 18F-FDG PET/CT in an EGFR-mutated lung adenocarcinoma population\",\n      \"journal\": \"Transl Cancer Res\",\n      \"date\": \"2022-07-01\",\n      \"citation_count\": 6,\n      \"source\": \"pubtator\",\n      \"is_retracted\": null\n    }\n  ],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp get article 25079552\",\n      \"biomcp search article -k \\\"EGFR mutation lung adenocarcinoma never smokers\\\" --year-min 2004 --year-max 2022 --limit 5\",\n      \"biomcp list article\"\n    ],\n    \"source_status\": [\n      {\n        \"source\": \"semanticscholar\",\n        \"enabled\": true,\n        \"auth_mode\": \"shared_pool\",\n        \"status\": \"ok\"\n      }\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

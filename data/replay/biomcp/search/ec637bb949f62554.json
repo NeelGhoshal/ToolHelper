@@ -1,0 +1,34 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "entity": "article",
+    "gene": "BRAF",
+    "keyword": [
+      "BRAF inhibitor resistance mechanisms review"
+    ],
+    "limit": 6,
+    "sort": "citations"
+  },
+  "args_key": "ec637bb949f6255423d7aecc97efeb4a39e0770b03e68e37be12e103ac0fdee6",
+  "recorded_at": "2026-11-12T00:26:43.878771+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 3263.757100001385,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: gene=BRAF, keyword=BRAF inhibitor resistance mechanisms review, exclude_retracted=true, sort=citations \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --gene BRAF --keyword \"BRAF inhibitor resistance mechanisms review\" --exclude-retracted --sort citations --source semanticscholar --limit 6 --offset 0` \n \n \nFound 6 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 23539594|Cancer genome landscapes.|Europe PMC|2013-03-01|-|6000| \n|PMID 28187290|Primary, Adaptive, and Acquired Resistance to Cancer Immunot…|Europe PMC|2017-02-01|-|4728| \n|PMID 42991401|Beyond BRAF V600: emerging MAPK-targeted therapeutic strateg…|PubMed|2026-10-30|-|0| \n|PMID 42991423|Intralesional and intratumoral therapies in melanoma: curren…|PubMed|2026-10-30|-|0| \n|PMID 37958416|BRAF Inhibitors in Metastatic Colorectal Cancer and Mechanis…|PubTator3|2023-10-31|-|none| \n|PMID 35812780|Encorafenib plus cetuximab for the treatment of BRAF-V600E-m…|PubTator3|2022-07-04|-|none| \n \n \n \nNewest indexed: 2026-11-06 (6 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 23539594\n  biomcp search article -g BRAF -k \"BRAF inhibitor resistance mechanisms review\" --year-min 2013 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 6 results (total unknown). Use --offset 6 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

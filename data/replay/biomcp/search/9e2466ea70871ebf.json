@@ -1,0 +1,39 @@
+{
+  "server": "biomcp",
+  "tool": "search",
+  "arguments": {
+    "disease": [
+      "sickle cell disease",
+      "beta thalassemia"
+    ],
+    "entity": "article",
+    "keyword": [
+      "CRISPR",
+      "exagamglogene",
+      "gene editing"
+    ],
+    "limit": 15,
+    "sort": "date"
+  },
+  "args_key": "9e2466ea70871ebf1cceea5d68ba7a953285ee51d6e6cb322aaf3bbfbec8e5ca",
+  "recorded_at": "2026-11-11T03:53:45.967068+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "45b3828065be485e818d6843aa93c890a9551398a6051c62b616d59a097930b9",
+  "latency_ms": 31157.013000018196,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "# Articles: disease=sickle cell disease beta thalassemia, keyword=CRISPR exagamglogene gene editing, exclude_retracted=true, sort=date \n \n \n> Warning: Date sort replaces relevance ranking; results are ordered by publication date. \n \n \nSource plan: candidates [PubTator3, Europe PMC, PubMed, Semantic Scholar]; enrichment [Semantic Scholar, PubTator3, Europe PMC] \n \nSemantic Scholar source status: unavailable (Semantic Scholar enrichment unavailable) \nRetry: `biomcp search article --disease \"sickle cell disease beta thalassemia\" --keyword \"CRISPR exagamglogene gene editing\" --exclude-retracted --sort date --source semanticscholar --limit 15 --offset 0` \n \n \nFound 13 articles \n \n \nSemantic Scholar: enabled \n \n \n| Identifier | Title | Source(s) | Date | Why | Cit. | \n|---|---|---|---|---|---| \n|PMID 42977761|Genotoxic safety and long-term engraftment dynamics of effic…|PubTator3, PubMed|2026-11-03|-|0| \n|PMID 42274009|Exa-cel in Children with Transfusion-Dependent β-Thalassemi…|PubMed|2026-09-10|-|2| \n|PMID 42617141|Translating CRISPR to Practice in the Clinic: Transformative…|PubTator3, PubMed|2026-08-19|-|0| \n|PMID 42448320|Red lines and green lights: gene therapy for inherited eryth…|PubTator3|2026-07-14|-|none| \n|PMID 42318429|The evolving landscape of gene editing therapies for human g…|Europe PMC|2026-06-03|-|0| \n|PMID 42074029|Clinical Trial Landscape of Gene-Edited Autologous Hematopoi…|PubMed|2026-04-09|-|0| \n|PMID 41748402|Novel therapeutics in autism spectrum disorder|PubTator3|2026-02-25|-|none| \n|PMID 41773269|Current Status of Clinical Gene Therapy for Hemophilia and G…|PubTator3, PubMed|2026-02-24|-|1| \n|PMID 41744769|Rethinking Sickle Cell Disease as a Systemic Vasculopathy|PubTator3|2026-02-10|-|none| \n|PMID 41211267|Clustered Regularly Interspaced Short Palindromic Repeats (C…|Europe PMC|2025-11-01|-|1| \n|PMID 39897578|Nucleic acid therapeutics: Past, present, and future.|Europe PMC|2024-12-23|-|50| \n|PMID 38425279|Editorial: First Regulatory Approvals for CRISPR-Cas9 Therap…|PubMed|2024-03-01|-|66| \n|PMID 38426160|The Italian breakthrough in CRISPR trials for rare diseases:…|Europe PMC|2024-02-15|-|6| \n \n \n \nNewest indexed: 2026-06-20 (144 days ago) \n \n \nUse `get article <identifier>` for details when the row has a PMID, PMCID, or DOI. \nFilters: [query], -k/-q <keyword>, -g <gene>, -d <disease>, --drug <name>, -a <author>, --date-from/--date-to <YYYY|YYYY-MM|YYYY-MM-DD> (alias: --since/--until), --type <research-article|research|review|case-reports|meta-analysis>, --open-access, --exclude-retracted, --sort <date|citations|relevance>, --source <all|pubtator|europepmc|pubmed|semanticscholar|litsense2> \n \n \nSee also:\n  biomcp get article 42977761\n  biomcp search article -d \"sickle cell disease beta thalassemia\" -k \"CRISPR exagamglogene gene editing\" --year-min 2024 --year-max 2026 --limit 5   - refine this search to the visible publication-year range \n \n \n \nShowing 13 results (total unknown). Use --offset 15 for more. \n \n"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}

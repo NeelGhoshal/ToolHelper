@@ -1,0 +1,29 @@
+{
+  "server": "biomcp",
+  "tool": "biomcp",
+  "arguments": {
+    "command": "search trial -c melanoma -s recruiting -i dabrafenib -i vemurafenib -i encorafenib",
+    "json": true
+  },
+  "args_key": "ec745163b1b22e09ca8f0a779cb9f8fc7af55e472c0a0ddb7e40fea6f3f52bb0",
+  "recorded_at": "2026-11-12T01:35:13.102227+00:00",
+  "package": "biomcp-cli",
+  "server_version": "0.9.3",
+  "server_info": {
+    "name": "biomcp",
+    "version": "0.9.3"
+  },
+  "schema_hash": "7aaef19b330b66af042ce1abde2902b6d7e67ac55f575c9c82ccaa49d0fdd472",
+  "latency_ms": 2096.8330999967293,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"pagination\": {\n    \"offset\": 0,\n    \"limit\": 10,\n    \"returned\": 0,\n    \"total\": 0,\n    \"has_more\": false,\n    \"next_page_token\": null\n  },\n  \"count\": 0,\n  \"results\": [],\n  \"_meta\": {\n    \"next_commands\": [\n      \"biomcp search trial -c melanoma -i \\\"dabrafenib vemurafenib encorafenib\\\"\",\n      \"biomcp list trial\"\n    ]\n  }\n}"
+      }
+    ],
+    "isError": false,
+    "resultType": "complete"
+  },
+  "protocol_error": null
+}
